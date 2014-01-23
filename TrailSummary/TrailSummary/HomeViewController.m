@@ -23,32 +23,95 @@
 
 - (NSArray *)trailPathViewData:(trailPathView *)graphView
 {
-    NSArray *points = [[NSArray alloc] initWithObjects:
-                       [NSValue valueWithCGPoint:CGPointMake(0, 50)],
-                       [NSValue valueWithCGPoint:CGPointMake(10, 25)],
-                       [NSValue valueWithCGPoint:CGPointMake(2, 50)],
-                       [NSValue valueWithCGPoint:CGPointMake(30, 75)],
-                       [NSValue valueWithCGPoint:CGPointMake(40, 60)],
-                       [NSValue valueWithCGPoint:CGPointMake(50, 30)],
-                       [NSValue valueWithCGPoint:CGPointMake(60, 45)],
-                       [NSValue valueWithCGPoint:CGPointMake(78, 45)],
-                       [NSValue valueWithCGPoint:CGPointMake(57, 23)],
-                       nil];
-  NSArray *points2 = [[NSArray alloc] initWithObjects:
-                     [NSValue valueWithCGPoint:CGPointMake(0, 50)],
-                     [NSValue valueWithCGPoint:CGPointMake(10, 25)],
-                     [NSValue valueWithCGPoint:CGPointMake(2, 50)],
-                     [NSValue valueWithCGPoint:CGPointMake(30, 75)],
-                     [NSValue valueWithCGPoint:CGPointMake(40, 60)],
-                     [NSValue valueWithCGPoint:CGPointMake(50, 30)],
-                     [NSValue valueWithCGPoint:CGPointMake(60, 45)],
-                     [NSValue valueWithCGPoint:CGPointMake(78, 45)],
-                     [NSValue valueWithCGPoint:CGPointMake(57, 23)],
-                     nil];
-  NSMutableArray *pointsArray = [NSMutableArray new];
-  [pointsArray addObject:points];
-  
     
+//    NSArray *points = [[NSArray alloc] initWithObjects:
+//                       [NSValue valueWithCGPoint:CGPointMake(571, 405.5)],   //LUMBERJACK
+//                       [NSValue valueWithCGPoint:CGPointMake(564.5, 419)],
+//                       [NSValue valueWithCGPoint:CGPointMake(558.5, 432)],
+//                       [NSValue valueWithCGPoint:CGPointMake(553, 439.5)],    //rows should be 5+3x lanes
+//                       [NSValue valueWithCGPoint:CGPointMake(544, 459.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(536, 488.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(527, 508)],
+//                       [NSValue valueWithCGPoint:CGPointMake(520.5, 525.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(505.5, 533)],
+//                       [NSValue valueWithCGPoint:CGPointMake(488.5, 547.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(474, 564.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(469.5, 575.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(463.5, 589)],
+//                       [NSValue valueWithCGPoint:CGPointMake(457, 612)],
+//                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
+//                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
+//                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
+    
+//                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],  //LOWER MAIN STREET
+//                       [NSValue valueWithCGPoint:CGPointMake(436, 646.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(420, 663.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(412.5, 676.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(404, 686.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(394, 700.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(384.5, 710)],
+//                       [NSValue valueWithCGPoint:CGPointMake(368.5, 729.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
+    
+                       
+//                       [NSValue valueWithCGPoint:CGPointMake(457, 673)],   //THE GULCH
+//                       [NSValue valueWithCGPoint:CGPointMake(451.5, 685.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(435, 706)],
+//                       [NSValue valueWithCGPoint:CGPointMake(426, 713.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(398.5, 735)],
+//                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+//                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+//                       nil];
+    NSArray *lumberJack = [[NSArray alloc] initWithObjects:
+                           [NSValue valueWithCGPoint:CGPointMake(571, 405.5)],   //LUMBERJACK
+                           [NSValue valueWithCGPoint:CGPointMake(564.5, 419)],
+                           [NSValue valueWithCGPoint:CGPointMake(558.5, 432)],
+                           [NSValue valueWithCGPoint:CGPointMake(553, 439.5)],    //rows should be 5+3x lanes
+                           [NSValue valueWithCGPoint:CGPointMake(544, 459.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(536, 488.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(527, 508)],
+                           [NSValue valueWithCGPoint:CGPointMake(520.5, 525.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(505.5, 533)],
+                           [NSValue valueWithCGPoint:CGPointMake(488.5, 547.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(474, 564.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(469.5, 575.5)],
+                           [NSValue valueWithCGPoint:CGPointMake(463.5, 589)],
+                           [NSValue valueWithCGPoint:CGPointMake(457, 612)],
+                           [NSValue valueWithCGPoint:CGPointMake(444, 636)],
+                           [NSValue valueWithCGPoint:CGPointMake(444, 636)],
+                           [NSValue valueWithCGPoint:CGPointMake(444, 636)], nil];
+    
+    
+  NSArray *lowerMainStreet = [[NSArray alloc] initWithObjects:
+                              [NSValue valueWithCGPoint:CGPointMake(444, 636)],  //LOWER MAIN STREET
+                              [NSValue valueWithCGPoint:CGPointMake(436, 646.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(420, 663.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(412.5, 676.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(404, 686.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(394, 700.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(384.5, 710)],
+                              [NSValue valueWithCGPoint:CGPointMake(368.5, 729.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
+                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],nil];
+  NSArray *theGulch = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(457, 673)],   //THE GULCH
+                       [NSValue valueWithCGPoint:CGPointMake(451.5, 685.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(435, 706)],
+                       [NSValue valueWithCGPoint:CGPointMake(426, 713.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(398.5, 735)],
+                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
+                       nil];
+  NSMutableArray *pointsArray = [NSMutableArray new];
+  [pointsArray addObject:lumberJack];
+  [pointsArray addObject:lowerMainStreet];
+  [pointsArray addObject:theGulch];
+  
   return pointsArray;
 }
 
