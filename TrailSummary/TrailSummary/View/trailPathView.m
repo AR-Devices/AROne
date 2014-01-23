@@ -89,7 +89,7 @@
       }
     }
   
-    [[UIColor blackColor] setStroke];
+    [[UIColor colorWithRed:0 green:0 blue:102/255.0 alpha:0.6] setStroke];
     [path stroke];
     
     return path;

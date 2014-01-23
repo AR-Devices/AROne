@@ -24,6 +24,7 @@
 		3C535DA61861649B006561A1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C535DA51861649B006561A1 /* HomeViewController.m */; };
 		3C535DA918616FAD006561A1 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C535DA818616FAD006561A1 /* northstar-trail-map.jpg */; };
 		3CB10C401889015E0000ADD5 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB10C3F1889015E0000ADD5 /* trailPathView.m */; };
+		587DD48F1890F9C7009E49E0 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 587DD48E1890F9C7009E49E0 /* Northstar.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3C535DA818616FAD006561A1 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
 		3CB10C3E1889015E0000ADD5 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trailPathView.h; path = TrailSummary/View/trailPathView.h; sourceTree = "<group>"; };
 		3CB10C3F1889015E0000ADD5 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trailPathView.m; path = TrailSummary/View/trailPathView.m; sourceTree = "<group>"; };
+		587DD48E1890F9C7009E49E0 /* Northstar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Northstar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		3C535DA718616FAD006561A1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				587DD48E1890F9C7009E49E0 /* Northstar.jpg */,
 				3C535DA818616FAD006561A1 /* northstar-trail-map.jpg */,
 			);
 			path = images;
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C535DA918616FAD006561A1 /* northstar-trail-map.jpg in Resources */,
+				587DD48F1890F9C7009E49E0 /* Northstar.jpg in Resources */,
 				3C075DA218601C77004226B8 /* InfoPlist.strings in Resources */,
 				3C075DAA18601C77004226B8 /* Images.xcassets in Resources */,
 			);
