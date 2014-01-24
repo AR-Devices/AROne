@@ -109,8 +109,8 @@
                        nil];
   NSMutableArray *pointsArray = [NSMutableArray new];
   [pointsArray addObject:lumberJack];
-  [pointsArray addObject:lowerMainStreet];
-  [pointsArray addObject:theGulch];
+//  [pointsArray addObject:lowerMainStreet];
+//  [pointsArray addObject:theGulch];
   
   return pointsArray;
 }
@@ -132,7 +132,7 @@
     NSLog(@"viewDidLoad");
     [super viewDidLoad];
     //get image from library
-    UIImage* image = [UIImage imageNamed:@"Northstar.jpg	"];
+    UIImage* image = [UIImage imageNamed:@"northstar-trail-map.jpg"];
     NSLog(@"view width is %f, height is %f", self.view.bounds.size.width, self.view.bounds.size.height);
     NSLog(@"image width is %f, height is %f", image.size.width, image.size.height);
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];

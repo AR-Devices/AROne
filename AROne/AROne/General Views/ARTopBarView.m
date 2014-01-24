@@ -1,0 +1,102 @@
+//
+//  ARTopBarView.m
+//  AROne
+//
+//  Created by Chenchen Zheng on 9/9/13.
+//  Copyright (c) 2013 Chenchen Zheng. All rights reserved.
+//
+
+#import "ARTopBarView.h"
+
+@implementation ARTopBarView
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+
+- (id)initWithStyle:(ARTopBarViewStyle)style viewBounds:(CGRect)frame withBlock:(void (^)(ARTopBarView *segment))callbackBlock
+{
+  NSDictionary *redText = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [UIColor colorWithRed:211.0/255.0 green:23.0/255.0 blue:50.0/255.0 alpha:1.0],
+                                  UITextAttributeTextColor,
+                                  [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
+                                  UITextAttributeFont,
+                                  nil];
+  NSDictionary *orangeText = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [UIColor colorWithRed:238.0/255.0 green:150.0/255.0 blue:47.0/255.0 alpha:1.0],
+                              UITextAttributeTextColor,
+                              [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
+                              UITextAttributeFont,
+                              nil];
+  NSDictionary *greenText = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [UIColor colorWithRed:47.0/255.0 green:179.0/255.0 blue:182.0/255.0 alpha:1.0],
+                              UITextAttributeTextColor,
+                              [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
+                              UITextAttributeFont,
+                              nil];
+  
+  switch (style) {
+    case ARTopBarViewStyleCalendar:
+    {
+      NSLog(@"ATTopBarViewStyleCalendar called");
+      NSArray *itemArray = [NSArray arrayWithObjects: @"<", @"Today", @">", nil];
+      self = [[ARTopBarView alloc] initWithItems:itemArray];
+      self.frame = CGRectMake( 0, 0, CGRectGetWidth(frame), 32.5);;
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_middle"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+      self.selectedSegmentIndex = -1;
+      self.segmentedControlStyle = UISegmentedControlStyleBar;
+      self.momentary = YES;
+      self.alpha = 0.9;
+      [self setWidth:40 forSegmentAtIndex:0];
+      [self setBackgroundColor: [UIColor clearColor]];
+      [self setWidth:CGRectGetWidth(frame) - 80 forSegmentAtIndex:1];
+      [self setWidth:40 forSegmentAtIndex:2];
+      [self setBackgroundColor:[UIColor clearColor]];
+      break;
+    }
+    case ARTopBarViewStyleDWM:
+    {
+      NSLog(@"ARTopBarViewStyleDWM");
+      CGRect rect = CGRectMake( 0, 0, CGRectGetWidth(frame), 32.5);
+      NSArray *itemArray = [NSArray arrayWithObjects: @"DAY", @"WEEK", @"MONTH", nil];
+      self = [[ARTopBarView alloc] initWithItems:itemArray];
+      self.frame = rect;
+      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+      self.selectedSegmentIndex = 0;
+      self.segmentedControlStyle = UISegmentedControlStyleBar;
+      self.alpha = 0.9;
+      [self setBackgroundColor: [UIColor clearColor]];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
+      [self setBackgroundColor:[UIColor clearColor]];
+      break;
+    }
+    case ARTopBarViewStyleSelector:
+    {
+      NSLog(@"ARTopBarViewStyleSelector");
+      break;
+    }
+  }
+  callbackBlock(self);
+  return self;
+}
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
+
+@end
