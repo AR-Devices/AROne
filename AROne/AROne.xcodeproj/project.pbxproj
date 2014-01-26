@@ -158,6 +158,9 @@
 		3CFE888318064422006CF472 /* ARSummaryGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886D18064422006CF472 /* ARSummaryGraphCell.m */; };
 		3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
 		3CFE888518064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
+		EC458E66189499C200014337 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC458E65189499C200014337 /* trailPathView.m */; };
+		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
+		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
 		EC693A8C17DD4FCE0031A544 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC693A8B17DD4FCE0031A544 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -344,6 +347,10 @@
 		3CFE886D18064422006CF472 /* ARSummaryGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryGraphCell.m; sourceTree = "<group>"; };
 		3CFE886E18064422006CF472 /* ARSummaryGraphTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryGraphTouchView.h; sourceTree = "<group>"; };
 		3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryGraphTouchView.m; sourceTree = "<group>"; };
+		EC458E64189499C200014337 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trailPathView.h; sourceTree = "<group>"; };
+		EC458E65189499C200014337 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trailPathView.m; sourceTree = "<group>"; };
+		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
+		EC458E6818949F7100014337 /* Northstar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Northstar.jpg; sourceTree = "<group>"; };
 		EC693A8B17DD4FCE0031A544 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -536,6 +543,8 @@
 		3CDCDAA617DE90BC00FCA0CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC458E6718949F7100014337 /* northstar-trail-map.jpg */,
+				EC458E6818949F7100014337 /* Northstar.jpg */,
 				3CDCDAA717DE90BC00FCA0CA /* additional Image */,
 				3CDCDAAB17DE90BC00FCA0CA /* icons */,
 				3CDCDABC17DE90BC00FCA0CA /* scoreboard */,
@@ -730,6 +739,8 @@
 				3CFE886D18064422006CF472 /* ARSummaryGraphCell.m */,
 				3CFE886E18064422006CF472 /* ARSummaryGraphTouchView.h */,
 				3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */,
+				EC458E64189499C200014337 /* trailPathView.h */,
+				EC458E65189499C200014337 /* trailPathView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -812,6 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDCDB2D17DE90BC00FCA0CA /* speed_selected_icon@2x.png in Resources */,
+				EC458E6A18949F7100014337 /* Northstar.jpg in Resources */,
 				3CDCDB1317DE90BC00FCA0CA /* trail_icon_selected.png in Resources */,
 				3C6EA84F180E5AF90043216D /* element2.png in Resources */,
 				3CDCDB5217DE90BC00FCA0CA /* segmented-separator.png in Resources */,
@@ -832,6 +844,7 @@
 				3CDCDB2417DE90BC00FCA0CA /* VerticalDrop_icon@2x.png in Resources */,
 				3CDCDB1A17DE90BC00FCA0CA /* Acceleration_icon@2x.png in Resources */,
 				3CDCDB3A17DE90BC00FCA0CA /* MasSpeedCard_bg@2x.png in Resources */,
+				EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */,
 				3CDCDB0917DE90BC00FCA0CA /* scoreboard_icon.png in Resources */,
 				3CDCDB1017DE90BC00FCA0CA /* sync_icon@2x.png in Resources */,
 				3CDCDB4917DE90BC00FCA0CA /* calendar_selectedPart@2x.png in Resources */,
@@ -951,6 +964,7 @@
 				3C417FE317D84B560094B56F /* AKTab.m in Sources */,
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
+				EC458E66189499C200014337 /* trailPathView.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
