@@ -124,11 +124,12 @@
   //  ee962f orange
   //  ffffff white
   if (indexPath.section == 0) {
-    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleMaxSpeed andValue:self.max_speed_value];
+    NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
+    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleMaxSpeed andValue:self.max_speed_value rect:self.view.bounds];
   } else if (indexPath.section == 1) {
-    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleVerticalDrop andValue:self.vertical_drop_value ];
+    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleVerticalDrop andValue:self.vertical_drop_value rect:self.view.bounds ];
   } else if (indexPath.section == 2) {
-    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleAcceleration andValue:self.acceleration_value];
+    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleAcceleration andValue:self.acceleration_value rect:self.view.bounds ];
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;

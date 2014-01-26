@@ -77,14 +77,21 @@
 
 - (void) createTabBar
 {
-  //  ccz: init Trabbar controller with height of 50, thinking not to display tab bar text
-  self.tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40 position:AKTabBarPositionBottom];
+    //check if device is ipad or iphone
+    NSString *deviceType = [UIDevice currentDevice].model;
+    NSLog(@"deviceType is %@", deviceType);
+    if([deviceType rangeOfString:@"iPad"].location == NSNotFound) {
+        //  ccz: init Trabbar controller with height of 50, thinking not to display tab bar text
+        self.tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40 position:AKTabBarPositionBottom];
+    } else {
+        self.tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:60 position:AKTabBarPositionBottom];
+    }
   
   ARSummaryViewController *summary = [[ARSummaryViewController alloc] initWithStyle:UITableViewStylePlain];
   UINavigationController *summaryNavigation = [[UINavigationController alloc] initWithRootViewController:summary];
   ARScoreboardViewController *scoreboard = [[ARScoreboardViewController alloc] initWithStyle:UITableViewStylePlain];
   UINavigationController *scoreboardNavigation = [[UINavigationController alloc] initWithRootViewController:scoreboard];
-  ARTrailSummaryViewController *trailSummary = [[ARTrailSummaryViewController alloc] init];
+  UINavigationController *trailSummary = [[UINavigationController alloc] initWithRootViewController:[ARTrailSummaryViewController new]];
 
 
   [self.tabBarController setViewControllers:[NSMutableArray arrayWithObjects:summaryNavigation, scoreboardNavigation, trailSummary, nil]]; //FIXME: delete summaryTabGraph

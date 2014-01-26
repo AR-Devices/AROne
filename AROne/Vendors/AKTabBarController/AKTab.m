@@ -171,7 +171,9 @@ static const float kTopMargin = 2.0;
     CGSize labelSize = [tabTitleLabel.text sizeWithFont:tabTitleLabel.font
                                                forWidth:CGRectGetWidth(rect)
                                           lineBreakMode:NSLineBreakByTruncatingMiddle ];
-    
+//  CGSize labelSize = [tabTitleLabel.tag bounding]
+//  - (CGRect)boundingRectWithSize:(CGSize)size options:(NSStringDrawingOptions)options attributes:(NSDictionary *)attributes context:(NSStringDrawingContext *)context
+
     CGRect labelRect = CGRectZero;
     
     labelRect.size.height = (displayTabTitle) ? labelSize.height : 0;

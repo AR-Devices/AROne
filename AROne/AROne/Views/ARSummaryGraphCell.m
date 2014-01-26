@@ -36,7 +36,7 @@
 
 - (void)setThemeWithStyle:(ARSummaryGraphCellStyle) style andValue:(NSString *)value
 {
-  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_LEFT_MARGIN, 0, SECTION_CELL_WIDTH, SECTION_CELL_HEIGHT)];
+  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_LEFT_MARGIN, 0, self.bounds.size.width-SECTION_CELL_LEFT_MARGIN*2, self.bounds.size.height/4)];
   drawGraph *myGraph = [[drawGraph alloc] initWithFrame:CGRectMake(0, 0, SECTION_CELL_WIDTH, SECTION_CELL_HEIGHT)];
 //  self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0];
   UIImageView *functionGraphView;

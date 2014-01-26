@@ -38,10 +38,11 @@
  * @return configured cellView
  */
 
-- (void)setThemeWithStyle:(ARSummaryCellStyle) style andValue:(NSString *)value
+- (void)setThemeWithStyle:(ARSummaryCellStyle) style andValue:(NSString *)value rect:(CGRect) rect
 {
   //ccz:  create cellView
-  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, SECTION_CELL_WIDTH, SECTION_CELL_X_HEIGHT)];
+  NSLog(@"style self.bounds width is %f", self.bounds.size.width);
+  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, rect.size.width-SECTION_CELL_X_LEFT_MARGIN*2, rect.size.height/3 - 7)];
   self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:.8];
   self.strip = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.cellView.bounds), 14/2.0f)];
   self.cellViewTitle = [[UIImageView alloc] initWithFrame:CGRectMake(3.0f, (8+14)/2.0f, 246/2.0f, 44/2.0f)];
@@ -114,10 +115,11 @@
  * @return configured cellView
  */
 
-+ (ARSummaryCell *)cellWithStyle:(ARSummaryCellStyle)styles andValue:(NSString *)value
++ (ARSummaryCell *)cellWithStyle:(ARSummaryCellStyle)styles andValue:(NSString *)value rect:(CGRect) rect
 {
-  ARSummaryCell *cell = [[ARSummaryCell alloc]init];
-  [cell setThemeWithStyle:styles andValue:value];
+  NSLog(@"rect is %f", rect.size.width);
+  ARSummaryCell *cell = [[ARSummaryCell alloc]initWithFrame:rect];
+  [cell setThemeWithStyle:styles andValue:value rect:rect];
   return cell;
 }
 

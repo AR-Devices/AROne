@@ -22,23 +22,24 @@
 
 - (id)initWithStyle:(ARTopBarViewStyle)style viewBounds:(CGRect)frame withBlock:(void (^)(ARTopBarView *segment))callbackBlock
 {
+  
   NSDictionary *redText = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIColor colorWithRed:211.0/255.0 green:23.0/255.0 blue:50.0/255.0 alpha:1.0],
-                                  UITextAttributeTextColor,
+                                  NSForegroundColorAttributeName,
                                   [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
-                                  UITextAttributeFont,
+                                  NSFontAttributeName,
                                   nil];
   NSDictionary *orangeText = [NSDictionary dictionaryWithObjectsAndKeys:
                               [UIColor colorWithRed:238.0/255.0 green:150.0/255.0 blue:47.0/255.0 alpha:1.0],
-                              UITextAttributeTextColor,
+                              NSForegroundColorAttributeName,
                               [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
-                              UITextAttributeFont,
+                              NSFontAttributeName,
                               nil];
   NSDictionary *greenText = [NSDictionary dictionaryWithObjectsAndKeys:
                               [UIColor colorWithRed:47.0/255.0 green:179.0/255.0 blue:182.0/255.0 alpha:1.0],
-                              UITextAttributeTextColor,
+                              NSForegroundColorAttributeName,
                               [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
-                              UITextAttributeFont,
+                              NSFontAttributeName,
                               nil];
   
   switch (style) {
@@ -51,7 +52,7 @@
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_middle"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
       self.selectedSegmentIndex = -1;
-      self.segmentedControlStyle = UISegmentedControlStyleBar;
+//      self.segmentedControlStyle = UISegmentedControlStyleBar;
       self.momentary = YES;
       self.alpha = 0.9;
       [self setWidth:40 forSegmentAtIndex:0];
@@ -72,7 +73,7 @@
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
       self.selectedSegmentIndex = 0;
-      self.segmentedControlStyle = UISegmentedControlStyleBar;
+//      self.segmentedControlStyle = UISegmentedControlStyleBar;
       self.alpha = 0.9;
       [self setBackgroundColor: [UIColor clearColor]];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];

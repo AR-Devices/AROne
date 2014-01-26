@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ARSummaryCellStyle) {
 @property (nonatomic, strong) UIImageView* unit;
 @property (nonatomic, strong) UILabel* number;
 
-+ (ARSummaryCell *)cellWithStyle:(ARSummaryCellStyle)ARSummaryCellStyle andValue:(NSString *)value;
++ (ARSummaryCell *)cellWithStyle:(ARSummaryCellStyle)styles andValue:(NSString *)value rect:(CGRect) rect;
 
 
 @end

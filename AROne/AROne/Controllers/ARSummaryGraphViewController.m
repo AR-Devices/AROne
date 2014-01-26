@@ -30,6 +30,11 @@
     return self;
 }
 
+- (id)initwithStyle:(ARSummaryGraphCellStyle)style
+{
+  [self setFunctionStyle:style];
+  return self;
+}
 - (void)viewDidLoad
 {
   [super viewDidLoad];
