@@ -33,29 +33,47 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+      self.title = @"Trail Summary";
       self.view.backgroundColor = [UIColor whiteColor];
       // Custom initialization
       [self createToolBar];
-      
-      
-      // Do any additional setup after loading the view.
-//      trailPathView *trailView = [[trailPathView alloc]initWithFrame:CGRectMake(10, 100, 300, 300)];
-//      [self.view addSubview:trailView];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
   UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
-  map.frame = CGRectMake(10, 100, 300, 150);
+  map.frame = CGRectMake(10, 50, 300, 150);
   trailPathView *view = [[trailPathView alloc] initWithFrame:map.frame];
   view.dataSource = self;
-
   [map addSubview:view];
   [self.view addSubview:map];
+  
+  UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
+  trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+  trail_1.textColor = [UIColor greenColor];
+  trail_1.text = @"The Gulch trail (3)"; //FIXME value should be extracted from section text
+  //trail_1.textAlignment = NSTextAlignmentCenter;
+  //trail_1.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+  [self.view addSubview:trail_1];
 
+  UILabel *trial_2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 235, 320, 15)];
+  trial_2.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+  trial_2.textColor = [UIColor blueColor];
+  trial_2.text = @"Lower Main Street (2)"; //FIXME value should be extracted from section text
+  //trial_2.textAlignment = NSTextAlignmentCenter;
+  //trial_2.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+  [self.view addSubview:trial_2];
+  
+  UILabel *trial_3 = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 320, 15)];
+  trial_3.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+  trial_3.textColor = [UIColor blackColor];
+  trial_3.text = @"Maximum speed: 42 mph @ The Gulch"; //FIXME value should be extracted from section text
+  //trial_3.textAlignment = NSTextAlignmentCenter;
+  //trial_3.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+  [self.view addSubview:trial_3];
 }
 
 - (void)didReceiveMemoryWarning
