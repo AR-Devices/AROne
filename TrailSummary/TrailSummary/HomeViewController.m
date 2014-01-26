@@ -191,29 +191,48 @@
     [self.scrollView zoomToRect:rect animated:YES];
 }
 
-- (void)tapTwice:(UIGestureRecognizer *)gesture
+
+- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
+
+    CGRect zoomRect;
+
+    zoomRect.size.height = [_imageView frame].size.height / scale;
+    zoomRect.size.width  = [_imageView frame].size.width  / scale;
+
+    center = [_imageView convertPoint:center fromView:self.scrollView];
+
+    zoomRect.origin.x    = center.x - ((zoomRect.size.width / 2.0));
+    zoomRect.origin.y    = center.y - ((zoomRect.size.height / 2.0));
+
+    return zoomRect;
+}
+
+- (void)tapTwice:(UIGestureRecognizer *)recognizer
 {
-    CGPoint point = [gesture locationInView:self.scrollView];
-    NSLog(@"point.x = %f, point.y = %f", point.x, point.y);
-    if (self.zoomed) {
-        //zoom out
-        NSLog(@"zoomed out");
-        
-        point = CGPointMake(point.x - self.scrollView.bounds.size.width/2, point.y - self.scrollView.bounds.size.height/2);
-            NSLog(@"point.x = %f, point.y = %f", point.x, point.y);
-        CGRect rect = CGRectMake(point.x, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-        [self.scrollView zoomToRect:rect animated:YES];
-        self.zoomed = NO;
-    } else {
-        //zoom in
-        NSLog(@"zoomed in");
-        point = CGPointMake(point.x - self.scrollView.bounds.size.width/4, point.y - self.scrollView.bounds.size.height/4);
-        CGRect rect = CGRectMake(point.x, point.y, self.scrollView.bounds.size.width/2, self.scrollView.bounds.size.height/2);
-        //on a double tap, call zoomToRect in UIScrollView
-        [self.scrollView zoomToRect:rect animated:YES];
-        self.zoomed = YES;
+    float newScale = [self.scrollView zoomScale] * 6.0;
+
+    if (self.scrollView.zoomScale > self.scrollView.minimumZoomScale)
+    {
+        [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
+    }
+    else 
+    {
+        CGRect zoomRect = [self zoomRectForScale:newScale 
+                                   withCenter:[recognizer locationInView:recognizer.view]];
+        [self.scrollView zoomToRect:zoomRect animated:YES];
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
