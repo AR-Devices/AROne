@@ -155,7 +155,9 @@
         index = index % 7;
         NSString *dayTitle = [dayTitles objectAtIndex:index];
         //// dayHeader Drawing
-        CGSize sz = [dayTitle sizeWithFont:dayFont];
+        NSDictionary *attributes = @{NSFontAttributeName: dayFont};
+
+        CGSize sz = [dayTitle sizeWithAttributes:attributes];
         CGRect dayHeaderFrame = CGRectMake(floor(i * hDiff) - 1
                                            , headerHeight + (kPMThemeDayTitlesInHeaderIntOffset * vDiff - sz.height) / 2
                                            , hDiff
@@ -173,9 +175,11 @@
     int year = currentYear;
     
 	NSString *monthTitle = [NSString stringWithFormat:@"%@ %d", [monthTitles objectAtIndex:(month - 1)], year];
+  NSDictionary *attributes = @{NSFontAttributeName: monthFont};
+
     //// Month Header Drawing
     CGRect textFrame = CGRectMake(0
-                                  , (headerHeight - [monthTitle sizeWithFont:monthFont].height) / 2
+                                  , (headerHeight - [monthTitle sizeWithAttributes:attributes].height) / 2
                                   , width
                                   , monthFont.pointSize);
     

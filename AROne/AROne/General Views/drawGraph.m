@@ -214,6 +214,7 @@
   CGContextTranslateCTM(ctx, CGRectGetMinX(dataRect), 30.0);
   NSString *bubblelabel = [NSString stringWithFormat: @"$%.2f", _myVolume];
   
+  
   CGSize bubblesize = [bubblelabel sizeWithFont:font];
   CGFloat mybubbleWitdth = bubblesize.width +50;
   CGFloat mybubbleHeight = bubblesize.height;
@@ -231,7 +232,12 @@
   UIRectFill(monthRect);
   [[UIColor blackColor] setFill];
   
+//  NSDictionary *dictionary = @{ NSFontAttributeName: font,
+//                                NSParagraphStyleAttributeName: paragraphStyle,
+//                                NSForegroundColorAttributeName: self.textColor};
+
   [bubblelabel drawInRect:monthRect withFont:font lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentCenter];
+//  bubblelabel drawInRect:monthRect withAttributes:<#(NSDictionary *)#>
   CGContextRestoreGState(ctx);
   
   
@@ -245,7 +251,7 @@
   CGFloat minVolume = 1;
   CGFloat verticalScale = CGRectGetHeight(rect) / (maxVolume - minVolume);
   CGFloat tradingDayLineSpacing = rint(CGRectGetWidth(rect) / (CGFloat)[speedArray count]);
-  NSUInteger X = rint(touch.x / tradingDayLineSpacing);
+//  NSUInteger X = rint(touch.x / tradingDayLineSpacing);
   //  NSLog(@"X is %lu", (unsigned long)X);
   //  CGFloat myTouchPointX = touch.x;
   //  if(touch.x >= self.tradingDataLimit){

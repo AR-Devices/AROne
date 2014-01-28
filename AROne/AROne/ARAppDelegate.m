@@ -178,16 +178,22 @@
   [[UINavigationBar appearance] setBackgroundColor:naviColor];
   [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"TabBarBlue"] forBarMetrics:UIBarMetricsDefault];
   // Customize the title text for *all* UINavigationBars
+  //create navi font
+//  NSDictionary *naviAttribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont
+//                                                                            fontWithName:@"Helvetica" size:55/2.5], NSFontAttributeName,
+//                                 [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+  NSShadow *shadow = [NSShadow new];
+  [shadow setShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8]];
+  [shadow setShadowOffset: CGSizeMake(0.0f, 1.0f)];
+  
+  
   [[UINavigationBar appearance] setTitleTextAttributes:
    [NSDictionary dictionaryWithObjectsAndKeys:
     [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
-    UITextAttributeTextColor,
-    [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-    UITextAttributeTextShadowColor,
-    [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-    UITextAttributeTextShadowOffset,
+    NSForegroundColorAttributeName,
+    shadow, NSShadowAttributeName,
     [UIFont fontWithName:@"Avenir-Medium" size:44/1.9],
-    UITextAttributeFont,
+    NSFontAttributeName,
     nil]];
 
   
@@ -253,17 +259,18 @@
 //   barMetrics:UIBarMetricsDefault];
 //  [[UISegmentedControl appearance] setTintColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.6]];
 //  4c6974
+  
+  [shadow setShadowColor: [UIColor colorWithRed:0.0/255.0 green:51.0/255.0 blue:87.0/255.0 alpha:0.75]];
+  [shadow setShadowOffset: CGSizeMake(0.0f, -0.5f)];
+
+
   [[UISegmentedControl appearance] setTintColor:[UIColor clearColor]];
   NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIColor colorWithRed:76.0/255.0 green:105.0/255.0 blue:116.0/255.0 alpha:1.0],
-                                  UITextAttributeTextColor,
-                                  [UIColor colorWithRed:0.0/255.0 green:51.0/255.0 blue:87.0/255.0 alpha:0.75],
-                                  //                                                           [UIColor clearColor],
-                                  UITextAttributeTextShadowColor,
-                                  [NSValue valueWithUIOffset:UIOffsetMake(0, -0.5)],
-                                  UITextAttributeTextShadowOffset,
+                                  NSForegroundColorAttributeName,
+                                  shadow, NSShadowAttributeName,
                                   [UIFont fontWithName:@"Avenir-Medium" size:34.0/1.9],
-                                  UITextAttributeFont,
+                                  NSFontAttributeName,
                                   nil];
     //  ios 6 has this ugly seperator
   [[UISegmentedControl appearance] setTitleTextAttributes: textAttributes forState:UIControlStateNormal];
