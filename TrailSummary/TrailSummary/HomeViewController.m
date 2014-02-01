@@ -8,8 +8,9 @@
 
 #import "HomeViewController.h"
 #import "trailPathView.h"
+#import "CHCSVParser.h"
 
-@interface HomeViewController () <UIScrollViewDelegate, trailPathSource>
+@interface HomeViewController () <UIScrollViewDelegate, trailPathSource, CHCSVParserDelegate>
 
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIImageView *imageView;
@@ -107,8 +108,38 @@
                        [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
                        [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
                        nil];
+//  CHCSVParser *parser = [[CHCSVParser alloc] initWithContentsOfCSVFile:@"data.csv"];
+//  parser.delegate = self;
+//  [parser parse];
+
+  NSArray *data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"up1" ofType:@"csv"]];
+  NSMutableArray *up1 = [[NSMutableArray alloc] init];
+  NSMutableArray *up2 = [[NSMutableArray alloc] init];
+  NSMutableArray *down1 = [NSMutableArray new];
+  NSMutableArray *down2 = [NSMutableArray new];
+  for (NSArray *dataPoint in data) {
+    [up1 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
+  }
+  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"up2" ofType:@"csv"]];
+  for (NSArray *dataPoint in data) {
+    [up2 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
+  }
+  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"down1" ofType:@"csv"]];
+  for (NSArray *dataPoint in data) {
+    [down1 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
+  }
+  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"down2" ofType:@"csv"]];
+  for (NSArray *dataPoint in data) {
+    [down2 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
+  }
+  
+  
   NSMutableArray *pointsArray = [NSMutableArray new];
-  [pointsArray addObject:lumberJack];
+  [pointsArray addObject:up1];
+  [pointsArray addObject:up2];
+  [pointsArray addObject:down1];
+  [pointsArray addObject:down2];
+//  [pointsArray addObject:lumberJack];
 //  [pointsArray addObject:lowerMainStreet];
 //  [pointsArray addObject:theGulch];
   
@@ -132,7 +163,7 @@
     NSLog(@"viewDidLoad");
     [super viewDidLoad];
     //get image from library
-    UIImage* image = [UIImage imageNamed:@"northstar-trail-map.jpg"];
+    UIImage* image = [UIImage imageNamed:@"Northstar.jpg"];
     NSLog(@"view width is %f, height is %f", self.view.bounds.size.width, self.view.bounds.size.height);
     NSLog(@"image width is %f, height is %f", image.size.width, image.size.height);
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
@@ -270,5 +301,11 @@
 {
 //    NSLog(@"viewForZoomingInScrollView");
     return self.imageView;
+}
+
+
+- (void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber
+{
+  NSLog(@"recordNumber %i", recordNumber);
 }
 @end

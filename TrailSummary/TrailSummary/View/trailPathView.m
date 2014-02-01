@@ -5,6 +5,7 @@
 //  Created by Chenchen Zheng on 1/16/14.
 //  Copyright (c) 2014 Chenchen Zheng. All rights reserved.
 //
+#define ARC4RANDOM_MAX      0x100000000
 
 #import "trailPathView.h"
 
@@ -39,7 +40,7 @@
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
     
-    CGFloat lineWidth = 10.0;
+    CGFloat lineWidth = 20.0;
     [path setLineWidth:lineWidth];
     [path setLineJoinStyle:kCGLineJoinRound];
     [path setLineCapStyle:kCGLineCapRound];
@@ -88,8 +89,17 @@
         count = 1;
       }
     }
-  
-    [[UIColor colorWithRed:0 green:0 blue:102/255.0 alpha:0.6] setStroke];
+  double red = ((double)arc4random() / ARC4RANDOM_MAX);
+  double green = ((double)arc4random() / ARC4RANDOM_MAX);
+  double blue = ((double)arc4random() / ARC4RANDOM_MAX);
+
+//  srand48(time(0));
+//  double red = drand48();
+//  srand48(time(0));
+//  double green = drand48();
+//  srand48(time(0));
+//  double blue = drand48();
+    [[UIColor colorWithRed:red green:green blue:blue alpha:0.9] setStroke];
     [path stroke];
     
     return path;

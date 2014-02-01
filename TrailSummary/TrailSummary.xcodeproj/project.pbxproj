@@ -24,6 +24,13 @@
 		3C535DA61861649B006561A1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C535DA51861649B006561A1 /* HomeViewController.m */; };
 		3C535DA918616FAD006561A1 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C535DA818616FAD006561A1 /* northstar-trail-map.jpg */; };
 		3CB10C401889015E0000ADD5 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB10C3F1889015E0000ADD5 /* trailPathView.m */; };
+		3CBE68D41898BBE800BBE88A /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE68D31898BBE800BBE88A /* CHCSVParser.m */; };
+		3CBE68D61898BCC200BBE88A /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68D51898BCC200BBE88A /* data.csv */; };
+		3CBE68D81898C5C200BBE88A /* data2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68D71898C5C200BBE88A /* data2.csv */; };
+		3CBE68DD1898CA5200BBE88A /* down2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68D91898CA5200BBE88A /* down2.csv */; };
+		3CBE68DE1898CA5200BBE88A /* up2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68DA1898CA5200BBE88A /* up2.csv */; };
+		3CBE68DF1898CA5200BBE88A /* down1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68DB1898CA5200BBE88A /* down1.csv */; };
+		3CBE68E01898CA5200BBE88A /* up1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE68DC1898CA5200BBE88A /* up1.csv */; };
 		587DD48F1890F9C7009E49E0 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 587DD48E1890F9C7009E49E0 /* Northstar.jpg */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +70,14 @@
 		3C535DA818616FAD006561A1 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
 		3CB10C3E1889015E0000ADD5 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trailPathView.h; path = TrailSummary/View/trailPathView.h; sourceTree = "<group>"; };
 		3CB10C3F1889015E0000ADD5 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trailPathView.m; path = TrailSummary/View/trailPathView.m; sourceTree = "<group>"; };
+		3CBE68D21898BBE800BBE88A /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		3CBE68D31898BBE800BBE88A /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		3CBE68D51898BCC200BBE88A /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		3CBE68D71898C5C200BBE88A /* data2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data2.csv; sourceTree = "<group>"; };
+		3CBE68D91898CA5200BBE88A /* down2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = down2.csv; sourceTree = "<group>"; };
+		3CBE68DA1898CA5200BBE88A /* up2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = up2.csv; sourceTree = "<group>"; };
+		3CBE68DB1898CA5200BBE88A /* down1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = down1.csv; sourceTree = "<group>"; };
+		3CBE68DC1898CA5200BBE88A /* up1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = up1.csv; sourceTree = "<group>"; };
 		587DD48E1890F9C7009E49E0 /* Northstar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Northstar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +108,7 @@
 		3C075D8B18601C77004226B8 = {
 			isa = PBXGroup;
 			children = (
+				3CBE68D11898BBE800BBE88A /* CHCSVParser */,
 				3CB10C3D188901350000ADD5 /* View */,
 				3C535DA718616FAD006561A1 /* images */,
 				3C075DC618601C81004226B8 /* Model */,
@@ -139,6 +155,12 @@
 		3C075D9E18601C77004226B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3CBE68D91898CA5200BBE88A /* down2.csv */,
+				3CBE68DA1898CA5200BBE88A /* up2.csv */,
+				3CBE68DB1898CA5200BBE88A /* down1.csv */,
+				3CBE68DC1898CA5200BBE88A /* up1.csv */,
+				3CBE68D71898C5C200BBE88A /* data2.csv */,
+				3CBE68D51898BCC200BBE88A /* data.csv */,
 				3C075D9F18601C77004226B8 /* TrailSummary-Info.plist */,
 				3C075DA018601C77004226B8 /* InfoPlist.strings */,
 				3C075DA318601C77004226B8 /* main.m */,
@@ -192,6 +214,15 @@
 				3CB10C3F1889015E0000ADD5 /* trailPathView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		3CBE68D11898BBE800BBE88A /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				3CBE68D21898BBE800BBE88A /* CHCSVParser.h */,
+				3CBE68D31898BBE800BBE88A /* CHCSVParser.m */,
+			);
+			path = CHCSVParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +303,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBE68DE1898CA5200BBE88A /* up2.csv in Resources */,
 				3C535DA918616FAD006561A1 /* northstar-trail-map.jpg in Resources */,
+				3CBE68D81898C5C200BBE88A /* data2.csv in Resources */,
+				3CBE68DD1898CA5200BBE88A /* down2.csv in Resources */,
 				587DD48F1890F9C7009E49E0 /* Northstar.jpg in Resources */,
+				3CBE68D61898BCC200BBE88A /* data.csv in Resources */,
 				3C075DA218601C77004226B8 /* InfoPlist.strings in Resources */,
+				3CBE68E01898CA5200BBE88A /* up1.csv in Resources */,
+				3CBE68DF1898CA5200BBE88A /* down1.csv in Resources */,
 				3C075DAA18601C77004226B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBE68D41898BBE800BBE88A /* CHCSVParser.m in Sources */,
 				3C075DC918601C9E004226B8 /* TrailPoint.m in Sources */,
 				3C075DA818601C77004226B8 /* AppDelegate.m in Sources */,
 				3C075DCC18602055004226B8 /* Trail.m in Sources */,
