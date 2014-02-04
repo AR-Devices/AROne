@@ -85,6 +85,41 @@
     case ARTopBarViewStyleSelector:
     {
       NSLog(@"ARTopBarViewStyleSelector");
+      CGRect rect = CGRectMake( 0, 0, CGRectGetWidth(frame), 32.5);
+      NSArray *activityArray = [NSArray arrayWithObjects:@"SPEED", @"V.DROP", @"ACCEL.", nil];
+      self = [[ARTopBarView alloc] initWithItems:activityArray];
+      self.frame = rect;
+      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+      self.selectedSegmentIndex = 0;
+      //      self.segmentedControlStyle = UISegmentedControlStyleBar;
+      self.alpha = 0.9;
+      [self setBackgroundColor: [UIColor clearColor]];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
+      [self setBackgroundColor:[UIColor clearColor]];
+      break;
+    }
+    case ARTopBarViewStyleDWMSmall:
+    {
+      NSLog(@"ARTopBarViewStyleDWMSmall");
+      CGRect rect = CGRectMake(0, 0, CGRectGetWidth(frame), 32.5);
+      NSArray *dateArray = [NSArray arrayWithObjects: @"day", @"week", @"month", nil];
+      self = [[ARTopBarView alloc] initWithItems:dateArray];
+      self.frame = rect;
+      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+      self.selectedSegmentIndex = 0;
+      //      self.segmentedControlStyle = UISegmentedControlStyleBar;
+      self.alpha = 0.9;
+      [self setBackgroundColor: [UIColor clearColor]];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
+      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
+      [self setBackgroundColor:[UIColor clearColor]];
       break;
     }
   }

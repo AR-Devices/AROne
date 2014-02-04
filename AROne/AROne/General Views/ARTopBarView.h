@@ -13,7 +13,8 @@ typedef NS_ENUM(NSInteger, ARTopBarViewStyle)
 //  let's try using block here, to assign three different call back function for three bottons
   ARTopBarViewStyleCalendar, //left, right, and middle click
   ARTopBarViewStyleDWM, //
-  ARTopBarViewStyleSelector
+  ARTopBarViewStyleSelector,
+  ARTopBarViewStyleDWMSmall
 };
 @interface ARTopBarView : UISegmentedControl
 

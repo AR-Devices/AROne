@@ -20,11 +20,15 @@
 
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIImageView *imageView;
-@property(nonatomic, strong) NSCalendar * cal;
-@property(nonatomic, strong) NSDateComponents *components;
-@property(nonatomic, strong) NSDate *myDate;
-@property(nonatomic) NSInteger dateCounter;
-@property(atomic, strong) UISegmentedControl *segment;
+@property (nonatomic, strong) NSCalendar * cal;
+@property (nonatomic, strong) NSDateComponents *components;
+@property (nonatomic, strong) NSDate *myDate;
+@property (nonatomic) NSInteger dateCounter;
+@property (atomic, strong) UISegmentedControl *segment;
+
+//Implement Multipule Snow in One Day feature
+@property (nonatomic) UIPageControl *pageControl;
+
 @end
 
 @implementation ARTrailSummaryViewController

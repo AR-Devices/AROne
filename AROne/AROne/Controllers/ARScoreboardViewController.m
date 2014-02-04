@@ -27,7 +27,7 @@
       [self createToolBar];
       //    d4dee6
       self.tableView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
-
+      [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     }
     return self;
 }
@@ -71,6 +71,11 @@
 	return footer;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+  return 10.0f/2;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
 	return 30.0f/2;
@@ -81,8 +86,6 @@
 {
 	return 216/1.9;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -147,11 +150,65 @@
 
 - (void) createToolBar
 {
-  ARTopBarView *topbar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleDWM viewBounds:self.view.bounds withBlock:^(UISegmentedControl *segment) {
+  ARTopBarView *topbar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleSelector viewBounds:self.view.bounds withBlock:^(UISegmentedControl *segment) {
     //  ccz: use this later... I'm thinking to vreate a seperate view for this top bar
     [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
   }];
-  self.tableView.tableHeaderView = topbar;
+  topbar.translatesAutoresizingMaskIntoConstraints = NO;
+
+  ARTopBarView *dateBar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleDWM viewBounds:self.view.bounds withBlock:^(ARTopBarView *segment) {
+    [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+  }];
+  dateBar.translatesAutoresizingMaskIntoConstraints = NO;
+
+  
+  UIView* spacer = [UIView new];
+  spacer.backgroundColor = [[UIColor redColor] colorWithAlphaComponent: 0.5];
+  spacer.translatesAutoresizingMaskIntoConstraints = NO;
+//  spacer.hidden = YES; // comment out to show spacer!
+  
+  UIView *comboView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 66)];
+//  [comboView insertSubview:topbar atIndex:0];
+
+  [comboView addSubview:topbar];
+  [comboView addSubview:dateBar];
+//  [comboView addSubview:spacer];
+  NSDictionary* views = NSDictionaryOfVariableBindings( topbar, dateBar );
+  
+  // Center the two views horizontally
+//  [comboView addConstraint:[NSLayoutConstraint constraintWithItem:topbar
+//                                                        attribute:NSLayoutAttributeCenterX
+//                                                        relatedBy:NSLayoutRelationEqual
+//                                                           toItem:comboView
+//                                                        attribute:NSLayoutAttributeCenterX
+//                                                       multiplier:1
+//                                                         constant:0]];
+//  
+//  [comboView addConstraint:[NSLayoutConstraint constraintWithItem:dateBar
+//                                                        attribute:NSLayoutAttributeCenterX
+//                                                        relatedBy:NSLayoutRelationEqual
+//                                                           toItem:comboView
+//                                                        attribute:NSLayoutAttributeCenterX
+//                                                       multiplier:1
+//                                                         constant:0]];
+  
+  // Position the two views one below the other, using the separator height defined above
+  [comboView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topbar(32.5)]-0-[dateBar(32.5)]"
+                                                                    options:0
+                                                                    metrics:0
+                                                                      views:views]];
+  
+  // Force the button distance from the bottom to be the half of the size of the content
+//  CGFloat constant = (imageview.frame.size.height + button.frame.size.height + [sepHeight floatValue]) / 2.0;
+//  [comboView addConstraint:[NSLayoutConstraint constraintWithItem:button
+//                                                        attribute:NSLayoutAttributeBottom
+//                                                        relatedBy:NSLayoutRelationEqual
+//                                                           toItem:self.view
+//                                                        attribute:NSLayoutAttributeCenterY
+//                                                       multiplier:1
+//                                                         constant:constant]];
+  
+  self.tableView.tableHeaderView = comboView;
 }
 
 //note default is DAY!
