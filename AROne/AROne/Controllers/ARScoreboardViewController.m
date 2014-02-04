@@ -15,6 +15,8 @@
 
 @interface ARScoreboardViewController ()
 
+@property UIView *comboBar;
+
 @end
 
 @implementation ARScoreboardViewController
@@ -24,6 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
       self.title = @"Scoreboard";
+      self.edgesForExtendedLayout = UIRectEdgeNone;
       [self createToolBar];
       //    d4dee6
       self.tableView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
@@ -65,10 +68,17 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-	UIView* footer = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 300, 30)];
+	UIView* footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
 	footer.backgroundColor = [UIColor clearColor];
 	footer.autoresizingMask = UIViewAutoresizingNone;
 	return footer;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+  UIView* header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 10)];
+  header.backgroundColor = [UIColor clearColor];
+  header.autoresizingMask = UIViewAutoresizingNone;
+  return header;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -156,7 +166,7 @@
   }];
   topbar.translatesAutoresizingMaskIntoConstraints = NO;
 
-  ARTopBarView *dateBar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleDWM viewBounds:self.view.bounds withBlock:^(ARTopBarView *segment) {
+  ARTopBarView *dateBar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleDWMSmall viewBounds:self.view.bounds withBlock:^(ARTopBarView *segment) {
     [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
   }];
   dateBar.translatesAutoresizingMaskIntoConstraints = NO;
@@ -167,11 +177,11 @@
   spacer.translatesAutoresizingMaskIntoConstraints = NO;
 //  spacer.hidden = YES; // comment out to show spacer!
   
-  UIView *comboView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 66)];
+  self.comboBar= [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 66)];
 //  [comboView insertSubview:topbar atIndex:0];
 
-  [comboView addSubview:topbar];
-  [comboView addSubview:dateBar];
+  [self.comboBar addSubview:topbar];
+  [self.comboBar addSubview:dateBar];
 //  [comboView addSubview:spacer];
   NSDictionary* views = NSDictionaryOfVariableBindings( topbar, dateBar );
   
@@ -193,7 +203,7 @@
 //                                                         constant:0]];
   
   // Position the two views one below the other, using the separator height defined above
-  [comboView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topbar(32.5)]-0-[dateBar(32.5)]"
+  [self.comboBar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topbar(32.5)]-0-[dateBar(32.5)]"
                                                                     options:0
                                                                     metrics:0
                                                                       views:views]];
@@ -208,8 +218,18 @@
 //                                                       multiplier:1
 //                                                         constant:constant]];
   
-  self.tableView.tableHeaderView = comboView;
+  self.tableView.tableHeaderView = self.comboBar;
 }
+
+//trying to keep the header at top but failed
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//  NSLog(@"called");
+//  CGRect rect = self.comboBar.bounds;
+//  rect.origin.y = MIN(0, -self.tableView.contentOffset.y);
+//  NSLog(@"rect.origin.y is %f", rect.origin.y);
+//  self.tableView.tableHeaderView.bounds = rect;
+//}
 
 //note default is DAY!
 - (void)segmentAction:(UISegmentedControl *)sender {

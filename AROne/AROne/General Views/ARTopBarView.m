@@ -79,7 +79,6 @@
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
-      [self setBackgroundColor:[UIColor clearColor]];
       break;
     }
     case ARTopBarViewStyleSelector:
@@ -99,27 +98,38 @@
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
-      [self setBackgroundColor:[UIColor clearColor]];
       break;
     }
     case ARTopBarViewStyleDWMSmall:
     {
       NSLog(@"ARTopBarViewStyleDWMSmall");
-      CGRect rect = CGRectMake(0, 0, CGRectGetWidth(frame), 32.5);
-      NSArray *dateArray = [NSArray arrayWithObjects: @"day", @"week", @"month", nil];
+      CGRect rect = CGRectMake(CGRectGetWidth(frame)-100, 0, 100, 32.5);
+      NSArray *dateArray = [NSArray arrayWithObjects: @"1D", @"1W", @"1M", nil];
       self = [[ARTopBarView alloc] initWithItems:dateArray];
+      [self setDividerImage:[self imageWithColor:[UIColor clearColor]]
+                  forLeftSegmentState:UIControlStateNormal
+                    rightSegmentState:UIControlStateNormal
+                           barMetrics:UIBarMetricsDefault];
+      [self setDividerImage:[self imageWithColor:[UIColor clearColor]]
+        forLeftSegmentState:UIControlStateSelected
+          rightSegmentState:UIControlStateNormal
+                 barMetrics:UIBarMetricsDefault];
+      [self setDividerImage:[self imageWithColor:[UIColor clearColor]]
+        forLeftSegmentState:UIControlStateNormal
+          rightSegmentState:UIControlStateSelected
+                 barMetrics:UIBarMetricsDefault];
+
       self.frame = rect;
-      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
-      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+      [self setTitleTextAttributes:orangeText forState:UIControlStateSelected];
+//      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//      [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
       self.selectedSegmentIndex = 0;
       //      self.segmentedControlStyle = UISegmentedControlStyleBar;
       self.alpha = 0.9;
       [self setBackgroundColor: [UIColor clearColor]];
-      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
-      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
-      [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
-      [self setBackgroundColor:[UIColor clearColor]];
+      [self setWidth:100/3 forSegmentAtIndex:0];
+      [self setWidth:100/3 forSegmentAtIndex:1];
+      [self setWidth:100/3 forSegmentAtIndex:2];
       break;
     }
   }
@@ -134,5 +144,18 @@
     // Drawing code
 }
 */
+- (UIImage *)imageWithColor:(UIColor *)color {
+  CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+  UIGraphicsBeginImageContext(rect.size);
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  CGContextSetFillColorWithColor(context, [color CGColor]);
+  CGContextFillRect(context, rect);
+  
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return image;
+}
 
 @end
