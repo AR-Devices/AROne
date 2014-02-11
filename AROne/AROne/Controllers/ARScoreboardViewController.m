@@ -169,7 +169,7 @@
     //  ccz: use this later... I'm thinking to vreate a seperate view for this top bar
     [segment addTarget:self action:@selector(segmentAction_topBar:) forControlEvents:UIControlEventValueChanged];
   }];
-  topbar.translatesAutoresizingMaskIntoConstraints = NO;
+//  topbar.translatesAutoresizingMaskIntoConstraints = NO;
 
   ARTopBarView *dateBar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleDWMSmall viewBounds:self.view.bounds withBlock:^(ARTopBarView *segment) {
     [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
