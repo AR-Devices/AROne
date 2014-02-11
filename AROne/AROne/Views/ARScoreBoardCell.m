@@ -47,7 +47,7 @@
   [self.cellView addSubview:name];
   
   //rank image
-  UILabel *rankView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 5, 5)];
+  UILabel *rankView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
   switch (rank) {
     case ARGold:
       rankView.backgroundColor = [UIColor yellowColor];
