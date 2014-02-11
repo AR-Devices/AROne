@@ -17,9 +17,8 @@
 //tableviewcell
 #import "ARSummaryCell.h"
 #import "ARTopBarView.h"
-@interface ARTrailSummaryViewController ()<UIScrollViewDelegate, trailPathSource>
+@interface ARTrailSummaryViewController ()<UIScrollViewDelegate, UIPageViewControllerDelegate, trailPathSource, PMCalendarControllerDelegate>
 
-@property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic, strong) NSCalendar * cal;
 @property (nonatomic, strong) NSDateComponents *components;
@@ -28,6 +27,7 @@
 @property (atomic, strong) UISegmentedControl *segment;
 
 //Implement Multipule Snow in One Day feature
+@property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIPageControl *pageControl;
 
 @end
@@ -49,25 +49,69 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(10,50,300,150)];
+  [self drawResorts];
 
+}
+
+- (void) drawResorts
+{
+  // CCZ: set scroll screen area for scrollView
+  CGFloat width = CGRectGetWidth(self.view.bounds);
+  CGFloat height = CGRectGetHeight(self.view.bounds);
+  //  self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),  height - _buttonHeight)];
+  
+  //ccz: using full view here, so that even if the button does not cover it's full view, it will still looks good
+  self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+  // CCZ: set content screen area
+  [self.scrollView setContentSize:CGSizeMake(width * 5, height)];
+  // CCZ: enable page system
+  [self.scrollView setPagingEnabled:YES];
+  // CCZ: hide scroll indicator
+  [self.scrollView setShowsHorizontalScrollIndicator: NO];
+  [self.scrollView setShowsVerticalScrollIndicator: NO];
+  [self.scrollView setDelegate: self];
+  
+  for (int i = 0; i < 5; i ++) {
+    //FIXME add different resort here...
+    UIView *resortView= [[UIImageView alloc] initWithFrame:CGRectMake(i * width , 0 , width, height )];
+    [self drawResortOn:resortView];
+    [_scrollView addSubview:resortView];
+  }
+  
+  [self.view addSubview:self.scrollView];
+  
+  //CCZ: implement dot control
+  self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, height - 130, self.view.frame.size.width, 20)];
+  [self.pageControl setNumberOfPages:5];
+  [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+  self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+  self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+//  self.pageControl.backgroundColor = [UIColor blueColor];
+
+  [self.view addSubview:self.pageControl];
+}
+
+- (void) drawResortOn: (UIView *) view
+{
+  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(10,50,300,150)];
+  
   UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
   map.frame = CGRectMake(0, 0, 300, 150);
-  trailPathView *view = [[trailPathView alloc] initWithFrame:map.frame];
-  view.dataSource = self;
-  [map addSubview:view];
-  [self.view addSubview:landscapeButton];
+  trailPathView *pathView = [[trailPathView alloc] initWithFrame:map.frame];
+  pathView.dataSource = self;
+  [map addSubview:pathView];
+  [view addSubview:landscapeButton];
   
   //zoom button
   UIImage *landscape = [UIImage imageNamed:@"landscape"];
   UIImageView *landscapeView = [[UIImageView alloc] initWithImage:landscape];
   UIView *landscapeFrame = [[UIButton alloc] initWithFrame:CGRectMake(0,130,20,20)];
-
+  
   [landscapeFrame addSubview:landscapeView];
   [map addSubview:landscapeFrame];
   [landscapeButton addSubview:map];
   [landscapeButton addTarget:self action:@selector(landscapeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-
+  
   
   UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
   trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
@@ -75,15 +119,15 @@
   trail_1.text = @"The Gulch trail (3)"; //FIXME value should be extracted from section text
   //trail_1.textAlignment = NSTextAlignmentCenter;
   //trail_1.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [self.view addSubview:trail_1];
-
+  [view addSubview:trail_1];
+  
   UILabel *trial_2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 235, 320, 15)];
   trial_2.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
   trial_2.textColor = [UIColor blueColor];
   trial_2.text = @"Lower Main Street (2)"; //FIXME value should be extracted from section text
   //trial_2.textAlignment = NSTextAlignmentCenter;
   //trial_2.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [self.view addSubview:trial_2];
+  [view addSubview:trial_2];
   
   UILabel *trial_3 = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 320, 15)];
   trial_3.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
@@ -91,8 +135,9 @@
   trial_3.text = @"Maximum speed: 42 mph @ The Gulch"; //FIXME value should be extracted from section text
   //trial_3.textAlignment = NSTextAlignmentCenter;
   //trial_3.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [self.view addSubview:trial_3];
+  [view addSubview:trial_3];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -110,6 +155,7 @@
 {
 	return @"trail_icon_selected";
 }
+
 -(void)landscapeButtonPressed:(id)sender
 {
   NSLog(@"-------------------------");
@@ -122,6 +168,7 @@
   [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
   [UIView commitAnimations];
 }
+
 -(NSArray *)trailPathViewData:(trailPathView *)graphView
 {
   
@@ -210,53 +257,11 @@
                        nil];
   NSMutableArray *pointsArray = [NSMutableArray new];
   [pointsArray addObject:lumberJack];
-  //  [pointsArray addObject:lowerMainStreet];
-  //  [pointsArray addObject:theGulch];
+  [pointsArray addObject:lowerMainStreet];
+  [pointsArray addObject:theGulch];
   
   return pointsArray;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //- (NSString *)tabTitle
 //{
@@ -355,10 +360,12 @@
 {
   UIButton *setting = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 23)];
   [setting setBackgroundImage:[UIImage imageNamed:@"setting_icon"] forState:UIControlStateNormal];
+  //FIXME? what heppen here? why settingPressed is gone?
   [setting addTarget:self action:@selector(settingPressed:) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:setting];
   [self.navigationItem setRightBarButtonItem:rightBarButton];
 }
+
 #pragma calender pop up view
 /**********************************************
  ******PMCalender API function*****************
@@ -409,4 +416,44 @@
   NSLog(@"[DEBUG] you choose this date ");
   
 }
+
+- (void)changePage:(id)sender
+{
+  //得到当前页面的ID
+  //int page = [sender currentPage];
+  
+  //在这里写你需要执行的代码
+  //......
+}
+
+//手指离开屏幕后ScrollView还会继续滚动一段时间只到停止
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+  //  NSLog(@"scrolling started");
+}
+
+-(void) scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+  
+  //  NSLog(@"scrolling ended");
+}
+
+-(void)scrollViewDidScroll:(UIScrollView*)scrollView
+
+{
+  //页面滚动时调用，设置当前页面的ID
+  [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
+{
+  //  NSLog(@"滚动视图开始滚动，它只调用一次");
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView*)scrollView willDecelerate:(BOOL)decelerate
+{
+  //  NSLog(@"滚动视图结束滚动，它只调用一次");
+  
+}
+
 @end
