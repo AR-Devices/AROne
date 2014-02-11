@@ -114,7 +114,13 @@
 {
   NSLog(@"-------------------------");
   ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] init];
+
+  [UIView  beginAnimations:nil context:NULL];
+  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+  [UIView setAnimationDuration:0.75];
   [self.navigationController pushViewController:landscape animated:YES];
+  [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+  [UIView commitAnimations];
 }
 -(NSArray *)trailPathViewData:(trailPathView *)graphView
 {
