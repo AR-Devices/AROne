@@ -108,15 +108,17 @@
   //  ee962f orange
   //  ffffff white
   //
+  int r = arc4random() % 100;
+  NSString *score = [NSString stringWithFormat:@"%d", r];
   switch (self.topBarStyle) {
     case ARScoreBoardCellStyleMaxSpeed:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:@"56" andRank:ARGold];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:score andRank:ARGold];
       break;
     case ARScoreBoardCellStyleVerticalDrop:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:@"56" andRank:ARSilver];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:score andRank:ARSilver];
       break;
     case ARScoreBoardCellStyleAcceleration:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:@"56" andRank:ARBronze];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:score andRank:ARBronze];
       break;
   }
   //number cgrect 394 136
