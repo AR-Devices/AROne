@@ -17,13 +17,17 @@ typedef NS_ENUM(NSInteger, ARScoreBoardCellStyle) {
   ARScoreBoardCellStyleVerticalDrop,
   ARScoreBoardCellStyleAcceleration
 };
-
+typedef NS_ENUM(NSInteger, ARRankStyle) {
+  ARGold,
+  ARSilver,
+  ARBronze
+};
 @interface ARScoreBoardCell : UITableViewCell
 
 @property (nonatomic, strong) UIView* cellView;
 @property (nonatomic, strong) UIView* nameAndIcon;
 @property (nonatomic, weak) UILabel* number;
 
-+ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andValue:(NSString *)value;
++ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andValue:(NSString *)value andRank:(ARRankStyle) rank;
 
 @end

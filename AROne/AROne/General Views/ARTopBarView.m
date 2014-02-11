@@ -98,6 +98,7 @@
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:0];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:1];
       [self setWidth:CGRectGetWidth(frame)/3 forSegmentAtIndex:2];
+      
       break;
     }
     case ARTopBarViewStyleDWMSmall:

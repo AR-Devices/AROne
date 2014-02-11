@@ -16,6 +16,7 @@
 @interface ARScoreboardViewController ()
 
 @property UIView *comboBar;
+@property NSInteger topBarStyle;
 
 @end
 
@@ -83,18 +84,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-  return 10.0f/2;
+  return 0.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-	return 30.0f/2;
+	return 0.0f;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 216/1.9;
+	return SECTION_CELL_X_HEIGHT-10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,14 +107,18 @@
   //  2fb3b6 Cyan
   //  ee962f orange
   //  ffffff white
-  cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:@"56"];
-//  if (indexPath.section == 0) {
-//    cell = [ARScoreBoardCell cellWithStyle:@"Max Speed" andValue:@"123"];
-//  } else if (indexPath.section == 1) {
-//    cell = [ARScoreBoardCell cellWithStyle:@"Vertical Drop" andValue:@"234" ];
-//  } else if (indexPath.section == 2) {
-//    cell = [ARScoreBoardCell cellWithStyle:@"Acceleration" andValue:@"345"];
-//  }
+  //
+  switch (self.topBarStyle) {
+    case ARScoreBoardCellStyleMaxSpeed:
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:@"56" andRank:ARGold];
+      break;
+    case ARScoreBoardCellStyleVerticalDrop:
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:@"56" andRank:ARSilver];
+      break;
+    case ARScoreBoardCellStyleAcceleration:
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:@"56" andRank:ARBronze];
+      break;
+  }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
@@ -162,7 +167,7 @@
 {
   ARTopBarView *topbar = [[ARTopBarView alloc] initWithStyle:ARTopBarViewStyleSelector viewBounds:self.view.bounds withBlock:^(UISegmentedControl *segment) {
     //  ccz: use this later... I'm thinking to vreate a seperate view for this top bar
-    [segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    [segment addTarget:self action:@selector(segmentAction_topBar:) forControlEvents:UIControlEventValueChanged];
   }];
   topbar.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -232,6 +237,24 @@
 //}
 
 //note default is DAY!
+- (void)segmentAction_topBar:(UISegmentedControl *)sender {
+  switch ([sender selectedSegmentIndex]) {
+    case 0:
+      self.topBarStyle = ARScoreBoardCellStyleMaxSpeed;
+      [self.tableView reloadData];
+      break;
+    case 1:
+      self.topBarStyle = ARScoreBoardCellStyleVerticalDrop;
+      [self.tableView reloadData];
+
+      break;
+    case 2:
+      self.topBarStyle = ARScoreBoardCellStyleAcceleration;
+      [self.tableView reloadData];
+
+      break;
+  }
+}
 - (void)segmentAction:(UISegmentedControl *)sender {
   switch ([sender selectedSegmentIndex]) {
     case 0:
