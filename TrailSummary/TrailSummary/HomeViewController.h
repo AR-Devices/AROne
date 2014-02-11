@@ -10,6 +10,6 @@
 
 @interface HomeViewController : UIViewController
 
-@property (nonatomic) UIImageView *image;
+//@property (nonatomic) UIImageView *image;
 
 @end

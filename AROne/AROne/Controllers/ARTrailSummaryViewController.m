@@ -10,6 +10,7 @@
 #import "UIViewController+AKTabBarController.h"
 #import "AKSegmentedControl.h"
 #import "trailPathView.h"
+#import "ARTrailSummaryMapViewController.h"
 
 
 #import <QuartzCore/QuartzCore.h>
@@ -48,12 +49,25 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(10,50,300,150)];
+
   UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
-  map.frame = CGRectMake(10, 50, 300, 150);
+  map.frame = CGRectMake(0, 0, 300, 150);
   trailPathView *view = [[trailPathView alloc] initWithFrame:map.frame];
   view.dataSource = self;
   [map addSubview:view];
-  [self.view addSubview:map];
+  [self.view addSubview:landscapeButton];
+  
+  //zoom button
+  UIImage *landscape = [UIImage imageNamed:@"landscape"];
+  UIImageView *landscapeView = [[UIImageView alloc] initWithImage:landscape];
+  UIView *landscapeFrame = [[UIButton alloc] initWithFrame:CGRectMake(0,130,20,20)];
+
+  [landscapeFrame addSubview:landscapeView];
+  [map addSubview:landscapeFrame];
+  [landscapeButton addSubview:map];
+  [landscapeButton addTarget:self action:@selector(landscapeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+
   
   UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
   trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
@@ -96,7 +110,12 @@
 {
 	return @"trail_icon_selected";
 }
-
+-(void)landscapeButtonPressed:(id)sender
+{
+  NSLog(@"-------------------------");
+  ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] init];
+  [self.navigationController pushViewController:landscape animated:YES];
+}
 -(NSArray *)trailPathViewData:(trailPathView *)graphView
 {
   

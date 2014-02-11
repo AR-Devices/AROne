@@ -162,6 +162,9 @@
 		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
 		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
 		EC693A8C17DD4FCE0031A544 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC693A8B17DD4FCE0031A544 /* CoreText.framework */; };
+		ECE33EBA18AA04550064F7D1 /* landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE33EB818AA04550064F7D1 /* landscape.png */; };
+		ECE33EBB18AA04550064F7D1 /* landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE33EB918AA04550064F7D1 /* landscape@2x.png */; };
+		ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,6 +355,10 @@
 		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
 		EC458E6818949F7100014337 /* Northstar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Northstar.jpg; sourceTree = "<group>"; };
 		EC693A8B17DD4FCE0031A544 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		ECE33EB818AA04550064F7D1 /* landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landscape.png; sourceTree = "<group>"; };
+		ECE33EB918AA04550064F7D1 /* landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landscape@2x.png"; sourceTree = "<group>"; };
+		ECE33EBC18AA0B800064F7D1 /* ARTrailSummaryMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailSummaryMapViewController.h; sourceTree = "<group>"; };
+		ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailSummaryMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +577,8 @@
 		3CDCDAAB17DE90BC00FCA0CA /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				ECE33EB818AA04550064F7D1 /* landscape.png */,
+				ECE33EB918AA04550064F7D1 /* landscape@2x.png */,
 				3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */,
 				3CDCDAAD17DE90BC00FCA0CA /* home_icon@2x.png */,
 				3CDCDAAE17DE90BC00FCA0CA /* home_icon_selected.png */,
@@ -706,6 +715,8 @@
 				3CFE885818064422006CF472 /* ARScoreboardViewController.m */,
 				3CFE885F18064422006CF472 /* ARTrailSummaryViewController.h */,
 				3CFE886018064422006CF472 /* ARTrailSummaryViewController.m */,
+				ECE33EBC18AA0B800064F7D1 /* ARTrailSummaryMapViewController.h */,
+				ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -872,9 +883,11 @@
 				3CDCDB4417DE90BC00FCA0CA /* calendar_bg@2x.png in Resources */,
 				3CDCDB1517DE90BC00FCA0CA /* circle.png in Resources */,
 				3CDCDB1817DE90BC00FCA0CA /* mph_MaxSpeed@2x.png in Resources */,
+				ECE33EBA18AA04550064F7D1 /* landscape.png in Resources */,
 				3CDCDB2717DE90BC00FCA0CA /* Altitude@2x.png in Resources */,
 				3CDCDB3617DE90BC00FCA0CA /* card2_bg@2x.png in Resources */,
 				3CDCDB0D17DE90BC00FCA0CA /* setting_icon.png in Resources */,
+				ECE33EBB18AA04550064F7D1 /* landscape@2x.png in Resources */,
 				3CDCDB0517DE90BC00FCA0CA /* home_icon.png in Resources */,
 				3CDCDB3417DE90BC00FCA0CA /* card1_bg@2x.png in Resources */,
 				3CDCDB1717DE90BC00FCA0CA /* mph_MaxSpeed.png in Resources */,
@@ -961,6 +974,7 @@
 			files = (
 				3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */,
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
+				ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */,
 				3C417FE317D84B560094B56F /* AKTab.m in Sources */,
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
