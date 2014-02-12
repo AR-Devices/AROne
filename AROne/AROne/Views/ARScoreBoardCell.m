@@ -38,7 +38,7 @@
   [self.cellView addSubview:iconView];
 
   UILabel* name = [[UILabel alloc] initWithFrame:CGRectMake(76/1.9+10, 0, 200, 76/1.9)];
-  name.font = [UIFont fontWithName:@"Avenir-Medium" size:25.0/1.9];
+  name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
   name.text = @"Peng Shao";
   name.center = CGPointMake(self.cellView.bounds.size.width/2+10,self.cellView.bounds.size.height/2);
@@ -47,18 +47,18 @@
   [self.cellView addSubview:name];
   
   //rank image
-  UILabel *rankView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+  UIImageView *rankView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
   switch (rank) {
     case ARGold:
-      rankView.backgroundColor = [UIColor yellowColor];
+      [rankView setImage:[UIImage imageNamed:@"crown"]];
       [iconView addSubview:rankView];
       break;
     case ARSilver:
-      rankView.backgroundColor = [UIColor whiteColor];
+      rankView.backgroundColor = [UIColor clearColor];
       [iconView addSubview:rankView];
       break;
     case ARBronze:
-      rankView.backgroundColor = [UIColor brownColor];
+      rankView.backgroundColor = [UIColor clearColor];
       [iconView addSubview:rankView];
 
       break;
@@ -71,12 +71,12 @@
   case ARScoreBoardCellStyleMaxSpeed:
     {
       //jw speed score
-      UILabel *maxspeed_text = [[UILabel alloc] initWithFrame:CGRectMake(3.0f, 35, 40, 66)];
-      maxspeed_text.font = [UIFont fontWithName:@"Avenir-Roman" size:28.0];
+      UILabel *maxspeed_text = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 66)];
+      maxspeed_text.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
       maxspeed_text.text = value; //FIXME value should be extracted from section text
       maxspeed_text.textAlignment = NSTextAlignmentCenter;
       maxspeed_text.textColor = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
-      maxspeed_text.center = CGPointMake(self.cellView.bounds.size.width/2+10+40,self.cellView.bounds.size.height/2);
+      maxspeed_text.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
 
       [self.cellView addSubview:maxspeed_text];
       //jw speed score units [CONSTANT]

@@ -110,15 +110,19 @@
   //
   int r = arc4random() % 100;
   NSString *score = [NSString stringWithFormat:@"%d", r];
+  ARRankStyle rank = ARNormal;
+  if (indexPath.row == 0) {
+    rank = ARGold;
+  }
   switch (self.topBarStyle) {
     case ARScoreBoardCellStyleMaxSpeed:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:score andRank:ARGold];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:score andRank:rank];
       break;
     case ARScoreBoardCellStyleVerticalDrop:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:score andRank:ARSilver];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:score andRank:rank];
       break;
     case ARScoreBoardCellStyleAcceleration:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:score andRank:ARBronze];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:score andRank:rank];
       break;
   }
   //number cgrect 394 136

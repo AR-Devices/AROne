@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, ARScoreBoardCellStyle) {
 typedef NS_ENUM(NSInteger, ARRankStyle) {
   ARGold,
   ARSilver,
-  ARBronze
+  ARBronze,
+  ARNormal
 };
 @interface ARScoreBoardCell : UITableViewCell
 
