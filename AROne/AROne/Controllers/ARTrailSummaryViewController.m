@@ -73,7 +73,7 @@
   
   for (int i = 0; i < 5; i ++) {
     //FIXME add different resort here...
-    UIView *resortView= [[UIImageView alloc] initWithFrame:CGRectMake(i * width , 0 , width, height )];
+    UIView *resortView= [[UIView alloc] initWithFrame:CGRectMake(i * width , 0 , width, height )];
     [self drawResortOn:resortView];
     [_scrollView addSubview:resortView];
   }
