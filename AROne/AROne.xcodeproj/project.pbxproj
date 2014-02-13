@@ -177,6 +177,7 @@
 		EC42787C18AC86CA002C5EA1 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42786B18AC86CA002C5EA1 /* SignUpFieldBG.png */; };
 		EC42787D18AC86CA002C5EA1 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42786C18AC86CA002C5EA1 /* Twitter.png */; };
 		EC42787E18AC86CA002C5EA1 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42786D18AC86CA002C5EA1 /* TwitterDown.png */; };
+		EC42788118AC98DE002C5EA1 /* ARLoginMock.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42788018AC98DE002C5EA1 /* ARLoginMock.m */; };
 		EC458E66189499C200014337 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC458E65189499C200014337 /* trailPathView.m */; };
 		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
 		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
@@ -406,6 +407,8 @@
 		EC42786B18AC86CA002C5EA1 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
 		EC42786C18AC86CA002C5EA1 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		EC42786D18AC86CA002C5EA1 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		EC42787F18AC98DE002C5EA1 /* ARLoginMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARLoginMock.h; path = Controllers/ARLoginMock.h; sourceTree = "<group>"; };
+		EC42788018AC98DE002C5EA1 /* ARLoginMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARLoginMock.m; path = Controllers/ARLoginMock.m; sourceTree = "<group>"; };
 		EC458E64189499C200014337 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trailPathView.h; sourceTree = "<group>"; };
 		EC458E65189499C200014337 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trailPathView.m; sourceTree = "<group>"; };
 		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
@@ -899,6 +902,8 @@
 				ECE58D9918AB638D00CE327F /* MyLogInViewController.m */,
 				ECE58D9A18AB638D00CE327F /* MySignUpViewController.h */,
 				ECE58D9B18AB638D00CE327F /* MySignUpViewController.m */,
+				EC42787F18AC98DE002C5EA1 /* ARLoginMock.h */,
+				EC42788018AC98DE002C5EA1 /* ARLoginMock.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1165,6 +1170,7 @@
 				ECE58D9F18AB638D00CE327F /* MySignUpViewController.m in Sources */,
 				3C3F181A17DE886D00658555 /* PMCalendarController.m in Sources */,
 				3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */,
+				EC42788118AC98DE002C5EA1 /* ARLoginMock.m in Sources */,
 				3C417FE917D84B560094B56F /* UISplitViewController+AKTabBarController.m in Sources */,
 				3C417FE617D84B560094B56F /* AKTabBarController.m in Sources */,
 				3CFE887618064422006CF472 /* ARSummaryViewController.m in Sources */,
