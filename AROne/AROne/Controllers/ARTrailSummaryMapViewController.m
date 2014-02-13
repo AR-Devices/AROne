@@ -7,6 +7,7 @@
 //
 
 #import "ARTrailSummaryMapViewController.h"
+#import "ARTrailSummaryViewController.h"
 #import "trailPathView.h"
 
 @interface ARTrailSummaryMapViewController () <UIScrollViewDelegate, trailPathSource>
@@ -204,8 +205,25 @@
   trailPathView *trailView = [[trailPathView alloc] initWithFrame:self.imageView.bounds];
   trailView.dataSource = self;
   [self.imageView addSubview:trailView];
+  [self drawNavigationInputs];
   
 }
+
+- (void)drawNavigationInputs
+{
+  UIButton *homeView = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 50, 20, 30, 30)];
+  [homeView addTarget:self action:@selector(homeAction:) forControlEvents:UIControlEventTouchUpInside];
+  [homeView setBackgroundImage:[UIImage imageNamed:@"home_icon"] forState:UIControlStateNormal];
+  //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:homeView];
+  [self.view addSubview: homeView];
+  
+}
+
+-(void)homeAction:(id)sender
+{
+   [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 - (void)tapOnce:(UIGestureRecognizer *)gesture
@@ -254,17 +272,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
   //reset zoomScale back to 1 so that contentSize can be modified correctly
@@ -302,7 +309,6 @@
   //    NSLog(@"viewForZoomingInScrollView");
   return self.imageView;
 }
-
 
 
 @end

@@ -164,7 +164,10 @@
   [UIView  beginAnimations:nil context:NULL];
   [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
   [UIView setAnimationDuration:0.75];
-  [self.navigationController pushViewController:landscape animated:YES];
+  [self presentViewController:landscape animated:YES completion:^{
+    //nothing
+  }];
+//  [self.navigationController pushViewController:landscape animated:YES];
   [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
   [UIView commitAnimations];
 }
@@ -454,6 +457,18 @@
 {
   //  NSLog(@"滚动视图结束滚动，它只调用一次");
   
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+  NSLog(@"%s", __PRETTY_FUNCTION__);
+  return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+- (BOOL)shouldAutorotate
+{
+  NSLog(@"%s", __PRETTY_FUNCTION__);
+  return true;
 }
 
 @end
