@@ -54,7 +54,7 @@
 
   SubclassConfigViewController* loginpage = [[SubclassConfigViewController alloc] init];
   ARLoginMock * loginMock = [[ARLoginMock alloc] init];
-  [self.window setRootViewController:self.tabBarController];
+  [self.window setRootViewController:loginMock];
 
   [self.window makeKeyAndVisible];
   
