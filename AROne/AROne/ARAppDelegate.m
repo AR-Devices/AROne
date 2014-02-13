@@ -16,17 +16,26 @@
 #import "ARTrailSummaryViewController.h"
 //FIXME temp put it here to see the view
 #import "ARSummaryGraphViewController.h"
+#import "SubclassConfigViewController.h"
 
 
 @interface ARAppDelegate ()
 
-@property (nonatomic, strong) AKTabBarController *tabBarController;
 
 @end
 @implementation ARAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  // ****************************************************************************
+  // Fill in with your Parse and Twitter credentials. Don't forget to add your
+  // Facebook id in Info.plist:
+  // JERRY: THIS MUST BE THE FIRST LINE OF CODE IN THIS METHOD -^.^-
+  // ****************************************************************************
+  [Parse setApplicationId:@"Lt8jTMUGgCSfv8HaeY02aVUMlLhX55VrgAmbOzwe" clientKey:@"jdLKdGO8ixtGrpe7HX5XLFwJICB8pFjIPw5xVvA4"];
+  [PFFacebookUtils initializeFacebook];
+  //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
+  
   [self appTheme];
   [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
   [application setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -39,10 +48,20 @@
 //  }
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   
-  [self createTabBar];
   
-  [self.window setRootViewController:self.tabBarController];
+  
+  SubclassConfigViewController* loginpage = [[SubclassConfigViewController alloc] init];
+  
+  [self.window setRootViewController:loginpage];
+
   [self.window makeKeyAndVisible];
+  
+  
+
+  // Set default ACLs
+  PFACL *defaultACL = [PFACL ACL];
+  [defaultACL setPublicReadAccess:YES];
+  [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
   return YES;
 }
 
@@ -75,94 +94,7 @@
 
 #pragma mark - private functions
 
-- (void) createTabBar
-{
-    //check if device is ipad or iphone
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSLog(@"deviceType is %@", deviceType);
-    if([deviceType rangeOfString:@"iPad"].location == NSNotFound) {
-        //  ccz: init Trabbar controller with height of 50, thinking not to display tab bar text
-        self.tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40 position:AKTabBarPositionBottom];
-    } else {
-        self.tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:60 position:AKTabBarPositionBottom];
-    }
-  
-  ARSummaryViewController *summary = [[ARSummaryViewController alloc] initWithStyle:UITableViewStylePlain];
-  UINavigationController *summaryNavigation = [[UINavigationController alloc] initWithRootViewController:summary];
-  ARScoreboardViewController *scoreboard = [[ARScoreboardViewController alloc] initWithStyle:UITableViewStylePlain];
-  UINavigationController *scoreboardNavigation = [[UINavigationController alloc] initWithRootViewController:scoreboard];
-  UINavigationController *trailSummary = [[UINavigationController alloc] initWithRootViewController:[ARTrailSummaryViewController new]];
 
-
-  [self.tabBarController setViewControllers:[NSMutableArray arrayWithObjects:summaryNavigation, scoreboardNavigation, trailSummary, nil]]; //FIXME: delete summaryTabGraph
-
-   // Tab background Image
-   [self.tabBarController setBackgroundImageName:@"TabBarBlue"];
-   [self.tabBarController setSelectedBackgroundImageName:@"TabBarBlue"];
-   
-
-   // If needed, set cap insets for the background image
-   [_tabBarController setBackgroundImageCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
-   
-   // Tabs top embos Color
-   [_tabBarController setTabEdgeColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.8]];
-   
-   // Tabs Colors settings
-   [_tabBarController setTabColors:@[[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.0],
-   [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0]]]; // MAX 2 Colors
-   
-   [_tabBarController setSelectedTabColors:@[[UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0],
-   [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0]]]; // MAX 2 Colors
-   
-   // Tab Stroke Color
-//   [_tabBarController setTabStrokeColor:[UIColor whiteColor]];
-  
-   // Icons Color settings
-   [_tabBarController setIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1],
-   [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
-   
-   // Icon Shadow
-//   [_tabBarController setIconShadowColor:[UIColor blackColor]];
-//   [_tabBarController setIconShadowOffset:CGSizeMake(0, 1)];
-  
-   [_tabBarController setSelectedIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1],
-   [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
-   
-   [_tabBarController setSelectedIconOuterGlowColor:[UIColor whiteColor]];
-   
-   // Text Color
-   [_tabBarController setTextColor:[UIColor colorWithRed:157.0/255.0 green:157.0/255.0 blue:157.0/255.0 alpha:1.0]];
-   [_tabBarController setSelectedTextColor:[UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1.0]];
-   
-   // Text font
-//   [_tabBarController setTextFont:[UIFont fontWithName:@"Chalkduster" size:14]];
-  
-   // Hide / Show glossy on tab icons
-   [_tabBarController setIconGlossyIsHidden:YES];
-   
-   // Enable / Disable pre-rendered image mode
-   [_tabBarController setTabIconPreRendered:NO];
-  
-  
-  // Uncomment the following lines to completely remove the border from all elements.
-  /*
-   [_tabBarController setTabEdgeColor:[UIColor clearColor]];
-   [_tabBarController setTabInnerStrokeColor:[UIColor clearColor]];
-   [_tabBarController setTabStrokeColor:[UIColor clearColor]];
-   [_tabBarController setTopEdgeColor:[UIColor clearColor]];
-   */
-  
-  // Uncomment the following to display centered image in the center of the tabbar, similar to Instagram.
-  /*
-   UIImage *img = [UIImage imageNamed:@"sample-center-image"];
-   UIImageView *bottomCenterView = [[UIImageView alloc] initWithImage:img];
-   CGRect rect = _tabBarController.view.frame;
-   bottomCenterView.frame = CGRectMake(rect.size.width/2 - img.size.width/2, rect.size.height - img.size.height,
-   img.size.width, img.size.height);
-   [_tabBarController.view addSubview:bottomCenterView];
-   */
-
-}
 - (void) appTheme
 {
   
