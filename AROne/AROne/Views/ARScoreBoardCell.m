@@ -65,7 +65,9 @@
     default:
       break;
   }
-
+  UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
+  UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
+  UIColor *orangeColor   = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
 
   switch (style) {
   case ARScoreBoardCellStyleMaxSpeed:
@@ -92,33 +94,56 @@
   case ARScoreBoardCellStyleVerticalDrop:
     {
       //jw speed graph
-      UIImage *maxspeed_graph = [UIImage imageNamed:@"card2_bg"];
-      UIImageView *maxspeedGraphView = [[UIImageView alloc] initWithImage:maxspeed_graph];
-      maxspeedGraphView.frame = CGRectMake(110, 30, 100, 76);
-      maxspeedGraphView.contentMode = UIViewContentModeScaleAspectFit;
-      maxspeedGraphView.center = CGPointMake(self.cellView.bounds.size.width/2+10+40,self.cellView.bounds.size.height/2);
+      UILabel *vdrop_graph = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 66)];
+      vdrop_graph.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
+      vdrop_graph.text = value; //FIXME value should be extracted from section text
+      vdrop_graph.textAlignment = NSTextAlignmentCenter;
+      vdrop_graph.textColor = neonblueColor;
+      vdrop_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
+      [self.cellView addSubview:vdrop_graph];
+      
+      UIImage *vdrop_unit = [UIImage imageNamed:@"mph Max Speed"];
+      UIImageView *vdropUnitView = [[UIImageView alloc] initWithImage:vdrop_unit];
+      vdropUnitView.frame = CGRectMake(43, 45, 76/1.9, 76/1.9);
+      vdropUnitView.contentMode = UIViewContentModeScaleAspectFit;
+      vdropUnitView.center = CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
 
-      [self.cellView addSubview:maxspeedGraphView];
+      [self.cellView addSubview:vdropUnitView];
     }
     break;
   case ARScoreBoardCellStyleAcceleration:
     {
       //jw speed circle
-      UIImage *maxspeed_circle = [UIImage imageNamed:@"circle"];
-      UIImageView *maxspeedCircleView = [[UIImageView alloc] initWithImage:maxspeed_circle];
-      maxspeedCircleView.frame = CGRectMake(250, 45, 40, 40);
-      maxspeedCircleView.contentMode = UIViewContentModeScaleAspectFit;
-
+      UILabel *acce_graph = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 66)];
+      acce_graph.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
+      acce_graph.text = value; //FIXME value should be extracted from section text
+      acce_graph.textAlignment = NSTextAlignmentCenter;
+      acce_graph.textColor = orangeColor;
+      acce_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
+      [self.cellView addSubview:acce_graph];
       
-      UITextField* textField = [[UITextField alloc]
-                                initWithFrame:CGRectMake(10, 10, 50, 20)];
-      textField.font = [UIFont fontWithName:@"Avenir-Roman" size:12.0];
+      UIImage *acce_unit = [UIImage imageNamed:@"mph Max Speed"];
+      UIImageView *acceUnitView = [[UIImageView alloc] initWithImage:acce_unit];
+      acceUnitView.frame = CGRectMake(43, 45, 76/1.9, 76/1.9);
+      acceUnitView.contentMode = UIViewContentModeScaleAspectFit;
+      acceUnitView.center = CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
 
-      textField.placeholder = @"8.9";
-      maxspeedCircleView.center = CGPointMake(self.cellView.bounds.size.width/2+10+40,self.cellView.bounds.size.height/2);
-
-      [maxspeedCircleView addSubview:textField];
-      [self.cellView addSubview:maxspeedCircleView];
+      [self.cellView addSubview:acceUnitView];
+//      UIImage *maxspeed_circle = [UIImage imageNamed:@"circle"];
+//      UIImageView *maxspeedCircleView = [[UIImageView alloc] initWithImage:maxspeed_circle];
+//      maxspeedCircleView.frame = CGRectMake(250, 45, 40, 40);
+//      maxspeedCircleView.contentMode = UIViewContentModeScaleAspectFit;
+//
+//      
+//      UITextField* textField = [[UITextField alloc]
+//                                initWithFrame:CGRectMake(10, 10, 50, 20)];
+//      textField.font = [UIFont fontWithName:@"Avenir-Roman" size:12.0];
+//
+//      textField.placeholder = @"8.9";
+//      maxspeedCircleView.center = CGPointMake(self.cellView.bounds.size.width/2+10+40,self.cellView.bounds.size.height/2);
+//
+//      [maxspeedCircleView addSubview:textField];
+//      [self.cellView addSubview:maxspeedCircleView];
     }
     break;
   }
