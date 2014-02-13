@@ -485,7 +485,6 @@
 				EC9ED30018AC75400067F729 /* SystemConfiguration.framework in Frameworks */,
 				EC9ED2FE18AC751B0067F729 /* Security.framework in Frameworks */,
 				EC9ED2FC18AC75050067F729 /* MobileCoreServices.framework in Frameworks */,
-				3C92D3F818AC9A3D0051BE54 /* FacebookSDK.framework in Frameworks */,
 				EC9ED2FA18AC74FB0067F729 /* libz.1.1.3.dylib in Frameworks */,
 				3C417F3F17D847510094B56F /* Foundation.framework in Frameworks */,
 				3C417F4117D847510094B56F /* CoreGraphics.framework in Frameworks */,
@@ -1383,9 +1382,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jiachiw/github/AROne/AROne,
-					/Users/chenchenzheng/github/ardevices/AROne/AROne/Frameworks,
-					/Users/jiachiw/github/AROne/AROne/Frameworks,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
@@ -1404,9 +1400,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jiachiw/github/AROne/AROne,
-					/Users/chenchenzheng/github/ardevices/AROne/AROne/Frameworks,
-					/Users/jiachiw/github/AROne/AROne/Frameworks,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
