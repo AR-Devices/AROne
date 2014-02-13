@@ -55,7 +55,6 @@
 		3C6EA85C180E612C0043216D /* graph_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA858180E612C0043216D /* graph_bg2@2x.png */; };
 		3C92D3EF18AB51D10051BE54 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3ED18AB51D10051BE54 /* crown.png */; };
 		3C92D3F018AB51D10051BE54 /* crown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3EE18AB51D10051BE54 /* crown@2x.png */; };
-		3C92D3FB18AC9DDE0051BE54 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92D3FA18AC9DDE0051BE54 /* Parse.framework */; };
 		3C92D40018ACA34D0051BE54 /* SQLCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D3FD18ACA34D0051BE54 /* SQLCommand.m */; };
 		3C92D40118ACA34D0051BE54 /* WCSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D3FF18ACA34D0051BE54 /* WCSQLite.m */; };
 		3C92D40718ACA74B0051BE54 /* ARReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40618ACA74B0051BE54 /* ARReading.m */; };
@@ -63,6 +62,8 @@
 		3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40C18ACA84E0051BE54 /* ARDevice.m */; };
 		3C92D41318ACAFE90051BE54 /* ARNorthStarReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D41218ACAFE90051BE54 /* ARNorthStarReading.m */; };
 		3C92D41518ACB4250051BE54 /* ARCommon.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D41418ACB3CE0051BE54 /* ARCommon.h */; };
+		3C92D41718ACB7D80051BE54 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92D41618ACB7D80051BE54 /* Parse.framework */; };
+		3C92D41918ACB8010051BE54 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92D41818ACB8010051BE54 /* FacebookSDK.framework */; };
 		3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */; };
 		3CDCDB0317DE90BC00FCA0CA /* mph Max Speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */; };
 		3CDCDB0517DE90BC00FCA0CA /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */; };
@@ -186,7 +187,6 @@
 		EC42787D18AC86CA002C5EA1 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42786C18AC86CA002C5EA1 /* Twitter.png */; };
 		EC42787E18AC86CA002C5EA1 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42786D18AC86CA002C5EA1 /* TwitterDown.png */; };
 		EC42788118AC98DE002C5EA1 /* ARLoginMock.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42788018AC98DE002C5EA1 /* ARLoginMock.m */; };
-		EC42788318AC9B04002C5EA1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC42788218AC9B04002C5EA1 /* Parse.framework */; };
 		EC42789618AC9C35002C5EA1 /* AR_app_splashpage.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42788518AC9C35002C5EA1 /* AR_app_splashpage.png */; };
 		EC42789718AC9C35002C5EA1 /* arlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42788618AC9C35002C5EA1 /* arlogo.png */; };
 		EC42789818AC9C35002C5EA1 /* arlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC42788718AC9C35002C5EA1 /* arlogo@2x.png */; };
@@ -309,7 +309,6 @@
 		3C6EA858180E612C0043216D /* graph_bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_bg2@2x.png"; sourceTree = "<group>"; };
 		3C92D3ED18AB51D10051BE54 /* crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown.png; sourceTree = "<group>"; };
 		3C92D3EE18AB51D10051BE54 /* crown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crown@2x.png"; sourceTree = "<group>"; };
-		3C92D3FA18AC9DDE0051BE54 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3C92D3FC18ACA34D0051BE54 /* SQLCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLCommand.h; sourceTree = "<group>"; };
 		3C92D3FD18ACA34D0051BE54 /* SQLCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLCommand.m; sourceTree = "<group>"; };
 		3C92D3FE18ACA34D0051BE54 /* WCSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSQLite.h; sourceTree = "<group>"; };
@@ -323,6 +322,8 @@
 		3C92D41118ACAFE90051BE54 /* ARNorthStarReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARNorthStarReading.h; sourceTree = "<group>"; };
 		3C92D41218ACAFE90051BE54 /* ARNorthStarReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARNorthStarReading.m; sourceTree = "<group>"; };
 		3C92D41418ACB3CE0051BE54 /* ARCommon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = ARCommon.h; sourceTree = "<group>"; };
+		3C92D41618ACB7D80051BE54 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3C92D41818ACB8010051BE54 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accelerationCircle.png; sourceTree = "<group>"; };
 		3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mph Max Speed.png"; sourceTree = "<group>"; };
 		3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
@@ -447,7 +448,6 @@
 		EC42786D18AC86CA002C5EA1 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
 		EC42787F18AC98DE002C5EA1 /* ARLoginMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARLoginMock.h; path = Controllers/ARLoginMock.h; sourceTree = "<group>"; };
 		EC42788018AC98DE002C5EA1 /* ARLoginMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARLoginMock.m; path = Controllers/ARLoginMock.m; sourceTree = "<group>"; };
-		EC42788218AC9B04002C5EA1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		EC42788518AC9C35002C5EA1 /* AR_app_splashpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AR_app_splashpage.png; sourceTree = "<group>"; };
 		EC42788618AC9C35002C5EA1 /* arlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arlogo.png; sourceTree = "<group>"; };
 		EC42788718AC9C35002C5EA1 /* arlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arlogo@2x.png"; sourceTree = "<group>"; };
@@ -500,6 +500,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C92D41918ACB8010051BE54 /* FacebookSDK.framework in Frameworks */,
+				3C92D41718ACB7D80051BE54 /* Parse.framework in Frameworks */,
 				3C41800D17D8585F0094B56F /* QuartzCore.framework in Frameworks */,
 				3C417F4317D847510094B56F /* UIKit.framework in Frameworks */,
 				EC9ED30018AC75400067F729 /* SystemConfiguration.framework in Frameworks */,
@@ -512,7 +514,6 @@
 				EC9ED2F618AC74CA0067F729 /* AudioToolbox.framework in Frameworks */,
 				EC9ED2F418AC74BD0067F729 /* StoreKit.framework in Frameworks */,
 				EC9ED2F218AC74B30067F729 /* CoreLocation.framework in Frameworks */,
-				EC42788318AC9B04002C5EA1 /* Parse.framework in Frameworks */,
 				EC9ED2F018AC74A90067F729 /* Social.framework in Frameworks */,
 				EC9ED2EE18AC74A10067F729 /* AdSupport.framework in Frameworks */,
 				EC9ED2EC18AC74990067F729 /* Accounts.framework in Frameworks */,
@@ -588,8 +589,8 @@
 		3C417F3D17D847510094B56F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC42788218AC9B04002C5EA1 /* Parse.framework */,
-				3C92D3F618AC9A3D0051BE54 /* FacebookSDK.framework */,
+				3C92D41818ACB8010051BE54 /* FacebookSDK.framework */,
+				3C92D41618ACB7D80051BE54 /* Parse.framework */,
 				EC9ED2FF18AC75400067F729 /* SystemConfiguration.framework */,
 				EC9ED2FD18AC751B0067F729 /* Security.framework */,
 				EC9ED2FB18AC75050067F729 /* MobileCoreServices.framework */,
@@ -1438,6 +1439,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/chenchenzheng/github/ardevices/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
@@ -1456,6 +1458,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/chenchenzheng/github/ardevices/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
