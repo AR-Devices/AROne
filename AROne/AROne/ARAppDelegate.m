@@ -16,8 +16,6 @@
 #import "ARTrailSummaryViewController.h"
 //FIXME temp put it here to see the view
 #import "ARSummaryGraphViewController.h"
-#import "SubclassConfigViewController.h"
-#import "ARLoginMock.h"
 
 @interface ARAppDelegate ()
 @property (nonatomic, strong) AKTabBarController *tabBarController;
@@ -25,6 +23,42 @@
 
 @end
 @implementation ARAppDelegate
+
+// ****************************************************************************
+// App switching methods to support Facebook Single Sign-On.
+// ****************************************************************************
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
+//  return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+  [FBAppEvents activateApp];
+  [FBSession.activeSession handleDidBecomeActive];
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
+  NSLog(@"called");
+  // Store the deviceToken in the current installation and save it to Parse.
+  PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+  [currentInstallation setDeviceTokenFromData:newDeviceToken];
+  //  [currentInstallation addUniqueObject:@"Cliq" forKey:@"channels"];
+  NSString *fbid = [[NSUserDefaults standardUserDefaults] objectForKey:@"myFBID"];
+  NSLog(@"fbid is %@",fbid);
+  if (fbid != nil) {
+    [currentInstallation addUniqueObject:fbid forKey: @"channels"];
+  }
+  [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+  [PFPush handlePush:userInfo];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,68 +68,25 @@
   // JERRY: THIS MUST BE THE FIRST LINE OF CODE IN THIS METHOD -^.^-
   // ****************************************************************************
   [Parse setApplicationId:@"Lt8jTMUGgCSfv8HaeY02aVUMlLhX55VrgAmbOzwe" clientKey:@"jdLKdGO8ixtGrpe7HX5XLFwJICB8pFjIPw5xVvA4"];
+  
+  // Register for push notifications
+  [application registerForRemoteNotificationTypes:
+   UIRemoteNotificationTypeBadge |
+   UIRemoteNotificationTypeAlert |
+   UIRemoteNotificationTypeSound];
+  
   [PFFacebookUtils initializeFacebook];
   //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
-  
-  [self appTheme];
-  [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-  [application setStatusBarStyle:UIStatusBarStyleLightContent];
-  //  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
-//    [application setStatusBarStyle:UIStatusBarStyleLightContent];
-//    
-//    self.window.clipsToBounds =YES;
-//    
-//    self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
-//  }
+
+  [self setAppTheme];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  
-  
-  [self createTabBar];
-
-  SubclassConfigViewController* loginpage = [[SubclassConfigViewController alloc] init];
-  ARLoginMock * loginMock = [[ARLoginMock alloc] init];
-  [self.window setRootViewController:loginMock];
-
+  [self setTabBarController];
   [self.window makeKeyAndVisible];
-  
-  
-
-  // Set default ACLs
-  PFACL *defaultACL = [PFACL ACL];
-  [defaultACL setPublicReadAccess:YES];
-  [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
   return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-  // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-  // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-  // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-  // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-  // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-  // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 #pragma mark - private functions
-- (void) createTabBar
+- (void) setTabBarController
 {
   //check if device is ipad or iphone
   NSString *deviceType = [UIDevice currentDevice].model;
@@ -182,11 +173,18 @@
    [_tabBarController.view addSubview:bottomCenterView];
    */
   
+  [self.window setRootViewController:self.tabBarController];
+
+  
 }
 
-- (void) appTheme
+- (void) setAppTheme
 {
-  
+  //set status bar to white
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+  //  [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+  //  [application setStatusBarStyle:UIStatusBarStyleLightContent];
+
   //navigation bar color #0d507f 13 80 127
   //progress bar color 96 219 255
   UIColor *naviColor = [UIColor colorWithRed:13/255.0f green:80/255.0f blue:127/255.0f alpha:1.0f];
@@ -306,9 +304,6 @@
   // Image between segment selected on  the right and unselected on the right.
   [[UISegmentedControl appearance] setDividerImage:[UIImage imageNamed:@"segmented-separator"] forLeftSegmentState:UIControlStateNormal
                     rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
-
-  
-
 }
 
 

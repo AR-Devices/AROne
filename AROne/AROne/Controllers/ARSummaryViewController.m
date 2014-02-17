@@ -16,6 +16,8 @@
 #import "ARSummaryCell.h"
 #import "ARTopBarView.h"
 
+#import "ARLoginViewController.h"
+
 
 @interface ARSummaryViewController ()
 @property(atomic, strong) NSString* max_speed_value;
@@ -35,6 +37,44 @@
 @implementation ARSummaryViewController
 @synthesize pmCC;
 
+
+//Login stuff
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  if ([PFUser currentUser]) {
+    NSLog(@"%@ Logged In!", [NSString stringWithFormat: NSLocalizedString(@"Welcome %@", nil), [[PFUser currentUser] username]]);
+//    self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+  } else {
+    NSLog(@"no one logged in yet");
+//    self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
+  }
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  // Check if user is logged in
+  if (![PFUser currentUser]) {
+    // Customize the Log In View Controller
+    ARLoginViewController *logInViewController = [[ARLoginViewController alloc] init];
+//    logInViewController.delegate = self;
+//    logInViewController.facebookPermissions = @[@"friends_about_me"];
+//    logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
+//    
+//    // Customize the Sign Up View Controller
+//    MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
+//    signUpViewController.delegate = self;
+//    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+//    logInViewController.signUpController = signUpViewController;
+    
+    // Present Log In View Controller
+    [self presentViewController:logInViewController animated:YES completion:NULL];
+  }
+}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
   self = [super initWithStyle:style];
@@ -46,6 +86,7 @@
   }
   return self;
 }
+
 
 - (void)viewDidLoad
 {
