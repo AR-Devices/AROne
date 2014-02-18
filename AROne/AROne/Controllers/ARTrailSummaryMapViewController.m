@@ -213,7 +213,7 @@
 {
   UIButton *homeView = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 50, 20, 30, 30)];
   [homeView addTarget:self action:@selector(homeAction:) forControlEvents:UIControlEventTouchUpInside];
-  [homeView setBackgroundImage:[UIImage imageNamed:@"home_icon"] forState:UIControlStateNormal];
+  [homeView setBackgroundImage:[UIImage imageNamed:@"exitfullscreen_button"] forState:UIControlStateNormal];
   //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:homeView];
   [self.view addSubview: homeView];
   

@@ -112,9 +112,9 @@
   [view addSubview:landscapeButton];
   
   //zoom button
-  UIImage *landscape = [UIImage imageNamed:@"landscape"];
+  UIImage *landscape = [UIImage imageNamed:@"fullscreen_button"];
   UIImageView *landscapeView = [[UIImageView alloc] initWithImage:landscape];
-  UIView *landscapeFrame = [[UIButton alloc] initWithFrame:CGRectMake(0,130,20,20)];
+  UIView *landscapeFrame = [[UIButton alloc] initWithFrame:CGRectMake(285,2,20,20)];
   
   [landscapeFrame addSubview:landscapeView];
   [map addSubview:landscapeFrame];
