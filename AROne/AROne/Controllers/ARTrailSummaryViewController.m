@@ -17,6 +17,7 @@
 //tableviewcell
 #import "ARSummaryCell.h"
 #import "ARTopBarView.h"
+#import "ARTrailSummaryTableCell.h"
 
 
 
@@ -58,6 +59,7 @@
   [self drawResorts];
   self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
   self.tableView.delegate = self;
+  self.tableView.dataSource = self;
   [self.view addSubview:self.tableView];
 
 }
@@ -480,10 +482,21 @@
   return true;
 }
 
-//tableview Delegates
+
+
+
+
+
+
+
+
+
+
+
+
+
+//***********************************************tableview Delegates*************************************************************
 #pragma mark - Table view data source
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 3;
@@ -496,7 +509,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 216/1.9;
+	return 50;
 }
 
 
@@ -512,11 +525,9 @@
   //  ffffff white
   if (indexPath.section == 0) {
     NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
-    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleMaxSpeed andValue:@"15" rect:self.view.bounds];
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"The Glutch" andValue:@"15" rect:self.view.bounds];
   } else if (indexPath.section == 1) {
-    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleVerticalDrop andValue:@"16" rect:self.view.bounds ];
-  } else if (indexPath.section == 2) {
-    
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"Heavenly" andValue:@"16" rect:self.view.bounds ];
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;

@@ -196,6 +196,7 @@
 		EC6ACC5118B3259100BA78BE /* fullscreen_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6ACC4D18B3259100BA78BE /* fullscreen_button.png */; };
 		EC6ACC5218B3259100BA78BE /* fullscreen_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6ACC4E18B3259100BA78BE /* fullscreen_button@2x.png */; };
 		EC6ACC5418B3272300BA78BE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6ACC5318B3272300BA78BE /* Parse.framework */; };
+		EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */; };
 		EC9ED2EA18AC748F0067F729 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ED2E918AC748F0067F729 /* libsqlite3.0.dylib */; };
 		EC9ED2EC18AC74990067F729 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ED2EB18AC74990067F729 /* Accounts.framework */; };
 		EC9ED2EE18AC74A10067F729 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ED2ED18AC74A10067F729 /* AdSupport.framework */; };
@@ -443,6 +444,8 @@
 		EC6ACC4D18B3259100BA78BE /* fullscreen_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullscreen_button.png; sourceTree = "<group>"; };
 		EC6ACC4E18B3259100BA78BE /* fullscreen_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen_button@2x.png"; sourceTree = "<group>"; };
 		EC6ACC5318B3272300BA78BE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		EC6ACC5818B3319A00BA78BE /* ARTrailSummaryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailSummaryTableCell.h; sourceTree = "<group>"; };
+		EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailSummaryTableCell.m; sourceTree = "<group>"; };
 		EC9ED2E918AC748F0067F729 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EC9ED2EB18AC74990067F729 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		EC9ED2ED18AC74A10067F729 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -934,6 +937,8 @@
 		3CFE886718064422006CF472 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC6ACC5818B3319A00BA78BE /* ARTrailSummaryTableCell.h */,
+				EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */,
 				3CFE886818064422006CF472 /* ARScoreBoardCell.h */,
 				3CFE886918064422006CF472 /* ARScoreBoardCell.m */,
 				3CFE886A18064422006CF472 /* ARSummaryCell.h */,
@@ -1200,6 +1205,7 @@
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
 				3C3F181D17DE886D00658555 /* PMPeriod.m in Sources */,
+				EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */,
 				3C92D40118ACA34D0051BE54 /* WCSQLite.m in Sources */,
 				3C3F181C17DE886D00658555 /* PMDimmingView.m in Sources */,
 				3C417FEA17D84B560094B56F /* UIViewController+AKTabBarController.m in Sources */,
