@@ -57,7 +57,7 @@
 {
   [super viewDidLoad];
   [self drawResorts];
-  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView];
@@ -104,10 +104,13 @@
 
 - (void) drawResortOn: (UIView *) view
 {
-  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(10,50,300,150)];
-  
+  UITextView *address = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 50)];
+  address.text = @"Resort Address";
+  [view addSubview:address];
+  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,100,self.view.bounds.size.width,150)];
+//  landscapeButton.backgroundColor = [UIColor whiteColor];
   UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
-  map.frame = CGRectMake(0, 0, 300, 150);
+  map.frame = CGRectMake(0, 0, self.view.bounds.size.width, 150);
   trailPathView *pathView = [[trailPathView alloc] initWithFrame:map.frame];
   pathView.dataSource = self;
   [map addSubview:pathView];
@@ -116,37 +119,43 @@
   //zoom button
   UIImage *landscape = [UIImage imageNamed:@"fullscreen_button"];
   UIImageView *landscapeView = [[UIImageView alloc] initWithImage:landscape];
-  UIView *landscapeFrame = [[UIButton alloc] initWithFrame:CGRectMake(285,2,20,20)];
-  
+  UIView *landscapeFrame = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 25 ,5,landscapeView.bounds.size.width+5,landscapeView.bounds.size.height+5)];
+  landscapeFrame.backgroundColor = [UIColor whiteColor];
+  landscapeFrame.layer.borderColor = [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0].CGColor;
+  landscapeFrame.layer.borderWidth = 0.5f;
+  [landscapeView setCenter:CGPointMake(landscapeFrame.bounds.size.width/2, landscapeFrame.bounds.size.height/2)];
+
+//  landscapeView.center = landscapeFrame.center;
   [landscapeFrame addSubview:landscapeView];
+
   [map addSubview:landscapeFrame];
   [landscapeButton addSubview:map];
   [landscapeButton addTarget:self action:@selector(landscapeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
   
   
-  UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
-  trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  trail_1.textColor = [UIColor greenColor];
-  trail_1.text = @"The Gulch trail (3)"; //FIXME value should be extracted from section text
-  //trail_1.textAlignment = NSTextAlignmentCenter;
-  //trail_1.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [view addSubview:trail_1];
-  
-  UILabel *trial_2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 235, 320, 15)];
-  trial_2.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  trial_2.textColor = [UIColor blueColor];
-  trial_2.text = @"Lower Main Street (2)"; //FIXME value should be extracted from section text
-  //trial_2.textAlignment = NSTextAlignmentCenter;
-  //trial_2.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [view addSubview:trial_2];
-  
-  UILabel *trial_3 = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 320, 15)];
-  trial_3.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  trial_3.textColor = [UIColor blackColor];
-  trial_3.text = @"Maximum speed: 42 mph @ The Gulch"; //FIXME value should be extracted from section text
-  //trial_3.textAlignment = NSTextAlignmentCenter;
-  //trial_3.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [view addSubview:trial_3];
+//  UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
+//  trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  trail_1.textColor = [UIColor greenColor];
+//  trail_1.text = @"The Gulch trail (3)"; //FIXME value should be extracted from section text
+//  //trail_1.textAlignment = NSTextAlignmentCenter;
+//  //trail_1.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+//  [view addSubview:trail_1];
+//
+//  UILabel *trial_2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 235, 320, 15)];
+//  trial_2.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  trial_2.textColor = [UIColor blueColor];
+//  trial_2.text = @"Lower Main Street (2)"; //FIXME value should be extracted from section text
+//  //trial_2.textAlignment = NSTextAlignmentCenter;
+//  //trial_2.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+//  [view addSubview:trial_2];
+//
+//  UILabel *trial_3 = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 320, 15)];
+//  trial_3.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  trial_3.textColor = [UIColor blackColor];
+//  trial_3.text = @"Maximum speed: 42 mph @ The Gulch"; //FIXME value should be extracted from section text
+//  //trial_3.textAlignment = NSTextAlignmentCenter;
+//  //trial_3.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+//  [view addSubview:trial_3];
 }
 
 

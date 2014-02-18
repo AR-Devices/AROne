@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		02FAD9DB0E364761B4E3A31C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FDF1A6069B4764BE366EA7 /* libPods.a */; };
 		3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1718B190E800999000 /* ARSettingViewController.m */; };
+		3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */; };
+		3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
 		3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F180117DE886D00658555 /* NSDate+Helpers.m */; };
@@ -65,7 +67,6 @@
 		3C92D41318ACAFE90051BE54 /* ARNorthStarReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D41218ACAFE90051BE54 /* ARNorthStarReading.m */; };
 		3C92D41518ACB4250051BE54 /* ARCommon.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D41418ACB3CE0051BE54 /* ARCommon.h */; };
 		3C92D41918ACB8010051BE54 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92D41818ACB8010051BE54 /* FacebookSDK.framework */; };
-		3C92D41C18AED9540051BE54 /* ARLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D41B18AED9540051BE54 /* ARLoginViewController.m */; };
 		3CA696EE18B17791003DE25F /* app_splashpage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696DB18B17791003DE25F /* app_splashpage.png */; };
 		3CA696EF18B17791003DE25F /* app_splashpage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696DC18B17791003DE25F /* app_splashpage@2x.png */; };
 		3CA696F018B17791003DE25F /* arlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696DD18B17791003DE25F /* arlogo.png */; };
@@ -229,6 +230,10 @@
 		33FAA1E3E4F24427BB1360AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3C1A0B1618B190E800999000 /* ARSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSettingViewController.h; sourceTree = "<group>"; };
 		3C1A0B1718B190E800999000 /* ARSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSettingViewController.m; sourceTree = "<group>"; };
+		3C1A0B1A18B3393A00999000 /* ARSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSignupViewController.h; path = "User Login:Signup/ARSignupViewController.h"; sourceTree = "<group>"; };
+		3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSignupViewController.m; path = "User Login:Signup/ARSignupViewController.m"; sourceTree = "<group>"; };
+		3C1A0B1D18B3394D00999000 /* ARLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARLoginViewController.h; path = "User Login:Signup/ARLoginViewController.h"; sourceTree = "<group>"; };
+		3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARLoginViewController.m; path = "User Login:Signup/ARLoginViewController.m"; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
 		3C3F17FF17DE886D00658555 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		3C3F180017DE886D00658555 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
@@ -312,8 +317,6 @@
 		3C92D41218ACAFE90051BE54 /* ARNorthStarReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARNorthStarReading.m; sourceTree = "<group>"; };
 		3C92D41418ACB3CE0051BE54 /* ARCommon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = ARCommon.h; sourceTree = "<group>"; };
 		3C92D41818ACB8010051BE54 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		3C92D41A18AED9540051BE54 /* ARLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLoginViewController.h; sourceTree = "<group>"; };
-		3C92D41B18AED9540051BE54 /* ARLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLoginViewController.m; sourceTree = "<group>"; };
 		3CA696DB18B17791003DE25F /* app_splashpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_splashpage.png; sourceTree = "<group>"; };
 		3CA696DC18B17791003DE25F /* app_splashpage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_splashpage@2x.png"; sourceTree = "<group>"; };
 		3CA696DD18B17791003DE25F /* arlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arlogo.png; sourceTree = "<group>"; };
@@ -508,6 +511,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1A0B1918B3390000999000 /* User Login/Signup */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A0B1D18B3394D00999000 /* ARLoginViewController.h */,
+				3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */,
+				3C1A0B1A18B3393A00999000 /* ARSignupViewController.h */,
+				3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */,
+			);
+			name = "User Login/Signup";
+			sourceTree = "<group>";
+		};
 		3C3F17FD17DE886D00658555 /* PMCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +905,7 @@
 		3CFE885618064422006CF472 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3C1A0B1918B3390000999000 /* User Login/Signup */,
 				3CFE885D18064422006CF472 /* ARSummaryViewController.h */,
 				3CFE885E18064422006CF472 /* ARSummaryViewController.m */,
 				3CFE885B18064422006CF472 /* ARSummaryGraphViewController.h */,
@@ -903,8 +918,6 @@
 				3CFE886018064422006CF472 /* ARTrailSummaryViewController.m */,
 				ECE33EBC18AA0B800064F7D1 /* ARTrailSummaryMapViewController.h */,
 				ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */,
-				3C92D41A18AED9540051BE54 /* ARLoginViewController.h */,
-				3C92D41B18AED9540051BE54 /* ARLoginViewController.m */,
 				3C1A0B1618B190E800999000 /* ARSettingViewController.h */,
 				3C1A0B1718B190E800999000 /* ARSettingViewController.m */,
 			);
@@ -1252,13 +1265,14 @@
 				3C417FE817D84B560094B56F /* UINavigationController+AKTabBarController.m in Sources */,
 				3CFE887E18064422006CF472 /* ARScoreBoardCell.m in Sources */,
 				3C3F181B17DE886D00658555 /* PMCalendarView.m in Sources */,
+				3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
+				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
 				3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */,
 				3C92D41318ACAFE90051BE54 /* ARNorthStarReading.m in Sources */,
 				3C92D40A18ACA7E70051BE54 /* ARHeader.m in Sources */,
 				3C3F181A17DE886D00658555 /* PMCalendarController.m in Sources */,
 				3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */,
-				3C92D41C18AED9540051BE54 /* ARLoginViewController.m in Sources */,
 				3C417FE917D84B560094B56F /* UISplitViewController+AKTabBarController.m in Sources */,
 				3C92D40018ACA34D0051BE54 /* SQLCommand.m in Sources */,
 				3C417FE617D84B560094B56F /* AKTabBarController.m in Sources */,
