@@ -104,8 +104,11 @@
 
 - (void) drawResortOn: (UIView *) view
 {
-  UITextView *address = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 50)];
-  address.text = @"Resort Address";
+  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 50)];
+  address.numberOfLines = 3;
+  address.adjustsFontSizeToFitWidth = YES;
+  address.text = @"Kickwood Trail Map\nlocation: 1501 Kirkwood Meadows Dr,\nKirkwood, CA 95646";
+  address.textColor = [UIColor grayColor];
   [view addSubview:address];
   UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,100,self.view.bounds.size.width,150)];
 //  landscapeButton.backgroundColor = [UIColor whiteColor];

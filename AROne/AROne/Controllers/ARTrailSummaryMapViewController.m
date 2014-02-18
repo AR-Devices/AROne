@@ -15,6 +15,8 @@
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIImageView *imageView;
 @property BOOL zoomed;
+@property BOOL trailOn;
+@property (nonatomic) trailPathView* trailPath;
 
 @end
 
@@ -201,24 +203,48 @@
   //then need to add the gesture recogniser to a view - this will be the view that recognises the gesture
   //    [self.scrollView addGestureRecognizer:tapOnce];
   [self.scrollView addGestureRecognizer:tapTwice];
-  
-  trailPathView *trailView = [[trailPathView alloc] initWithFrame:self.imageView.bounds];
-  trailView.dataSource = self;
-  [self.imageView addSubview:trailView];
   [self drawNavigationInputs];
+  
+  self.trailPath = [[trailPathView alloc] initWithFrame:self.imageView.bounds];
+  self.trailPath.dataSource = self;
+  [self.imageView addSubview:self.trailPath];
+  self.trailOn = YES;
   
 }
 
 - (void)drawNavigationInputs
 {
-  UIButton *homeView = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 50, 20, 30, 30)];
+  UIImage *background = [UIImage imageNamed:@"mapbutton_bg"];
+  UIImageView *bgView = [[UIImageView alloc] initWithImage:background];
+  UIView *buttons = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-10-background.size.width, 30, background.size.width, background.size.height)];
+  [buttons addSubview:bgView];
+  [buttons sendSubviewToBack:bgView];
+  UIImage *zoomOut = [UIImage imageNamed:@"exitfullscreen_button"];
+  UIButton *homeView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, zoomOut.size.width, zoomOut.size.height)];
+  homeView.center = CGPointMake(background.size.width/2, background.size.height/3.9);
   [homeView addTarget:self action:@selector(homeAction:) forControlEvents:UIControlEventTouchUpInside];
-  [homeView setBackgroundImage:[UIImage imageNamed:@"exitfullscreen_button"] forState:UIControlStateNormal];
-  //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:homeView];
-  [self.view addSubview: homeView];
+  [homeView setBackgroundImage:zoomOut forState:UIControlStateNormal];
+  [buttons addSubview:homeView];
+  
+  UIImage *switchImage = [UIImage imageNamed:@"viewHighlight_button"];
+  UIButton *viewSwitch = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, switchImage.size.width, switchImage.size.height)];
+  viewSwitch.center = CGPointMake(background.size.width/2, background.size.height/2 + background.size.height/3.9);
+  [viewSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventTouchUpInside];
+  [viewSwitch setBackgroundImage:switchImage forState:UIControlStateNormal];
+  [buttons addSubview:viewSwitch];
+  [self.view addSubview: buttons];
   
 }
 
+-(void)switchAction:(id)sender
+{
+  self.trailPath.hidden = self.trailOn;
+  self.trailOn = !self.trailOn;
+//  if (self.trailOn) {
+//    self.trailPath.hidden = YES;
+//    self.trailOn = NO;
+//  }
+}
 -(void)homeAction:(id)sender
 {
    [self dismissViewControllerAnimated:YES completion:nil];

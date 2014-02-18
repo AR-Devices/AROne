@@ -11,6 +11,14 @@
 		3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1718B190E800999000 /* ARSettingViewController.m */; };
 		3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */; };
 		3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */; };
+		3C1A0B2918B355FF00999000 /* highestSpeed_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2118B355FF00999000 /* highestSpeed_icon.png */; };
+		3C1A0B2A18B355FF00999000 /* highestSpeed_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */; };
+		3C1A0B2B18B355FF00999000 /* mapbutton_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2318B355FF00999000 /* mapbutton_bg.png */; };
+		3C1A0B2C18B355FF00999000 /* mapbutton_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */; };
+		3C1A0B2D18B355FF00999000 /* trail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2518B355FF00999000 /* trail_icon.png */; };
+		3C1A0B2E18B355FF00999000 /* trail_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2618B355FF00999000 /* trail_icon@2x.png */; };
+		3C1A0B2F18B355FF00999000 /* viewHighlight_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2718B355FF00999000 /* viewHighlight_button.png */; };
+		3C1A0B3018B355FF00999000 /* viewHighlight_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
 		3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F180117DE886D00658555 /* NSDate+Helpers.m */; };
@@ -234,6 +242,14 @@
 		3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSignupViewController.m; path = "User Login:Signup/ARSignupViewController.m"; sourceTree = "<group>"; };
 		3C1A0B1D18B3394D00999000 /* ARLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARLoginViewController.h; path = "User Login:Signup/ARLoginViewController.h"; sourceTree = "<group>"; };
 		3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARLoginViewController.m; path = "User Login:Signup/ARLoginViewController.m"; sourceTree = "<group>"; };
+		3C1A0B2118B355FF00999000 /* highestSpeed_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highestSpeed_icon.png; sourceTree = "<group>"; };
+		3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "highestSpeed_icon@2x.png"; sourceTree = "<group>"; };
+		3C1A0B2318B355FF00999000 /* mapbutton_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapbutton_bg.png; sourceTree = "<group>"; };
+		3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapbutton_bg@2x.png"; sourceTree = "<group>"; };
+		3C1A0B2518B355FF00999000 /* trail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trail_icon.png; sourceTree = "<group>"; };
+		3C1A0B2618B355FF00999000 /* trail_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trail_icon@2x.png"; sourceTree = "<group>"; };
+		3C1A0B2718B355FF00999000 /* viewHighlight_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewHighlight_button.png; sourceTree = "<group>"; };
+		3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "viewHighlight_button@2x.png"; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
 		3C3F17FF17DE886D00658555 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		3C3F180017DE886D00658555 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
@@ -522,6 +538,21 @@
 			name = "User Login/Signup";
 			sourceTree = "<group>";
 		};
+		3C1A0B2018B355FF00999000 /* trailsummary */ = {
+			isa = PBXGroup;
+			children = (
+				3C1A0B2118B355FF00999000 /* highestSpeed_icon.png */,
+				3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */,
+				3C1A0B2318B355FF00999000 /* mapbutton_bg.png */,
+				3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */,
+				3C1A0B2518B355FF00999000 /* trail_icon.png */,
+				3C1A0B2618B355FF00999000 /* trail_icon@2x.png */,
+				3C1A0B2718B355FF00999000 /* viewHighlight_button.png */,
+				3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */,
+			);
+			path = trailsummary;
+			sourceTree = "<group>";
+		};
 		3C3F17FD17DE886D00658555 /* PMCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +774,7 @@
 		3CDCDAA617DE90BC00FCA0CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3C1A0B2018B355FF00999000 /* trailsummary */,
 				3CA696DA18B17791003DE25F /* login page */,
 				EC458E6718949F7100014337 /* northstar-trail-map.jpg */,
 				EC458E6818949F7100014337 /* Northstar.jpg */,
@@ -1066,14 +1098,18 @@
 				3CDCDB4117DE90BC00FCA0CA /* VDpopupData_bg.png in Resources */,
 				3CA696FF18B17791003DE25F /* switch_button.png in Resources */,
 				3CDCDB4E17DE90BC00FCA0CA /* right_arrow.png in Resources */,
+				3C1A0B2918B355FF00999000 /* highestSpeed_icon.png in Resources */,
 				3CDCDB4617DE90BC00FCA0CA /* calendar_middle@2x.png in Resources */,
 				3CDCDB4B17DE90BC00FCA0CA /* left_arrow@2x.png in Resources */,
+				3C1A0B2C18B355FF00999000 /* mapbutton_bg@2x.png in Resources */,
 				3C41801017D85C470094B56F /* big_caslon.ttf in Resources */,
+				3C1A0B2A18B355FF00999000 /* highestSpeed_icon@2x.png in Resources */,
 				3CDCDB3317DE90BC00FCA0CA /* card1_bg.png in Resources */,
 				EC6ACC5018B3259100BA78BE /* exitfullscreen_button@2x.png in Resources */,
 				3CDCDB5017DE90BC00FCA0CA /* right_arrow_selected.png in Resources */,
 				3CDCDB1D17DE90BC00FCA0CA /* mph.png in Resources */,
 				3CDCDB1217DE90BC00FCA0CA /* trail_icon@2x.png in Resources */,
+				3C1A0B3018B355FF00999000 /* viewHighlight_button@2x.png in Resources */,
 				3CDCDB2417DE90BC00FCA0CA /* VerticalDrop_icon@2x.png in Resources */,
 				3CA696FA18B17791003DE25F /* login_button.png in Resources */,
 				3CDCDB1A17DE90BC00FCA0CA /* Acceleration_icon@2x.png in Resources */,
@@ -1086,6 +1122,7 @@
 				3CDCDB4F17DE90BC00FCA0CA /* right_arrow@2x.png in Resources */,
 				3CDCDB2E17DE90BC00FCA0CA /* Vdrop_icon.png in Resources */,
 				3CDCDB5117DE90BC00FCA0CA /* right_arrow_selected@2x.png in Resources */,
+				3C1A0B2B18B355FF00999000 /* mapbutton_bg.png in Resources */,
 				3CA696F718B17791003DE25F /* g+@2x.png in Resources */,
 				3CDCDB0A17DE90BC00FCA0CA /* scoreboard_icon@2x.png in Resources */,
 				3CDCDB3217DE90BC00FCA0CA /* TabBarBlue.png in Resources */,
@@ -1136,6 +1173,7 @@
 				3CA696F618B17791003DE25F /* g+.png in Resources */,
 				3CDCDB2017DE90BC00FCA0CA /* RealTimeSpeed_icon@2x.png in Resources */,
 				3CDCDB5317DE90BC00FCA0CA /* segmented-separator@2x.png in Resources */,
+				3C1A0B2F18B355FF00999000 /* viewHighlight_button.png in Resources */,
 				3CDCDB1F17DE90BC00FCA0CA /* RealTimeSpeed_icon.png in Resources */,
 				3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */,
 				3CDCDB3C17DE90BC00FCA0CA /* MSpopupData_bg@2x.png in Resources */,
@@ -1168,9 +1206,11 @@
 				3CA696F518B17791003DE25F /* fb@2x.png in Resources */,
 				3CDCDB2317DE90BC00FCA0CA /* VerticalDrop_icon.png in Resources */,
 				3CDCDB2217DE90BC00FCA0CA /* s2@2x.png in Resources */,
+				3C1A0B2D18B355FF00999000 /* trail_icon.png in Resources */,
 				3CDCDB4D17DE90BC00FCA0CA /* left_arrow_selected@2x.png in Resources */,
 				3CDCDB2617DE90BC00FCA0CA /* Altitude.png in Resources */,
 				EC6ACC5118B3259100BA78BE /* fullscreen_button.png in Resources */,
+				3C1A0B2E18B355FF00999000 /* trail_icon@2x.png in Resources */,
 				3CDCDB2C17DE90BC00FCA0CA /* speed_selected_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
