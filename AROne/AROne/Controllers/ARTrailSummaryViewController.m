@@ -17,7 +17,10 @@
 //tableviewcell
 #import "ARSummaryCell.h"
 #import "ARTopBarView.h"
-@interface ARTrailSummaryViewController ()<UIScrollViewDelegate, UIPageViewControllerDelegate, trailPathSource, PMCalendarControllerDelegate>
+
+
+
+@interface ARTrailSummaryViewController ()<UIScrollViewDelegate, UIPageViewControllerDelegate, trailPathSource, PMCalendarControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic, strong) NSCalendar * cal;
@@ -29,6 +32,9 @@
 //Implement Multipule Snow in One Day feature
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIPageControl *pageControl;
+
+//Create below tableview
+@property (nonatomic) UITableView *tableView;
 
 @end
 
@@ -50,6 +56,9 @@
 {
   [super viewDidLoad];
   [self drawResorts];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
+  self.tableView.delegate = self;
+  [self.view addSubview:self.tableView];
 
 }
 
@@ -470,5 +479,85 @@
   NSLog(@"%s", __PRETTY_FUNCTION__);
   return true;
 }
+
+//tableview Delegates
+#pragma mark - Table view data source
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 216/1.9;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%d",indexPath.section];
+  UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+  
+  //  a18ac1 purple
+  //  2fb3b6 Cyan
+  //  ee962f orange
+  //  ffffff white
+  if (indexPath.section == 0) {
+    NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
+    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleMaxSpeed andValue:@"15" rect:self.view.bounds];
+  } else if (indexPath.section == 1) {
+    cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleVerticalDrop andValue:@"16" rect:self.view.bounds ];
+  } else if (indexPath.section == 2) {
+    
+  }
+  //number cgrect 394 136
+  cell.selectionStyle = UITableViewCellEditingStyleNone;
+  cell.backgroundColor = [UIColor clearColor];
+  
+  return cell;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//  NSLog(@"clicked at %d", indexPath.section);
+//  ARSummaryGraphCellStyle functionGraphStyle;
+//  switch(indexPath.section) {
+//    case 0:
+//      functionGraphStyle = ARSummaryGraphCellStyleMaxSpeed;
+//      break;
+//    case 1:
+//      functionGraphStyle = ARSummaryGraphCellStyleVerticalDrop;
+//      break;
+//    case 2:
+//      functionGraphStyle = ARSummaryGraphCellStyleAcceleration;
+//      break;
+//    default:
+//      functionGraphStyle = ARSummaryGraphCellStyleMaxSpeed;
+//      break;
+//  }
+//  ARSummaryGraphViewController *summaryTabGraph = [[ARSummaryGraphViewController alloc] init];
+//  summaryTabGraph.graphStyle = functionGraphStyle;
+//  //  UINavigationController *summaryNavi = [[UINavigationController alloc] initWithRootViewController:summaryTabGraph];
+//  // Set this in every view controller so that the back button displays back instead of the root view controller name
+//  //  no text on back button
+//  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+//  [self.navigationController pushViewController:summaryTabGraph animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  //  NSLog(@"clicked at %d", indexPath.row);
+}
+
 
 @end

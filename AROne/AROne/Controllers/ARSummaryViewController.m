@@ -17,6 +17,7 @@
 #import "ARTopBarView.h"
 
 #import "ARLoginViewController.h"
+#import "ARSettingViewController.h"
 
 
 @interface ARSummaryViewController ()
@@ -407,6 +408,7 @@
 -(void)settingPressed:(id)sender
 {
   NSLog(@"setting Clicked");
+  [self.navigationController pushViewController:[[ARSettingViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
 }
 
 #pragma button animation

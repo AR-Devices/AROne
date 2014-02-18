@@ -67,7 +67,7 @@
   [fbFrame addSubview:fbView];
   
   
-  UIImage  * gPlus= [UIImage imageNamed:@"g+"];
+  UIImage  *gPlus= [UIImage imageNamed:@"g+"];
   UIImageView *gPlusView = [[UIImageView alloc] initWithImage:gPlus];
   UIButton *gPlusFrame = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, gPlus.size.width,gPlus.size.height)];
   gPlusFrame.center = CGPointMake(self.view.bounds.size.width/2+60, 200);
@@ -128,6 +128,7 @@
   UIImage *login_button = [UIImage imageNamed:@"login_button"];
   UIImageView *login_buttonView = [[UIImageView alloc] initWithImage:login_button];
   UIButton *login_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, login_button.size.width, login_button.size.height)];
+  [login_buttonFrame addTarget:self action:@selector(loginHandler:) forControlEvents:UIControlEventValueChanged];
   login_buttonFrame.center = CGPointMake(self.view.bounds.size.width/2, 400);
   [login_buttonFrame addSubview:login_buttonView];
   [login_buttonFrame setTitle:@"Log In" forState:UIControlStateNormal];
@@ -167,6 +168,10 @@
   else  NSLog(@"Off");
 }
 
+- (void) loginHandler: (id) sender
+{
+  
+}
 - (void) fbButtonTouchHandler: (id) sender
 {
   // The permissions requested from the user
