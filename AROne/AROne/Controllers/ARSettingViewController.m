@@ -7,6 +7,7 @@
 //
 
 #import "ARSettingViewController.h"
+#import "ARLoginViewController.h"
 
 @interface ARSettingViewController ()
 
@@ -45,14 +46,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 1;
+  return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
   if (section == 0)
-    return 1;
+    return 3;
   else
     return 1;
   
@@ -83,25 +84,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//  if (indexPath.section == 0) {
-//    if (indexPath.row == 0) {
+  if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
 //      CQProfileViewController *profile = [[CQProfileViewController alloc] init];
 //      profile.hidesBottomBarWhenPushed = YES;
 //      [self.navigationController pushViewController:profile animated:YES];
-//    }
-//    if (indexPath.row == 1) {
+    }
+    if (indexPath.row == 1) {
 //      CQAnalysisViewController *analysis = [[CQAnalysisViewController alloc] init];
 //      analysis.hidesBottomBarWhenPushed = YES;
 //      [self.navigationController pushViewController:analysis animated:YES];
-//    }
-//  } else if (indexPath.section == 1) {
-//    [PFUser logOut];
-//    CQLogInViewController *login = [[CQLogInViewController alloc] init];
-//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
-//    navi.navigationBar.hidden = YES;
-//    [self.navigationController presentViewController:navi animated:YES completion:^{
-//      NSLog(@"to Login");
-//    }];
-//  }
+    }
+  } else if (indexPath.section == 1) {
+    [PFUser logOut];
+    ARLoginViewController *login = [[ARLoginViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
+    navi.navigationBar.hidden = YES;
+    [self.navigationController presentViewController:navi animated:YES completion:^{
+      NSLog(@"====from, setting to Login, after logint====");
+    }];
+  }
 }
 @end

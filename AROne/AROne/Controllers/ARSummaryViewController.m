@@ -340,7 +340,6 @@
   switch ([sender selectedSegmentIndex]) {
     case 0:
       // do something
-      
       self.dateCounter++;
       [self.components setHour:-24];
       [self.components setMinute:0];

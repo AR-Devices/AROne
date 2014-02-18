@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02FAD9DB0E364761B4E3A31C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FDF1A6069B4764BE366EA7 /* libPods.a */; };
 		3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B1718B190E800999000 /* ARSettingViewController.m */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
@@ -225,6 +226,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33FAA1E3E4F24427BB1360AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3C1A0B1618B190E800999000 /* ARSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSettingViewController.h; sourceTree = "<group>"; };
 		3C1A0B1718B190E800999000 /* ARSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSettingViewController.m; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 		3CFE886D18064422006CF472 /* ARSummaryGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryGraphCell.m; sourceTree = "<group>"; };
 		3CFE886E18064422006CF472 /* ARSummaryGraphTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryGraphTouchView.h; sourceTree = "<group>"; };
 		3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryGraphTouchView.m; sourceTree = "<group>"; };
+		D4FDF1A6069B4764BE366EA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC458E64189499C200014337 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trailPathView.h; sourceTree = "<group>"; };
 		EC458E65189499C200014337 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trailPathView.m; sourceTree = "<group>"; };
 		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "northstar-trail-map.jpg"; sourceTree = "<group>"; };
@@ -488,6 +491,7 @@
 				EC9ED2EC18AC74990067F729 /* Accounts.framework in Frameworks */,
 				EC9ED2EA18AC748F0067F729 /* libsqlite3.0.dylib in Frameworks */,
 				EC693A8C17DD4FCE0031A544 /* CoreText.framework in Frameworks */,
+				02FAD9DB0E364761B4E3A31C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +547,7 @@
 				3C417F5D17D847510094B56F /* AROneTests */,
 				3C417F3D17D847510094B56F /* Frameworks */,
 				3C417F3C17D847510094B56F /* Products */,
+				33FAA1E3E4F24427BB1360AF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -578,6 +583,7 @@
 				3C417F4017D847510094B56F /* CoreGraphics.framework */,
 				3C417F4217D847510094B56F /* UIKit.framework */,
 				3C417F5717D847510094B56F /* XCTest.framework */,
+				D4FDF1A6069B4764BE366EA7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -960,10 +966,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C417F6717D847510094B56F /* Build configuration list for PBXNativeTarget "AROne" */;
 			buildPhases = (
+				CC7FD2DC65B74D67A7D4BB84 /* Check Pods Manifest.lock */,
 				3C417F3717D847510094B56F /* Sources */,
 				3C417F3817D847510094B56F /* Frameworks */,
 				3C417F3917D847510094B56F /* Resources */,
 				3C12C9B617FF2C990089A9CA /* ShellScript */,
+				6D7CAE7817A0418AB06F6DA6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1174,16 +1182,46 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3C12C9B617FF2C990089A9CA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber))\nbuildNumber=$(($buildNumber + 1))\nbuildNumber=$(printf \"%d\" $buildNumber)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+		6D7CAE7817A0418AB06F6DA6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC7FD2DC65B74D67A7D4BB84 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1356,6 +1394,7 @@
 		};
 		3C417F6817D847510094B56F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33FAA1E3E4F24427BB1360AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1376,6 +1415,7 @@
 		};
 		3C417F6917D847510094B56F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33FAA1E3E4F24427BB1360AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

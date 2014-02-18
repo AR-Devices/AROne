@@ -7,6 +7,7 @@
 //
 
 #import "ARLoginViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ARLoginViewController ()
 
@@ -174,12 +175,14 @@
 }
 - (void) fbButtonTouchHandler: (id) sender
 {
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   // The permissions requested from the user
   NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
   
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-    [self.activityIndicator stopAnimating]; // Hide loading indicator
+//    [self.activityIndicator stopAnimating]; // Hide loading indicator
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     if (!user) {
       if (!error) {
         NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -194,8 +197,9 @@
       //      [self.navigationController pushViewController:[[CQProfileViewController alloc] init] animated:YES];
       [self showHomeView];
     }
+
   }];
-  [_activityIndicator startAnimating]; // Show loading indicator until login is finished
+//  [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
 
 - (void)showHomeView
