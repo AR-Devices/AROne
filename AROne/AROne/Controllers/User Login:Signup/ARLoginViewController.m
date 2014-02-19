@@ -171,7 +171,10 @@
 
 - (void) loginHandler: (id) sender
 {
-
+  [self.email resignFirstResponder];
+  [self.password resignFirstResponder];
+  
+  [self processFieldEntries];
 }
 - (void) fbButtonTouchHandler: (id) sender
 {
@@ -218,4 +221,67 @@
     [_password resignFirstResponder];
   }
 }
+
+
+
+- (void)processFieldEntries {
+	// Get the username text, store it in the app delegate for now
+	NSString *username = self.email.text;
+	NSString *password = self.password.text;
+  NSLog(@"user name is %@", username);
+	NSString *noUsernameText = @"username";
+	NSString *noPasswordText = @"password";
+	NSString *errorText = @"No ";
+	NSString *errorTextJoin = @" or ";
+	NSString *errorTextEnding = @" entered";
+	BOOL textError = NO;
+  
+	// Messaging nil will return 0, so these checks implicitly check for nil text.
+	if (username.length == 0 || password.length == 0) {
+		textError = YES;
+    
+		// Set up the keyboard for the first field missing input:
+		if (password.length == 0) {
+			[self.email becomeFirstResponder];
+		}
+		if (username.length == 0) {
+			[self.password becomeFirstResponder];
+		}
+	}
+  
+	if (username.length == 0) {
+		textError = YES;
+		errorText = [errorText stringByAppendingString:noUsernameText];
+	}
+  
+	if (password.length == 0) {
+		textError = YES;
+		if (username.length == 0) {
+			errorText = [errorText stringByAppendingString:errorTextJoin];
+		}
+		errorText = [errorText stringByAppendingString:noPasswordText];
+	}
+  
+	if (textError) {
+		errorText = [errorText stringByAppendingString:errorTextEnding];
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+		[alertView show];
+		return;
+	}
+  
+	// Everything looks good; try to log in.
+	// Disable the done button for now.
+//	doneButton.enabled = NO;
+  
+//	PAWActivityView *activityView = [[PAWActivityView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height)];
+//	UILabel *label = activityView.label;
+//	label.text = @"Logging in";
+//	label.font = [UIFont boldSystemFontOfSize:20.f];
+//	[activityView.activityIndicator startAnimating];
+//	[activityView layoutSubviews];
+  
+//	[self.view addSubview:activityView];
+  
+}
+
 @end

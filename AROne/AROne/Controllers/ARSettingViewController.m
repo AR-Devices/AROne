@@ -97,12 +97,16 @@
     }
   } else if (indexPath.section == 1) {
     [PFUser logOut];
-    ARLoginViewController *login = [[ARLoginViewController alloc] init];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
-    navi.navigationBar.hidden = YES;
-    [self.navigationController presentViewController:navi animated:YES completion:^{
-      NSLog(@"====from, setting to Login, after logint====");
+//    ARLoginViewController *login = [[ARLoginViewController alloc] init];
+//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
+//    self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self dismissViewControllerAnimated:YES completion:^{
+      //null
     }];
+//    navi.navigationBar.hidden = YES;
+//    [self.navigationController presentViewController:navi animated:YES completion:^{
+//      NSLog(@"====from, setting to Login, after logint====");
+//    }];
   }
 }
 @end

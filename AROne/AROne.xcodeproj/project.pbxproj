@@ -19,6 +19,7 @@
 		3C1A0B2E18B355FF00999000 /* trail_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2618B355FF00999000 /* trail_icon@2x.png */; };
 		3C1A0B2F18B355FF00999000 /* viewHighlight_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2718B355FF00999000 /* viewHighlight_button.png */; };
 		3C1A0B3018B355FF00999000 /* viewHighlight_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */; };
+		3C1A0B3318B4A33500999000 /* ARWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B3218B4A33500999000 /* ARWelcomeViewController.m */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
 		3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F180117DE886D00658555 /* NSDate+Helpers.m */; };
@@ -250,6 +251,8 @@
 		3C1A0B2618B355FF00999000 /* trail_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trail_icon@2x.png"; sourceTree = "<group>"; };
 		3C1A0B2718B355FF00999000 /* viewHighlight_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewHighlight_button.png; sourceTree = "<group>"; };
 		3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "viewHighlight_button@2x.png"; sourceTree = "<group>"; };
+		3C1A0B3118B4A33500999000 /* ARWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARWelcomeViewController.h; path = "User Login:Signup/ARWelcomeViewController.h"; sourceTree = "<group>"; };
+		3C1A0B3218B4A33500999000 /* ARWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARWelcomeViewController.m; path = "User Login:Signup/ARWelcomeViewController.m"; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
 		3C3F17FF17DE886D00658555 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		3C3F180017DE886D00658555 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
@@ -534,6 +537,8 @@
 				3C1A0B1E18B3394D00999000 /* ARLoginViewController.m */,
 				3C1A0B1A18B3393A00999000 /* ARSignupViewController.h */,
 				3C1A0B1B18B3393A00999000 /* ARSignupViewController.m */,
+				3C1A0B3118B4A33500999000 /* ARWelcomeViewController.h */,
+				3C1A0B3218B4A33500999000 /* ARWelcomeViewController.m */,
 			);
 			name = "User Login/Signup";
 			sourceTree = "<group>";
@@ -1305,6 +1310,7 @@
 				3C417FE817D84B560094B56F /* UINavigationController+AKTabBarController.m in Sources */,
 				3CFE887E18064422006CF472 /* ARScoreBoardCell.m in Sources */,
 				3C3F181B17DE886D00658555 /* PMCalendarView.m in Sources */,
+				3C1A0B3318B4A33500999000 /* ARWelcomeViewController.m in Sources */,
 				3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,

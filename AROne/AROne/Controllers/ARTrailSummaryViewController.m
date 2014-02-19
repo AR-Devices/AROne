@@ -184,9 +184,9 @@
   NSLog(@"-------------------------");
   ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] init];
 
-  [UIView  beginAnimations:nil context:NULL];
-  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-  [UIView setAnimationDuration:0.75];
+//  [UIView  beginAnimations:nil context:NULL];
+//  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//  [UIView setAnimationDuration:0.75];
   [self presentViewController:landscape animated:YES completion:^{
     //nothing
   }];
