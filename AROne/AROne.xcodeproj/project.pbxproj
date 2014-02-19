@@ -15,8 +15,8 @@
 		3C1A0B2A18B355FF00999000 /* highestSpeed_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */; };
 		3C1A0B2B18B355FF00999000 /* mapbutton_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2318B355FF00999000 /* mapbutton_bg.png */; };
 		3C1A0B2C18B355FF00999000 /* mapbutton_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */; };
-		3C1A0B2D18B355FF00999000 /* trail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2518B355FF00999000 /* trail_icon.png */; };
-		3C1A0B2E18B355FF00999000 /* trail_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2618B355FF00999000 /* trail_icon@2x.png */; };
+		3C1A0B2D18B355FF00999000 /* trailLocation_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2518B355FF00999000 /* trailLocation_icon.png */; };
+		3C1A0B2E18B355FF00999000 /* trailLocation_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2618B355FF00999000 /* trailLocation_icon@2x.png */; };
 		3C1A0B2F18B355FF00999000 /* viewHighlight_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2718B355FF00999000 /* viewHighlight_button.png */; };
 		3C1A0B3018B355FF00999000 /* viewHighlight_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */; };
 		3C1A0B3318B4A33500999000 /* ARWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A0B3218B4A33500999000 /* ARWelcomeViewController.m */; };
@@ -247,8 +247,8 @@
 		3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "highestSpeed_icon@2x.png"; sourceTree = "<group>"; };
 		3C1A0B2318B355FF00999000 /* mapbutton_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapbutton_bg.png; sourceTree = "<group>"; };
 		3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapbutton_bg@2x.png"; sourceTree = "<group>"; };
-		3C1A0B2518B355FF00999000 /* trail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trail_icon.png; sourceTree = "<group>"; };
-		3C1A0B2618B355FF00999000 /* trail_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trail_icon@2x.png"; sourceTree = "<group>"; };
+		3C1A0B2518B355FF00999000 /* trailLocation_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trailLocation_icon.png; sourceTree = "<group>"; };
+		3C1A0B2618B355FF00999000 /* trailLocation_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trailLocation_icon@2x.png"; sourceTree = "<group>"; };
 		3C1A0B2718B355FF00999000 /* viewHighlight_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewHighlight_button.png; sourceTree = "<group>"; };
 		3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "viewHighlight_button@2x.png"; sourceTree = "<group>"; };
 		3C1A0B3118B4A33500999000 /* ARWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARWelcomeViewController.h; path = "User Login:Signup/ARWelcomeViewController.h"; sourceTree = "<group>"; };
@@ -550,8 +550,8 @@
 				3C1A0B2218B355FF00999000 /* highestSpeed_icon@2x.png */,
 				3C1A0B2318B355FF00999000 /* mapbutton_bg.png */,
 				3C1A0B2418B355FF00999000 /* mapbutton_bg@2x.png */,
-				3C1A0B2518B355FF00999000 /* trail_icon.png */,
-				3C1A0B2618B355FF00999000 /* trail_icon@2x.png */,
+				3C1A0B2518B355FF00999000 /* trailLocation_icon.png */,
+				3C1A0B2618B355FF00999000 /* trailLocation_icon@2x.png */,
 				3C1A0B2718B355FF00999000 /* viewHighlight_button.png */,
 				3C1A0B2818B355FF00999000 /* viewHighlight_button@2x.png */,
 			);
@@ -1211,11 +1211,11 @@
 				3CA696F518B17791003DE25F /* fb@2x.png in Resources */,
 				3CDCDB2317DE90BC00FCA0CA /* VerticalDrop_icon.png in Resources */,
 				3CDCDB2217DE90BC00FCA0CA /* s2@2x.png in Resources */,
-				3C1A0B2D18B355FF00999000 /* trail_icon.png in Resources */,
+				3C1A0B2D18B355FF00999000 /* trailLocation_icon.png in Resources */,
 				3CDCDB4D17DE90BC00FCA0CA /* left_arrow_selected@2x.png in Resources */,
 				3CDCDB2617DE90BC00FCA0CA /* Altitude.png in Resources */,
 				EC6ACC5118B3259100BA78BE /* fullscreen_button.png in Resources */,
-				3C1A0B2E18B355FF00999000 /* trail_icon@2x.png in Resources */,
+				3C1A0B2E18B355FF00999000 /* trailLocation_icon@2x.png in Resources */,
 				3CDCDB2C17DE90BC00FCA0CA /* speed_selected_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
