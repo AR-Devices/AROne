@@ -9,3 +9,8 @@
 #define A2H(n) (((n) - 48) & ~32) - (((n) > '9') ? 7 : 0)
 #define HEX8(ptr) (((A2H(*(ptr))) << 4) | (A2H(*((ptr)+1))))
 
+@interface ARCommon : NSObject 
+
++ (NSString *) today;
+
+@end

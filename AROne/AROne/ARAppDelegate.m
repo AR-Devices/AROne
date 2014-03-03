@@ -10,8 +10,11 @@
 
 //import vendor TabBar Controller
 #import "AKTabBarController.h"
-
 #import "ARWelcomeViewController.h"
+
+//test
+#import "ARSummary.h"
+#import "ARCommon.h"
 
 
 @interface ARAppDelegate ()
@@ -31,16 +34,33 @@ static NSString* const kPAWLocationChangeNotification= @"kPAWLocationChangeNotif
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
   return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
+  
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+
   [FBAppEvents activateApp];
   [FBSession.activeSession handleDidBecomeActive];
+  
+}
+
+- (void)createSummaryClass {
+  
+  ARSummary *measurement = [ARSummary object];
+  measurement.displayName = @"Chenchen's First Measurement";
+  measurement.date = [ARCommon today];
+  measurement.maxAcceleration = 10.2;
+  measurement.maxSpeed = 25.2;
+  measurement.verticalDrop = 18560;
+//  [measurement setPlayer:[PFUser currentUser]];
+  measurement.player = [PFUser currentUser];
+  measurement.ACL = [PFACL ACLWithUser:measurement.player];
+  [measurement saveInBackground];
+  
 }
 
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
-  NSLog(@"called");
   // Store the deviceToken in the current installation and save it to Parse.
   PFInstallation *currentInstallation = [PFInstallation currentInstallation];
   [currentInstallation setDeviceTokenFromData:newDeviceToken];
@@ -60,6 +80,10 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+  //calling class
+  [ARSummary registerSubclass];
+  
   // ****************************************************************************
   // Fill in with your Parse and Twitter credentials. Don't forget to add your
   // Facebook id in Info.plist:
@@ -81,6 +105,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   [self.window setRootViewController:[ARWelcomeViewController new]];
   
 //  [self setTabBarController];
+  
+//  [self createSummaryClass];
+  
   [self.window makeKeyAndVisible];
   return YES;
 }
@@ -160,6 +187,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   // Image between segment selected on  the right and unselected on the right.
   [[UISegmentedControl appearance] setDividerImage:[UIImage imageNamed:@"segmented-separator"] forLeftSegmentState:UIControlStateNormal
                     rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+  
 }
 
 

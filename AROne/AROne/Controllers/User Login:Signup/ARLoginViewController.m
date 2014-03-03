@@ -7,9 +7,10 @@
 //
 
 #import "ARLoginViewController.h"
+#import "ARSignupViewController.h"
 #import "MBProgressHUD.h"
 
-@interface ARLoginViewController ()
+@interface ARLoginViewController ()<UITextFieldDelegate>
 
 @property (nonatomic) UITextField *email;
 @property (nonatomic) UITextField *password;
@@ -46,7 +47,6 @@
 
 - (void)setLoginView
 {
-
   UIImage *arlogo = [UIImage imageNamed:@"arlogo"];
   UIImageView *arlogoView = [[UIImageView alloc] initWithImage:arlogo];
   UIView *arlogoFrame = [[UIView alloc]initWithFrame:CGRectMake(0, 0, arlogo.size.width,arlogo.size.height)];
@@ -86,6 +86,7 @@
   _email.leftViewMode = UITextFieldViewModeAlways;
   _email.center = CGPointMake(self.view.bounds.size.width/2, 280);
   _email.adjustsFontSizeToFitWidth = YES;
+  _email.delegate = self;
   [_email setBackground:[UIImage imageNamed:@"input"]];
   [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
   [_email setTextColor:[UIColor orangeColor]];
@@ -96,6 +97,7 @@
   _password.leftViewMode = UITextFieldViewModeAlways;
   _password.center = CGPointMake(self.view.bounds.size.width/2, 320);
   _password.adjustsFontSizeToFitWidth = YES;
+  _password.delegate = self;
   [_password setBackground:[UIImage imageNamed:@"input"]];
   [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
   [_password setTextColor:[UIColor orangeColor]];
@@ -129,7 +131,7 @@
   UIImage *login_button = [UIImage imageNamed:@"login_button"];
   UIImageView *login_buttonView = [[UIImageView alloc] initWithImage:login_button];
   UIButton *login_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, login_button.size.width, login_button.size.height)];
-  [login_buttonFrame addTarget:self action:@selector(loginHandler:) forControlEvents:UIControlEventValueChanged];
+  [login_buttonFrame addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
   login_buttonFrame.center = CGPointMake(self.view.bounds.size.width/2, 400);
   [login_buttonFrame addSubview:login_buttonView];
   [login_buttonFrame setTitle:@"Log In" forState:UIControlStateNormal];
@@ -144,6 +146,7 @@
   UIButton *signup = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
   signup.center = CGPointMake(self.view.bounds.size.width/2+50, 440);
   [signup setTitle:@"Sign up now!" forState:UIControlStateNormal];
+  [signup addTarget:self action:@selector(signupAction:) forControlEvents:UIControlEventTouchUpInside];
   [signup setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
   signup.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
 
@@ -169,13 +172,21 @@
   else  NSLog(@"Off");
 }
 
-- (void) loginHandler: (id) sender
+- (void) signupAction: (UIButton *)sender
+{
+  //signup clicked
+  [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
+    //null
+  }];
+}
+
+- (void) loginAction: (id) sender
 {
   [self.email resignFirstResponder];
   [self.password resignFirstResponder];
-  
   [self processFieldEntries];
 }
+
 - (void) fbButtonTouchHandler: (id) sender
 {
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -213,6 +224,12 @@
   }];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [textField resignFirstResponder];
+  
+  return YES;
+}
 //keyboard dismissal
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   UITouch * touch = [touches anyObject];
@@ -221,8 +238,6 @@
     [_password resignFirstResponder];
   }
 }
-
-
 
 - (void)processFieldEntries {
 	// Get the username text, store it in the app delegate for now
@@ -269,19 +284,86 @@
 		return;
 	}
   
-	// Everything looks good; try to log in.
-	// Disable the done button for now.
-//	doneButton.enabled = NO;
+  [self doLoginWithUsername];
   
-//	PAWActivityView *activityView = [[PAWActivityView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height)];
-//	UILabel *label = activityView.label;
-//	label.text = @"Logging in";
-//	label.font = [UIFont boldSystemFontOfSize:20.f];
-//	[activityView.activityIndicator startAnimating];
-//	[activityView layoutSubviews];
-  
-//	[self.view addSubview:activityView];
+
+  //signup
+
+//  - (void) done:(id)sender {
+//    PFUser *user = [PFUser user];
+//    user.username = username;
+//    user.password = password;
+//    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+//     {
+//       if (error) // Something went wrong
+//       {
+//         // Display an alert view to show the error message
+//         UIAlertView *alertView =
+//         [[UIAlertView alloc] initWithTitle:[[error userInfo] objectForKey:@"error"]
+//                                    message:nil
+//                                   delegate:self
+//                          cancelButtonTitle:nil
+//                          otherButtonTitles:@"Ok", nil];
+//         [alertView show];
+//         
+//         // Bring the keyboard back up, user will probably need to change something
+//         [usernameField becomeFirstResponder];
+//         return;
+//       }
+//       
+//       // Success!
+//       // We push the next view on the navigation stack
+//       PAWWallViewController *wallViewController =
+//       [[PAWWallViewController alloc] initWithNibName:nil bundle:nil];
+//       UINavigationController *navController = (UINavigationController *)self.presentingViewController;
+//       [navController pushViewController:wallViewController animated:NO];
+//       
+//       // And since this view controller was presented modally, we dismiss ourself
+//       [self dismissModalViewControllerAnimated:YES];
+//     }];
+//  }
   
 }
+
+- (void)doLoginWithUsername {
+  
+  [PFUser logInWithUsernameInBackground:self.email.text password:self.password.text block:^(PFUser *user, NSError *error) {
+    if (user) {
+      // Create next view controller to show
+      [self showHomeView];
+    }
+    else // Login failed
+    {
+      UIAlertView *alertView = nil;
+      
+      if (error == nil) // Login failed because of an invalid username and password
+      {
+        // Create an alert view to tell the user
+        alertView = [[UIAlertView alloc] initWithTitle:@"Couldn't log in:"
+                     "\nThe username or password were wrong."
+                                               message:nil
+                                              delegate:self
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:@"Ok", nil];
+      }
+      else // Login failed for another reason
+      {
+        // Create an alert view to tell the user
+        alertView = [[UIAlertView alloc] initWithTitle:[[error userInfo] objectForKey:@"error"]
+                                               message:nil
+                                              delegate:self
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:@"Ok", nil];
+      }
+      // Show the alert view
+      [alertView show];
+      
+      // Bring the keyboard back up, user will probably need to change something
+      //      [usernameField becomeFirstResponder];
+    }
+  }];
+}
+
+
 
 @end

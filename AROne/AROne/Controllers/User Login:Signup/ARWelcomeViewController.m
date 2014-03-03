@@ -44,17 +44,7 @@
   // Check if user is logged in
   if (![PFUser currentUser]) {
     // Customize the Log In View Controller
-    ARLoginViewController *logInViewController = [[ARLoginViewController alloc] init];
-    //    logInViewController.delegate = self;
-    //    logInViewController.facebookPermissions = @[@"friends_about_me"];
-    //    logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
-    //
-    //    // Customize the Sign Up View Controller
-    //    MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
-    //    signUpViewController.delegate = self;
-    //    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
-    //    logInViewController.signUpController = signUpViewController;
-    
+    ARLoginViewController *logInViewController = [[ARLoginViewController alloc] init];    
     // Present Log In View Controller
     logInViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 

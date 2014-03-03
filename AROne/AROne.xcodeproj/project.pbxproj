@@ -93,6 +93,8 @@
 		3CA696FE18B17791003DE25F /* splashpage_mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696EB18B17791003DE25F /* splashpage_mockup.png */; };
 		3CA696FF18B17791003DE25F /* switch_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696EC18B17791003DE25F /* switch_button.png */; };
 		3CA6970018B17791003DE25F /* switch_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696ED18B17791003DE25F /* switch_button@2x.png */; };
+		3CAF438C18C1660E00356116 /* ARSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438B18C1660E00356116 /* ARSummary.m */; };
+		3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438D18C3FFB800356116 /* ARCommon.m */; };
 		3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */; };
 		3CDCDB0317DE90BC00FCA0CA /* mph Max Speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */; };
 		3CDCDB0517DE90BC00FCA0CA /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */; };
@@ -353,6 +355,9 @@
 		3CA696EB18B17791003DE25F /* splashpage_mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashpage_mockup.png; sourceTree = "<group>"; };
 		3CA696EC18B17791003DE25F /* switch_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_button.png; sourceTree = "<group>"; };
 		3CA696ED18B17791003DE25F /* switch_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_button@2x.png"; sourceTree = "<group>"; };
+		3CAF438A18C1660E00356116 /* ARSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSummary.h; path = Parse/ARSummary.h; sourceTree = "<group>"; };
+		3CAF438B18C1660E00356116 /* ARSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSummary.m; path = Parse/ARSummary.m; sourceTree = "<group>"; };
+		3CAF438D18C3FFB800356116 /* ARCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCommon.m; sourceTree = "<group>"; };
 		3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accelerationCircle.png; sourceTree = "<group>"; };
 		3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mph Max Speed.png"; sourceTree = "<group>"; };
 		3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
@@ -776,6 +781,15 @@
 			path = "login page";
 			sourceTree = "<group>";
 		};
+		3CAF438918C165E600356116 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF438A18C1660E00356116 /* ARSummary.h */,
+				3CAF438B18C1660E00356116 /* ARSummary.m */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
 		3CDCDAA617DE90BC00FCA0CA /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +989,7 @@
 		3CFE886618064422006CF472 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3CAF438918C165E600356116 /* Parse */,
 				3C92D40318ACA7150051BE54 /* ARReadings */,
 				3C92D40418ACA7150051BE54 /* ARSamples */,
 				3C92D3FC18ACA34D0051BE54 /* SQLCommand.h */,
@@ -986,6 +1001,7 @@
 				3C92D40B18ACA84E0051BE54 /* ARDevice.h */,
 				3C92D40C18ACA84E0051BE54 /* ARDevice.m */,
 				3C92D41418ACB3CE0051BE54 /* ARCommon.h */,
+				3CAF438D18C3FFB800356116 /* ARCommon.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1295,6 +1311,7 @@
 				3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */,
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
+				3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
@@ -1312,6 +1329,7 @@
 				3C3F181B17DE886D00658555 /* PMCalendarView.m in Sources */,
 				3C1A0B3318B4A33500999000 /* ARWelcomeViewController.m in Sources */,
 				3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */,
+				3CAF438C18C1660E00356116 /* ARSummary.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
 				3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */,

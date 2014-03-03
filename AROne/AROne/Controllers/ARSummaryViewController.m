@@ -19,6 +19,10 @@
 #import "ARLoginViewController.h"
 #import "ARSettingViewController.h"
 
+//Parse Object
+#import "ARCommon.h"
+#import "ARSummary.h"
+
 
 @interface ARSummaryViewController ()
 @property(atomic, strong) NSString* max_speed_value;
@@ -60,12 +64,30 @@
 //  add right refresh setting button
   [self createRightBarButtons];
 
-  //FIXME: temporary hardcored the value here
-  self.max_speed_value = @"34";
-  self.vertical_drop_value = @"35,000";
-  self.acceleration_value = @"9.8";
-  self.sync_button_value = -1;
   
+  //FIXME: temporary hardcored the value here
+//  self.max_speed_value = @"34";
+//  self.vertical_drop_value = @"35,000";
+//  self.acceleration_value = @"9.8";
+  self.sync_button_value = -1;
+  [self queryData];
+  
+}
+
+- (void) queryData {
+  PFQuery *query = [ARSummary query];
+  [query whereKey:@"date" equalTo:[ARCommon today]];
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (!error && objects != nil) {
+      ARSummary *firstMeasurement = objects[0];
+      NSLog(@"firstMeasuremetn is %@", firstMeasurement);
+      // ...
+      self.max_speed_value = [NSString stringWithFormat:@"%0.1f",firstMeasurement.maxSpeed];
+      self.vertical_drop_value = [NSString stringWithFormat:@"%d", firstMeasurement.verticalDrop];
+      self.acceleration_value = [NSString stringWithFormat:@"%0.1f", firstMeasurement.maxAcceleration];
+      [self.tableView reloadData];
+    }
+  }];
 }
 
 #pragma mark - Table view data source
