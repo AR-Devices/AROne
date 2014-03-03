@@ -76,6 +76,7 @@
 
 - (void) queryData {
   PFQuery *query = [ARSummary query];
+  //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
   [query whereKey:@"date" equalTo:[ARCommon today]];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && objects != nil) {
