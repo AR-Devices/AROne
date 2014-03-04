@@ -106,7 +106,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   
 //  [self setTabBarController];
   
-//  [self createSummaryClass];
+  [self createSummaryClass];
   
   [self.window makeKeyAndVisible];
   return YES;

@@ -77,7 +77,9 @@
 - (void) queryData {
   PFQuery *query = [ARSummary query];
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
-  [query whereKey:@"date" equalTo:[ARCommon today]];
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd"];
+  [query whereKey:@"date" equalTo:[formatter stringFromDate:self.myDate]];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       ARSummary *firstMeasurement = objects[0];
@@ -460,7 +462,8 @@
   [self.segment setTitle:stringFromDate forSegmentAtIndex:1];
   self.myDate = newPeriod.startDate;
   NSLog(@"[DEBUG] you choose this date ");
-  
+  [self queryData];
+
 }
 
 
