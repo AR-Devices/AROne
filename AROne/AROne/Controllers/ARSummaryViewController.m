@@ -79,15 +79,19 @@
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
   [query whereKey:@"date" equalTo:[ARCommon today]];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-    if (!error && objects != nil) {
+    if (!error && ([objects count] != 0)) {
       ARSummary *firstMeasurement = objects[0];
       NSLog(@"firstMeasuremetn is %@", firstMeasurement);
       // ...
       self.max_speed_value = [NSString stringWithFormat:@"%0.1f",firstMeasurement.maxSpeed];
       self.vertical_drop_value = [NSString stringWithFormat:@"%d", firstMeasurement.verticalDrop];
       self.acceleration_value = [NSString stringWithFormat:@"%0.1f", firstMeasurement.maxAcceleration];
-      [self.tableView reloadData];
+    } else {
+      self.max_speed_value = @"0";
+      self.vertical_drop_value = @"0";
+      self.acceleration_value = @"0";
     }
+    [self.tableView reloadData];
   }];
 }
 
