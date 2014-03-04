@@ -11,6 +11,8 @@
 //import vendor TabBar Controller
 #import "AKTabBarController.h"
 #import "ARWelcomeViewController.h"
+#import "ARSignupViewController.h"
+#import "ARLoginViewController.h"
 
 //test
 #import "ARSummary.h"
@@ -102,8 +104,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
   [self setAppTheme];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  [self.window setRootViewController:[ARWelcomeViewController new]];
-  
+  //[self.window setRootViewController:[ARWelcomeViewController new]];
+  [self.window setRootViewController:[ARSignupViewController new]];
+ 
 //  [self setTabBarController];
   
   [self createSummaryClass];
