@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "AROne": {
+            "applicationId": "Lt8jTMUGgCSfv8HaeY02aVUMlLhX55VrgAmbOzwe", 
+            "masterKey": "qGjm4uxk8AV3qdMO5BsRh7V8Hbfo5IG1r2rjRiNA"
+        }, 
+        "_default": {
+            "link": "AROne"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.17"
+    }
+}

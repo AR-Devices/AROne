@@ -11,6 +11,8 @@
 @interface ARSummary : PFObject <PFSubclassing>
 
 @property (retain) NSString *displayName;
+
+
 @property NSString *date;
 @property double maxSpeed;
 @property double maxAcceleration;
