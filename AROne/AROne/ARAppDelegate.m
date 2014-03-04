@@ -104,8 +104,8 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
   [self setAppTheme];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  //[self.window setRootViewController:[ARWelcomeViewController new]];
-  [self.window setRootViewController:[ARSignupViewController new]];
+  [self.window setRootViewController:[ARWelcomeViewController new]];
+  //[self.window setRootViewController:[ARSignupViewController new]];
  
 //  [self setTabBarController];
   
