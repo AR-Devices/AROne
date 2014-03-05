@@ -10,9 +10,15 @@ Parse.Cloud.define("scoreBoard", function(request, response) {
 	var query = new Parse.Query("Summary");
 	//query.equalTo("date", request.params.date);
 	//query.equalTo("date", "2014-03-04");
+	//query.equalTo("objectId", "wUlG0G1zlk");
+	query.equalTo("displayName", "danny");
 	query.find({
 		success: function(result){
-			response.success(result,result.length);
+			for (var i = 0; i < result.length; ++i) {
+				console.log(result.length);
+				console.log(result[i].get("date"));
+				response.success(result[i].get("date"));
+      			}
 		},
 		error: function() {
    		 // error is an instance of Parse.Error.
