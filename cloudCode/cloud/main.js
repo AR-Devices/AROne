@@ -11,8 +11,8 @@ Parse.Cloud.define("scoreBoard", function(request, response) {
 	//query.equalTo("date", request.params.date);
 	//query.equalTo("date", "2014-03-04");
 	query.find({
-		success: function(user_data_per_day){
-			response.success(user_data_per_day.length);
+		success: function(result){
+			response.success(result,result.length);
 		},
 		error: function() {
    		 // error is an instance of Parse.Error.

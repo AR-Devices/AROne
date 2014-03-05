@@ -56,7 +56,12 @@ static NSString* const kPAWLocationChangeNotification= @"kPAWLocationChangeNotif
   measurement.verticalDrop = 18560;
 //  [measurement setPlayer:[PFUser currentUser]];
   measurement.player = [PFUser currentUser];
-  measurement.ACL = [PFACL ACLWithUser:measurement.player];
+  PFACL *defaultACL = [PFACL ACL];
+  // Optionally enable public read access while disabling public write access.
+  [defaultACL setPublicReadAccess:YES];
+  [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+  measurement.ACL = defaultACL;
+
   [measurement saveInBackground];
   
 }
@@ -109,7 +114,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
  
 //  [self setTabBarController];
   
-//  [self createSummaryClass];
+  [self createSummaryClass];
   
   [self.window makeKeyAndVisible];
   return YES;
