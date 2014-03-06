@@ -230,6 +230,61 @@
   
   return YES;
 }
+
+
+- (void) populateData
+{
+  FBRequest *request = [FBRequest requestForMe];
+  
+  // Send request to Facebook
+  [request startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+    if (!error) {
+      // result is a dictionary with the user's Facebook data
+      //      NSDictionary *userData = (NSDictionary *)result;
+      
+      //      NSMutableAttributedString *attributedString;
+      //      attributedString = [[NSMutableAttributedString alloc] initWithString:[user.name uppercaseString]];
+      //      [attributedString addAttribute:NSKernAttributeName value:@5 range:NSMakeRange(10, 5)];
+      //      [self.name setAttributedText:attributedString];
+      
+      
+      [self.name setText: [user.name uppercaseString]];
+      [self.email setText:[user objectForKey:@"email"]];
+      [self.location setText:[[user objectForKey:@"location"] objectForKey:@"name"]];
+      [self.occupation setText:[[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"]];
+      self.profilePictureView.profileID = user.id;
+      
+      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+      [defaults setObject:user.name forKey:@"myName"];
+      //      upload info to parse
+      PFQuery *query = [PFUser query];
+      PFUser *PU = [PFUser currentUser];
+      [query whereKey:@"username" equalTo:PU.username];
+      
+      [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"objects are %@", objects);
+        PFObject *Puser = [objects objectAtIndex:0];
+        Puser[@"name"] = user.name;
+        Puser[@"email"] = [user objectForKey:@"email"];
+        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
+        Puser[@"occupation"] = [[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"];
+        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
+        [Puser saveInBackground];
+      }];
+      
+      // Now add the data to the UI elements
+      // ...
+    } else {
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:error.localizedDescription
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+      [alertView show];
+    }
+  }];
+}
+
 //keyboard dismissal
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   UITouch * touch = [touches anyObject];
