@@ -28,6 +28,10 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  NSLog(@"viewWillAppear Called");
+  
+}
 - (void)viewDidLoad
 {
   NSLog(@"loginView Called!");
@@ -174,10 +178,21 @@
 
 - (void) signupAction: (UIButton *)sender
 {
+  //Set self to listen for the message "SecondViewControllerDismissed and run a method when this message is detected
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(didSignUpSuccessful:)
+                                               name:@"SignUpSuccessful"
+                                             object:nil];
   //signup clicked
   [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
     //null
   }];
+}
+
+- (void)didSignUpSuccessful:(id) sender
+{
+  NSLog(@"signup successful!");
+  [self showHomeView];
 }
 
 - (void) loginAction: (id) sender
@@ -205,6 +220,7 @@
       }
     } else if (user.isNew) {
       NSLog(@"User with facebook signed up and logged in!");
+      [self populateFBData];
       [self showHomeView];
     } else {
       NSLog(@"User with facebook logged in!");
@@ -232,7 +248,7 @@
 }
 
 
-- (void) populateData
+- (void) populateFBData
 {
   FBRequest *request = [FBRequest requestForMe];
   
@@ -248,14 +264,14 @@
       //      [self.name setAttributedText:attributedString];
       
       
-      [self.name setText: [user.name uppercaseString]];
-      [self.email setText:[user objectForKey:@"email"]];
-      [self.location setText:[[user objectForKey:@"location"] objectForKey:@"name"]];
-      [self.occupation setText:[[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"]];
-      self.profilePictureView.profileID = user.id;
+//      [self.name setText: [user.name uppercaseString]];
+//      [self.email setText:[user objectForKey:@"email"]];
+//      [self.location setText:[[user objectForKey:@"location"] objectForKey:@"name"]];
+//      [self.occupation setText:[[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"]];
+//      self.profilePictureView.profileID = user.id;
       
-      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-      [defaults setObject:user.name forKey:@"myName"];
+//      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//      [defaults setObject:user.name forKey:@"myName"];
       //      upload info to parse
       PFQuery *query = [PFUser query];
       PFUser *PU = [PFUser currentUser];
@@ -267,9 +283,21 @@
         Puser[@"name"] = user.name;
         Puser[@"email"] = [user objectForKey:@"email"];
         Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
-        Puser[@"occupation"] = [[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"];
-        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
         [Puser saveInBackground];
+
+        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:NO, @"redirect",
+                                @"200", @"height",
+                                @"normal", @"type",
+                                @"200", @"width", nil];
+        NSString *url = [NSString stringWithFormat:@"%@/picture", user.id];
+        [FBRequestConnection startWithGraphPath:url parameters:params HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+          NSData *imageData = UIImagePNGRepresentation(result);
+          PFFile *imageFile = [PFFile fileWithName:@"icon.png" data:imageData];
+          Puser[@"userIcon"] = imageFile;
+          [Puser saveInBackground];
+        }];
+
+//        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
       }];
       
       // Now add the data to the UI elements
@@ -418,7 +446,6 @@
     }
   }];
 }
-
 
 
 @end

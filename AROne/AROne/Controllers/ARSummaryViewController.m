@@ -70,11 +70,11 @@
 //  self.vertical_drop_value = @"35,000";
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
-  [self queryData];
+  [self querySummaryData];
   
 }
 
-- (void) queryData {
+- (void) querySummaryData {
   PFQuery *query = [ARSummary query];
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -96,6 +96,10 @@
     [self.tableView reloadData];
   }];
 }
+
+//- (void) queryUserData {
+//  PFQuery *query = []
+//}
 
 #pragma mark - Table view data source
 
@@ -462,7 +466,7 @@
   [self.segment setTitle:stringFromDate forSegmentAtIndex:1];
   self.myDate = newPeriod.startDate;
   NSLog(@"[DEBUG] you choose this date ");
-  [self queryData];
+  [self querySummaryData];
 
 }
 

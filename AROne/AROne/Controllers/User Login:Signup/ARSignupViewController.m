@@ -218,9 +218,13 @@
 }
 - (void)showHomeView
 {
+
   NSLog(@"showHomeView!");
   [self dismissViewControllerAnimated:YES completion:^{
-    //null
+    //This sends a message through the NSNotificationCenter to any listeners for "SecondViewControllerDismissed"
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SignUpSuccessful"
+                                                        object:nil
+                                                      userInfo:nil];
   }];
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
