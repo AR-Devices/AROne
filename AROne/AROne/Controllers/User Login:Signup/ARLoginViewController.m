@@ -225,6 +225,7 @@
     } else {
       NSLog(@"User with facebook logged in!");
       //      [self.navigationController pushViewController:[[CQProfileViewController alloc] init] animated:YES];
+      [self populateFBData];
       [self showHomeView];
     }
 
@@ -284,19 +285,6 @@
         Puser[@"email"] = [user objectForKey:@"email"];
         Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
         [Puser saveInBackground];
-
-        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:NO, @"redirect",
-                                @"200", @"height",
-                                @"normal", @"type",
-                                @"200", @"width", nil];
-        NSString *url = [NSString stringWithFormat:@"%@/picture", user.id];
-        [FBRequestConnection startWithGraphPath:url parameters:params HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-          NSData *imageData = UIImagePNGRepresentation(result);
-          PFFile *imageFile = [PFFile fileWithName:@"icon.png" data:imageData];
-          Puser[@"userIcon"] = imageFile;
-          [Puser saveInBackground];
-        }];
-
 //        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
       }];
       

@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+AKTabBarController.h"
+#import "UINavigationController+SGProgress.h"
 #import "AKSegmentedControl.h"
 
 #import "ARSummaryViewController.h"
@@ -22,6 +23,7 @@
 //Parse Object
 #import "ARCommon.h"
 #import "ARSummary.h"
+
 
 
 @interface ARSummaryViewController ()
@@ -393,6 +395,7 @@
   UIButton *sync_button = (UIButton *) sender;
   if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
+    [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
   } else {
     [sync_button.layer removeAllAnimations];
   }
