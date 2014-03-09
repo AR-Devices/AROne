@@ -7,6 +7,8 @@
 //
 
 #import "ARCommon.h"
+#import "ARSummary.h"
+#import "ARDataPoint.h"
 
 @implementation ARCommon
 
@@ -32,6 +34,22 @@
   return [dateFormatter stringFromDate:date];
 }
 
++ (NSString *) todayTime {
+  NSDate *startDate = [NSDate date];
+  NSLog(@"startDate is %@", startDate);
+  
+  NSDate *date = [NSDate new];
+  [date descriptionWithLocale:[NSLocale systemLocale]];
+  
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+  [dateFormatter setDateFormat:@"HH:mm:ss"];
+  NSLog(@"todaytime is %@", [dateFormatter stringFromDate:date]);
+  return [dateFormatter stringFromDate:date];
+}
+
+
+
 + (NSString *) todayWithTime {
   
   //  NSDateComponents *components = [[NSCalendar currentCalendar]
@@ -54,5 +72,59 @@
   return [dateFormatter stringFromDate:date];
 }
 
++ (double) randomDouble {
+  double r = (arc4random() % 100)/10;
+  return r;
+}
 
++ (int) randomVDrop {
+  return arc4random() % 20000;
+}
+
++ (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber {
+  float diff = bigNumber - smallNumber;
+  return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber;
+}
+
++ (void)createSummaryClass {
+  
+  ARSummary *measurement = [ARSummary object];
+  measurement.displayName = @"Measurement";
+  measurement.date = [ARCommon today];
+  measurement.maxAcceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
+  measurement.maxSpeed = [ARCommon randomFloatBetween:0.0 and:50.0];
+  measurement.verticalDrop = [ARCommon randomVDrop];
+  //  [measurement setPlayer:[PFUser currentUser]];
+  measurement.player = [PFUser currentUser];
+  PFACL *defaultACL = [PFACL ACL];
+  // Optionally enable public read access while disabling public write access.
+  [defaultACL setPublicReadAccess:YES];
+  [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+  measurement.ACL = defaultACL;
+  
+  [measurement saveInBackground];
+}
+
++ (void)createDataPoint:(int)size {
+  NSLog(@"createDataPoint Called");
+  NSMutableArray *dataArray = [NSMutableArray new];
+  for (int i = 0 ; i < size; i++) {
+    ARDataPoint *dp = [ARDataPoint object];
+    dp.dateRecord = [ARCommon today];
+    dp.timeRecord = [ARCommon todayTime];
+    dp.acceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
+    dp.speed = [ARCommon randomFloatBetween:0.0 and:50.0];
+    dp.verticalDrop = [ARCommon randomVDrop];
+    dp.player = [PFUser currentUser];
+    // Optionally enable public read access while disabling public write access.
+    PFACL *defaultACL = [PFACL ACL];
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    dp.ACL = defaultACL;
+    [dataArray addObject:dp];
+  }
+
+  [PFObject saveAll:dataArray];
+  
+}
 @end

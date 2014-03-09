@@ -22,6 +22,4 @@
 
 + (NSString *)parseClassName;
 
-//- (void) setPlayer;
-
 @end

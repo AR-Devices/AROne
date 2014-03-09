@@ -12,5 +12,10 @@
 @interface ARCommon : NSObject 
 
 + (NSString *) today;
-
++ (double) randomDouble;
++ (int) randomVDrop;
++ (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber;
++ (void)createSummaryClass;
++ (NSString *) todayTime;
++ (void)createDataPoint:(int)size;
 @end

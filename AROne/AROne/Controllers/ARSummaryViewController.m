@@ -39,6 +39,9 @@
 @property(nonatomic) NSInteger dateCounter;
 @property(atomic, strong) UISegmentedControl *segment;
 
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) UIImage *userIcon;
+
 @end
 
 @implementation ARSummaryViewController
@@ -52,6 +55,7 @@
     [self createToolBar];
 //    d4dee6
     self.tableView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
+    self.sync_button_value = 1;
   }
   return self;
 }
@@ -73,6 +77,7 @@
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
   [self querySummaryData];
+  [self queryUserData];
   
 }
 
@@ -99,9 +104,27 @@
   }];
 }
 
-//- (void) queryUserData {
-//  PFQuery *query = []
-//}
+- (void) queryUserData {
+//  self.userName = [PFUser.currentUser[@"name"] stringValue];
+  NSLog(@"name is %@",[PFUser currentUser][@"name"]);
+  self.userName = [PFUser currentUser][@"name"];
+  [self.tableView reloadData];
+//  [PFUser.currentUser[@"isPrivate"] boolValue];
+//  PFQuery *query = [PFQuery queryWithClassName:@"User"];
+//  NSLog(@"username 1 is %@", [PFUser currentUser].username);
+//  [query whereKey:@"username" equalTo:[PFUser currentUser].username];
+//  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//    if (!error && ([objects count] != 0)) {
+////      PFUser *user = objects[0];
+//      NSLog(@"objects are %@", objects);
+////      [objects[0] objectForKey:@"user"];
+////      NSLog(@"username is %@", user.username);
+////      self.userName = objects[0];
+////      [self.tableView reloadData];
+//    }
+//  }];
+  
+}
 
 #pragma mark - Table view data source
 
@@ -259,7 +282,8 @@
   UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 25)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
-  name.text = @"Peng Shao";
+
+  name.text = self.userName;
   name.backgroundColor = [UIColor clearColor];
   [header addSubview:name];
 
@@ -396,12 +420,15 @@
   if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
     [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
+    [ARCommon createSummaryClass];
+    [ARCommon createDataPoint:100];
   } else {
     [sync_button.layer removeAllAnimations];
   }
   
   self.sync_button_value = self.sync_button_value*-1;
 }
+
 -(void)settingPressed:(id)sender
 {
   NSLog(@"setting Clicked");

@@ -17,6 +17,7 @@
 //test
 #import "ARSummary.h"
 #import "ARCommon.h"
+#import "ARDataPoint.h"
 
 
 @interface ARAppDelegate ()
@@ -46,26 +47,6 @@ static NSString* const kPAWLocationChangeNotification= @"kPAWLocationChangeNotif
   
 }
 
-- (void)createSummaryClass {
-  
-  ARSummary *measurement = [ARSummary object];
-  measurement.displayName = @"Chenchen's First Measurement";
-  measurement.date = [ARCommon today];
-  measurement.maxAcceleration = 10.2;
-  measurement.maxSpeed = 25.2;
-  measurement.verticalDrop = 18560;
-//  [measurement setPlayer:[PFUser currentUser]];
-  measurement.player = [PFUser currentUser];
-  PFACL *defaultACL = [PFACL ACL];
-  // Optionally enable public read access while disabling public write access.
-  [defaultACL setPublicReadAccess:YES];
-  [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-  measurement.ACL = defaultACL;
-
-  [measurement saveInBackground];
-  
-}
-
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
   // Store the deviceToken in the current installation and save it to Parse.
@@ -90,6 +71,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   
   //calling class
   [ARSummary registerSubclass];
+  [ARDataPoint registerSubclass];
   
   // ****************************************************************************
   // Fill in with your Parse and Twitter credentials. Don't forget to add your

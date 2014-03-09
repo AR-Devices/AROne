@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GraphDataSource
+
+
+
+@optional
+
+@end
+
 @interface drawGraph : UIView
 @property(nonatomic) BOOL isVolumeGraph;
 @property(nonatomic, strong) UIColor * localColor;
