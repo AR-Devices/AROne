@@ -169,7 +169,9 @@
   UIImage* image = [UIImage imageNamed:@"northstar-trail-map.jpg"];
   NSLog(@"view width is %f, height is %f", self.view.bounds.size.width, self.view.bounds.size.height);
   NSLog(@"image width is %f, height is %f", image.size.width, image.size.height);
-  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width* image.size.width/image.size.height), self.view.bounds.size.height)];
+//  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height * image.size.height / image.size.width))];
+
   NSLog(@"imageview width is %f, height is %f", self.imageView.bounds.size.width, self.imageView.bounds.size.height);
   self.imageView.image = image;
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];

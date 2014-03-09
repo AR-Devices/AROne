@@ -13,6 +13,8 @@
 #import "ARScoreBoardCell.h"
 #import "ARTopBarView.h"
 
+#import "ARSummary.h"
+
 @interface ARScoreboardViewController ()
 
 @property UIView *comboBar;
@@ -38,6 +40,7 @@
 
 - (void)viewDidLoad
 {
+  [self querySummaryData];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -138,7 +141,25 @@
   NSLog(@"clicked at %d", indexPath.row);
   
 }
-
+- (void) querySummaryData {
+  PFQuery *query = [ARSummary query];
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSString *result, NSError *error) {
+    if (!error) {
+      NSLog(@"=====================================================");
+      NSLog(@"Result is: %@", result);
+    }
+  }];
+  //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
+//  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//  [formatter setDateFormat:@"yyyy-MM-dd"];
+//  [query whereKey:@"date" equalTo:[formatter stringFromDate:self.myDate]];
+//  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//    if (!error && ([objects count] != 0)) {
+//      ARSummary *firstMeasurement = objects[0];
+//
+//    [self.tableView reloadData];
+//  }];
+}
 
 /*
 #pragma mark - Navigation
