@@ -91,7 +91,6 @@
 		3CA696FE18B17791003DE25F /* splashpage_mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696EB18B17791003DE25F /* splashpage_mockup.png */; };
 		3CA696FF18B17791003DE25F /* switch_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696EC18B17791003DE25F /* switch_button.png */; };
 		3CA6970018B17791003DE25F /* switch_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA696ED18B17791003DE25F /* switch_button@2x.png */; };
-		3CACAF3A18C91D7A00F8B1F6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CACAF3918C91D7A00F8B1F6 /* Parse.framework */; };
 		3CACAF3C18C91DFB00F8B1F6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */; };
 		3CACAF5F18C938BA00F8B1F6 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CACAF5D18C938BA00F8B1F6 /* welcome.png */; };
 		3CACAF6018C938BA00F8B1F6 /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CACAF5E18C938BA00F8B1F6 /* welcome@2x.png */; };
@@ -215,7 +214,6 @@
 		EC6ACC5218B3259100BA78BE /* fullscreen_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6ACC4E18B3259100BA78BE /* fullscreen_button@2x.png */; };
 		EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */; };
 		EC8D410B18CBE69400FC0B2A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8D410A18CBE69400FC0B2A /* Parse.framework */; };
-		EC8D410F18CBE8CA00FC0B2A /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8D410E18CBE8CA00FC0B2A /* UINavigationController+SGProgress.m */; };
 		EC8D411C18CBEB4900FC0B2A /* icon29X29.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411018CBEB4800FC0B2A /* icon29X29.png */; };
 		EC8D411D18CBEB4900FC0B2A /* icon40X40.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411118CBEB4800FC0B2A /* icon40X40.png */; };
 		EC8D411E18CBEB4900FC0B2A /* icon58X58.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411218CBEB4800FC0B2A /* icon58X58.png */; };
@@ -370,7 +368,6 @@
 		3CA696EB18B17791003DE25F /* splashpage_mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashpage_mockup.png; sourceTree = "<group>"; };
 		3CA696EC18B17791003DE25F /* switch_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_button.png; sourceTree = "<group>"; };
 		3CA696ED18B17791003DE25F /* switch_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_button@2x.png"; sourceTree = "<group>"; };
-		3CACAF3918C91D7A00F8B1F6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3CACAF5D18C938BA00F8B1F6 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
 		3CACAF5E18C938BA00F8B1F6 /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
@@ -499,8 +496,6 @@
 		EC6ACC5818B3319A00BA78BE /* ARTrailSummaryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailSummaryTableCell.h; sourceTree = "<group>"; };
 		EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailSummaryTableCell.m; sourceTree = "<group>"; };
 		EC8D410A18CBE69400FC0B2A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		EC8D410D18CBE8CA00FC0B2A /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
-		EC8D410E18CBE8CA00FC0B2A /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
 		EC8D411018CBEB4800FC0B2A /* icon29X29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29X29.png; path = images/logo/icon29X29.png; sourceTree = SOURCE_ROOT; };
 		EC8D411118CBEB4800FC0B2A /* icon40X40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon40X40.png; path = images/logo/icon40X40.png; sourceTree = SOURCE_ROOT; };
 		EC8D411218CBEB4800FC0B2A /* icon58X58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon58X58.png; path = images/logo/icon58X58.png; sourceTree = SOURCE_ROOT; };
@@ -728,7 +723,6 @@
 		3C417FCB17D84B560094B56F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				EC8D410C18CBE8B700FC0B2A /* SGProgress */,
 				3C3F17FD17DE886D00658555 /* PMCalendar */,
 				3C5F189C17D91681003AC638 /* AKSegmentedControl */,
 				3C417FCC17D84B560094B56F /* AKTabBarController */,
@@ -1095,15 +1089,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EC8D410C18CBE8B700FC0B2A /* SGProgress */ = {
-			isa = PBXGroup;
-			children = (
-				EC8D410D18CBE8CA00FC0B2A /* UINavigationController+SGProgress.h */,
-				EC8D410E18CBE8CA00FC0B2A /* UINavigationController+SGProgress.m */,
-			);
-			name = SGProgress;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1415,7 +1400,6 @@
 				3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
-				EC8D410F18CBE8CA00FC0B2A /* UINavigationController+SGProgress.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
@@ -1584,7 +1568,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
-					/Users/jiachiw/github/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
@@ -1608,7 +1591,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
-					/Users/jiachiw/github/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
