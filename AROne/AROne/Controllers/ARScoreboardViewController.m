@@ -143,10 +143,12 @@
 }
 - (void) querySummaryData {
   PFQuery *query = [ARSummary query];
-  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSString *result, NSError *error) {
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray *result, NSError *error) {
     if (!error) {
       NSLog(@"=====================================================");
+      
       NSLog(@"Result is: %@", result);
+      
     }
   }];
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
