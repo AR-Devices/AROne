@@ -169,7 +169,7 @@
   UIImage* image = [UIImage imageNamed:@"northstar-trail-map.jpg"];
   NSLog(@"view width is %f, height is %f", self.view.bounds.size.width, self.view.bounds.size.height);
   NSLog(@"image width is %f, height is %f", image.size.width, image.size.height);
-  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
   NSLog(@"imageview width is %f, height is %f", self.imageView.bounds.size.width, self.imageView.bounds.size.height);
   self.imageView.image = image;
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
@@ -179,13 +179,15 @@
   self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.imageView.frame), CGRectGetHeight(self.imageView.frame));
   self.scrollView.showsHorizontalScrollIndicator = YES;
   self.scrollView.showsVerticalScrollIndicator = YES;
+  
   //    self.scrollView.scrollsToTop = NO;
   self.scrollView.delegate = self;
   [self.scrollView addSubview:self.imageView];
   [self.view addSubview:self.scrollView];
   
-  self.scrollView.minimumZoomScale=0.4;
+  self.scrollView.minimumZoomScale=1;
   self.scrollView.maximumZoomScale=6.0;
+
   //    self.scrollView.contentSize=CGSizeMake(1280, 960);
   //    self.scrollView.delegate=self
   //    tap gestures
