@@ -143,11 +143,12 @@
 }
 - (void) querySummaryData {
   PFQuery *query = [ARSummary query];
-  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray *result, NSError *error) {
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(id result, NSError *error) {
     if (!error) {
       NSLog(@"=====================================================");
-      
-      NSLog(@"Result is: %@", result);
+      NSDictionary *dict = result[0];
+      [dict objectForKey:@"maxSpeed"];
+      NSLog(@"Result is: %@", [dict objectForKey:@"maxSpeed"]);
       
     }
   }];
