@@ -213,7 +213,7 @@
 		EC6ACC5118B3259100BA78BE /* fullscreen_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6ACC4D18B3259100BA78BE /* fullscreen_button.png */; };
 		EC6ACC5218B3259100BA78BE /* fullscreen_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6ACC4E18B3259100BA78BE /* fullscreen_button@2x.png */; };
 		EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */; };
-		EC8D410B18CBE69400FC0B2A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8D410A18CBE69400FC0B2A /* Parse.framework */; };
+		EC7DC77018CED49300E80D0B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7DC76F18CED49300E80D0B /* Parse.framework */; };
 		EC8D411C18CBEB4900FC0B2A /* icon29X29.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411018CBEB4800FC0B2A /* icon29X29.png */; };
 		EC8D411D18CBEB4900FC0B2A /* icon40X40.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411118CBEB4800FC0B2A /* icon40X40.png */; };
 		EC8D411E18CBEB4900FC0B2A /* icon58X58.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8D411218CBEB4800FC0B2A /* icon58X58.png */; };
@@ -495,7 +495,7 @@
 		EC6ACC4E18B3259100BA78BE /* fullscreen_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen_button@2x.png"; sourceTree = "<group>"; };
 		EC6ACC5818B3319A00BA78BE /* ARTrailSummaryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailSummaryTableCell.h; sourceTree = "<group>"; };
 		EC6ACC5918B3319A00BA78BE /* ARTrailSummaryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailSummaryTableCell.m; sourceTree = "<group>"; };
-		EC8D410A18CBE69400FC0B2A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		EC7DC76F18CED49300E80D0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		EC8D411018CBEB4800FC0B2A /* icon29X29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29X29.png; path = images/logo/icon29X29.png; sourceTree = SOURCE_ROOT; };
 		EC8D411118CBEB4800FC0B2A /* icon40X40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon40X40.png; path = images/logo/icon40X40.png; sourceTree = SOURCE_ROOT; };
 		EC8D411218CBEB4800FC0B2A /* icon58X58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon58X58.png; path = images/logo/icon58X58.png; sourceTree = SOURCE_ROOT; };
@@ -544,7 +544,7 @@
 				EC9ED2F618AC74CA0067F729 /* AudioToolbox.framework in Frameworks */,
 				EC9ED2F218AC74B30067F729 /* CoreLocation.framework in Frameworks */,
 				EC9ED2F018AC74A90067F729 /* Social.framework in Frameworks */,
-				EC8D410B18CBE69400FC0B2A /* Parse.framework in Frameworks */,
+				EC7DC77018CED49300E80D0B /* Parse.framework in Frameworks */,
 				EC9ED2EE18AC74A10067F729 /* AdSupport.framework in Frameworks */,
 				EC9ED2EC18AC74990067F729 /* Accounts.framework in Frameworks */,
 				EC9ED2EA18AC748F0067F729 /* libsqlite3.0.dylib in Frameworks */,
@@ -649,7 +649,7 @@
 		3C417F3D17D847510094B56F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC8D410A18CBE69400FC0B2A /* Parse.framework */,
+				EC7DC76F18CED49300E80D0B /* Parse.framework */,
 				3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */,
 				3C92D41818ACB8010051BE54 /* FacebookSDK.framework */,
 				EC9ED2FF18AC75400067F729 /* SystemConfiguration.framework */,
@@ -1568,6 +1568,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
+					/Users/jiachiw/github/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
@@ -1591,6 +1592,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
+					/Users/jiachiw/github/AROne/AROne,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";

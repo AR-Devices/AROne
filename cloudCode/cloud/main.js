@@ -11,7 +11,7 @@ Parse.Cloud.define("scoreBoard", function(request, response) {
 	//query.equalTo("displayName", "danny");
 	query.equalTo("date", "2014-03-05");
 	query.addAscending("maxSpeed");
-	query.select("maxSpeed");
+	query.select("displayName", "maxSpeed");
 	query.find({
 		success: function(result){
 			response.success(result);

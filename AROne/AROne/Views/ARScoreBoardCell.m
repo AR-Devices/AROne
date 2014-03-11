@@ -23,8 +23,10 @@
  * @return configured cellView
  */
 //add a ARStyle here...
-- (void)setThemeWithStyle:(ARScoreBoardCellStyle)style andValue:(NSString *)value andRank:(ARRankStyle) rank
+- (void)setThemeWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString *)who andValue:(NSString *)value andRank:(ARRankStyle) rank
 {
+  NSLog(@"who is %@" ,who);
+  NSLog(@"value is %@", [value class]);
   //ccz:  create cellView
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, SECTION_CELL_WIDTH, SECTION_CELL_X_HEIGHT-20)];
   self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0];
@@ -40,7 +42,7 @@
   UILabel* name = [[UILabel alloc] initWithFrame:CGRectMake(76/1.9+10, 0, 200, 76/1.9)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
-  name.text = @"Peng Shao";
+  name.text = who;
   name.center = CGPointMake(self.cellView.bounds.size.width/2+10,self.cellView.bounds.size.height/2);
 
   
@@ -186,10 +188,10 @@
  * @return configured cellView
  */
 
-+ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andValue:(NSString *)value andRank: (ARRankStyle) rank
++ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString*) who andValue:(NSString *)value andRank: (ARRankStyle) rank
 {
   ARScoreBoardCell *cell = [[ARScoreBoardCell alloc]init];
-  [cell setThemeWithStyle:style andValue:value andRank:rank];
+  [cell setThemeWithStyle:style andWho: who andValue:value andRank:rank];
   return cell;
 }
 

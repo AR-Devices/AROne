@@ -19,6 +19,7 @@
 
 @property UIView *comboBar;
 @property NSInteger topBarStyle;
+@property NSArray * scoreboard_array_cloud;
 
 @end
 
@@ -111,21 +112,23 @@
   //  ee962f orange
   //  ffffff white
   //
-  int r = arc4random() % 100;
-  NSString *score = [NSString stringWithFormat:@"%d", r];
+  NSDictionary * dict = self.scoreboard_array_cloud[indexPath.row];
+  NSString *score = [NSString stringWithFormat:@"%d", [[dict objectForKey:@"maxSpeed"] integerValue]];
+  NSString *who   =[dict objectForKey:@"displayName"];
+
   ARRankStyle rank = ARNormal;
   if (indexPath.row == 0) {
     rank = ARGold;
   }
   switch (self.topBarStyle) {
     case ARScoreBoardCellStyleMaxSpeed:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andValue:score andRank:rank];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andWho:who andValue:score andRank:rank];
       break;
     case ARScoreBoardCellStyleVerticalDrop:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andValue:score andRank:rank];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andWho:who andValue:score andRank:rank];
       break;
     case ARScoreBoardCellStyleAcceleration:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andValue:score andRank:rank];
+      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andWho:who andValue:score andRank:rank];
       break;
   }
   //number cgrect 394 136
@@ -143,13 +146,11 @@
 }
 - (void) querySummaryData {
   PFQuery *query = [ARSummary query];
-  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(id result, NSError *error) {
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray * result, NSError *error) {
     if (!error) {
-      NSLog(@"=====================================================");
-      NSDictionary *dict = result[0];
-      [dict objectForKey:@"maxSpeed"];
-      NSLog(@"Result is: %@", [dict objectForKey:@"maxSpeed"]);
-      
+      self.scoreboard_array_cloud = result;
+
+
     }
   }];
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
