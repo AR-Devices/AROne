@@ -39,5 +39,4 @@ GogglePal is a device using mobile HUD (heads up display)technology. The device 
 * Direction track
 * Rotation track
 * Time display
-* Calorie calculation
-* Vertical drop summary
+
