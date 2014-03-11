@@ -29,9 +29,8 @@ Keep track of your speed, vertical drop and acceleration can help you become a b
 # GogglePal (Hardware)
 
 
-### Description
-GogglePal is a device using mobile HUD (heads up display)technology. The device will show user instant data when ski/snowboarding. The device will also record data which can sync up with mobile phone after activity.
-
+### Description:
+GogglePal is a lower power HUD (heads up display) sits inside of your own ski goggle.  It displays user with instant ski data in real time.  GogglePal also analyze user's every move and transfer these data to a mobile device via Bluetooth Smart.
 
 ### Hardware features includes:
 
