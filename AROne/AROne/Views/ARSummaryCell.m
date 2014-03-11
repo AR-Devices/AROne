@@ -42,7 +42,7 @@
 {
   //ccz:  create cellView
   NSLog(@"style self.bounds width is %f", self.bounds.size.width);
-  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, rect.size.width-SECTION_CELL_X_LEFT_MARGIN*2, rect.size.height/3 - 7)];
+  self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, rect.size.width-SECTION_CELL_X_LEFT_MARGIN*2, rect.size.height/3.6 - 7)];
   self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:.8];
   self.strip = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.cellView.bounds), 14/2.0f)];
   self.cellViewTitle = [[UIImageView alloc] initWithFrame:CGRectMake(3.0f, (8+14)/2.0f, 246/2.0f, 44/2.0f)];

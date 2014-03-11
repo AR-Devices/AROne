@@ -149,8 +149,7 @@
   [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray * result, NSError *error) {
     if (!error) {
       self.scoreboard_array_cloud = result;
-
-
+      [self.tableView reloadData];
     }
   }];
   //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
