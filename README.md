@@ -10,4 +10,5 @@ Keep track of your speed, vertical drop and acceleration can help you become a b
 * Display data from *ARGoggle* (device name: undecided)
 * SSO via Facebook, Twitter
 * Scoreboard let you compete with your friends *or anyone around you* (feature TBD)
-
+* Track your ski activity on a snow summit map.  
+* Find out where are your friends at ski resort, with real-time friend tracking on a ski map.
