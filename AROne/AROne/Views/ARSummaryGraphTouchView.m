@@ -22,7 +22,7 @@
       myGraph.isVolumeGraph = FALSE;
       myGraph.localColor = purpleColor;
       myGraph.backgroundColor = [UIColor whiteColor];
-      myGraph.useTouch = TRUE;
+//      myGraph.useTouch = TRUE;
 
       [self addSubview:myGraph];
 

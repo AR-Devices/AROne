@@ -55,6 +55,7 @@
 		3C41801017D85C470094B56F /* big_caslon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C41800F17D85C470094B56F /* big_caslon.ttf */; };
 		3C4459C917DC4A1900AD0C33 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C4459C317DC4A1900AD0C33 /* LICENSE */; };
 		3C4459CD17DC4A1900AD0C33 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C4459C517DC4A1900AD0C33 /* README.md */; };
+		3C4A142F18D0559400BE4594 /* touchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A142E18D0559400BE4594 /* touchView.m */; };
 		3C5F189F17D91681003AC638 /* AKSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F189E17D91681003AC638 /* AKSegmentedControl.m */; };
 		3C6EA84D180E5AF90043216D /* element1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA84B180E5AF90043216D /* element1.png */; };
 		3C6EA84E180E5AF90043216D /* element1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA84B180E5AF90043216D /* element1.png */; };
@@ -344,6 +345,8 @@
 		3C41800F17D85C470094B56F /* big_caslon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_caslon.ttf; sourceTree = "<group>"; };
 		3C4459C317DC4A1900AD0C33 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3C4459C517DC4A1900AD0C33 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3C4A142D18D0559400BE4594 /* touchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = touchView.h; sourceTree = "<group>"; };
+		3C4A142E18D0559400BE4594 /* touchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = touchView.m; sourceTree = "<group>"; };
 		3C5F189D17D91681003AC638 /* AKSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSegmentedControl.h; sourceTree = "<group>"; };
 		3C5F189E17D91681003AC638 /* AKSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSegmentedControl.m; sourceTree = "<group>"; };
 		3C6EA84B180E5AF90043216D /* element1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = element1.png; sourceTree = "<group>"; };
@@ -1083,6 +1086,8 @@
 				3CFE886318064422006CF472 /* ARTopBarView.m */,
 				3CFE886418064422006CF472 /* drawGraph.h */,
 				3CFE886518064422006CF472 /* drawGraph.m */,
+				3C4A142D18D0559400BE4594 /* touchView.h */,
+				3C4A142E18D0559400BE4594 /* touchView.m */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -1458,6 +1463,7 @@
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
 				ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */,
 				3C417FE317D84B560094B56F /* AKTab.m in Sources */,
+				3C4A142F18D0559400BE4594 /* touchView.m in Sources */,
 				3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */,
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,

@@ -105,14 +105,14 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  NSLog(@"SummaryFunctionGraph clicked at %d", indexPath.section);
-  NSLog(@"----------------------------------");
-
-  ARSummaryGraphDetailViewController *summaryTabGraph = [[ARSummaryGraphDetailViewController alloc] init];
-  [self.navigationController pushViewController:summaryTabGraph animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//  NSLog(@"SummaryFunctionGraph clicked at %d", indexPath.section);
+//  NSLog(@"----------------------------------");
+//
+//  ARSummaryGraphDetailViewController *summaryTabGraph = [[ARSummaryGraphDetailViewController alloc] init];
+//  [self.navigationController pushViewController:summaryTabGraph animated:YES];
+//}
 
 #pragma mark - AKTabBarController Data Source
 - (NSString *)tabImageName

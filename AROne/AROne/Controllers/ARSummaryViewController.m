@@ -424,7 +424,7 @@
     [self animateSynchronization:sync_button];
     [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
     [ARCommon createSummaryClass];
-    [ARCommon createDataPoint:100];
+//    [ARCommon createDataPoint:100];
   } else {
     [sync_button.layer removeAllAnimations];
   }
