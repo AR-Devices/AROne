@@ -60,7 +60,7 @@
   self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
-  [self.view addSubview:self.tableView];
+  [self.view addSubview:self.tableView]; //jerry
 
 }
 
@@ -92,7 +92,7 @@
   [self.view addSubview:self.scrollView];
   
   //CCZ: implement dot control
-  self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, height - 130, self.view.frame.size.width, 20)];
+  self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 230, self.view.frame.size.width, 20)];
   [self.pageControl setNumberOfPages:5];
   [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
   self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -104,13 +104,13 @@
 
 - (void) drawResortOn: (UIView *) view
 {
-  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 50)];
+  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 40)];
   address.numberOfLines = 3;
   address.adjustsFontSizeToFitWidth = YES;
   address.text = @"Kickwood Trail Map\nlocation: 1501 Kirkwood Meadows Dr,\nKirkwood, CA 95646";
   address.textColor = [UIColor grayColor];
   [view addSubview:address];
-  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,100,self.view.bounds.size.width,150)];
+  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,80,self.view.bounds.size.width,150)];
 //  landscapeButton.backgroundColor = [UIColor whiteColor];
   UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
   map.frame = CGRectMake(0, 0, self.view.bounds.size.width, 150);
@@ -521,7 +521,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 50;
+	return 90;
 }
 
 

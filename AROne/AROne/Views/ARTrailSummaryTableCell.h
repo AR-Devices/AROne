@@ -18,11 +18,11 @@ typedef NS_ENUM(NSInteger, ARTrailSummaryCellStyle) {
   ARTralSummaryCellStyle3
 };
 @interface ARTrailSummaryTableCell : UITableViewCell
-@property (nonatomic, strong) UIView* cellView;
-@property (nonatomic, strong) UIImageView* strip;
-@property (nonatomic, strong) UIImageView* cellViewTitle;
-@property (nonatomic, strong) UIImageView* unit;
-@property (nonatomic, strong) UILabel* number;
+//@property (nonatomic, strong) UIView* cellView;
+//@property (nonatomic, strong) UIImageView* strip;
+//@property (nonatomic, strong) UIImageView* cellViewTitle;
+//@property (nonatomic, strong) UIImageView* unit;
+//@property (nonatomic, strong) UILabel* number;
 
 + (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value rect:(CGRect) rect;
 
