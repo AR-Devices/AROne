@@ -23,5 +23,5 @@ typedef NS_ENUM(NSInteger, ARSummaryGraphCellStyle) {
 
 
 
-+ (ARSummaryGraphCell *)cellWithStyle:(ARSummaryGraphCellStyle)ARSummaryCellStyle andValue:(NSString *)value;
++ (ARSummaryGraphCell *)cellWithStyle:(ARSummaryGraphCellStyle)styles andValues:(NSArray *)values;
 @end

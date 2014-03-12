@@ -145,7 +145,6 @@
   
 }
 - (void) querySummaryData {
-  PFQuery *query = [ARSummary query];
   [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray * result, NSError *error) {
     if (!error) {
       self.scoreboard_array_cloud = result;

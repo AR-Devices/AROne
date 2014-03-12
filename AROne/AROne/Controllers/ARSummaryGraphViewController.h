@@ -12,6 +12,7 @@
 
 @interface ARSummaryGraphViewController : UITableViewController
 @property(atomic) ARSummaryGraphCellStyle graphStyle;
+@property(atomic) NSDate *selectedDate;
 
 - (void) setFunctionStyle: (ARSummaryGraphCellStyle) style;
 @end

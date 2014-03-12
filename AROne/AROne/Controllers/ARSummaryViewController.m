@@ -83,10 +83,10 @@
 
 - (void) querySummaryData {
   PFQuery *query = [ARSummary query];
-  //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"yyyy-MM-dd"];
   [query whereKey:@"date" equalTo:[formatter stringFromDate:self.myDate]];
+  [query whereKey:@"player" equalTo:[PFUser currentUser]];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       ARSummary *firstMeasurement = objects[0];
@@ -204,7 +204,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSLog(@"clicked at %d", indexPath.section);
+  NSLog(@"clicked at %ld", (long)indexPath.section);
   ARSummaryGraphCellStyle functionGraphStyle;
   switch(indexPath.section) {
     case 0:
@@ -220,7 +220,10 @@
       functionGraphStyle = ARSummaryGraphCellStyleMaxSpeed;
       break;
   }
+  NSLog(@"mydate is %@", self.myDate);
   ARSummaryGraphViewController *summaryTabGraph = [[ARSummaryGraphViewController alloc] init];
+  summaryTabGraph.selectedDate = self.myDate;
+//  NSLog(@"mydate is %@", self.myDate);
   summaryTabGraph.graphStyle = functionGraphStyle;
 //  UINavigationController *summaryNavi = [[UINavigationController alloc] initWithRootViewController:summaryTabGraph];
 // Set this in every view controller so that the back button displays back instead of the root view controller name
@@ -415,7 +418,7 @@
 }
 -(void)syncPressed:(id)sender
 {
-  NSLog(@"sync Clicked %d", self.sync_button_value);
+  NSLog(@"sync Clicked %ld", (long)self.sync_button_value);
   UIButton *sync_button = (UIButton *) sender;
   if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
@@ -476,7 +479,7 @@
   self.pmCC.delegate = self;
   //end
   
-  self.pmCC.period = [PMPeriod oneDayPeriodWithDate:[NSDate date	]];
+  self.pmCC.period = [PMPeriod oneDayPeriodWithDate:[NSDate date]];
   [self calendarController:self.pmCC didChangePeriod:self.pmCC.period ];
 }
 

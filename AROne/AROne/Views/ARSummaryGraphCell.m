@@ -34,11 +34,13 @@
  * @return configured cellView
  */
 
-- (void)setThemeWithStyle:(ARSummaryGraphCellStyle) style andValue:(NSString *)value
+- (void)setThemeWithStyle:(ARSummaryGraphCellStyle) style andValues:(NSArray *)values
 {
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_LEFT_MARGIN, 0, self.bounds.size.width-SECTION_CELL_LEFT_MARGIN*2, self.bounds.size.height/4)];
   drawGraph *myGraph = [[drawGraph alloc] initWithFrame:CGRectMake(0, 0, SECTION_CELL_WIDTH, SECTION_CELL_HEIGHT)];
 //  self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0];
+  myGraph.data = values;
+  NSLog(@"myGraph.data is %@", myGraph.data);
   UIImageView *functionGraphView;
   UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
   UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
@@ -54,6 +56,8 @@
 
       [self.cellView addSubview:myGraph];
       [self.contentView addSubview:self.cellView];
+      [self reloadInputViews];
+
       
       break;
       
@@ -64,6 +68,7 @@
       myGraph.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"element3"]];
       [self.cellView addSubview:myGraph];
       [self.contentView addSubview:self.cellView];
+      [self reloadInputViews];
       break;
     case ARSummaryGraphCellStyleAcceleration:
 
@@ -83,10 +88,10 @@
  * @return configured cellView
  */
 
-+ (ARSummaryGraphCell *)cellWithStyle:(ARSummaryGraphCellStyle)styles andValue:(NSString *)value
++ (ARSummaryGraphCell *)cellWithStyle:(ARSummaryGraphCellStyle)styles andValues:(NSArray *)values
 {
   ARSummaryGraphCell *cell = [[ARSummaryGraphCell alloc]init];
-  [cell setThemeWithStyle:styles andValue:value];
+  [cell setThemeWithStyle:styles andValues:values];
   return cell;
 }
 

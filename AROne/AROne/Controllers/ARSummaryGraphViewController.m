@@ -10,13 +10,17 @@
 //#import "UIViewController+AKTabBarController.h"
 #import "ARSummaryGraphDetailViewController.h"
 
+#import "ARDataPoint.h"
 
 
 @interface ARSummaryGraphViewController ()
+@property (nonatomic) NSMutableArray *dataPoints;
+
 @end
 
 @implementation ARSummaryGraphViewController
-@synthesize graphStyle;
+@synthesize graphStyle = _graphStyle;
+@synthesize selectedDate = _selectedDate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,6 +42,12 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.dataPoints = [[NSMutableArray alloc]init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [self queryDataPoints];
 }
 
 #pragma mark - Table view data source
@@ -82,11 +92,11 @@
 {
   NSLog(@"--------------------1--------------");
 
-  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%d",indexPath.section];
+  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
   UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     
   if (indexPath.section == 0) {
-    cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValue:@"unused"];
+    cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValues:self.dataPoints];
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;
@@ -150,6 +160,66 @@
 
 - (void) setFunctionStyle: (ARSummaryGraphCellStyle) style{
   self.graphStyle = style;
+}
+
+//- (void) querySummaryData {
+//  PFQuery *query = [ARSummary query];
+//  //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
+//  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//  [formatter setDateFormat:@"yyyy-MM-dd"];
+//  [query whereKey:@"date" equalTo:[formatter stringFromDate:self.myDate]];
+//  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//    if (!error && ([objects count] != 0)) {
+//      ARSummary *firstMeasurement = objects[0];
+//      NSLog(@"firstMeasuremetn is %@", firstMeasurement);
+//      // ...
+//      self.max_speed_value = [NSString stringWithFormat:@"%0.1f",firstMeasurement.maxSpeed];
+//      self.vertical_drop_value = [NSString stringWithFormat:@"%d", firstMeasurement.verticalDrop];
+//      self.acceleration_value = [NSString stringWithFormat:@"%0.1f", firstMeasurement.maxAcceleration];
+//    } else {
+//      self.max_speed_value = @"0";
+//      self.vertical_drop_value = @"0";
+//      self.acceleration_value = @"0";
+//    }
+//    [self.tableView reloadData];
+//  }];
+//}
+
+- (void) queryDataPoints
+{
+  PFQuery *query = [ARDataPoint query];
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd"];
+  NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
+  [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
+  [query whereKey:@"player" equalTo:[PFUser currentUser]];
+//  [query getObjectInBackgroundWithId:@"speed" block:^(PFObject *object, NSError *error) {
+//    NSLog(@"objects %@", object);
+//  }];
+  [query findObjectsInBackgroundWithBlock:^(id objects, NSError *error) {
+    if (!error && ([objects count] != 0)) {
+      NSArray *array = objects;
+      NSLog(@"objects %@", objects);
+      NSString *data;
+      if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
+        data = @"speed";
+      } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
+        data = @"acceleration";
+      } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
+        data = @"verticleDrop";
+      }
+      for (int i = 0; i < [array count]; i++) {
+        NSDictionary *dict = [array objectAtIndex:i];
+        [self.dataPoints addObject:[dict objectForKey:@"speed"]];
+//        NSLog(@"%@", [dict objectForKey:@"speed"]);
+        
+      }
+      [self.tableView reloadData];
+//      ARDataPoint *dataPoint = objects[0];
+      
+    }
+  }];
+  
 }
 
 
