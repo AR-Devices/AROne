@@ -372,6 +372,8 @@
       
       stringFromDate = [formatter stringFromDate:self.myDate];
       [sender setTitle:stringFromDate forSegmentAtIndex:1];
+      [self querySummaryData];
+
       break;
     case 1:
       stringFromDate = [formatter stringFromDate:self.myDate];
@@ -389,6 +391,7 @@
       self.myDate = [self.cal dateByAddingComponents:self.components toDate: self.myDate options:0];
       stringFromDate = [formatter stringFromDate:self.myDate];
       [sender setTitle:stringFromDate forSegmentAtIndex:1];
+      [self querySummaryData];
 
       break;
     case UISegmentedControlNoSegment:

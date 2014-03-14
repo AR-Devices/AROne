@@ -168,7 +168,9 @@
   [formatter setDateFormat:@"yyyy-MM-dd"];
   NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
   [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
-  [query whereKey:@"player" equalTo:[PFUser currentUser]];
+//  [query whereKey:@"player" equalTo:[PFUser currentUser]];
+
+  
 //  NSMutableArray *keys = [[NSMutableArray alloc] init];
 //  [keys addObject:@"speed"];
 //  [keys addObject:@"acceleration"];
