@@ -52,9 +52,10 @@
       [path setLineWidth:10.0];
     } else [path setLineWidth:lineSpacing];
     CGFloat dataPoint = [[self.data objectAtIndex:i] floatValue];
-    
-    [path moveToPoint:CGPointMake((i+1)*lineSpacing, CGRectGetHeight(volumeGraphRect) - minVolume)];
-    [path addLineToPoint:CGPointMake((i+1)*lineSpacing, (CGRectGetHeight(volumeGraphRect)/(maxVolume-minVolume)*dataPoint))];
+    if (maxVolume != minVolume) {
+      [path moveToPoint:CGPointMake((i+1)*lineSpacing, CGRectGetHeight(volumeGraphRect) - minVolume)];
+      [path addLineToPoint:CGPointMake((i+1)*lineSpacing, CGRectGetHeight(volumeGraphRect)*dataPoint/(maxVolume-minVolume))];
+    }
     [self.localColor setStroke];
     [path stroke];
   }

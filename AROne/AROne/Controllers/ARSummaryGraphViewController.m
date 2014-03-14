@@ -15,7 +15,7 @@
 
 @interface ARSummaryGraphViewController ()
 @property (nonatomic) NSMutableArray *dataPoints;
-
+@property (nonatomic) NSDate *createdAt;
 @end
 
 @implementation ARSummaryGraphViewController
@@ -152,8 +152,7 @@
   name.text = @"Peng Shao";
   name.backgroundColor = [UIColor clearColor];
   [header addSubview:name];
-  
-  
+
   return header;
 }
 
@@ -161,29 +160,6 @@
 - (void) setFunctionStyle: (ARSummaryGraphCellStyle) style{
   self.graphStyle = style;
 }
-
-//- (void) querySummaryData {
-//  PFQuery *query = [ARSummary query];
-//  //FIXIT: Need to compare with selected date from Top calender bar, and this query has to be
-//  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//  [formatter setDateFormat:@"yyyy-MM-dd"];
-//  [query whereKey:@"date" equalTo:[formatter stringFromDate:self.myDate]];
-//  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//    if (!error && ([objects count] != 0)) {
-//      ARSummary *firstMeasurement = objects[0];
-//      NSLog(@"firstMeasuremetn is %@", firstMeasurement);
-//      // ...
-//      self.max_speed_value = [NSString stringWithFormat:@"%0.1f",firstMeasurement.maxSpeed];
-//      self.vertical_drop_value = [NSString stringWithFormat:@"%d", firstMeasurement.verticalDrop];
-//      self.acceleration_value = [NSString stringWithFormat:@"%0.1f", firstMeasurement.maxAcceleration];
-//    } else {
-//      self.max_speed_value = @"0";
-//      self.vertical_drop_value = @"0";
-//      self.acceleration_value = @"0";
-//    }
-//    [self.tableView reloadData];
-//  }];
-//}
 
 - (void) queryDataPoints
 {
@@ -193,9 +169,20 @@
   NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
   [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
   [query whereKey:@"player" equalTo:[PFUser currentUser]];
-//  [query getObjectInBackgroundWithId:@"speed" block:^(PFObject *object, NSError *error) {
-//    NSLog(@"objects %@", object);
-//  }];
+//  NSMutableArray *keys = [[NSMutableArray alloc] init];
+//  [keys addObject:@"speed"];
+//  [keys addObject:@"acceleration"];
+//  [keys addObject:@"verticalDrop"];
+//  [query orderByDescending:@"createdAt"];
+//  [query orderByAscending:@"createdAt"];
+//  [keys addObject:@"createdAt"];
+//  [query selectKeys:keys];
+  [query setLimit:500];
+//  [query setSkip:skip];
+//  if (self.createdAt != nil) {
+//    NSLog(@"called!");
+//    [query whereKey:@"createdAt" lessThanOrEqualTo:self.createdAt];
+//  }
   [query findObjectsInBackgroundWithBlock:^(id objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       NSArray *array = objects;
@@ -206,22 +193,30 @@
       } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
         data = @"acceleration";
       } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
-        data = @"verticleDrop";
+        data = @"verticalDrop";
       }
       for (int i = 0; i < [array count]; i++) {
         NSDictionary *dict = [array objectAtIndex:i];
-        [self.dataPoints addObject:[dict objectForKey:@"speed"]];
-//        NSLog(@"%@", [dict objectForKey:@"speed"]);
-        
+        [self.dataPoints addObject:[dict objectForKey:data]];
       }
-      [self.tableView reloadData];
-//      ARDataPoint *dataPoint = objects[0];
-      
+      PFObject *object = [array lastObject];
+      if ([[object createdAt] isEqual:self.createdAt])
+        return;
+      else
+        self.createdAt = [object createdAt];
     }
-  }];
-  
-}
+    
+    NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
+    [self.tableView reloadData];
 
+//    NSLog(@"createAt %@", self.createdAt);
+//    if (self.dataPoints.count < 500) {
+//      [self queryDataPoints];
+//    }
+    
+    
+  }];
+}
 
 
 @end

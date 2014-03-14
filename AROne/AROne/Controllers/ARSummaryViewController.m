@@ -425,11 +425,22 @@
     [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
     [ARCommon createSummaryClass];
 //    [ARCommon createDataPoint:100];
+    int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+      
+      // Update your label here.
+      [sync_button.layer removeAllAnimations];
+      self.sync_button_value = self.sync_button_value*-1;
+      
+    });
   } else {
     [sync_button.layer removeAllAnimations];
   }
   
-  self.sync_button_value = self.sync_button_value*-1;
+//  self.sync_button_value = self.sync_button_value*-1;
 }
 
 -(void)settingPressed:(id)sender
