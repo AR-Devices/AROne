@@ -537,9 +537,9 @@
   //  ffffff white
   if (indexPath.section == 0) {
     NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"The Glutch" andValue:@"15" rect:self.view.bounds];
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"The Glutch" andValue:@"15" andValue2:@"222" rect:self.view.bounds];
   } else if (indexPath.section == 1) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"Heavenly" andValue:@"16" rect:self.view.bounds ];
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle1 andTrail:@"Heavenly" andValue:@"16" andValue2:@"333" rect:self.view.bounds ];
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;
