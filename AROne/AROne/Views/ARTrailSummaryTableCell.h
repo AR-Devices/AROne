@@ -24,6 +24,6 @@ typedef NS_ENUM(NSInteger, ARTrailSummaryCellStyle) {
 //@property (nonatomic, strong) UIImageView* unit;
 //@property (nonatomic, strong) UILabel* number;
 
-+ (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value rect:(CGRect) rect;
++ (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value andValue2:(NSString *)value2 rect:(CGRect) rect;
 
 @end
