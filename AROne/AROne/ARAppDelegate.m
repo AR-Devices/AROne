@@ -11,8 +11,6 @@
 //import vendor TabBar Controller
 #import "AKTabBarController.h"
 #import "ARWelcomeViewController.h"
-#import "ARSignupViewController.h"
-#import "ARLoginViewController.h"
 
 //test
 #import "ARSummary.h"

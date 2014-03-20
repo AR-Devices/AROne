@@ -12,6 +12,7 @@
 
 #import "ARSummaryViewController.h"
 #import "ARSummaryGraphViewController.h"
+#import "ARSummaryGraphDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 //tableviewcell
 #import "ARSummaryCell.h"
@@ -178,7 +179,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%d",indexPath.section];
+  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
   UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
   
   //  a18ac1 purple
@@ -221,6 +222,8 @@
       break;
   }
   NSLog(@"mydate is %@", self.myDate);
+
+  
   ARSummaryGraphViewController *summaryTabGraph = [[ARSummaryGraphViewController alloc] init];
   summaryTabGraph.selectedDate = self.myDate;
 //  NSLog(@"mydate is %@", self.myDate);
@@ -441,9 +444,10 @@
     });
   } else {
     [sync_button.layer removeAllAnimations];
+    self.sync_button_value = self.sync_button_value*-1;
+
   }
   
-//  self.sync_button_value = self.sync_button_value*-1;
 }
 
 -(void)settingPressed:(id)sender

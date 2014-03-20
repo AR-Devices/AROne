@@ -33,8 +33,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_splashpage"]];
+  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Sign Up"
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(signUpPressed)];
+  self.navigationItem.rightBarButtonItem = rightButton;
     [self setSignupPage];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:NO];
+  
+  [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -295,5 +308,11 @@
   [textField resignFirstResponder];
   
   return YES;
+}
+
+- (void)signUpPressed
+{
+  NSLog(@"signup");
+  [self doSignupWithUsername];
 }
 @end

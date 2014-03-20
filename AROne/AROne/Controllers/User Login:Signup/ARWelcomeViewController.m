@@ -48,7 +48,7 @@
     // Present Log In View Controller
     logInViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 
-    [self presentViewController:logInViewController animated:YES completion:NULL];
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:logInViewController] animated:YES completion:NULL];
   } else {
     [self setTabBarController];
   }

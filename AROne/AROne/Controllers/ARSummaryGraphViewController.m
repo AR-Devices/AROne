@@ -29,7 +29,9 @@
       self.title = @"SPEED";//FIXME this information will need to be extracted from parent
       //    d4dee6
       self.tableView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
+      self.tableView.scrollEnabled = NO;
 //      self.tableView.backgroundColor = [UIColor blackColor];
+      
     }
     return self;
 }
@@ -98,8 +100,9 @@
   if (indexPath.section == 0) {
     cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValues:self.dataPoints];
   }
+  cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
   //number cgrect 394 136
-  cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
   
     return cell;

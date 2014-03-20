@@ -30,7 +30,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   NSLog(@"viewWillAppear Called");
-  
+  [super viewWillAppear:YES];
+  [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 - (void)viewDidLoad
 {
@@ -38,10 +40,11 @@
   [super viewDidLoad];
   // Custom initialization
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_splashpage"]];
-
   [self setLoginView];
 
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -184,9 +187,10 @@
                                                name:@"SignUpSuccessful"
                                              object:nil];
   //signup clicked
-  [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
-    //null
-  }];
+//  [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
+//    //null
+//  }];
+  [self.navigationController pushViewController:[[ARSignupViewController alloc] init] animated:YES];
 }
 
 - (void)didSignUpSuccessful:(id) sender
