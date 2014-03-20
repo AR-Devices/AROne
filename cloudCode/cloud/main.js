@@ -9,9 +9,9 @@ Parse.Cloud.define("hello", function(request, response) {
 Parse.Cloud.define("scoreBoard", function(request, response) {
 	var query = new Parse.Query("Summary");
 	//query.equalTo("displayName", "danny");
-	query.equalTo("date", "2014-03-05");
-	query.addDescending("maxSpeed");
-	query.select("displayName", "maxSpeed");
+	query.equalTo("date", request.params.date);
+	query.addDescending(request.params.datatype);
+	query.select("displayName", request.params.datatype);
 	query.find({
 		success: function(result){
 			response.success(result);

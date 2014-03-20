@@ -14,6 +14,7 @@
 #import "ARTopBarView.h"
 
 #import "ARSummary.h"
+#import "ARCommon.h"
 
 @interface ARScoreboardViewController ()
 
@@ -41,8 +42,9 @@
 
 - (void)viewDidLoad
 {
-  [self querySummaryData];
-    [super viewDidLoad];
+  [super viewDidLoad];
+  [self querySummaryData:@"day"];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,7 +70,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //TODO: check data here
-    return 5;
+    return [self.scoreboard_array_cloud count];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -104,7 +106,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%d",indexPath.section];
+  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
   UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
   
   //  a18ac1 purple
@@ -112,24 +114,30 @@
   //  ee962f orange
   //  ffffff white
   //
-  NSDictionary * dict = self.scoreboard_array_cloud[indexPath.row];
-  NSString *score = [NSString stringWithFormat:@"%d", [[dict objectForKey:@"maxSpeed"] integerValue]];
-  NSString *who   =[dict objectForKey:@"displayName"];
-
-  ARRankStyle rank = ARNormal;
-  if (indexPath.row == 0) {
-    rank = ARGold;
-  }
-  switch (self.topBarStyle) {
-    case ARScoreBoardCellStyleMaxSpeed:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andWho:who andValue:score andRank:rank];
-      break;
-    case ARScoreBoardCellStyleVerticalDrop:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andWho:who andValue:score andRank:rank];
-      break;
-    case ARScoreBoardCellStyleAcceleration:
-      cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andWho:who andValue:score andRank:rank];
-      break;
+  if (self.scoreboard_array_cloud) {
+    NSDictionary * dict = [self.scoreboard_array_cloud objectAtIndex:indexPath.row];
+    NSString *score;
+    NSString *who   =[dict objectForKey:@"displayName"];
+    NSLog(@"who is %@", who);
+    
+    ARRankStyle rank = ARNormal;
+    if (indexPath.row == 0) {
+      rank = ARGold;
+    }
+    switch (self.topBarStyle) {
+      case ARScoreBoardCellStyleMaxSpeed:
+        score = [NSString stringWithFormat:@"%0.1f", [[dict objectForKey:@"maxSpeed"] doubleValue]];
+        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andWho:who andValue:score andRank:rank];
+        break;
+      case ARScoreBoardCellStyleVerticalDrop:
+        score = [NSString stringWithFormat:@"%ld", (long)[[dict objectForKey:@"verticalDrop"] integerValue]];
+        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andWho:who andValue:score andRank:rank];
+        break;
+      case ARScoreBoardCellStyleAcceleration:
+        score = [NSString stringWithFormat:@"%0.1f", [[dict objectForKey:@"maxAcceleration"] doubleValue]];
+        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andWho:who andValue:score andRank:rank];
+        break;
+    }
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;
@@ -138,14 +146,22 @@
   return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void) querySummaryData: (NSString *)period {
+  NSString *dataType;
+  switch (self.topBarStyle) {
+    case ARScoreBoardCellStyleMaxSpeed:
+      dataType = @"maxSpeed";
+      break;
+    case ARScoreBoardCellStyleVerticalDrop:
+      dataType = @"maxAcceleration";
+      break;
+    case ARScoreBoardCellStyleAcceleration:
+      dataType = @"verticalDrop";
+      break;
+  }
   
-  NSLog(@"clicked at %d", indexPath.row);
-  
-}
-- (void) querySummaryData {
-  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{} block:^(NSArray * result, NSError *error) {
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{@"date": [ARCommon today],@"datatype": dataType ,@"period": period}
+ block:^(NSArray * result, NSError *error) {
     if (!error) {
       self.scoreboard_array_cloud = result;
       [self.tableView reloadData];
@@ -270,17 +286,15 @@
   switch ([sender selectedSegmentIndex]) {
     case 0:
       self.topBarStyle = ARScoreBoardCellStyleMaxSpeed;
-      [self.tableView reloadData];
+      [self querySummaryData:@"day"];
       break;
     case 1:
       self.topBarStyle = ARScoreBoardCellStyleVerticalDrop;
-      [self.tableView reloadData];
-
+      [self querySummaryData:@"day"];
       break;
     case 2:
       self.topBarStyle = ARScoreBoardCellStyleAcceleration;
-      [self.tableView reloadData];
-
+      [self querySummaryData:@"day"];
       break;
   }
 }
@@ -288,12 +302,15 @@
   switch ([sender selectedSegmentIndex]) {
     case 0:
       NSLog(@"DAY");
+      [self querySummaryData:@"day"];
       break;
     case 1:
       NSLog(@"WEEK");
+      [self querySummaryData:@"week"];
       break;
     case 2:
       NSLog(@"MONTH");
+      [self querySummaryData:@"month"];
       break;
   }
 }

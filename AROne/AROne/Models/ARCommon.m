@@ -89,7 +89,7 @@
 + (void)createSummaryClass {
   
   ARSummary *measurement = [ARSummary object];
-  measurement.displayName = [PFUser user][@"name"];
+  measurement.displayName = [PFUser currentUser][@"name"];
   measurement.date = [ARCommon today];
   measurement.maxAcceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
   measurement.maxSpeed = [ARCommon randomFloatBetween:0.0 and:50.0];
