@@ -37,6 +37,8 @@
 @property(nonatomic, strong) NSCalendar * cal;
 @property(nonatomic, strong) NSDateComponents *components;
 @property(nonatomic, strong) NSDate *myDate;
+@property(nonatomic, strong) NSDate *currentDate;
+
 @property(nonatomic) NSInteger dateCounter;
 @property(atomic, strong) UISegmentedControl *segment;
 
@@ -496,7 +498,7 @@
   
   self.pmCC.delegate = self;
   //end
-  
+  self.currentDate = self.myDate;
   self.pmCC.period = [PMPeriod oneDayPeriodWithDate:self.myDate];
   [self calendarController:self.pmCC didChangePeriod:self.pmCC.period ];
 }
@@ -513,11 +515,17 @@
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"EEE, MMM dd"];
   NSString *stringFromDate = [formatter stringFromDate:newPeriod.startDate];
-  
+  NSString *stringFromCurrent = [formatter stringFromDate:self.currentDate];
   [self.segment setTitle:stringFromDate forSegmentAtIndex:1];
   self.myDate = newPeriod.startDate;
   NSLog(@"[DEBUG] you choose this date ");
   [self querySummaryData];
+  if([stringFromDate isEqualToString:stringFromCurrent]){
+  }else{
+    [self.pmCC dismissCalendarAnimated:YES];
+
+  }
+  
 
 }
 
