@@ -497,7 +497,7 @@
   self.pmCC.delegate = self;
   //end
   
-  self.pmCC.period = [PMPeriod oneDayPeriodWithDate:[NSDate date]];
+  self.pmCC.period = [PMPeriod oneDayPeriodWithDate:self.myDate];
   [self calendarController:self.pmCC didChangePeriod:self.pmCC.period ];
 }
 
