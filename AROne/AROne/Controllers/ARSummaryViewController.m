@@ -341,7 +341,7 @@
   //TODO: might need to create a universal one
   //get current date information
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-  [formatter setDateFormat:@"MM dd yyyy"];
+  [formatter setDateFormat:@"EEE, MMM dd"];
   if(self.myDate){
   } else {
     self.myDate = [self.cal dateByAddingComponents:self.components toDate:[[NSDate alloc] init] options:0]; //This variable should now be pointing at a date object that is the start of today (midnight);
@@ -361,7 +361,7 @@
 -(void) segmentAction: (UISegmentedControl *)sender
 {
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-  [formatter setDateFormat:@"MM dd yyyy"];
+  [formatter setDateFormat:@"EEE, MMM dd"];
   NSString *stringFromDate = [formatter stringFromDate:self.myDate];
   NSLog(@"today is %@", stringFromDate);
   switch ([sender selectedSegmentIndex]) {
@@ -511,7 +511,7 @@
 - (void)calendarController:(PMCalendarController *)calendarController didChangePeriod:(PMPeriod *)newPeriod
 {
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-  [formatter setDateFormat:@"MM dd yyyy"];
+  [formatter setDateFormat:@"EEE, MMM dd"];
   NSString *stringFromDate = [formatter stringFromDate:newPeriod.startDate];
   
   [self.segment setTitle:stringFromDate forSegmentAtIndex:1];
