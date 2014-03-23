@@ -159,11 +159,59 @@
       dataType = @"verticalDrop";
       break;
   }
+  NSString *myStartDate;
+  NSString *myEndDate;
   
-  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{@"date": [ARCommon today],@"datatype": dataType ,@"period": period}
+  NSDate *date = [NSDate new];
+  [date descriptionWithLocale:[NSLocale systemLocale]];
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+  [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+  NSString *today = [dateFormatter stringFromDate:date];
+  NSCalendar* calendar = [NSCalendar currentCalendar];
+  NSDateComponents* comps = [calendar components:NSYearForWeekOfYearCalendarUnit |NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit|NSWeekdayCalendarUnit fromDate:date];
+  
+  [comps setWeekday:2]; // 2: monday
+  NSDate *firstDayOfTheWeek = [calendar dateFromComponents:comps];
+  NSString *firstDayOfTheWeek_string = [dateFormatter stringFromDate:firstDayOfTheWeek];
+
+  [comps setWeekday:7]; // 7: saturday
+  NSDate *lastDayOfTheWeek = [calendar dateFromComponents:comps];
+  NSString *lastDayOfTheWeek_string = [dateFormatter stringFromDate:lastDayOfTheWeek];
+
+  [comps setDay:1];
+  NSDate *firstDayOfMonth = [calendar dateFromComponents:comps];
+  NSString *firstDayOfMonth_string = [dateFormatter stringFromDate:firstDayOfMonth];
+
+  comps.month = comps.month+1;
+  [comps setDay:0];
+  NSDate *lastDayOfMonth = [calendar dateFromComponents:comps];
+  NSString *lastDayOfMonth_string = [dateFormatter stringFromDate:lastDayOfMonth];
+
+  NSLog(@"!******%@", firstDayOfTheWeek_string);
+  NSLog(@"7******%@", lastDayOfTheWeek_string);
+  NSLog(@"0******%@", firstDayOfMonth_string);
+  NSLog(@"31******%@", lastDayOfMonth_string);
+
+  
+  if([period isEqualToString:@"day"]){
+    myStartDate = today;
+    myEndDate = today;
+  }else if([period isEqualToString:@"week"]){
+    myStartDate = firstDayOfTheWeek_string;
+    myEndDate = lastDayOfTheWeek_string;
+  }else if([period isEqualToString:@"month"]){
+    myStartDate = firstDayOfMonth_string;
+    myEndDate = lastDayOfMonth_string;
+  }else{
+    myStartDate = today;
+    myEndDate = today;
+  }
+  [PFCloud callFunctionInBackground:@"scoreBoard" withParameters:@{@"date": [ARCommon today],@"datatype": dataType , @"startDate": myStartDate, @"endDate":myEndDate}
  block:^(NSArray * result, NSError *error) {
     if (!error) {
       self.scoreboard_array_cloud = result;
+      NSLog(@"=====================%@", result);
       [self.tableView reloadData];
     }
   }];
