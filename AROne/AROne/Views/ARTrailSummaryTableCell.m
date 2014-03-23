@@ -42,7 +42,7 @@
 - (void)setThemeWithStyle:(ARTrailSummaryCellStyle) style andTrail:(NSString*)trail andValue:(NSString *)value andValue2:(NSString *)value2 rect:(CGRect) rect
 {
   UIColor *bluetrailcolor  = [UIColor colorWithRed:15.0/255.0 green:118.0/255.0 blue:201.0/255.0 alpha:1.0];
-  UIColor *greentrailcolor = [UIColor colorWithRed:21.0/255.0 green:153.0/255.0 blue:263.0/255.0 alpha:1.0];
+  UIColor *greentrailcolor = [UIColor colorWithRed:4.0/255.0 green:149.0/255.0 blue:62.0/255.0 alpha:1.0];
   UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 200, 20)];
   title.text = trail;
   title.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:11.0];
@@ -67,31 +67,31 @@
   maxspeedUnitView.frame = CGRectMake(20+vdropImage_green.size.width+80, 15, 76/1.9, 76/1.9);
   maxspeedUnitView.contentMode = UIViewContentModeScaleAspectFit;
   
-  UILabel * vdrop_value = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, vdropImage_green.size.width, vdropImage_green.size.height-20)];
+  UILabel * vdrop_value = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, vdropImage_green.size.width, vdropImage_green.size.height-10)];
   vdrop_value.text = value2;
-  vdrop_value.font = [UIFont fontWithName:@"Big Caslon" size:35.0];
+  vdrop_value.font = [UIFont fontWithName:@"Big Caslon" size:30.0];
 
 
 
   
   switch (style) {
-    case ARTralSummaryCellStyle1: //black
+    case ARTralSummaryCellStyle_black: //black
       title.textColor = [UIColor blackColor];
       maxspeed.textColor = [UIColor blackColor];
       vdrop_value.textColor = [UIColor blackColor];
       [vdropViewFrame addSubview:vdropView_black];
       break;
       
-    case ARTralSummaryCellStyle2: //blue
+    case ARTralSummaryCellStyle_blue: //blue
       title.textColor = bluetrailcolor;
       maxspeed.textColor = bluetrailcolor;
-      vdrop_value.textColor = [UIColor blueColor];
+      vdrop_value.textColor = bluetrailcolor;
 
       [vdropViewFrame addSubview:vdropView_blue];
 
       break;
       
-    case ARTralSummaryCellStyle3: //green
+    case ARTralSummaryCellStyle_green: //green
       title.textColor = greentrailcolor;
       maxspeed.textColor = greentrailcolor;
       vdrop_value.textColor = greentrailcolor;

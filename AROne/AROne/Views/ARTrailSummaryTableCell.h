@@ -13,9 +13,9 @@
 #define SECTION_CELL_X_HEIGHT         ((int) 108)
 
 typedef NS_ENUM(NSInteger, ARTrailSummaryCellStyle) {
-  ARTralSummaryCellStyle1,
-  ARTralSummaryCellStyle2,
-  ARTralSummaryCellStyle3
+  ARTralSummaryCellStyle_black,
+  ARTralSummaryCellStyle_blue,
+  ARTralSummaryCellStyle_green
 };
 @interface ARTrailSummaryTableCell : UITableViewCell
 //@property (nonatomic, strong) UIView* cellView;
