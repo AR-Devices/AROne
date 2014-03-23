@@ -57,7 +57,7 @@
 {
   [super viewDidLoad];
   [self drawResorts];
-  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, 400) style:UITableViewStylePlain];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, 120) style:UITableViewStylePlain];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView]; //jerry
