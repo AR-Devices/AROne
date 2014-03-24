@@ -225,11 +225,9 @@
     } else if (user.isNew) {
       NSLog(@"User with facebook signed up and logged in!");
       [self populateFBData];
-      [self showHomeView];
     } else {
       NSLog(@"User with facebook logged in!");
       //      [self.navigationController pushViewController:[[CQProfileViewController alloc] init] animated:YES];
-      [self populateFBData];
       [self showHomeView];
     }
 
@@ -288,12 +286,10 @@
         Puser[@"name"] = user.name;
         Puser[@"email"] = [user objectForKey:@"email"];
         Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
-        [Puser saveInBackground];
+        [Puser saveInBackgroundWithTarget:self selector:@selector(saveDone)];
 //        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
       }];
-      
-      // Now add the data to the UI elements
-      // ...
+
     } else {
       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                           message:error.localizedDescription
@@ -303,6 +299,11 @@
       [alertView show];
     }
   }];
+}
+
+- (void)saveDone
+{
+  [self showHomeView];
 }
 
 //keyboard dismissal

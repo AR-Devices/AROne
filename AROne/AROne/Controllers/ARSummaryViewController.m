@@ -63,6 +63,12 @@
   return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:YES];
+  [self querySummaryData];
+  [self queryUserData];
+}
 
 - (void)viewDidLoad
 {
@@ -79,8 +85,7 @@
 //  self.vertical_drop_value = @"35,000";
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
-  [self querySummaryData];
-  [self queryUserData];
+
   
 }
 
@@ -109,23 +114,23 @@
 
 - (void) queryUserData {
 //  self.userName = [PFUser.currentUser[@"name"] stringValue];
-  NSLog(@"name is %@",[PFUser currentUser][@"name"]);
-  self.userName = [PFUser currentUser][@"name"];
-  [self.tableView reloadData];
+//  NSLog(@"name is %@",[PFUser currentUser][@"name"]);
+//  self.userName = [PFUser currentUser][@"name"];
+//  [self.tableView reloadData];
 //  [PFUser.currentUser[@"isPrivate"] boolValue];
-//  PFQuery *query = [PFQuery queryWithClassName:@"User"];
-//  NSLog(@"username 1 is %@", [PFUser currentUser].username);
-//  [query whereKey:@"username" equalTo:[PFUser currentUser].username];
-//  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//    if (!error && ([objects count] != 0)) {
-////      PFUser *user = objects[0];
-//      NSLog(@"objects are %@", objects);
-////      [objects[0] objectForKey:@"user"];
-////      NSLog(@"username is %@", user.username);
-////      self.userName = objects[0];
-////      [self.tableView reloadData];
-//    }
-//  }];
+  PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+  NSLog(@"username 1 is %@", [PFUser currentUser].username);
+  [query whereKey:@"username" equalTo:[PFUser currentUser].username];
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (!error && ([objects count] != 0)) {
+      PFUser *user = objects[0];
+      NSLog(@"user data %@", objects);
+//      [objects[0] objectForKey:@"user"];
+      NSLog(@"username is %@", user[@"name"]);
+      self.userName = user[@"name"];
+      [self.tableView reloadData];
+    }
+  }];
   
 }
 
