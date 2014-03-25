@@ -14,7 +14,6 @@
 
 @property (nonatomic) UITextField *email;
 @property (nonatomic) UITextField *password;
-@property (nonatomic) UITextField *password_confirm;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 
 @end
@@ -113,6 +112,7 @@
   _password.leftViewMode = UITextFieldViewModeAlways;
   _password.adjustsFontSizeToFitWidth = YES;
   _password.delegate = self;
+  _password.secureTextEntry = YES;
   [_password setBackgroundColor:[UIColor clearColor]];
   [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
   [_password setTextColor:[UIColor orangeColor]];
@@ -188,7 +188,6 @@
 	// Get the username text, store it in the app delegate for now
 	NSString *username = self.email.text;
 	NSString *password = self.password.text;
-  NSString *password_confirm = self.password_confirm.text;
   NSLog(@"user name is %@", username);
 	NSString *noUsernameText = @"username";
 	NSString *noPasswordText = @"password";
@@ -199,7 +198,7 @@
 	BOOL textError = NO;
   
 	// Messaging nil will return 0, so these checks implicitly check for nil text.
-	if (username.length == 0 || password.length == 0 || password_confirm.length == 0) {
+	if (username.length == 0 || password.length == 0 ) {
 		textError = YES;
     
 		// Set up the keyboard for the first field missing input:
@@ -209,9 +208,6 @@
 		if (username.length == 0) {
 			[self.password becomeFirstResponder];
 		}
-    if(password_confirm.length == 0){
-      [self.password_confirm becomeFirstResponder];
-    }
 	}
   
 	if (username.length == 0) {
@@ -227,14 +223,6 @@
 		errorText = [errorText stringByAppendingString:noPasswordText];
 	}
   
-  if (password_confirm.length == 0) {
-		textError = YES;
-		if (username.length == 0 || password.length == 0) {
-			errorText = [errorText stringByAppendingString:errorTextJoin];
-		}
-		errorText = [errorText stringByAppendingString:noPasswordConfirmText];
-	}
-  
 	if (textError) {
 		errorText = [errorText stringByAppendingString:errorTextEnding];
 		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
@@ -248,7 +236,7 @@
 
 - (void)doSignupWithUsername {
   PFUser *newUser = [[PFUser alloc] init];
-  if([_password.text isEqualToString:_password_confirm.text]){
+  
   [newUser setPassword:_password.text];
   [newUser setUsername:_email.text];
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -287,10 +275,7 @@
       
   
       }}];
-    }else{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"confirmed password no match" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-		[alertView show];
-  }
+  
 }
 - (void)showHomeView
 {
