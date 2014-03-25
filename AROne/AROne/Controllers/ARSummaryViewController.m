@@ -27,6 +27,7 @@
 
 
 
+
 @interface ARSummaryViewController ()
 @property(atomic, strong) NSString* max_speed_value;
 @property(atomic, strong) NSString* vertical_drop_value;
@@ -73,7 +74,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-
 //  add left sync botton, or pull down to refresh
   [self createLeftBarButtons];
 //  add right refresh setting button
@@ -119,7 +119,7 @@
 //  [self.tableView reloadData];
 //  [PFUser.currentUser[@"isPrivate"] boolValue];
   PFQuery *query = [PFQuery queryWithClassName:@"_User"];
-  NSLog(@"username 1 is %@", [PFUser currentUser].username);
+//  NSLog(@"username 1 is %@", [PFUser currentUser].username);
   [query whereKey:@"username" equalTo:[PFUser currentUser].username];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
@@ -128,10 +128,19 @@
 //      [objects[0] objectForKey:@"user"];
       NSLog(@"username is %@", user[@"name"]);
       self.userName = user[@"name"];
-      [self.tableView reloadData];
+      PFFile *image = user[@"userIcon"];
+      [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        NSData *imageData = data;
+        self.userIcon = [UIImage imageWithData:imageData];
+        if (self.userName) {
+          NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+          [defaults setValue:UIImagePNGRepresentation(self.userIcon) forKey:@"userIcon"];
+          [defaults setValue:self.userName forKey:@"userName"];
+        }
+        [self.tableView reloadData];
+      }];
     }
   }];
-  
 }
 
 #pragma mark - Table view data source
@@ -289,7 +298,8 @@
   
   CGRect imageRect = CGRectMake(10, 10, 76/1.9, 75/1.9);
   UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
-  personIcon.image = [UIImage imageNamed:@"profile_hp"];
+//  personIcon.image = [UIImage imageNamed:@"profile_hp"];
+  personIcon.image = self.userIcon;
   [header addSubview:personIcon];
 //  user Name, in the future 
   UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 25)];
@@ -408,13 +418,13 @@
       // do something
       break;
     default:
-      NSLog(@"No option for: %d", [sender selectedSegmentIndex]);
+      NSLog(@"No option for: %ld", (long)[sender selectedSegmentIndex]);
   }
 }
 
 -(void) createLeftBarButtons
 {
-  UIButton *sync = [[UIButton alloc] initWithFrame:CGRectMake(0,0,30,22)];
+  UIButton *sync = [[UIButton alloc] initWithFrame:CGRectMake(0,0,25,25)];
   [sync setBackgroundImage:[UIImage imageNamed:@"sync_icon"] forState:UIControlStateNormal];
   [sync addTarget:self action:@selector(syncPressed:) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:sync];
@@ -423,7 +433,7 @@
 
 -(void) createRightBarButtons
 {
-  UIButton *setting = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 23)];
+  UIButton *setting = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
   [setting setBackgroundImage:[UIImage imageNamed:@"setting_icon"] forState:UIControlStateNormal];
   [setting addTarget:self action:@selector(settingPressed:) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:setting];
@@ -447,14 +457,13 @@
       // Update your label here.
       [sync_button.layer removeAllAnimations];
       self.sync_button_value = self.sync_button_value*-1;
-      
+      [self querySummaryData];
     });
   } else {
     [sync_button.layer removeAllAnimations];
     self.sync_button_value = self.sync_button_value*-1;
 
   }
-  
 }
 
 -(void)settingPressed:(id)sender

@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, ARRankStyle) {
 @property (nonatomic, strong) UIView* nameAndIcon;
 @property (nonatomic, weak) UILabel* number;
 
-+ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString* )who andValue:(NSString *)value andRank:(ARRankStyle) rank;
++ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style rank: (ARRankStyle) rank andData: (NSDictionary *)data;
+
+//+ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString* )who andValue:(NSString *)value andRank:(ARRankStyle) rank;
 
 @end

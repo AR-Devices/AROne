@@ -23,10 +23,12 @@
  * @return configured cellView
  */
 //add a ARStyle here...
-- (void)setThemeWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString *)who andValue:(NSString *)value andRank:(ARRankStyle) rank
+- (void)setThemeWithStyle:(ARScoreBoardCellStyle)style rank:(ARRankStyle) rank andData:(NSDictionary *)data
 {
-  NSLog(@"who is %@" ,who);
-  NSLog(@"value is %@", [value class]);
+  NSString *who = [data objectForKey:@"who"];
+  NSString *value = [data objectForKey:@"score"];
+  NSLog(@"who2 is %@" ,who);
+//  NSLog(@"value is %@", [value class]);
   //ccz:  create cellView
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, SECTION_CELL_WIDTH, SECTION_CELL_X_HEIGHT-20)];
   self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0];
@@ -35,15 +37,14 @@
   UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
   iconView.contentMode = UIViewContentModeScaleAspectFit;
   iconView.center = CGPointMake(self.cellView.bounds.size.width/8,self.cellView.bounds.size.height/2);
-
-
   [self.cellView addSubview:iconView];
 
-  UILabel* name = [[UILabel alloc] initWithFrame:CGRectMake(76/1.9+10, 0, 200, 76/1.9)];
+  UILabel* name = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 76/2)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
   name.text = who;
-  name.center = CGPointMake(self.cellView.bounds.size.width/2+10,self.cellView.bounds.size.height/2);
+  name.adjustsFontSizeToFitWidth = true;
+  name.center = CGPointMake(self.cellView.bounds.size.width/2-40,self.cellView.bounds.size.height/2);
 
   
   [self.cellView addSubview:name];
@@ -79,8 +80,9 @@
       maxspeed_text.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
       maxspeed_text.text = value; //FIXME value should be extracted from section text
       maxspeed_text.textAlignment = NSTextAlignmentCenter;
+      maxspeed_text.adjustsFontSizeToFitWidth = true;
       maxspeed_text.textColor = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
-      maxspeed_text.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
+      maxspeed_text.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2-5);
 
       [self.cellView addSubview:maxspeed_text];
       //jw speed score units [CONSTANT]
@@ -100,8 +102,9 @@
       vdrop_graph.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
       vdrop_graph.text = value; //FIXME value should be extracted from section text
       vdrop_graph.textAlignment = NSTextAlignmentCenter;
+      vdrop_graph.adjustsFontSizeToFitWidth = true;
       vdrop_graph.textColor = neonblueColor;
-      vdrop_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
+      vdrop_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2-5);
       [self.cellView addSubview:vdrop_graph];
       
       UIImage *vdrop_unit = [UIImage imageNamed:@"mph Max Speed"];
@@ -120,8 +123,9 @@
       acce_graph.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:72.0/1.9];
       acce_graph.text = value; //FIXME value should be extracted from section text
       acce_graph.textAlignment = NSTextAlignmentCenter;
+      acce_graph.adjustsFontSizeToFitWidth=true;
       acce_graph.textColor = orangeColor;
-      acce_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2);
+      acce_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2-5);
       [self.cellView addSubview:acce_graph];
       
       UIImage *acce_unit = [UIImage imageNamed:@"mph Max Speed"];
@@ -188,10 +192,10 @@
  * @return configured cellView
  */
 
-+ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style andWho:(NSString*) who andValue:(NSString *)value andRank: (ARRankStyle) rank
++ (ARScoreBoardCell *)cellWithStyle:(ARScoreBoardCellStyle)style rank: (ARRankStyle) rank andData: (NSDictionary *)data
 {
   ARScoreBoardCell *cell = [[ARScoreBoardCell alloc]init];
-  [cell setThemeWithStyle:style andWho: who andValue:value andRank:rank];
+  [cell setThemeWithStyle:style rank:rank andData:data];
   return cell;
 }
 

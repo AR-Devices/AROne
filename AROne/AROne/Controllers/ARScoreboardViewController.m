@@ -16,6 +16,8 @@
 #import "ARSummary.h"
 #import "ARCommon.h"
 
+
+
 @interface ARScoreboardViewController ()
 
 @property UIView *comboBar;
@@ -42,12 +44,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  [self.tableView reloadData];
+  [self querySummaryData:@"day"];
 }
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self querySummaryData:@"day"];
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -121,8 +122,11 @@
   if (self.scoreboard_array_cloud) {
     NSDictionary * dict = [self.scoreboard_array_cloud objectAtIndex:indexPath.row];
     NSString *score;
+    
     NSString *who   =[dict objectForKey:@"displayName"];
     NSLog(@"who is %@", who);
+    NSMutableDictionary *data = [NSMutableDictionary new];
+    [data setObject:who forKey:@"who"];
     
     ARRankStyle rank = ARNormal;
     if (indexPath.row == 0) {
@@ -131,17 +135,16 @@
     switch (self.topBarStyle) {
       case ARScoreBoardCellStyleMaxSpeed:
         score = [NSString stringWithFormat:@"%0.1f", [[dict objectForKey:@"maxSpeed"] doubleValue]];
-        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleMaxSpeed andWho:who andValue:score andRank:rank];
         break;
       case ARScoreBoardCellStyleVerticalDrop:
         score = [NSString stringWithFormat:@"%ld", (long)[[dict objectForKey:@"verticalDrop"] integerValue]];
-        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleVerticalDrop andWho:who andValue:score andRank:rank];
         break;
       case ARScoreBoardCellStyleAcceleration:
         score = [NSString stringWithFormat:@"%0.1f", [[dict objectForKey:@"maxAcceleration"] doubleValue]];
-        cell = [ARScoreBoardCell cellWithStyle:ARScoreBoardCellStyleAcceleration andWho:who andValue:score andRank:rank];
         break;
     }
+    [data setObject:score forKey:@"score"];
+    cell = [ARScoreBoardCell cellWithStyle:self.topBarStyle rank:rank andData:data];
   }
   //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;

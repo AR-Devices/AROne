@@ -100,6 +100,7 @@
 		3CACAF6718CB0C8A00F8B1F6 /* ARDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACAF6618CB0C8A00F8B1F6 /* ARDataPoint.m */; };
 		3CAF438C18C1660E00356116 /* ARSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438B18C1660E00356116 /* ARSummary.m */; };
 		3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438D18C3FFB800356116 /* ARCommon.m */; };
+		3CC307EF18E1247C00B8E6C8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */; };
 		3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */; };
 		3CDCDB0317DE90BC00FCA0CA /* mph Max Speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */; };
 		3CDCDB0517DE90BC00FCA0CA /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */; };
@@ -395,6 +396,7 @@
 		3CAF438A18C1660E00356116 /* ARSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSummary.h; path = Parse/ARSummary.h; sourceTree = "<group>"; };
 		3CAF438B18C1660E00356116 /* ARSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSummary.m; path = Parse/ARSummary.m; sourceTree = "<group>"; };
 		3CAF438D18C3FFB800356116 /* ARCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCommon.m; sourceTree = "<group>"; };
+		3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accelerationCircle.png; sourceTree = "<group>"; };
 		3CDCDAA917DE90BC00FCA0CA /* mph Max Speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mph Max Speed.png"; sourceTree = "<group>"; };
 		3CDCDAAC17DE90BC00FCA0CA /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 				EC9ED2F818AC74D30067F729 /* CFNetwork.framework in Frameworks */,
 				EC9ED2F618AC74CA0067F729 /* AudioToolbox.framework in Frameworks */,
 				EC9ED2F218AC74B30067F729 /* CoreLocation.framework in Frameworks */,
+				3CC307EF18E1247C00B8E6C8 /* Crashlytics.framework in Frameworks */,
 				EC9ED2F018AC74A90067F729 /* Social.framework in Frameworks */,
 				EC7DC77018CED49300E80D0B /* Parse.framework in Frameworks */,
 				EC9ED2EE18AC74A10067F729 /* AdSupport.framework in Frameworks */,
@@ -688,6 +691,7 @@
 		3C417F3D17D847510094B56F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */,
 				EC7DC76F18CED49300E80D0B /* Parse.framework */,
 				3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */,
 				3C92D41818ACB8010051BE54 /* FacebookSDK.framework */,
@@ -1157,6 +1161,7 @@
 				3C417F3917D847510094B56F /* Resources */,
 				3C12C9B617FF2C990089A9CA /* ShellScript */,
 				6D7CAE7817A0418AB06F6DA6 /* Copy Pods Resources */,
+				3CC307ED18E1245F00B8E6C8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1422,6 +1427,19 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber))\nbuildNumber=$(($buildNumber + 1))\nbuildNumber=$(printf \"%d\" $buildNumber)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
+		3CC307ED18E1245F00B8E6C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 0f2cfca3fad86d0f8c57572059f84da3f7c77075 fd65f798330c7be41d8d3b0c751b20034538718478ec2ba2509d99e6fe426c9e";
+		};
 		6D7CAE7817A0418AB06F6DA6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1639,6 +1657,7 @@
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
 					/Users/jiachiw/github/AROne/AROne,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
@@ -1663,6 +1682,7 @@
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
 					/Users/jiachiw/github/AROne/AROne,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";

@@ -215,7 +215,6 @@
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
 //    [self.activityIndicator stopAnimating]; // Hide loading indicator
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     if (!user) {
       if (!error) {
         NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -240,6 +239,7 @@
   NSLog(@"showHomeView!");
   [self dismissViewControllerAnimated:YES completion:^{
     //null
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
   }];
 }
 
@@ -258,23 +258,6 @@
   // Send request to Facebook
   [request startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
     if (!error) {
-      // result is a dictionary with the user's Facebook data
-      //      NSDictionary *userData = (NSDictionary *)result;
-      
-      //      NSMutableAttributedString *attributedString;
-      //      attributedString = [[NSMutableAttributedString alloc] initWithString:[user.name uppercaseString]];
-      //      [attributedString addAttribute:NSKernAttributeName value:@5 range:NSMakeRange(10, 5)];
-      //      [self.name setAttributedText:attributedString];
-      
-      
-//      [self.name setText: [user.name uppercaseString]];
-//      [self.email setText:[user objectForKey:@"email"]];
-//      [self.location setText:[[user objectForKey:@"location"] objectForKey:@"name"]];
-//      [self.occupation setText:[[[[user objectForKey:@"work"] objectAtIndex:0] objectForKey:@"employer"] objectForKey:@"name"]];
-//      self.profilePictureView.profileID = user.id;
-      
-//      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//      [defaults setObject:user.name forKey:@"myName"];
       //      upload info to parse
       PFQuery *query = [PFUser query];
       PFUser *PU = [PFUser currentUser];
@@ -286,10 +269,15 @@
         Puser[@"name"] = user.name;
         Puser[@"email"] = [user objectForKey:@"email"];
         Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
-        [Puser saveInBackgroundWithTarget:self selector:@selector(saveDone)];
-//        [[NSUserDefaults standardUserDefaults] setObject:user.id forKey:@"myFBID"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.id]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:data];
+//        UIImage *profilePic = [[UIImage alloc] initWithData:data];
+        Puser[@"userIcon"] = imageFile;
+        [Puser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+          [self showHomeView];
+        }];
       }];
-
     } else {
       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                           message:error.localizedDescription

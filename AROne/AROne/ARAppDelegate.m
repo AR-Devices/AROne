@@ -17,6 +17,7 @@
 #import "ARCommon.h"
 #import "ARDataPoint.h"
 
+#import <Crashlytics/Crashlytics.h>
 
 @interface ARAppDelegate ()
 
@@ -77,8 +78,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   // JERRY: THIS MUST BE THE FIRST LINE OF CODE IN THIS METHOD -^.^-
   // ****************************************************************************
   [Parse setApplicationId:@"Lt8jTMUGgCSfv8HaeY02aVUMlLhX55VrgAmbOzwe" clientKey:@"jdLKdGO8ixtGrpe7HX5XLFwJICB8pFjIPw5xVvA4"];
-  
+  [Crashlytics startWithAPIKey:@"0f2cfca3fad86d0f8c57572059f84da3f7c77075"];
   // Register for push notifications
+  
   [application registerForRemoteNotificationTypes:
    UIRemoteNotificationTypeBadge |
    UIRemoteNotificationTypeAlert |
