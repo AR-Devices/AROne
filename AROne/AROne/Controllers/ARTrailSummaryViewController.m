@@ -58,7 +58,7 @@
 {
   [super viewDidLoad];
   [self drawResorts];
-  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, 120) style:UITableViewStylePlain];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height-250-100) style:UITableViewStylePlain];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView]; //jerry
@@ -520,7 +520,7 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 3;
+  return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -545,13 +545,16 @@
   //  ee962f orange
   //  ffffff white
   if (indexPath.section == 0) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"THE GULCH" andValue:@"15" andValue2:@"222" rect:self.view.bounds];
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"THE GULCH" andValue:@"25" andValue2:@"1233" andValue3:@"3" rect:self.view.bounds];
   } else if (indexPath.section == 1) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"POWDER BOWL" andValue:@"16" andValue2:@"333" rect:self.view.bounds ];
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"POWDER BOWL" andValue:@"36" andValue2:@"3233" andValue3:@"1" rect:self.view.bounds ];
   }else if (indexPath.section == 2) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"BOCA" andValue:@"17" andValue2:@"444" rect:self.view.bounds ];
-  }
-  //number cgrect 394 136
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"BOCA" andValue:@"37" andValue2:@"4344" andValue3:@"5" rect:self.view.bounds ];
+  }else if (indexPath.section == 3) {
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue  andTrail:@"DROP OFF" andValue:@"27" andValue2:@"2144" andValue3:@"7" rect:self.view.bounds ];
+  }else if (indexPath.section == 4) {
+    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"SUGAR PINE GLADE" andValue:@"47" andValue2:@"5344" andValue3:@"1" rect:self.view.bounds ];
+  }  //number cgrect 394 136
   cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
   

@@ -39,10 +39,11 @@
  * @return configured cellView
  */
 
-- (void)setThemeWithStyle:(ARTrailSummaryCellStyle) style andTrail:(NSString*)trail andValue:(NSString *)value andValue2:(NSString *)value2 rect:(CGRect) rect
+- (void)setThemeWithStyle:(ARTrailSummaryCellStyle) style andTrail:(NSString*)trail andValue:(NSString *)value andValue2:(NSString *)value2 andValue3:(NSString*)value3 rect:(CGRect) rect
 {
   UIColor *bluetrailcolor  = [UIColor colorWithRed:15.0/255.0 green:118.0/255.0 blue:201.0/255.0 alpha:1.0];
   UIColor *greentrailcolor = [UIColor colorWithRed:4.0/255.0 green:149.0/255.0 blue:62.0/255.0 alpha:1.0];
+  UIColor *fontcolor =[UIColor colorWithRed:67.0/255.0 green:67.0/255.0 blue:67.0/255.0 alpha:1.0];
   UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 200, 20)];
   title.text = trail;
   title.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:11.0];
@@ -70,32 +71,33 @@
   UILabel * vdrop_value = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, vdropImage_green.size.width, vdropImage_green.size.height-10)];
   vdrop_value.text = value2;
   vdrop_value.font = [UIFont fontWithName:@"Big Caslon" size:30.0];
-
-
+  maxspeed.textColor = fontcolor;
+  vdrop_value.textColor = fontcolor;
+  
+  UILabel* time_passed =[[UILabel alloc] initWithFrame:CGRectMake(20+vdropImage_green.size.width+80, 40, 76, 76/1.9)];
+  time_passed.text = @"Time Passed";
+  time_passed.textColor = fontcolor;
+  time_passed.font =[UIFont fontWithName:@"Avenir-MediumOblique" size:9.0];
+  UILabel *time_passed_value = [[UILabel alloc] initWithFrame:CGRectMake(20+vdropImage_green.size.width+60, 40, 36, 76/1.9)];
+  time_passed_value.text = value3;
+  time_passed_value.font = [UIFont fontWithName:@"Avenir-MediumOblique" size:16.0];
+  time_passed_value.textColor = fontcolor;
 
   
   switch (style) {
     case ARTralSummaryCellStyle_black: //black
       title.textColor = [UIColor blackColor];
-      maxspeed.textColor = [UIColor blackColor];
-      vdrop_value.textColor = [UIColor blackColor];
       [vdropViewFrame addSubview:vdropView_black];
       break;
       
     case ARTralSummaryCellStyle_blue: //blue
       title.textColor = bluetrailcolor;
-      maxspeed.textColor = bluetrailcolor;
-      vdrop_value.textColor = bluetrailcolor;
-
       [vdropViewFrame addSubview:vdropView_blue];
 
       break;
       
     case ARTralSummaryCellStyle_green: //green
       title.textColor = greentrailcolor;
-      maxspeed.textColor = greentrailcolor;
-      vdrop_value.textColor = greentrailcolor;
-
       [vdropViewFrame addSubview:vdropView_green];
 
       break;
@@ -106,6 +108,9 @@
   [vdropViewFrame addSubview:vdrop_value];
   [self.contentView addSubview:maxspeed];
   [self.contentView addSubview:maxspeedUnitView];
+  [self.contentView addSubview:time_passed];
+  [self.contentView addSubview:time_passed_value];
+
   [self.contentView addSubview:title];
   [self.contentView addSubview:vdropViewFrame];
   
@@ -117,11 +122,11 @@
  * @return configured cellView
  */
 
-+ (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value andValue2:(NSString *)value2 rect:(CGRect) rect;
++ (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value andValue2:(NSString *)value2 andValue3:(NSString*)value3 rect:(CGRect) rect;
 {
   NSLog(@"rect is %f", rect.size.width);
   ARTrailSummaryTableCell *cell = [[ARTrailSummaryTableCell alloc]initWithFrame:rect];
-  [cell setThemeWithStyle:styles andTrail:trail andValue:value andValue2: value2 rect:rect];
+  [cell setThemeWithStyle:styles andTrail:trail andValue:value andValue2: value2 andValue3: value3 rect:rect];
   return cell;
 }
 
