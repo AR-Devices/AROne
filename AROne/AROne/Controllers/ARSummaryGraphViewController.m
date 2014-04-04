@@ -9,6 +9,7 @@
 #import "ARSummaryGraphViewController.h"
 //#import "UIViewController+AKTabBarController.h"
 #import "ARSummaryGraphDetailViewController.h"
+#import "BEMSimpleLineGraphView.h"
 
 #import "ARDataPoint.h"
 
