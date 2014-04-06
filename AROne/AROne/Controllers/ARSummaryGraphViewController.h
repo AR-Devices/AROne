@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ARSummaryGraphCell.h"
+#import <BEMSimpleLineGraphView.h>
 
 
-@interface ARSummaryGraphViewController : UITableViewController
+@interface ARSummaryGraphViewController : UIViewController <BEMSimpleLineGraphDelegate>
 @property(atomic) ARSummaryGraphCellStyle graphStyle;
 @property(atomic) NSDate *selectedDate;
+@property (strong, nonatomic) NSMutableArray *ArrayOfValues;
+@property (strong, nonatomic) NSMutableArray *ArrayOfDates;
 
 - (void) setFunctionStyle: (ARSummaryGraphCellStyle) style;
 @end

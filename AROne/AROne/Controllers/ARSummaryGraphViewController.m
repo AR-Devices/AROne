@@ -17,25 +17,21 @@
 @interface ARSummaryGraphViewController ()
 @property (nonatomic) NSMutableArray *dataPoints;
 @property (nonatomic) NSDate *createdAt;
+
+@property (weak, nonatomic)  BEMSimpleLineGraphView *myGraph;
+@property (strong, nonatomic) UILabel *labelValues;
 @end
 
+@interface ARSummaryGraphViewController (){
+int previousStepperValue;
+int totalNumber;
+}
+@end
 @implementation ARSummaryGraphViewController
 @synthesize graphStyle = _graphStyle;
 @synthesize selectedDate = _selectedDate;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-      self.title = @"SPEED";//FIXME this information will need to be extracted from parent
-      //    d4dee6
-      self.tableView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
-      self.tableView.scrollEnabled = NO;
-//      self.tableView.backgroundColor = [UIColor blackColor];
 
-    }
-    return self;
-}
 
 - (id)initwithStyle:(ARSummaryGraphCellStyle)style
 {
@@ -44,8 +40,57 @@
 }
 - (void)viewDidLoad
 {
+  self.ArrayOfValues = [[NSMutableArray alloc] init];
+  self.ArrayOfDates = [[NSMutableArray alloc] init];
+  
   [super viewDidLoad];
+  self.title = @"SPEED";//FIXME this information will need to be extracted from parent
+  //    d4dee6
+  self.view.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
+
   self.dataPoints = [[NSMutableArray alloc]init];
+  UIView *header = [self createQuickPersonalView];
+  [self.view addSubview:header];
+  
+  for (int i = 0; i < 9; i++) {
+    [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
+    [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+    NSLog(@"JERRY %d  %d",i, [[self.ArrayOfValues objectAtIndex:i] intValue]);
+    NSLog(@"JERRY %d  %d",i, [[self.ArrayOfDates objectAtIndex:i] intValue]);
+
+    totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+  }
+  
+
+   BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
+   myGraph.delegate = self;
+  
+  
+  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
+  self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
+  self.labelValues.textAlignment = NSTextAlignmentCenter;
+  //--------------------color options start---------------------
+  UIColor *color;
+  color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+//  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
+//  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
+  myGraph.colorTop = color;
+  myGraph.colorBottom = color;
+  myGraph.backgroundColor = color;
+  self.view.tintColor = color;
+  self.labelValues.textColor = color;
+  self.navigationController.navigationBar.tintColor = color;
+  myGraph.enableTouchReport = YES;
+  myGraph.colorLine = [UIColor whiteColor];
+  myGraph.colorXaxisLabel = [UIColor whiteColor];
+  myGraph.widthLine = 3.0;
+  myGraph.enableTouchReport = YES;
+  myGraph.enableBezierCurve = YES;
+  //--------------------color options end ----------------------
+  [self.view addSubview:myGraph];
+  [self.view addSubview:self.labelValues];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,70 +98,25 @@
   [self queryDataPoints];
 }
 
-#pragma mark - Table view data source
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-  if (section == 0) {
-    UIView *header = [self createQuickPersonalView];
-    return header;
-  }
-  return nil;
-  
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-  if (section == 0) {
-    return 80.0f;
-  }
-	return 0.0f;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return 300;
-}
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  NSLog(@"--------------------1--------------");
-
-  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
-  UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    
-  if (indexPath.section == 0) {
-    cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValues:self.dataPoints];
-  }
-  cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-  //number cgrect 394 136
-  cell.backgroundColor = [UIColor clearColor];
-  
-    return cell;
-}
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//  NSLog(@"SummaryFunctionGraph clicked at %d", indexPath.section);
-//  NSLog(@"----------------------------------");
+//  NSLog(@"--------------------1--------------");
 //
-//  ARSummaryGraphDetailViewController *summaryTabGraph = [[ARSummaryGraphDetailViewController alloc] init];
-//  [self.navigationController pushViewController:summaryTabGraph animated:YES];
+//  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
+//  UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//    
+//  if (indexPath.section == 0) {
+//    cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValues:self.dataPoints];
+//  }
+//  cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//
+//  //number cgrect 394 136
+//  cell.backgroundColor = [UIColor clearColor];
+//  
+//    return cell;
 //}
+
 
 #pragma mark - AKTabBarController Data Source
 - (NSString *)tabImageName
@@ -132,15 +132,8 @@
 
 #pragma mark - Private Methods
 
-/**
- * @desc CCZ: Quick Personal View is the top view with Shao Peng's face
- * @param null
- * @return configured UIView
- */
 - (UIView *) createQuickPersonalView
 {
-  NSLog(@"--------------------2--------------");
-
   UIView* header = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,100)];
   header.backgroundColor = [UIColor clearColor];
   header.autoresizingMask = UIViewAutoresizingNone;
@@ -156,7 +149,6 @@
   name.text = @"Peng Shao";
   name.backgroundColor = [UIColor clearColor];
   [header addSubview:name];
-
   return header;
 }
 
@@ -213,16 +205,58 @@
     }
     
     NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
-    [self.tableView reloadData];
+ //   [self.tableView reloadData];
 
 //    NSLog(@"createAt %@", self.createdAt);
 //    if (self.dataPoints.count < 500) {
 //      [self queryDataPoints];
 //    }
+  }];
+}
+#pragma mark - SimpleLineGraph Data Source
+
+- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
+  return (int)[self.ArrayOfValues count];
+}
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+  return [[self.ArrayOfValues objectAtIndex:index] floatValue];
+}
+
+#pragma mark - SimpleLineGraph Delegate
+
+- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
+  return 1;
+}
+
+- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+  return [self.ArrayOfDates objectAtIndex:index];
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
+  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.ArrayOfValues objectAtIndex:index]];
+//  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.ArrayOfDates objectAtIndex:index]];
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
+  [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    self.labelValues.alpha = 0.0;
+//    self.labelDates.alpha = 0.0;
+  } completion:^(BOOL finished){
     
+    self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+//    self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
     
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+      self.labelValues.alpha = 1.0; 
+//      self.labelDates.alpha = 1.0;
+    } completion:nil];
   }];
 }
 
+- (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
+  self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+//  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
+}
 
 @end
