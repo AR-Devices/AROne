@@ -16,6 +16,8 @@
 
 @interface ARSummaryGraphViewController ()
 @property (nonatomic) NSMutableArray *dataPoints;
+@property (nonatomic) NSMutableArray *timePoints;
+
 @property (nonatomic) NSDate *createdAt;
 
 @property (weak, nonatomic)  BEMSimpleLineGraphView *myGraph;
@@ -40,8 +42,6 @@ int totalNumber;
 }
 - (void)viewDidLoad
 {
-  self.ArrayOfValues = [[NSMutableArray alloc] init];
-  self.ArrayOfDates = [[NSMutableArray alloc] init];
   
   [super viewDidLoad];
   self.title = @"SPEED";//FIXME this information will need to be extracted from parent
@@ -49,53 +49,19 @@ int totalNumber;
   self.view.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
 
   self.dataPoints = [[NSMutableArray alloc]init];
+  self.timePoints = [[NSMutableArray alloc]init];
+
   UIView *header = [self createQuickPersonalView];
   [self.view addSubview:header];
-  
-  for (int i = 0; i < 9; i++) {
-    [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
-    [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
-    NSLog(@"JERRY %d  %d",i, [[self.ArrayOfValues objectAtIndex:i] intValue]);
-    NSLog(@"JERRY %d  %d",i, [[self.ArrayOfDates objectAtIndex:i] intValue]);
+  [self queryDataPoints];
 
-    totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
-  }
-  
 
-   BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
-   myGraph.delegate = self;
-  
-  
-  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
-  self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
-  self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
-  self.labelValues.textAlignment = NSTextAlignmentCenter;
-  //--------------------color options start---------------------
-  UIColor *color;
-  color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
-//  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
-//  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
-  myGraph.colorTop = color;
-  myGraph.colorBottom = color;
-  myGraph.backgroundColor = color;
-  self.view.tintColor = color;
-  self.labelValues.textColor = color;
-  self.navigationController.navigationBar.tintColor = color;
-  myGraph.enableTouchReport = YES;
-  myGraph.colorLine = [UIColor whiteColor];
-  myGraph.colorXaxisLabel = [UIColor whiteColor];
-  myGraph.widthLine = 3.0;
-  myGraph.enableTouchReport = YES;
-  myGraph.enableBezierCurve = YES;
-  //--------------------color options end ----------------------
-  [self.view addSubview:myGraph];
-  [self.view addSubview:self.labelValues];
 
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  [self queryDataPoints];
+
 }
 
 
@@ -184,7 +150,6 @@ int totalNumber;
   [query findObjectsInBackgroundWithBlock:^(id objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       NSArray *array = objects;
-      NSLog(@"objects %@", objects);
       NSString *data;
       if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
         data = @"speed";
@@ -193,20 +158,28 @@ int totalNumber;
       } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
         data = @"verticalDrop";
       }
+      NSLog(@"JERRY %@", data);
+
       for (int i = 0; i < [array count]; i++) {
         NSDictionary *dict = [array objectAtIndex:i];
         [self.dataPoints addObject:[dict objectForKey:data]];
+        [self.timePoints addObject:[dict objectForKey:@"timeRecord"]];
+
+
       }
+      NSLog(@"dataPoints %@",self.dataPoints);
+      NSLog(@"timePoints %@", self.timePoints);
+      [self.myGraph reloadGraph];
       PFObject *object = [array lastObject];
       if ([[object createdAt] isEqual:self.createdAt])
         return;
       else
         self.createdAt = [object createdAt];
     }
-    
-    NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
- //   [self.tableView reloadData];
+    [self drawData];
 
+    NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
+//    [self.view setNeedsDisplay];
 //    NSLog(@"createAt %@", self.createdAt);
 //    if (self.dataPoints.count < 500) {
 //      [self queryDataPoints];
@@ -216,26 +189,26 @@ int totalNumber;
 #pragma mark - SimpleLineGraph Data Source
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-  return (int)[self.ArrayOfValues count];
+  return (int)[self.dataPoints count];
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
-  return [[self.ArrayOfValues objectAtIndex:index] floatValue];
+  return [[self.dataPoints objectAtIndex:index] floatValue];
 }
 
 #pragma mark - SimpleLineGraph Delegate
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-  return 1;
+  return 10;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
-  return [self.ArrayOfDates objectAtIndex:index];
+  return [self.timePoints objectAtIndex:index];
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
-  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.ArrayOfValues objectAtIndex:index]];
-//  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.ArrayOfDates objectAtIndex:index]];
+  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:index]];
+//  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.timePoints objectAtIndex:index]];
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
@@ -245,7 +218,7 @@ int totalNumber;
   } completion:^(BOOL finished){
     
     self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-//    self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
+//    self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
     
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
       self.labelValues.alpha = 1.0; 
@@ -256,7 +229,51 @@ int totalNumber;
 
 - (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
   self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-//  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.ArrayOfDates lastObject]];
+//  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
+}
+- (void)drawData{
+  if([self.dataPoints count]==0){
+    for (int i = 0; i < 2 ; i++) {
+      [self.dataPoints addObject:@"loading"]; // Random values for the graph
+      [self.timePoints addObject:[NSString stringWithFormat:@"%@",@"AROne"]]; // Dates for the X-Axis of the graph
+      totalNumber = totalNumber + [[self.dataPoints objectAtIndex:i] intValue]; // All of the values added together
+    }
+  }else{
+    for (int i = 0; i < [self.dataPoints count]; i++) {
+      totalNumber = totalNumber + [[self.dataPoints objectAtIndex:i] intValue]; // All of the values added together
+    }
+  }
+  
+  
+  BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(-10, 60, 330, 250)];
+  myGraph.delegate = self;
+  
+  
+  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
+  self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
+  self.labelValues.textAlignment = NSTextAlignmentCenter;
+  //--------------------color options start---------------------
+  UIColor *color;
+  color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+  //  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
+  //  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
+  myGraph.colorTop = color;
+  myGraph.colorBottom = color;
+  myGraph.backgroundColor = color;
+  self.view.tintColor = color;
+  self.labelValues.textColor = color;
+  self.navigationController.navigationBar.tintColor = color;
+  myGraph.enableTouchReport = YES;
+  myGraph.colorLine = [UIColor whiteColor];
+  myGraph.colorXaxisLabel = [UIColor whiteColor];
+
+  myGraph.widthLine = 3.0;
+  myGraph.enableTouchReport = YES;
+  myGraph.enableBezierCurve = YES;
+  //--------------------color options end ----------------------
+  [self.view addSubview:myGraph];
+  [self.view addSubview:self.labelValues];
 }
 
 @end
