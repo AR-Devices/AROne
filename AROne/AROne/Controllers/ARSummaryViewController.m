@@ -25,6 +25,8 @@
 #import "ARCommon.h"
 #import "ARSummary.h"
 
+#import "PAImageView.h"
+
 
 
 
@@ -300,8 +302,11 @@
   UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
 //  personIcon.image = [UIImage imageNamed:@"profile_hp"];
   NSLog(@"image width %f, height %f", self.userIcon.size.width, self.userIcon.size.height);
-  personIcon.image = [ARCommon drawImage:[UIImage imageNamed:@"profile2"] inImage:self.userIcon atPoint:CGPointMake(0,0)];
-  [header addSubview:personIcon];
+//  personIcon.image = [ARCommon drawImage:[UIImage imageNamed:@"profile"] inImage:self.userIcon atPoint:CGPointMake(0,0)];
+  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:[UIColor whiteColor] progressColor:[UIColor blueColor]];
+  [avatarView setImage:self.userIcon];
+
+  [header addSubview:avatarView];
 //  user Name, in the future 
   UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
