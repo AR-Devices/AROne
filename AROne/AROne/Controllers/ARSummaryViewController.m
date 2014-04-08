@@ -114,35 +114,37 @@
   }];
 }
 
+/** it first check if cache has username, if it does not exist, go download it from the server **/
 - (void) queryUserData {
-//  self.userName = [PFUser.currentUser[@"name"] stringValue];
-//  NSLog(@"name is %@",[PFUser currentUser][@"name"]);
-//  self.userName = [PFUser currentUser][@"name"];
-//  [self.tableView reloadData];
-//  [PFUser.currentUser[@"isPrivate"] boolValue];
-  PFQuery *query = [PFQuery queryWithClassName:@"_User"];
-//  NSLog(@"username 1 is %@", [PFUser currentUser].username);
-  [query whereKey:@"username" equalTo:[PFUser currentUser].username];
-  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-    if (!error && ([objects count] != 0)) {
-      PFUser *user = objects[0];
-      NSLog(@"user data %@", objects);
-//      [objects[0] objectForKey:@"user"];
-      NSLog(@"username is %@", user[@"name"]);
-      self.userName = user[@"name"];
-      PFFile *image = user[@"userIcon"];
-      [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        NSData *imageData = data;
-        self.userIcon = [UIImage imageWithData:imageData];
-        if (self.userName) {
-          NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-          [defaults setValue:UIImagePNGRepresentation(self.userIcon) forKey:@"userIcon"];
-          [defaults setValue:self.userName forKey:@"userName"];
-        }
-        [self.tableView reloadData];
-      }];
-    }
-  }];
+  NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+  self.userName = [defaults stringForKey:@"userName"];
+  self.userIcon = [UIImage imageWithData:[defaults objectForKey:@"userIcon"]];
+  if (self.userName == (id)[NSNull null] || self.userName.length == 0 ) {
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"username" equalTo:[PFUser currentUser].username];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+      if (!error && ([objects count] != 0)) {
+        PFUser *user = objects[0];
+        NSLog(@"user data %@", objects);
+  //      [objects[0] objectForKey:@"user"];
+        NSLog(@"username is %@", user[@"name"]);
+        self.userName = user[@"name"];
+        PFFile *image = user[@"userIcon"];
+        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+          NSData *imageData = data;
+          self.userIcon = [UIImage imageWithData:imageData];
+          if (self.userName) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setValue:UIImagePNGRepresentation(self.userIcon) forKey:@"userIcon"];
+            [defaults setValue:self.userName forKey:@"userName"];
+          }
+          [self.tableView reloadData];
+        }];
+      }
+    }];
+  } else {
+    [self.tableView reloadData];
+  }
 }
 
 #pragma mark - Table view data source
@@ -298,17 +300,18 @@
   header.backgroundColor = [UIColor clearColor];
   header.autoresizingMask = UIViewAutoresizingNone;
   
-  CGRect imageRect = CGRectMake(10, 10, 76/1.9, 75/1.9);
+  CGRect imageRect = CGRectMake(10, 10, 100/1.9, 100/1.9);
   UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
 //  personIcon.image = [UIImage imageNamed:@"profile_hp"];
   NSLog(@"image width %f, height %f", self.userIcon.size.width, self.userIcon.size.height);
 //  personIcon.image = [ARCommon drawImage:[UIImage imageNamed:@"profile"] inImage:self.userIcon atPoint:CGPointMake(0,0)];
-  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:[UIColor whiteColor] progressColor:[UIColor blueColor]];
+  UIColor *ringColor = [UIColor colorWithRed:57/255.0 green:137/255.0 blue:194/255.0 alpha:1.0];
+  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:ringColor progressColor:[UIColor blueColor]];
   [avatarView setImage:self.userIcon];
 
   [header addSubview:avatarView];
 //  user Name, in the future 
-  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
+  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(100/1.9+20, 10, self.view.bounds.size.width - 90, 100/1.9)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
 
