@@ -7,7 +7,6 @@
 //
 
 #import "UIViewController+AKTabBarController.h"
-
 #import "ARScoreboardViewController.h"
 
 #import "ARScoreBoardCell.h"
@@ -122,11 +121,19 @@
   if (self.scoreboard_array_cloud) {
     NSDictionary * dict = [self.scoreboard_array_cloud objectAtIndex:indexPath.row];
     NSString *score;
-    
-    NSString *who   =[dict objectForKey:@"displayName"];
-    NSLog(@"who is %@", who);
     NSMutableDictionary *data = [NSMutableDictionary new];
-    [data setObject:who forKey:@"who"];
+    @try {
+      NSString* who=[dict objectForKey:@"displayName"];
+      NSLog(@"who is %@", who);
+      [data setObject:who forKey:@"who"];
+    }
+    @catch (NSException *exception) {
+      NSLog(@"Exception: %@", exception);
+    }
+    @finally {
+      //nothing
+    }
+
     
     ARRankStyle rank = ARNormal;
     if (indexPath.row == 0) {

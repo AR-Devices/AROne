@@ -302,7 +302,7 @@
   personIcon.image = self.userIcon;
   [header addSubview:personIcon];
 //  user Name, in the future 
-  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 25)];
+  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
 
@@ -311,29 +311,29 @@
   [header addSubview:name];
 
   //the colored box, whose text/score is extracted from the scores in the secitions below
-  UILabel *maxspeed_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*0, 40, 40, 15)];
-  maxspeed_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  maxspeed_text.textColor = [UIColor whiteColor];
-  maxspeed_text.text = self.max_speed_value; //FIXME value should be extracted from section text
-  maxspeed_text.textAlignment = NSTextAlignmentCenter;
-  maxspeed_text.backgroundColor = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
-  [header addSubview:maxspeed_text];
+//  UILabel *maxspeed_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*0, 40, 40, 15)];
+//  maxspeed_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  maxspeed_text.textColor = [UIColor whiteColor];
+//  maxspeed_text.text = self.max_speed_value; //FIXME value should be extracted from section text
+//  maxspeed_text.textAlignment = NSTextAlignmentCenter;
+//  maxspeed_text.backgroundColor = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
+//  [header addSubview:maxspeed_text];
   
-  UILabel *verticaldrop_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*1, 40, 40, 15)];
-  verticaldrop_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  verticaldrop_text.textColor = [UIColor whiteColor];
-  verticaldrop_text.text = self.vertical_drop_value; //FIXME value should be extracted from section text
-  verticaldrop_text.textAlignment = NSTextAlignmentCenter;
-  verticaldrop_text.backgroundColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
-  [header addSubview:verticaldrop_text];
+//  UILabel *verticaldrop_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*1, 40, 40, 15)];
+//  verticaldrop_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  verticaldrop_text.textColor = [UIColor whiteColor];
+//  verticaldrop_text.text = self.vertical_drop_value; //FIXME value should be extracted from section text
+//  verticaldrop_text.textAlignment = NSTextAlignmentCenter;
+//  verticaldrop_text.backgroundColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
+//  [header addSubview:verticaldrop_text];
   
-  UILabel *acceleration_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*2, 40, 40, 15)];
-  acceleration_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  acceleration_text.textColor = [UIColor whiteColor];
-  acceleration_text.text = self.acceleration_value; //FIXME value should be extracted from section text
-  acceleration_text.textAlignment = NSTextAlignmentCenter;
-  acceleration_text.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-  [header addSubview:acceleration_text];
+//  UILabel *acceleration_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*2, 40, 40, 15)];
+//  acceleration_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  acceleration_text.textColor = [UIColor whiteColor];
+//  acceleration_text.text = self.acceleration_value; //FIXME value should be extracted from section text
+//  acceleration_text.textAlignment = NSTextAlignmentCenter;
+//  acceleration_text.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+//  [header addSubview:acceleration_text];
 
   return header;
 }
