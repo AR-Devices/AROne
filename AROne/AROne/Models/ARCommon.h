@@ -26,7 +26,10 @@ typedef NS_ENUM(NSUInteger, GraphType) {
 + (double) randomDouble;
 + (int) randomVDrop;
 + (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber;
-+ (void)createSummaryClass;
 + (NSString *) todayTime;
 + (void)createDataPoint:(int)size;
++ (UIImage*) drawImage:(UIImage*) fgImage
+              inImage:(UIImage*) bgImage
+              atPoint:(CGPoint)  point;
++ (void)createSummaryClass:(NSDate *) date;
 @end

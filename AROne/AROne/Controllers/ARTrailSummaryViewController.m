@@ -121,7 +121,7 @@
   [view addSubview:landscapeButton];
   
   //zoom button
-  UIImage *landscape = [UIImage imageNamed:@"fullscreen_button"];
+  UIImage *landscape = [UIImage imageNamed:@"landscape"];
   UIImageView *landscapeView = [[UIImageView alloc] initWithImage:landscape];
   UIView *landscapeFrame = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 25 ,5,landscapeView.bounds.size.width+5,landscapeView.bounds.size.height+5)];
   landscapeFrame.backgroundColor = [UIColor whiteColor];

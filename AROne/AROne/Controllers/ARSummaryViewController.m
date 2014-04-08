@@ -299,7 +299,8 @@
   CGRect imageRect = CGRectMake(10, 10, 76/1.9, 75/1.9);
   UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
 //  personIcon.image = [UIImage imageNamed:@"profile_hp"];
-  personIcon.image = self.userIcon;
+  NSLog(@"image width %f, height %f", self.userIcon.size.width, self.userIcon.size.height);
+  personIcon.image = [ARCommon drawImage:[UIImage imageNamed:@"profile2"] inImage:self.userIcon atPoint:CGPointMake(0,0)];
   [header addSubview:personIcon];
 //  user Name, in the future 
   UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
@@ -446,7 +447,7 @@
   if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
     [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
-    [ARCommon createSummaryClass];
+    [ARCommon createSummaryClass:self.myDate];
 //    [ARCommon createDataPoint:100];
     int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
     

@@ -13,15 +13,6 @@
 @implementation ARCommon
 
 + (NSString *) today {
-  
-//  NSDateComponents *components = [[NSCalendar currentCalendar]
-//                                  components:NSYearCalendarUnit|NSMonthCalendarUnit
-//                                  fromDate:[NSDate date]];
-//  NSDate *startDate = [[NSCalendar currentCalendar]
-//                       dateFromComponents:components];
-  NSDate *startDate = [NSDate date];
-  NSLog(@"startDate is %@", startDate);
-  
   NSDate *date = [NSDate new];
   [date descriptionWithLocale:[NSLocale systemLocale]];
   
@@ -34,6 +25,17 @@
   return [dateFormatter stringFromDate:date];
 }
 
++ (NSString *) selectedDate: (NSDate *)date
+{
+  [date descriptionWithLocale:[NSLocale systemLocale]];
+
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+  [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+  NSLog(@"formatter date is %@", [dateFormatter stringFromDate:date]);
+  //  NSLog(@"date is %@", [date descriptionWithLocale:[NSLocale systemLocale]]);
+  return [dateFormatter stringFromDate:date];
+}
 + (NSString *) todayTime {
   NSDate *startDate = [NSDate date];
   NSLog(@"startDate is %@", startDate);
@@ -86,14 +88,14 @@
   return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber;
 }
 
-+ (void)createSummaryClass {
++ (void)createSummaryClass:(NSDate *) date {
   
   ARSummary *measurement = [ARSummary object];
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   measurement.displayName = [defaults valueForKey:@"userName"];
   NSLog(@"name is %@", measurement.displayName);
 
-  measurement.date = [ARCommon today];
+  measurement.date = [ARCommon selectedDate:date];
   measurement.maxAcceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
   measurement.maxSpeed = [ARCommon randomFloatBetween:0.0 and:50.0];
   measurement.verticalDrop = [ARCommon randomVDrop];
@@ -128,6 +130,19 @@
   }
 
   [PFObject saveAll:dataArray];
-  
 }
+
++(UIImage*) drawImage:(UIImage*) fgImage
+              inImage:(UIImage*) bgImage
+              atPoint:(CGPoint)  point
+{
+  UIGraphicsBeginImageContextWithOptions(bgImage.size, FALSE, 0.0);
+  [bgImage drawInRect:CGRectMake( 0, 0, bgImage.size.width, bgImage.size.height)];
+  [fgImage drawInRect:CGRectMake( point.x, point.y, fgImage.size.width, fgImage.size.height)];
+  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return newImage;
+}
+
 @end
