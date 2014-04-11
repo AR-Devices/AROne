@@ -87,8 +87,11 @@
       CGRect rect = CGRectMake( 0, 0, CGRectGetWidth(frame), 32.5);
       NSArray *activityArray = [NSArray arrayWithObjects:@"SPEED", @"V.DROP", @"ACCEL.", nil];
       self = [[ARTopBarView alloc] initWithItems:activityArray];
+//      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
+      [self setTintColor:[UIColor colorWithRed:161/255.0 green:138.0/255.0 blue:193.0/255.0 alpha:1.0] forSegmentAtIndex:0];
+      [self setTintColor:[UIColor colorWithRed:47.0/255.0 green:179.0/255.0 blue:182.0/255.0 alpha:1.0] forSegmentAtIndex:1];
+      [self setTintColor:[UIColor colorWithRed:238.0/255.0 green:150.0/255.0 blue:47.0/255.0 alpha:1.0] forSegmentAtIndex:2];
       self.frame = rect;
-      [self setTitleTextAttributes:greenText forState:UIControlStateSelected];
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
       [self setBackgroundImage:[UIImage imageNamed:@"calendar_selected"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
       self.selectedSegmentIndex = 0;
