@@ -7,6 +7,8 @@
 //
 
 #import "ARScoreBoardCell.h"
+#import "PAImageView.h"
+
 
 @implementation ARScoreBoardCell
 
@@ -27,17 +29,23 @@
 {
   NSString *who = [data objectForKey:@"who"];
   NSString *value = [data objectForKey:@"score"];
+  NSData *iconData = [data objectForKey:@"userIcon"];
+  
   NSLog(@"who2 is %@" ,who);
 //  NSLog(@"value is %@", [value class]);
   //ccz:  create cellView
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(SECTION_CELL_X_LEFT_MARGIN, 0, SECTION_CELL_WIDTH, SECTION_CELL_X_HEIGHT-20)];
   self.cellView.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0];
 
-  UIImage *icon = [UIImage imageNamed:@"profile_hp"];
+  UIImage *icon = [UIImage imageWithData:iconData];
   UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
   iconView.contentMode = UIViewContentModeScaleAspectFit;
   iconView.center = CGPointMake(self.cellView.bounds.size.width/8,self.cellView.bounds.size.height/2);
-  [self.cellView addSubview:iconView];
+  UIColor *ringColor = [UIColor colorWithRed:57/255.0 green:137/255.0 blue:194/255.0 alpha:1.0];
+
+  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:iconView.frame backgroundProgressColor:ringColor progressColor:[UIColor blueColor]];
+  [avatarView setImage:icon];
+  [self.cellView addSubview:avatarView];
 
   UILabel* name = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 76/2)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];

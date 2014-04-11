@@ -123,9 +123,15 @@
     NSString *score;
     NSMutableDictionary *data = [NSMutableDictionary new];
     @try {
-      NSString* who=[dict objectForKey:@"displayName"];
-      NSLog(@"who is %@", who);
-      [data setObject:who forKey:@"who"];
+      
+      NSDictionary *player = [dict objectForKey:@"player"];
+      NSString *name = [player objectForKey:@"name"];
+      PFFile *iconFile = [player objectForKey:@"userIcon"];
+      NSData *iconData = [iconFile getData];
+//      UIImage *userIcon = [UIImage imageWithData:iconData];
+      NSLog(@"who is %@", name);
+      [data setObject:name forKey:@"who"];
+      [data setObject:iconData forKey:@"userIcon"];
     }
     @catch (NSException *exception) {
       NSLog(@"Exception: %@", exception);
