@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, ARTopBarViewStyle)
   ARTopBarViewStyleSelector,
   ARTopBarViewStyleDWMSmall
 };
-@interface ARTopBarView : SLTDoubleTapSegmentedControl
+@interface ARTopBarView : UISegmentedControl
 
 - (id)initWithStyle:(ARTopBarViewStyle)style viewBounds:(CGRect)frame withBlock:(void (^)(ARTopBarView *segment))callbackBlock;
 

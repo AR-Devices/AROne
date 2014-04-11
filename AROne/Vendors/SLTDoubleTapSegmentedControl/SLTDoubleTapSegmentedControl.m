@@ -34,7 +34,6 @@
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:title attributes:attributes];
         
         UIImage *image = [self imageFromAttributedString:attributedString];
-        
         [self setImage:image forSegmentAtIndex:segment];
     }
 }

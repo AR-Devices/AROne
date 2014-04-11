@@ -26,7 +26,6 @@
 		3C240D1E18F3C67100B19AE0 /* profile1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D1C18F3C67100B19AE0 /* profile1@2x.png */; };
 		3C240D2118F47AF700B19AE0 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D1F18F47AF700B19AE0 /* profile.png */; };
 		3C240D2218F47AF700B19AE0 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D2018F47AF700B19AE0 /* profile@2x.png */; };
-		3C240D2618F491ED00B19AE0 /* PAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C240D2518F491ED00B19AE0 /* PAImageView.m */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
 		3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F180117DE886D00658555 /* NSDate+Helpers.m */; };
@@ -192,6 +191,7 @@
 		3CDCDB5417DE90BC00FCA0CA /* topBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDB0017DE90BC00FCA0CA /* topBack.png */; };
 		3CDCDB5517DE90BC00FCA0CA /* topBackSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDB0117DE90BC00FCA0CA /* topBackSelected.png */; };
 		3CF0824518F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0824418F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m */; };
+		3CF0824918F7B2BC00470DFA /* PAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0824818F7B2BC00470DFA /* PAImageView.m */; };
 		3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE885818064422006CF472 /* ARScoreboardViewController.m */; };
 		3CFE887118064422006CF472 /* ARScoreboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE885818064422006CF472 /* ARScoreboardViewController.m */; };
 		3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE885A18064422006CF472 /* ARSummaryGraphDetailViewController.m */; };
@@ -300,8 +300,6 @@
 		3C240D1C18F3C67100B19AE0 /* profile1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile1@2x.png"; sourceTree = "<group>"; };
 		3C240D1F18F47AF700B19AE0 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		3C240D2018F47AF700B19AE0 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
-		3C240D2418F491ED00B19AE0 /* PAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAImageView.h; sourceTree = "<group>"; };
-		3C240D2518F491ED00B19AE0 /* PAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAImageView.m; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
 		3C3F17FF17DE886D00658555 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		3C3F180017DE886D00658555 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
@@ -498,6 +496,8 @@
 		3CDCDB0117DE90BC00FCA0CA /* topBackSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBackSelected.png; sourceTree = "<group>"; };
 		3CF0824318F7A2D400470DFA /* SLTDoubleTapSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTDoubleTapSegmentedControl.h; sourceTree = "<group>"; };
 		3CF0824418F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTDoubleTapSegmentedControl.m; sourceTree = "<group>"; };
+		3CF0824718F7B2BC00470DFA /* PAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAImageView.h; sourceTree = "<group>"; };
+		3CF0824818F7B2BC00470DFA /* PAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAImageView.m; sourceTree = "<group>"; };
 		3CFE885718064422006CF472 /* ARScoreboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScoreboardViewController.h; sourceTree = "<group>"; };
 		3CFE885818064422006CF472 /* ARScoreboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScoreboardViewController.m; sourceTree = "<group>"; };
 		3CFE885918064422006CF472 /* ARSummaryGraphDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryGraphDetailViewController.h; sourceTree = "<group>"; };
@@ -654,15 +654,6 @@
 			path = trailsummary;
 			sourceTree = "<group>";
 		};
-		3C240D2318F491ED00B19AE0 /* PAImageView */ = {
-			isa = PBXGroup;
-			children = (
-				3C240D2418F491ED00B19AE0 /* PAImageView.h */,
-				3C240D2518F491ED00B19AE0 /* PAImageView.m */,
-			);
-			path = PAImageView;
-			sourceTree = "<group>";
-		};
 		3C3F17FD17DE886D00658555 /* PMCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,8 +784,8 @@
 		3C417FCB17D84B560094B56F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				3CF0824618F7B2BC00470DFA /* PAImageView */,
 				3CF0824218F7A2D400470DFA /* SLTDoubleTapSegmentedControl */,
-				3C240D2318F491ED00B19AE0 /* PAImageView */,
 				3C3F17FD17DE886D00658555 /* PMCalendar */,
 				3C5F189C17D91681003AC638 /* AKSegmentedControl */,
 				3C417FCC17D84B560094B56F /* AKTabBarController */,
@@ -1103,6 +1094,15 @@
 				3CF0824418F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m */,
 			);
 			path = SLTDoubleTapSegmentedControl;
+			sourceTree = "<group>";
+		};
+		3CF0824618F7B2BC00470DFA /* PAImageView */ = {
+			isa = PBXGroup;
+			children = (
+				3CF0824718F7B2BC00470DFA /* PAImageView.h */,
+				3CF0824818F7B2BC00470DFA /* PAImageView.m */,
+			);
+			path = PAImageView;
 			sourceTree = "<group>";
 		};
 		3CFE885618064422006CF472 /* Controllers */ = {
@@ -1528,6 +1528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */,
+				3CF0824918F7B2BC00470DFA /* PAImageView.m in Sources */,
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
 				ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */,
 				3C417FE317D84B560094B56F /* AKTab.m in Sources */,
@@ -1536,7 +1537,6 @@
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
 				3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */,
-				3C240D2618F491ED00B19AE0 /* PAImageView.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
