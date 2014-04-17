@@ -20,7 +20,7 @@
 
 @property (nonatomic) NSDate *createdAt;
 
-@property (weak, nonatomic)  BEMSimpleLineGraphView *myGraph;
+@property (strong, nonatomic)  BEMSimpleLineGraphView *myGraph;
 @property (strong, nonatomic) UILabel *labelValues;
 @end
 
@@ -251,33 +251,33 @@
   }
   
   
-  BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(-10, 60, 330, 250)];
-  myGraph.delegate = self;
+  self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(-10, 60, 330, 250)];
+  self.myGraph.delegate = self;
   
   
   self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
   self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
-  self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
+  self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   //--------------------color options start---------------------
   UIColor *color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
 //  myGraph.colorTop = color;
-  myGraph.colorBottom = color;
-  myGraph.backgroundColor = color;
-  self.view.tintColor = color;
+  self.myGraph.colorBottom = color;
+  self.myGraph.backgroundColor = color;
+  //self.view.tintColor = [UIColor blackColor];
   self.labelValues.textColor = color;
-  self.navigationController.navigationBar.tintColor = color;
-  myGraph.enableTouchReport = YES;
-  myGraph.colorLine = [UIColor whiteColor];
-  myGraph.colorXaxisLabel = [UIColor whiteColor];
+  //  self.navigationController.navigationBar.tintColor = color;
+  self.myGraph.enableTouchReport = YES;
+  self.myGraph.colorLine = [UIColor whiteColor];
+  self.myGraph.colorXaxisLabel = [UIColor whiteColor];
 
-  myGraph.widthLine = 3.0;
-  myGraph.enableTouchReport = YES;
-  myGraph.enableBezierCurve = YES;
+  self.myGraph.widthLine = 3.0;
+  self.myGraph.enableTouchReport = YES;
+  self.myGraph.enableBezierCurve = YES;
   //--------------------color options end ----------------------
-  [self.view addSubview:myGraph];
+  [self.view addSubview:self.myGraph];
   [self.view addSubview:self.labelValues];
 }
 
