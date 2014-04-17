@@ -220,10 +220,11 @@
 {
   UIImage *background = [UIImage imageNamed:@"mapbutton_bg"];
   UIImageView *bgView = [[UIImageView alloc] initWithImage:background];
-  UIView *buttons = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-10-background.size.width, 30, background.size.width, background.size.height)];
+  UIView *buttons = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-10-background.size.width, 30, background.size.width+10, background.size.height+10)];
   [buttons addSubview:bgView];
   [buttons sendSubviewToBack:bgView];
   UIImage *zoomOut = [UIImage imageNamed:@"exitfullscreen_button"];
+//  UIImage *zoomOut = [UIImage imageNamed:@"fullscreen_button"];
   UIButton *homeView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, zoomOut.size.width, zoomOut.size.height)];
   homeView.center = CGPointMake(background.size.width/2, background.size.height/3.9);
   [homeView addTarget:self action:@selector(homeAction:) forControlEvents:UIControlEventTouchUpInside];

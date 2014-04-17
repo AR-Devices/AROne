@@ -7,11 +7,11 @@
 //
 
 #import "ARSummaryGraphViewController.h"
-//#import "UIViewController+AKTabBarController.h"
 #import "ARSummaryGraphDetailViewController.h"
 #import "BEMSimpleLineGraphView.h"
 
 #import "ARDataPoint.h"
+#import "PAImageView.h"
 
 
 @interface ARSummaryGraphViewController ()
@@ -25,8 +25,8 @@
 @end
 
 @interface ARSummaryGraphViewController (){
-int previousStepperValue;
-int totalNumber;
+  int previousStepperValue;
+  int totalNumber;
 }
 @end
 @implementation ARSummaryGraphViewController
@@ -40,16 +40,17 @@ int totalNumber;
   [self setFunctionStyle:style];
   return self;
 }
+
 - (void)viewDidLoad
 {
   
   [super viewDidLoad];
-  self.title = @"SPEED";//FIXME this information will need to be extracted from parent
+  self.title = @"Detail";//FIXME this information will need to be extracted from parent
   //    d4dee6
   self.view.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
 
-  self.dataPoints = [[NSMutableArray alloc]init];
-  self.timePoints = [[NSMutableArray alloc]init];
+  self.dataPoints = [NSMutableArray new];
+  self.timePoints = [NSMutableArray new];
 
   UIView *header = [self createQuickPersonalView];
   [self.view addSubview:header];
@@ -59,10 +60,6 @@ int totalNumber;
 
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-
-}
 
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,19 +97,28 @@ int totalNumber;
 
 - (UIView *) createQuickPersonalView
 {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  UIImage *icon = [UIImage imageWithData:[defaults objectForKey:@"userIcon"]];
+  NSString *userName = [defaults objectForKey:@"userName"];
+  
   UIView* header = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,100)];
   header.backgroundColor = [UIColor clearColor];
   header.autoresizingMask = UIViewAutoresizingNone;
   
   CGRect imageRect = CGRectMake(10, 10, 76/1.9, 75/1.9);
-  UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
-  personIcon.image = [UIImage imageNamed:@"profile_hp"];
-  [header addSubview:personIcon];
+//  UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
+//  personIcon.image = icon;
+  UIColor *ringColor = [UIColor colorWithRed:57/255.0 green:137/255.0 blue:194/255.0 alpha:1.0];
+  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:ringColor progressColor:[UIColor blueColor]];
+  [avatarView setImage:icon];
+
+  [header addSubview:avatarView];
+  
   //  user Name, in the future
-  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 25)];
+  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
   name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
   name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
-  name.text = @"Peng Shao";
+  name.text = userName;
   name.backgroundColor = [UIColor clearColor];
   [header addSubview:name];
   return header;
@@ -254,11 +260,10 @@ int totalNumber;
   self.labelValues.text = [NSString stringWithFormat:@"%i", [[myGraph calculatePointValueSum] intValue]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   //--------------------color options start---------------------
-  UIColor *color;
-  color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+  UIColor *color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
-  myGraph.colorTop = color;
+//  myGraph.colorTop = color;
   myGraph.colorBottom = color;
   myGraph.backgroundColor = color;
   self.view.tintColor = color;

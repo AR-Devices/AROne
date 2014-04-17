@@ -454,7 +454,7 @@
   UIButton *sync_button = (UIButton *) sender;
   if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
-    [self.navigationController showSGProgressWithDuration:3]; //uses the navbar tint color
+    [self.navigationController showSGProgressWithDuration:3 andTintColor:[UIColor whiteColor]]; //uses the navbar tint color
     [ARCommon createSummaryClass:self.myDate];
 //    [ARCommon createDataPoint:100];
     int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
