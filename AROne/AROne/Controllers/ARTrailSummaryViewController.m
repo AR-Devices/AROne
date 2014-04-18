@@ -37,6 +37,12 @@
 
 //Create below tableview
 @property (nonatomic) UITableView *tableView;
+@property (nonatomic) NSInteger pageNum;
+//frame locations and size
+@property (nonatomic) NSInteger map_y_high;
+@property (nonatomic) NSInteger map_height;
+@property (nonatomic) NSInteger map_y_low;
+@property (nonatomic) NSInteger pageControl_height;
 
 @end
 
@@ -56,9 +62,12 @@
 
 - (void)viewDidLoad
 {
+  self.pageControl_height = 20;
+  self.map_height = 200;
+
   [super viewDidLoad];
   [self drawResorts];
-  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height-250-100) style:UITableViewStylePlain];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.map_y_low+self.pageControl_height, self.view.bounds.size.width, 160) style:UITableViewStylePlain];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView]; //jerry
@@ -67,15 +76,15 @@
 
 - (void) drawResorts
 {
+  self.pageNum = 2;
   // CCZ: set scroll screen area for scrollView
   CGFloat width = CGRectGetWidth(self.view.bounds);
   CGFloat height = CGRectGetHeight(self.view.bounds);
-  //  self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),  height - _buttonHeight)];
   
   //ccz: using full view here, so that even if the button does not cover it's full view, it will still looks good
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
   // CCZ: set content screen area
-  [self.scrollView setContentSize:CGSizeMake(width * 5, height)];
+  [self.scrollView setContentSize:CGSizeMake(width * self.pageNum, height)];
   // CCZ: enable page system
   [self.scrollView setPagingEnabled:YES];
   // CCZ: hide scroll indicator
@@ -83,18 +92,25 @@
   [self.scrollView setShowsVerticalScrollIndicator: NO];
   [self.scrollView setDelegate: self];
   
-  for (int i = 0; i < 5; i ++) {
+  for (int i = 0; i < self.pageNum; i ++) {
     //FIXME add different resort here...
     UIView *resortView= [[UIView alloc] initWithFrame:CGRectMake(i * width , 0 , width, height )];
-    [self drawResortOn:resortView];
+    NSString* trail_name = @"Kickwood Trail Map\nlocation: 1501 Kirkwood Meadows Dr,\nKirkwood, CA 95646";//FIXME this will be grab from server or database
+    UIImage*trail_image =[UIImage imageNamed:@"Kirkwood-Trail-Map-Lake-Tahoe.jpg"];//FIXME this will be grab from server or database
+    if(i == 1){
+      trail_name = @"Northstar Trail Map\nlocation: 5001 Northstar Dr, \nTruckee, CA 96161";//FIXME this will be grab from server or database
+      trail_image =[UIImage imageNamed:@"northstar-trail-map.jpg"];//FIXME this will be grab from server or database
+
+    }
+    [self drawResortOn:resortView trailName:trail_name trailMap:trail_image];
     [_scrollView addSubview:resortView];
   }
   
   [self.view addSubview:self.scrollView];
   
   //CCZ: implement dot control
-  self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 230, self.view.frame.size.width, 20)];
-  [self.pageControl setNumberOfPages:5];
+  self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.map_y_low, self.view.frame.size.width, self.pageControl_height)];
+  [self.pageControl setNumberOfPages:self.pageNum];
   [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
   self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
   self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
@@ -103,18 +119,20 @@
   [self.view addSubview:self.pageControl];
 }
 
-- (void) drawResortOn: (UIView *) view
+- (void) drawResortOn: (UIView *)view trailName:(NSString*) trail_name trailMap:(UIImage*)trail_image
 {
-  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 40)];
+  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 45)];
   address.numberOfLines = 3;
   address.adjustsFontSizeToFitWidth = YES;
-  address.text = @"Kickwood Trail Map\nlocation: 1501 Kirkwood Meadows Dr,\nKirkwood, CA 95646";
+  address.text = trail_name; ;
   address.textColor = [UIColor grayColor];
   [view addSubview:address];
-  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,80,self.view.bounds.size.width,150)];
+  self.map_y_high =address.bounds.size.height/2+address.center.y;
+  self.map_y_low = self.map_y_high+self.map_height;
+  UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,self.map_y_high,self.view.bounds.size.width,self.map_height)];
 //  landscapeButton.backgroundColor = [UIColor whiteColor];
-  UIImageView *map = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"northstar-trail-map.jpg"]];
-  map.frame = CGRectMake(0, 0, self.view.bounds.size.width, 150);
+  UIImageView *map = [[UIImageView alloc] initWithImage:trail_image];
+  map.frame = CGRectMake(0, 0, self.view.bounds.size.width, landscapeButton.bounds.size.height);
   trailPathView *pathView = [[trailPathView alloc] initWithFrame:map.frame];
   pathView.dataSource = self;
   [map addSubview:pathView];
@@ -136,30 +154,6 @@
   [landscapeButton addSubview:map];
   [landscapeButton addTarget:self action:@selector(landscapeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
   
-  
-//  UILabel *trail_1 = [[UILabel alloc] initWithFrame:CGRectMake(30, 220, 320, 15)];
-//  trail_1.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  trail_1.textColor = [UIColor greenColor];
-//  trail_1.text = @"The Gulch trail (3)"; //FIXME value should be extracted from section text
-//  //trail_1.textAlignment = NSTextAlignmentCenter;
-//  //trail_1.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-//  [view addSubview:trail_1];
-//
-//  UILabel *trial_2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 235, 320, 15)];
-//  trial_2.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  trial_2.textColor = [UIColor blueColor];
-//  trial_2.text = @"Lower Main Street (2)"; //FIXME value should be extracted from section text
-//  //trial_2.textAlignment = NSTextAlignmentCenter;
-//  //trial_2.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-//  [view addSubview:trial_2];
-//
-//  UILabel *trial_3 = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 320, 15)];
-//  trial_3.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  trial_3.textColor = [UIColor blackColor];
-//  trial_3.text = @"Maximum speed: 42 mph @ The Gulch"; //FIXME value should be extracted from section text
-//  //trial_3.textAlignment = NSTextAlignmentCenter;
-//  //trial_3.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-//  [view addSubview:trial_3];
 }
 
 

@@ -60,27 +60,6 @@
 
 }
 
-
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//  NSLog(@"--------------------1--------------");
-//
-//  NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
-//  UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-//    
-//  if (indexPath.section == 0) {
-//    cell = [ARSummaryGraphCell cellWithStyle:self.graphStyle andValues:self.dataPoints];
-//  }
-//  cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//
-//  //number cgrect 394 136
-//  cell.backgroundColor = [UIColor clearColor];
-//  
-//    return cell;
-//}
-
-
 #pragma mark - AKTabBarController Data Source
 - (NSString *)tabImageName
 {
@@ -260,7 +239,17 @@
   self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   //--------------------color options start---------------------
+  UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
+  UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
+  UIColor *orangeColor   = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
   UIColor *color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+  if(self.graphStyle == ARSummaryGraphCellStyleMaxSpeed){
+    color = purpleColor;
+  }else if(self.graphStyle == ARSummaryGraphCellStyleVerticalDrop){
+    color = neonblueColor;
+  }else if(self.graphStyle == ARSummaryGraphCellStyleAcceleration){
+    color = orangeColor;
+  }
   //  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
 //  myGraph.colorTop = color;
@@ -276,6 +265,7 @@
   self.myGraph.widthLine = 3.0;
   self.myGraph.enableTouchReport = YES;
   self.myGraph.enableBezierCurve = YES;
+  self.myGraph.animationGraphEntranceSpeed = 0;
   //--------------------color options end ----------------------
   [self.view addSubview:self.myGraph];
   [self.view addSubview:self.labelValues];
