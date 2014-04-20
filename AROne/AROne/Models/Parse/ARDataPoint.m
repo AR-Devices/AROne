@@ -18,7 +18,7 @@
 @dynamic player;
 
 + (NSString *)parseClassName {
-  return @"DataPoint4";
+  return @"DataPoint100";
 }
 
 @end

@@ -240,24 +240,43 @@
   self.myGraph.delegate = self;
   
   
-  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
-  self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 100, 51)];
+  self.labelValues.font = [UIFont fontWithName:@"Big Caslon" size:20.0];
   self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:0]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   
-  self.labelAvg = [[UILabel alloc] initWithFrame:CGRectMake(20, 418, 280, 51)];
+  self.labelAvg = [[UILabel alloc] initWithFrame:CGRectMake(200, 350  , 50, 51)];
   self.labelAvg.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
   if([self.dataPoints count]){
     self.labelAvg.text = [NSString stringWithFormat:@"%lu", ([[self.myGraph calculatePointValueSum] intValue])/[self.dataPoints count]];
   }else{
     self.labelAvg.text = @"0";
   }
-  self.labelAvg.textAlignment = NSTextAlignmentCenter;
   
-  self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
-  self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(30, -10, 100, 51)];
+  self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:10.0];
   self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:0]];
   self.labelTime.textAlignment = NSTextAlignmentCenter;
+  
+  UIImage* mph_unit =[UIImage imageNamed:@"mph_MaxSpeed"];
+  UIImageView *mph_unit_frame = [[UIImageView alloc] initWithImage: mph_unit];
+  mph_unit_frame.frame = CGRectMake(230, 365, mph_unit.size.width, mph_unit.size.height);
+  UIImage *maxpeed_frame =[UIImage imageNamed:@"MasSpeedCard_bg"];
+  UIImage *vdp_frame = [UIImage imageNamed:@"VDCard_bg"];
+  UIImage *acce_frame = [UIImage imageNamed:@"MasSpeedCard_bg"];
+  UIImageView* labelValueFrame;
+  if(self.graphStyle == ARSummaryGraphCellStyleMaxSpeed){
+    labelValueFrame = [[UIImageView alloc] initWithImage: maxpeed_frame];
+  }else if(self.graphStyle == ARSummaryGraphCellStyleVerticalDrop){
+    labelValueFrame = [[UIImageView alloc] initWithImage: vdp_frame];
+  }else if(self.graphStyle == ARSummaryGraphCellStyleAcceleration){
+    labelValueFrame = [[UIImageView alloc] initWithImage: acce_frame];
+  }
+  labelValueFrame.frame = CGRectMake(30, 345, maxpeed_frame.size.width, maxpeed_frame.size.height);
+  [labelValueFrame addSubview:self.labelValues];
+  [labelValueFrame addSubview:self.labelTime];
+  
+
   //--------------------color options start---------------------
   UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
   UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
@@ -288,9 +307,9 @@
   self.myGraph.animationGraphEntranceSpeed = 0;
   //--------------------color options end ----------------------
   [self.view addSubview:self.myGraph];
-  [self.view addSubview:self.labelValues];
+  [self.view addSubview:labelValueFrame];
   [self.view addSubview:self.labelAvg];
-  [self.view addSubview:self.labelTime];
+  [self.view addSubview:mph_unit_frame];
 
 }
 
