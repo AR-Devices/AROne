@@ -175,7 +175,7 @@
 
 -(void)landscapeButtonPressed:(id)sender
 {
-  ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] initWithImage:self.trail_image];
+  ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] initWithMap:self.trail_image];
 
   [self presentViewController:landscape animated:YES completion:^{
     //nothing
@@ -411,6 +411,11 @@
   if ([scrollView isEqual: self.scrollView]) {
     [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
     [self.tableView reloadData];
+    if ([self.pageControl currentPage]) {
+        self.trail_image =[UIImage imageNamed:@"northstar-trail-map.jpg"];//FIXME this will be grab from server or database
+    } else {
+      self.trail_image =[UIImage imageNamed:@"Kirkwood-Trail-Map-Lake-Tahoe.jpg"];//FIXME this will be grab from server or database
+    }
   }
   
 }

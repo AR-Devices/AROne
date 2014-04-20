@@ -17,12 +17,12 @@
 @property BOOL zoomed;
 @property BOOL trailOn;
 @property (nonatomic) trailPathView* trailPath;
-@property (nonatomic) UIImage * image;
+@property (nonatomic) UIImage * map;
 
 @end
 
 @implementation ARTrailSummaryMapViewController
-@synthesize map;
+
 #pragma mark - trailPathSource methods
 
 - (NSArray *)trailPathViewData:(trailPathView *)graphView
@@ -109,29 +109,27 @@
   return pointsArray;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-  NSLog(@"innitWithNibName");
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-    self.zoomed = NO;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-  }
-  return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//  NSLog(@"innitWithNibName");
+//  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//  if (self) {
+//    // Custom initialization
+//    self.zoomed = NO;
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    
+//  }
+//  return self;
+//}
 
 
-- (id)initWithImage:(UIImage*) trail_map
+- (id)initWithMap:(UIImage*) map
 {
   self = [super init];
-  self.image = trail_map;
   if (self) {
-    // Custom initialization
+    self.map = map;
     self.zoomed = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    
   }
   return self;
 }
@@ -143,11 +141,11 @@
   [super viewDidLoad];
   //get image from library
 
-  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (self.image.size.width*(self.view.bounds.size.height/self.image.size.height)), self.view.bounds.size.height)];
+  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (self.map.size.width*(self.view.bounds.size.height/self.map.size.height)), self.view.bounds.size.height)];
 //  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height * image.size.height / image.size.width))];
 
   NSLog(@"imageview width is %f, height is %f", self.imageView.bounds.size.width, self.imageView.bounds.size.height);
-  self.imageView.image = self.image;
+  self.imageView.image = self.map;
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
   NSLog(@"scrollView width is %f, height is %f", self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
   
