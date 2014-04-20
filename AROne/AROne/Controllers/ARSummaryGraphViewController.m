@@ -22,6 +22,9 @@
 
 @property (strong, nonatomic)  BEMSimpleLineGraphView *myGraph;
 @property (strong, nonatomic) UILabel *labelValues;
+@property (strong, nonatomic) UILabel *labelAvg;
+@property (strong, nonatomic) UILabel *labelTime;;
+
 @end
 
 @interface ARSummaryGraphViewController (){
@@ -193,6 +196,9 @@
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
   self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:index]];
+  self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:index]];
+  self.labelAvg.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueAverage] intValue]];
+
 //  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.timePoints objectAtIndex:index]];
 }
 
@@ -202,7 +208,7 @@
 //    self.labelDates.alpha = 0.0;
   } completion:^(BOOL finished){
     
-    self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+    //self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
 //    self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
     
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -213,7 +219,7 @@
 }
 
 - (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
-  self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+  //self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
 //  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
 }
 - (void)drawData{
@@ -236,8 +242,22 @@
   
   self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
   self.labelValues.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
-  self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:0]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
+  
+  self.labelAvg = [[UILabel alloc] initWithFrame:CGRectMake(20, 418, 280, 51)];
+  self.labelAvg.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  if([self.dataPoints count]){
+    self.labelAvg.text = [NSString stringWithFormat:@"%lu", ([[self.myGraph calculatePointValueSum] intValue])/[self.dataPoints count]];
+  }else{
+    self.labelAvg.text = @"0";
+  }
+  self.labelAvg.textAlignment = NSTextAlignmentCenter;
+  
+  self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(20, 318, 280, 51)];
+  self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
+  self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:0]];
+  self.labelTime.textAlignment = NSTextAlignmentCenter;
   //--------------------color options start---------------------
   UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
   UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
@@ -269,6 +289,9 @@
   //--------------------color options end ----------------------
   [self.view addSubview:self.myGraph];
   [self.view addSubview:self.labelValues];
+  [self.view addSubview:self.labelAvg];
+  [self.view addSubview:self.labelTime];
+
 }
 
 @end
