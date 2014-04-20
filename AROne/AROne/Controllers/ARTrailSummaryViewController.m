@@ -44,6 +44,7 @@
 @property (nonatomic) NSInteger map_y_low;
 @property (nonatomic) NSInteger pageControl_height;
 
+
 @end
 
 @implementation ARTrailSummaryViewController
@@ -100,7 +101,6 @@
     if(i == 1){
       trail_name = @"Northstar Trail Map\nlocation: 5001 Northstar Dr, \nTruckee, CA 96161";//FIXME this will be grab from server or database
       trail_image =[UIImage imageNamed:@"northstar-trail-map.jpg"];//FIXME this will be grab from server or database
-
     }
     [self drawResortOn:resortView trailName:trail_name trailMap:trail_image];
     [_scrollView addSubview:resortView];
@@ -114,7 +114,6 @@
   [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
   self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
   self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-//  self.pageControl.backgroundColor = [UIColor blueColor];
 
   [self.view addSubview:self.pageControl];
 }
@@ -124,13 +123,12 @@
   UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 45)];
   address.numberOfLines = 3;
   address.adjustsFontSizeToFitWidth = YES;
-  address.text = trail_name; ;
+  address.text = trail_name;
   address.textColor = [UIColor grayColor];
   [view addSubview:address];
   self.map_y_high =address.bounds.size.height/2+address.center.y;
   self.map_y_low = self.map_y_high+self.map_height;
   UIButton *landscapeButton = [[UIButton alloc] initWithFrame:CGRectMake(0,self.map_y_high,self.view.bounds.size.width,self.map_height)];
-//  landscapeButton.backgroundColor = [UIColor whiteColor];
   UIImageView *map = [[UIImageView alloc] initWithImage:trail_image];
   map.frame = CGRectMake(0, 0, self.view.bounds.size.width, landscapeButton.bounds.size.height);
   trailPathView *pathView = [[trailPathView alloc] initWithFrame:map.frame];
@@ -192,48 +190,6 @@
 
 -(NSArray *)trailPathViewData:(trailPathView *)graphView
 {
-  
-  //    NSArray *points = [[NSArray alloc] initWithObjects:
-  //                       [NSValue valueWithCGPoint:CGPointMake(571, 405.5)],   //LUMBERJACK
-  //                       [NSValue valueWithCGPoint:CGPointMake(564.5, 419)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(558.5, 432)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(553, 439.5)],    //rows should be 5+3x lanes
-  //                       [NSValue valueWithCGPoint:CGPointMake(544, 459.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(536, 488.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(527, 508)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(520.5, 525.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(505.5, 533)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(488.5, 547.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(474, 564.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(469.5, 575.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(463.5, 589)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(457, 612)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],
-  
-  //                       [NSValue valueWithCGPoint:CGPointMake(444, 636)],  //LOWER MAIN STREET
-  //                       [NSValue valueWithCGPoint:CGPointMake(436, 646.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(420, 663.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(412.5, 676.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(404, 686.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(394, 700.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(384.5, 710)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(368.5, 729.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
-  
-  
-  //                       [NSValue valueWithCGPoint:CGPointMake(457, 673)],   //THE GULCH
-  //                       [NSValue valueWithCGPoint:CGPointMake(451.5, 685.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(435, 706)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(426, 713.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(398.5, 735)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-  //                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-  //                       nil];
   NSArray *lumberJack = [[NSArray alloc] initWithObjects:
                          [NSValue valueWithCGPoint:CGPointMake(571, 405.5)],   //LUMBERJACK
                          [NSValue valueWithCGPoint:CGPointMake(564.5, 419)],
@@ -284,15 +240,6 @@
   return pointsArray;
 }
 
-//- (NSString *)tabTitle
-//{
-//	return self.title;
-//}
-/**
- * @desc CCZ: this is the top calender tool bar with left and right arrow plus date.
- * @param null
- * @return null
- */
 - (void) createToolBar
 {
   // set up calender, MUST be used before call createTooBar
@@ -448,11 +395,6 @@
 
 - (void)changePage:(id)sender
 {
-  //得到当前页面的ID
-  //int page = [sender currentPage];
-  
-  //在这里写你需要执行的代码
-  //......
 }
 
 //手指离开屏幕后ScrollView还会继续滚动一段时间只到停止
@@ -468,10 +410,11 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView*)scrollView
-
 {
-  //页面滚动时调用，设置当前页面的ID
   [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
+  NSLog(@"jerry wu%ld, %ld, %ld", (long)fabs(scrollView.contentOffset.x/self.view.frame.size.width), scrollView.contentOffset.x, self.view.frame.size.width);
+  [self.tableView reloadData];
+
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
@@ -538,55 +481,31 @@
   //  2fb3b6 Cyan
   //  ee962f orange
   //  ffffff white
-  if (indexPath.section == 0) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"THE GULCH" andValue:@"25" andValue2:@"1233" andValue3:@"3" rect:self.view.bounds];
-  } else if (indexPath.section == 1) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"POWDER BOWL" andValue:@"36" andValue2:@"3233" andValue3:@"1" rect:self.view.bounds ];
-  }else if (indexPath.section == 2) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"BOCA" andValue:@"37" andValue2:@"4344" andValue3:@"5" rect:self.view.bounds ];
-  }else if (indexPath.section == 3) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue  andTrail:@"DROP OFF" andValue:@"27" andValue2:@"2144" andValue3:@"7" rect:self.view.bounds ];
-  }else if (indexPath.section == 4) {
-    cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"SUGAR PINE GLADE" andValue:@"47" andValue2:@"5344" andValue3:@"1" rect:self.view.bounds ];
-  }  //number cgrect 394 136
+  if([self.pageControl currentPage] == 0){
+    if (indexPath.section == 0) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"THE GULCH" andValue:@"25" andValue2:@"1233" andValue3:@"3" rect:self.view.bounds];
+    } else if (indexPath.section == 1) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"POWDER BOWL" andValue:@"36" andValue2:@"3233" andValue3:@"1" rect:self.view.bounds ];
+    }else if (indexPath.section == 2) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"BOCA" andValue:@"37" andValue2:@"4344" andValue3:@"5" rect:self.view.bounds ];
+    }else if (indexPath.section == 3) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue  andTrail:@"DROP OFF" andValue:@"27" andValue2:@"2144" andValue3:@"7" rect:self.view.bounds ];
+    }else if (indexPath.section == 4) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"SUGAR PINE GLADE" andValue:@"47" andValue2:@"5344" andValue3:@"1" rect:self.view.bounds ];
+    }  //number cgrect 394 136
+  }else{
+    if (indexPath.section == 0) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"SKIDTRAIL" andValue:@"15" andValue2:@"3382" andValue3:@"9" rect:self.view.bounds];
+    } else if (indexPath.section == 1) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"LOGGER'S LOOP" andValue:@"24" andValue2:@"1258" andValue3:@"1" rect:self.view.bounds ];
+    }else if (indexPath.section == 2) {
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"SUGAR PINE GLADE" andValue:@"47" andValue2:@"6009" andValue3:@"5" rect:self.view.bounds ];
+    }  //number cgrect 394 136
+  }
   cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
   
   return cell;
-}
-
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//  NSLog(@"clicked at %d", indexPath.section);
-//  ARSummaryGraphCellStyle functionGraphStyle;
-//  switch(indexPath.section) {
-//    case 0:
-//      functionGraphStyle = ARSummaryGraphCellStyleMaxSpeed;
-//      break;
-//    case 1:
-//      functionGraphStyle = ARSummaryGraphCellStyleVerticalDrop;
-//      break;
-//    case 2:
-//      functionGraphStyle = ARSummaryGraphCellStyleAcceleration;
-//      break;
-//    default:
-//      functionGraphStyle = ARSummaryGraphCellStyleMaxSpeed;
-//      break;
-//  }
-//  ARSummaryGraphViewController *summaryTabGraph = [[ARSummaryGraphViewController alloc] init];
-//  summaryTabGraph.graphStyle = functionGraphStyle;
-//  //  UINavigationController *summaryNavi = [[UINavigationController alloc] initWithRootViewController:summaryTabGraph];
-//  // Set this in every view controller so that the back button displays back instead of the root view controller name
-//  //  no text on back button
-//  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-//  [self.navigationController pushViewController:summaryTabGraph animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  //  NSLog(@"clicked at %d", indexPath.row);
 }
 
 

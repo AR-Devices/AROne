@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ARTrailSummaryMapViewController : UIViewController
-
+@property(nonatomic) UIImage * map;
 @end

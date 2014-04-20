@@ -21,7 +21,7 @@
 @end
 
 @implementation ARTrailSummaryMapViewController
-
+@synthesize map;
 #pragma mark - trailPathSource methods
 
 - (NSArray *)trailPathViewData:(trailPathView *)graphView

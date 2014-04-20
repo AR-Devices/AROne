@@ -124,7 +124,6 @@
 
 + (ARTrailSummaryTableCell *)cellWithStyle:(ARTrailSummaryCellStyle)styles andTrail:(NSString *)trail andValue:(NSString *)value andValue2:(NSString *)value2 andValue3:(NSString*)value3 rect:(CGRect) rect;
 {
-  NSLog(@"rect is %f", rect.size.width);
   ARTrailSummaryTableCell *cell = [[ARTrailSummaryTableCell alloc]initWithFrame:rect];
   [cell setThemeWithStyle:styles andTrail:trail andValue:value andValue2: value2 andValue3: value3 rect:rect];
   return cell;
