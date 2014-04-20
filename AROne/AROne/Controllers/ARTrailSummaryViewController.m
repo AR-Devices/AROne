@@ -43,6 +43,7 @@
 @property (nonatomic) NSInteger map_height;
 @property (nonatomic) NSInteger map_y_low;
 @property (nonatomic) NSInteger pageControl_height;
+@property (nonatomic) UIImage* trail_image;
 
 
 @end
@@ -97,12 +98,12 @@
     //FIXME add different resort here...
     UIView *resortView= [[UIView alloc] initWithFrame:CGRectMake(i * width , 0 , width, height )];
     NSString* trail_name = @"Kickwood Trail Map\nlocation: 1501 Kirkwood Meadows Dr,\nKirkwood, CA 95646";//FIXME this will be grab from server or database
-    UIImage*trail_image =[UIImage imageNamed:@"Kirkwood-Trail-Map-Lake-Tahoe.jpg"];//FIXME this will be grab from server or database
+    self.trail_image =[UIImage imageNamed:@"Kirkwood-Trail-Map-Lake-Tahoe.jpg"];//FIXME this will be grab from server or database
     if(i == 1){
       trail_name = @"Northstar Trail Map\nlocation: 5001 Northstar Dr, \nTruckee, CA 96161";//FIXME this will be grab from server or database
-      trail_image =[UIImage imageNamed:@"northstar-trail-map.jpg"];//FIXME this will be grab from server or database
+      self.trail_image =[UIImage imageNamed:@"northstar-trail-map.jpg"];//FIXME this will be grab from server or database
     }
-    [self drawResortOn:resortView trailName:trail_name trailMap:trail_image];
+    [self drawResortOn:resortView trailName:trail_name trailMap:self.trail_image];
     [_scrollView addSubview:resortView];
   }
   
@@ -174,12 +175,8 @@
 
 -(void)landscapeButtonPressed:(id)sender
 {
-  NSLog(@"-------------------------");
-  ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] init];
+  ARTrailSummaryMapViewController *landscape = [[ARTrailSummaryMapViewController alloc] initWithImage:self.trail_image];
 
-//  [UIView  beginAnimations:nil context:NULL];
-//  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//  [UIView setAnimationDuration:0.75];
   [self presentViewController:landscape animated:YES completion:^{
     //nothing
   }];
@@ -413,7 +410,6 @@
   NSLog(@"scrollView is %@", scrollView);
   if ([scrollView isEqual: self.scrollView]) {
     [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
-    NSLog(@"jerry wu %ld, %f, %f", (long)fabs(scrollView.contentOffset.x/self.view.frame.size.width), scrollView.contentOffset.x, self.view.frame.size.width);
     [self.tableView reloadData];
   }
   

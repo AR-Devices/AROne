@@ -10,4 +10,6 @@
 
 @interface ARTrailSummaryMapViewController : UIViewController
 @property(nonatomic) UIImage * map;
+- (id)initWithImage:(UIImage*) trail_map;
+
 @end
