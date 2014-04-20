@@ -120,7 +120,7 @@
 
 - (void) drawResortOn: (UIView *)view trailName:(NSString*) trail_name trailMap:(UIImage*)trail_image
 {
-  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 45)];
+  UILabel *address = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, self.view.frame.size.width, 45)];
   address.numberOfLines = 3;
   address.adjustsFontSizeToFitWidth = YES;
   address.text = trail_name;
@@ -405,16 +405,18 @@
 
 -(void) scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
-  
   //  NSLog(@"scrolling ended");
 }
 
 -(void)scrollViewDidScroll:(UIScrollView*)scrollView
 {
-  [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
-  NSLog(@"jerry wu%ld, %ld, %ld", (long)fabs(scrollView.contentOffset.x/self.view.frame.size.width), scrollView.contentOffset.x, self.view.frame.size.width);
-  [self.tableView reloadData];
-
+  NSLog(@"scrollView is %@", scrollView);
+  if ([scrollView isEqual: self.scrollView]) {
+    [self.pageControl setCurrentPage:fabs(scrollView.contentOffset.x/self.view.frame.size.width)];
+    NSLog(@"jerry wu %ld, %f, %f", (long)fabs(scrollView.contentOffset.x/self.view.frame.size.width), scrollView.contentOffset.x, self.view.frame.size.width);
+    [self.tableView reloadData];
+  }
+  
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
