@@ -148,7 +148,7 @@
       for (int i = 0; i < [array count]; i++) {
         NSDictionary *dict = [array objectAtIndex:i];
         [self.dataPoints addObject:[dict objectForKey:data]];
-        [self.timePoints addObject:[dict objectForKey:@"timeRecord"]];
+        [self.timePoints addObject:[[dict objectForKey:@"timeRecord"]substringToIndex:5]];
 
 
       }
@@ -184,7 +184,7 @@
 #pragma mark - SimpleLineGraph Delegate
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-  return 10;
+  return 15;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
@@ -230,7 +230,7 @@
   }
   
   
-  self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(-10, 60, 330, 250)];
+  self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, 250)];
   self.myGraph.delegate = self;
   
   

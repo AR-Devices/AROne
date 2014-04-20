@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ARSummaryGraphCell.h"
-#import <BEMSimpleLineGraphView.h>
+#import "BEMSimpleLineGraphView.h"
 
 
 @interface ARSummaryGraphViewController : UIViewController <BEMSimpleLineGraphDelegate>
