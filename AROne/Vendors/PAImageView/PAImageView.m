@@ -108,33 +108,33 @@ NSString * const spm_identifier = @"spm.imagecache.tg";
     return self;
 }
 
-- (void)setImageURL:(NSString *)URL {
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URL]];
-    UIImage *cachedImage = (_cacheEnabled) ? [_cache getImageForURL:URL] : nil;
-    if(cachedImage) {
-        [self updateWithImage:cachedImage animated:NO];
-    } else {
-        __weak __typeof(self)weakSelf = self;
-        AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
-        requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-        [requestOperation setDownloadProgressBlock:^(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead) {
-            CGFloat progress = (CGFloat)totalBytesRead/(CGFloat)totalBytesExpectedToRead;
-            
-            _progressLayer.strokeEnd        = progress;
-            _backgroundLayer.strokeStart    = progress;
-        }];
-        [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            UIImage *image = responseObject;
-            [weakSelf updateWithImage:image animated:YES];
-            if(_cacheEnabled) {
-                [_cache setImage:responseObject forURL:URL];
-            }
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Image error: %@", error);
-        }];
-        [requestOperation start];
-    }
-}
+//- (void)setImageURL:(NSString *)URL {
+//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URL]];
+//    UIImage *cachedImage = (_cacheEnabled) ? [_cache getImageForURL:URL] : nil;
+//    if(cachedImage) {
+//        [self updateWithImage:cachedImage animated:NO];
+//    } else {
+//        __weak __typeof(self)weakSelf = self;
+//        AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+//        requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+//        [requestOperation setDownloadProgressBlock:^(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead) {
+//            CGFloat progress = (CGFloat)totalBytesRead/(CGFloat)totalBytesExpectedToRead;
+//            
+//            _progressLayer.strokeEnd        = progress;
+//            _backgroundLayer.strokeStart    = progress;
+//        }];
+//        [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+//            UIImage *image = responseObject;
+//            [weakSelf updateWithImage:image animated:YES];
+//            if(_cacheEnabled) {
+//                [_cache setImage:responseObject forURL:URL];
+//            }
+//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//            NSLog(@"Image error: %@", error);
+//        }];
+//        [requestOperation start];
+//    }
+//}
 
 - (void)setImage:(UIImage *)image {
   [self updateWithImage:image animated:NO];

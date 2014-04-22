@@ -129,7 +129,7 @@
 //  [query orderByAscending:@"createdAt"];
 //  [keys addObject:@"createdAt"];
 //  [query selectKeys:keys];
-  [query setLimit:500];
+  [query setLimit:100];
 //  [query setSkip:skip];
 //  if (self.createdAt != nil) {
 //    NSLog(@"called!");
