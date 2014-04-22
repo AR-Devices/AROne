@@ -146,8 +146,6 @@
       } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
         data = @"verticalDrop";
       }
-      NSLog(@"JERRY %@", data);
-
       for (int i = 0; i < [array count]; i++) {
         NSDictionary *dict = [array objectAtIndex:i];
         [self.dataPoints addObject:[dict objectForKey:data]];
@@ -319,7 +317,6 @@
   }else if(self.graphStyle == ARSummaryGraphCellStyleVerticalDrop){
     color = neonblueColor;
     self.myGraph.enableBezierCurve = NO;
-
   }else if(self.graphStyle == ARSummaryGraphCellStyleAcceleration){
     color = orangeColor;
     self.myGraph.enableBezierCurve = YES;

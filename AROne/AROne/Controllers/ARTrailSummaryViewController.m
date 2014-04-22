@@ -460,7 +460,11 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+  if([self.pageControl currentPage] == 1){
   return 5;
+  }else{
+    return 3;
+  }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -484,7 +488,7 @@
   //  2fb3b6 Cyan
   //  ee962f orange
   //  ffffff white
-  if([self.pageControl currentPage] == 0){
+  if([self.pageControl currentPage] == 1){
     if (indexPath.section == 0) {
       cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"THE GULCH" andValue:@"25" andValue2:@"1233" andValue3:@"3" rect:self.view.bounds];
     } else if (indexPath.section == 1) {
@@ -498,11 +502,11 @@
     }  //number cgrect 394 136
   }else{
     if (indexPath.section == 0) {
-      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"SKIDTRAIL" andValue:@"15" andValue2:@"3382" andValue3:@"9" rect:self.view.bounds];
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_green andTrail:@"Funny Bunny" andValue:@"15" andValue2:@"3382" andValue3:@"9" rect:self.view.bounds];
     } else if (indexPath.section == 1) {
-      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"LOGGER'S LOOP" andValue:@"24" andValue2:@"1258" andValue3:@"1" rect:self.view.bounds ];
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_blue andTrail:@"Jumper" andValue:@"24" andValue2:@"1258" andValue3:@"1" rect:self.view.bounds ];
     }else if (indexPath.section == 2) {
-      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"SUGAR PINE GLADE" andValue:@"47" andValue2:@"6009" andValue3:@"5" rect:self.view.bounds ];
+      cell = [ARTrailSummaryTableCell cellWithStyle:ARTralSummaryCellStyle_black  andTrail:@"The Wall" andValue:@"47" andValue2:@"6009" andValue3:@"5" rect:self.view.bounds ];
     }  //number cgrect 394 136
   }
   cell.selectionStyle = UITableViewCellEditingStyleNone;
