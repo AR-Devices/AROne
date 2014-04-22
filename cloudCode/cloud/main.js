@@ -11,7 +11,7 @@ Parse.Cloud.define("scoreBoard", function(request, response) {
 	query.include("player");
 	//query.equalTo("displayName", "danny");
 //	query.equalTo("date", request.params.date);
-//	query.addDescending(request.params.datatype);
+	query.addDescending(request.params.datatype);
 //	query.select("displayName", request.params.datatype);
 	query.greaterThanOrEqualTo("date", request.params.startDate);
 	query.lessThanOrEqualTo("date", request.params.endtDate);
