@@ -22,7 +22,7 @@
 
 @property (strong, nonatomic)  BEMSimpleLineGraphView *myGraph;
 @property (strong, nonatomic) UILabel *labelValues;
-@property (strong, nonatomic) UILabel *labelAvg;
+@property (strong, nonatomic) UILabel *labelMax;
 @property (strong, nonatomic) UILabel *labelTime;;
 
 @end
@@ -197,7 +197,7 @@
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
   self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:index]];
   self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:index]];
-  self.labelAvg.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueAverage] intValue]];
+ //DONT REMOVE self.labelMax.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueAverage] intValue]];
 
 //  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.timePoints objectAtIndex:index]];
 }
@@ -238,44 +238,75 @@
   
   self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, 250)];
   self.myGraph.delegate = self;
-  
+
   
   self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 100, 51)];
   self.labelValues.font = [UIFont fontWithName:@"Big Caslon" size:20.0];
   self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:0]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   
-  self.labelAvg = [[UILabel alloc] initWithFrame:CGRectMake(200, 350  , 50, 51)];
-  self.labelAvg.font = [UIFont fontWithName:@"Helvetica Neue" size:40.0];
-  if([self.dataPoints count]){
-    self.labelAvg.text = [NSString stringWithFormat:@"%lu", ([[self.myGraph calculatePointValueSum] intValue])/[self.dataPoints count]];
-  }else{
-    self.labelAvg.text = @"0";
-  }
+  self.labelMax = [[UILabel alloc] initWithFrame:CGRectMake(140, 350 ,90, 51)];
+  self.labelMax.font = [UIFont fontWithName:@"Helvetica Neue" size:20.0];
+  self.labelMax.textAlignment = UITextAlignmentRight;
   
   self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(30, -10, 100, 51)];
   self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:10.0];
   self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:0]];
   self.labelTime.textAlignment = NSTextAlignmentCenter;
   
-  UIImage* mph_unit =[UIImage imageNamed:@"mph_MaxSpeed"];
-  UIImageView *mph_unit_frame = [[UIImageView alloc] initWithImage: mph_unit];
-  mph_unit_frame.frame = CGRectMake(230, 365, mph_unit.size.width, mph_unit.size.height);
+  //units:
+  UIColor *unit_color = [UIColor colorWithRed:90/255.0f green:90/255.0f blue:90/255.0f alpha:1];
+
+  UILabel * speed_unit = [[UILabel alloc] initWithFrame:CGRectMake(240, 355, 100, 40)];
+  speed_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+  speed_unit.numberOfLines = 2;
+  speed_unit.text = @"mph\nMax speed";
+  speed_unit.textColor = unit_color;
+  UILabel * vdrop_unit = [[UILabel alloc] initWithFrame:CGRectMake(240, 355, 100, 40)];
+  vdrop_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+  vdrop_unit.numberOfLines = 2;
+  vdrop_unit.text = @"feet\nMax vdrop";
+  vdrop_unit.textColor = unit_color;
+  UILabel * acce_unit = [[UILabel alloc] initWithFrame:CGRectMake(240, 355, 100, 40)];
+  acce_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+  acce_unit.numberOfLines = 2;
+  acce_unit.text = @"ft/s2\nMax accel";
+  acce_unit.textColor = unit_color;
+ 
+  UILabel * trip_number = [[UILabel alloc] initWithFrame:CGRectMake(140, 390 ,90, 51)];
+  trip_number.font = [UIFont fontWithName:@"Helvetica Neue" size:20.0];
+  trip_number.textAlignment = UITextAlignmentRight;
+  trip_number.text = @"3";
+  UILabel * trip_number_unit = [[UILabel alloc] initWithFrame:CGRectMake(240, 395, 100, 40)];
+  trip_number_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+  trip_number_unit.numberOfLines = 2;
+  trip_number_unit.text = @"Times";
+  trip_number_unit.textColor = unit_color;
+
+  
+  
   UIImage *maxpeed_frame =[UIImage imageNamed:@"MasSpeedCard_bg"];
   UIImage *vdp_frame = [UIImage imageNamed:@"VDCard_bg"];
   UIImage *acce_frame = [UIImage imageNamed:@"MasSpeedCard_bg"];
   UIImageView* labelValueFrame;
   if(self.graphStyle == ARSummaryGraphCellStyleMaxSpeed){
     labelValueFrame = [[UIImageView alloc] initWithImage: maxpeed_frame];
+    [self.view addSubview:speed_unit];
+    self.labelMax.text = @"22.54";
   }else if(self.graphStyle == ARSummaryGraphCellStyleVerticalDrop){
     labelValueFrame = [[UIImageView alloc] initWithImage: vdp_frame];
+    [self.view addSubview:vdrop_unit];
+    self.labelMax.text = @"347.49";
   }else if(self.graphStyle == ARSummaryGraphCellStyleAcceleration){
     labelValueFrame = [[UIImageView alloc] initWithImage: acce_frame];
+    [self.view addSubview:acce_unit];
+    self.labelMax.text = @"5.016";
   }
   labelValueFrame.frame = CGRectMake(30, 345, maxpeed_frame.size.width, maxpeed_frame.size.height);
   [labelValueFrame addSubview:self.labelValues];
   [labelValueFrame addSubview:self.labelTime];
   
+
 
   //--------------------color options start---------------------
   UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
@@ -284,10 +315,15 @@
   UIColor *color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
   if(self.graphStyle == ARSummaryGraphCellStyleMaxSpeed){
     color = purpleColor;
+    self.myGraph.enableBezierCurve = YES;
   }else if(self.graphStyle == ARSummaryGraphCellStyleVerticalDrop){
     color = neonblueColor;
+    self.myGraph.enableBezierCurve = NO;
+
   }else if(self.graphStyle == ARSummaryGraphCellStyleAcceleration){
     color = orangeColor;
+    self.myGraph.enableBezierCurve = YES;
+
   }
   //  color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
   //  color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
@@ -303,13 +339,14 @@
 
   self.myGraph.widthLine = 3.0;
   self.myGraph.enableTouchReport = YES;
-  self.myGraph.enableBezierCurve = YES;
+
   self.myGraph.animationGraphEntranceSpeed = 0;
   //--------------------color options end ----------------------
   [self.view addSubview:self.myGraph];
   [self.view addSubview:labelValueFrame];
-  [self.view addSubview:self.labelAvg];
-  [self.view addSubview:mph_unit_frame];
+  [self.view addSubview:self.labelMax];
+  [self.view addSubview:trip_number];
+  [self.view addSubview:trip_number_unit];
 
 }
 

@@ -79,6 +79,7 @@
   UIColor *purpleColor   = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
   UIColor *neonblueColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
   UIColor *orangeColor   = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
+  UIColor *unit_color = [UIColor colorWithRed:90/255.0f green:90/255.0f blue:90/255.0f alpha:1];
 
   switch (style) {
   case ARScoreBoardCellStyleMaxSpeed:
@@ -94,13 +95,14 @@
 
       [self.cellView addSubview:maxspeed_text];
       //jw speed score units [CONSTANT]
-      UIImage *maxspeed_unit = [UIImage imageNamed:@"mph Max Speed"];
-      UIImageView *maxspeedUnitView = [[UIImageView alloc] initWithImage:maxspeed_unit];
-      maxspeedUnitView.frame = CGRectMake(43, 45, 76/1.9, 76/1.9);
-      maxspeedUnitView.contentMode = UIViewContentModeScaleAspectFit;
-      maxspeedUnitView.center = CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
 
-      [self.cellView addSubview:maxspeedUnitView];
+      UILabel * speed_unit = [[UILabel alloc] initWithFrame:CGRectMake(45, 45, 50, 76/1.9)];
+      speed_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+      speed_unit.numberOfLines = 2;
+      speed_unit.text = @"mph\nMax speed";
+      speed_unit.textColor = unit_color;
+      speed_unit.center =CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
+      [self.cellView addSubview:speed_unit];
     }
     break;
   case ARScoreBoardCellStyleVerticalDrop:
@@ -115,13 +117,13 @@
       vdrop_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2-5);
       [self.cellView addSubview:vdrop_graph];
       
-      UIImage *vdrop_unit = [UIImage imageNamed:@"mph Max Speed"];
-      UIImageView *vdropUnitView = [[UIImageView alloc] initWithImage:vdrop_unit];
-      vdropUnitView.frame = CGRectMake(43, 45, 76/1.9, 76/1.9);
-      vdropUnitView.contentMode = UIViewContentModeScaleAspectFit;
-      vdropUnitView.center = CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
-
-      [self.cellView addSubview:vdropUnitView];
+      UILabel * vdrop_unit = [[UILabel alloc] initWithFrame:CGRectMake(45, 45, 50, 76/1.9)];
+      vdrop_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+      vdrop_unit.numberOfLines = 2;
+      vdrop_unit.text = @"feet\nMax vdrop";
+      vdrop_unit.textColor = unit_color;
+      vdrop_unit.center =CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
+      [self.cellView addSubview:vdrop_unit];
     }
     break;
   case ARScoreBoardCellStyleAcceleration:
@@ -136,13 +138,13 @@
       acce_graph.center = CGPointMake(self.cellView.bounds.size.width/2+10+30,self.cellView.bounds.size.height/2-5);
       [self.cellView addSubview:acce_graph];
       
-      UIImage *acce_unit = [UIImage imageNamed:@"mph Max Speed"];
-      UIImageView *acceUnitView = [[UIImageView alloc] initWithImage:acce_unit];
-      acceUnitView.frame = CGRectMake(43, 45, 76/1.9, 76/1.9);
-      acceUnitView.contentMode = UIViewContentModeScaleAspectFit;
-      acceUnitView.center = CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
-
-      [self.cellView addSubview:acceUnitView];
+      UILabel * acce_unit = [[UILabel alloc] initWithFrame:CGRectMake(45, 45, 50, 76/1.9)];
+      acce_unit.font = [UIFont fontWithName:@"Avenir-Medium" size:10];
+      acce_unit.numberOfLines = 2;
+      acce_unit.text = @"ft/s2\nMax accel";
+      acce_unit.textColor = unit_color;
+      acce_unit.center =CGPointMake(self.cellView.bounds.size.width/2+10+80,self.cellView.bounds.size.height/2);
+      [self.cellView addSubview:acce_unit];
 //      UIImage *maxspeed_circle = [UIImage imageNamed:@"circle"];
 //      UIImageView *maxspeedCircleView = [[UIImageView alloc] initWithImage:maxspeed_circle];
 //      maxspeedCircleView.frame = CGRectMake(250, 45, 40, 40);
