@@ -266,9 +266,24 @@
       [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"objects are %@", objects);
         PFObject *Puser = [objects objectAtIndex:0];
-        Puser[@"name"] = user.name;
-        Puser[@"email"] = [user objectForKey:@"email"];
-        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
+        [Puser setObject:user.name forKey:@"name"];
+//        Puser[@"name"] = user.name;
+        @try {
+          [Puser setObject:[user objectForKey:@"email"] forKey:@"email"];
+        } @catch (NSException *exception) {
+          NSLog(@"Puser email exception %@", exception);
+        }
+        @try {
+          [Puser setObject:[[user objectForKey:@"location"] objectForKey:@"name"] forKey:@"location"];
+
+        } @catch (NSException *exception) {
+          NSLog(@"Puser location exception %@", exception);
+
+        }
+
+//        Puser[@"email"] = [user objectForKey:@"email"];
+//        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
+        
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.id]];
         NSData *data = [NSData dataWithContentsOfURL:url];
         PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:data];
