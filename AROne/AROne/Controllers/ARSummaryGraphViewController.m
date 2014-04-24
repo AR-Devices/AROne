@@ -193,8 +193,8 @@
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
-  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:index]];
-  self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:index]];
+  self.labelValues.text = [NSString stringWithFormat:@"%0.2f", [[self.dataPoints objectAtIndex:index] floatValue]];
+  self.labelTime.text = [NSString stringWithFormat:@"%0.2f", [[self.timePoints objectAtIndex:index] floatValue]];
  //DONT REMOVE self.labelMax.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueAverage] intValue]];
 
 //  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.timePoints objectAtIndex:index]];
@@ -240,7 +240,7 @@
   
   self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 100, 51)];
   self.labelValues.font = [UIFont fontWithName:@"Big Caslon" size:20.0];
-  self.labelValues.text = [NSString stringWithFormat:@"%@", [self.dataPoints objectAtIndex:0]];
+  self.labelValues.text = [NSString stringWithFormat:@"%0.2f", [[self.dataPoints objectAtIndex:0] floatValue]];
   self.labelValues.textAlignment = NSTextAlignmentCenter;
   
   self.labelMax = [[UILabel alloc] initWithFrame:CGRectMake(140, 350 ,90, 51)];
@@ -249,7 +249,7 @@
   
   self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(30, -10, 100, 51)];
   self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:10.0];
-  self.labelTime.text = [NSString stringWithFormat:@"%@", [self.timePoints objectAtIndex:0]];
+  self.labelTime.text = [NSString stringWithFormat:@"%0.2f", [[self.timePoints objectAtIndex:0] floatValue]];
   self.labelTime.textAlignment = NSTextAlignmentCenter;
   
   //units:
@@ -285,7 +285,7 @@
   
   UIImage *maxpeed_frame =[UIImage imageNamed:@"MasSpeedCard_bg"];
   UIImage *vdp_frame = [UIImage imageNamed:@"VDCard_bg"];
-  UIImage *acce_frame = [UIImage imageNamed:@"MasSpeedCard_bg"];
+  UIImage *acce_frame = [UIImage imageNamed:@"Acce_card"];
   UIImageView* labelValueFrame;
   if(self.graphStyle == ARSummaryGraphCellStyleMaxSpeed){
     labelValueFrame = [[UIImageView alloc] initWithImage: maxpeed_frame];
