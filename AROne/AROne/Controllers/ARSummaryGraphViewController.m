@@ -117,7 +117,7 @@
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"yyyy-MM-dd"];
   NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
-  [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
+//  [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
 //  [query whereKey:@"player" equalTo:[PFUser currentUser]];
 
   
@@ -335,9 +335,8 @@
   self.myGraph.colorXaxisLabel = [UIColor whiteColor];
 
   self.myGraph.widthLine = 3.0;
-  self.myGraph.enableTouchReport = YES;
 
-  self.myGraph.animationGraphEntranceSpeed = 0;
+  self.myGraph.animationGraphEntranceSpeed = 100;
   //--------------------color options end ----------------------
   [self.view addSubview:self.myGraph];
   [self.view addSubview:labelValueFrame];
