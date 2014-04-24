@@ -173,10 +173,10 @@
       dataType = @"maxSpeed";
       break;
     case ARScoreBoardCellStyleVerticalDrop:
-      dataType = @"maxAcceleration";
+      dataType = @"verticalDrop";
       break;
     case ARScoreBoardCellStyleAcceleration:
-      dataType = @"verticalDrop";
+      dataType = @"maxAcceleration";
       break;
   }
   NSString *myStartDate;
