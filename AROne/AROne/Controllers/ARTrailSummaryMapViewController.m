@@ -177,7 +177,7 @@
   [tapOnce requireGestureRecognizerToFail:tapTwice];
   
   //then need to add the gesture recogniser to a view - this will be the view that recognises the gesture
-  //    [self.scrollView addGestureRecognizer:tapOnce];
+  [self.scrollView addGestureRecognizer:tapOnce];
   [self.scrollView addGestureRecognizer:tapTwice];
   [self drawNavigationInputs];
   
@@ -231,16 +231,16 @@
 
 - (void)tapOnce:(UIGestureRecognizer *)gesture
 {
-  //    NSLog(@"gesture is ", [gesture locationInView:self.scrollView]);
+  NSLog(@"point is %f, %f", [gesture locationInView:gesture.view].x, [gesture locationInView:gesture.view].y);
   
-  //step 1: find where is being touched
-  CGPoint point = [gesture locationInView:self.scrollView];
-  //step 2: create a top left point
-  point = CGPointMake(point.x - self.scrollView.bounds.size.height/2, point.y - self.scrollView.bounds.size.width/2);
-  //step 3: create a rect using that point
-  CGRect rect = CGRectMake(point.x, point.y, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-  //on a single  tap, call zoomToRect in UIScrollView
-  [self.scrollView zoomToRect:rect animated:YES];
+//  //step 1: find where is being touched
+//  CGPoint point = [gesture locationInView:self.scrollView];
+//  //step 2: create a top left point
+//  point = CGPointMake(point.x - self.scrollView.bounds.size.height/2, point.y - self.scrollView.bounds.size.width/2);
+//  //step 3: create a rect using that point
+//  CGRect rect = CGRectMake(point.x, point.y, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+//  //on a single  tap, call zoomToRect in UIScrollView
+//  [self.scrollView zoomToRect:rect animated:YES];
 }
 
 
@@ -261,6 +261,7 @@
 
 - (void)tapTwice:(UIGestureRecognizer *)recognizer
 {
+  NSLog(@"point is %f, %f", [recognizer locationInView:recognizer.view].x, [recognizer locationInView:recognizer.view].y);
   float newScale = [self.scrollView zoomScale] * 6.0;
   
   if (self.scrollView.zoomScale > self.scrollView.minimumZoomScale)
