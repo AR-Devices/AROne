@@ -36,3 +36,6 @@
 
 #define kJBColorTooltipColor [UIColor colorWithWhite:1.0 alpha:0.9]
 #define kJBColorTooltipTextColor UIColorFromHex(0x313131)
+#define mypurpleColor   [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
+#define myneonblueColor  [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
+#define myorangeColor    [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];

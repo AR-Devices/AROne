@@ -54,7 +54,10 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 // Helpers
 - (void)initFakeData;
 - (NSArray *)largestLineData; // largest collection of fake line data
-
+// content switching variables
+@property(nonatomic, strong) UIColor *mybackgroundcolor;
+@property(nonatomic, strong) NSString * mygraphtitle;
+@property(nonatomic, strong) UIColor *mylinecolor;
 
 @end
 
@@ -137,7 +140,22 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 {
   [super loadView];
   
-  self.view.backgroundColor = kJBColorLineChartControllerBackground;
+  //content switching
+  if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
+    self.mybackgroundcolor = mypurpleColor;
+    self.mygraphtitle = @"SPEED";
+  } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
+    self.mybackgroundcolor = myorangeColor;
+    self.mygraphtitle = @"ACCELERATION";
+  } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
+    self.mybackgroundcolor = myneonblueColor;
+    self.mygraphtitle = @"VERTICAL DROP";
+  }
+  
+  
+  
+  
+  self.view.backgroundColor = self.mybackgroundcolor;//kJBColorLineChartControllerBackground; //大背景颜色
   self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
   
   self.lineChartView = [[JBLineChartView alloc] init];
@@ -145,14 +163,16 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self.lineChartView.delegate = self;
   self.lineChartView.dataSource = self;
   self.lineChartView.headerPadding = kJBLineChartViewControllerChartHeaderPadding;
-  self.lineChartView.backgroundColor = kJBColorLineChartBackground;
+  self.lineChartView.backgroundColor = self.mybackgroundcolor;//kJBColorLineChartBackground; //内图背景颜色
   
   JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
-  headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];
+  headerView.titleLabel.text = self.mygraphtitle;//graph上面的title [kJBStringLabelAverageDailyRainfall uppercaseString];
   headerView.titleLabel.textColor = kJBColorLineChartHeader;
   headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
   headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
-  headerView.subtitleLabel.text = kJBStringLabel2013;
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd"];
+  headerView.subtitleLabel.text = [formatter stringFromDate:self.selectedDate];//kJBStringLabel2013;
   headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
   headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
   headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
