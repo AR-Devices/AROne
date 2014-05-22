@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ARSummaryGraphCell.h"
-#import "BEMSimpleLineGraphView.h"
+#import "JBBaseChartViewController.h"
 
 
-@interface ARSummaryGraphViewController : UIViewController <BEMSimpleLineGraphDelegate>
+@interface ARSummaryGraphViewController : JBBaseChartViewController
 @property(atomic) ARSummaryGraphCellStyle graphStyle;
 @property(atomic) NSDate *selectedDate;
 @property (strong, nonatomic) NSMutableArray *ArrayOfValues;

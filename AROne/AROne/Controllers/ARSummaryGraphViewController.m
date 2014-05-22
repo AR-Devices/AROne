@@ -8,22 +8,56 @@
 
 #import "ARSummaryGraphViewController.h"
 #import "ARSummaryGraphDetailViewController.h"
-#import "BEMSimpleLineGraphView.h"
 
 #import "ARDataPoint.h"
 #import "PAImageView.h"
 
+// Views
+#import "JBLineChartView.h"
+#import "JBChartHeaderView.h"
+#import "JBLineChartFooterView.h"
+#import "JBChartInformationView.h"
+
+#define ARC4RANDOM_MAX 0x100000000
+
+typedef NS_ENUM(NSInteger, JBLineChartLine){
+	JBLineChartLineSolid,
+  JBLineChartLineDashed,
+  JBLineChartLineCount
+};
+
+// Numerics
+CGFloat const kJBLineChartViewControllerChartHeight = 250.0f;
+CGFloat const kJBLineChartViewControllerChartPadding = 10.0f;
+CGFloat const kJBLineChartViewControllerChartHeaderHeight = 75.0f;
+CGFloat const kJBLineChartViewControllerChartHeaderPadding = 20.0f;
+CGFloat const kJBLineChartViewControllerChartFooterHeight = 20.0f;
+CGFloat const kJBLineChartViewControllerChartSolidLineWidth = 6.0f;
+CGFloat const kJBLineChartViewControllerChartDashedLineWidth = 2.0f;
+NSInteger const kJBLineChartViewControllerMaxNumChartPoints = 7;
+
+// Strings
+NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
+
+
 
 @interface ARSummaryGraphViewController ()
-@property (nonatomic) NSMutableArray *dataPoints;
-@property (nonatomic) NSMutableArray *timePoints;
-
 @property (nonatomic) NSDate *createdAt;
 
-@property (strong, nonatomic)  BEMSimpleLineGraphView *myGraph;
-@property (strong, nonatomic) UILabel *labelValues;
-@property (strong, nonatomic) UILabel *labelMax;
-@property (strong, nonatomic) UILabel *labelTime;;
+@property (nonatomic, strong) JBLineChartView *lineChartView;
+@property (nonatomic, strong) JBChartInformationView *informationView;
+@property (nonatomic, strong) NSArray *chartData;
+@property (nonatomic, strong) NSArray *daysOfWeek;
+// Buttons
+- (void)chartToggleButtonPressed:(id)sender;
+
+// Helpers
+- (void)initFakeData;
+- (NSArray *)largestLineData; // largest collection of fake line data
+// content switching variables
+@property(nonatomic, strong) UIColor *mybackgroundcolor;
+@property(nonatomic, strong) NSString * mygraphtitle;
+@property(nonatomic, strong) UIColor *mylinecolor;
 
 @end
 
@@ -32,12 +66,239 @@
   int totalNumber;
 }
 @end
+
 @implementation ARSummaryGraphViewController
+
 @synthesize graphStyle = _graphStyle;
 @synthesize selectedDate = _selectedDate;
+#pragma mark - Alloc/Init
 
+- (id)init
+{
+  self = [super init];
+  if (self)
+  {
+    [self initFakeData];
+  }
+  return self;
+}
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self)
+  {
+    [self initFakeData];
+  }
+  return self;
+}
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self)
+  {
+    [self initFakeData];
+  }
+  return self;
+}
+
+#pragma mark - Data
+
+- (void)initFakeData
+{
+  NSMutableArray *mutableLineCharts = [NSMutableArray array];
+  for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
+  {
+    NSMutableArray *mutableChartData = [NSMutableArray array];
+    for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+    {
+      [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)]]; // random number between 0 and 1
+    }
+    [mutableLineCharts addObject:mutableChartData];
+  }
+  _chartData = [NSArray arrayWithArray:mutableLineCharts];
+  _daysOfWeek = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];
+}
+
+- (NSArray *)largestLineData
+{
+  NSArray *largestLineData = nil;
+  for (NSArray *lineData in self.chartData)
+  {
+    if ([lineData count] > [largestLineData count])
+    {
+      largestLineData = lineData;
+    }
+  }
+  return largestLineData;
+}
+
+#pragma mark - View Lifecycle
+
+- (void)loadView
+{
+  [super loadView];
+  
+  //content switching
+  if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
+    self.mybackgroundcolor = mypurpleColor;
+    self.mygraphtitle = @"SPEED";
+  } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
+    self.mybackgroundcolor = myorangeColor;
+    self.mygraphtitle = @"ACCELERATION";
+  } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
+    self.mybackgroundcolor = myneonblueColor;
+    self.mygraphtitle = @"VERTICAL DROP";
+  }
+  
+  
+  
+  
+  self.view.backgroundColor = self.mybackgroundcolor;//kJBColorLineChartControllerBackground; //大背景颜色
+  self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
+  
+  self.lineChartView = [[JBLineChartView alloc] init];
+  self.lineChartView.frame = CGRectMake(kJBLineChartViewControllerChartPadding, kJBLineChartViewControllerChartPadding, self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeight);
+  self.lineChartView.delegate = self;
+  self.lineChartView.dataSource = self;
+  self.lineChartView.headerPadding = kJBLineChartViewControllerChartHeaderPadding;
+  self.lineChartView.backgroundColor = self.mybackgroundcolor;//kJBColorLineChartBackground; //内图背景颜色
+  
+  JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
+  headerView.titleLabel.text = self.mygraphtitle;//graph上面的title [kJBStringLabelAverageDailyRainfall uppercaseString];
+  headerView.titleLabel.textColor = kJBColorLineChartHeader;
+  headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
+  headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd"];
+  headerView.subtitleLabel.text = [formatter stringFromDate:self.selectedDate];//kJBStringLabel2013;
+  headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
+  headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
+  headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
+  headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
+  self.lineChartView.headerView = headerView;
+  
+  JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartFooterHeight)];
+  footerView.backgroundColor = [UIColor clearColor];
+  footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
+  footerView.leftLabel.textColor = [UIColor whiteColor];
+  footerView.rightLabel.text = [[self.daysOfWeek lastObject] uppercaseString];;
+  footerView.rightLabel.textColor = [UIColor whiteColor];
+  footerView.sectionCount = [[self largestLineData] count];
+  self.lineChartView.footerView = footerView;
+  
+  [self.view addSubview:self.lineChartView];
+  
+  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+  [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
+  [self.informationView setTitleTextColor:kJBColorLineChartHeader];
+  [self.informationView setTextShadowColor:nil];
+  [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
+  [self.view addSubview:self.informationView];
+  
+  [self.lineChartView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.lineChartView setState:JBChartViewStateExpanded];
+}
+
+#pragma mark - JBLineChartViewDelegate
+
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
+{
+  return [[[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex] floatValue];
+}
+
+- (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
+{
+  NSNumber *valueNumber = [[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex];
+  [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
+  [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
+  [self.informationView setHidden:NO animated:YES];
+  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
+  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
+}
+
+- (void)didUnselectLineInLineChartView:(JBLineChartView *)lineChartView
+{
+  [self.informationView setHidden:YES animated:YES];
+  [self setTooltipVisible:NO animated:YES];
+}
+
+#pragma mark - JBLineChartViewDataSource
+
+- (NSUInteger)numberOfLinesInLineChartView:(JBLineChartView *)lineChartView
+{
+  return [self.chartData count];
+}
+
+- (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex
+{
+  return [[self.chartData objectAtIndex:lineIndex] count];
+}
+
+- (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return (lineIndex == JBLineChartLineSolid) ? kJBColorLineChartDefaultSolidLineColor: kJBColorLineChartDefaultDashedLineColor;
+}
+
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return (lineIndex == JBLineChartLineSolid) ? kJBLineChartViewControllerChartSolidLineWidth: kJBLineChartViewControllerChartDashedLineWidth;
+}
+
+- (UIColor *)verticalSelectionColorForLineChartView:(JBLineChartView *)lineChartView
+{
+  return [UIColor whiteColor];
+}
+
+- (UIColor *)lineChartView:(JBLineChartView *)lineChartView selectionColorForLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return (lineIndex == JBLineChartLineSolid) ? kJBColorLineChartDefaultSolidSelectedLineColor: kJBColorLineChartDefaultDashedSelectedLineColor;
+}
+
+- (JBLineChartViewLineStyle)lineChartView:(JBLineChartView *)lineChartView lineStyleForLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return (lineIndex == JBLineChartLineSolid) ? JBLineChartViewLineStyleSolid : JBLineChartViewLineStyleDashed;
+}
+
+- (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return lineIndex == JBLineChartViewLineStyleDashed;
+}
+
+- (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
+{
+  return lineIndex == JBLineChartViewLineStyleSolid;
+}
+
+#pragma mark - Buttons
+
+- (void)chartToggleButtonPressed:(id)sender
+{
+	UIView *buttonImageView = [self.navigationItem.rightBarButtonItem valueForKey:kJBLineChartViewControllerNavButtonViewKey];
+  buttonImageView.userInteractionEnabled = NO;
+  
+  CGAffineTransform transform = self.lineChartView.state == JBChartViewStateExpanded ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformMakeRotation(0);
+  buttonImageView.transform = transform;
+  
+  [self.lineChartView setState:self.lineChartView.state == JBChartViewStateExpanded ? JBChartViewStateCollapsed : JBChartViewStateExpanded animated:YES callback:^{
+    buttonImageView.userInteractionEnabled = YES;
+  }];
+}
+
+#pragma mark - Overrides
+
+- (JBChartView *)chartView
+{
+  return self.lineChartView;
+}
+
+/*
 - (id)initwithStyle:(ARSummaryGraphCellStyle)style
 {
   [self setFunctionStyle:style];
@@ -46,22 +307,49 @@
 
 - (void)viewDidLoad
 {
-  
+ 
   [super viewDidLoad];
-  self.title = @"Detail";//FIXME this information will need to be extracted from parent
-  //    d4dee6
-  self.view.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
+  self.title = @"Detail";
+  self.view.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];//    d4dee6
 
-  self.dataPoints = [NSMutableArray new];
-  self.timePoints = [NSMutableArray new];
 
-  UIView *header = [self createQuickPersonalView];
-  [self.view addSubview:header];
   [self queryDataPoints];
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - AKTabBarController Data Source
 - (NSString *)tabImageName
@@ -73,39 +361,6 @@
 {
 	return @"trail_icon_selected";
 }
-
-
-#pragma mark - Private Methods
-
-- (UIView *) createQuickPersonalView
-{
-  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-  UIImage *icon = [UIImage imageWithData:[defaults objectForKey:@"userIcon"]];
-  NSString *userName = [defaults objectForKey:@"userName"];
-  
-  UIView* header = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,100)];
-  header.backgroundColor = [UIColor clearColor];
-  header.autoresizingMask = UIViewAutoresizingNone;
-  
-  CGRect imageRect = CGRectMake(10, 10, 76/1.9, 75/1.9);
-//  UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
-//  personIcon.image = icon;
-  UIColor *ringColor = [UIColor colorWithRed:57/255.0 green:137/255.0 blue:194/255.0 alpha:1.0];
-  PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:ringColor progressColor:[UIColor blueColor]];
-  [avatarView setImage:icon];
-
-  [header addSubview:avatarView];
-  
-  //  user Name, in the future
-  UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, self.view.bounds.size.width - 90, 75/1.9)];
-  name.font = [UIFont fontWithName:@"Avenir-Medium" size:30.0/1.9];
-  name.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:109.0/255.0f alpha:1.0];
-  name.text = userName;
-  name.backgroundColor = [UIColor clearColor];
-  [header addSubview:name];
-  return header;
-}
-
 
 - (void) setFunctionStyle: (ARSummaryGraphCellStyle) style{
   self.graphStyle = style;
@@ -155,14 +410,14 @@
       }
       NSLog(@"dataPoints %@",self.dataPoints);
       NSLog(@"timePoints %@", self.timePoints);
-      [self.myGraph reloadGraph];
+      //reloadGraph[self.myGraph reloadGraph];
       PFObject *object = [array lastObject];
       if ([[object createdAt] isEqual:self.createdAt])
         return;
       else
         self.createdAt = [object createdAt];
     }
-    [self drawData];
+   // redraw
 
     NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
 //    [self.view setNeedsDisplay];
@@ -172,86 +427,9 @@
 //    }
   }];
 }
-#pragma mark - SimpleLineGraph Data Source
+*/
 
-- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-  return (int)[self.dataPoints count];
-}
-
-- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
-  return [[self.dataPoints objectAtIndex:index] floatValue];
-}
-
-#pragma mark - SimpleLineGraph Delegate
-
-- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-  return 15;
-}
-
-- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
-  return [self.timePoints objectAtIndex:index];
-}
-
-- (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
-  self.labelValues.text = [NSString stringWithFormat:@"%0.2f", [[self.dataPoints objectAtIndex:index] floatValue]];
-  self.labelTime.text = [NSString stringWithFormat:@"%0.2f", [[self.timePoints objectAtIndex:index] floatValue]];
- //DONT REMOVE self.labelMax.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueAverage] intValue]];
-
-//  self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.timePoints objectAtIndex:index]];
-}
-
-- (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
-  [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-    self.labelValues.alpha = 0.0;
-//    self.labelDates.alpha = 0.0;
-  } completion:^(BOOL finished){
-    
-    //self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-//    self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
-    
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-      self.labelValues.alpha = 1.0; 
-//      self.labelDates.alpha = 1.0;
-    } completion:nil];
-  }];
-}
-
-- (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
-  //self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-//  self.labelDates.text = [NSString stringWithFormat:@"between 2000 and %@", [self.timePoints lastObject]];
-}
-- (void)drawData{
-  if([self.dataPoints count]==0){
-    for (int i = 0; i < 2 ; i++) {
-      [self.dataPoints addObject:@"loading"]; // Random values for the graph
-      [self.timePoints addObject:[NSString stringWithFormat:@"%@",@"AROne"]]; // Dates for the X-Axis of the graph
-      totalNumber = totalNumber + [[self.dataPoints objectAtIndex:i] intValue]; // All of the values added together
-    }
-  }else{
-    for (int i = 0; i < [self.dataPoints count]; i++) {
-      totalNumber = totalNumber + [[self.dataPoints objectAtIndex:i] intValue]; // All of the values added together
-    }
-  }
-  
-  
-  self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, 250)];
-  self.myGraph.delegate = self;
-
-  
-  self.labelValues = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 100, 51)];
-  self.labelValues.font = [UIFont fontWithName:@"Big Caslon" size:20.0];
-  self.labelValues.text = [NSString stringWithFormat:@"%0.2f", [[self.dataPoints objectAtIndex:0] floatValue]];
-  self.labelValues.textAlignment = NSTextAlignmentCenter;
-  
-  self.labelMax = [[UILabel alloc] initWithFrame:CGRectMake(140, 350 ,90, 51)];
-  self.labelMax.font = [UIFont fontWithName:@"Helvetica Neue" size:20.0];
-  self.labelMax.textAlignment = UITextAlignmentRight;
-  
-  self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake(30, -10, 100, 51)];
-  self.labelTime.font = [UIFont fontWithName:@"Helvetica Neue" size:10.0];
-  self.labelTime.text = [NSString stringWithFormat:@"%0.2f", [[self.timePoints objectAtIndex:0] floatValue]];
-  self.labelTime.textAlignment = NSTextAlignmentCenter;
-  
+ /*
   //units:
   UIColor *unit_color = [UIColor colorWithRed:90/255.0f green:90/255.0f blue:90/255.0f alpha:1];
 
@@ -345,5 +523,6 @@
   [self.view addSubview:trip_number_unit];
 
 }
+  */
 
 @end
