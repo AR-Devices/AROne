@@ -30,78 +30,310 @@
   
 
   NSArray *lumberJack = [[NSArray alloc] initWithObjects:
-                         [NSValue valueWithCGPoint:CGPointMake(571, 405.5)],   //LUMBERJACK
-                         [NSValue valueWithCGPoint:CGPointMake(564.5, 419)],
-                         [NSValue valueWithCGPoint:CGPointMake(558.5, 432)],
-                         [NSValue valueWithCGPoint:CGPointMake(553, 439.5)],    //rows should be 5+3x lanes
-                         [NSValue valueWithCGPoint:CGPointMake(544, 459.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(536, 488.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(527, 508)],
-                         [NSValue valueWithCGPoint:CGPointMake(520.5, 525.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(505.5, 533)],
-                         [NSValue valueWithCGPoint:CGPointMake(488.5, 547.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(474, 564.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(469.5, 575.5)],
-                         [NSValue valueWithCGPoint:CGPointMake(463.5, 589)],
-                         [NSValue valueWithCGPoint:CGPointMake(457, 612)],
-                         [NSValue valueWithCGPoint:CGPointMake(444, 636)],
-                         [NSValue valueWithCGPoint:CGPointMake(444, 636)],
-                         [NSValue valueWithCGPoint:CGPointMake(444, 636)], nil];
-  
-  
+                         [NSValue valueWithCGPoint:CGPointMake(266.5, 189)],   //LUMBERJACK
+                         [NSValue valueWithCGPoint:CGPointMake(262.5, 197)],
+                         [NSValue valueWithCGPoint:CGPointMake(259.5, 204)],
+                         [NSValue valueWithCGPoint:CGPointMake(255.5, 214)],    //rows should be 5+3x lanes
+                         [NSValue valueWithCGPoint:CGPointMake(252.5, 222)],
+                         [NSValue valueWithCGPoint:CGPointMake(250.5, 229)],
+                         [NSValue valueWithCGPoint:CGPointMake(247.5, 239)],
+                         [NSValue valueWithCGPoint:CGPointMake(242.5, 247)],
+                         [NSValue valueWithCGPoint:CGPointMake(232.5, 254)],
+                         [NSValue valueWithCGPoint:CGPointMake(225.5, 259)],
+                         [NSValue valueWithCGPoint:CGPointMake(221.5, 265)],
+                         [NSValue valueWithCGPoint:CGPointMake(217.5, 273)],
+                         [NSValue valueWithCGPoint:CGPointMake(213.5, 280)],
+                         [NSValue valueWithCGPoint:CGPointMake(211.5, 288)],
+                         [NSValue valueWithCGPoint:CGPointMake(207.5, 299)], nil];
+//  
+//  
   NSArray *lowerMainStreet = [[NSArray alloc] initWithObjects:
-                              [NSValue valueWithCGPoint:CGPointMake(444, 636)],  //LOWER MAIN STREET
-                              [NSValue valueWithCGPoint:CGPointMake(436, 646.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(420, 663.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(412.5, 676.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(404, 686.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(394, 700.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(384.5, 710)],
-                              [NSValue valueWithCGPoint:CGPointMake(368.5, 729.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],
-                              [NSValue valueWithCGPoint:CGPointMake(358, 743.5)],nil];
+                              [NSValue valueWithCGPoint:CGPointMake(207.5, 300)],  //LOWER MAIN STREET
+                              [NSValue valueWithCGPoint:CGPointMake(203.5, 305)],
+                              [NSValue valueWithCGPoint:CGPointMake(198.5, 310)],
+                              [NSValue valueWithCGPoint:CGPointMake(193.5, 317)],
+                              [NSValue valueWithCGPoint:CGPointMake(189.5, 323)],
+                              [NSValue valueWithCGPoint:CGPointMake(183.5, 331)],
+                              [NSValue valueWithCGPoint:CGPointMake(178.5, 337)],
+                              [NSValue valueWithCGPoint:CGPointMake(172.5, 343)], nil];
   NSArray *theGulch = [[NSArray alloc] initWithObjects:
-                       [NSValue valueWithCGPoint:CGPointMake(457, 673)],   //THE GULCH
-                       [NSValue valueWithCGPoint:CGPointMake(451.5, 685.5)],
-                       [NSValue valueWithCGPoint:CGPointMake(435, 706)],
-                       [NSValue valueWithCGPoint:CGPointMake(426, 713.5)],
-                       [NSValue valueWithCGPoint:CGPointMake(398.5, 735)],
-                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-                       [NSValue valueWithCGPoint:CGPointMake(368.5, 765.5)],
-                       nil];
-  //  CHCSVParser *parser = [[CHCSVParser alloc] initWithContentsOfCSVFile:@"data.csv"];
-  //  parser.delegate = self;
-  //  [parser parse];
+                      [NSValue valueWithCGPoint:CGPointMake(214.5, 317)],   //THE GULCH
+                       [NSValue valueWithCGPoint:CGPointMake(212.5, 321)],
+                      [NSValue valueWithCGPoint:CGPointMake(210.5, 324)],
+                      [NSValue valueWithCGPoint:CGPointMake(207.5, 328)],
+                     [NSValue valueWithCGPoint:CGPointMake(204.5, 330)],
+                      [NSValue valueWithCGPoint:CGPointMake(201.5, 335)],
+                       [NSValue valueWithCGPoint:CGPointMake(197.5, 338)],
+                       [NSValue valueWithCGPoint:CGPointMake(193.5, 340)],
+                      [NSValue valueWithCGPoint:CGPointMake(189.5, 343)],
+                       [NSValue valueWithCGPoint:CGPointMake(185.5, 347)],
+                       [NSValue valueWithCGPoint:CGPointMake(193.5, 340.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(190.5, 342.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(186.5, 344.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(182.5, 350.5)],nil];
   
-//  NSArray *data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"up1" ofType:@"csv"]];
-//  NSMutableArray *up1 = [[NSMutableArray alloc] init];
-//  NSMutableArray *up2 = [[NSMutableArray alloc] init];
-//  NSMutableArray *down1 = [NSMutableArray new];
-//  NSMutableArray *down2 = [NSMutableArray new];
-//  for (NSArray *dataPoint in data) {
-//    [up1 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
-//  }
-//  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"up2" ofType:@"csv"]];
-//  for (NSArray *dataPoint in data) {
-//    [up2 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
-//  }
-//  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"down1" ofType:@"csv"]];
-//  for (NSArray *dataPoint in data) {
-//    [down1 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
-//  }
-//  data = [NSArray arrayWithContentsOfCSVFile: [[NSBundle mainBundle] pathForResource:@"down2" ofType:@"csv"]];
-//  for (NSArray *dataPoint in data) {
-//    [down2 addObject:[NSValue valueWithCGPoint:CGPointMake([[dataPoint objectAtIndex:0] floatValue], [[dataPoint objectAtIndex:1] floatValue])]];
-//  }
-//  
-//  
+    NSArray *Skidtrail = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(220.5, 158.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(228.5, 162.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(238.5, 169.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(245.5, 174.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(253.5, 181.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(262.5, 186.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(168.5, 191.5)],nil];
+
+  NSArray *Magicmoglus = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(212, 164)],
+                       [NSValue valueWithCGPoint:CGPointMake(217, 167)],
+                       [NSValue valueWithCGPoint:CGPointMake(221, 173)],
+                       [NSValue valueWithCGPoint:CGPointMake(225, 177)],
+                       [NSValue valueWithCGPoint:CGPointMake(230, 182)],
+                       [NSValue valueWithCGPoint:CGPointMake(236, 187)],
+                       [NSValue valueWithCGPoint:CGPointMake(241, 190)],
+                       [NSValue valueWithCGPoint:CGPointMake(245, 194)],
+                       [NSValue valueWithCGPoint:CGPointMake(249, 198)],
+                       [NSValue valueWithCGPoint:CGPointMake(254, 203)],
+                       [NSValue valueWithCGPoint:CGPointMake(259, 208)],nil];
+
+  NSArray *Sidewinder = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(190.5, 161.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(194.5, 168.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(196.5, 174.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(200.5, 181.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(203.5, 188.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(206.5, 197.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(210.5, 210.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(210.5, 218.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(210.5, 228.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(212.5, 244.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(214.5, 253.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(213.5, 264.5)],nil];
+
+  
+  NSArray *Forerunner = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(218, 180)],
+                         [NSValue valueWithCGPoint:CGPointMake(218, 185)],
+                         [NSValue valueWithCGPoint:CGPointMake(216, 192)],
+                         [NSValue valueWithCGPoint:CGPointMake(217, 198)],
+                         [NSValue valueWithCGPoint:CGPointMake(218, 204)],
+                         [NSValue valueWithCGPoint:CGPointMake(215.5, 212)],
+                         [NSValue valueWithCGPoint:CGPointMake(214.5, 218)],
+                         [NSValue valueWithCGPoint:CGPointMake(214.5, 228)],
+                         [NSValue valueWithCGPoint:CGPointMake(214.5, 237)],nil];
+  
+  NSArray *Moonshine = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(179.5, 171.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(182.5, 178.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(186.5, 185.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(187.5, 195.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(190.5, 206.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(192.5, 216.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(197.5, 238.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(199.5, 246.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(201.5, 254.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(206.5, 263.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(213.5, 272.5)],nil];
+  
+  NSArray *Pinball = [[NSArray alloc] initWithObjects:
+                        [NSValue valueWithCGPoint:CGPointMake(172, 186)],
+                        [NSValue valueWithCGPoint:CGPointMake(176, 194)],
+                        [NSValue valueWithCGPoint:CGPointMake(176, 201)],
+                        [NSValue valueWithCGPoint:CGPointMake(175, 208)],
+                        [NSValue valueWithCGPoint:CGPointMake(179, 216.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(179, 224.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(180, 234.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(179, 242)],
+                        [NSValue valueWithCGPoint:CGPointMake(179, 249.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(183, 255.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(189, 266.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(191, 275.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(192, 284.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(193, 294.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(196, 308.5)],nil];
+  
+  NSArray *Thestairs = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(167.5, 190.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(166.5, 197.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(165.5, 210.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(164.5, 220.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(164.5, 231.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(163.5, 244.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(165.5, 254)],
+                         [NSValue valueWithCGPoint:CGPointMake(170.5, 261)],nil];
+  
+  NSArray *Pipeline = [[NSArray alloc] initWithObjects:
+                        [NSValue valueWithCGPoint:CGPointMake(172.5, 263.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(177.5, 271.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(178.5, 279.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(179.5, 292.5)],
+                        [NSValue valueWithCGPoint:CGPointMake(176.5, 299.5)],nil];
+  
+  NSArray *Dropoff = [[NSArray alloc] initWithObjects:
+                      [NSValue valueWithCGPoint:CGPointMake(149, 182)],
+                      [NSValue valueWithCGPoint:CGPointMake(148, 190)],
+                      [NSValue valueWithCGPoint:CGPointMake(147, 200)],
+                      [NSValue valueWithCGPoint:CGPointMake(144, 211)],
+                      [NSValue valueWithCGPoint:CGPointMake(142, 221)],
+                      [NSValue valueWithCGPoint:CGPointMake(141, 232)],
+                      [NSValue valueWithCGPoint:CGPointMake(144, 241)],
+                      [NSValue valueWithCGPoint:CGPointMake(153, 249)],
+                      [NSValue valueWithCGPoint:CGPointMake(154, 259)],
+                      [NSValue valueWithCGPoint:CGPointMake(155, 268)],
+                      [NSValue valueWithCGPoint:CGPointMake(160, 279)],
+                      [NSValue valueWithCGPoint:CGPointMake(168, 292)],
+                      [NSValue valueWithCGPoint:CGPointMake(173, 301)],nil];
+  
+  NSArray *Woodchuck = [[NSArray alloc] initWithObjects:
+                      [NSValue valueWithCGPoint:CGPointMake(123.5, 249.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(128.5, 252.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(132.5, 257.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(128.5, 252.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(132.5, 257.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(136.5, 261.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(142.5, 267.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(147.5, 272.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(154.5, 275.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(160.5, 281.5)],nil];
+  
+  NSArray *Loggersloop = [[NSArray alloc] initWithObjects:
+                      [NSValue valueWithCGPoint:CGPointMake(142, 185)],
+                      [NSValue valueWithCGPoint:CGPointMake(136.5, 193)],
+                      [NSValue valueWithCGPoint:CGPointMake(130, 201)],
+                      [NSValue valueWithCGPoint:CGPointMake(124, 207)],
+                      [NSValue valueWithCGPoint:CGPointMake(121.5, 215)],
+                      [NSValue valueWithCGPoint:CGPointMake(122, 223)],
+                      [NSValue valueWithCGPoint:CGPointMake(122, 232)],
+                      [NSValue valueWithCGPoint:CGPointMake(122, 240)],
+                      [NSValue valueWithCGPoint:CGPointMake(117, 248)],
+                      [NSValue valueWithCGPoint:CGPointMake(109, 255)],
+                      [NSValue valueWithCGPoint:CGPointMake(102, 261)],
+                      [NSValue valueWithCGPoint:CGPointMake(92, 265)],
+                      [NSValue valueWithCGPoint:CGPointMake(86.5, 268)],
+                      [NSValue valueWithCGPoint:CGPointMake(80, 271)],
+                      [NSValue valueWithCGPoint:CGPointMake(80, 279)],
+                      [NSValue valueWithCGPoint:CGPointMake(81.5, 288)],
+                      [NSValue valueWithCGPoint:CGPointMake(81.5, 293.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(85.5, 297.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(91.5, 301.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(98.5, 305.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(107.5, 309.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(116.5, 315.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(125.5, 319.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(133.5, 323.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(143.5, 325.5)],
+                      [NSValue valueWithCGPoint:CGPointMake(154.5, 330.5)],nil];
+  
+  NSArray *Catsface = [[NSArray alloc] initWithObjects: //Cat's face
+                        [NSValue valueWithCGPoint:CGPointMake(96.5, 271)],
+                        [NSValue valueWithCGPoint:CGPointMake(93.5, 275)],
+                        [NSValue valueWithCGPoint:CGPointMake(89.5, 280)],
+                        [NSValue valueWithCGPoint:CGPointMake(87.5, 286)],
+                        [NSValue valueWithCGPoint:CGPointMake(88.5, 291)],
+                        [NSValue valueWithCGPoint:CGPointMake(88.5, 294)],nil];
+  
+  NSArray *Thewoods = [[NSArray alloc] initWithObjects:
+                          [NSValue valueWithCGPoint:CGPointMake(57, 349)],
+                          [NSValue valueWithCGPoint:CGPointMake(52, 356)],
+                          [NSValue valueWithCGPoint:CGPointMake(48, 366)],
+                          [NSValue valueWithCGPoint:CGPointMake(45, 372)],
+                          [NSValue valueWithCGPoint:CGPointMake(43, 377)],
+                          [NSValue valueWithCGPoint:CGPointMake(46, 385)],
+                          [NSValue valueWithCGPoint:CGPointMake(50, 388)],
+                          [NSValue valueWithCGPoint:CGPointMake(53, 391)],
+                          [NSValue valueWithCGPoint:CGPointMake(52, 398)],
+                          [NSValue valueWithCGPoint:CGPointMake(49, 403)],
+                          [NSValue valueWithCGPoint:CGPointMake(48, 406)],
+                          [NSValue valueWithCGPoint:CGPointMake(47, 413)],
+                          [NSValue valueWithCGPoint:CGPointMake(45, 417)],
+                          [NSValue valueWithCGPoint:CGPointMake(43, 423)],
+                          [NSValue valueWithCGPoint:CGPointMake(47, 432)],
+                          [NSValue valueWithCGPoint:CGPointMake(50, 438)],
+                          [NSValue valueWithCGPoint:CGPointMake(55, 443)],
+                          [NSValue valueWithCGPoint:CGPointMake(60, 448)],
+                          [NSValue valueWithCGPoint:CGPointMake(65, 453)],
+                          [NSValue valueWithCGPoint:CGPointMake(72, 464)],nil];
+  NSArray *Condorun = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(90, 420)],
+                       [NSValue valueWithCGPoint:CGPointMake(84, 429)],
+                       [NSValue valueWithCGPoint:CGPointMake(81, 437)],
+                       [NSValue valueWithCGPoint:CGPointMake(77, 442)],
+                       [NSValue valueWithCGPoint:CGPointMake(73, 448)],
+                       [NSValue valueWithCGPoint:CGPointMake(69, 454)],
+                       [NSValue valueWithCGPoint:CGPointMake(67, 459)],nil];
+  NSArray *Villagerun = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(130, 383.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(125, 385.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(121, 388.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(113, 392.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(104, 397)],
+                       [NSValue valueWithCGPoint:CGPointMake(99, 402.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(91, 409.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(87, 412)],
+                       [NSValue valueWithCGPoint:CGPointMake(84.5, 415.5)],nil];
+  NSArray *Coyotefork = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(150, 417.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(144, 417.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(138, 419.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(132, 423.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(125, 429.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(120, 433.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(115, 438.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(113, 440.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(115, 445.5)],
+                         [NSValue valueWithCGPoint:CGPointMake(117, 453.5)],nil];
+  NSArray *Homerun = [[NSArray alloc] initWithObjects:
+                       [NSValue valueWithCGPoint:CGPointMake(163, 424)],
+                       [NSValue valueWithCGPoint:CGPointMake(168.5, 417.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(176.5, 414.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(184.5, 408.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(192.5, 405.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(201.5, 400.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(208.5, 395.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(217.5, 390.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(225.5, 386.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(230.5, 377.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(233.5, 369.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(242.5, 367.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(251.5, 362.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(256.5, 352.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(260.5, 341.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(267.5, 335.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(276.5, 323.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(281.5, 322.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(288.5, 318.5)],
+                       [NSValue valueWithCGPoint:CGPointMake(295.5, 315.5)],nil];
+  
+  
+//  NSArray *theGulch = [[NSArray alloc] initWithObjects:
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],
+//                       [NSValue valueWithCGPoint:CGPointMake()],nil];
+
   NSMutableArray *pointsArray = [NSMutableArray new];
-//  [pointsArray addObject:up1];
-//  [pointsArray addObject:up2];
-//  [pointsArray addObject:down1];
-//  [pointsArray addObject:down2];
+  [pointsArray addObject:Loggersloop];
+  [pointsArray addObject:Homerun];
+  [pointsArray addObject:Coyotefork];
+  [pointsArray addObject:Villagerun];
+  [pointsArray addObject:Condorun];
+  [pointsArray addObject:Thewoods];
+  [pointsArray addObject:Catsface];
+  [pointsArray addObject:Woodchuck];
+  [pointsArray addObject:Moonshine];
+  [pointsArray addObject:Pipeline];
+  [pointsArray addObject:Dropoff];
+  [pointsArray addObject:Thestairs];
+  [pointsArray addObject:Pinball];
+  [pointsArray addObject:Forerunner];
+  [pointsArray addObject:Sidewinder];
+  [pointsArray addObject:Magicmoglus];
+  [pointsArray addObject:Skidtrail];
   [pointsArray addObject:lumberJack];
   [pointsArray addObject:lowerMainStreet];
   [pointsArray addObject:theGulch];
