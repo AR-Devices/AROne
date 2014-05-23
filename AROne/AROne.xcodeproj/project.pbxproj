@@ -242,9 +242,6 @@
 		EC20534B192B15150039BC6A /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205342192B15150039BC6A /* JBChartInformationView.m */; };
 		EC20534C192B15150039BC6A /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205344192B15150039BC6A /* JBChartTooltipTipView.m */; };
 		EC20534D192B15150039BC6A /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205346192B15150039BC6A /* JBChartTooltipView.m */; };
-		EC205355192B15290039BC6A /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205350192B15290039BC6A /* JBBarChartView.m */; };
-		EC205356192B15290039BC6A /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205352192B15290039BC6A /* JBChartView.m */; };
-		EC205357192B15290039BC6A /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC205354192B15290039BC6A /* JBLineChartView.m */; };
 		EC458E66189499C200014337 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC458E65189499C200014337 /* trailPathView.m */; };
 		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
 		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
@@ -581,12 +578,6 @@
 		EC205344192B15150039BC6A /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
 		EC205345192B15150039BC6A /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
 		EC205346192B15150039BC6A /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
-		EC20534F192B15290039BC6A /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
-		EC205350192B15290039BC6A /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
-		EC205351192B15290039BC6A /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
-		EC205352192B15290039BC6A /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
-		EC205353192B15290039BC6A /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
-		EC205354192B15290039BC6A /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		EC205359192B153F0039BC6A /* JBColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
 		EC20535A192B153F0039BC6A /* JBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
 		EC20535B192B153F0039BC6A /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
@@ -1263,7 +1254,6 @@
 		EC205326192B13FD0039BC6A /* view */ = {
 			isa = PBXGroup;
 			children = (
-				EC20534E192B151C0039BC6A /* Charts */,
 				EC205335192B15150039BC6A /* Cells */,
 				EC205338192B15150039BC6A /* Footers */,
 				EC20533D192B15150039BC6A /* Headers */,
@@ -1327,19 +1317,6 @@
 				EC205346192B15150039BC6A /* JBChartTooltipView.m */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		EC20534E192B151C0039BC6A /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				EC20534F192B15290039BC6A /* JBBarChartView.h */,
-				EC205350192B15290039BC6A /* JBBarChartView.m */,
-				EC205351192B15290039BC6A /* JBChartView.h */,
-				EC205352192B15290039BC6A /* JBChartView.m */,
-				EC205353192B15290039BC6A /* JBLineChartView.h */,
-				EC205354192B15290039BC6A /* JBLineChartView.m */,
-			);
-			name = Charts;
 			sourceTree = "<group>";
 		};
 		EC205358192B153F0039BC6A /* Constants */ = {
@@ -1735,7 +1712,6 @@
 				3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
-				EC205355192B15290039BC6A /* JBBarChartView.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
@@ -1765,7 +1741,6 @@
 				3C92D40A18ACA7E70051BE54 /* ARHeader.m in Sources */,
 				3C3F181A17DE886D00658555 /* PMCalendarController.m in Sources */,
 				ECA790F71903AD30003145D6 /* BEMLine.m in Sources */,
-				EC205357192B15290039BC6A /* JBLineChartView.m in Sources */,
 				3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */,
 				ECA790F81903AD30003145D6 /* BEMSimpleLineGraphView.m in Sources */,
 				EC205334192B14350039BC6A /* JBBaseViewController.m in Sources */,
@@ -1778,7 +1753,6 @@
 				3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */,
 				3CFE887C18064422006CF472 /* drawGraph.m in Sources */,
 				ECA790F61903AD30003145D6 /* BEMCircle.m in Sources */,
-				EC205356192B15290039BC6A /* JBChartView.m in Sources */,
 				EC20534B192B15150039BC6A /* JBChartInformationView.m in Sources */,
 				3C3F181917DE886D00658555 /* PMCalendarBackgroundView.m in Sources */,
 				3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */,
@@ -1920,7 +1894,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
-					/Users/jiachiw/github/AROne/AROne,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1928,7 +1901,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18D7CE35-986B-4AC3-A6A2-B6758051AE4B";
+				PROVISIONING_PROFILE = "044715CB-7187-44B4-9348-AA8DC475A57B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1945,7 +1918,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/chenchenzheng/github/ardevices/AROne/AROne,
-					/Users/jiachiw/github/AROne/AROne,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1953,7 +1925,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18D7CE35-986B-4AC3-A6A2-B6758051AE4B";
+				PROVISIONING_PROFILE = "044715CB-7187-44B4-9348-AA8DC475A57B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
