@@ -203,12 +203,12 @@ NSString * const spm_identifier = @"spm.imagecache.tg";
         imageData       = UIImageJPEGRepresentation(image, 1.f);
     } else return;
     
-    [imageData writeToFile:[_cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%u.%@", URL.hash, fileExtension]] atomically:YES];
+    [imageData writeToFile:[_cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%lu.%@", (unsigned long)URL.hash, fileExtension]] atomically:YES];
 }
 
 - (UIImage *)getImageForURL:(NSString *)URL {
     NSString *fileExtension = [[URL componentsSeparatedByString:@"."] lastObject];
-    NSString *path = [_cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%u.%@", URL.hash, fileExtension]];
+    NSString *path = [_cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%lu.%@", (unsigned long)URL.hash, fileExtension]];
     if([_fileManager fileExistsAtPath:path]) {
         return [UIImage imageWithData:[NSData dataWithContentsOfFile:path]];
     }

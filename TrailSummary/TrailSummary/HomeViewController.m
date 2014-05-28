@@ -254,17 +254,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     //reset zoomScale back to 1 so that contentSize can be modified correctly
