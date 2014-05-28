@@ -32,7 +32,7 @@ CGFloat const kJBLineChartViewControllerChartPadding = 10.0f;
 CGFloat const kJBLineChartViewControllerChartHeaderHeight = 75.0f;
 CGFloat const kJBLineChartViewControllerChartHeaderPadding = 20.0f;
 CGFloat const kJBLineChartViewControllerChartFooterHeight = 20.0f;
-CGFloat const kJBLineChartViewControllerChartSolidLineWidth = 6.0f;
+CGFloat const kJBLineChartViewControllerChartSolidLineWidth = 2.0f;
 CGFloat const kJBLineChartViewControllerChartDashedLineWidth = 2.0f;
 NSInteger const kJBLineChartViewControllerMaxNumChartPoints = 7;
 
@@ -43,7 +43,10 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 @interface ARSummaryGraphViewController ()
 @property (nonatomic) NSDate *createdAt;
-
+@property (nonatomic) NSMutableArray *dataPoints;
+@property (nonatomic) NSMutableArray *timePoints;
+@property (nonatomic) float average;
+@property (nonatomic) float most_negative_acce;
 @property (nonatomic, strong) JBLineChartView *lineChartView;
 @property (nonatomic, strong) JBChartInformationView *informationView;
 @property (nonatomic, strong) NSArray *chartData;
@@ -78,7 +81,9 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self = [super init];
   if (self)
   {
-    [self initFakeData];
+    self.dataPoints = [NSMutableArray new];
+    self.timePoints = [NSMutableArray new];
+    [self queryDataPoints];
   }
   return self;
 }
@@ -88,7 +93,9 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithCoder:aDecoder];
   if (self)
   {
-    [self initFakeData];
+    self.dataPoints = [NSMutableArray new];
+    self.timePoints = [NSMutableArray new];
+    [self queryDataPoints];
   }
   return self;
 }
@@ -98,27 +105,33 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self)
   {
-    [self initFakeData];
+    self.dataPoints = [NSMutableArray new];
+    self.timePoints = [NSMutableArray new];
+    [self queryDataPoints];
   }
   return self;
 }
 
 #pragma mark - Data
 
-- (void)initFakeData
+- (void)importData
 {
   NSMutableArray *mutableLineCharts = [NSMutableArray array];
   for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
   {
     NSMutableArray *mutableChartData = [NSMutableArray array];
-    for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+    for (int i=0; i<[self.dataPoints count]; i++)
     {
-      [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)]]; // random number between 0 and 1
+      if(lineIndex == 0){
+        [mutableChartData addObject:[self.dataPoints objectAtIndex:i]];
+      }else{
+      [mutableChartData addObject: [NSNumber numberWithFloat:self.average]];
+      }
     }
     [mutableLineCharts addObject:mutableChartData];
   }
   _chartData = [NSArray arrayWithArray:mutableLineCharts];
-  _daysOfWeek = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];
+  _daysOfWeek = self.timePoints;//[[[NSDateFormatter alloc] init] shortWeekdaySymbols];
 }
 
 - (NSArray *)largestLineData
@@ -210,7 +223,11 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
 {
-  return [[[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex] floatValue];
+  if (self.graphStyle == ARSummaryGraphCellStyleAcceleration){
+    return [[[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex] floatValue] - self.most_negative_acce + 1 ;
+  }else{
+    return [[[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex] floatValue];
+  }
 }
 
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
@@ -268,7 +285,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex
 {
-  return lineIndex == JBLineChartViewLineStyleDashed;
+  return 0;//turn of dot lineIndex == JBLineChartViewLineStyleDashed;
 }
 
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
@@ -297,13 +314,76 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 {
   return self.lineChartView;
 }
-
-/*
-- (id)initwithStyle:(ARSummaryGraphCellStyle)style
+- (void) queryDataPoints
 {
-  [self setFunctionStyle:style];
-  return self;
+  PFQuery *query = [ARDataPoint query];
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd"];
+  NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
+  //  [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
+  //  [query whereKey:@"player" equalTo:[PFUser currentUser]];
+  //  NSMutableArray *keys = [[NSMutableArray alloc] init];
+  //  [keys addObject:@"speed"];
+  //  [keys addObject:@"acceleration"];
+  //  [keys addObject:@"verticalDrop"];
+  //  [query orderByDescending:@"createdAt"];
+  //  [query orderByAscending:@"createdAt"];
+  //  [keys addObject:@"createdAt"];
+  //  [query selectKeys:keys];
+  [query setLimit:100];
+  //  [query setSkip:skip];
+  //  if (self.createdAt != nil) {
+  //    NSLog(@"called!");
+  //    [query whereKey:@"createdAt" lessThanOrEqualTo:self.createdAt];
+  //  }
+  [query findObjectsInBackgroundWithBlock:^(id objects, NSError *error) {
+    if (!error && ([objects count] != 0)) {
+      NSArray *array = objects;
+      NSString *data;
+      if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
+        data = @"speed";
+      } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
+        data = @"acceleration";
+      } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
+        data = @"verticalDrop";
+      }
+      NSInteger sum = 0;
+      NSInteger valid_count = 0;
+      self.most_negative_acce = 0.0;
+
+      for (int i = 0; i < [array count]; i++) {
+        NSDictionary *dict = [array objectAtIndex:i];
+        [self.dataPoints addObject:[dict objectForKey:data]];
+        [self.timePoints addObject:[[dict objectForKey:@"timeRecord"]substringToIndex:5]];
+        if([(NSNumber *)[dict objectForKey:data] intValue] != 0){
+          sum = sum +  [(NSNumber *)[dict objectForKey:data] intValue];
+          valid_count++;
+        }
+        if ([(NSNumber *)[dict objectForKey:data] floatValue] < self.most_negative_acce){
+          self.most_negative_acce = [(NSNumber *)[dict objectForKey:data] floatValue];
+
+          NSLog(@"most negative udate %f", self.most_negative_acce);
+        }
+      }
+      self.average = sum / valid_count;
+//      NSLog(@"dataPoints %@",self.dataPoints);
+//      NSLog(@"timePoints %@", self.timePoints);
+
+
+      [self importData];
+      PFObject *object = [array lastObject];
+      if ([[object createdAt] isEqual:self.createdAt])
+        return;
+      else
+        self.createdAt = [object createdAt];
+    }
+    [self.lineChartView reloadData];
+    
+    NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
+  }];
 }
+/*
+ 
 
 - (void)viewDidLoad
 {
@@ -362,71 +442,9 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 	return @"trail_icon_selected";
 }
 
-- (void) setFunctionStyle: (ARSummaryGraphCellStyle) style{
-  self.graphStyle = style;
-}
-
-- (void) queryDataPoints
-{
-  PFQuery *query = [ARDataPoint query];
-  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-  [formatter setDateFormat:@"yyyy-MM-dd"];
-  NSLog(@"seletedDate is %@", [formatter stringFromDate:self.selectedDate]);
-//  [query whereKey:@"dateRecord" equalTo:[formatter stringFromDate:self.selectedDate]];
-//  [query whereKey:@"player" equalTo:[PFUser currentUser]];
-
-  
-//  NSMutableArray *keys = [[NSMutableArray alloc] init];
-//  [keys addObject:@"speed"];
-//  [keys addObject:@"acceleration"];
-//  [keys addObject:@"verticalDrop"];
-//  [query orderByDescending:@"createdAt"];
-//  [query orderByAscending:@"createdAt"];
-//  [keys addObject:@"createdAt"];
-//  [query selectKeys:keys];
-  [query setLimit:100];
-//  [query setSkip:skip];
-//  if (self.createdAt != nil) {
-//    NSLog(@"called!");
-//    [query whereKey:@"createdAt" lessThanOrEqualTo:self.createdAt];
-//  }
-  [query findObjectsInBackgroundWithBlock:^(id objects, NSError *error) {
-    if (!error && ([objects count] != 0)) {
-      NSArray *array = objects;
-      NSString *data;
-      if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
-        data = @"speed";
-      } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
-        data = @"acceleration";
-      } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
-        data = @"verticalDrop";
-      }
-      for (int i = 0; i < [array count]; i++) {
-        NSDictionary *dict = [array objectAtIndex:i];
-        [self.dataPoints addObject:[dict objectForKey:data]];
-        [self.timePoints addObject:[[dict objectForKey:@"timeRecord"]substringToIndex:5]];
 
 
-      }
-      NSLog(@"dataPoints %@",self.dataPoints);
-      NSLog(@"timePoints %@", self.timePoints);
-      //reloadGraph[self.myGraph reloadGraph];
-      PFObject *object = [array lastObject];
-      if ([[object createdAt] isEqual:self.createdAt])
-        return;
-      else
-        self.createdAt = [object createdAt];
-    }
-   // redraw
 
-    NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
-//    [self.view setNeedsDisplay];
-//    NSLog(@"createAt %@", self.createdAt);
-//    if (self.dataPoints.count < 500) {
-//      [self queryDataPoints];
-//    }
-  }];
-}
 */
 
  /*
