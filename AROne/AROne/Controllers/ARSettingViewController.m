@@ -8,6 +8,8 @@
 
 #import "ARSettingViewController.h"
 #import "ARLoginViewController.h"
+#import "ARPairController.h"
+
 
 @interface ARSettingViewController ()
 
@@ -72,7 +74,7 @@
   
   if (indexPath.section == 0) {
     if (indexPath.row == 0) {
-      cell.textLabel.text = @"Profile";
+      cell.textLabel.text = @"Pair a Device";
     } if (indexPath.row == 1) {
       cell.textLabel.text = @"Analysis";
     }
@@ -86,9 +88,9 @@
 {
   if (indexPath.section == 0) {
     if (indexPath.row == 0) {
-//      CQProfileViewController *profile = [[CQProfileViewController alloc] init];
-//      profile.hidesBottomBarWhenPushed = YES;
-//      [self.navigationController pushViewController:profile animated:YES];
+      ARPairController *pair = [[ARPairController alloc]init];
+      pair.hidesBottomBarWhenPushed = YES;
+      [self.navigationController pushViewController:pair animated:YES];
     }
     if (indexPath.row == 1) {
 //      CQAnalysisViewController *analysis = [[CQAnalysisViewController alloc] init];
