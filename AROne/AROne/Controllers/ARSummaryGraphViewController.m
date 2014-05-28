@@ -347,7 +347,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
       } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
         data = @"verticalDrop";
       }
-      NSInteger sum = 0;
+      float sum = 0.0;
       NSInteger valid_count = 0;
       self.most_negative_acce = 0.0;
 
@@ -355,14 +355,14 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
         NSDictionary *dict = [array objectAtIndex:i];
         [self.dataPoints addObject:[dict objectForKey:data]];
         [self.timePoints addObject:[[dict objectForKey:@"timeRecord"]substringToIndex:5]];
-        if([(NSNumber *)[dict objectForKey:data] intValue] != 0){
-          sum = sum +  [(NSNumber *)[dict objectForKey:data] intValue];
+        if([(NSNumber *)[dict objectForKey:data] floatValue] != 0.0){
+          sum = sum +  [(NSNumber *)[dict objectForKey:data] floatValue];
+          NSLog(@" value is %f", [(NSNumber *)[dict objectForKey:data] floatValue]);
+          NSLog(@" and sum is %f",   sum);
           valid_count++;
         }
         if ([(NSNumber *)[dict objectForKey:data] floatValue] < self.most_negative_acce){
           self.most_negative_acce = [(NSNumber *)[dict objectForKey:data] floatValue];
-
-          NSLog(@"most negative udate %f", self.most_negative_acce);
         }
       }
       self.average = sum / valid_count;
