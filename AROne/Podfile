@@ -2,3 +2,5 @@ platform :ios, '7.0'
 pod 'MBProgressHUD', '~> 0.8'
 pod 'SGNavigationProgress'
 pod 'AFNetworking', '~> 2.0'
+pod "LGBluetooth", "~> 1.1.2"
+pod 'JBChartView', '~> 2.5.5'
