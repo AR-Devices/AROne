@@ -11,6 +11,8 @@
 //import vendor TabBar Controller
 #import "AKTabBarController.h"
 #import "ARWelcomeViewController.h"
+#import "LGBluetooth.h"
+
 
 //test
 #import "ARSummary.h"
@@ -43,6 +45,8 @@ static NSString* const kPAWLocationChangeNotification= @"kPAWLocationChangeNotif
 
   [FBAppEvents activateApp];
   [FBSession.activeSession handleDidBecomeActive];
+  // Initialization of CentralManager
+  [LGCentralManager sharedInstance];
   
 }
 
@@ -97,12 +101,70 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //  [self setTabBarController];
   
 //  [self createSummaryClass];
+  [self startBLE];
   
   [self.window makeKeyAndVisible];
   return YES;
 }
 
 #pragma mark - private functions
+
+- (void)startBLE
+{
+  NSString *UUID =   [[NSUserDefaults standardUserDefaults] valueForKeyPath:@"UUID"];
+  NSLog(@"saved UUID is %@", UUID);
+  if (UUID) {
+    // Scaning 4 seconds for peripherals
+    [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:4
+                                                         completion:^(NSArray *peripherals)
+     {
+       // If we found any peripherals sending to test
+       if (peripherals.count) {
+         for (LGPeripheral* peripheral in peripherals) {
+           NSLog(@"name is %@", peripheral.name);
+           //we should add a pair page that pairs with a Northstar device
+           if ([peripheral.UUIDString isEqual:UUID]) {
+             //load data?
+             [self scanService:peripheral];
+             
+           }
+         }
+       }
+     }];
+  }
+}
+
+- (void)scanService:(LGPeripheral *)peripheral
+{
+  NSLog(@"scanService");
+  // First of all connecting to peripheral
+  [peripheral connectWithCompletion:^(NSError *error) {
+    // Discovering services of peripheral
+    [peripheral discoverServicesWithCompletion:^(NSArray *services, NSError *error) {
+      for (LGService *service in services) {
+        // Finding out our service
+        if ([service.UUIDString isEqualToString:@"0bee"]) {
+          NSLog(@"i got it");
+          [service discoverCharacteristicsWithCompletion:^(NSArray *characteristics, NSError *error) {
+            for (LGCharacteristic *charact in characteristics) {
+              if ([charact.UUIDString isEqualToString:@"1bee"]) {
+                [charact setNotifyValue:YES
+                             completion:^(NSError *error) {
+                               NSLog(@"Error! %@", error);
+                             } onUpdate:^(NSData *data, NSError *error) {
+                               if (!error) {
+                                 NSLog(@"data are %@", data);
+                               }
+                             }];
+              }
+            }
+          }];
+        }
+      }
+    }];
+  }];
+}
+
 
 // We also add a method to be called when the location changes.
 // This is where we post the notification to all observers.
