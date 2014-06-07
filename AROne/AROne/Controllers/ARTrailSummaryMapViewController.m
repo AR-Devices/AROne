@@ -1909,7 +1909,7 @@
     
   }
   for (int tom = 0; tom < [trail_match_result count]; tom++){
-    NSLog(@"match --> %d", [[trail_match_result objectAtIndex:tom] integerValue]);
+    NSLog(@"match -->%d %d", tom, [[trail_match_result objectAtIndex:tom] integerValue]);
   }
   /*********************************JERRY TRAIL CALCULATION END ******************************/
 

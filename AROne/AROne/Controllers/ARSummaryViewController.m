@@ -12,6 +12,8 @@
 
 #import "ARSummaryViewController.h"
 #import "ARSummaryGraphViewController.h"
+#import "ARSummaryBarGraphViewController.h"
+
 #import "ARSummaryGraphDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 //tableviewcell
@@ -244,7 +246,7 @@
   NSLog(@"mydate is %@", self.myDate);
 
   
-  ARSummaryGraphViewController *summaryTabGraph = [[ARSummaryGraphViewController alloc] init];
+  ARSummaryBarGraphViewController *summaryTabGraph = [[ARSummaryBarGraphViewController alloc] init];
   summaryTabGraph.selectedDate = self.myDate;
 //  NSLog(@"mydate is %@", self.myDate);
   summaryTabGraph.graphStyle = functionGraphStyle;

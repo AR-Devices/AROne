@@ -250,6 +250,7 @@
 		3CFE888318064422006CF472 /* ARSummaryGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886D18064422006CF472 /* ARSummaryGraphCell.m */; };
 		3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
 		3CFE888518064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
+		EC190C091943C7B4009216E9 /* ARSummaryBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */; };
 		EC458E66189499C200014337 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC458E65189499C200014337 /* trailPathView.m */; };
 		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
 		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
@@ -608,6 +609,8 @@
 		3CFE886E18064422006CF472 /* ARSummaryGraphTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryGraphTouchView.h; sourceTree = "<group>"; };
 		3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryGraphTouchView.m; sourceTree = "<group>"; };
 		D4FDF1A6069B4764BE366EA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC190C071943C7B3009216E9 /* ARSummaryBarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryBarGraphViewController.h; sourceTree = "<group>"; };
+		EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryBarGraphViewController.m; sourceTree = "<group>"; };
 		EC458E64189499C200014337 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trailPathView.h; sourceTree = "<group>"; };
 		EC458E65189499C200014337 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trailPathView.m; sourceTree = "<group>"; };
 		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "northstar-trail-map.jpg"; path = "../northstar-trail-map.jpg"; sourceTree = "<group>"; };
@@ -1321,6 +1324,8 @@
 				3CFE885E18064422006CF472 /* ARSummaryViewController.m */,
 				3CFE885B18064422006CF472 /* ARSummaryGraphViewController.h */,
 				3CFE885C18064422006CF472 /* ARSummaryGraphViewController.m */,
+				EC190C071943C7B3009216E9 /* ARSummaryBarGraphViewController.h */,
+				EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */,
 				3CFE885918064422006CF472 /* ARSummaryGraphDetailViewController.h */,
 				3CFE885A18064422006CF472 /* ARSummaryGraphDetailViewController.m */,
 				3CFE885718064422006CF472 /* ARScoreboardViewController.h */,
@@ -1800,6 +1805,7 @@
 				3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */,
 				3CAF438C18C1660E00356116 /* ARSummary.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
+				EC190C091943C7B4009216E9 /* ARSummaryBarGraphViewController.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
 				3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */,
 				3C92D41318ACAFE90051BE54 /* ARNorthStarReading.m in Sources */,
