@@ -47,7 +47,7 @@ static UIColor *kJBBarChartFooterPolygonViewDefaultBackgroundColor = nil;
 {
 	if (self == [JBBarChartFooterView class])
 	{
-		kJBBarChartFooterPolygonViewDefaultBackgroundColor = kJBColorBarChartControllerBackground;
+		kJBBarChartFooterPolygonViewDefaultBackgroundColor = [UIColor clearColor];
 	}
 }
 
