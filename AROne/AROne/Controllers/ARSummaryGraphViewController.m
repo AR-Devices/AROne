@@ -93,9 +93,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithCoder:aDecoder];
   if (self)
   {
-    self.dataPoints = [NSMutableArray new];
-    self.timePoints = [NSMutableArray new];
-    [self queryDataPoints];
+
   }
   return self;
 }
@@ -105,9 +103,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self)
   {
-    self.dataPoints = [NSMutableArray new];
-    self.timePoints = [NSMutableArray new];
-    [self queryDataPoints];
+
   }
   return self;
 }

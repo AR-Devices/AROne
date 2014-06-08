@@ -19,7 +19,8 @@
 
 
 // Numerics
-CGFloat const kJBBarChartViewControllerChartHeight = 250.0f;
+CGFloat const kJBBarChartViewControllerChartYLocation = 300.0f;
+CGFloat const kJBBarChartViewControllerChartHeight = 150.0f;
 CGFloat const kJBBarChartViewControllerChartPadding = 10.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderHeight = 80.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderPadding = 10.0f;
@@ -87,9 +88,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithCoder:aDecoder];
   if (self)
   {
-    self.dataPoints = [NSMutableArray new];
-    self.timePoints = [NSMutableArray new];
-    [self queryDataPoints];
+
   }
   return self;
 }
@@ -99,9 +98,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self)
   {
-    self.dataPoints = [NSMutableArray new];
-    self.timePoints = [NSMutableArray new];
-    [self queryDataPoints];
+
   }
   return self;
 }
@@ -116,11 +113,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 
   for (int i=0; i<[self.dataPoints count]; i++)
   {
-    NSLog(@" dataPoints is: %@", [self.dataPoints objectAtIndex:i]);
-    NSLog(@" timePoints is: %@", [self.timePoints objectAtIndex:i]);
-
     [mutableChartData addObject:[self.dataPoints objectAtIndex:i]];
-    
   }
   _chartData = [NSArray arrayWithArray:mutableChartData];
   _daysOfWeek = self.timePoints;
@@ -136,13 +129,13 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   
   //content switching
   if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
-    self.mybackgroundcolor = mypurpleColor;
+    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
     self.mygraphtitle = @"SPEED";
   } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
-    self.mybackgroundcolor = myorangeColor;
+    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
     self.mygraphtitle = @"ACCELERATION";
   } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
-    self.mybackgroundcolor = myneonblueColor;
+    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
     self.mygraphtitle = @"VERTICAL DROP";
   }
   
@@ -151,20 +144,20 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
   
   self.barChartView = [[JBBarChartView alloc] init];
-  self.barChartView.frame = CGRectMake(kJBBarChartViewControllerChartPadding, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeight);
+  self.barChartView.frame = CGRectMake(kJBBarChartViewControllerChartPadding, kJBBarChartViewControllerChartYLocation, self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeight);
   self.barChartView.delegate = self;
   self.barChartView.dataSource = self;
   self.barChartView.headerPadding = kJBBarChartViewControllerChartHeaderPadding;
-  self.barChartView.backgroundColor = self.mybackgroundcolor;
+  self.barChartView.backgroundColor = [UIColor orangeColor];
   
-  JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
-  headerView.titleLabel.text = self.mygraphtitle;
-  headerView.subtitleLabel.text = kJBStringLabel2012;
-  headerView.separatorColor = kJBColorBarChartHeaderSeparatorColor;
-  self.barChartView.headerView = headerView;
+//  JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
+//  headerView.titleLabel.text = self.mygraphtitle;
+//  headerView.subtitleLabel.text = kJBStringLabel2012;
+//  headerView.separatorColor = kJBColorBarChartHeaderSeparatorColor;
+//  self.barChartView.headerView = headerView;
   
   JBBarChartFooterView *footerView = [[JBBarChartFooterView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartFooterHeight)];
-  footerView.backgroundColor = [UIColor blackColor];
+  footerView.backgroundColor = [UIColor clearColor];
   footerView.padding = kJBBarChartViewControllerChartFooterPadding;
   footerView.leftLabel.text = (NSString*)[self.daysOfWeek firstObject] ;
   footerView.leftLabel.textColor = [UIColor whiteColor];
@@ -172,7 +165,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   footerView.rightLabel.textColor = [UIColor whiteColor];
   self.barChartView.footerView = footerView;
   
-  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.barChartView.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(self.barChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
   [self.view addSubview:self.informationView];
   
   [self.view addSubview:self.barChartView];
@@ -223,8 +216,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   [self.informationView setValueText:[NSString stringWithFormat:kJBStringLabelDegreesFahrenheit, [valueNumber intValue], kJBStringLabelDegreeSymbol] unitText:nil];
   [self.informationView setTitleText:kJBStringLabelWorldwideAverage];
   [self.informationView setHidden:NO animated:YES];
-  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
+//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
+//  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
 }
 
 - (void)didUnselectBarChartView:(JBBarChartView *)barChartView
@@ -255,6 +248,33 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   return self.barChartView;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void) queryDataPoints
 {
   PFQuery *query = [ARDataPoint query];
@@ -271,7 +291,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   //  [query orderByAscending:@"createdAt"];
   //  [keys addObject:@"createdAt"];
   //  [query selectKeys:keys];
-  [query setLimit:100];
+  [query setLimit:20];
   //  [query setSkip:skip];
   //  if (self.createdAt != nil) {
   //    NSLog(@"called!");
@@ -318,7 +338,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
       else
         self.createdAt = [object createdAt];
     }
-    [self.barChartView reloadData];
+      [self.barChartView reloadData];
     
     NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
   }];
