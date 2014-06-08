@@ -129,18 +129,18 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   
   //content switching
   if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
-    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
-    self.mygraphtitle = @"SPEED";
+    self.mybackgroundcolor = mypurpleColor;
+    self.mygraphtitle = @"Max Speed";
   } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
-    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
-    self.mygraphtitle = @"ACCELERATION";
+    self.mybackgroundcolor = myorangeColor;
+    self.mygraphtitle = @"Max Acceleration";
   } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
-    self.mybackgroundcolor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
-    self.mygraphtitle = @"VERTICAL DROP";
+    self.mybackgroundcolor = myneonblueColor;
+    self.mygraphtitle = @"Max Vertical Drop";
   }
   
   
-  self.view.backgroundColor = self.mybackgroundcolor;
+  self.view.backgroundColor = [UIColor whiteColor];
   self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
   
   self.barChartView = [[JBBarChartView alloc] init];
@@ -148,7 +148,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self.barChartView.delegate = self;
   self.barChartView.dataSource = self;
   self.barChartView.headerPadding = kJBBarChartViewControllerChartHeaderPadding;
-  self.barChartView.backgroundColor = [UIColor orangeColor];
+  self.barChartView.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:222.0/255.0 blue:230.0/255.0 alpha:1.0];
   
 //  JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
 //  headerView.titleLabel.text = self.mygraphtitle;
@@ -165,7 +165,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   footerView.rightLabel.textColor = [UIColor whiteColor];
   self.barChartView.footerView = footerView;
   
-  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation)];
+  self.informationView.backgroundColor = [UIColor clearColor];
   [self.view addSubview:self.informationView];
   
   [self.view addSubview:self.barChartView];
@@ -213,10 +214,13 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 - (void)barChartView:(JBBarChartView *)barChartView didSelectBarAtIndex:(NSUInteger)index touchPoint:(CGPoint)touchPoint
 {
   NSNumber *valueNumber = [self.chartData objectAtIndex:index];
-  [self.informationView setValueText:[NSString stringWithFormat:kJBStringLabelDegreesFahrenheit, [valueNumber intValue], kJBStringLabelDegreeSymbol] unitText:nil];
-  [self.informationView setTitleText:kJBStringLabelWorldwideAverage];
+  [self.informationView setValueText:[NSString stringWithFormat:@"%d", [valueNumber intValue]] unitText:@"mph"];
+  [self.informationView setTitleText:self.mygraphtitle];
+  [self.informationView setTitleTextColor:[UIColor grayColor]];
+  [self.informationView setValueAndUnitTextColor:self.mybackgroundcolor];
+
   [self.informationView setHidden:NO animated:YES];
-//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
+//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];z
 //  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
 }
 

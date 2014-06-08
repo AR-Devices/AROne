@@ -74,7 +74,7 @@ static UIColor *kJBChartInformationViewShadowColor = nil;
         _titleLabel.textColor = kJBChartViewTitleColor;
         _titleLabel.shadowColor = kJBChartViewShadowColor;
         _titleLabel.shadowOffset = CGSizeMake(0, 1);
-        _titleLabel.textAlignment = NSTextAlignmentLeft;
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_titleLabel];
 
         _separatorView = [[UIView alloc] init];
