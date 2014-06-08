@@ -55,6 +55,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 // content switching variables
 @property(nonatomic, strong) UIColor *mybackgroundcolor;
 @property(nonatomic, strong) NSString * mygraphtitle;
+@property(nonatomic, strong) NSString * myunits;
+
 @property(nonatomic, strong) UIColor *mylinecolor;
 
 @end
@@ -131,12 +133,15 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   if (_graphStyle == ARSummaryGraphCellStyleMaxSpeed) {
     self.mybackgroundcolor = mypurpleColor;
     self.mygraphtitle = @"Max Speed";
+    self.myunits = @"mph";
   } else if (_graphStyle == ARSummaryGraphCellStyleAcceleration) {
     self.mybackgroundcolor = myorangeColor;
     self.mygraphtitle = @"Max Acceleration";
+    self.myunits = @"m/s2";
   } else if (_graphStyle == ARSummaryGraphCellStyleVerticalDrop) {
     self.mybackgroundcolor = myneonblueColor;
     self.mygraphtitle = @"Max Vertical Drop";
+    self.myunits = @"feet";
   }
   
   
@@ -214,7 +219,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 - (void)barChartView:(JBBarChartView *)barChartView didSelectBarAtIndex:(NSUInteger)index touchPoint:(CGPoint)touchPoint
 {
   NSNumber *valueNumber = [self.chartData objectAtIndex:index];
-  [self.informationView setValueText:[NSString stringWithFormat:@"%d", [valueNumber intValue]] unitText:@"mph"];
+  [self.informationView setValueText:[NSString stringWithFormat:@"%d", [valueNumber intValue]] unitText:self.myunits];
   [self.informationView setTitleText:self.mygraphtitle];
   [self.informationView setTitleTextColor:[UIColor grayColor]];
   [self.informationView setValueAndUnitTextColor:self.mybackgroundcolor];
