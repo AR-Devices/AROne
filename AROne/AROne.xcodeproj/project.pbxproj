@@ -40,6 +40,12 @@
 		3C240D1E18F3C67100B19AE0 /* profile1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D1C18F3C67100B19AE0 /* profile1@2x.png */; };
 		3C240D2118F47AF700B19AE0 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D1F18F47AF700B19AE0 /* profile.png */; };
 		3C240D2218F47AF700B19AE0 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C240D2018F47AF700B19AE0 /* profile@2x.png */; };
+		3C2CDDD0193C400500E28DFA /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDC4193C400500E28DFA /* CBUUID+StringExtraction.m */; };
+		3C2CDDD1193C400500E28DFA /* LGCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDC7193C400500E28DFA /* LGCentralManager.m */; };
+		3C2CDDD2193C400500E28DFA /* LGCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDC9193C400500E28DFA /* LGCharacteristic.m */; };
+		3C2CDDD3193C400500E28DFA /* LGPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDCB193C400500E28DFA /* LGPeripheral.m */; };
+		3C2CDDD4193C400500E28DFA /* LGService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDCD193C400500E28DFA /* LGService.m */; };
+		3C2CDDD5193C400500E28DFA /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CDDCF193C400500E28DFA /* LGUtils.m */; };
 		3C3F181617DE886D00658555 /* apple calendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FE17DE886D00658555 /* apple calendar.plist */; };
 		3C3F181717DE886D00658555 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3F17FF17DE886D00658555 /* default.plist */; };
 		3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F180117DE886D00658555 /* NSDate+Helpers.m */; };
@@ -131,12 +137,6 @@
 		3CAE349019359FDE007FCE63 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348319359FDE007FCE63 /* JBChartInformationView.m */; };
 		3CAE349119359FDE007FCE63 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348519359FDE007FCE63 /* JBChartTooltipTipView.m */; };
 		3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */; };
-		3CAE34A41935A792007FCE63 /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE34981935A792007FCE63 /* CBUUID+StringExtraction.m */; };
-		3CAE34A51935A792007FCE63 /* LGCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE349B1935A792007FCE63 /* LGCentralManager.m */; };
-		3CAE34A61935A792007FCE63 /* LGCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE349D1935A792007FCE63 /* LGCharacteristic.m */; };
-		3CAE34A71935A792007FCE63 /* LGPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE349F1935A792007FCE63 /* LGPeripheral.m */; };
-		3CAE34A81935A792007FCE63 /* LGService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE34A11935A792007FCE63 /* LGService.m */; };
-		3CAE34A91935A792007FCE63 /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE34A31935A792007FCE63 /* LGUtils.m */; };
 		3CAF438C18C1660E00356116 /* ARSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438B18C1660E00356116 /* ARSummary.m */; };
 		3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438D18C3FFB800356116 /* ARCommon.m */; };
 		3CC307EF18E1247C00B8E6C8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */; };
@@ -341,6 +341,19 @@
 		3C240D1C18F3C67100B19AE0 /* profile1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile1@2x.png"; sourceTree = "<group>"; };
 		3C240D1F18F47AF700B19AE0 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		3C240D2018F47AF700B19AE0 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
+		3C2CDDC3193C400500E28DFA /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
+		3C2CDDC4193C400500E28DFA /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
+		3C2CDDC5193C400500E28DFA /* LGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBluetooth.h; sourceTree = "<group>"; };
+		3C2CDDC6193C400500E28DFA /* LGCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCentralManager.h; sourceTree = "<group>"; };
+		3C2CDDC7193C400500E28DFA /* LGCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCentralManager.m; sourceTree = "<group>"; };
+		3C2CDDC8193C400500E28DFA /* LGCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCharacteristic.h; sourceTree = "<group>"; };
+		3C2CDDC9193C400500E28DFA /* LGCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCharacteristic.m; sourceTree = "<group>"; };
+		3C2CDDCA193C400500E28DFA /* LGPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPeripheral.h; sourceTree = "<group>"; };
+		3C2CDDCB193C400500E28DFA /* LGPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPeripheral.m; sourceTree = "<group>"; };
+		3C2CDDCC193C400500E28DFA /* LGService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGService.h; sourceTree = "<group>"; };
+		3C2CDDCD193C400500E28DFA /* LGService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGService.m; sourceTree = "<group>"; };
+		3C2CDDCE193C400500E28DFA /* LGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUtils.h; sourceTree = "<group>"; };
+		3C2CDDCF193C400500E28DFA /* LGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUtils.m; sourceTree = "<group>"; };
 		3C3F17FE17DE886D00658555 /* apple calendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "apple calendar.plist"; sourceTree = "<group>"; };
 		3C3F17FF17DE886D00658555 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		3C3F180017DE886D00658555 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
@@ -479,19 +492,6 @@
 		3CAE348519359FDE007FCE63 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
 		3CAE348619359FDE007FCE63 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
 		3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
-		3CAE34971935A792007FCE63 /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
-		3CAE34981935A792007FCE63 /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
-		3CAE34991935A792007FCE63 /* LGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBluetooth.h; sourceTree = "<group>"; };
-		3CAE349A1935A792007FCE63 /* LGCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCentralManager.h; sourceTree = "<group>"; };
-		3CAE349B1935A792007FCE63 /* LGCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCentralManager.m; sourceTree = "<group>"; };
-		3CAE349C1935A792007FCE63 /* LGCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCharacteristic.h; sourceTree = "<group>"; };
-		3CAE349D1935A792007FCE63 /* LGCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCharacteristic.m; sourceTree = "<group>"; };
-		3CAE349E1935A792007FCE63 /* LGPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPeripheral.h; sourceTree = "<group>"; };
-		3CAE349F1935A792007FCE63 /* LGPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPeripheral.m; sourceTree = "<group>"; };
-		3CAE34A01935A792007FCE63 /* LGService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGService.h; sourceTree = "<group>"; };
-		3CAE34A11935A792007FCE63 /* LGService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGService.m; sourceTree = "<group>"; };
-		3CAE34A21935A792007FCE63 /* LGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUtils.h; sourceTree = "<group>"; };
-		3CAE34A31935A792007FCE63 /* LGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUtils.m; sourceTree = "<group>"; };
 		3CAF438A18C1660E00356116 /* ARSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSummary.h; path = Parse/ARSummary.h; sourceTree = "<group>"; };
 		3CAF438B18C1660E00356116 /* ARSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSummary.m; path = Parse/ARSummary.m; sourceTree = "<group>"; };
 		3CAF438D18C3FFB800356116 /* ARCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCommon.m; sourceTree = "<group>"; };
@@ -745,6 +745,26 @@
 			path = trailsummary;
 			sourceTree = "<group>";
 		};
+		3C2CDDC2193C400500E28DFA /* LGBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				3C2CDDC3193C400500E28DFA /* CBUUID+StringExtraction.h */,
+				3C2CDDC4193C400500E28DFA /* CBUUID+StringExtraction.m */,
+				3C2CDDC5193C400500E28DFA /* LGBluetooth.h */,
+				3C2CDDC6193C400500E28DFA /* LGCentralManager.h */,
+				3C2CDDC7193C400500E28DFA /* LGCentralManager.m */,
+				3C2CDDC8193C400500E28DFA /* LGCharacteristic.h */,
+				3C2CDDC9193C400500E28DFA /* LGCharacteristic.m */,
+				3C2CDDCA193C400500E28DFA /* LGPeripheral.h */,
+				3C2CDDCB193C400500E28DFA /* LGPeripheral.m */,
+				3C2CDDCC193C400500E28DFA /* LGService.h */,
+				3C2CDDCD193C400500E28DFA /* LGService.m */,
+				3C2CDDCE193C400500E28DFA /* LGUtils.h */,
+				3C2CDDCF193C400500E28DFA /* LGUtils.m */,
+			);
+			path = LGBluetooth;
+			sourceTree = "<group>";
+		};
 		3C3F17FD17DE886D00658555 /* PMCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -875,7 +895,7 @@
 		3C417FCB17D84B560094B56F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				3CAE34961935A792007FCE63 /* LGBluetooth */,
+				3C2CDDC2193C400500E28DFA /* LGBluetooth */,
 				3CAE346519359FDE007FCE63 /* JawboneGraph */,
 				3CAE346119359F63007FCE63 /* DKCircleButton */,
 				ECA790EC1903AD30003145D6 /* BEMSimpleGraph */,
@@ -1096,26 +1116,6 @@
 				3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		3CAE34961935A792007FCE63 /* LGBluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				3CAE34971935A792007FCE63 /* CBUUID+StringExtraction.h */,
-				3CAE34981935A792007FCE63 /* CBUUID+StringExtraction.m */,
-				3CAE34991935A792007FCE63 /* LGBluetooth.h */,
-				3CAE349A1935A792007FCE63 /* LGCentralManager.h */,
-				3CAE349B1935A792007FCE63 /* LGCentralManager.m */,
-				3CAE349C1935A792007FCE63 /* LGCharacteristic.h */,
-				3CAE349D1935A792007FCE63 /* LGCharacteristic.m */,
-				3CAE349E1935A792007FCE63 /* LGPeripheral.h */,
-				3CAE349F1935A792007FCE63 /* LGPeripheral.m */,
-				3CAE34A01935A792007FCE63 /* LGService.h */,
-				3CAE34A11935A792007FCE63 /* LGService.m */,
-				3CAE34A21935A792007FCE63 /* LGUtils.h */,
-				3CAE34A31935A792007FCE63 /* LGUtils.m */,
-			);
-			path = LGBluetooth;
 			sourceTree = "<group>";
 		};
 		3CAF438918C165E600356116 /* Parse */ = {
@@ -1755,7 +1755,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CAE34A71935A792007FCE63 /* LGPeripheral.m in Sources */,
 				3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */,
 				3CF0824D18F7B48E00470DFA /* PAImageView.m in Sources */,
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
@@ -1770,22 +1769,22 @@
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
 				3CAE348B19359FDE007FCE63 /* JBBaseViewController.m in Sources */,
 				3CAF438E18C3FFB800356116 /* ARCommon.m in Sources */,
+				3C2CDDD1193C400500E28DFA /* LGCentralManager.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
-				3CAE34A91935A792007FCE63 /* LGUtils.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
 				3CAE348F19359FDE007FCE63 /* JBChartHeaderView.m in Sources */,
-				3CAE34A41935A792007FCE63 /* CBUUID+StringExtraction.m in Sources */,
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
 				3C3F181D17DE886D00658555 /* PMPeriod.m in Sources */,
 				3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */,
 				EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */,
+				3C2CDDD5193C400500E28DFA /* LGUtils.m in Sources */,
+				3C2CDDD0193C400500E28DFA /* CBUUID+StringExtraction.m in Sources */,
 				3C92D40118ACA34D0051BE54 /* WCSQLite.m in Sources */,
 				3C3F181C17DE886D00658555 /* PMDimmingView.m in Sources */,
 				3CAE348D19359FDE007FCE63 /* JBBarChartFooterView.m in Sources */,
 				3C417FEA17D84B560094B56F /* UIViewController+AKTabBarController.m in Sources */,
-				3CAE34A51935A792007FCE63 /* LGCentralManager.m in Sources */,
 				3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */,
 				3C417F4B17D847510094B56F /* main.m in Sources */,
 				3CAE348A19359FDE007FCE63 /* JBBaseTableViewController.m in Sources */,
@@ -1799,7 +1798,9 @@
 				3CAE349019359FDE007FCE63 /* JBChartInformationView.m in Sources */,
 				3C1A0B1C18B3393A00999000 /* ARSignupViewController.m in Sources */,
 				3CAF438C18C1660E00356116 /* ARSummary.m in Sources */,
+				3C2CDDD4193C400500E28DFA /* LGService.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
+				3C2CDDD3193C400500E28DFA /* LGPeripheral.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
 				3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */,
 				3C92D41318ACAFE90051BE54 /* ARNorthStarReading.m in Sources */,
@@ -1813,13 +1814,11 @@
 				3C417FE617D84B560094B56F /* AKTabBarController.m in Sources */,
 				3C92D41518ACB4250051BE54 /* ARCommon.h in Sources */,
 				3CFE887618064422006CF472 /* ARSummaryViewController.m in Sources */,
-				3CAE34A61935A792007FCE63 /* LGCharacteristic.m in Sources */,
 				3CAE348E19359FDE007FCE63 /* JBLineChartFooterView.m in Sources */,
 				3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */,
 				3CFE887C18064422006CF472 /* drawGraph.m in Sources */,
 				ECA790F61903AD30003145D6 /* BEMCircle.m in Sources */,
 				3C3F181917DE886D00658555 /* PMCalendarBackgroundView.m in Sources */,
-				3CAE34A81935A792007FCE63 /* LGService.m in Sources */,
 				3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */,
 				3C92D40718ACA74B0051BE54 /* ARReading.m in Sources */,
 				3CFE887818064422006CF472 /* ARTrailSummaryViewController.m in Sources */,
@@ -1828,6 +1827,7 @@
 				3CAE3460193595AA007FCE63 /* ARPairController.m in Sources */,
 				3C5F189F17D91681003AC638 /* AKSegmentedControl.m in Sources */,
 				3CAE348C19359FDE007FCE63 /* JBChartTableCell.m in Sources */,
+				3C2CDDD2193C400500E28DFA /* LGCharacteristic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

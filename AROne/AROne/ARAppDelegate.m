@@ -148,14 +148,17 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
           [service discoverCharacteristicsWithCompletion:^(NSArray *characteristics, NSError *error) {
             for (LGCharacteristic *charact in characteristics) {
               if ([charact.UUIDString isEqualToString:@"1bee"]) {
-                [charact setNotifyValue:YES
-                             completion:^(NSError *error) {
-                               NSLog(@"Error! %@", error);
-                             } onUpdate:^(NSData *data, NSError *error) {
-                               if (!error) {
-                                 NSLog(@"data are %@", data);
-                               }
-                             }];
+                [charact setNotifyValue:true completion:^(NSError *error) {
+                  NSLog(@"error is %@", error);
+                }];
+//                [charact setNotifyValue:true
+//                             completion:^(NSError *error) {
+//                               NSLog(@"Error! %@", error);
+//                             } onUpdate:^(NSData *data, NSError *error) {
+//                               if (!error) {
+//                                 NSLog(@"data are %@", data);
+//                               }
+//                             }];
               }
             }
           }];
