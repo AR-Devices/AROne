@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CCBaseNavigationController.h
 //  ARTwo
 //
 //  Created by Chenchen Zheng on 6/7/14.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface CCBaseNavigationController : UINavigationController
 
 @end
-
