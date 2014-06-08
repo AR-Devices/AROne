@@ -25,7 +25,7 @@ CGFloat const kJBBarChartViewControllerChartHeaderHeight = 80.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderPadding = 10.0f;
 CGFloat const kJBBarChartViewControllerChartFooterHeight = 25.0f;
 CGFloat const kJBBarChartViewControllerChartFooterPadding = 5.0f;
-CGFloat const kJBBarChartViewControllerBarPadding = 1;
+CGFloat const kJBBarChartViewControllerBarPadding = 5;
 NSInteger const kJBBarChartViewControllerNumBars = 12;
 NSInteger const kJBBarChartViewControllerMaxBarHeight = 10;
 NSInteger const kJBBarChartViewControllerMinBarHeight = 5;
@@ -111,14 +111,19 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 - (void)importData
 {
   NSMutableArray *mutableChartData = [NSMutableArray array];
+  NSLog(@" dataPoint count is %lu", (unsigned long)[self.dataPoints count]);
+  NSLog(@" timePoint count is %lu", (unsigned long)[self.timePoints count]);
+
   for (int i=0; i<[self.dataPoints count]; i++)
   {
+    NSLog(@" dataPoints is: %@", [self.dataPoints objectAtIndex:i]);
+    NSLog(@" timePoints is: %@", [self.timePoints objectAtIndex:i]);
+
     [mutableChartData addObject:[self.dataPoints objectAtIndex:i]];
     
   }
-
   _chartData = [NSArray arrayWithArray:mutableChartData];
-  _daysOfWeek = self.timePoints;//[[[NSDateFormatter alloc] init] shortWeekdaySymbols];
+  _daysOfWeek = self.timePoints;
 }
 
 
@@ -150,7 +155,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self.barChartView.delegate = self;
   self.barChartView.dataSource = self;
   self.barChartView.headerPadding = kJBBarChartViewControllerChartHeaderPadding;
-  self.barChartView.backgroundColor = kJBColorBarChartBackground;
+  self.barChartView.backgroundColor = self.mybackgroundcolor;
   
   JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
   headerView.titleLabel.text = self.mygraphtitle;
@@ -159,10 +164,11 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   self.barChartView.headerView = headerView;
   
   JBBarChartFooterView *footerView = [[JBBarChartFooterView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartFooterHeight)];
+  footerView.backgroundColor = [UIColor blackColor];
   footerView.padding = kJBBarChartViewControllerChartFooterPadding;
-  footerView.leftLabel.text = [[self.timePoints firstObject] uppercaseString];
+  footerView.leftLabel.text = (NSString*)[self.daysOfWeek firstObject] ;
   footerView.leftLabel.textColor = [UIColor whiteColor];
-  footerView.rightLabel.text = [[self.timePoints lastObject] uppercaseString];
+  footerView.rightLabel.text = (NSString*)[self.daysOfWeek lastObject];
   footerView.rightLabel.textColor = [UIColor whiteColor];
   self.barChartView.footerView = footerView;
   
@@ -191,12 +197,12 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 
 - (NSUInteger)numberOfBarsInBarChartView:(JBBarChartView *)barChartView
 {
-  return kJBBarChartViewControllerNumBars;
+  return [self.dataPoints count];
 }
 
 - (NSUInteger)barPaddingForBarChartView:(JBBarChartView *)barChartView
 {
-  return kJBBarChartViewControllerBarPadding;
+  return kJBBarChartViewControllerBarPadding; //FIXME should use view.width / count
 }
 
 - (UIView *)barChartView:(JBBarChartView *)barChartView barViewAtIndex:(NSUInteger)index
@@ -218,7 +224,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   [self.informationView setTitleText:kJBStringLabelWorldwideAverage];
   [self.informationView setHidden:NO animated:YES];
   [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-  [self.tooltipView setText:[[self.timePoints objectAtIndex:index] uppercaseString]];
+  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
 }
 
 - (void)didUnselectBarChartView:(JBBarChartView *)barChartView
@@ -292,8 +298,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
         [self.timePoints addObject:[[dict objectForKey:@"timeRecord"]substringToIndex:5]];
         if([(NSNumber *)[dict objectForKey:data] floatValue] != 0.0){
           sum = sum +  [(NSNumber *)[dict objectForKey:data] floatValue];
-          NSLog(@" value is %f", [(NSNumber *)[dict objectForKey:data] floatValue]);
-          NSLog(@" and sum is %f",   sum);
+//          NSLog(@" value is %f", [(NSNumber *)[dict objectForKey:data] floatValue]);
+//          NSLog(@" and sum is %f",   sum);
           valid_count++;
         }
         if ([(NSNumber *)[dict objectForKey:data] floatValue] < self.most_negative_acce){
