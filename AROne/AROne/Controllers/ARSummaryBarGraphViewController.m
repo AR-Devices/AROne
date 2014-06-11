@@ -22,6 +22,7 @@
 CGFloat const kJBBarChartViewControllerChartYLocation = 300.0f;
 CGFloat const kJBBarChartViewControllerChartHeight = 150.0f;
 CGFloat const kJBBarChartViewControllerChartPadding = 10.0f;
+CGFloat const kJBBarChartViewControllerChartPadding_2nd = 180.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderHeight = 80.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderPadding = 10.0f;
 CGFloat const kJBBarChartViewControllerChartFooterHeight = 25.0f;
@@ -44,6 +45,9 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 @property (nonatomic) float most_negative_acce;
 @property (nonatomic, strong) JBBarChartView *barChartView;
 @property (nonatomic, strong) JBChartInformationView *informationView;
+@property (nonatomic, strong) JBChartInformationView *informationView_time;
+@property (nonatomic, strong) JBChartInformationView *informationView_ave;
+
 @property (nonatomic, strong) NSArray *chartData;
 @property (nonatomic, strong) NSArray *daysOfWeek;
 // Buttons
@@ -170,10 +174,17 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   footerView.rightLabel.textColor = [UIColor whiteColor];
   self.barChartView.footerView = footerView;
   
-  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation)];
-  self.informationView.backgroundColor = [UIColor clearColor];
+  self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding, self.view.bounds.size.width, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation-100)];
+  self.informationView_time = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, kJBBarChartViewControllerChartPadding_2nd, self.view.bounds.size.width /2, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation-180)];
+  self.informationView_ave = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x+self.view.bounds.size.width /2, kJBBarChartViewControllerChartPadding_2nd, self.view.bounds.size.width /2, self.view.bounds.size.height -  kJBBarChartViewControllerChartYLocation-180)];
+//  self.informationView.backgroundColor = [UIColor orangeColor];
+//  self.informationView_time.backgroundColor = [UIColor redColor];
+//  self.informationView_ave.backgroundColor = [UIColor grayColor];
+
   [self.view addSubview:self.informationView];
-  
+  [self.view addSubview:self.informationView_time];
+  [self.view addSubview:self.informationView_ave];
+
   [self.view addSubview:self.barChartView];
   [self.barChartView reloadData];
 
@@ -223,15 +234,36 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   [self.informationView setTitleText:self.mygraphtitle];
   [self.informationView setTitleTextColor:[UIColor grayColor]];
   [self.informationView setValueAndUnitTextColor:self.mybackgroundcolor];
-
   [self.informationView setHidden:NO animated:YES];
-//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];z
+  [self.informationView setTextShadowColor:[UIColor clearColor]];
+  
+  NSString *valueTime = [self.daysOfWeek objectAtIndex:index];
+  [self.informationView_time setValueText:[NSString stringWithFormat:@"%@", valueTime] unitText:@""];
+  [self.informationView_time setTitleText:@"Time"];
+  [self.informationView_time setTitleTextColor:[UIColor grayColor]];
+  [self.informationView_time setValueAndUnitTextColor:[UIColor blackColor]];
+  [self.informationView_time setHidden:NO animated:YES];
+  [self.informationView_time setTextShadowColor:[UIColor clearColor]];
+  [self.informationView_time setTitleFont:kJBFontInformationTitle_time];
+  [self.informationView_time setValueFont:kJBFontInformationValue_time];
+  [self.informationView_time setSeparatorColor:[UIColor clearColor]];
+
+  [self.informationView_ave setValueText:[NSString stringWithFormat:@"%0.3f", self.average] unitText:@""];
+  [self.informationView_ave setTitleText:@"Avg. Speed"];
+  [self.informationView_ave setTitleTextColor:[UIColor grayColor]];
+  [self.informationView_ave setValueAndUnitTextColor:[UIColor blackColor]];
+  [self.informationView_ave setHidden:NO animated:YES];
+  [self.informationView_ave setTextShadowColor:[UIColor clearColor]];
+  [self.informationView_ave setTitleFont:kJBFontInformationTitle_time];
+  [self.informationView_ave setValueFont:kJBFontInformationValue_time];
+  [self.informationView_ave setSeparatorColor:[UIColor clearColor]];
+//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
 //  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
 }
 
 - (void)didUnselectBarChartView:(JBBarChartView *)barChartView
 {
-  [self.informationView setHidden:YES animated:YES];
+//  [self.informationView setHidden:YES animated:YES];
   [self setTooltipVisible:NO animated:YES];
 }
 
