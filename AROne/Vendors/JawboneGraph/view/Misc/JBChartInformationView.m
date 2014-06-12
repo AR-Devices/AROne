@@ -126,7 +126,14 @@ static UIColor *kJBChartInformationViewShadowColor = nil;
 }
 
 #pragma mark - Setters
-
+- (void)setTitleFont:(UIFont *)Font
+{
+  self.titleLabel.font = Font;
+}
+- (void)setValueFont:(UIFont *)Font
+{
+  self.valueView.valueLabel.font = Font;
+}
 - (void)setTitleText:(NSString *)titleText
 {
     self.titleLabel.text = titleText;

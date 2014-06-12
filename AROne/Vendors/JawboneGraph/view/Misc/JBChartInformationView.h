@@ -27,5 +27,9 @@
 
 // Visibility
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated;
+//font
+- (void)setTitleFont:(UIFont *)Font;
+- (void)setValueFont:(UIFont *)Font;
+
 
 @end
