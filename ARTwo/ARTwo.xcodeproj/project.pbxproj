@@ -22,6 +22,13 @@
 		3C48B94D19440A66007AFA2C /* CCBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B94219440A66007AFA2C /* CCBaseTableViewController.m */; };
 		3C48B94E19440A66007AFA2C /* CCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B94419440A66007AFA2C /* CCBaseViewController.m */; };
 		3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B94719440A66007AFA2C /* ARAppDelegate.m */; };
+		3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B95419440DA7007AFA2C /* JBBarChartView.m */; };
+		3C48B95C19440DA7007AFA2C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B95619440DA7007AFA2C /* JBChartView.m */; };
+		3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B95819440DA7007AFA2C /* JBLineChartView.m */; };
+		3C48B95E19440DA7007AFA2C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95919440DA7007AFA2C /* LICENSE */; };
+		3C48B95F19440DA7007AFA2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95A19440DA7007AFA2C /* README.md */; };
+		3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */; };
+		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,18 @@
 		3C48B94419440A66007AFA2C /* CCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseViewController.m; sourceTree = "<group>"; };
 		3C48B94619440A66007AFA2C /* ARAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		3C48B94719440A66007AFA2C /* ARAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		3C48B95319440DA7007AFA2C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
+		3C48B95419440DA7007AFA2C /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
+		3C48B95519440DA7007AFA2C /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
+		3C48B95619440DA7007AFA2C /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
+		3C48B95719440DA7007AFA2C /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
+		3C48B95819440DA7007AFA2C /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		3C48B95919440DA7007AFA2C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3C48B95A19440DA7007AFA2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryTableViewController.h; sourceTree = "<group>"; };
+		3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryTableViewController.m; sourceTree = "<group>"; };
+		3CE34A43194413F400E2EA7A /* CCBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseTabBarController.h; sourceTree = "<group>"; };
+		3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +140,7 @@
 		3C48B90E19440A15007AFA2C /* ARTwo */ = {
 			isa = PBXGroup;
 			children = (
+				3C48B95019440DA7007AFA2C /* Libraries */,
 				3C48B93719440A66007AFA2C /* Constants */,
 				3C48B93D19440A66007AFA2C /* Controllers */,
 				3C48B94519440A66007AFA2C /* Delegate */,
@@ -178,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				3C48B93E19440A66007AFA2C /* Base */,
+				3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */,
+				3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +213,8 @@
 				3C48B94219440A66007AFA2C /* CCBaseTableViewController.m */,
 				3C48B94319440A66007AFA2C /* CCBaseViewController.h */,
 				3C48B94419440A66007AFA2C /* CCBaseViewController.m */,
+				3CE34A43194413F400E2EA7A /* CCBaseTabBarController.h */,
+				3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -231,6 +255,37 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3C48B95019440DA7007AFA2C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3C48B95119440DA7007AFA2C /* JBChartView */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		3C48B95119440DA7007AFA2C /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				3C48B95219440DA7007AFA2C /* Classes */,
+				3C48B95919440DA7007AFA2C /* LICENSE */,
+				3C48B95A19440DA7007AFA2C /* README.md */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		3C48B95219440DA7007AFA2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3C48B95319440DA7007AFA2C /* JBBarChartView.h */,
+				3C48B95419440DA7007AFA2C /* JBBarChartView.m */,
+				3C48B95519440DA7007AFA2C /* JBChartView.h */,
+				3C48B95619440DA7007AFA2C /* JBChartView.m */,
+				3C48B95719440DA7007AFA2C /* JBLineChartView.h */,
+				3C48B95819440DA7007AFA2C /* JBLineChartView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +364,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C48B95E19440DA7007AFA2C /* LICENSE in Resources */,
 				3C48B91319440A15007AFA2C /* InfoPlist.strings in Resources */,
+				3C48B95F19440DA7007AFA2C /* README.md in Resources */,
 				3C48B91B19440A15007AFA2C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,9 +388,14 @@
 			files = (
 				3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */,
 				3C48B94C19440A66007AFA2C /* CCBaseNavigationController.m in Sources */,
+				3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */,
 				3C48B94E19440A66007AFA2C /* CCBaseViewController.m in Sources */,
+				3C48B95C19440DA7007AFA2C /* JBChartView.m in Sources */,
+				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
+				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
 				3C48B94D19440A66007AFA2C /* CCBaseTableViewController.m in Sources */,
+				3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +592,7 @@
 				3C48B93319440A15007AFA2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C48B93419440A15007AFA2C /* Build configuration list for PBXNativeTarget "ARTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +601,7 @@
 				3C48B93619440A15007AFA2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1837,7 +1837,7 @@
   for (int i = 0; i < user_array_last_index; i++) {
     NSInteger user_elv = [self get_elv:my_trail_data atIndex:i]*3;
     float Lamberjack_elv_diff = 0;
-    NSLog(@"user elv is %d", user_elv);
+    NSLog(@"user elv is %ld", (long)user_elv);
     NSLog(@"Lamberjack elv is %d - %d", Lamberjack_elv_first, Lamberjack_elv_last);
     if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
       NSLog(@"looking Lamberjack");

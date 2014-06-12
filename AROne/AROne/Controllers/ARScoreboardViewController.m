@@ -13,7 +13,9 @@
 #import "ARTopBarView.h"
 
 #import "ARSummary.h"
+
 #import "ARCommon.h"
+
 
 
 
@@ -44,7 +46,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   [self querySummaryData:@"day"];
+  
 }
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -382,5 +386,4 @@
       break;
   }
 }
-
 @end

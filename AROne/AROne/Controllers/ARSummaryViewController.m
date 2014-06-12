@@ -29,10 +29,17 @@
 
 #import "PAImageView.h"
 
+#import "ARDevice.h"
+#import "ARNorthStar.h"
 
 
 
-@interface ARSummaryViewController ()
+
+@interface ARSummaryViewController () <ARDeviceDelegate>
+
+@property ARDevice *device;
+@property NSString *type;
+
 @property(atomic, strong) NSString* max_speed_value;
 @property(atomic, strong) NSString* vertical_drop_value;
 @property(atomic, strong) NSString* acceleration_value;
@@ -73,6 +80,16 @@
   [super viewWillAppear:YES];
   [self querySummaryData];
   [self queryUserData];
+  //get device
+  self.device = [ARDevice new];
+  [self.device controlSetup];
+  self.device.delegate = self;
+  if (self.device.activePeripheral.state != CBPeripheralStateConnected) {
+    if (self.device.activePeripheral) {
+      self.device.peripherials = nil;
+    }
+    [self.device findBLEPeripherals];
+  }
 }
 
 - (void)viewDidLoad
@@ -550,8 +567,32 @@
     [self.pmCC dismissCalendarAnimated:YES];
 
   }
-  
+}
 
+#pragma mark - BLE
+- (void) gotDevice:(CBPeripheral *)peripheral
+{
+  NSLog(@"gotDevice");
+  //  NSArray *identifiers = [[NSArray alloc] initWithObjects:peripheral.identifier, nil];
+  //  if ([self.device.CM retrievePeripheralsWithIdentifiers:identifiers]) {
+  //    NSLog(@"%@ is a paired device", peripheral.name);
+  if (peripheral.name != nil) {
+    if ([peripheral.name rangeOfString:@"NORTHSTAR"].location != NSNotFound) {
+      self.type = @"ar";
+      [self.device connectPeripheral:peripheral];
+      NSLog(@"list is %@", self.device.peripherials);
+    }
+    //    weight is 352,  bp is 651
+  }
+}
+
+- (void) deviceReady
+{
+  NSLog(@"deviceReady called ");
+  if ([self.type isEqual:@"ar"]) {
+    ARNorthStar *arns = [[ARNorthStar alloc] initWithDevice:self.device];
+    [arns readMeasurement];
+  }
 }
 
 
