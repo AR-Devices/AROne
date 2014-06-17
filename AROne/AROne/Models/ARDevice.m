@@ -609,7 +609,7 @@ characteristicUUID:[CBUUID UUIDWithString:SystemID_Char]
  *
  */
 - (int) findBLEPeripherals {
-  NSLog(@"findBLEPeripherals %d", self.CM.state);
+  NSLog(@"findBLEPeripherals %ld", self.CM.state);
   
   //  if (self.CM.state  != CBCentralManagerStatePoweredOn) {
   //    NSLog(@"CoreBluetooth not correctly initialized !\r\n");
@@ -756,149 +756,52 @@ characteristicUUID:[CBUUID UUIDWithString:SystemID_Char]
         NSLog(@"data_validity is %@",data_validity);
         NSString *latitude_direction =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(5,1)] bytes] length:1 encoding:NSASCIIStringEncoding];
         NSLog(@"latitude_direction is %@", latitude_direction);
-        int latitude_degree_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(6,1)] bytes];
-        NSLog(@"latitude_degree_1 is %d", latitude_degree_1);
-        int latitude_degree_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(7,1)] bytes];
-        NSLog(@"latitude_degree_2 is %d", latitude_degree_2);
-        int latitude_min_int_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(8,1)] bytes];
-        NSLog(@"latitude_min_int_1 is %d", latitude_min_int_1);
-        int latitude_min_int_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(9,1)] bytes];
-        NSLog(@"latitude_min_int_2 is %d", latitude_min_int_2);
-        int latitude_min_dec_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(10,1)] bytes];
-        NSLog(@"latitude_min_dec_1 is %d", latitude_min_dec_1);
-        int latitude_min_dec_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(11,1)] bytes];
-        NSLog(@"latitude_min_dec_2 is %d", latitude_min_dec_2);
+        NSString *latitude_degree =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(6,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"latitude_degree is %d", [latitude_degree intValue]);
+        NSString *latitude_min_int = [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(8,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"latitude_min_int is %d", [latitude_min_int intValue]);
+        NSString *latitude_min_dec_12 =  [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(10,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"latitude_min_dec_12 is %d", [latitude_min_dec_12 intValue]);
         self.counter++;
       } else if (self.counter == 1) {
         NSLog(@"parse segment2");
-        int latitude_min_dec_3 = *(int *)[[self.data subdataWithRange:NSMakeRange(0,1)] bytes];
-        NSLog(@"latitude_min_dec_3 is %d", latitude_min_dec_3);
-        int latitude_min_dec_4 = *(int *)[[self.data subdataWithRange:NSMakeRange(1,1)] bytes];
-        NSLog(@"latitude_min_dec_4 is %d", latitude_min_dec_4);
-        NSString *longitude_direction = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,1)]bytes]length:2 encoding:NSASCIIStringEncoding];
+        NSString *latitude_min_dec_34 =  [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"latitude_min_dec_34 is %d", [latitude_min_dec_34 intValue]);
+        NSString *longitude_direction = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
         NSLog(@"longitude_direction is %@", longitude_direction);
-        int longitude_degree_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(3,1)] bytes];
-        NSLog(@"longitude_degree_1 is %d", longitude_degree_1);
-        int longitude_degree_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(4,1)] bytes];
-        NSLog(@"longitude_degree_2 is %d", longitude_degree_2);
-        int longitude_degree_3 = *(int *)[[self.data subdataWithRange:NSMakeRange(5,1)] bytes];
-        NSLog(@"longitude_degree_1 is %d", longitude_degree_3);
-        int longitude_min_int_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(6,1)] bytes];
-        NSLog(@"longitude_min_int_1 is %d", longitude_min_int_1);
-        int longitude_min_int_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(7,1)] bytes];
-        NSLog(@"longitude_min_int_2 is %d", longitude_min_int_2);
-        int longitude_min_dec_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(8,1)] bytes];
-        NSLog(@"longitude_min_dec_1 is %d", longitude_min_dec_1);
-        int longitude_min_dec_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(9,1)] bytes];
-        NSLog(@"longitude_min_dec_2 is %d", longitude_min_dec_2);
-        int longitude_min_dec_3 = *(int *)[[self.data subdataWithRange:NSMakeRange(10,1)] bytes];
-        NSLog(@"longitude_min_dec_3 is %d", longitude_min_dec_3);
-        int longitude_min_dec_4 = *(int *)[[self.data subdataWithRange:NSMakeRange(11,1)] bytes];
-        NSLog(@"longitude_min_dec_4 is %d", longitude_min_dec_4);
+        NSString *longitude_degree = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(3,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
+        NSLog(@"longitude_degree is %@", longitude_degree);
+        NSString *longitude_min_int = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(6,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"longitude_min_int is %@", longitude_min_int);
+        NSString *longitude_min_dec = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(8,4)]bytes]length:4 encoding:NSASCIIStringEncoding];
+        NSLog(@"longitude_min_dec is %@", longitude_min_dec);
         self.counter++;
       } else if (self.counter == 2) {
         NSLog(@"parse segment3");
-        int speed_int_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(0,1)] bytes];
-        NSLog(@"speed_int_1 is %d", speed_int_1);
-        int speed_int_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(1,1)] bytes];
-        NSLog(@"speed_int_2 is %d", speed_int_2);
-        int speed_dec_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(2,1)] bytes];
-        NSLog(@"speed_dec_1 is %d", speed_dec_1);
+        NSString *speed =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
+        NSLog(@"speed is %d",[speed intValue]);
+        NSString *speed_dec =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
+        NSLog(@"speed_dec is %d",[speed_dec intValue]);
         NSString *day =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(3,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
         NSLog(@"day is %@",day);
         NSString *month =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(5,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
         NSLog(@"month is %@",month);
         NSString *year =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(7,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
         NSLog(@"year is %@",year);
-        int altitude_int_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(9,1)] bytes];
-        NSLog(@"altitude_int_1 is %d", altitude_int_1);
-        int altitude_int_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(10,1)] bytes];
-        NSLog(@"altitude_int_2 is %d", altitude_int_2);
-        int altitude_int_3 = *(int *)[[self.data subdataWithRange:NSMakeRange(11,1)] bytes];
-        NSLog(@"altitude_int_3 is %d", altitude_int_3);
+        NSString *altitude_int_123 =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(9,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
+        NSLog(@"altitude_int is %@", altitude_int_123);
         self.counter++;
       } else if (self.counter == 3) {
         NSLog(@"parse segment4");
-        int altitude_int_4 = *(int *)[[self.data subdataWithRange:NSMakeRange(0,1)] bytes];
-        NSLog(@"altitude_int_4 is %d", altitude_int_4);
-        int altitude_dec = *(int *)[[self.data subdataWithRange:NSMakeRange(1,1)] bytes];
-        NSLog(@"altitude_dec is %d", altitude_dec);
-        int bearing_int_1 = *(int *)[[self.data subdataWithRange:NSMakeRange(2,1)] bytes];
-        NSLog(@"altitude_dec is %d", bearing_int_1);
-        int bearing_int_2 = *(int *)[[self.data subdataWithRange:NSMakeRange(3,1)] bytes];
-        NSLog(@"bearing_int_2 is %d", bearing_int_2);
-        int bearing_int_3 = *(int *)[[self.data subdataWithRange:NSMakeRange(4,1)] bytes];
-        NSLog(@"bearing_int_3 is %d", bearing_int_3);
-        
-
+        NSString *altitude_int_4 =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
+        NSLog(@"altitude_int_4 is %@", altitude_int_4);
+        NSString *altitude_dec =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(1,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
+        NSLog(@"altitude_dec is %d", [altitude_dec intValue]);
+        NSString *bearing_int =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
+        NSLog(@"bearing_int is %d", [bearing_int intValue]);
         self.counter = 0;
         //we can terminate once we are done here
-      }
-      
-//      Data received from BLE:
-//      30353235 414e3337 32323432
-//      39355731 32313532 34363635
-//      30303130 36303631 34303032
-//      36333131 35ffffff ffffffff
-//      
-//      Parsed data:
-//      0x30('0')	hour_1;
-//      0x35('5')	hour_2;
-//      0x32('2') minute_1;
-//      0x35('5')	minute_2;
-//      0x41('A')	data_validity;
-//      0x4E('N')	latitude_direction;
-//      0x33		latitude_degree_1;
-//      0x37		latitude_degree_2;
-//      0x32		latitude_min_int_1;
-//      0x32		latitude_min_int_2;
-//      0x34		latitude_min_dec_1;
-//      0x32		latitude_min_dec_2;
-      
-//      0x39		latitude_min_dec_3;
-//      0x35		latitude_min_dec_4;
-//      0x57('W')	longitude_direction;
-//      0x31		longitude_degree_1;
-//      0x32		longitude_degree_2;
-//      0x31		longitude_degree_3;
-//      0x35		longitude_min_int_1;
-//      0x32		longitude_min_int_2;
-//      0x34		longitude_min_dec_1;
-//      0x36		longitude_min_dec_2;
-//      0x36		longitude_min_dec_3;
-//      0x35		longitude_min_dec_4;
-      
-//      0x30		speed_int_1;
-//      0x30		speed_int_2;
-//      0x31		speed_dec_1;
-//      0x30('0')	day_1;  Date: 6/6/14
-//      0x36('6')	day_2;
-//      0x30('0')	month_1;
-//      0x36('6')	month_2;
-//      0x31('1')	year_1;
-//      0x34('4')	year_2;
-//      0x30		altitude_int_1;
-//      0x30		altitude_int_2;
-//      0x32		altitude_int_3;
-      
-//      0x36		altitude_int_4;
-//      0x33		altitude_dec;
-//      0x31		bearing_int_1;
-//      0x31		bearing_int_2;
-//      0x35		bearing_int_3;
-//      0xFF;
-//      0xFF;
-//      0xFF;
-//      0xFF;
-//      0xFF;
-//      0xFF;
-//      0xFF;
-//      
-//      Data received from GPS:
-//      $GPRMC,055916.000,A,3722.4285,N,12152.4687,W,0.11,10.67,200414,,,A*46
-//      $GPGGA,055917.000,3722.4285,N,12152.4687,W,1,8,0.96,30.7,M,-25.5,M,,*5A
-//      $GPGSV,2,2,08,05,28,146,23,04,27,047,26,29,24,281,23,24,23,205,19*75
-      
+      }      
     }
   } else {
     NSLog(@"updateValueForCharacteristic failed !");

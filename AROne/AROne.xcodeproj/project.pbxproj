@@ -93,6 +93,7 @@
 		3C6EA85A180E612C0043216D /* graph_bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA857180E612C0043216D /* graph_bg2.png */; };
 		3C6EA85B180E612C0043216D /* graph_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA858180E612C0043216D /* graph_bg2@2x.png */; };
 		3C6EA85C180E612C0043216D /* graph_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA858180E612C0043216D /* graph_bg2@2x.png */; };
+		3C7088C5194ABB1E0079EF09 /* ARTrailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7088C4194ABB1E0079EF09 /* ARTrailPoint.m */; };
 		3C92D3EF18AB51D10051BE54 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3ED18AB51D10051BE54 /* crown.png */; };
 		3C92D3F018AB51D10051BE54 /* crown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3EE18AB51D10051BE54 /* crown@2x.png */; };
 		3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40C18ACA84E0051BE54 /* ARDevice.m */; };
@@ -419,6 +420,8 @@
 		3C6EA851180E5EC00043216D /* element3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = element3.png; sourceTree = "<group>"; };
 		3C6EA857180E612C0043216D /* graph_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph_bg2.png; sourceTree = "<group>"; };
 		3C6EA858180E612C0043216D /* graph_bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_bg2@2x.png"; sourceTree = "<group>"; };
+		3C7088C3194ABB1E0079EF09 /* ARTrailPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailPoint.h; sourceTree = "<group>"; };
+		3C7088C4194ABB1E0079EF09 /* ARTrailPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailPoint.m; sourceTree = "<group>"; };
 		3C92D3ED18AB51D10051BE54 /* crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown.png; sourceTree = "<group>"; };
 		3C92D3EE18AB51D10051BE54 /* crown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crown@2x.png"; sourceTree = "<group>"; };
 		3C92D40B18ACA84E0051BE54 /* ARDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDevice.h; sourceTree = "<group>"; };
@@ -1099,6 +1102,8 @@
 				3CAF438B18C1660E00356116 /* ARSummary.m */,
 				3CACAF6518CB0C8A00F8B1F6 /* ARDataPoint.h */,
 				3CACAF6618CB0C8A00F8B1F6 /* ARDataPoint.m */,
+				3C7088C3194ABB1E0079EF09 /* ARTrailPoint.h */,
+				3C7088C4194ABB1E0079EF09 /* ARTrailPoint.m */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -1785,6 +1790,7 @@
 				3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */,
 				3CFE887C18064422006CF472 /* drawGraph.m in Sources */,
 				ECA790F61903AD30003145D6 /* BEMCircle.m in Sources */,
+				3C7088C5194ABB1E0079EF09 /* ARTrailPoint.m in Sources */,
 				3C3F181917DE886D00658555 /* PMCalendarBackgroundView.m in Sources */,
 				3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */,
 				3CFE887818064422006CF472 /* ARTrailSummaryViewController.m in Sources */,
