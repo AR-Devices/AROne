@@ -257,8 +257,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   [self.informationView_ave setTitleFont:kJBFontInformationTitle_time];
   [self.informationView_ave setValueFont:kJBFontInformationValue_time];
   [self.informationView_ave setSeparatorColor:[UIColor clearColor]];
-//  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-//  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
+  [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
+  [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:index] uppercaseString]];
 }
 
 - (void)didUnselectBarChartView:(JBBarChartView *)barChartView
