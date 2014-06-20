@@ -12,7 +12,14 @@
 
 @property NSDate *time;
 @property NSString *data_validity;
+@property CLLocation *location;
 
+- (id) init;
+- (void) segment0:(NSData *)data;
+- (void) segment1:(NSData *)data;
+- (void) segment2:(NSData *)data;
+- (void) segment3:(NSData *)data;
+- (void) parse;
 
 //      0x30('0')	hour_1;
 //      0x35('5')	hour_2;
@@ -58,4 +65,8 @@
 //      0x31		bearing_int_1;
 //      0x31		bearing_int_2;
 //      0x35		bearing_int_3;
+//Data received from GPS:
+//$GPRMC,055916.000,A,3722.4285,N,12152.4687,W,0.11,10.67,200414,,,A*46
+//$GPGGA,055917.000,3722.4285,N,12152.4687,W,1,8,0.96,30.7,M,-25.5,M,,*5A
+//$GPGSV,2,2,08,05,28,146,23,04,27,047,26,29,24,281,23,24,23,205,19*75
 @end

@@ -8,12 +8,14 @@
 
 #import "ARDevice.h"
 #import "ARBLEConstants.h"
+#import "ARTrailPoint.h"
 
 @interface ARDevice ()
 
 @property (strong) NSMutableData *activityData;
 @property int dataLength;
 @property int counter;
+@property ARTrailPoint *tp;
 
 @end
 
@@ -747,58 +749,18 @@ characteristicUUID:[CBUUID UUIDWithString:SystemID_Char]
       NSLog(@"ARNotify parse here");
       self.data =[[NSData alloc] initWithData:characteristic.value];
       if (self.counter == 0) {
-        NSLog(@"parse segment1");
-        NSString *hour =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"hour is %@",hour);
-        NSString *minute =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"minute is %@",minute);
-        NSString *data_validity =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(4,1)] bytes] length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"data_validity is %@",data_validity);
-        NSString *latitude_direction =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(5,1)] bytes] length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"latitude_direction is %@", latitude_direction);
-        NSString *latitude_degree =[[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(6,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"latitude_degree is %d", [latitude_degree intValue]);
-        NSString *latitude_min_int = [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(8,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"latitude_min_int is %d", [latitude_min_int intValue]);
-        NSString *latitude_min_dec_12 =  [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(10,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"latitude_min_dec_12 is %d", [latitude_min_dec_12 intValue]);
+        self.tp = [[ARTrailPoint alloc]init];
+        [self.tp segment0:self.data];
         self.counter++;
       } else if (self.counter == 1) {
-        NSLog(@"parse segment2");
-        NSString *latitude_min_dec_34 =  [[NSString alloc] initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,2)] bytes] length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"latitude_min_dec_34 is %d", [latitude_min_dec_34 intValue]);
-        NSString *longitude_direction = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"longitude_direction is %@", longitude_direction);
-        NSString *longitude_degree = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(3,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
-        NSLog(@"longitude_degree is %@", longitude_degree);
-        NSString *longitude_min_int = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(6,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"longitude_min_int is %@", longitude_min_int);
-        NSString *longitude_min_dec = [[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(8,4)]bytes]length:4 encoding:NSASCIIStringEncoding];
-        NSLog(@"longitude_min_dec is %@", longitude_min_dec);
+        [self.tp segment1:self.data];
         self.counter++;
       } else if (self.counter == 2) {
         NSLog(@"parse segment3");
-        NSString *speed =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"speed is %d",[speed intValue]);
-        NSString *speed_dec =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"speed_dec is %d",[speed_dec intValue]);
-        NSString *day =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(3,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"day is %@",day);
-        NSString *month =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(5,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"month is %@",month);
-        NSString *year =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(7,2)]bytes]length:2 encoding:NSASCIIStringEncoding];
-        NSLog(@"year is %@",year);
-        NSString *altitude_int_123 =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(9,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
-        NSLog(@"altitude_int is %@", altitude_int_123);
+        [self.tp segment2:self.data];
         self.counter++;
       } else if (self.counter == 3) {
-        NSLog(@"parse segment4");
-        NSString *altitude_int_4 =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(0,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"altitude_int_4 is %@", altitude_int_4);
-        NSString *altitude_dec =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(1,1)]bytes]length:1 encoding:NSASCIIStringEncoding];
-        NSLog(@"altitude_dec is %d", [altitude_dec intValue]);
-        NSString *bearing_int =[[NSString alloc]initWithBytes:[[self.data subdataWithRange:NSMakeRange(2,3)]bytes]length:3 encoding:NSASCIIStringEncoding];
-        NSLog(@"bearing_int is %d", [bearing_int intValue]);
+        [self.tp segment3:self.data];
         self.counter = 0;
         //we can terminate once we are done here
       }      
