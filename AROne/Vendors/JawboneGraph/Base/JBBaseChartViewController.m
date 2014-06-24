@@ -66,7 +66,7 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
             {
                 convertedTouchPoint.x = maxChartX;
             }
-            self.tooltipView.frame = CGRectMake(convertedTouchPoint.x - ceil(self.tooltipView.frame.size.width * 0.5), convertedTouchPoint.y, self.tooltipView.frame.size.width, self.tooltipView.frame.size.height);//j_mod
+            self.tooltipView.frame = CGRectMake(convertedTouchPoint.x - ceil(self.tooltipView.frame.size.width * 0.5), 320, self.tooltipView.frame.size.width, self.tooltipView.frame.size.height);//j_mod
             
             CGFloat minTipX = (chartView.frame.origin.x + self.tooltipTipView.frame.size.width);
             if (originalTouchPoint.x < minTipX)
