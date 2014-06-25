@@ -99,6 +99,7 @@
   [self createLeftBarButtons];
 //  add right refresh setting button
   [self createRightBarButtons];
+  
 
   
   //FIXME: temporary hardcored the value here

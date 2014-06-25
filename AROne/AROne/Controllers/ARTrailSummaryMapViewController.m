@@ -461,1363 +461,7 @@
                                  [[NSArray alloc] initWithObjects:@"6882", @"39.25998889", @"120.1279056", nil],
                                  [[NSArray alloc] initWithObjects:@"6877", @"39.25998889", @"120.1279056", nil],
                                  nil];
-  NSArray *my_trail_data = [[NSArray alloc] initWithObjects:
-                                      [[NSArray alloc] initWithObjects:@"2292.9", @"3914.8894", @"12007.5267", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293", @"3914.8894", @"12007.5269", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293", @"3914.8893", @"12007.5272", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293", @"3914.8892", @"12007.5275", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.1", @"3914.8892", @"12007.5277", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.1", @"3914.8891", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.2", @"3914.8893", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.3", @"3914.8896", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.4", @"3914.89", @"12007.5281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.5", @"3914.8905", @"12007.5282", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.6", @"3914.8908", @"12007.5284", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.8", @"3914.8913", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2294.2", @"3914.8917", @"12007.5284", nil],
-                                      [[NSArray alloc] initWithObjects:@"2294.7", @"3914.8917", @"12007.5281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2295.3", @"3914.8915", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2295.7", @"3914.8909", @"12007.5278", nil],
-                                      [[NSArray alloc] initWithObjects:@"2296.3", @"3914.8906", @"12007.5276", nil],
-                                      [[NSArray alloc] initWithObjects:@"2297", @"3914.8901", @"12007.5276", nil],
-                                      [[NSArray alloc] initWithObjects:@"2297.7", @"3914.8891", @"12007.5277", nil],
-                                      [[NSArray alloc] initWithObjects:@"2298.4", @"3914.8887", @"12007.5276", nil],
-                                      [[NSArray alloc] initWithObjects:@"2299.1", @"3914.8876", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2299.8", @"3914.8869", @"12007.5281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2300.4", @"3914.886", @"12007.5283", nil],
-                                      [[NSArray alloc] initWithObjects:@"2301.1", @"3914.8852", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2301.7", @"3914.8842", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2302.2", @"3914.8832", @"12007.5284", nil],
-                                      [[NSArray alloc] initWithObjects:@"2302.6", @"3914.8822", @"12007.5284", nil],
-                                      [[NSArray alloc] initWithObjects:@"2303.1", @"3914.8809", @"12007.5286", nil],
-                                      [[NSArray alloc] initWithObjects:@"2303.7", @"3914.88", @"12007.5288", nil],
-                                      [[NSArray alloc] initWithObjects:@"2304.4", @"3914.8791", @"12007.5287", nil],
-                                      [[NSArray alloc] initWithObjects:@"2304.9", @"3914.8786", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2305.6", @"3914.8781", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2306.3", @"3914.8774", @"12007.5286", nil],
-                                      [[NSArray alloc] initWithObjects:@"2307.1", @"3914.8767", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2307.7", @"3914.8766", @"12007.5282", nil],
-                                      [[NSArray alloc] initWithObjects:@"2308.3", @"3914.8766", @"12007.5281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.1", @"3914.8766", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.9", @"3914.8764", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.6", @"3914.8764", @"12007.5276", nil],
-                                      [[NSArray alloc] initWithObjects:@"2311.3", @"3914.8768", @"12007.5275", nil],
-                                      [[NSArray alloc] initWithObjects:@"2312", @"3914.8775", @"12007.5273", nil],
-                                      [[NSArray alloc] initWithObjects:@"2313", @"3914.8774", @"12007.5275", nil],
-                                      [[NSArray alloc] initWithObjects:@"2314", @"3914.8777", @"12007.5272", nil],
-                                      [[NSArray alloc] initWithObjects:@"2315", @"3914.8779", @"12007.5268", nil],
-                                      [[NSArray alloc] initWithObjects:@"2316.1", @"3914.8783", @"12007.5264", nil],
-                                      [[NSArray alloc] initWithObjects:@"2317", @"3914.8777", @"12007.5266", nil],
-                                      [[NSArray alloc] initWithObjects:@"2318.1", @"3914.8779", @"12007.5262", nil],
-                                      [[NSArray alloc] initWithObjects:@"2319", @"3914.8778", @"12007.5261", nil],
-                                      [[NSArray alloc] initWithObjects:@"2319.9", @"3914.8781", @"12007.526", nil],
-                                      [[NSArray alloc] initWithObjects:@"2320.9", @"3914.8785", @"12007.5259", nil],
-                                      [[NSArray alloc] initWithObjects:@"2321.9", @"3914.8785", @"12007.5258", nil],
-                                      [[NSArray alloc] initWithObjects:@"2322.8", @"3914.8787", @"12007.5256", nil],
-                                      [[NSArray alloc] initWithObjects:@"2323.8", @"3914.8793", @"12007.5255", nil],
-                                      [[NSArray alloc] initWithObjects:@"2325", @"3914.8796", @"12007.5255", nil],
-                                      [[NSArray alloc] initWithObjects:@"2326.1", @"3914.8794", @"12007.525", nil],
-                                      [[NSArray alloc] initWithObjects:@"2327.2", @"3914.8791", @"12007.5248", nil],
-                                      [[NSArray alloc] initWithObjects:@"2328.4", @"3914.8787", @"12007.5245", nil],
-                                      [[NSArray alloc] initWithObjects:@"2329.8", @"3914.8782", @"12007.5249", nil],
-                                      [[NSArray alloc] initWithObjects:@"2331", @"3914.8776", @"12007.5254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2333.5", @"3914.8776", @"12007.5259", nil],
-                                      [[NSArray alloc] initWithObjects:@"2335.9", @"3914.8778", @"12007.5262", nil],
-                                      [[NSArray alloc] initWithObjects:@"2338.1", @"3914.8785", @"12007.5252", nil],
-                                      [[NSArray alloc] initWithObjects:@"2340.1", @"3914.8769", @"12007.5248", nil],
-                                      [[NSArray alloc] initWithObjects:@"2342.9", @"3914.875", @"12007.5254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2344.7", @"3914.8749", @"12007.5252", nil],
-                                      [[NSArray alloc] initWithObjects:@"2347.5", @"3914.8752", @"12007.5251", nil],
-                                      [[NSArray alloc] initWithObjects:@"2349.2", @"3914.8752", @"12007.5251", nil],
-                                      [[NSArray alloc] initWithObjects:@"2350.8", @"3914.8744", @"12007.5252", nil],
-                                      [[NSArray alloc] initWithObjects:@"2352.5", @"3914.8744", @"12007.5252", nil],
-                                      [[NSArray alloc] initWithObjects:@"2354.2", @"3914.874", @"12007.5254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2355.7", @"3914.8737", @"12007.5257", nil],
-                                      [[NSArray alloc] initWithObjects:@"2357.2", @"3914.8734", @"12007.526", nil],
-                                      [[NSArray alloc] initWithObjects:@"2358.7", @"3914.8728", @"12007.5261", nil],
-                                      [[NSArray alloc] initWithObjects:@"2360.1", @"3914.8723", @"12007.5261", nil],
-                                      [[NSArray alloc] initWithObjects:@"2362", @"3914.8721", @"12007.5263", nil],
-                                      [[NSArray alloc] initWithObjects:@"2363.5", @"3914.8717", @"12007.5265", nil],
-                                      [[NSArray alloc] initWithObjects:@"2364.8", @"3914.8715", @"12007.5267", nil],
-                                      [[NSArray alloc] initWithObjects:@"2366.3", @"3914.8713", @"12007.5271", nil],
-                                      [[NSArray alloc] initWithObjects:@"2367.4", @"3914.8709", @"12007.5279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2368.7", @"3914.8706", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2370", @"3914.8706", @"12007.5294", nil],
-                                      [[NSArray alloc] initWithObjects:@"2371.4", @"3914.8703", @"12007.5302", nil],
-                                      [[NSArray alloc] initWithObjects:@"2372.7", @"3914.87", @"12007.531", nil],
-                                      [[NSArray alloc] initWithObjects:@"2374.3", @"3914.87", @"12007.5321", nil],
-                                      [[NSArray alloc] initWithObjects:@"2375.7", @"3914.8702", @"12007.5328", nil],
-                                      [[NSArray alloc] initWithObjects:@"2377.3", @"3914.8699", @"12007.5332", nil],
-                                      [[NSArray alloc] initWithObjects:@"2378.8", @"3914.8695", @"12007.5336", nil],
-                                      [[NSArray alloc] initWithObjects:@"2379.5", @"3914.8698", @"12007.5339", nil],
-                                      [[NSArray alloc] initWithObjects:@"2380.9", @"3914.8695", @"12007.5342", nil],
-                                      [[NSArray alloc] initWithObjects:@"2382", @"3914.8691", @"12007.5345", nil],
-                                      [[NSArray alloc] initWithObjects:@"2383.3", @"3914.8688", @"12007.5349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2384.4", @"3914.8688", @"12007.5356", nil],
-                                      [[NSArray alloc] initWithObjects:@"2385.6", @"3914.8689", @"12007.5364", nil],
-                                      [[NSArray alloc] initWithObjects:@"2386.6", @"3914.869", @"12007.5371", nil],
-                                      [[NSArray alloc] initWithObjects:@"2387.6", @"3914.8693", @"12007.5378", nil],
-                                      [[NSArray alloc] initWithObjects:@"2388.5", @"3914.8697", @"12007.5385", nil],
-                                      [[NSArray alloc] initWithObjects:@"2389.6", @"3914.8703", @"12007.5393", nil],
-                                      [[NSArray alloc] initWithObjects:@"2390.7", @"3914.8707", @"12007.5403", nil],
-                                      [[NSArray alloc] initWithObjects:@"2391.8", @"3914.8706", @"12007.5415", nil],
-                                      [[NSArray alloc] initWithObjects:@"2393.1", @"3914.8706", @"12007.5426", nil],
-                                      [[NSArray alloc] initWithObjects:@"2394.1", @"3914.8704", @"12007.5437", nil],
-                                      [[NSArray alloc] initWithObjects:@"2395.2", @"3914.8704", @"12007.5449", nil],
-                                      [[NSArray alloc] initWithObjects:@"2396.4", @"3914.8704", @"12007.5463", nil],
-                                      [[NSArray alloc] initWithObjects:@"2397.4", @"3914.8706", @"12007.548", nil],
-                                      [[NSArray alloc] initWithObjects:@"2398.3", @"3914.8705", @"12007.55", nil],
-                                      [[NSArray alloc] initWithObjects:@"2399.3", @"3914.8703", @"12007.5521", nil],
-                                      [[NSArray alloc] initWithObjects:@"2400.2", @"3914.8705", @"12007.5543", nil],
-                                      [[NSArray alloc] initWithObjects:@"2401.2", @"3914.8712", @"12007.5566", nil],
-                                      [[NSArray alloc] initWithObjects:@"2402.1", @"3914.8711", @"12007.5586", nil],
-                                      [[NSArray alloc] initWithObjects:@"2402.9", @"3914.8709", @"12007.5603", nil],
-                                      [[NSArray alloc] initWithObjects:@"2403.7", @"3914.871", @"12007.562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2404.3", @"3914.8715", @"12007.5638", nil],
-                                      [[NSArray alloc] initWithObjects:@"2405", @"3914.8719", @"12007.5657", nil],
-                                      [[NSArray alloc] initWithObjects:@"2405.7", @"3914.872", @"12007.5675", nil],
-                                      [[NSArray alloc] initWithObjects:@"2406.2", @"3914.8724", @"12007.5696", nil],
-                                      [[NSArray alloc] initWithObjects:@"2406.7", @"3914.8728", @"12007.5714", nil],
-                                      [[NSArray alloc] initWithObjects:@"2407.2", @"3914.8732", @"12007.5734", nil],
-                                      [[NSArray alloc] initWithObjects:@"2407.8", @"3914.8738", @"12007.5756", nil],
-                                      [[NSArray alloc] initWithObjects:@"2408.3", @"3914.8747", @"12007.5774", nil],
-                                      [[NSArray alloc] initWithObjects:@"2409.1", @"3914.8758", @"12007.579", nil],
-                                      [[NSArray alloc] initWithObjects:@"2409.7", @"3914.8778", @"12007.5809", nil],
-                                      [[NSArray alloc] initWithObjects:@"2410.4", @"3914.8794", @"12007.5828", nil],
-                                      [[NSArray alloc] initWithObjects:@"2411", @"3914.8807", @"12007.5847", nil],
-                                      [[NSArray alloc] initWithObjects:@"2411.5", @"3914.8814", @"12007.5867", nil],
-                                      [[NSArray alloc] initWithObjects:@"2412", @"3914.882", @"12007.5884", nil],
-                                      [[NSArray alloc] initWithObjects:@"2412.7", @"3914.8826", @"12007.5906", nil],
-                                      [[NSArray alloc] initWithObjects:@"2413.4", @"3914.8841", @"12007.5935", nil],
-                                      [[NSArray alloc] initWithObjects:@"2414.1", @"3914.8848", @"12007.5964", nil],
-                                      [[NSArray alloc] initWithObjects:@"2414.8", @"3914.8856", @"12007.5987", nil],
-                                      [[NSArray alloc] initWithObjects:@"2415.5", @"3914.8863", @"12007.601", nil],
-                                      [[NSArray alloc] initWithObjects:@"2416.4", @"3914.8866", @"12007.603", nil],
-                                      [[NSArray alloc] initWithObjects:@"2417.4", @"3914.8864", @"12007.6045", nil],
-                                      [[NSArray alloc] initWithObjects:@"2418.3", @"3914.8868", @"12007.606", nil],
-                                      [[NSArray alloc] initWithObjects:@"2419.2", @"3914.8874", @"12007.6077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2419.8", @"3914.8879", @"12007.6092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2420.6", @"3914.8889", @"12007.6107", nil],
-                                      [[NSArray alloc] initWithObjects:@"2421.4", @"3914.89", @"12007.612", nil],
-                                      [[NSArray alloc] initWithObjects:@"2422.2", @"3914.8908", @"12007.6135", nil],
-                                      [[NSArray alloc] initWithObjects:@"2422.7", @"3914.8912", @"12007.6149", nil],
-                                      [[NSArray alloc] initWithObjects:@"2423.1", @"3914.892", @"12007.6164", nil],
-                                      [[NSArray alloc] initWithObjects:@"2423.7", @"3914.8936", @"12007.6174", nil],
-                                      [[NSArray alloc] initWithObjects:@"2424.2", @"3914.8948", @"12007.6186", nil],
-                                      [[NSArray alloc] initWithObjects:@"2424.8", @"3914.8957", @"12007.6204", nil],
-                                      [[NSArray alloc] initWithObjects:@"2425.6", @"3914.8972", @"12007.6227", nil],
-                                      [[NSArray alloc] initWithObjects:@"2426.2", @"3914.8981", @"12007.625", nil],
-                                      [[NSArray alloc] initWithObjects:@"2426.6", @"3914.9001", @"12007.627", nil],
-                                      [[NSArray alloc] initWithObjects:@"2427.1", @"3914.9006", @"12007.6289", nil],
-                                      [[NSArray alloc] initWithObjects:@"2427.6", @"3914.9004", @"12007.6303", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.1", @"3914.9003", @"12007.6313", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.5", @"3914.9003", @"12007.6323", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.8", @"3914.9008", @"12007.6338", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429", @"3914.9011", @"12007.6355", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429.6", @"3914.9024", @"12007.6376", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430", @"3914.9038", @"12007.6402", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.5", @"3914.9047", @"12007.6429", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.7", @"3914.9047", @"12007.6458", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.8", @"3914.9053", @"12007.6488", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.2", @"3914.9075", @"12007.6516", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.5", @"3914.9085", @"12007.6547", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.7", @"3914.9092", @"12007.6577", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.9", @"3914.9095", @"12007.6607", nil],
-                                      [[NSArray alloc] initWithObjects:@"2432.1", @"3914.9105", @"12007.6635", nil],
-                                      [[NSArray alloc] initWithObjects:@"2432.1", @"3914.9114", @"12007.6662", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.7", @"3914.9121", @"12007.6691", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.8", @"3914.9117", @"12007.6726", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.4", @"3914.9112", @"12007.6757", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.2", @"3914.9123", @"12007.6793", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.4", @"3914.9137", @"12007.6824", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.3", @"3914.9141", @"12007.6856", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.5", @"3914.9142", @"12007.6884", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.6", @"3914.9146", @"12007.6912", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.7", @"3914.9145", @"12007.6937", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.7", @"3914.915", @"12007.6962", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.6", @"3914.9158", @"12007.6988", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.5", @"3914.9161", @"12007.7012", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.2", @"3914.9162", @"12007.7037", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9166", @"12007.7058", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9172", @"12007.708", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9182", @"12007.7101", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431", @"3914.9191", @"12007.7122", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.1", @"3914.9199", @"12007.7141", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.1", @"3914.9208", @"12007.7161", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.2", @"3914.9217", @"12007.7181", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.3", @"3914.9231", @"12007.7203", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.4", @"3914.9242", @"12007.7227", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.5", @"3914.9253", @"12007.7251", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.3", @"3914.9261", @"12007.7274", nil],
-                                      [[NSArray alloc] initWithObjects:@"2431.3", @"3914.9271", @"12007.7299", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.8", @"3914.9286", @"12007.7319", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.7", @"3914.9309", @"12007.7337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9327", @"12007.7353", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9342", @"12007.7371", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.9", @"3914.9355", @"12007.7393", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.8", @"3914.9374", @"12007.7413", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.7", @"3914.9392", @"12007.7431", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.4", @"3914.9398", @"12007.7455", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430.1", @"3914.9415", @"12007.7484", nil],
-                                      [[NSArray alloc] initWithObjects:@"2430", @"3914.9429", @"12007.7514", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429.9", @"3914.9455", @"12007.7534", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429.6", @"3914.9472", @"12007.7559", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429.4", @"3914.9481", @"12007.7591", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429.2", @"3914.9494", @"12007.762", nil],
-                                      [[NSArray alloc] initWithObjects:@"2429", @"3914.9502", @"12007.765", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.8", @"3914.9516", @"12007.767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.6", @"3914.9534", @"12007.7691", nil],
-                                      [[NSArray alloc] initWithObjects:@"2428.3", @"3914.955", @"12007.7718", nil],
-                                      [[NSArray alloc] initWithObjects:@"2427.9", @"3914.9573", @"12007.7742", nil],
-                                      [[NSArray alloc] initWithObjects:@"2427.5", @"3914.959", @"12007.7768", nil],
-                                      [[NSArray alloc] initWithObjects:@"2427.1", @"3914.9607", @"12007.7795", nil],
-                                      [[NSArray alloc] initWithObjects:@"2426.8", @"3914.9622", @"12007.7823", nil],
-                                      [[NSArray alloc] initWithObjects:@"2426.4", @"3914.9642", @"12007.7842", nil],
-                                      [[NSArray alloc] initWithObjects:@"2426", @"3914.9664", @"12007.7859", nil],
-                                      [[NSArray alloc] initWithObjects:@"2425.8", @"3914.9689", @"12007.7874", nil],
-                                      [[NSArray alloc] initWithObjects:@"2425.5", @"3914.9712", @"12007.7894", nil],
-                                      [[NSArray alloc] initWithObjects:@"2425.2", @"3914.9726", @"12007.7915", nil],
-                                      [[NSArray alloc] initWithObjects:@"2425", @"3914.9734", @"12007.794", nil],
-                                      [[NSArray alloc] initWithObjects:@"2424.3", @"3914.9744", @"12007.7965", nil],
-                                      [[NSArray alloc] initWithObjects:@"2424", @"3914.9768", @"12007.7988", nil],
-                                      [[NSArray alloc] initWithObjects:@"2423.5", @"3914.9791", @"12007.8009", nil],
-                                      [[NSArray alloc] initWithObjects:@"2423.1", @"3914.9803", @"12007.8036", nil],
-                                      [[NSArray alloc] initWithObjects:@"2422.7", @"3914.981", @"12007.8076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2422.1", @"3914.9817", @"12007.8115", nil],
-                                      [[NSArray alloc] initWithObjects:@"2421.6", @"3914.9836", @"12007.8141", nil],
-                                      [[NSArray alloc] initWithObjects:@"2421.3", @"3914.9867", @"12007.8165", nil],
-                                      [[NSArray alloc] initWithObjects:@"2420.6", @"3914.9894", @"12007.819", nil],
-                                      [[NSArray alloc] initWithObjects:@"2419.9", @"3914.9903", @"12007.822", nil],
-                                      [[NSArray alloc] initWithObjects:@"2419.2", @"3914.9912", @"12007.8254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2418.4", @"3914.9929", @"12007.8281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2417.8", @"3914.9946", @"12007.8308", nil],
-                                      [[NSArray alloc] initWithObjects:@"2417.2", @"3914.9955", @"12007.8337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2416.6", @"3914.9958", @"12007.8366", nil],
-                                      [[NSArray alloc] initWithObjects:@"2416", @"3914.9968", @"12007.8389", nil],
-                                      [[NSArray alloc] initWithObjects:@"2414.8", @"3914.998", @"12007.8415", nil],
-                                      [[NSArray alloc] initWithObjects:@"2413.6", @"3914.9986", @"12007.8443", nil],
-                                      [[NSArray alloc] initWithObjects:@"2412.9", @"3914.9997", @"12007.8469", nil],
-                                      [[NSArray alloc] initWithObjects:@"2412.4", @"3915.0006", @"12007.8494", nil],
-                                      [[NSArray alloc] initWithObjects:@"2411.8", @"3915.0011", @"12007.8518", nil],
-                                      [[NSArray alloc] initWithObjects:@"2411.2", @"3915.0007", @"12007.8538", nil],
-                                      [[NSArray alloc] initWithObjects:@"2410.6", @"3915.0008", @"12007.856", nil],
-                                      [[NSArray alloc] initWithObjects:@"2409.9", @"3915.0012", @"12007.8578", nil],
-                                      [[NSArray alloc] initWithObjects:@"2409", @"3915.0029", @"12007.8585", nil],
-                                      [[NSArray alloc] initWithObjects:@"2408.4", @"3915.0041", @"12007.8603", nil],
-                                      [[NSArray alloc] initWithObjects:@"2407.7", @"3915.0064", @"12007.8625", nil],
-                                      [[NSArray alloc] initWithObjects:@"2407", @"3915.0077", @"12007.8651", nil],
-                                      [[NSArray alloc] initWithObjects:@"2406", @"3915.0083", @"12007.8676", nil],
-                                      [[NSArray alloc] initWithObjects:@"2405.1", @"3915.0074", @"12007.8703", nil],
-                                      [[NSArray alloc] initWithObjects:@"2404.5", @"3915.0066", @"12007.8732", nil],
-                                      [[NSArray alloc] initWithObjects:@"2403.6", @"3915.0068", @"12007.876", nil],
-                                      [[NSArray alloc] initWithObjects:@"2402.8", @"3915.0078", @"12007.8778", nil],
-                                      [[NSArray alloc] initWithObjects:@"2401.7", @"3915.0102", @"12007.88", nil],
-                                      [[NSArray alloc] initWithObjects:@"2400.5", @"3915.0124", @"12007.8822", nil],
-                                      [[NSArray alloc] initWithObjects:@"2399.4", @"3915.0136", @"12007.8851", nil],
-                                      [[NSArray alloc] initWithObjects:@"2398.4", @"3915.0145", @"12007.8883", nil],
-                                      [[NSArray alloc] initWithObjects:@"2397.6", @"3915.0153", @"12007.8919", nil],
-                                      [[NSArray alloc] initWithObjects:@"2396.8", @"3915.016", @"12007.8954", nil],
-                                      [[NSArray alloc] initWithObjects:@"2396", @"3915.0166", @"12007.8984", nil],
-                                      [[NSArray alloc] initWithObjects:@"2395", @"3915.0191", @"12007.8997", nil],
-                                      [[NSArray alloc] initWithObjects:@"2394", @"3915.0217", @"12007.9007", nil],
-                                      [[NSArray alloc] initWithObjects:@"2393", @"3915.0245", @"12007.9019", nil],
-                                      [[NSArray alloc] initWithObjects:@"2392.2", @"3915.0264", @"12007.9046", nil],
-                                      [[NSArray alloc] initWithObjects:@"2391.3", @"3915.0281", @"12007.9077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2390.4", @"3915.03", @"12007.91", nil],
-                                      [[NSArray alloc] initWithObjects:@"2389.5", @"3915.0314", @"12007.9109", nil],
-                                      [[NSArray alloc] initWithObjects:@"2388.3", @"3915.0361", @"12007.9119", nil],
-                                      [[NSArray alloc] initWithObjects:@"2387.4", @"3915.0384", @"12007.9141", nil],
-                                      [[NSArray alloc] initWithObjects:@"2386", @"3915.0407", @"12007.9165", nil],
-                                      [[NSArray alloc] initWithObjects:@"2384.9", @"3915.0437", @"12007.9177", nil],
-                                      [[NSArray alloc] initWithObjects:@"2383.9", @"3915.0466", @"12007.918", nil],
-                                      [[NSArray alloc] initWithObjects:@"2382.8", @"3915.0493", @"12007.9181", nil],
-                                      [[NSArray alloc] initWithObjects:@"2381.7", @"3915.0517", @"12007.917", nil],
-                                      [[NSArray alloc] initWithObjects:@"2380.8", @"3915.0537", @"12007.9174", nil],
-                                      [[NSArray alloc] initWithObjects:@"2379.7", @"3915.0569", @"12007.9177", nil],
-                                      [[NSArray alloc] initWithObjects:@"2378.5", @"3915.0592", @"12007.9178", nil],
-                                      [[NSArray alloc] initWithObjects:@"2377.4", @"3915.062", @"12007.9171", nil],
-                                      [[NSArray alloc] initWithObjects:@"2376.4", @"3915.0645", @"12007.9164", nil],
-                                      [[NSArray alloc] initWithObjects:@"2376.1", @"3915.0677", @"12007.9164", nil],
-                                      [[NSArray alloc] initWithObjects:@"2375.1", @"3915.0703", @"12007.9157", nil],
-                                      [[NSArray alloc] initWithObjects:@"2374.1", @"3915.0725", @"12007.9146", nil],
-                                      [[NSArray alloc] initWithObjects:@"2372.9", @"3915.0752", @"12007.9128", nil],
-                                      [[NSArray alloc] initWithObjects:@"2371.9", @"3915.0767", @"12007.9124", nil],
-                                      [[NSArray alloc] initWithObjects:@"2371.5", @"3915.0805", @"12007.9125", nil],
-                                      [[NSArray alloc] initWithObjects:@"2370.5", @"3915.0833", @"12007.9124", nil],
-                                      [[NSArray alloc] initWithObjects:@"2369.7", @"3915.0849", @"12007.9112", nil],
-                                      [[NSArray alloc] initWithObjects:@"2367.3", @"3915.087", @"12007.9095", nil],
-                                      [[NSArray alloc] initWithObjects:@"2364.1", @"3915.0913", @"12007.9058", nil],
-                                      [[NSArray alloc] initWithObjects:@"2362.5", @"3915.0957", @"12007.9031", nil],
-                                      [[NSArray alloc] initWithObjects:@"2361.4", @"3915.0983", @"12007.9032", nil],
-                                      [[NSArray alloc] initWithObjects:@"2360.3", @"3915.1008", @"12007.9039", nil],
-                                      [[NSArray alloc] initWithObjects:@"2358.9", @"3915.103", @"12007.904", nil],
-                                      [[NSArray alloc] initWithObjects:@"2357.9", @"3915.1046", @"12007.9032", nil],
-                                      [[NSArray alloc] initWithObjects:@"2357", @"3915.1057", @"12007.9021", nil],
-                                      [[NSArray alloc] initWithObjects:@"2356.3", @"3915.1069", @"12007.9006", nil],
-                                      [[NSArray alloc] initWithObjects:@"2354", @"3915.1088", @"12007.8992", nil],
-                                      [[NSArray alloc] initWithObjects:@"2352.2", @"3915.1124", @"12007.8967", nil],
-                                      [[NSArray alloc] initWithObjects:@"2350.7", @"3915.1154", @"12007.8959", nil],
-                                      [[NSArray alloc] initWithObjects:@"2349.6", @"3915.1162", @"12007.897", nil],
-                                      [[NSArray alloc] initWithObjects:@"2348.6", @"3915.118", @"12007.898", nil],
-                                      [[NSArray alloc] initWithObjects:@"2347.8", @"3915.1196", @"12007.8985", nil],
-                                      [[NSArray alloc] initWithObjects:@"2346.9", @"3915.1218", @"12007.8979", nil],
-                                      [[NSArray alloc] initWithObjects:@"2346.7", @"3915.1238", @"12007.897", nil],
-                                      [[NSArray alloc] initWithObjects:@"2345.8", @"3915.1255", @"12007.8967", nil],
-                                      [[NSArray alloc] initWithObjects:@"2344.9", @"3915.1266", @"12007.8972", nil],
-                                      [[NSArray alloc] initWithObjects:@"2343.9", @"3915.13", @"12007.8984", nil],
-                                      [[NSArray alloc] initWithObjects:@"2343.1", @"3915.1323", @"12007.8987", nil],
-                                      [[NSArray alloc] initWithObjects:@"2342", @"3915.135", @"12007.898", nil],
-                                      [[NSArray alloc] initWithObjects:@"2340.9", @"3915.1376", @"12007.897", nil],
-                                      [[NSArray alloc] initWithObjects:@"2339.8", @"3915.1405", @"12007.896", nil],
-                                      [[NSArray alloc] initWithObjects:@"2335.7", @"3915.1431", @"12007.8949", nil],
-                                      [[NSArray alloc] initWithObjects:@"2333.5", @"3915.1476", @"12007.8917", nil],
-                                      [[NSArray alloc] initWithObjects:@"2332.1", @"3915.1507", @"12007.8911", nil],
-                                      [[NSArray alloc] initWithObjects:@"2330.8", @"3915.1527", @"12007.8921", nil],
-                                      [[NSArray alloc] initWithObjects:@"2329.8", @"3915.1559", @"12007.8922", nil],
-                                      [[NSArray alloc] initWithObjects:@"2328.7", @"3915.1588", @"12007.8914", nil],
-                                      [[NSArray alloc] initWithObjects:@"2327.5", @"3915.1619", @"12007.8898", nil],
-                                      [[NSArray alloc] initWithObjects:@"2326.5", @"3915.1646", @"12007.8879", nil],
-                                      [[NSArray alloc] initWithObjects:@"2325.4", @"3915.1672", @"12007.8862", nil],
-                                      [[NSArray alloc] initWithObjects:@"2324.4", @"3915.1696", @"12007.8845", nil],
-                                      [[NSArray alloc] initWithObjects:@"2323.4", @"3915.1717", @"12007.8831", nil],
-                                      [[NSArray alloc] initWithObjects:@"2322.4", @"3915.1732", @"12007.8822", nil],
-                                      [[NSArray alloc] initWithObjects:@"2321.3", @"3915.1744", @"12007.8815", nil],
-                                      [[NSArray alloc] initWithObjects:@"2320.1", @"3915.1759", @"12007.8808", nil],
-                                      [[NSArray alloc] initWithObjects:@"2318.9", @"3915.1786", @"12007.8788", nil],
-                                      [[NSArray alloc] initWithObjects:@"2317.9", @"3915.1802", @"12007.8789", nil],
-                                      [[NSArray alloc] initWithObjects:@"2316.7", @"3915.184", @"12007.8798", nil],
-                                      [[NSArray alloc] initWithObjects:@"2315.4", @"3915.1865", @"12007.8798", nil],
-                                      [[NSArray alloc] initWithObjects:@"2314", @"3915.1901", @"12007.8791", nil],
-                                      [[NSArray alloc] initWithObjects:@"2312.7", @"3915.1931", @"12007.8783", nil],
-                                      [[NSArray alloc] initWithObjects:@"2311", @"3915.1965", @"12007.8772", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310", @"3915.1998", @"12007.8766", nil],
-                                      [[NSArray alloc] initWithObjects:@"2308.9", @"3915.2024", @"12007.8766", nil],
-                                      [[NSArray alloc] initWithObjects:@"2307.9", @"3915.2046", @"12007.8761", nil],
-                                      [[NSArray alloc] initWithObjects:@"2306.8", @"3915.2065", @"12007.8753", nil],
-                                      [[NSArray alloc] initWithObjects:@"2305.8", @"3915.2086", @"12007.8743", nil],
-                                      [[NSArray alloc] initWithObjects:@"2304.8", @"3915.211", @"12007.8729", nil],
-                                      [[NSArray alloc] initWithObjects:@"2303.8", @"3915.2132", @"12007.8709", nil],
-                                      [[NSArray alloc] initWithObjects:@"2302.9", @"3915.2157", @"12007.8684", nil],
-                                      [[NSArray alloc] initWithObjects:@"2301.9", @"3915.2182", @"12007.8662", nil],
-                                      [[NSArray alloc] initWithObjects:@"2300.9", @"3915.2209", @"12007.865", nil],
-                                      [[NSArray alloc] initWithObjects:@"2299.9", @"3915.2236", @"12007.8639", nil],
-                                      [[NSArray alloc] initWithObjects:@"2298.9", @"3915.2261", @"12007.8627", nil],
-                                      [[NSArray alloc] initWithObjects:@"2297.9", @"3915.2286", @"12007.8612", nil],
-                                      [[NSArray alloc] initWithObjects:@"2297.1", @"3915.231", @"12007.8595", nil],
-                                      [[NSArray alloc] initWithObjects:@"2296.1", @"3915.2339", @"12007.8574", nil],
-                                      [[NSArray alloc] initWithObjects:@"2295.1", @"3915.236", @"12007.8564", nil],
-                                      [[NSArray alloc] initWithObjects:@"2294.2", @"3915.2381", @"12007.8562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.2", @"3915.242", @"12007.8569", nil],
-                                      [[NSArray alloc] initWithObjects:@"2292.2", @"3915.2443", @"12007.8568", nil],
-                                      [[NSArray alloc] initWithObjects:@"2291.3", @"3915.2465", @"12007.8562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2290.4", @"3915.2484", @"12007.855", nil],
-                                      [[NSArray alloc] initWithObjects:@"2289.4", @"3915.2507", @"12007.8536", nil],
-                                      [[NSArray alloc] initWithObjects:@"2288.4", @"3915.2526", @"12007.8524", nil],
-                                      [[NSArray alloc] initWithObjects:@"2287.4", @"3915.2541", @"12007.851", nil],
-                                      [[NSArray alloc] initWithObjects:@"2286.4", @"3915.2557", @"12007.8497", nil],
-                                      [[NSArray alloc] initWithObjects:@"2285.4", @"3915.2569", @"12007.8488", nil],
-                                      [[NSArray alloc] initWithObjects:@"2284.5", @"3915.2585", @"12007.8483", nil],
-                                      [[NSArray alloc] initWithObjects:@"2283.6", @"3915.2602", @"12007.8479", nil],
-                                      [[NSArray alloc] initWithObjects:@"2282.6", @"3915.2621", @"12007.8469", nil],
-                                      [[NSArray alloc] initWithObjects:@"2281.7", @"3915.2642", @"12007.846", nil],
-                                      [[NSArray alloc] initWithObjects:@"2280.9", @"3915.2665", @"12007.8451", nil],
-                                      [[NSArray alloc] initWithObjects:@"2279.9", @"3915.2702", @"12007.8422", nil],
-                                      [[NSArray alloc] initWithObjects:@"2279", @"3915.2727", @"12007.8422", nil],
-                                      [[NSArray alloc] initWithObjects:@"2278.2", @"3915.2746", @"12007.843", nil],
-                                      [[NSArray alloc] initWithObjects:@"2277.3", @"3915.2783", @"12007.8436", nil],
-                                      [[NSArray alloc] initWithObjects:@"2276.7", @"3915.2814", @"12007.8435", nil],
-                                      [[NSArray alloc] initWithObjects:@"2275.7", @"3915.2842", @"12007.8419", nil],
-                                      [[NSArray alloc] initWithObjects:@"2274.7", @"3915.2876", @"12007.8416", nil],
-                                      [[NSArray alloc] initWithObjects:@"2273.8", @"3915.2909", @"12007.8413", nil],
-                                      [[NSArray alloc] initWithObjects:@"2273", @"3915.2955", @"12007.8414", nil],
-                                      [[NSArray alloc] initWithObjects:@"2272", @"3915.2982", @"12007.8396", nil],
-                                      [[NSArray alloc] initWithObjects:@"2271.2", @"3915.3018", @"12007.8375", nil],
-                                      [[NSArray alloc] initWithObjects:@"2270.3", @"3915.305", @"12007.8353", nil],
-                                      [[NSArray alloc] initWithObjects:@"2269.3", @"3915.3073", @"12007.8331", nil],
-                                      [[NSArray alloc] initWithObjects:@"2268.4", @"3915.3095", @"12007.8309", nil],
-                                      [[NSArray alloc] initWithObjects:@"2267.5", @"3915.3117", @"12007.8287", nil],
-                                      [[NSArray alloc] initWithObjects:@"2266.5", @"3915.3144", @"12007.8273", nil],
-                                      [[NSArray alloc] initWithObjects:@"2265.6", @"3915.3161", @"12007.8246", nil],
-                                      [[NSArray alloc] initWithObjects:@"2264.6", @"3915.3164", @"12007.8215", nil],
-                                      [[NSArray alloc] initWithObjects:@"2263.7", @"3915.3174", @"12007.8184", nil],
-                                      [[NSArray alloc] initWithObjects:@"2262.7", @"3915.3189", @"12007.8153", nil],
-                                      [[NSArray alloc] initWithObjects:@"2261.8", @"3915.32", @"12007.813", nil],
-                                      [[NSArray alloc] initWithObjects:@"2260.9", @"3915.3223", @"12007.8106", nil],
-                                      [[NSArray alloc] initWithObjects:@"2259.9", @"3915.3243", @"12007.8086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2259", @"3915.326", @"12007.8061", nil],
-                                      [[NSArray alloc] initWithObjects:@"2258.1", @"3915.3285", @"12007.8023", nil],
-                                      [[NSArray alloc] initWithObjects:@"2257.1", @"3915.3325", @"12007.7985", nil],
-                                      [[NSArray alloc] initWithObjects:@"2256.1", @"3915.3355", @"12007.7955", nil],
-                                      [[NSArray alloc] initWithObjects:@"2255.2", @"3915.337", @"12007.7936", nil],
-                                      [[NSArray alloc] initWithObjects:@"2254.3", @"3915.339", @"12007.7914", nil],
-                                      [[NSArray alloc] initWithObjects:@"2253.3", @"3915.3423", @"12007.7894", nil],
-                                      [[NSArray alloc] initWithObjects:@"2252.4", @"3915.3448", @"12007.7878", nil],
-                                      [[NSArray alloc] initWithObjects:@"2251.4", @"3915.3472", @"12007.7852", nil],
-                                      [[NSArray alloc] initWithObjects:@"2250.2", @"3915.3497", @"12007.7826", nil],
-                                      [[NSArray alloc] initWithObjects:@"2249", @"3915.3535", @"12007.7784", nil],
-                                      [[NSArray alloc] initWithObjects:@"2247.8", @"3915.3579", @"12007.7736", nil],
-                                      [[NSArray alloc] initWithObjects:@"2246.9", @"3915.3621", @"12007.7688", nil],
-                                      [[NSArray alloc] initWithObjects:@"2245.7", @"3915.3665", @"12007.7636", nil],
-                                      [[NSArray alloc] initWithObjects:@"2244.8", @"3915.3709", @"12007.7592", nil],
-                                      [[NSArray alloc] initWithObjects:@"2243.8", @"3915.374", @"12007.7575", nil],
-                                      [[NSArray alloc] initWithObjects:@"2242.7", @"3915.3775", @"12007.7562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2241.5", @"3915.3805", @"12007.7547", nil],
-                                      [[NSArray alloc] initWithObjects:@"2240.5", @"3915.3833", @"12007.7529", nil],
-                                      [[NSArray alloc] initWithObjects:@"2239.6", @"3915.3842", @"12007.752", nil],
-                                      [[NSArray alloc] initWithObjects:@"2238.5", @"3915.3857", @"12007.7507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2237.5", @"3915.3877", @"12007.7492", nil],
-                                      [[NSArray alloc] initWithObjects:@"2236.8", @"3915.3873", @"12007.7484", nil],
-                                      [[NSArray alloc] initWithObjects:@"2236", @"3915.388", @"12007.7475", nil],
-                                      [[NSArray alloc] initWithObjects:@"2235.4", @"3915.3884", @"12007.7468", nil],
-                                      [[NSArray alloc] initWithObjects:@"2234.7", @"3915.3895", @"12007.7458", nil],
-                                      [[NSArray alloc] initWithObjects:@"2233.7", @"3915.391", @"12007.7444", nil],
-                                      [[NSArray alloc] initWithObjects:@"2232.9", @"3915.3924", @"12007.743", nil],
-                                      [[NSArray alloc] initWithObjects:@"2232", @"3915.394", @"12007.7419", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.3", @"3915.3956", @"12007.7415", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.6", @"3915.3976", @"12007.7414", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3915.4001", @"12007.7416", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.2", @"3915.4021", @"12007.7414", nil],
-                                      [[NSArray alloc] initWithObjects:@"2228.5", @"3915.4038", @"12007.7406", nil],
-                                      [[NSArray alloc] initWithObjects:@"2227.8", @"3915.4052", @"12007.7393", nil],
-                                      [[NSArray alloc] initWithObjects:@"2227.1", @"3915.4065", @"12007.7375", nil],
-                                      [[NSArray alloc] initWithObjects:@"2226.3", @"3915.4077", @"12007.7357", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.5", @"3915.4093", @"12007.7341", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.7", @"3915.4105", @"12007.7333", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.3", @"3915.4133", @"12007.7326", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.3", @"3915.4163", @"12007.7317", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.4", @"3915.4189", @"12007.7313", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.4", @"3915.4226", @"12007.7312", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.2", @"3915.4258", @"12007.7301", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.1", @"3915.4305", @"12007.7279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2216.1", @"3915.4338", @"12007.7276", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.4", @"3915.4372", @"12007.7281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.3", @"3915.4416", @"12007.7279", nil],
-                                      [[NSArray alloc] initWithObjects:@"2212.8", @"3915.4457", @"12007.727", nil],
-                                      [[NSArray alloc] initWithObjects:@"2211.6", @"3915.45", @"12007.7259", nil],
-                                      [[NSArray alloc] initWithObjects:@"2210.4", @"3915.4537", @"12007.7253", nil],
-                                      [[NSArray alloc] initWithObjects:@"2209.3", @"3915.4562", @"12007.7257", nil],
-                                      [[NSArray alloc] initWithObjects:@"2208.2", @"3915.4593", @"12007.7256", nil],
-                                      [[NSArray alloc] initWithObjects:@"2206.9", @"3915.4631", @"12007.7254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.8", @"3915.4675", @"12007.725", nil],
-                                      [[NSArray alloc] initWithObjects:@"2204.8", @"3915.4705", @"12007.7251", nil],
-                                      [[NSArray alloc] initWithObjects:@"2203.9", @"3915.4738", @"12007.7254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2202.8", @"3915.4771", @"12007.7258", nil],
-                                      [[NSArray alloc] initWithObjects:@"2202.1", @"3915.4802", @"12007.7257", nil],
-                                      [[NSArray alloc] initWithObjects:@"2201.4", @"3915.483", @"12007.7254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2200.3", @"3915.4859", @"12007.7252", nil],
-                                      [[NSArray alloc] initWithObjects:@"2198.9", @"3915.4887", @"12007.7254", nil],
-                                      [[NSArray alloc] initWithObjects:@"2197.8", @"3915.4916", @"12007.725", nil],
-                                      [[NSArray alloc] initWithObjects:@"2196.7", @"3915.4943", @"12007.7243", nil],
-                                      [[NSArray alloc] initWithObjects:@"2195.5", @"3915.4971", @"12007.7236", nil],
-                                      [[NSArray alloc] initWithObjects:@"2194.2", @"3915.5001", @"12007.7231", nil],
-                                      [[NSArray alloc] initWithObjects:@"2193.1", @"3915.5043", @"12007.7233", nil],
-                                      [[NSArray alloc] initWithObjects:@"2192.2", @"3915.5073", @"12007.7229", nil],
-                                      [[NSArray alloc] initWithObjects:@"2191.3", @"3915.5102", @"12007.7223", nil],
-                                      [[NSArray alloc] initWithObjects:@"2190.4", @"3915.5127", @"12007.7217", nil],
-                                      [[NSArray alloc] initWithObjects:@"2189.7", @"3915.5144", @"12007.721", nil],
-                                      [[NSArray alloc] initWithObjects:@"2189.6", @"3915.5158", @"12007.72", nil],
-                                      [[NSArray alloc] initWithObjects:@"2189.6", @"3915.5168", @"12007.7186", nil],
-                                      [[NSArray alloc] initWithObjects:@"2188.6", @"3915.5179", @"12007.7168", nil],
-                                      [[NSArray alloc] initWithObjects:@"2186.6", @"3915.5192", @"12007.7149", nil],
-                                      [[NSArray alloc] initWithObjects:@"2184.4", @"3915.5216", @"12007.7129", nil],
-                                      [[NSArray alloc] initWithObjects:@"2181.8", @"3915.5244", @"12007.7111", nil],
-                                      [[NSArray alloc] initWithObjects:@"2180", @"3915.527", @"12007.709", nil],
-                                      [[NSArray alloc] initWithObjects:@"2178.3", @"3915.53", @"12007.7067", nil],
-                                      [[NSArray alloc] initWithObjects:@"2177.3", @"3915.5338", @"12007.7043", nil],
-                                      [[NSArray alloc] initWithObjects:@"2176", @"3915.5382", @"12007.7026", nil],
-                                      [[NSArray alloc] initWithObjects:@"2174.6", @"3915.5422", @"12007.7006", nil],
-                                      [[NSArray alloc] initWithObjects:@"2173.5", @"3915.5458", @"12007.6994", nil],
-                                      [[NSArray alloc] initWithObjects:@"2172.2", @"3915.55", @"12007.6987", nil],
-                                      [[NSArray alloc] initWithObjects:@"2170.6", @"3915.5544", @"12007.6975", nil],
-                                      [[NSArray alloc] initWithObjects:@"2169.2", @"3915.559", @"12007.6962", nil],
-                                      [[NSArray alloc] initWithObjects:@"2167.7", @"3915.5643", @"12007.6951", nil],
-                                      [[NSArray alloc] initWithObjects:@"2165.9", @"3915.569", @"12007.6935", nil],
-                                      [[NSArray alloc] initWithObjects:@"2164", @"3915.5737", @"12007.6918", nil],
-                                      [[NSArray alloc] initWithObjects:@"2162.3", @"3915.5784", @"12007.6904", nil],
-                                      [[NSArray alloc] initWithObjects:@"2160.6", @"3915.5827", @"12007.6885", nil],
-                                      [[NSArray alloc] initWithObjects:@"2158.6", @"3915.5868", @"12007.6859", nil],
-                                      [[NSArray alloc] initWithObjects:@"2156.9", @"3915.5914", @"12007.6832", nil],
-                                      [[NSArray alloc] initWithObjects:@"2155.2", @"3915.596", @"12007.681", nil],
-                                      [[NSArray alloc] initWithObjects:@"2153", @"3915.5999", @"12007.6789", nil],
-                                      [[NSArray alloc] initWithObjects:@"2151.1", @"3915.6041", @"12007.6768", nil],
-                                      [[NSArray alloc] initWithObjects:@"2149.4", @"3915.6079", @"12007.6754", nil],
-                                      [[NSArray alloc] initWithObjects:@"2147.9", @"3915.6128", @"12007.6744", nil],
-                                      [[NSArray alloc] initWithObjects:@"2146.2", @"3915.6176", @"12007.6732", nil],
-                                      [[NSArray alloc] initWithObjects:@"2144.3", @"3915.6219", @"12007.6711", nil],
-                                      [[NSArray alloc] initWithObjects:@"2142", @"3915.6256", @"12007.6684", nil],
-                                      [[NSArray alloc] initWithObjects:@"2140.2", @"3915.6297", @"12007.6651", nil],
-                                      [[NSArray alloc] initWithObjects:@"2138.5", @"3915.6339", @"12007.6616", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137.1", @"3915.6388", @"12007.6586", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135.7", @"3915.6437", @"12007.6562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.2", @"3915.6481", @"12007.6534", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137.5", @"3915.6535", @"12007.6508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2136.1", @"3915.6568", @"12007.649", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135", @"3915.6611", @"12007.6461", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133.8", @"3915.6654", @"12007.6441", nil],
-                                      [[NSArray alloc] initWithObjects:@"2132.6", @"3915.6693", @"12007.6425", nil],
-                                      [[NSArray alloc] initWithObjects:@"2131.4", @"3915.6728", @"12007.6405", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.2", @"3915.6761", @"12007.6381", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.1", @"3915.6779", @"12007.6362", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127.9", @"3915.6781", @"12007.6347", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.9", @"3915.6787", @"12007.6334", nil],
-                                      [[NSArray alloc] initWithObjects:@"2125.9", @"3915.6797", @"12007.6322", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.8", @"3915.6806", @"12007.631", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123.9", @"3915.6812", @"12007.6297", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122.9", @"3915.6822", @"12007.6283", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122.1", @"3915.6831", @"12007.6266", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121.4", @"3915.6842", @"12007.625", nil],
-                                      [[NSArray alloc] initWithObjects:@"2120.5", @"3915.6855", @"12007.6228", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.6", @"3915.6872", @"12007.6205", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119", @"3915.6889", @"12007.6192", nil],
-                                      [[NSArray alloc] initWithObjects:@"2118", @"3915.6913", @"12007.6184", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.3", @"3915.6928", @"12007.6173", nil],
-                                      [[NSArray alloc] initWithObjects:@"2116.7", @"3915.6951", @"12007.6147", nil],
-                                      [[NSArray alloc] initWithObjects:@"2115.9", @"3915.6972", @"12007.6117", nil],
-                                      [[NSArray alloc] initWithObjects:@"2115.1", @"3915.6993", @"12007.6089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114.3", @"3915.7025", @"12007.6063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2113.3", @"3915.7053", @"12007.6034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112.4", @"3915.7079", @"12007.601", nil],
-                                      [[NSArray alloc] initWithObjects:@"2111.4", @"3915.7119", @"12007.5992", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.3", @"3915.7152", @"12007.597", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.2", @"3915.7185", @"12007.5946", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.2", @"3915.7223", @"12007.5927", nil],
-                                      [[NSArray alloc] initWithObjects:@"2107.2", @"3915.7262", @"12007.5918", nil],
-                                      [[NSArray alloc] initWithObjects:@"2106.1", @"3915.7307", @"12007.5909", nil],
-                                      [[NSArray alloc] initWithObjects:@"2105", @"3915.7351", @"12007.5898", nil],
-                                      [[NSArray alloc] initWithObjects:@"2104", @"3915.7398", @"12007.5892", nil],
-                                      [[NSArray alloc] initWithObjects:@"2102.9", @"3915.7437", @"12007.5881", nil],
-                                      [[NSArray alloc] initWithObjects:@"2101.8", @"3915.7481", @"12007.5868", nil],
-                                      [[NSArray alloc] initWithObjects:@"2100.7", @"3915.753", @"12007.5852", nil],
-                                      [[NSArray alloc] initWithObjects:@"2099.5", @"3915.7568", @"12007.583", nil],
-                                      [[NSArray alloc] initWithObjects:@"2098.3", @"3915.7602", @"12007.5801", nil],
-                                      [[NSArray alloc] initWithObjects:@"2097", @"3915.7638", @"12007.5778", nil],
-                                      [[NSArray alloc] initWithObjects:@"2095.7", @"3915.768", @"12007.576", nil],
-                                      [[NSArray alloc] initWithObjects:@"2094.5", @"3915.772", @"12007.5746", nil],
-                                      [[NSArray alloc] initWithObjects:@"2093.1", @"3915.7752", @"12007.5726", nil],
-                                      [[NSArray alloc] initWithObjects:@"2091.9", @"3915.7786", @"12007.5691", nil],
-                                      [[NSArray alloc] initWithObjects:@"2090.6", @"3915.7821", @"12007.5651", nil],
-                                      [[NSArray alloc] initWithObjects:@"2089.4", @"3915.7854", @"12007.5608", nil],
-                                      [[NSArray alloc] initWithObjects:@"2088.2", @"3915.7884", @"12007.5561", nil],
-                                      [[NSArray alloc] initWithObjects:@"2087.1", @"3915.7907", @"12007.5511", nil],
-                                      [[NSArray alloc] initWithObjects:@"2085.9", @"3915.792", @"12007.5461", nil],
-                                      [[NSArray alloc] initWithObjects:@"2084.6", @"3915.7937", @"12007.5415", nil],
-                                      [[NSArray alloc] initWithObjects:@"2083.3", @"3915.796", @"12007.538", nil],
-                                      [[NSArray alloc] initWithObjects:@"2082.1", @"3915.798", @"12007.5349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2081", @"3915.7997", @"12007.5324", nil],
-                                      [[NSArray alloc] initWithObjects:@"2080", @"3915.8011", @"12007.5305", nil],
-                                      [[NSArray alloc] initWithObjects:@"2078.9", @"3915.8027", @"12007.5288", nil],
-                                      [[NSArray alloc] initWithObjects:@"2077.7", @"3915.8046", @"12007.5272", nil],
-                                      [[NSArray alloc] initWithObjects:@"2076.8", @"3915.8058", @"12007.5258", nil],
-                                      [[NSArray alloc] initWithObjects:@"2075.8", @"3915.8065", @"12007.5243", nil],
-                                      [[NSArray alloc] initWithObjects:@"2074.9", @"3915.8073", @"12007.5236", nil],
-                                      [[NSArray alloc] initWithObjects:@"2074", @"3915.8082", @"12007.5225", nil],
-                                      [[NSArray alloc] initWithObjects:@"2073.1", @"3915.8088", @"12007.5215", nil],
-                                      [[NSArray alloc] initWithObjects:@"2072.1", @"3915.8094", @"12007.521", nil],
-                                      [[NSArray alloc] initWithObjects:@"2071.1", @"3915.8102", @"12007.5205", nil],
-                                      [[NSArray alloc] initWithObjects:@"2070.2", @"3915.8109", @"12007.5201", nil],
-                                      [[NSArray alloc] initWithObjects:@"2069.2", @"3915.8113", @"12007.5193", nil],
-                                      [[NSArray alloc] initWithObjects:@"2068.3", @"3915.8121", @"12007.5182", nil],
-                                      [[NSArray alloc] initWithObjects:@"2067.4", @"3915.813", @"12007.5177", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066.6", @"3915.8137", @"12007.5174", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.8146", @"12007.5172", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065", @"3915.8153", @"12007.5165", nil],
-                                      [[NSArray alloc] initWithObjects:@"2064.2", @"3915.8163", @"12007.5156", nil],
-                                      [[NSArray alloc] initWithObjects:@"2063.5", @"3915.817", @"12007.5149", nil],
-                                      [[NSArray alloc] initWithObjects:@"2062.8", @"3915.8174", @"12007.5136", nil],
-                                      [[NSArray alloc] initWithObjects:@"2062.2", @"3915.8182", @"12007.5122", nil],
-                                      [[NSArray alloc] initWithObjects:@"2061.3", @"3915.8191", @"12007.5107", nil],
-                                      [[NSArray alloc] initWithObjects:@"2060.5", @"3915.8201", @"12007.51", nil],
-                                      [[NSArray alloc] initWithObjects:@"2059.8", @"3915.8209", @"12007.511", nil],
-                                      [[NSArray alloc] initWithObjects:@"2059.2", @"3915.8216", @"12007.5117", nil],
-                                      [[NSArray alloc] initWithObjects:@"2058.6", @"3915.8222", @"12007.5114", nil],
-                                      [[NSArray alloc] initWithObjects:@"2058.2", @"3915.8229", @"12007.5108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2057.8", @"3915.8242", @"12007.5094", nil],
-                                      [[NSArray alloc] initWithObjects:@"2057.4", @"3915.8251", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2056.8", @"3915.8254", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2056.4", @"3915.8259", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2056", @"3915.8262", @"12007.5059", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.9", @"3915.827", @"12007.5052", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.8", @"3915.8272", @"12007.5039", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.5", @"3915.8276", @"12007.5029", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.4", @"3915.8283", @"12007.5013", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.2", @"3915.8288", @"12007.5004", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.1", @"3915.8292", @"12007.4996", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.9", @"3915.8294", @"12007.4988", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.7", @"3915.8288", @"12007.4998", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.5", @"3915.8286", @"12007.5007", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.3", @"3915.8282", @"12007.5016", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.1", @"3915.8275", @"12007.5027", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.9", @"3915.8271", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.7", @"3915.8261", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.4", @"3915.8255", @"12007.5038", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.1", @"3915.8251", @"12007.5047", nil],
-                                      [[NSArray alloc] initWithObjects:@"2052.7", @"3915.8244", @"12007.5058", nil],
-                                      [[NSArray alloc] initWithObjects:@"2052.5", @"3915.8239", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2052.4", @"3915.8246", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2052.5", @"3915.8252", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2052.7", @"3915.825", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053", @"3915.8247", @"12007.5104", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.2", @"3915.8245", @"12007.5113", nil],
-                                      [[NSArray alloc] initWithObjects:@"2053.5", @"3915.8236", @"12007.5122", nil],
-                                      [[NSArray alloc] initWithObjects:@"2054.7", @"3915.8227", @"12007.513", nil],
-                                      [[NSArray alloc] initWithObjects:@"2055.7", @"3915.8232", @"12007.5138", nil],
-                                      [[NSArray alloc] initWithObjects:@"2056.7", @"3915.8233", @"12007.5145", nil],
-                                      [[NSArray alloc] initWithObjects:@"2057.5", @"3915.8236", @"12007.5148", nil],
-                                      [[NSArray alloc] initWithObjects:@"2058.3", @"3915.8234", @"12007.5153", nil],
-                                      [[NSArray alloc] initWithObjects:@"2059", @"3915.8235", @"12007.5157", nil],
-                                      [[NSArray alloc] initWithObjects:@"2059.4", @"3915.824", @"12007.5159", nil],
-                                      [[NSArray alloc] initWithObjects:@"2059.8", @"3915.8237", @"12007.5165", nil],
-                                      [[NSArray alloc] initWithObjects:@"2060.1", @"3915.8238", @"12007.517", nil],
-                                      [[NSArray alloc] initWithObjects:@"2060.5", @"3915.8238", @"12007.5176", nil],
-                                      [[NSArray alloc] initWithObjects:@"2060.8", @"3915.8235", @"12007.5181", nil],
-                                      [[NSArray alloc] initWithObjects:@"2061.3", @"3915.8226", @"12007.5185", nil],
-                                      [[NSArray alloc] initWithObjects:@"2061.9", @"3915.8208", @"12007.5187", nil],
-                                      [[NSArray alloc] initWithObjects:@"2062.4", @"3915.8196", @"12007.519", nil],
-                                      [[NSArray alloc] initWithObjects:@"2062.8", @"3915.8192", @"12007.5191", nil],
-                                      [[NSArray alloc] initWithObjects:@"2063.4", @"3915.8179", @"12007.5191", nil],
-                                      [[NSArray alloc] initWithObjects:@"2063.8", @"3915.8171", @"12007.5196", nil],
-                                      [[NSArray alloc] initWithObjects:@"2064.3", @"3915.8163", @"12007.5197", nil],
-                                      [[NSArray alloc] initWithObjects:@"2064.5", @"3915.8159", @"12007.5192", nil],
-                                      [[NSArray alloc] initWithObjects:@"2064.8", @"3915.8158", @"12007.5193", nil],
-                                      [[NSArray alloc] initWithObjects:@"2064.9", @"3915.8157", @"12007.5194", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.1", @"3915.8156", @"12007.5195", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8154", @"12007.5196", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8152", @"12007.5197", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8152", @"12007.5197", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8152", @"12007.5197", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8152", @"12007.5196", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8151", @"12007.5195", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.3", @"3915.8147", @"12007.5194", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.4", @"3915.8143", @"12007.5195", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.4", @"3915.8138", @"12007.5196", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.5", @"3915.8134", @"12007.5198", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.5", @"3915.8129", @"12007.52", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.6", @"3915.8124", @"12007.5201", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.6", @"3915.8119", @"12007.5201", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.7", @"3915.8115", @"12007.5203", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.7", @"3915.8112", @"12007.5204", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.8109", @"12007.5205", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.8108", @"12007.5207", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.9", @"3915.8107", @"12007.5211", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066", @"3915.8108", @"12007.5217", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066", @"3915.8108", @"12007.5222", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.8105", @"12007.5223", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.9", @"3915.8069", @"12007.5201", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.9", @"3915.8063", @"12007.5196", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.7", @"3915.8054", @"12007.5187", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.7996", @"12007.5156", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.7969", @"12007.5147", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.7915", @"12007.515", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.789", @"12007.5148", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.7894", @"12007.5134", nil],
-                                      [[NSArray alloc] initWithObjects:@"2065.8", @"3915.7868", @"12007.5134", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066", @"3915.7847", @"12007.513", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066.2", @"3915.7824", @"12007.5128", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066.5", @"3915.7796", @"12007.5124", nil],
-                                      [[NSArray alloc] initWithObjects:@"2066.8", @"3915.777", @"12007.5118", nil],
-                                      [[NSArray alloc] initWithObjects:@"2067", @"3915.7743", @"12007.5113", nil],
-                                      [[NSArray alloc] initWithObjects:@"2067.3", @"3915.7716", @"12007.511", nil],
-                                      [[NSArray alloc] initWithObjects:@"2067.6", @"3915.7677", @"12007.511", nil],
-                                      [[NSArray alloc] initWithObjects:@"2068.2", @"3915.7636", @"12007.5114", nil],
-                                      [[NSArray alloc] initWithObjects:@"2068.8", @"3915.7613", @"12007.5113", nil],
-                                      [[NSArray alloc] initWithObjects:@"2069.3", @"3915.7585", @"12007.5112", nil],
-                                      [[NSArray alloc] initWithObjects:@"2069.9", @"3915.7564", @"12007.5111", nil],
-                                      [[NSArray alloc] initWithObjects:@"2070.5", @"3915.7543", @"12007.5109", nil],
-                                      [[NSArray alloc] initWithObjects:@"2070.9", @"3915.7525", @"12007.5106", nil],
-                                      [[NSArray alloc] initWithObjects:@"2071.4", @"3915.7496", @"12007.5105", nil],
-                                      [[NSArray alloc] initWithObjects:@"2072.1", @"3915.7466", @"12007.5108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2072.8", @"3915.7432", @"12007.5108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2073.5", @"3915.7402", @"12007.5108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2074.1", @"3915.7372", @"12007.5109", nil],
-                                      [[NSArray alloc] initWithObjects:@"2074.8", @"3915.7344", @"12007.5109", nil],
-                                      [[NSArray alloc] initWithObjects:@"2075.5", @"3915.7322", @"12007.5106", nil],
-                                      [[NSArray alloc] initWithObjects:@"2076.2", @"3915.7302", @"12007.5105", nil],
-                                      [[NSArray alloc] initWithObjects:@"2076.9", @"3915.7275", @"12007.5107", nil],
-                                      [[NSArray alloc] initWithObjects:@"2077.5", @"3915.7255", @"12007.5109", nil],
-                                      [[NSArray alloc] initWithObjects:@"2078", @"3915.7236", @"12007.5107", nil],
-                                      [[NSArray alloc] initWithObjects:@"2078.6", @"3915.7214", @"12007.5103", nil],
-                                      [[NSArray alloc] initWithObjects:@"2079.1", @"3915.7198", @"12007.5101", nil],
-                                      [[NSArray alloc] initWithObjects:@"2079.5", @"3915.7171", @"12007.51", nil],
-                                      [[NSArray alloc] initWithObjects:@"2080", @"3915.7153", @"12007.5101", nil],
-                                      [[NSArray alloc] initWithObjects:@"2080.3", @"3915.7124", @"12007.511", nil],
-                                      [[NSArray alloc] initWithObjects:@"2080.6", @"3915.7102", @"12007.5114", nil],
-                                      [[NSArray alloc] initWithObjects:@"2081.1", @"3915.7076", @"12007.5115", nil],
-                                      [[NSArray alloc] initWithObjects:@"2081.6", @"3915.7044", @"12007.5118", nil],
-                                      [[NSArray alloc] initWithObjects:@"2082", @"3915.7012", @"12007.5119", nil],
-                                      [[NSArray alloc] initWithObjects:@"2082.6", @"3915.6987", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2083.1", @"3915.6957", @"12007.5122", nil],
-                                      [[NSArray alloc] initWithObjects:@"2083.7", @"3915.6933", @"12007.512", nil],
-                                      [[NSArray alloc] initWithObjects:@"2084.2", @"3915.6898", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2084.8", @"3915.6868", @"12007.5119", nil],
-                                      [[NSArray alloc] initWithObjects:@"2085.2", @"3915.6843", @"12007.5119", nil],
-                                      [[NSArray alloc] initWithObjects:@"2085.7", @"3915.682", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2086.2", @"3915.6792", @"12007.512", nil],
-                                      [[NSArray alloc] initWithObjects:@"2086.8", @"3915.6768", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2087.4", @"3915.6744", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2088", @"3915.6713", @"12007.5121", nil],
-                                      [[NSArray alloc] initWithObjects:@"2088.7", @"3915.6688", @"12007.512", nil],
-                                      [[NSArray alloc] initWithObjects:@"2089.3", @"3915.6671", @"12007.5118", nil],
-                                      [[NSArray alloc] initWithObjects:@"2090", @"3915.665", @"12007.5115", nil],
-                                      [[NSArray alloc] initWithObjects:@"2090.7", @"3915.6632", @"12007.5112", nil],
-                                      [[NSArray alloc] initWithObjects:@"2091.4", @"3915.6611", @"12007.5107", nil],
-                                      [[NSArray alloc] initWithObjects:@"2092.1", @"3915.6591", @"12007.5103", nil],
-                                      [[NSArray alloc] initWithObjects:@"2092.8", @"3915.6567", @"12007.5101", nil],
-                                      [[NSArray alloc] initWithObjects:@"2093.5", @"3915.654", @"12007.5098", nil],
-                                      [[NSArray alloc] initWithObjects:@"2094.2", @"3915.6519", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2094.9", @"3915.6492", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2095.7", @"3915.646", @"12007.5099", nil],
-                                      [[NSArray alloc] initWithObjects:@"2096.4", @"3915.6433", @"12007.51", nil],
-                                      [[NSArray alloc] initWithObjects:@"2097.2", @"3915.6409", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2098", @"3915.639", @"12007.5094", nil],
-                                      [[NSArray alloc] initWithObjects:@"2098.8", @"3915.6369", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2099.6", @"3915.6344", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2100.3", @"3915.6323", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2101.1", @"3915.6303", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2101.8", @"3915.6279", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2102.6", @"3915.6254", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2103.5", @"3915.6231", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2104.4", @"3915.6216", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2105.1", @"3915.6218", @"12007.5087", nil],
-                                      [[NSArray alloc] initWithObjects:@"2105.7", @"3915.6216", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2106.2", @"3915.6206", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2106.6", @"3915.6194", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2107", @"3915.618", @"12007.5066", nil],
-                                      [[NSArray alloc] initWithObjects:@"2107.3", @"3915.616", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2107.6", @"3915.6138", @"12007.5062", nil],
-                                      [[NSArray alloc] initWithObjects:@"2107.9", @"3915.6118", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.2", @"3915.6094", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.5", @"3915.6066", @"12007.506", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.9", @"3915.6044", @"12007.5059", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.4", @"3915.6018", @"12007.5057", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.8", @"3915.5993", @"12007.5055", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.3", @"3915.597", @"12007.5054", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.8", @"3915.5943", @"12007.5052", nil],
-                                      [[NSArray alloc] initWithObjects:@"2111.4", @"3915.5911", @"12007.5052", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112", @"3915.5873", @"12007.5053", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112.6", @"3915.5844", @"12007.5056", nil],
-                                      [[NSArray alloc] initWithObjects:@"2113.3", @"3915.582", @"12007.5056", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114", @"3915.5793", @"12007.5055", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114.8", @"3915.577", @"12007.5053", nil],
-                                      [[NSArray alloc] initWithObjects:@"2115.7", @"3915.574", @"12007.5051", nil],
-                                      [[NSArray alloc] initWithObjects:@"2116.4", @"3915.5708", @"12007.5046", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.1", @"3915.5684", @"12007.5044", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.7", @"3915.5657", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2118.5", @"3915.563", @"12007.5037", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.2", @"3915.5607", @"12007.5038", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.8", @"3915.5582", @"12007.5039", nil],
-                                      [[NSArray alloc] initWithObjects:@"2120.2", @"3915.5552", @"12007.5035", nil],
-                                      [[NSArray alloc] initWithObjects:@"2120.6", @"3915.5523", @"12007.5032", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121", @"3915.5491", @"12007.5032", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121.3", @"3915.5462", @"12007.5033", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121.7", @"3915.5433", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122", @"3915.54", @"12007.5037", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122.6", @"3915.5374", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123", @"3915.5341", @"12007.5045", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123.4", @"3915.5311", @"12007.5049", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123.8", @"3915.5287", @"12007.5049", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.2", @"3915.5259", @"12007.5049", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.6", @"3915.5235", @"12007.5048", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.9", @"3915.5213", @"12007.5045", nil],
-                                      [[NSArray alloc] initWithObjects:@"2125.3", @"3915.5192", @"12007.5046", nil],
-                                      [[NSArray alloc] initWithObjects:@"2125.7", @"3915.517", @"12007.5043", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.3", @"3915.5147", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.7", @"3915.5119", @"12007.5036", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127", @"3915.5109", @"12007.5037", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127.3", @"3915.5089", @"12007.5035", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127.6", @"3915.5067", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128", @"3915.5047", @"12007.5035", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128.5", @"3915.5024", @"12007.504", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128.9", @"3915.4998", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.3", @"3915.497", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.8", @"3915.494", @"12007.504", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.1", @"3915.4903", @"12007.504", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.3", @"3915.4872", @"12007.504", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.6", @"3915.4844", @"12007.5037", nil],
-                                      [[NSArray alloc] initWithObjects:@"2131", @"3915.4823", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2131.5", @"3915.4787", @"12007.5034", nil],
-                                      [[NSArray alloc] initWithObjects:@"2132", @"3915.4762", @"12007.5041", nil],
-                                      [[NSArray alloc] initWithObjects:@"2132.4", @"3915.474", @"12007.5044", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133.2", @"3915.4715", @"12007.5046", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133.5", @"3915.4681", @"12007.5049", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133.8", @"3915.465", @"12007.5051", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.2", @"3915.4618", @"12007.5051", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.4", @"3915.4586", @"12007.5051", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.7", @"3915.4559", @"12007.5053", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.8", @"3915.4535", @"12007.5053", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135", @"3915.4511", @"12007.5055", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135.2", @"3915.4487", @"12007.5056", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135.4", @"3915.4459", @"12007.5057", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135.8", @"3915.4437", @"12007.5061", nil],
-                                      [[NSArray alloc] initWithObjects:@"2136", @"3915.4408", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2136.3", @"3915.4381", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2136.7", @"3915.4354", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137", @"3915.4325", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137.4", @"3915.4297", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137.8", @"3915.4277", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2138.2", @"3915.4258", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2138.7", @"3915.4232", @"12007.5085", nil],
-                                      [[NSArray alloc] initWithObjects:@"2139.2", @"3915.421", @"12007.5085", nil],
-                                      [[NSArray alloc] initWithObjects:@"2139.7", @"3915.4186", @"12007.5085", nil],
-                                      [[NSArray alloc] initWithObjects:@"2140.3", @"3915.4162", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2140.8", @"3915.4135", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2141.4", @"3915.4108", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2141.9", @"3915.4084", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2142.6", @"3915.4056", @"12007.5085", nil],
-                                      [[NSArray alloc] initWithObjects:@"2143.3", @"3915.4021", @"12007.5087", nil],
-                                      [[NSArray alloc] initWithObjects:@"2144", @"3915.3991", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2144.7", @"3915.3961", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2145.4", @"3915.3944", @"12007.5085", nil],
-                                      [[NSArray alloc] initWithObjects:@"2146.1", @"3915.3922", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2146.9", @"3915.39", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2147.6", @"3915.3885", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2148.4", @"3915.3859", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2149.2", @"3915.3834", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2149.9", @"3915.3805", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2150.6", @"3915.3776", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2151.4", @"3915.3764", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2152.3", @"3915.3736", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2153.2", @"3915.3707", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2154.1", @"3915.368", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2154.9", @"3915.3651", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2155.4", @"3915.3615", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2155.9", @"3915.3585", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2156.4", @"3915.3553", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2156.9", @"3915.3522", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2157.5", @"3915.3487", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2158", @"3915.3455", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2158.5", @"3915.3419", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2159.1", @"3915.3381", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2159.6", @"3915.335", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2160.1", @"3915.3322", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2160.5", @"3915.3293", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2161.1", @"3915.3263", @"12007.5094", nil],
-                                      [[NSArray alloc] initWithObjects:@"2161.6", @"3915.323", @"12007.5096", nil],
-                                      [[NSArray alloc] initWithObjects:@"2162.2", @"3915.3203", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2162.9", @"3915.3176", @"12007.5098", nil],
-                                      [[NSArray alloc] initWithObjects:@"2163.5", @"3915.3153", @"12007.5097", nil],
-                                      [[NSArray alloc] initWithObjects:@"2164.1", @"3915.3133", @"12007.5095", nil],
-                                      [[NSArray alloc] initWithObjects:@"2164.7", @"3915.3111", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2165.4", @"3915.3088", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2166", @"3915.3065", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2166.6", @"3915.3046", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2167.1", @"3915.3024", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2167.6", @"3915.2998", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2168.1", @"3915.2976", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2168.6", @"3915.2957", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2169.3", @"3915.2935", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2169.9", @"3915.2913", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2170.6", @"3915.2886", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2171.3", @"3915.2862", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2171.9", @"3915.2838", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2172.7", @"3915.2817", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2173.3", @"3915.2799", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2173.9", @"3915.2783", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2174.7", @"3915.2767", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2175.5", @"3915.2752", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2176.3", @"3915.2738", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2177", @"3915.2724", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2177.6", @"3915.271", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2178.2", @"3915.2694", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2178.8", @"3915.2679", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2179.3", @"3915.2657", @"12007.5071", nil],
-                                      [[NSArray alloc] initWithObjects:@"2180", @"3915.2632", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2180.6", @"3915.2608", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2181.3", @"3915.2578", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2182.1", @"3915.2548", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2182.9", @"3915.2521", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2183.6", @"3915.2498", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2184.4", @"3915.2474", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2185", @"3915.2444", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2185.7", @"3915.2415", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2186.5", @"3915.2393", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2187.5", @"3915.2362", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2188.5", @"3915.2334", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2189.4", @"3915.2305", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2190.3", @"3915.2275", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2191.2", @"3915.2256", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2192.1", @"3915.2234", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2192.7", @"3915.2206", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2193.3", @"3915.2187", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2194.1", @"3915.2169", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2194.9", @"3915.2156", @"12007.5067", nil],
-                                      [[NSArray alloc] initWithObjects:@"2195.5", @"3915.2135", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2195.9", @"3915.2109", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2196.4", @"3915.209", @"12007.5061", nil],
-                                      [[NSArray alloc] initWithObjects:@"2196.9", @"3915.2068", @"12007.506", nil],
-                                      [[NSArray alloc] initWithObjects:@"2197.3", @"3915.2046", @"12007.5059", nil],
-                                      [[NSArray alloc] initWithObjects:@"2197.7", @"3915.2028", @"12007.5059", nil],
-                                      [[NSArray alloc] initWithObjects:@"2198.1", @"3915.2008", @"12007.5061", nil],
-                                      [[NSArray alloc] initWithObjects:@"2198.5", @"3915.1983", @"12007.5061", nil],
-                                      [[NSArray alloc] initWithObjects:@"2198.9", @"3915.1953", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2199.3", @"3915.1926", @"12007.5066", nil],
-                                      [[NSArray alloc] initWithObjects:@"2199.7", @"3915.1898", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2200.1", @"3915.1877", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2200.5", @"3915.1857", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2201.1", @"3915.1836", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2201.7", @"3915.1813", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2202.2", @"3915.1787", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2202.9", @"3915.1767", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2203.5", @"3915.1745", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2204", @"3915.1722", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2204.3", @"3915.1712", @"12007.5067", nil],
-                                      [[NSArray alloc] initWithObjects:@"2204.6", @"3915.1708", @"12007.5065", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.1", @"3915.1695", @"12007.5064", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.4", @"3915.1681", @"12007.5064", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.6", @"3915.1663", @"12007.5064", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.8", @"3915.164", @"12007.5065", nil],
-                                      [[NSArray alloc] initWithObjects:@"2206.2", @"3915.1615", @"12007.5067", nil],
-                                      [[NSArray alloc] initWithObjects:@"2206.4", @"3915.1592", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2206.6", @"3915.1568", @"12007.5071", nil],
-                                      [[NSArray alloc] initWithObjects:@"2207", @"3915.1539", @"12007.5068", nil],
-                                      [[NSArray alloc] initWithObjects:@"2207.4", @"3915.1518", @"12007.5064", nil],
-                                      [[NSArray alloc] initWithObjects:@"2207.8", @"3915.1487", @"12007.5062", nil],
-                                      [[NSArray alloc] initWithObjects:@"2208.3", @"3915.1457", @"12007.5062", nil],
-                                      [[NSArray alloc] initWithObjects:@"2208.8", @"3915.1429", @"12007.5062", nil],
-                                      [[NSArray alloc] initWithObjects:@"2209.5", @"3915.1404", @"12007.5063", nil],
-                                      [[NSArray alloc] initWithObjects:@"2210", @"3915.1385", @"12007.5064", nil],
-                                      [[NSArray alloc] initWithObjects:@"2210.7", @"3915.1364", @"12007.5066", nil],
-                                      [[NSArray alloc] initWithObjects:@"2211.2", @"3915.1349", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2211.7", @"3915.1341", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2212.1", @"3915.1328", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2212.5", @"3915.1307", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2212.8", @"3915.1275", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2213.1", @"3915.1262", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2213.4", @"3915.1239", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2213.7", @"3915.1226", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2213.9", @"3915.1201", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.2", @"3915.1179", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.3", @"3915.1156", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.5", @"3915.1136", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.6", @"3915.1114", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.7", @"3915.1085", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.8", @"3915.1055", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.1", @"3915.1018", @"12007.5071", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.4", @"3915.0982", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.6", @"3915.0946", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2216.1", @"3915.0909", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2216.4", @"3915.0871", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217", @"3915.0835", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.5", @"3915.08", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.1", @"3915.0763", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.6", @"3915.0733", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.2", @"3915.0704", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.6", @"3915.0678", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.1", @"3915.0651", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.4", @"3915.062", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.9", @"3915.0584", @"12007.5094", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.4", @"3915.0554", @"12007.5096", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.8", @"3915.0522", @"12007.5096", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.2", @"3915.0496", @"12007.5095", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.6", @"3915.0474", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.9", @"3915.0449", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.3", @"3915.0421", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.6", @"3915.0396", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224", @"3915.0369", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.6", @"3915.0338", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.7", @"3915.0309", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225", @"3915.0277", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.1", @"3915.0242", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.5", @"3915.0208", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.7", @"3915.0177", @"12007.5093", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.9", @"3915.0153", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2226", @"3915.0123", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2226.2", @"3915.0091", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2226.1", @"3915.0065", @"12007.509", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.9", @"3915.0042", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.8", @"3915.0022", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.6", @"3915", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.6", @"3914.9966", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.5", @"3914.9935", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.5", @"3914.9912", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.4", @"3914.9888", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.4", @"3914.9868", @"12007.5073", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.4", @"3914.9849", @"12007.5072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.3", @"3914.9842", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.2", @"3914.9837", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.1", @"3914.9826", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.9", @"3914.9808", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.7", @"3914.9781", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.6", @"3914.9755", @"12007.5081", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.5", @"3914.9724", @"12007.5082", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.3", @"3914.9693", @"12007.5084", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224.2", @"3914.9663", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2224", @"3914.9632", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.9", @"3914.9597", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.7", @"3914.9562", @"12007.5088", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.5", @"3914.9525", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.3", @"3914.9493", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.1", @"3914.9464", @"12007.5091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.9", @"3914.9441", @"12007.5089", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.7", @"3914.9423", @"12007.5086", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.5", @"3914.9407", @"12007.5083", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.2", @"3914.9392", @"12007.508", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.9", @"3914.9372", @"12007.5078", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.6", @"3914.9355", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.2", @"3914.9338", @"12007.5076", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.8", @"3914.9321", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.5", @"3914.9304", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2220.1", @"3914.9286", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.7", @"3914.926", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.2", @"3914.9236", @"12007.5069", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.6", @"3914.9215", @"12007.507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.1", @"3914.9197", @"12007.5074", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.5", @"3914.9177", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217", @"3914.9158", @"12007.5079", nil],
-                                      [[NSArray alloc] initWithObjects:@"2216.5", @"3914.9138", @"12007.5075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.9", @"3914.9116", @"12007.5077", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.5", @"3914.9085", @"12007.5087", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215", @"3914.9067", @"12007.5092", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.6", @"3914.9041", @"12007.5105", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.3", @"3914.8993", @"12007.5134", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.2", @"3914.8962", @"12007.5145", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.8", @"3914.8972", @"12007.5163", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.6", @"3914.8973", @"12007.5183", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.5", @"3914.8964", @"12007.5201", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.1", @"3914.8962", @"12007.5218", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.4", @"3914.8981", @"12007.5232", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225", @"3914.901", @"12007.5238", nil],
-                                      [[NSArray alloc] initWithObjects:@"2227.1", @"3914.9025", @"12007.5242", nil],
-                                      [[NSArray alloc] initWithObjects:@"2228.6", @"3914.9049", @"12007.5242", nil],
-                                      [[NSArray alloc] initWithObjects:@"2228.7", @"3914.9042", @"12007.5238", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229", @"3914.9039", @"12007.5246", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.7", @"3914.9035", @"12007.5255", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.1", @"3914.904", @"12007.5266", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.5", @"3914.9039", @"12007.5274", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.8", @"3914.9033", @"12007.5281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.5", @"3914.9027", @"12007.5283", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.1", @"3914.9025", @"12007.5285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9023", @"12007.5287", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.9022", @"12007.5291", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9021", @"12007.5292", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9019", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9019", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9019", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9019", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9019", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.8", @"3914.902", @"12007.5293", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9021", @"12007.5295", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9021", @"12007.5298", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.902", @"12007.5303", nil],
-                                      [[NSArray alloc] initWithObjects:@"2229.9", @"3914.9017", @"12007.5308", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230", @"3914.9016", @"12007.5313", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230", @"3914.9015", @"12007.5317", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.1", @"3914.9015", @"12007.5321", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.2", @"3914.9015", @"12007.5323", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.2", @"3914.9016", @"12007.5326", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.2", @"3914.9019", @"12007.533", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.3", @"3914.9019", @"12007.533", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.4", @"3914.9019", @"12007.5333", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.5", @"3914.9018", @"12007.5337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.6", @"3914.9017", @"12007.534", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.7", @"3914.9016", @"12007.5342", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.8", @"3914.9016", @"12007.5344", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230.9", @"3914.9017", @"12007.5347", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231", @"3914.9018", @"12007.5348", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231", @"3914.9019", @"12007.5349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231", @"3914.9019", @"12007.5349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231", @"3914.9019", @"12007.5352", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.1", @"3914.9019", @"12007.5352", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.1", @"3914.9018", @"12007.5355", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.1", @"3914.9018", @"12007.5355", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.4", @"3914.9019", @"12007.5362", nil],
-                                      [[NSArray alloc] initWithObjects:@"2233.3", @"3914.901", @"12007.5363", nil],
-                                      [[NSArray alloc] initWithObjects:@"2235.1", @"3914.8986", @"12007.5348", nil],
-                                      [[NSArray alloc] initWithObjects:@"2236.5", @"3914.8974", @"12007.5341", nil],
-                                      [[NSArray alloc] initWithObjects:@"2237.8", @"3914.8961", @"12007.5337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2239.9", @"3914.8954", @"12007.5337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2241.9", @"3914.8948", @"12007.5337", nil],
-                                      [[NSArray alloc] initWithObjects:@"2244.2", @"3914.8942", @"12007.5341", nil],
-                                      [[NSArray alloc] initWithObjects:@"2246.2", @"3914.8936", @"12007.5349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2248.3", @"3914.893", @"12007.5356", nil],
-                                      [[NSArray alloc] initWithObjects:@"2250.3", @"3914.8928", @"12007.5367", nil],
-                                      [[NSArray alloc] initWithObjects:@"2252.6", @"3914.8926", @"12007.5378", nil],
-                                      [[NSArray alloc] initWithObjects:@"2254.5", @"3914.892", @"12007.539", nil],
-                                      [[NSArray alloc] initWithObjects:@"2256.2", @"3914.8917", @"12007.5404", nil],
-                                      [[NSArray alloc] initWithObjects:@"2257.9", @"3914.8912", @"12007.5418", nil],
-                                      [[NSArray alloc] initWithObjects:@"2259.3", @"3914.8911", @"12007.5427", nil],
-                                      [[NSArray alloc] initWithObjects:@"2260.5", @"3914.8909", @"12007.5437", nil],
-                                      [[NSArray alloc] initWithObjects:@"2261.7", @"3914.8907", @"12007.5446", nil],
-                                      [[NSArray alloc] initWithObjects:@"2263.4", @"3914.8905", @"12007.5455", nil],
-                                      [[NSArray alloc] initWithObjects:@"2264.8", @"3914.8901", @"12007.5474", nil],
-                                      [[NSArray alloc] initWithObjects:@"2266.2", @"3914.8899", @"12007.5489", nil],
-                                      [[NSArray alloc] initWithObjects:@"2268.1", @"3914.8897", @"12007.5502", nil],
-                                      [[NSArray alloc] initWithObjects:@"2269.7", @"3914.8899", @"12007.5524", nil],
-                                      [[NSArray alloc] initWithObjects:@"2270.7", @"3914.8899", @"12007.5546", nil],
-                                      [[NSArray alloc] initWithObjects:@"2271.4", @"3914.8901", @"12007.5568", nil],
-                                      [[NSArray alloc] initWithObjects:@"2271.9", @"3914.8906", @"12007.5586", nil],
-                                      [[NSArray alloc] initWithObjects:@"2272.5", @"3914.8912", @"12007.5611", nil],
-                                      [[NSArray alloc] initWithObjects:@"2274", @"3914.8917", @"12007.5637", nil],
-                                      [[NSArray alloc] initWithObjects:@"2275.8", @"3914.8923", @"12007.5664", nil],
-                                      [[NSArray alloc] initWithObjects:@"2276.9", @"3914.8933", @"12007.5697", nil],
-                                      [[NSArray alloc] initWithObjects:@"2277.7", @"3914.8943", @"12007.5726", nil],
-                                      [[NSArray alloc] initWithObjects:@"2278.1", @"3914.8951", @"12007.5752", nil],
-                                      [[NSArray alloc] initWithObjects:@"2280.3", @"3914.8961", @"12007.578", nil],
-                                      [[NSArray alloc] initWithObjects:@"2286.1", @"3914.8959", @"12007.5802", nil],
-                                      [[NSArray alloc] initWithObjects:@"2289.9", @"3914.8936", @"12007.5832", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.4", @"3914.8935", @"12007.5853", nil],
-                                      [[NSArray alloc] initWithObjects:@"2295.4", @"3914.8932", @"12007.5884", nil],
-                                      [[NSArray alloc] initWithObjects:@"2298.7", @"3914.8928", @"12007.5925", nil],
-                                      [[NSArray alloc] initWithObjects:@"2301.3", @"3914.8919", @"12007.5977", nil],
-                                      [[NSArray alloc] initWithObjects:@"2303.5", @"3914.8918", @"12007.6002", nil],
-                                      [[NSArray alloc] initWithObjects:@"2305.3", @"3914.8928", @"12007.6027", nil],
-                                      [[NSArray alloc] initWithObjects:@"2307", @"3914.8939", @"12007.6059", nil],
-                                      [[NSArray alloc] initWithObjects:@"2308.2", @"3914.8953", @"12007.6098", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.2", @"3914.8967", @"12007.6134", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.6", @"3914.8982", @"12007.6166", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.7", @"3914.8993", @"12007.6204", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.3", @"3914.8999", @"12007.6249", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.7", @"3914.9002", @"12007.631", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.8", @"3914.9012", @"12007.6368", nil],
-                                      [[NSArray alloc] initWithObjects:@"2311.2", @"3914.902", @"12007.6431", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.9", @"3914.9027", @"12007.6503", nil],
-                                      [[NSArray alloc] initWithObjects:@"2311.1", @"3914.9026", @"12007.6575", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.9", @"3914.9037", @"12007.6641", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.3", @"3914.9052", @"12007.6701", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.7", @"3914.9065", @"12007.6756", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.6", @"3914.9081", @"12007.6815", nil],
-                                      [[NSArray alloc] initWithObjects:@"2311.1", @"3914.91", @"12007.6865", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.8", @"3914.9109", @"12007.6938", nil],
-                                      [[NSArray alloc] initWithObjects:@"2310.3", @"3914.9124", @"12007.6993", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309.6", @"3914.9151", @"12007.704", nil],
-                                      [[NSArray alloc] initWithObjects:@"2309", @"3914.9169", @"12007.7091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2308.1", @"3914.9185", @"12007.7129", nil],
-                                      [[NSArray alloc] initWithObjects:@"2307.4", @"3914.921", @"12007.717", nil],
-                                      [[NSArray alloc] initWithObjects:@"2306.5", @"3914.9253", @"12007.7222", nil],
-                                      [[NSArray alloc] initWithObjects:@"2305.8", @"3914.928", @"12007.7285", nil],
-                                      [[NSArray alloc] initWithObjects:@"2305", @"3914.9339", @"12007.734", nil],
-                                      [[NSArray alloc] initWithObjects:@"2304.1", @"3914.9375", @"12007.7402", nil],
-                                      [[NSArray alloc] initWithObjects:@"2303.3", @"3914.9407", @"12007.746", nil],
-                                      [[NSArray alloc] initWithObjects:@"2302.2", @"3914.947", @"12007.7517", nil],
-                                      [[NSArray alloc] initWithObjects:@"2301.1", @"3914.9512", @"12007.7573", nil],
-                                      [[NSArray alloc] initWithObjects:@"2299.8", @"3914.9557", @"12007.7629", nil],
-                                      [[NSArray alloc] initWithObjects:@"2298.6", @"3914.9602", @"12007.7687", nil],
-                                      [[NSArray alloc] initWithObjects:@"2297.5", @"3914.9638", @"12007.775", nil],
-                                      [[NSArray alloc] initWithObjects:@"2296.3", @"3914.9679", @"12007.7813", nil],
-                                      [[NSArray alloc] initWithObjects:@"2295", @"3914.9717", @"12007.7876", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.8", @"3914.9747", @"12007.7941", nil],
-                                      [[NSArray alloc] initWithObjects:@"2292.4", @"3914.9773", @"12007.8006", nil],
-                                      [[NSArray alloc] initWithObjects:@"2291.8", @"3914.9788", @"12007.8072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2291.2", @"3914.981", @"12007.815", nil],
-                                      [[NSArray alloc] initWithObjects:@"2294.1", @"3914.9825", @"12007.8223", nil],
-                                      [[NSArray alloc] initWithObjects:@"2294", @"3914.9856", @"12007.8286", nil],
-                                      [[NSArray alloc] initWithObjects:@"2293.4", @"3914.9877", @"12007.8359", nil],
-                                      [[NSArray alloc] initWithObjects:@"2292.5", @"3914.9901", @"12007.8419", nil],
-                                      [[NSArray alloc] initWithObjects:@"2291.4", @"3914.992", @"12007.8465", nil],
-                                      [[NSArray alloc] initWithObjects:@"2290.3", @"3914.996", @"12007.8512", nil],
-                                      [[NSArray alloc] initWithObjects:@"2289.2", @"3914.9991", @"12007.8559", nil],
-                                      [[NSArray alloc] initWithObjects:@"2287.9", @"3915.0018", @"12007.8601", nil],
-                                      [[NSArray alloc] initWithObjects:@"2286.4", @"3915.0089", @"12007.8632", nil],
-                                      [[NSArray alloc] initWithObjects:@"2284.9", @"3915.0135", @"12007.8664", nil],
-                                      [[NSArray alloc] initWithObjects:@"2283.5", @"3915.0173", @"12007.8704", nil],
-                                      [[NSArray alloc] initWithObjects:@"2285.3", @"3915.0208", @"12007.8745", nil],
-                                      [[NSArray alloc] initWithObjects:@"2284.5", @"3915.0239", @"12007.8774", nil],
-                                      [[NSArray alloc] initWithObjects:@"2283.5", @"3915.0248", @"12007.8789", nil],
-                                      [[NSArray alloc] initWithObjects:@"2282.7", @"3915.0275", @"12007.8807", nil],
-                                      [[NSArray alloc] initWithObjects:@"2283.9", @"3915.0312", @"12007.882", nil],
-                                      [[NSArray alloc] initWithObjects:@"2283.2", @"3915.0319", @"12007.8906", nil],
-                                      [[NSArray alloc] initWithObjects:@"2282.2", @"3915.0335", @"12007.8892", nil],
-                                      [[NSArray alloc] initWithObjects:@"2281.7", @"3915.0369", @"12007.889", nil],
-                                      [[NSArray alloc] initWithObjects:@"2281.1", @"3915.0398", @"12007.8908", nil],
-                                      [[NSArray alloc] initWithObjects:@"2280", @"3915.0436", @"12007.8913", nil],
-                                      [[NSArray alloc] initWithObjects:@"2279", @"3915.0477", @"12007.8896", nil],
-                                      [[NSArray alloc] initWithObjects:@"2278", @"3915.0509", @"12007.887", nil],
-                                      [[NSArray alloc] initWithObjects:@"2276.9", @"3915.0533", @"12007.8868", nil],
-                                      [[NSArray alloc] initWithObjects:@"2275.8", @"3915.0575", @"12007.8864", nil],
-                                      [[NSArray alloc] initWithObjects:@"2274.5", @"3915.0603", @"12007.8839", nil],
-                                      [[NSArray alloc] initWithObjects:@"2273.1", @"3915.0645", @"12007.8832", nil],
-                                      [[NSArray alloc] initWithObjects:@"2271.7", @"3915.0681", @"12007.8829", nil],
-                                      [[NSArray alloc] initWithObjects:@"2270.1", @"3915.0719", @"12007.8825", nil],
-                                      [[NSArray alloc] initWithObjects:@"2268.7", @"3915.0755", @"12007.8813", nil],
-                                      [[NSArray alloc] initWithObjects:@"2267.3", @"3915.0789", @"12007.8803", nil],
-                                      [[NSArray alloc] initWithObjects:@"2265.7", @"3915.0841", @"12007.8795", nil],
-                                      [[NSArray alloc] initWithObjects:@"2264.1", @"3915.0892", @"12007.8782", nil],
-                                      [[NSArray alloc] initWithObjects:@"2262.3", @"3915.0936", @"12007.8767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2260.5", @"3915.0982", @"12007.8751", nil],
-                                      [[NSArray alloc] initWithObjects:@"2258.8", @"3915.105", @"12007.8734", nil],
-                                      [[NSArray alloc] initWithObjects:@"2257.2", @"3915.1105", @"12007.8717", nil],
-                                      [[NSArray alloc] initWithObjects:@"2255.2", @"3915.1164", @"12007.8703", nil],
-                                      [[NSArray alloc] initWithObjects:@"2253.6", @"3915.123", @"12007.8689", nil],
-                                      [[NSArray alloc] initWithObjects:@"2252", @"3915.1284", @"12007.8668", nil],
-                                      [[NSArray alloc] initWithObjects:@"2250.3", @"3915.1337", @"12007.8638", nil],
-                                      [[NSArray alloc] initWithObjects:@"2248.7", @"3915.1396", @"12007.8599", nil],
-                                      [[NSArray alloc] initWithObjects:@"2252.3", @"3915.1453", @"12007.8559", nil],
-                                      [[NSArray alloc] initWithObjects:@"2251.3", @"3915.1483", @"12007.8532", nil],
-                                      [[NSArray alloc] initWithObjects:@"2250.1", @"3915.153", @"12007.8505", nil],
-                                      [[NSArray alloc] initWithObjects:@"2249", @"3915.1585", @"12007.8474", nil],
-                                      [[NSArray alloc] initWithObjects:@"2247.9", @"3915.1638", @"12007.8436", nil],
-                                      [[NSArray alloc] initWithObjects:@"2246.7", @"3915.1688", @"12007.8403", nil],
-                                      [[NSArray alloc] initWithObjects:@"2245.5", @"3915.1742", @"12007.8374", nil],
-                                      [[NSArray alloc] initWithObjects:@"2244.2", @"3915.1804", @"12007.8348", nil],
-                                      [[NSArray alloc] initWithObjects:@"2243.1", @"3915.1857", @"12007.8332", nil],
-                                      [[NSArray alloc] initWithObjects:@"2241.9", @"3915.1925", @"12007.8319", nil],
-                                      [[NSArray alloc] initWithObjects:@"2240.6", @"3915.1978", @"12007.8299", nil],
-                                      [[NSArray alloc] initWithObjects:@"2239.5", @"3915.2019", @"12007.8286", nil],
-                                      [[NSArray alloc] initWithObjects:@"2238.2", @"3915.2083", @"12007.8272", nil],
-                                      [[NSArray alloc] initWithObjects:@"2237", @"3915.2148", @"12007.8258", nil],
-                                      [[NSArray alloc] initWithObjects:@"2235.8", @"3915.2209", @"12007.8249", nil],
-                                      [[NSArray alloc] initWithObjects:@"2234.6", @"3915.2247", @"12007.8229", nil],
-                                      [[NSArray alloc] initWithObjects:@"2233.5", @"3915.2303", @"12007.8206", nil],
-                                      [[NSArray alloc] initWithObjects:@"2232.3", @"3915.2362", @"12007.8175", nil],
-                                      [[NSArray alloc] initWithObjects:@"2231.1", @"3915.2419", @"12007.8136", nil],
-                                      [[NSArray alloc] initWithObjects:@"2230", @"3915.2477", @"12007.8091", nil],
-                                      [[NSArray alloc] initWithObjects:@"2228.8", @"3915.2531", @"12007.8039", nil],
-                                      [[NSArray alloc] initWithObjects:@"2227.7", @"3915.2585", @"12007.7981", nil],
-                                      [[NSArray alloc] initWithObjects:@"2226.5", @"3915.2633", @"12007.7913", nil],
-                                      [[NSArray alloc] initWithObjects:@"2225.2", @"3915.2686", @"12007.7856", nil],
-                                      [[NSArray alloc] initWithObjects:@"2223.9", @"3915.2745", @"12007.7822", nil],
-                                      [[NSArray alloc] initWithObjects:@"2222.3", @"3915.2797", @"12007.7787", nil],
-                                      [[NSArray alloc] initWithObjects:@"2221.1", @"3915.2817", @"12007.7744", nil],
-                                      [[NSArray alloc] initWithObjects:@"2219.9", @"3915.2862", @"12007.7699", nil],
-                                      [[NSArray alloc] initWithObjects:@"2218.6", @"3915.2912", @"12007.7658", nil],
-                                      [[NSArray alloc] initWithObjects:@"2217.1", @"3915.2962", @"12007.7618", nil],
-                                      [[NSArray alloc] initWithObjects:@"2215.6", @"3915.3018", @"12007.7574", nil],
-                                      [[NSArray alloc] initWithObjects:@"2214.3", @"3915.3078", @"12007.7534", nil],
-                                      [[NSArray alloc] initWithObjects:@"2213", @"3915.3133", @"12007.7499", nil],
-                                      [[NSArray alloc] initWithObjects:@"2211.7", @"3915.319", @"12007.7465", nil],
-                                      [[NSArray alloc] initWithObjects:@"2210.4", @"3915.3239", @"12007.7433", nil],
-                                      [[NSArray alloc] initWithObjects:@"2209.2", @"3915.3286", @"12007.7406", nil],
-                                      [[NSArray alloc] initWithObjects:@"2207.9", @"3915.3341", @"12007.7377", nil],
-                                      [[NSArray alloc] initWithObjects:@"2206.6", @"3915.3394", @"12007.7336", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.3", @"3915.3446", @"12007.7287", nil],
-                                      [[NSArray alloc] initWithObjects:@"2205.5", @"3915.3489", @"12007.7248", nil],
-                                      [[NSArray alloc] initWithObjects:@"2204.6", @"3915.3527", @"12007.7212", nil],
-                                      [[NSArray alloc] initWithObjects:@"2203.7", @"3915.3576", @"12007.7182", nil],
-                                      [[NSArray alloc] initWithObjects:@"2202.8", @"3915.3606", @"12007.7165", nil],
-                                      [[NSArray alloc] initWithObjects:@"2201.8", @"3915.3652", @"12007.7148", nil],
-                                      [[NSArray alloc] initWithObjects:@"2200.7", @"3915.3702", @"12007.7132", nil],
-                                      [[NSArray alloc] initWithObjects:@"2199.7", @"3915.376", @"12007.713", nil],
-                                      [[NSArray alloc] initWithObjects:@"2198.7", @"3915.3831", @"12007.7128", nil],
-                                      [[NSArray alloc] initWithObjects:@"2197.8", @"3915.3911", @"12007.7122", nil],
-                                      [[NSArray alloc] initWithObjects:@"2196.8", @"3915.3985", @"12007.7108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2195.8", @"3915.406", @"12007.709", nil],
-                                      [[NSArray alloc] initWithObjects:@"2194.8", @"3915.4117", @"12007.7075", nil],
-                                      [[NSArray alloc] initWithObjects:@"2193.6", @"3915.4177", @"12007.7062", nil],
-                                      [[NSArray alloc] initWithObjects:@"2192.4", @"3915.4238", @"12007.7047", nil],
-                                      [[NSArray alloc] initWithObjects:@"2191.2", @"3915.4286", @"12007.7032", nil],
-                                      [[NSArray alloc] initWithObjects:@"2189.9", @"3915.4338", @"12007.7014", nil],
-                                      [[NSArray alloc] initWithObjects:@"2188.7", @"3915.4391", @"12007.699", nil],
-                                      [[NSArray alloc] initWithObjects:@"2187.5", @"3915.4446", @"12007.6962", nil],
-                                      [[NSArray alloc] initWithObjects:@"2186.3", @"3915.4497", @"12007.6929", nil],
-                                      [[NSArray alloc] initWithObjects:@"2185.1", @"3915.4556", @"12007.6897", nil],
-                                      [[NSArray alloc] initWithObjects:@"2183.9", @"3915.4617", @"12007.6868", nil],
-                                      [[NSArray alloc] initWithObjects:@"2182.5", @"3915.4674", @"12007.684", nil],
-                                      [[NSArray alloc] initWithObjects:@"2181.3", @"3915.474", @"12007.681", nil],
-                                      [[NSArray alloc] initWithObjects:@"2180.1", @"3915.4801", @"12007.6775", nil],
-                                      [[NSArray alloc] initWithObjects:@"2178.8", @"3915.4856", @"12007.6744", nil],
-                                      [[NSArray alloc] initWithObjects:@"2177.6", @"3915.4911", @"12007.6712", nil],
-                                      [[NSArray alloc] initWithObjects:@"2176.4", @"3915.4968", @"12007.6678", nil],
-                                      [[NSArray alloc] initWithObjects:@"2175.1", @"3915.5025", @"12007.665", nil],
-                                      [[NSArray alloc] initWithObjects:@"2173.9", @"3915.5085", @"12007.6623", nil],
-                                      [[NSArray alloc] initWithObjects:@"2172.6", @"3915.5142", @"12007.6598", nil],
-                                      [[NSArray alloc] initWithObjects:@"2171.3", @"3915.5203", @"12007.6579", nil],
-                                      [[NSArray alloc] initWithObjects:@"2169.9", @"3915.5258", @"12007.6551", nil],
-                                      [[NSArray alloc] initWithObjects:@"2168.6", @"3915.531", @"12007.6518", nil],
-                                      [[NSArray alloc] initWithObjects:@"2167.3", @"3915.5366", @"12007.6487", nil],
-                                      [[NSArray alloc] initWithObjects:@"2165.9", @"3915.5422", @"12007.646", nil],
-                                      [[NSArray alloc] initWithObjects:@"2164.5", @"3915.5479", @"12007.6448", nil],
-                                      [[NSArray alloc] initWithObjects:@"2163.2", @"3915.553", @"12007.6438", nil],
-                                      [[NSArray alloc] initWithObjects:@"2161.9", @"3915.5594", @"12007.6429", nil],
-                                      [[NSArray alloc] initWithObjects:@"2160.7", @"3915.566", @"12007.6418", nil],
-                                      [[NSArray alloc] initWithObjects:@"2159.5", @"3915.5727", @"12007.6409", nil],
-                                      [[NSArray alloc] initWithObjects:@"2158.1", @"3915.5788", @"12007.64", nil],
-                                      [[NSArray alloc] initWithObjects:@"2156.7", @"3915.5846", @"12007.638", nil],
-                                      [[NSArray alloc] initWithObjects:@"2155.4", @"3915.5897", @"12007.6349", nil],
-                                      [[NSArray alloc] initWithObjects:@"2154.1", @"3915.5952", @"12007.6318", nil],
-                                      [[NSArray alloc] initWithObjects:@"2152.8", @"3915.6011", @"12007.6281", nil],
-                                      [[NSArray alloc] initWithObjects:@"2151.6", @"3915.606", @"12007.6241", nil],
-                                      [[NSArray alloc] initWithObjects:@"2150.4", @"3915.6097", @"12007.6203", nil],
-                                      [[NSArray alloc] initWithObjects:@"2149.1", @"3915.6141", @"12007.6172", nil],
-                                      [[NSArray alloc] initWithObjects:@"2149.4", @"3915.6191", @"12007.6142", nil],
-                                      [[NSArray alloc] initWithObjects:@"2148.4", @"3915.6236", @"12007.6108", nil],
-                                      [[NSArray alloc] initWithObjects:@"2147.4", @"3915.6278", @"12007.6072", nil],
-                                      [[NSArray alloc] initWithObjects:@"2146.2", @"3915.6314", @"12007.6039", nil],
-                                      [[NSArray alloc] initWithObjects:@"2145", @"3915.6355", @"12007.6017", nil],
-                                      [[NSArray alloc] initWithObjects:@"2143.8", @"3915.6393", @"12007.5996", nil],
-                                      [[NSArray alloc] initWithObjects:@"2142.4", @"3915.6448", @"12007.5975", nil],
-                                      [[NSArray alloc] initWithObjects:@"2141.1", @"3915.6504", @"12007.5951", nil],
-                                      [[NSArray alloc] initWithObjects:@"2139.7", @"3915.6551", @"12007.5923", nil],
-                                      [[NSArray alloc] initWithObjects:@"2138.3", @"3915.6615", @"12007.5895", nil],
-                                      [[NSArray alloc] initWithObjects:@"2137.1", @"3915.6673", @"12007.5867", nil],
-                                      [[NSArray alloc] initWithObjects:@"2135.8", @"3915.6724", @"12007.5839", nil],
-                                      [[NSArray alloc] initWithObjects:@"2134.3", @"3915.678", @"12007.5809", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133", @"3915.6843", @"12007.579", nil],
-                                      [[NSArray alloc] initWithObjects:@"2131.8", @"3915.6905", @"12007.5775", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.6", @"3915.6961", @"12007.5763", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.3", @"3915.7009", @"12007.5748", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128.2", @"3915.7066", @"12007.5725", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127.1", @"3915.7104", @"12007.5702", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.1", @"3915.7142", @"12007.5685", nil],
-                                      [[NSArray alloc] initWithObjects:@"2125", @"3915.7184", @"12007.5668", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123.9", @"3915.722", @"12007.5647", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122.8", @"3915.7259", @"12007.5623", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121.8", @"3915.7291", @"12007.5598", nil],
-                                      [[NSArray alloc] initWithObjects:@"2120.9", @"3915.7337", @"12007.5577", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.9", @"3915.7378", @"12007.5553", nil],
-                                      [[NSArray alloc] initWithObjects:@"2118.8", @"3915.7429", @"12007.5526", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.9", @"3915.7505", @"12007.5507", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.2", @"3915.7562", @"12007.5513", nil],
-                                      [[NSArray alloc] initWithObjects:@"2116.7", @"3915.7667", @"12007.5524", nil],
-                                      [[NSArray alloc] initWithObjects:@"2116", @"3915.777", @"12007.5543", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114.8", @"3915.7851", @"12007.5568", nil],
-                                      [[NSArray alloc] initWithObjects:@"2113.8", @"3915.7901", @"12007.5591", nil],
-                                      [[NSArray alloc] initWithObjects:@"2113.1", @"3915.795", @"12007.5614", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112.2", @"3915.7993", @"12007.5633", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112", @"3915.8039", @"12007.565", nil],
-                                      [[NSArray alloc] initWithObjects:@"2111.8", @"3915.8083", @"12007.5671", nil],
-                                      [[NSArray alloc] initWithObjects:@"2111.3", @"3915.8118", @"12007.569", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.9", @"3915.8144", @"12007.5706", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.5", @"3915.8159", @"12007.5716", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110", @"3915.8177", @"12007.5723", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.4", @"3915.8198", @"12007.5729", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.3", @"3915.8215", @"12007.573", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109", @"3915.8249", @"12007.5737", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.8", @"3915.8269", @"12007.5742", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.7", @"3915.8289", @"12007.5746", nil],
-                                      [[NSArray alloc] initWithObjects:@"2108.7", @"3915.8305", @"12007.5753", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109", @"3915.8311", @"12007.5758", nil],
-                                      [[NSArray alloc] initWithObjects:@"2109.6", @"3915.8317", @"12007.5766", nil],
-                                      [[NSArray alloc] initWithObjects:@"2110.6", @"3915.8313", @"12007.5768", nil],
-                                      [[NSArray alloc] initWithObjects:@"2111.8", @"3915.8314", @"12007.5767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2112.8", @"3915.8319", @"12007.5765", nil],
-                                      [[NSArray alloc] initWithObjects:@"2113.3", @"3915.8317", @"12007.5762", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114", @"3915.8326", @"12007.5762", nil],
-                                      [[NSArray alloc] initWithObjects:@"2114.7", @"3915.8333", @"12007.5764", nil],
-                                      [[NSArray alloc] initWithObjects:@"2115.7", @"3915.8346", @"12007.5768", nil],
-                                      [[NSArray alloc] initWithObjects:@"2116.5", @"3915.8336", @"12007.5767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117", @"3915.8335", @"12007.5768", nil],
-                                      [[NSArray alloc] initWithObjects:@"2117.7", @"3915.8336", @"12007.577", nil],
-                                      [[NSArray alloc] initWithObjects:@"2118.5", @"3915.832", @"12007.5767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2118.9", @"3915.8315", @"12007.5766", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.2", @"3915.8309", @"12007.576", nil],
-                                      [[NSArray alloc] initWithObjects:@"2119.9", @"3915.83", @"12007.5753", nil],
-                                      [[NSArray alloc] initWithObjects:@"2120.6", @"3915.8296", @"12007.5753", nil],
-                                      [[NSArray alloc] initWithObjects:@"2121.3", @"3915.8293", @"12007.5754", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122", @"3915.8289", @"12007.5756", nil],
-                                      [[NSArray alloc] initWithObjects:@"2122.7", @"3915.8285", @"12007.5759", nil],
-                                      [[NSArray alloc] initWithObjects:@"2123.5", @"3915.8282", @"12007.5761", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.3", @"3915.8278", @"12007.5763", nil],
-                                      [[NSArray alloc] initWithObjects:@"2124.9", @"3915.8274", @"12007.5767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2125.6", @"3915.8262", @"12007.5767", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.3", @"3915.8244", @"12007.5766", nil],
-                                      [[NSArray alloc] initWithObjects:@"2126.7", @"3915.8229", @"12007.5756", nil],
-                                      [[NSArray alloc] initWithObjects:@"2127.5", @"3915.8213", @"12007.5743", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128", @"3915.8196", @"12007.5724", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128.4", @"3915.8176", @"12007.5705", nil],
-                                      [[NSArray alloc] initWithObjects:@"2128.8", @"3915.816", @"12007.5692", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.1", @"3915.8143", @"12007.5678", nil],
-                                      [[NSArray alloc] initWithObjects:@"2129.5", @"3915.8128", @"12007.5663", nil],
-                                      [[NSArray alloc] initWithObjects:@"2130.6", @"3915.8112", @"12007.5651", nil],
-                                      [[NSArray alloc] initWithObjects:@"2131.7", @"3915.8098", @"12007.5636", nil],
-                                      [[NSArray alloc] initWithObjects:@"2132.8", @"3915.8087", @"12007.562", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133", @"3915.8078", @"12007.5609", nil],
-                                      [[NSArray alloc] initWithObjects:@"2133.3", @"3915.8076", @"12007.561", nil],
-                                      nil];
-  
+  NSMutableArray *my_trail_data = [self jerry_init_data];
   NSInteger Lamberjack_elv_first        = [[[googleMap_Lamberjack objectAtIndex:([googleMap_Lamberjack count]-1)]objectAtIndex:0] intValue];
   NSInteger Lamberjack_elv_last         = [[[googleMap_Lamberjack objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger LowerMainStreet_elv_first   = [[[googleMap_LowerMainStreet objectAtIndex:([googleMap_LowerMainStreet count]-1)]objectAtIndex:0] intValue];
@@ -1831,82 +475,115 @@
   NSInteger TheGulch_elv_first          = [[[googleMap_TheGulch objectAtIndex:([googleMap_TheGulch count]-1)]objectAtIndex:0] intValue];
   NSInteger TheGulch_elv_last           = [[[googleMap_TheGulch objectAtIndex:0]objectAtIndex:0] intValue];
   int roundStep = 5;
+  int up_counter = 0;
+  int down_counter = 0;
+  int detect_limit = 10;
+  int going_up = 1; //always assume going up. it's ok to take 3 data less when it's oing down but not ok to take 3 extra data when going up
+  NSInteger previous_user_elv = 0;
+  
   NSMutableArray  * trail_match_result = [NSMutableArray new];
   /*********************************JERRY TRAIL CALCULATION START ******************************/
   int user_array_last_index = [my_trail_data count]-1 ;
   for (int i = 0; i < user_array_last_index; i++) {
     NSInteger user_elv = [self get_elv:my_trail_data atIndex:i]*3;
-    float Lamberjack_elv_diff = 0;
-    NSLog(@"user elv is %ld", (long)user_elv);
-    NSLog(@"Lamberjack elv is %d - %d", Lamberjack_elv_first, Lamberjack_elv_last);
-    if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
-      NSLog(@"looking Lamberjack");
-      int at_Lamberjack_index = [googleMap_Lamberjack count]-1- (user_elv-Lamberjack_elv_first)/roundStep;
-      Lamberjack_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
-      //NSLog(@"Lamberjack diff %d", Lamberjack_elv_diff);
-    }else{
-      Lamberjack_elv_diff = -1;
+    
+    
+    
+    
+    if(user_elv > previous_user_elv){
+      up_counter++;
+    }else if(user_elv < previous_user_elv){
+      down_counter++;
     }
-    NSLog(@"LowerMainStreet elv is %d - %d", LowerMainStreet_elv_first, LowerMainStreet_elv_last);
-    float LowerMainStreet_elv_diff = 0;
-    if(user_elv >= LowerMainStreet_elv_first && user_elv <= LowerMainStreet_elv_last){
-      NSLog(@"looking LowerMain");
-      NSLog(@"LowerMainStreet total count is %d, steps is %d", [googleMap_LowerMainStreet count],(user_elv-LowerMainStreet_elv_first)/roundStep);
-      int at_LowerMainStreet_index = [googleMap_LowerMainStreet count]-1- (user_elv-LowerMainStreet_elv_first)/roundStep;
-      LowerMainStreet_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
-    }else{
-      LowerMainStreet_elv_diff = -1;
-    }
-    NSLog(@"MagicMoguls elv is %d - %d", MagicMoguls_elv_first, MagicMoguls_elv_last);
-    float MagicMoguls_elv_diff = 0;
-    if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
-      NSLog(@"looking Magic");
-      int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
-      MagicMoguls_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
-    }else{
-      MagicMoguls_elv_diff = -1;
-    }
-    NSLog(@"Siderwinder elv is %d - %d", Siderwinder_elv_first, Siderwinder_elv_last);
-    float Siderwinder_elv_diff = 0;
-    if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
-      NSLog(@"looking Siderwinder");
-      int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
-      Siderwinder_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
-    }else{
-      Siderwinder_elv_diff = -1;
-    }
-    NSLog(@"SkidTrail elv is %d - %d", SkidTrail_elv_first, SkidTrail_elv_last);
-    float SkidTrail_elv_diff = 0;
-    if(user_elv >= SkidTrail_elv_first && user_elv <= SkidTrail_elv_last){
-      NSLog(@"looking SkidTrail");
-      int at_SkidTrail_index = [googleMap_SkidTrail count]-1- (user_elv-SkidTrail_elv_first)/roundStep;
-      SkidTrail_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
-    }else{
-      SkidTrail_elv_diff = -1;
-    }
-    NSLog(@"TheGulch elv is %d - %d", TheGulch_elv_first, TheGulch_elv_last);
-    float TheGulch_elv_diff = 0;
-    if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
-      NSLog(@"looking Gulch");
-      int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
-      TheGulch_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
-    }else{
-      TheGulch_elv_diff = -1;
-    }
-    NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:MagicMoguls_elv_diff], [NSNumber numberWithInt:Siderwinder_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:TheGulch_elv_diff], nil];
-    float min = 999999999.0;
-    NSInteger match_trail = -1;
-    for (int j = 0; j < [trail_diff count]; j++) {
-        NSLog(@"diff is %f",[[trail_diff objectAtIndex:j] floatValue] );
-      if([[trail_diff objectAtIndex:j] integerValue] != -1 && [[trail_diff objectAtIndex:j] floatValue]<min){
-        NSLog(@"==filtering @index %d", j);
-        min = [[trail_diff objectAtIndex:j] floatValue];
-        NSLog(@"min updated as %f", min);
-        match_trail  = j;
+    if(going_up){
+      if(down_counter>= detect_limit){
+        going_up=0;
+        up_counter=0;
+      }
+    }else{ //going down
+      if(up_counter >= detect_limit){
+        going_up = 1;
+        down_counter = 0;
       }
     }
-    [trail_match_result addObject:[NSNumber numberWithInt:match_trail]];
-    
+    previous_user_elv = user_elv;
+    NSLog(@"up_counter is %d", up_counter);
+    NSLog(@"down_counter is %d", down_counter);
+    NSLog(@"current going up is %d", going_up);
+    if(going_up){
+      NSLog(@"wasting data %ld",(long)user_elv);
+    }else{
+        float Lamberjack_elv_diff = 0;
+        NSLog(@"user elv is %ld", (long)user_elv);
+        NSLog(@"Lamberjack elv is %d - %d", Lamberjack_elv_first, Lamberjack_elv_last);
+        if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
+          NSLog(@"looking Lamberjack");
+          int at_Lamberjack_index = [googleMap_Lamberjack count]-1- (user_elv-Lamberjack_elv_first)/roundStep;
+          Lamberjack_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
+          //NSLog(@"Lamberjack diff %d", Lamberjack_elv_diff);
+        }else{
+          Lamberjack_elv_diff = -1;
+        }
+        NSLog(@"LowerMainStreet elv is %d - %d", LowerMainStreet_elv_first, LowerMainStreet_elv_last);
+        float LowerMainStreet_elv_diff = 0;
+        if(user_elv >= LowerMainStreet_elv_first && user_elv <= LowerMainStreet_elv_last){
+          NSLog(@"looking LowerMain");
+          NSLog(@"LowerMainStreet total count is %d, steps is %d", [googleMap_LowerMainStreet count],(user_elv-LowerMainStreet_elv_first)/roundStep);
+          int at_LowerMainStreet_index = [googleMap_LowerMainStreet count]-1- (user_elv-LowerMainStreet_elv_first)/roundStep;
+          LowerMainStreet_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
+        }else{
+          LowerMainStreet_elv_diff = -1;
+        }
+        NSLog(@"MagicMoguls elv is %d - %d", MagicMoguls_elv_first, MagicMoguls_elv_last);
+        float MagicMoguls_elv_diff = 0;
+        if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
+          NSLog(@"looking Magic");
+          int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
+          MagicMoguls_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
+        }else{
+          MagicMoguls_elv_diff = -1;
+        }
+        NSLog(@"Siderwinder elv is %d - %d", Siderwinder_elv_first, Siderwinder_elv_last);
+        float Siderwinder_elv_diff = 0;
+        if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
+          NSLog(@"looking Siderwinder");
+          int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
+          Siderwinder_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
+        }else{
+          Siderwinder_elv_diff = -1;
+        }
+        NSLog(@"SkidTrail elv is %d - %d", SkidTrail_elv_first, SkidTrail_elv_last);
+        float SkidTrail_elv_diff = 0;
+        if(user_elv >= SkidTrail_elv_first && user_elv <= SkidTrail_elv_last){
+          NSLog(@"looking SkidTrail");
+          int at_SkidTrail_index = [googleMap_SkidTrail count]-1- (user_elv-SkidTrail_elv_first)/roundStep;
+          SkidTrail_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
+        }else{
+          SkidTrail_elv_diff = -1;
+        }
+        NSLog(@"TheGulch elv is %d - %d", TheGulch_elv_first, TheGulch_elv_last);
+        float TheGulch_elv_diff = 0;
+        if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
+          NSLog(@"looking Gulch");
+          int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
+          TheGulch_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
+        }else{
+          TheGulch_elv_diff = -1;
+        }
+        NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:MagicMoguls_elv_diff], [NSNumber numberWithInt:Siderwinder_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:TheGulch_elv_diff], nil];
+        float min = 999999999.0;
+        NSInteger match_trail = -1;
+        for (int j = 0; j < [trail_diff count]; j++) {
+            NSLog(@"diff is %f",[[trail_diff objectAtIndex:j] floatValue] );
+          if([[trail_diff objectAtIndex:j] integerValue] != -1 && [[trail_diff objectAtIndex:j] floatValue]<min){
+            NSLog(@"==filtering @index %d", j);
+            min = [[trail_diff objectAtIndex:j] floatValue];
+            NSLog(@"min updated as %f", min);
+            match_trail  = j;
+          }
+        }
+        [trail_match_result addObject:[NSNumber numberWithInt:match_trail]];
+    }
   }
   for (int tom = 0; tom < [trail_match_result count]; tom++){
     NSLog(@"match -->%d %d", tom, [[trail_match_result objectAtIndex:tom] integerValue]);
@@ -3242,27 +1919,4121 @@
   return self.imageView;
 }
 
-- (float) get_elv: (NSArray *) data atIndex: (int) i
+- (float) get_elv: (NSMutableArray*) data atIndex: (int) i
 {
-  return [[[data objectAtIndex:i] objectAtIndex:0] floatValue    ];
+  CLLocation *this_location = [data objectAtIndex:i];
+  return this_location.altitude;
+}
+- (float) get_cll_n: (NSArray *) data atIndex: (int) i
+{
+//    NSLog(@"get_n is %f",  [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ]);
+  CLLocation *this_location = [data objectAtIndex:i];
+  return this_location.coordinate.latitude;
+}
+- (float) get_cll_w: (NSArray *) data atIndex: (int) i
+{
+//  NSLog(@"get_w is %f",  [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ]);
+  CLLocation *this_location = [data objectAtIndex:i];
+  return this_location.coordinate.longitude;
 }
 - (float) get_n: (NSArray *) data atIndex: (int) i
 {
-//    NSLog(@"get_n is %f",  [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ]);
+  //    NSLog(@"get_n is %f",  [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ]);
   return [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ];
 }
 - (float) get_w: (NSArray *) data atIndex: (int) i
 {
-//  NSLog(@"get_w is %f",  [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ]);
+  //  NSLog(@"get_w is %f",  [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ]);
   return [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ];
 }
 - (NSInteger) get_distance: (NSArray*) user user_index: (int) u_index : (NSArray*) trail : (int) trail_index
 {
-  
-//  NSLog(@"u_index is %d and trail_index is %d and diff is %f", u_index, trail_index, pow(([self get_n:user atIndex:u_index]*1000-[self get_n:trail atIndex:trail_index]*100000), 2) - pow(([self get_w:user atIndex:u_index]*1000-[self get_w:trail atIndex:trail_index]*100000),2));
-//  NSLog(@"(%f-%f)^2 = %f - (%f-%f)^2 = %f", [self get_n:user atIndex:u_index]*1000, [self get_n:trail atIndex:trail_index]*100000,pow(([self get_n:user atIndex:u_index]*1000-[self get_n:trail atIndex:trail_index]*100000), 2), [self get_w:user atIndex:u_index]*1000,  [self get_w:trail atIndex:trail_index]*100000,  pow(([self get_w:user atIndex:u_index]*1000-[self get_w:trail atIndex:trail_index]*100000),2));
-  return pow(([self get_n:user atIndex:u_index]*1000-[self get_n:trail atIndex:trail_index]*100000), 2) - pow(([self get_w:user atIndex:u_index]*1000-[self get_w:trail atIndex:trail_index]*100000),2);
+
+  NSLog(@"user index is %d <=> trail index is %d", u_index, trail_index);
+  NSLog(@"u_index is %d and trail_index is %d and diff is %f", u_index, trail_index, pow(([self get_cll_n:user atIndex:u_index]*100000-[self get_n:trail atIndex:trail_index]*100000), 2) - pow(([self get_cll_w:user atIndex:u_index]*100000-[self get_w:trail atIndex:trail_index]*100000),2));
+  NSLog(@"(%f-%f)^2 = %f - (%f-%f)^2 = %f", [self get_cll_n:user atIndex:u_index]*100000, [self get_n:trail atIndex:trail_index]*100000,pow(([self get_cll_n:user atIndex:u_index]*100000-[self get_n:trail atIndex:trail_index]*100000), 2), [self get_cll_w:user atIndex:u_index]*100000,  [self get_w:trail atIndex:trail_index]*100000,  pow(([self get_cll_w:user atIndex:u_index]*100000-[self get_w:trail atIndex:trail_index]*100000),2));
+  return ABS(pow(([self get_cll_n:user atIndex:u_index]*100000-[self get_n:trail atIndex:trail_index]*100000), 2) - pow(([self get_cll_w:user atIndex:u_index]*100000-[self get_w:trail atIndex:trail_index]*100000),2));
 
 }
 
+
+- (NSMutableArray*) jerry_init_data
+{
+  NSDateFormatter *df = [[NSDateFormatter alloc] init];
+  [df setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+  NSString *date = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%d", 2222, 11, 22, 6, 6, 6];
+  NSDate *time = [df dateFromString: date];
+  NSMutableArray * artrailpoint_array = [NSMutableArray new];
+  
+  CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(39.148894, 120.075267);
+  CLLocation *location = [[CLLocation alloc] initWithCoordinate:loc altitude:2292.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148894, 120.075269);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148893, 120.075272);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148892, 120.075275);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148892, 120.075277);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148891, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148893, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148896, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1489, 120.075281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148905, 120.075282);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148908, 120.075284);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148913, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148917, 120.075284);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2294.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148917, 120.075281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2294.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148915, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2295.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148909, 120.075278);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2295.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148906, 120.075276);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2296.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148901, 120.075276);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2297 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148891, 120.075277);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2297.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148887, 120.075276);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2298.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148876, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2299.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148869, 120.075281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2299.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14886, 120.075283);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2300.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148852, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2301.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148842, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2301.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148832, 120.075284);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2302.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148822, 120.075284);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2302.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148809, 120.075286);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2303.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1488, 120.075288);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2303.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148791, 120.075287);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2304.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148786, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2304.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148781, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2305.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148774, 120.075286);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2306.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148767, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2307.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148766, 120.075282);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2307.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148766, 120.075281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2308.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148766, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148764, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148764, 120.075276);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148768, 120.075275);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2311.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148775, 120.075273);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2312 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148774, 120.075275);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2313 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148777, 120.075272);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2314 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148779, 120.075268);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2315 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148783, 120.075264);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2316.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148777, 120.075266);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2317 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148779, 120.075262);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2318.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148778, 120.075261);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2319 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148781, 120.07526);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2319.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148785, 120.075259);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2320.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148785, 120.075258);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2321.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148787, 120.075256);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2322.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148793, 120.075255);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2323.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148796, 120.075255);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2325 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148794, 120.07525);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2326.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148791, 120.075248);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2327.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148787, 120.075245);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2328.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148782, 120.075249);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2329.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148776, 120.075254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2331 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148776, 120.075259);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2333.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148778, 120.075262);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2335.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148785, 120.075252);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2338.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148769, 120.075248);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2340.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14875, 120.075254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2342.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148749, 120.075252);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2344.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148752, 120.075251);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2347.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148752, 120.075251);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2349.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148744, 120.075252);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2350.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148744, 120.075252);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2352.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14874, 120.075254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2354.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148737, 120.075257);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2355.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148734, 120.07526);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2357.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148728, 120.075261);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2358.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148723, 120.075261);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2360.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148721, 120.075263);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2362 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148717, 120.075265);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2363.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148715, 120.075267);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2364.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148713, 120.075271);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2366.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148709, 120.075279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2367.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148706, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2368.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148706, 120.075294);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2370 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148703, 120.075302);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2371.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1487, 120.07531);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2372.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1487, 120.075321);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2374.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148702, 120.075328);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2375.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148699, 120.075332);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2377.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148695, 120.075336);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2378.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148698, 120.075339);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2379.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148695, 120.075342);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2380.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148691, 120.075345);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2382 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148688, 120.075349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2383.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148688, 120.075356);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2384.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148689, 120.075364);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2385.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14869, 120.075371);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2386.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148693, 120.075378);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2387.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148697, 120.075385);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2388.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148703, 120.075393);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2389.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148707, 120.075403);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2390.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148706, 120.075415);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2391.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148706, 120.075426);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2393.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148704, 120.075437);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2394.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148704, 120.075449);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2395.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148704, 120.075463);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2396.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148706, 120.07548);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2397.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148705, 120.0755);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2398.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148703, 120.075521);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2399.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148705, 120.075543);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2400.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148712, 120.075566);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2401.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148711, 120.075586);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2402.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148709, 120.075603);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2402.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14871, 120.07562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2403.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148715, 120.075638);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2404.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148719, 120.075657);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2405 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14872, 120.075675);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2405.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148724, 120.075696);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2406.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148728, 120.075714);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2406.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148732, 120.075734);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2407.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148738, 120.075756);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2407.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148747, 120.075774);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2408.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148758, 120.07579);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2409.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148778, 120.075809);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2409.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148794, 120.075828);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2410.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148807, 120.075847);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2411 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148814, 120.075867);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2411.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14882, 120.075884);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2412 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148826, 120.075906);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2412.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148841, 120.075935);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2413.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148848, 120.075964);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2414.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148856, 120.075987);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2414.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148863, 120.07601);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2415.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148866, 120.07603);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2416.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148864, 120.076045);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2417.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148868, 120.07606);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2418.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148874, 120.076077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2419.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148879, 120.076092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2419.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148889, 120.076107);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2420.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1489, 120.07612);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2421.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148908, 120.076135);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2422.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148912, 120.076149);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2422.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14892, 120.076164);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2423.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148936, 120.076174);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2423.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148948, 120.076186);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2424.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148957, 120.076204);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2424.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148972, 120.076227);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2425.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148981, 120.07625);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2426.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149001, 120.07627);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2426.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149006, 120.076289);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2427.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149004, 120.076303);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2427.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149003, 120.076313);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149003, 120.076323);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149008, 120.076338);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149011, 120.076355);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149024, 120.076376);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149038, 120.076402);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149047, 120.076429);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149047, 120.076458);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149053, 120.076488);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149075, 120.076516);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149085, 120.076547);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149092, 120.076577);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149095, 120.076607);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149105, 120.076635);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2432.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149114, 120.076662);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2432.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149121, 120.076691);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149117, 120.076726);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149112, 120.076757);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149123, 120.076793);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149137, 120.076824);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149141, 120.076856);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149142, 120.076884);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149146, 120.076912);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149145, 120.076937);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14915, 120.076962);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149158, 120.076988);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149161, 120.077012);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149162, 120.077037);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149166, 120.077058);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149172, 120.07708);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149182, 120.077101);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149191, 120.077122);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149199, 120.077141);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149208, 120.077161);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149217, 120.077181);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149231, 120.077203);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149242, 120.077227);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149253, 120.077251);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149261, 120.077274);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149271, 120.077299);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2431.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149286, 120.077319);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149309, 120.077337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149327, 120.077353);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149342, 120.077371);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149355, 120.077393);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149374, 120.077413);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149392, 120.077431);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149398, 120.077455);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149415, 120.077484);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149429, 120.077514);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2430 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149455, 120.077534);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149472, 120.077559);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149481, 120.077591);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149494, 120.07762);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149502, 120.07765);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2429 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149516, 120.07767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149534, 120.077691);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14955, 120.077718);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2428.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149573, 120.077742);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2427.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14959, 120.077768);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2427.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149607, 120.077795);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2427.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149622, 120.077823);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2426.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149642, 120.077842);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2426.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149664, 120.077859);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2426 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149689, 120.077874);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2425.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149712, 120.077894);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2425.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149726, 120.077915);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2425.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149734, 120.07794);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2425 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149744, 120.077965);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2424.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149768, 120.077988);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2424 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149791, 120.078009);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2423.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149803, 120.078036);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2423.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14981, 120.078076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2422.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149817, 120.078115);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2422.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149836, 120.078141);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2421.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149867, 120.078165);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2421.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149894, 120.07819);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2420.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149903, 120.07822);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2419.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149912, 120.078254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2419.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149929, 120.078281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2418.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149946, 120.078308);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2417.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149955, 120.078337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2417.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149958, 120.078366);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2416.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149968, 120.078389);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2416 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14998, 120.078415);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2414.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149986, 120.078443);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2413.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149997, 120.078469);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2412.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150006, 120.078494);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2412.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150011, 120.078518);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2411.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150007, 120.078538);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2411.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150008, 120.07856);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2410.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150012, 120.078578);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2409.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150029, 120.078585);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2409 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150041, 120.078603);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2408.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150064, 120.078625);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2407.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150077, 120.078651);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2407 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150083, 120.078676);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2406 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150074, 120.078703);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2405.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150066, 120.078732);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2404.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150068, 120.07876);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2403.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150078, 120.078778);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2402.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150102, 120.0788);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2401.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150124, 120.078822);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2400.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150136, 120.078851);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2399.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150145, 120.078883);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2398.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150153, 120.078919);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2397.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15016, 120.078954);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2396.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150166, 120.078984);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2396 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150191, 120.078997);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2395 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150217, 120.079007);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2394 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150245, 120.079019);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2393 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150264, 120.079046);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2392.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150281, 120.079077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2391.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1503, 120.0791);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2390.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150314, 120.079109);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2389.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150361, 120.079119);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2388.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150384, 120.079141);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2387.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150407, 120.079165);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2386 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150437, 120.079177);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2384.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150466, 120.07918);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2383.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150493, 120.079181);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2382.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150517, 120.07917);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2381.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150537, 120.079174);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2380.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150569, 120.079177);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2379.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150592, 120.079178);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2378.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15062, 120.079171);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2377.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150645, 120.079164);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2376.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150677, 120.079164);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2376.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150703, 120.079157);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2375.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150725, 120.079146);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2374.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150752, 120.079128);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2372.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150767, 120.079124);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2371.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150805, 120.079125);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2371.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150833, 120.079124);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2370.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150849, 120.079112);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2369.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15087, 120.079095);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2367.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150913, 120.079058);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2364.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150957, 120.079031);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2362.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150983, 120.079032);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2361.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151008, 120.079039);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2360.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15103, 120.07904);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2358.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151046, 120.079032);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2357.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151057, 120.079021);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2357 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151069, 120.079006);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2356.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151088, 120.078992);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2354 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151124, 120.078967);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2352.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151154, 120.078959);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2350.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151162, 120.07897);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2349.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15118, 120.07898);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2348.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151196, 120.078985);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2347.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151218, 120.078979);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2346.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151238, 120.07897);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2346.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151255, 120.078967);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2345.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151266, 120.078972);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2344.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1513, 120.078984);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2343.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151323, 120.078987);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2343.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15135, 120.07898);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2342 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151376, 120.07897);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2340.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151405, 120.07896);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2339.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151431, 120.078949);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2335.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151476, 120.078917);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2333.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151507, 120.078911);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2332.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151527, 120.078921);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2330.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151559, 120.078922);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2329.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151588, 120.078914);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2328.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151619, 120.078898);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2327.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151646, 120.078879);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2326.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151672, 120.078862);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2325.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151696, 120.078845);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2324.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151717, 120.078831);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2323.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151732, 120.078822);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2322.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151744, 120.078815);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2321.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151759, 120.078808);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2320.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151786, 120.078788);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2318.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151802, 120.078789);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2317.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15184, 120.078798);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2316.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151865, 120.078798);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2315.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151901, 120.078791);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2314 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151931, 120.078783);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2312.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151965, 120.078772);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2311 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151998, 120.078766);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152024, 120.078766);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2308.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152046, 120.078761);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2307.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152065, 120.078753);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2306.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152086, 120.078743);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2305.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15211, 120.078729);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2304.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152132, 120.078709);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2303.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152157, 120.078684);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2302.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152182, 120.078662);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2301.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152209, 120.07865);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2300.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152236, 120.078639);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2299.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152261, 120.078627);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2298.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152286, 120.078612);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2297.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15231, 120.078595);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2297.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152339, 120.078574);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2296.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15236, 120.078564);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2295.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152381, 120.078562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2294.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15242, 120.078569);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152443, 120.078568);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2292.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152465, 120.078562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2291.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152484, 120.07855);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2290.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152507, 120.078536);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2289.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152526, 120.078524);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2288.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152541, 120.07851);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2287.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152557, 120.078497);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2286.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152569, 120.078488);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2285.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152585, 120.078483);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2284.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152602, 120.078479);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2283.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152621, 120.078469);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2282.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152642, 120.07846);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2281.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152665, 120.078451);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2280.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152702, 120.078422);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2279.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152727, 120.078422);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2279 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152746, 120.07843);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2278.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152783, 120.078436);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2277.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152814, 120.078435);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2276.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152842, 120.078419);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2275.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152876, 120.078416);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2274.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152909, 120.078413);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2273.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152955, 120.078414);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2273 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152982, 120.078396);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2272 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153018, 120.078375);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2271.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15305, 120.078353);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2270.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153073, 120.078331);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2269.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153095, 120.078309);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2268.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153117, 120.078287);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2267.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153144, 120.078273);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2266.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153161, 120.078246);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2265.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153164, 120.078215);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2264.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153174, 120.078184);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2263.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153189, 120.078153);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2262.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1532, 120.07813);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2261.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153223, 120.078106);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2260.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153243, 120.078086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2259.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15326, 120.078061);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2259 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153285, 120.078023);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2258.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153325, 120.077985);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2257.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153355, 120.077955);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2256.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15337, 120.077936);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2255.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15339, 120.077914);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2254.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153423, 120.077894);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2253.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153448, 120.077878);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2252.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153472, 120.077852);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2251.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153497, 120.077826);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2250.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153535, 120.077784);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2249 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153579, 120.077736);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2247.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153621, 120.077688);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2246.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153665, 120.077636);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2245.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153709, 120.077592);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2244.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15374, 120.077575);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2243.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153775, 120.077562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2242.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153805, 120.077547);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2241.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153833, 120.077529);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2240.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153842, 120.07752);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2239.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153857, 120.077507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2238.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153877, 120.077492);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2237.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153873, 120.077484);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2236.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15388, 120.077475);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2236 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153884, 120.077468);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2235.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153895, 120.077458);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2234.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15391, 120.077444);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2233.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153924, 120.07743);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2232.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15394, 120.077419);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2232 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153956, 120.077415);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153976, 120.077414);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154001, 120.077416);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154021, 120.077414);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154038, 120.077406);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2228.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154052, 120.077393);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2227.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154065, 120.077375);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2227.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154077, 120.077357);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2226.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154093, 120.077341);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154105, 120.077333);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154133, 120.077326);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154163, 120.077317);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154189, 120.077313);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154226, 120.077312);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154258, 120.077301);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154305, 120.077279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154338, 120.077276);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2216.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154372, 120.077281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154416, 120.077279);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154457, 120.07727);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2212.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1545, 120.077259);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2211.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154537, 120.077253);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2210.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154562, 120.077257);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2209.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154593, 120.077256);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2208.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154631, 120.077254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2206.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154675, 120.07725);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154705, 120.077251);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2204.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154738, 120.077254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2203.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154771, 120.077258);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2202.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154802, 120.077257);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2202.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15483, 120.077254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2201.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154859, 120.077252);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2200.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154887, 120.077254);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2198.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154916, 120.07725);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2197.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154943, 120.077243);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2196.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154971, 120.077236);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2195.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155001, 120.077231);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2194.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155043, 120.077233);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2193.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155073, 120.077229);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2192.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155102, 120.077223);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2191.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155127, 120.077217);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2190.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155144, 120.07721);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2189.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155158, 120.0772);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2189.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155168, 120.077186);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2189.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155179, 120.077168);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2188.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155192, 120.077149);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2186.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155216, 120.077129);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2184.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155244, 120.077111);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2181.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15527, 120.07709);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2180 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1553, 120.077067);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2178.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155338, 120.077043);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2177.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155382, 120.077026);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2176 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155422, 120.077006);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2174.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155458, 120.076994);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2173.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1555, 120.076987);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2172.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155544, 120.076975);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2170.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15559, 120.076962);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2169.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155643, 120.076951);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2167.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15569, 120.076935);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2165.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155737, 120.076918);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2164 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155784, 120.076904);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2162.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155827, 120.076885);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2160.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155868, 120.076859);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2158.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155914, 120.076832);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2156.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15596, 120.07681);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2155.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155999, 120.076789);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2153 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156041, 120.076768);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2151.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156079, 120.076754);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2149.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156128, 120.076744);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2147.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156176, 120.076732);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2146.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156219, 120.076711);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2144.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156256, 120.076684);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2142 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156297, 120.076651);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2140.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156339, 120.076616);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2138.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156388, 120.076586);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156437, 120.076562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156481, 120.076534);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156535, 120.076508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156568, 120.07649);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2136.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156611, 120.076461);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156654, 120.076441);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156693, 120.076425);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2132.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156728, 120.076405);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2131.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156761, 120.076381);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156779, 120.076362);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156781, 120.076347);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156787, 120.076334);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156797, 120.076322);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2125.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156806, 120.07631);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156812, 120.076297);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156822, 120.076283);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156831, 120.076266);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156842, 120.07625);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156855, 120.076228);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2120.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156872, 120.076205);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156889, 120.076192);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156913, 120.076184);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2118 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156928, 120.076173);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156951, 120.076147);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2116.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156972, 120.076117);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2115.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156993, 120.076089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2115.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157025, 120.076063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157053, 120.076034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2113.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157079, 120.07601);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157119, 120.075992);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2111.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157152, 120.07597);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157185, 120.075946);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157223, 120.075927);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157262, 120.075918);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2107.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157307, 120.075909);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2106.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157351, 120.075898);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2105 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157398, 120.075892);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2104 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157437, 120.075881);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2102.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157481, 120.075868);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2101.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15753, 120.075852);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2100.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157568, 120.07583);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2099.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157602, 120.075801);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2098.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157638, 120.075778);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2097 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15768, 120.07576);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2095.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15772, 120.075746);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2094.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157752, 120.075726);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2093.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157786, 120.075691);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2091.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157821, 120.075651);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2090.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157854, 120.075608);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2089.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157884, 120.075561);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2088.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157907, 120.075511);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2087.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15792, 120.075461);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2085.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157937, 120.075415);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2084.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15796, 120.07538);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2083.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15798, 120.075349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2082.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157997, 120.075324);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2081 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158011, 120.075305);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2080 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158027, 120.075288);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2078.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158046, 120.075272);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2077.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158058, 120.075258);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2076.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158065, 120.075243);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2075.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158073, 120.075236);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2074.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158082, 120.075225);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2074 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158088, 120.075215);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2073.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158094, 120.07521);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2072.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158102, 120.075205);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2071.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158109, 120.075201);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2070.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158113, 120.075193);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2069.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158121, 120.075182);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2068.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15813, 120.075177);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2067.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158137, 120.075174);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158146, 120.075172);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158153, 120.075165);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158163, 120.075156);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2064.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15817, 120.075149);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2063.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158174, 120.075136);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2062.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158182, 120.075122);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2062.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158191, 120.075107);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2061.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158201, 120.0751);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2060.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158209, 120.07511);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2059.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158216, 120.075117);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2059.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158222, 120.075114);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2058.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158229, 120.075108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2058.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158242, 120.075094);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2057.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158251, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2057.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158254, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2056.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158259, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2056.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158262, 120.075059);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2056 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15827, 120.075052);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158272, 120.075039);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158276, 120.075029);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158283, 120.075013);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158288, 120.075004);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158292, 120.074996);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158294, 120.074988);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158288, 120.074998);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158286, 120.075007);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158282, 120.075016);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158275, 120.075027);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158271, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158261, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158255, 120.075038);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158251, 120.075047);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158244, 120.075058);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2052.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158239, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2052.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158246, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2052.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158252, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2052.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15825, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2052.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158247, 120.075104);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158245, 120.075113);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158236, 120.075122);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2053.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158227, 120.07513);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2054.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158232, 120.075138);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2055.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158233, 120.075145);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2056.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158236, 120.075148);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2057.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158234, 120.075153);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2058.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158235, 120.075157);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2059 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15824, 120.075159);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2059.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158237, 120.075165);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2059.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158238, 120.07517);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2060.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158238, 120.075176);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2060.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158235, 120.075181);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2060.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158226, 120.075185);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2061.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158208, 120.075187);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2061.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158196, 120.07519);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2062.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158192, 120.075191);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2062.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158179, 120.075191);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2063.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158171, 120.075196);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2063.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158163, 120.075197);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2064.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158159, 120.075192);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2064.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158158, 120.075193);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2064.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158157, 120.075194);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2064.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158156, 120.075195);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158154, 120.075196);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158152, 120.075197);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158152, 120.075197);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158152, 120.075197);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158152, 120.075196);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158151, 120.075195);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158147, 120.075194);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158143, 120.075195);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158138, 120.075196);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158134, 120.075198);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158129, 120.0752);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158124, 120.075201);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158119, 120.075201);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158115, 120.075203);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158112, 120.075204);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158109, 120.075205);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158108, 120.075207);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158107, 120.075211);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158108, 120.075217);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158108, 120.075222);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158105, 120.075223);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158069, 120.075201);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158063, 120.075196);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158054, 120.075187);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157996, 120.075156);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157969, 120.075147);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157915, 120.07515);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15789, 120.075148);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157894, 120.075134);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157868, 120.075134);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2065.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157847, 120.07513);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157824, 120.075128);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157796, 120.075124);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15777, 120.075118);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2066.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157743, 120.075113);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2067 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157716, 120.07511);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2067.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157677, 120.07511);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2067.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157636, 120.075114);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2068.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157613, 120.075113);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2068.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157585, 120.075112);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2069.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157564, 120.075111);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2069.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157543, 120.075109);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2070.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157525, 120.075106);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2070.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157496, 120.075105);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2071.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157466, 120.075108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2072.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157432, 120.075108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2072.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157402, 120.075108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2073.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157372, 120.075109);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2074.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157344, 120.075109);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2074.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157322, 120.075106);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2075.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157302, 120.075105);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2076.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157275, 120.075107);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2076.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157255, 120.075109);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2077.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157236, 120.075107);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2078 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157214, 120.075103);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2078.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157198, 120.075101);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2079.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157171, 120.0751);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2079.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157153, 120.075101);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2080 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157124, 120.07511);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2080.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157102, 120.075114);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2080.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157076, 120.075115);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2081.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157044, 120.075118);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2081.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157012, 120.075119);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2082 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156987, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2082.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156957, 120.075122);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2083.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156933, 120.07512);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2083.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156898, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2084.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156868, 120.075119);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2084.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156843, 120.075119);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2085.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15682, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2085.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156792, 120.07512);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2086.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156768, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2086.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156744, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2087.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156713, 120.075121);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2088 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156688, 120.07512);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2088.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156671, 120.075118);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2089.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15665, 120.075115);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2090 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156632, 120.075112);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2090.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156611, 120.075107);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2091.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156591, 120.075103);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2092.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156567, 120.075101);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2092.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15654, 120.075098);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2093.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156519, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2094.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156492, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2094.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15646, 120.075099);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2095.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156433, 120.0751);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2096.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156409, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2097.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15639, 120.075094);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2098 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156369, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2098.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156344, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2099.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156323, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2100.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156303, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2101.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156279, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2101.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156254, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2102.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156231, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2103.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156216, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2104.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156218, 120.075087);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2105.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156216, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2105.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156206, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2106.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156194, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2106.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15618, 120.075066);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2107 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15616, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2107.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156138, 120.075062);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2107.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156118, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2107.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156094, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156066, 120.07506);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156044, 120.075059);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156018, 120.075057);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155993, 120.075055);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15597, 120.075054);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155943, 120.075052);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155911, 120.075052);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2111.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155873, 120.075053);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155844, 120.075056);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15582, 120.075056);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2113.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155793, 120.075055);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15577, 120.075053);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15574, 120.075051);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2115.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155708, 120.075046);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2116.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155684, 120.075044);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155657, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15563, 120.075037);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2118.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155607, 120.075038);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155582, 120.075039);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155552, 120.075035);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2120.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155523, 120.075032);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2120.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155491, 120.075032);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155462, 120.075033);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155433, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1554, 120.075037);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155374, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155341, 120.075045);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155311, 120.075049);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155287, 120.075049);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155259, 120.075049);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155235, 120.075048);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155213, 120.075045);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155192, 120.075046);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2125.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15517, 120.075043);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2125.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155147, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155119, 120.075036);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155109, 120.075037);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155089, 120.075035);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155067, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155047, 120.075035);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155024, 120.07504);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154998, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15497, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15494, 120.07504);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154903, 120.07504);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154872, 120.07504);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154844, 120.075037);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154823, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2131 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154787, 120.075034);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2131.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154762, 120.075041);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2132 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15474, 120.075044);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2132.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154715, 120.075046);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154681, 120.075049);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15465, 120.075051);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154618, 120.075051);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154586, 120.075051);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154559, 120.075053);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154535, 120.075053);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154511, 120.075055);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154487, 120.075056);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154459, 120.075057);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154437, 120.075061);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154408, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2136 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154381, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2136.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154354, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2136.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154325, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154297, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154277, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154258, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2138.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154232, 120.075085);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2138.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15421, 120.075085);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2139.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154186, 120.075085);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2139.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154162, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2140.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154135, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2140.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154108, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2141.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154084, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2141.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154056, 120.075085);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2142.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154021, 120.075087);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2143.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153991, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2144 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153961, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2144.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153944, 120.075085);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2145.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153922, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2146.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1539, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2146.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153885, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2147.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153859, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2148.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153834, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2149.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153805, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2149.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153776, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2150.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153764, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2151.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153736, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2152.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153707, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2153.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15368, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2154.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153651, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2154.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153615, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2155.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153585, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2155.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153553, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2156.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153522, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2156.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153487, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2157.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153455, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2158 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153419, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2158.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153381, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2159.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15335, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2159.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153322, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2160.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153293, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2160.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153263, 120.075094);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2161.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15323, 120.075096);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2161.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153203, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2162.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153176, 120.075098);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2162.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153153, 120.075097);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2163.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153133, 120.075095);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2164.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153111, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2164.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153088, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2165.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153065, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2166 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153046, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2166.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153024, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2167.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152998, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2167.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152976, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2168.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152957, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2168.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152935, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2169.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152913, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2169.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152886, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2170.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152862, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2171.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152838, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2171.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152817, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2172.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152799, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2173.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152783, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2173.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152767, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2174.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152752, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2175.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152738, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2176.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152724, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2177 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15271, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2177.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152694, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2178.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152679, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2178.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152657, 120.075071);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2179.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152632, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2180 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152608, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2180.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152578, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2181.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152548, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2182.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152521, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2182.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152498, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2183.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152474, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2184.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152444, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2185 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152415, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2185.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152393, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2186.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152362, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2187.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152334, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2188.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152305, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2189.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152275, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2190.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152256, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2191.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152234, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2192.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152206, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2192.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152187, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2193.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152169, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2194.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152156, 120.075067);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2194.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152135, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2195.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152109, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2195.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15209, 120.075061);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2196.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152068, 120.07506);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2196.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152046, 120.075059);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2197.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152028, 120.075059);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2197.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152008, 120.075061);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2198.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151983, 120.075061);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2198.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151953, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2198.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151926, 120.075066);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2199.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151898, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2199.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151877, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2200.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151857, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2200.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151836, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2201.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151813, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2201.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151787, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2202.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151767, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2202.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151745, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2203.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151722, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2204 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151712, 120.075067);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2204.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151708, 120.075065);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2204.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151695, 120.075064);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151681, 120.075064);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151663, 120.075064);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15164, 120.075065);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151615, 120.075067);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2206.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151592, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2206.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151568, 120.075071);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2206.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151539, 120.075068);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2207 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151518, 120.075064);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2207.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151487, 120.075062);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2207.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151457, 120.075062);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2208.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151429, 120.075062);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2208.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151404, 120.075063);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2209.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151385, 120.075064);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2210 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151364, 120.075066);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2210.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151349, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2211.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151341, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2211.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151328, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2212.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151307, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2212.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151275, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2212.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151262, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2213.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151239, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2213.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151226, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2213.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151201, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2213.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151179, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151156, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151136, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151114, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151085, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151055, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151018, 120.075071);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150982, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150946, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150909, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2216.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150871, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2216.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150835, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1508, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150763, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150733, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150704, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150678, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150651, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15062, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150584, 120.075094);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150554, 120.075096);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150522, 120.075096);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150496, 120.075095);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150474, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150449, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150421, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150396, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150369, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150338, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150309, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150277, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150242, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150208, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150177, 120.075093);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150153, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150123, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2226 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150091, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2226.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150065, 120.07509);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2226.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150042, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150022, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149966, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149935, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149912, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149888, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149868, 120.075073);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149849, 120.075072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149842, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149837, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149826, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149808, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149781, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149755, 120.075081);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149724, 120.075082);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149693, 120.075084);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149663, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149632, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2224 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149597, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149562, 120.075088);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149525, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149493, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149464, 120.075091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149441, 120.075089);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149423, 120.075086);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149407, 120.075083);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149392, 120.07508);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149372, 120.075078);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149355, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149338, 120.075076);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149321, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149304, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149286, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2220.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14926, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149236, 120.075069);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149215, 120.07507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149197, 120.075074);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149177, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149158, 120.075079);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149138, 120.075075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2216.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149116, 120.075077);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149085, 120.075087);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149067, 120.075092);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149041, 120.075105);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148993, 120.075134);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148962, 120.075145);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148972, 120.075163);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148973, 120.075183);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148964, 120.075201);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148962, 120.075218);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148981, 120.075232);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14901, 120.075238);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149025, 120.075242);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2227.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149049, 120.075242);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2228.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149042, 120.075238);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2228.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149039, 120.075246);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149035, 120.075255);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14904, 120.075266);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149039, 120.075274);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149033, 120.075281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149027, 120.075283);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149025, 120.075285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149023, 120.075287);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149022, 120.075291);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149021, 120.075292);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14902, 120.075293);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149021, 120.075295);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149021, 120.075298);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14902, 120.075303);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149017, 120.075308);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2229.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149016, 120.075313);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149015, 120.075317);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149015, 120.075321);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149015, 120.075323);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149016, 120.075326);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.07533);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.07533);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075333);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149018, 120.075337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149017, 120.07534);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149016, 120.075342);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149016, 120.075344);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149017, 120.075347);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149018, 120.075348);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075352);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075352);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149018, 120.075355);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149018, 120.075355);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149019, 120.075362);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14901, 120.075363);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2233.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148986, 120.075348);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2235.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148974, 120.075341);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2236.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148961, 120.075337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2237.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148954, 120.075337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2239.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148948, 120.075337);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2241.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148942, 120.075341);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2244.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148936, 120.075349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2246.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14893, 120.075356);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2248.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148928, 120.075367);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2250.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148926, 120.075378);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2252.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14892, 120.07539);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2254.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148917, 120.075404);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2256.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148912, 120.075418);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2257.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148911, 120.075427);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2259.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148909, 120.075437);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2260.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148907, 120.075446);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2261.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148905, 120.075455);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2263.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148901, 120.075474);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2264.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148899, 120.075489);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2266.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148897, 120.075502);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2268.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148899, 120.075524);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2269.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148899, 120.075546);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2270.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148901, 120.075568);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2271.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148906, 120.075586);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2271.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148912, 120.075611);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2272.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148917, 120.075637);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2274 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148923, 120.075664);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2275.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148933, 120.075697);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2276.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148943, 120.075726);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2277.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148951, 120.075752);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2278.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148961, 120.07578);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2280.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148959, 120.075802);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2286.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148936, 120.075832);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2289.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148935, 120.075853);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148932, 120.075884);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2295.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148928, 120.075925);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2298.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148919, 120.075977);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2301.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148918, 120.076002);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2303.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148928, 120.076027);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2305.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148939, 120.076059);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2307 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148953, 120.076098);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2308.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148967, 120.076134);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148982, 120.076166);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148993, 120.076204);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.148999, 120.076249);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149002, 120.07631);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149012, 120.076368);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14902, 120.076431);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2311.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149027, 120.076503);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149026, 120.076575);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2311.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149037, 120.076641);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149052, 120.076701);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149065, 120.076756);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149081, 120.076815);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1491, 120.076865);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2311.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149109, 120.076938);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149124, 120.076993);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2310.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149151, 120.07704);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149169, 120.077091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2309 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149185, 120.077129);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2308.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14921, 120.07717);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2307.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149253, 120.077222);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2306.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14928, 120.077285);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2305.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149339, 120.07734);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2305 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149375, 120.077402);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2304.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149407, 120.07746);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2303.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14947, 120.077517);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2302.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149512, 120.077573);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2301.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149557, 120.077629);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2299.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149602, 120.077687);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2298.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149638, 120.07775);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2297.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149679, 120.077813);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2296.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149717, 120.077876);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2295 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149747, 120.077941);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149773, 120.078006);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2292.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149788, 120.078072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2291.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14981, 120.07815);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2291.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149825, 120.078223);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2294.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149856, 120.078286);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2294 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149877, 120.078359);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149901, 120.078419);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2292.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14992, 120.078465);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2291.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.14996, 120.078512);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2290.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.149991, 120.078559);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2289.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150018, 120.078601);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2287.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150089, 120.078632);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2286.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150135, 120.078664);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2284.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150173, 120.078704);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2283.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150208, 120.078745);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2285.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150239, 120.078774);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2284.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150248, 120.078789);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2283.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150275, 120.078807);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2282.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150312, 120.07882);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2283.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150319, 120.078906);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2283.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150335, 120.078892);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2282.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150369, 120.07889);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2281.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150398, 120.078908);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2281.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150436, 120.078913);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2280 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150477, 120.078896);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2279 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150509, 120.07887);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2278 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150533, 120.078868);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2276.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150575, 120.078864);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2275.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150603, 120.078839);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2274.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150645, 120.078832);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2273.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150681, 120.078829);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2271.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150719, 120.078825);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2270.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150755, 120.078813);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2268.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150789, 120.078803);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2267.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150841, 120.078795);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2265.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150892, 120.078782);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2264.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150936, 120.078767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2262.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.150982, 120.078751);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2260.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15105, 120.078734);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2258.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151105, 120.078717);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2257.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151164, 120.078703);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2255.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15123, 120.078689);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2253.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151284, 120.078668);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2252 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151337, 120.078638);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2250.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151396, 120.078599);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2248.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151453, 120.078559);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2252.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151483, 120.078532);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2251.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15153, 120.078505);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2250.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151585, 120.078474);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2249 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151638, 120.078436);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2247.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151688, 120.078403);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2246.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151742, 120.078374);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2245.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151804, 120.078348);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2244.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151857, 120.078332);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2243.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151925, 120.078319);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2241.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.151978, 120.078299);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2240.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152019, 120.078286);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2239.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152083, 120.078272);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2238.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152148, 120.078258);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2237 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152209, 120.078249);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2235.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152247, 120.078229);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2234.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152303, 120.078206);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2233.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152362, 120.078175);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2232.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152419, 120.078136);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2231.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152477, 120.078091);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2230 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152531, 120.078039);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2228.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152585, 120.077981);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2227.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152633, 120.077913);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2226.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152686, 120.077856);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2225.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152745, 120.077822);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2223.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152797, 120.077787);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2222.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152817, 120.077744);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2221.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152862, 120.077699);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2219.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152912, 120.077658);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2218.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.152962, 120.077618);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2217.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153018, 120.077574);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2215.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153078, 120.077534);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2214.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153133, 120.077499);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2213 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15319, 120.077465);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2211.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153239, 120.077433);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2210.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153286, 120.077406);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2209.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153341, 120.077377);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2207.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153394, 120.077336);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2206.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153446, 120.077287);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153489, 120.077248);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2205.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153527, 120.077212);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2204.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153576, 120.077182);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2203.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153606, 120.077165);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2202.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153652, 120.077148);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2201.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153702, 120.077132);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2200.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15376, 120.07713);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2199.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153831, 120.077128);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2198.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153911, 120.077122);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2197.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.153985, 120.077108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2196.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15406, 120.07709);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2195.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154117, 120.077075);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2194.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154177, 120.077062);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2193.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154238, 120.077047);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2192.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154286, 120.077032);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2191.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154338, 120.077014);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2189.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154391, 120.07699);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2188.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154446, 120.076962);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2187.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154497, 120.076929);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2186.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154556, 120.076897);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2185.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154617, 120.076868);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2183.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154674, 120.07684);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2182.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15474, 120.07681);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2181.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154801, 120.076775);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2180.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154856, 120.076744);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2178.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154911, 120.076712);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2177.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.154968, 120.076678);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2176.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155025, 120.07665);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2175.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155085, 120.076623);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2173.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155142, 120.076598);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2172.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155203, 120.076579);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2171.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155258, 120.076551);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2169.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15531, 120.076518);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2168.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155366, 120.076487);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2167.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155422, 120.07646);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2165.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155479, 120.076448);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2164.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15553, 120.076438);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2163.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155594, 120.076429);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2161.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15566, 120.076418);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2160.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155727, 120.076409);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2159.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155788, 120.0764);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2158.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155846, 120.07638);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2156.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155897, 120.076349);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2155.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.155952, 120.076318);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2154.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156011, 120.076281);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2152.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15606, 120.076241);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2151.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156097, 120.076203);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2150.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156141, 120.076172);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2149.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156191, 120.076142);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2149.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156236, 120.076108);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2148.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156278, 120.076072);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2147.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156314, 120.076039);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2146.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156355, 120.076017);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2145 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156393, 120.075996);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2143.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156448, 120.075975);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2142.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156504, 120.075951);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2141.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156551, 120.075923);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2139.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156615, 120.075895);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2138.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156673, 120.075867);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2137.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156724, 120.075839);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2135.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15678, 120.075809);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2134.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156843, 120.07579);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156905, 120.075775);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2131.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.156961, 120.075763);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157009, 120.075748);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157066, 120.075725);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157104, 120.075702);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157142, 120.075685);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157184, 120.075668);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2125 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15722, 120.075647);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157259, 120.075623);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157291, 120.075598);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157337, 120.075577);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2120.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157378, 120.075553);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157429, 120.075526);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2118.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157505, 120.075507);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157562, 120.075513);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157667, 120.075524);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2116.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15777, 120.075543);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2116 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157851, 120.075568);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157901, 120.075591);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2113.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15795, 120.075614);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2113.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.157993, 120.075633);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158039, 120.07565);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158083, 120.075671);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2111.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158118, 120.07569);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2111.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158144, 120.075706);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158159, 120.075716);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158177, 120.075723);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158198, 120.075729);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158215, 120.07573);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158249, 120.075737);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158269, 120.075742);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158289, 120.075746);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158305, 120.075753);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2108.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158311, 120.075758);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158317, 120.075766);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2109.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158313, 120.075768);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2110.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158314, 120.075767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2111.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158319, 120.075765);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2112.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158317, 120.075762);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2113.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158326, 120.075762);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158333, 120.075764);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2114.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158346, 120.075768);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2115.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158336, 120.075767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2116.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158335, 120.075768);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158336, 120.07577);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2117.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15832, 120.075767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2118.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158315, 120.075766);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2118.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158309, 120.07576);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.2 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.1583, 120.075753);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2119.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158296, 120.075753);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2120.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158293, 120.075754);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2121.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158289, 120.075756);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158285, 120.075759);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2122.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158282, 120.075761);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2123.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158278, 120.075763);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158274, 120.075767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2124.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158262, 120.075767);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2125.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158244, 120.075766);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158229, 120.075756);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2126.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158213, 120.075743);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2127.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158196, 120.075724);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158176, 120.075705);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128.4 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.15816, 120.075692);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2128.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158143, 120.075678);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.1 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158128, 120.075663);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2129.5 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158112, 120.075651);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2130.6 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158098, 120.075636);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2131.7 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158087, 120.07562);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2132.8 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158078, 120.075609);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  loc = CLLocationCoordinate2DMake(39.158076, 120.07561);
+  location = [[CLLocation alloc] initWithCoordinate:loc altitude:2133.3 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
+  [artrailpoint_array addObject:location];
+  
+  
+//  CLLocation *this_location;
+//  for(int i = 0; i < [artrailpoint_array count]; i++){
+//    this_location = [artrailpoint_array objectAtIndex:i];
+//    NSLog(@"JERRY:point altitude=>%f longtitude =>%f", this_location.altitude, this_location.coordinate.longitude);
+//  }
+  return artrailpoint_array;
+}
 @end
