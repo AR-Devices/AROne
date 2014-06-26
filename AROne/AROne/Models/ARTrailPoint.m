@@ -89,7 +89,7 @@
 @property int long_direction;
 @property CLLocationDistance altitude;
 @property CLLocationDirection direction;
-
+@property NSDate *time;
 
 @end
 
@@ -178,8 +178,6 @@
   
   NSLog(@"longitude is %f", self.longitude);
   NSLog(@"latitude is %f", self.latitude);
-  
-  
 }
 
 - (void)segment2:(NSData *)data
@@ -247,9 +245,10 @@
   self.time = [df dateFromString: date];
   CLLocationCoordinate2D location = CLLocationCoordinate2DMake(self.latitude, self.longitude);
   self.location = [[CLLocation alloc] initWithCoordinate:location altitude:self.altitude horizontalAccuracy:0 verticalAccuracy:0 course:self.direction speed:self.speed timestamp:self.time];
-//  self.location = [[CLLocation alloc] initWithCoordinate:location altitude:self.altitude horizontalAccuracy:0 verticalAccuracy:0 timestamp:self.time];
   NSLog(@"location is %@", self.location);
+  //parse, save it to an array, after done send it to black box made by Jerry, then it will create multipule ARTrails, these trails will upload to Parse
 }
+
 
 
 

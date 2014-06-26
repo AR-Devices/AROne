@@ -10,7 +10,6 @@
 
 @interface ARTrailPoint : NSObject
 
-@property NSDate *time;
 @property NSString *data_validity;
 @property CLLocation *location;
 

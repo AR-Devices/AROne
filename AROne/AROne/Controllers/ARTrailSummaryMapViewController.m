@@ -9,6 +9,8 @@
 #import "ARTrailSummaryMapViewController.h"
 #import "ARTrailSummaryViewController.h"
 #import "trailPathView.h"
+#import "ARTrailPoint.h"
+
 
 @interface ARTrailSummaryMapViewController () <UIScrollViewDelegate, trailPathSource>
 
@@ -1966,8 +1968,13 @@
   NSMutableArray * artrailpoint_array = [NSMutableArray new];
   
   CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(39.148894, 120.075267);
+  ARTrailPoint *tp = [[ARTrailPoint alloc] init]; //ccz: create an object;
   CLLocation *location = [[CLLocation alloc] initWithCoordinate:loc altitude:2292.9 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
-  [artrailpoint_array addObject:location];
+  [tp setLocation:location]; //ccz: set location
+  [artrailpoint_array addObject:tp]; //ccz: save trailpoint
+  
+  
+  //ccz: need to modiefy rest.
   loc = CLLocationCoordinate2DMake(39.148894, 120.075269);
   location = [[CLLocation alloc] initWithCoordinate:loc altitude:2293 horizontalAccuracy:0 verticalAccuracy:0 course:111 speed:111 timestamp:time];
   [artrailpoint_array addObject:location];
