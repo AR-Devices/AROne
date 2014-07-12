@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CCBaseTableViewController.h"
+#import <Parse/Parse.h>
 
-@interface ARSummaryTableViewController : CCBaseTableViewController
+@interface ARSummaryTableViewController : UITableViewController
 
 @end
