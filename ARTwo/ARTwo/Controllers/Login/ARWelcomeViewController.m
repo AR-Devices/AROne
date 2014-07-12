@@ -49,6 +49,7 @@
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:logInViewController] animated:YES completion:NULL];
   } else {
 //    [self setTabBarController];
+    [self startHomeController];
   }
 }
 
@@ -73,6 +74,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) startHomeController {
+  CCBaseNavigationController *navi = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
+  [self presentViewController:navi animated:YES completion:^{
+      //null
+  }];
 }
 
 //- (void) setTabBarController

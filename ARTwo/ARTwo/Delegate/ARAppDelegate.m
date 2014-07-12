@@ -65,6 +65,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   // JERRY: THIS MUST BE THE FIRST LINE OF CODE IN THIS METHOD -^.^-
   // ****************************************************************************
   [Parse setApplicationId:@"Lt8jTMUGgCSfv8HaeY02aVUMlLhX55VrgAmbOzwe" clientKey:@"jdLKdGO8ixtGrpe7HX5XLFwJICB8pFjIPw5xVvA4"];
+  [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 //  [Crashlytics startWithAPIKey:@"0f2cfca3fad86d0f8c57572059f84da3f7c77075"];
   // Register for push notifications
   
@@ -76,7 +77,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   [PFFacebookUtils initializeFacebook];
   //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
   
-//  [self setAppTheme];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   [self.window setRootViewController:[ARWelcomeViewController new]];
   //[self.window setRootViewController:[ARSignupViewController new]];
