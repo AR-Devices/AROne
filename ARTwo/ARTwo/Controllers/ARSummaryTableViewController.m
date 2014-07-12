@@ -51,14 +51,13 @@
 - (void) queryUsers
 {
   PFQuery *query = [PFQuery queryWithClassName:@"_User"];
-  [query whereKey:@"username" equalTo:[PFUser currentUser].username];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       NSArray *array = objects;
       for (int i = 0; i < [array count]; i++) {
         NSDictionary *dict = [array objectAtIndex:i];
         [self.Usernames  addObject:[dict objectForKey:@"name"]];
-        [self.Useremails addObject:[dict objectForKey:@"email"]];
+//        [self.Useremails addObject:[dict objectForKey:@"email"]];
       }
       [self.tableView reloadData];
     }}];
@@ -88,7 +87,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return [self.Useremails count];
+  return [self.Usernames count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -105,7 +104,7 @@
 {
   NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
   UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-  cell = [ARUserListCell cellWithName:[self.Usernames objectAtIndex:indexPath.section] andEmail:[self.Useremails objectAtIndex:indexPath.section]];
+  cell = [ARUserListCell cellWithName:[self.Usernames objectAtIndex:indexPath.section] andEmail:@"dummy@gmail.com"];
   cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
   
