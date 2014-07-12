@@ -43,6 +43,7 @@
 		3CCDA6D81971110D0066D81D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6D71971110D0066D81D /* Security.framework */; };
 		3CCDA6DA197111140066D81D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6D9197111140066D81D /* StoreKit.framework */; };
 		3CCDA6DC1971111C0066D81D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */; };
+		3CDAA36219711A9B001FECEE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDAA36119711A9B001FECEE /* FacebookSDK.framework */; };
 		3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */; };
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
@@ -114,6 +115,7 @@
 		3CCDA6D71971110D0066D81D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3CCDA6D9197111140066D81D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3CDAA36119711A9B001FECEE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryTableViewController.h; sourceTree = "<group>"; };
 		3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryTableViewController.m; sourceTree = "<group>"; };
 		3CE34A43194413F400E2EA7A /* CCBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseTabBarController.h; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				3CCDA6D81971110D0066D81D /* Security.framework in Frameworks */,
 				3CCDA6D6197110FC0066D81D /* QuartzCore.framework in Frameworks */,
 				3CCDA6D4197110F20066D81D /* MobileCoreServices.framework in Frameworks */,
+				3CDAA36219711A9B001FECEE /* FacebookSDK.framework in Frameworks */,
 				3CCDA6D2197110EA0066D81D /* libz.dylib in Frameworks */,
 				3CCDA6D0197110DF0066D81D /* CoreLocation.framework in Frameworks */,
 				3C48B90B19440A15007AFA2C /* CoreGraphics.framework in Frameworks */,
@@ -182,6 +185,7 @@
 		3C48B90719440A15007AFA2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CDAA36119711A9B001FECEE /* FacebookSDK.framework */,
 				3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */,
 				3CCDA6D9197111140066D81D /* StoreKit.framework */,
 				3CCDA6D71971110D0066D81D /* Security.framework */,
@@ -632,11 +636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"~/Documents/FacebookSDK",
-					/Users/chenchenzheng/Documents/FacebookSDK,
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTwo/ARTwo-Prefix.pch";
 				INFOPLIST_FILE = "ARTwo/ARTwo-Info.plist";
@@ -651,11 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"~/Documents/FacebookSDK",
-					/Users/chenchenzheng/Documents/FacebookSDK,
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTwo/ARTwo-Prefix.pch";
 				INFOPLIST_FILE = "ARTwo/ARTwo-Info.plist";
