@@ -284,7 +284,7 @@
 //        Puser[@"email"] = [user objectForKey:@"email"];
 //        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.id]];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.objectID]];
         NSData *data = [NSData dataWithContentsOfURL:url];
         PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:data];
 //        UIImage *profilePic = [[UIImage alloc] initWithData:data];

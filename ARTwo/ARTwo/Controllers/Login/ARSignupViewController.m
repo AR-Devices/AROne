@@ -191,7 +191,7 @@
   NSLog(@"user name is %@", username);
 	NSString *noUsernameText = @"username";
 	NSString *noPasswordText = @"password";
-  NSString *noPasswordConfirmText = @"confirm password";
+//  NSString *noPasswordConfirmText = @"confirm password";
 	NSString *errorText = @"No ";
 	NSString *errorTextJoin = @" or ";
 	NSString *errorTextEnding = @" entered";

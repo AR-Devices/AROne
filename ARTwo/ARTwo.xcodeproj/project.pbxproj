@@ -48,6 +48,7 @@
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
 		EC39AC101971D50400D8B372 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC39AC0F1971D50400D8B372 /* ARUserListCell.m */; };
+		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		883C37948A3F43DBA14529B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EC39AC0E1971D50400D8B372 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
 		EC39AC0F1971D50400D8B372 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
+		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
+		ECB77C1619738E9D0068A522 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +217,7 @@
 		3C48B90E19440A15007AFA2C /* ARTwo */ = {
 			isa = PBXGroup;
 			children = (
+				ECB77C1319738E8C0068A522 /* OpenAPI */,
 				3C48B95019440DA7007AFA2C /* Libraries */,
 				3C48B93719440A66007AFA2C /* Constants */,
 				3C48B93D19440A66007AFA2C /* Controllers */,
@@ -378,6 +382,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		ECB77C1319738E8C0068A522 /* OpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				ECB77C1419738E9D0068A522 /* MPGTextField */,
+			);
+			name = OpenAPI;
+			sourceTree = "<group>";
+		};
+		ECB77C1419738E9D0068A522 /* MPGTextField */ = {
+			isa = PBXGroup;
+			children = (
+				ECB77C1519738E9D0068A522 /* MPGTextField.h */,
+				ECB77C1619738E9D0068A522 /* MPGTextField.m */,
+			);
+			name = MPGTextField;
+			path = OpenAPI/MPGTextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */,
 				3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */,
 				3C48B94C19440A66007AFA2C /* CCBaseNavigationController.m in Sources */,
 				3CCDA6C219710CFF0066D81D /* ARWelcomeViewController.m in Sources */,
