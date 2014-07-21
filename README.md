@@ -6,7 +6,6 @@ From GPS tracking, facial recognition, to retina detection, our product line is 
 
 The company is currently developing a low-cost GPS tracking device designed for a wide range of sports activities. A heads up display putting speed and other vital information in front of your eyes while you are enjoying your favorite sports uninterrupted.
 
-i'm jerry
 
 
 # AROne
