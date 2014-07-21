@@ -10,9 +10,6 @@
 #import <Parse/Parse.h>
 #import "MPGTextField.h"
 
-@interface ARSummaryTableViewController : UITableViewController <UITextFieldDelegate, MPGTextFieldDelegate>{
-  NSMutableArray *data;
-}
-@property (nonatomic) MPGTextField *search_name;
+@interface ARSummaryTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

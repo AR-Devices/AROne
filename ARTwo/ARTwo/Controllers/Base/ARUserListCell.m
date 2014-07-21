@@ -35,10 +35,10 @@
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 20)];
   self.cellView.backgroundColor = [UIColor orangeColor];
 
-  self.name_label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,50,20)];
+  self.name_label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,200,20)];
   self.name_label.text = name;
   
-  self.email_label = [[UILabel alloc] initWithFrame:CGRectMake(50,0,500,20)];
+  self.email_label = [[UILabel alloc] initWithFrame:CGRectMake(150,0,100,20)];
   self.email_label.text = email;
   
   [self.cellView addSubview:self.name_label];

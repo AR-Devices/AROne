@@ -13,7 +13,11 @@
 @property (nonatomic) NSMutableArray *Usernames;
 @property (nonatomic) NSMutableArray *Useremails;
 @property (nonatomic) NSArray * parse_return_array;
-@property (nonatomic) NSArray * friends;
+@property (nonatomic) NSMutableArray * friends;
+@property (nonatomic) NSMutableArray *user_database;
+@property (nonatomic) UISearchBar *search_name;
+
+@property (nonatomic) Boolean isSearching;
 
 
 @end
@@ -34,7 +38,6 @@
 {
   [super viewDidLoad];
   [self queryUsers];
-  [self MGPSearchView];
 
 }
 
@@ -56,16 +59,15 @@
 */
 - (void) queryUsers
 {
-  data = [[NSMutableArray alloc] init];
+  self.user_database = [[NSMutableArray alloc] init];
   PFQuery *query = [PFQuery queryWithClassName:@"_User"];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error && ([objects count] != 0)) {
       self.parse_return_array = objects;
       for (int i = 0; i < [self.parse_return_array count]; i++) {
         NSDictionary *dict = [self.parse_return_array objectAtIndex:i];
-        [data addObject:[NSDictionary dictionaryWithObjectsAndKeys: [dict objectForKey:@"name"] , @"DisplayText",
-                                                                    @"=^.^=", @"DisplaySubText",
-                                                                    dict, @"CustomObject",
+        [self.user_database addObject:[NSDictionary dictionaryWithObjectsAndKeys: [dict objectForKey:@"name"] , @"name",
+                                                                    @"=^.^=", @"email",
                                                                     nil]]; //load up MGP Search Engine
         [self.Usernames  addObject:[dict objectForKey:@"name"]];
 //        [self.Useremails addObject:[dict objectForKey:@"email"]];
@@ -76,69 +78,55 @@
 
 - (void) searchUsers
 {
+  self.friends =[[NSMutableArray alloc] init];
   PFQuery *query = [PFQuery queryWithClassName:@"_User"];
-  [query whereKey:@"name" containsString:self.search_name.text];
-  self.friends = [query findObjects];
+  NSLog(@"searching %@", self.search_name.text);
+  [query whereKey:@"name" matchesRegex:self.search_name.text modifiers:@"i"];
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (!error && ([objects count] != 0)) {
+      self.parse_return_array = objects;
+      for (int i = 0; i < [self.parse_return_array count]; i++) {
+        NSDictionary *dict = [self.parse_return_array objectAtIndex:i];
+        NSLog(@"adding %@", [dict objectForKey:@"name"]);
+        [self.friends addObject:[NSDictionary dictionaryWithObjectsAndKeys: [dict objectForKey:@"name"] , @"name",
+                                       @"=^.^=", @"email",
+                                       nil]];
+      }
+      [self.tableView reloadData];
+    }}];
 }
 
-- (void) MGPSearchView
+- (void) NameSearchView
 {
-  self.search_name = [[MPGTextField alloc] initWithFrame:CGRectMake(0, 30, self.view.bounds.size.width,30)];
-  [self.search_name setDelegate:self];
-  self.search_name.adjustsFontSizeToFitWidth = YES;
-  [self.search_name setBackgroundColor:[UIColor clearColor]];
-  [self.search_name setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [self.search_name setTextColor:[UIColor blackColor]];
+  self.search_name = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,30)];
+  self.search_name.delegate = self;
   [self.search_name setPlaceholder:@"Name"];
-  [self.view addSubview:self.search_name];
 }
 
-#pragma mark MPGTextField Delegate Methods
 
-- (NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
-{
-  if ([textField isEqual:self.search_name]) {
-    return data;
-  }
-  else{
-    return nil;
-  }
-}
-
-- (BOOL)textFieldShouldSelect:(MPGTextField *)textField
-{
-  return YES;
-}
-
-- (void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result
-{
-  [self searchUsers];
-  [self.tableView reloadData];
-
-//  //A selection was made - either by the user or by the textfield. Check if its a selection from the data provided or a NEW entry.
-//  if ([[result objectForKey:@"CustomObject"] isKindOfClass:[NSString class]] && [[result objectForKey:@"CustomObject"] isEqualToString:@"NEW"]) {
-//    //New Entry
-//    [self.nameStatus setHidden:NO]; //FIXME what's this for?
-//  }
-//  else{
-//    //Selection from provided data
-//    if ([textField isEqual:self.search_name]) {
-//      [self.nameStatus setHidden:YES];
-//
-//    }
-//  }
-}
 
 #pragma mark - Table view data source
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-  return nil;
+  if(section == 0){
+    UIView* header = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,30)];
+    header.backgroundColor = [UIColor clearColor];
+    [self NameSearchView];
+    [header addSubview:self.search_name];
+    return header;
+  }else{
+    return nil;
+  }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 0.0f;
+  if(section == 0){
+    return 30.0f;
+  }else{
+    return 0.0f;
+  }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -153,8 +141,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//  return [self.Usernames count];
-  return [self.friends count]; //FIXME
+  if (self.friends == nil){
+    return 1;
+  }else if([self.friends count] == 0){
+    return 1;
+  }else{
+    return [self.friends count];
+  }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -171,9 +164,10 @@
 {
   NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.section];
   UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-//  cell = [ARUserListCell cellWithName:[self.Usernames objectAtIndex:indexPath.section] andEmail:@"dummy@gmail.com"]; //FIXME
-  cell = [ARUserListCell cellWithName:[[self.friends objectAtIndex:indexPath.section] objectForKey: @"name"]andEmail:@"dummy@gmail.com"]; //FIXME
-
+  if(self.friends == nil){
+  }else{
+    cell = [ARUserListCell cellWithName:[[self.friends objectAtIndex:indexPath.section] objectForKey: @"name"]andEmail:@""]; //FIXME
+  }
   cell.selectionStyle = UITableViewCellEditingStyleNone;
   cell.backgroundColor = [UIColor clearColor];
   
@@ -191,6 +185,22 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 }
+
+#pragma searchBar
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  [self searchUsers];
+}
+
+
 
 
 
