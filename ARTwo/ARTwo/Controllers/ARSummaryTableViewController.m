@@ -8,6 +8,7 @@
 
 #import "ARSummaryTableViewController.h"
 #import "ARUserListCell.h"
+#import "ARFriendAddAcceptViewController.h"
 
 @interface ARSummaryTableViewController ()
 @property (nonatomic) NSMutableArray *Usernames;
@@ -66,8 +67,14 @@
       self.parse_return_array = objects;
       for (int i = 0; i < [self.parse_return_array count]; i++) {
         NSDictionary *dict = [self.parse_return_array objectAtIndex:i];
+        NSString * user_email;
+        if([dict objectForKey:@"email"]!=nil){
+          user_email = [dict objectForKey:@"email"];
+        }else{
+          user_email = @"no email found";
+        }
         [self.user_database addObject:[NSDictionary dictionaryWithObjectsAndKeys: [dict objectForKey:@"name"] , @"name",
-                                                                    @"=^.^=", @"email",
+                                                                    user_email, @"email",
                                                                     nil]]; //load up MGP Search Engine
         [self.Usernames  addObject:[dict objectForKey:@"name"]];
 //        [self.Useremails addObject:[dict objectForKey:@"email"]];
@@ -87,9 +94,16 @@
       self.parse_return_array = objects;
       for (int i = 0; i < [self.parse_return_array count]; i++) {
         NSDictionary *dict = [self.parse_return_array objectAtIndex:i];
+        NSString * user_email;
+        if([dict objectForKey:@"email"]!=nil){
+          user_email = [dict objectForKey:@"email"];
+        }else{
+          user_email = @"no email found";
+        }
+
         NSLog(@"adding %@", [dict objectForKey:@"name"]);
         [self.friends addObject:[NSDictionary dictionaryWithObjectsAndKeys: [dict objectForKey:@"name"] , @"name",
-                                       @"=^.^=", @"email",
+                                       user_email, @"email",
                                        nil]];
       }
       [self.tableView reloadData];
@@ -176,6 +190,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  ARFriendAddAcceptViewController* friendaddacceptvc = [[ARFriendAddAcceptViewController alloc]init];
+  friendaddacceptvc.user_package = [self.friends objectAtIndex:indexPath.section];
+  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+  [self.navigationController pushViewController:friendaddacceptvc animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath

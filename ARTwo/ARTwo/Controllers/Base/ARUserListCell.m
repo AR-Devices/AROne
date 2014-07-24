@@ -33,7 +33,7 @@
 {
   //ccz:  create cellView
   self.cellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 20)];
-  self.cellView.backgroundColor = [UIColor orangeColor];
+  self.cellView.backgroundColor = [UIColor clearColor];
 
   self.name_label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,200,20)];
   self.name_label.text = name;

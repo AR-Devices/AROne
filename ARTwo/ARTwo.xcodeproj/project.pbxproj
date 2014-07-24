@@ -48,6 +48,7 @@
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
 		EC39AC101971D50400D8B372 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC39AC0F1971D50400D8B372 /* ARUserListCell.m */; };
+		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		883C37948A3F43DBA14529B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EC39AC0E1971D50400D8B372 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
 		EC39AC0F1971D50400D8B372 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
+		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
+		ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
 		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
 		ECB77C1619738E9D0068A522 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,6 +282,8 @@
 				3C48B93E19440A66007AFA2C /* Base */,
 				3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */,
 				3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */,
+				ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */,
+				ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
+				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
 				3C48B94D19440A66007AFA2C /* CCBaseTableViewController.m in Sources */,
 				3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */,
 			);
