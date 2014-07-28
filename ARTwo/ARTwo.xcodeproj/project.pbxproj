@@ -43,6 +43,9 @@
 		3CCDA6D81971110D0066D81D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6D71971110D0066D81D /* Security.framework */; };
 		3CCDA6DA197111140066D81D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6D9197111140066D81D /* StoreKit.framework */; };
 		3CCDA6DC1971111C0066D81D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */; };
+		3CD001141985C77A00670CF0 /* ARFriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD001121985C77A00670CF0 /* ARFriendListController.m */; };
+		3CD001151985C77A00670CF0 /* ARFriendListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD001131985C77A00670CF0 /* ARFriendListController.xib */; };
+		3CD00119198625E700670CF0 /* BMInitialsPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD00118198625E700670CF0 /* BMInitialsPlaceholderView.m */; };
 		3CDA656C197751660011DC1D /* ARFriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA656B197751660011DC1D /* ARFriendListController.swift */; };
 		3CDAA36219711A9B001FECEE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDAA36119711A9B001FECEE /* FacebookSDK.framework */; };
 		3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */; };
@@ -120,6 +123,11 @@
 		3CCDA6D71971110D0066D81D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3CCDA6D9197111140066D81D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3CD001111985C77A00670CF0 /* ARFriendListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendListController.h; sourceTree = "<group>"; };
+		3CD001121985C77A00670CF0 /* ARFriendListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendListController.m; sourceTree = "<group>"; };
+		3CD001131985C77A00670CF0 /* ARFriendListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFriendListController.xib; sourceTree = "<group>"; };
+		3CD00117198625E700670CF0 /* BMInitialsPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInitialsPlaceholderView.h; sourceTree = "<group>"; };
+		3CD00118198625E700670CF0 /* BMInitialsPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInitialsPlaceholderView.m; sourceTree = "<group>"; };
 		3CDA656B197751660011DC1D /* ARFriendListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARFriendListController.swift; sourceTree = "<group>"; };
 		3CDAA36119711A9B001FECEE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryTableViewController.h; sourceTree = "<group>"; };
@@ -281,6 +289,9 @@
 		3C48B93D19440A66007AFA2C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CD001111985C77A00670CF0 /* ARFriendListController.h */,
+				3CD001121985C77A00670CF0 /* ARFriendListController.m */,
+				3CD001131985C77A00670CF0 /* ARFriendListController.xib */,
 				3CCDA6B919710CFF0066D81D /* Login */,
 				3C48B93E19440A66007AFA2C /* Base */,
 				3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */,
@@ -296,9 +307,9 @@
 		3C48B93E19440A66007AFA2C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3C48B93F19440A66007AFA2C /* CCBaseNavigationController.h */,
 				EC39AC0E1971D50400D8B372 /* ARUserListCell.h */,
 				EC39AC0F1971D50400D8B372 /* ARUserListCell.m */,
+				3C48B93F19440A66007AFA2C /* CCBaseNavigationController.h */,
 				3C48B94019440A66007AFA2C /* CCBaseNavigationController.m */,
 				3C48B94119440A66007AFA2C /* CCBaseTableViewController.h */,
 				3C48B94219440A66007AFA2C /* CCBaseTableViewController.m */,
@@ -351,6 +362,7 @@
 		3C48B95019440DA7007AFA2C /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3CD00116198625E700670CF0 /* BMInitialsPlaceholderView */,
 				3C48B95119440DA7007AFA2C /* JBChartView */,
 			);
 			path = Libraries;
@@ -390,6 +402,15 @@
 				3CCDA6BF19710CFF0066D81D /* ARWelcomeViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3CD00116198625E700670CF0 /* BMInitialsPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				3CD00117198625E700670CF0 /* BMInitialsPlaceholderView.h */,
+				3CD00118198625E700670CF0 /* BMInitialsPlaceholderView.m */,
+			);
+			path = BMInitialsPlaceholderView;
 			sourceTree = "<group>";
 		};
 		ECB77C1319738E8C0068A522 /* OpenAPI */ = {
@@ -490,6 +511,7 @@
 			files = (
 				3C48B95E19440DA7007AFA2C /* LICENSE in Resources */,
 				3C48B91319440A15007AFA2C /* InfoPlist.strings in Resources */,
+				3CD001151985C77A00670CF0 /* ARFriendListController.xib in Resources */,
 				3C48B95F19440DA7007AFA2C /* README.md in Resources */,
 				3C48B91B19440A15007AFA2C /* Images.xcassets in Resources */,
 			);
@@ -547,6 +569,7 @@
 				3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */,
 				3CDA656C197751660011DC1D /* ARFriendListController.swift in Sources */,
 				3C48B94C19440A66007AFA2C /* CCBaseNavigationController.m in Sources */,
+				3CD001141985C77A00670CF0 /* ARFriendListController.m in Sources */,
 				3CCDA6C219710CFF0066D81D /* ARWelcomeViewController.m in Sources */,
 				3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */,
 				3CCDA6C119710CFF0066D81D /* ARSignupViewController.m in Sources */,
@@ -560,6 +583,7 @@
 				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
 				3C48B94D19440A66007AFA2C /* CCBaseTableViewController.m in Sources */,
 				3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */,
+				3CD00119198625E700670CF0 /* BMInitialsPlaceholderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

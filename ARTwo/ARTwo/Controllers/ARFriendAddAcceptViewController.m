@@ -21,8 +21,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self setUpView];
+
     }
     return self;
+}
+
+- (void)setUpView {
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kJBImageIconJawboneLogo]];
+    self.navigationItem.title = @"Friends";
+    [self.navigationItem setTitle:@"Test"];
+
+
 }
 
 - (void)viewDidLoad

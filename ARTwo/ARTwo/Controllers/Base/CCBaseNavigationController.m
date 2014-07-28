@@ -21,10 +21,11 @@
   self = [super initWithRootViewController:rootViewController];
   if (self)
   {
-    self.navigationBar.translucent = NO;
-    [[UINavigationBar appearance] setBarTintColor:kJBColorNavigationTint];
-    [[UINavigationBar appearance] setTintColor:kJBColorNavigationBarTint];
-    self.interactivePopGestureRecognizer.enabled = NO;
+      self.navigationBar.translucent = NO;
+      [[UINavigationBar appearance] setBarTintColor:kJBColorNavigationTint];
+      [[UINavigationBar appearance] setTintColor:kJBColorNavigationBarTint];
+      self.interactivePopGestureRecognizer.enabled = NO;
+      [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
   }
   return self;
 }

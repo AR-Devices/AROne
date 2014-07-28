@@ -10,6 +10,8 @@
 #import "ARLoginViewController.h"
 #import "CCBaseNavigationController.h"
 #import "ARSummaryTableViewController.h"
+#import "ARFriendListController.h"
+#import <MSDynamicsDrawerViewController.h>
 
 
 @interface ARWelcomeViewController ()
@@ -77,10 +79,23 @@
 }
 
 -(void) startHomeController {
-  CCBaseNavigationController *navi = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
-  [self presentViewController:navi animated:YES completion:^{
+    
+    
+    
+    UITabBarController *tab = [UITabBarController new];
+    CCBaseNavigationController *first = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
+    [first setTitle:@"Summary"];
+    CCBaseNavigationController *second =[[CCBaseNavigationController alloc] initWithRootViewController:[ARFriendListController new]];
+    [second setTitle:@"Friends"];
+    [tab setViewControllers:[NSArray arrayWithObjects:first,second, nil]];
+    
+
+//    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
+//    dynamicsDrawerViewController.paneViewController = [ARSummaryTableViewController new];
+//  CCBaseNavigationController *navi = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
+    [self presentViewController:tab animated:YES completion:^{
       //null
-  }];
+    }];
 }
 
 //- (void) setTabBarController

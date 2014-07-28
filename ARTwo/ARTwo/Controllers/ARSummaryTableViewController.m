@@ -31,6 +31,7 @@
     if (self) {
       self.Usernames  = [NSMutableArray new];
       self.Useremails = [NSMutableArray new];
+      self.navigationItem.title = @"Summary";
     }
     return self;
 }
