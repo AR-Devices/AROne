@@ -51,6 +51,7 @@
 		3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */; };
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
+		EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */; };
 		EC39AC101971D50400D8B372 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC39AC0F1971D50400D8B372 /* ARUserListCell.m */; };
 		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
@@ -135,6 +136,8 @@
 		3CE34A43194413F400E2EA7A /* CCBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseTabBarController.h; sourceTree = "<group>"; };
 		3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseTabBarController.m; sourceTree = "<group>"; };
 		883C37948A3F43DBA14529B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EC311EBE1989FA1B008BC43E /* ARSuggestFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSuggestFriendsViewController.h; sourceTree = "<group>"; };
+		EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSuggestFriendsViewController.m; sourceTree = "<group>"; };
 		EC39AC0E1971D50400D8B372 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
 		EC39AC0F1971D50400D8B372 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
 		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 				ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */,
 				3CDA656B197751660011DC1D /* ARFriendListController.swift */,
 				3C263EFE1976057400B45FA9 /* ARTwo-Bridging-Header.h */,
+				EC311EBE1989FA1B008BC43E /* ARSuggestFriendsViewController.h */,
+				EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
 				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
+				EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */,
 				3C48B94D19440A66007AFA2C /* CCBaseTableViewController.m in Sources */,
 				3CE34A4219440EE000E2EA7A /* ARSummaryTableViewController.m in Sources */,
 				3CD00119198625E700670CF0 /* BMInitialsPlaceholderView.m in Sources */,
