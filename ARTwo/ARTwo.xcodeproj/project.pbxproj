@@ -27,6 +27,8 @@
 		3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B95819440DA7007AFA2C /* JBLineChartView.m */; };
 		3C48B95E19440DA7007AFA2C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95919440DA7007AFA2C /* LICENSE */; };
 		3C48B95F19440DA7007AFA2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95A19440DA7007AFA2C /* README.md */; };
+		3CA492651989F9E4005352FA /* PushTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA492631989F9E4005352FA /* PushTestViewController.m */; };
+		3CA492661989F9E4005352FA /* PushTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA492641989F9E4005352FA /* PushTestViewController.xib */; };
 		3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BB19710CFF0066D81D /* ARLoginViewController.m */; };
 		3CCDA6C119710CFF0066D81D /* ARSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BD19710CFF0066D81D /* ARSignupViewController.m */; };
 		3CCDA6C219710CFF0066D81D /* ARWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BF19710CFF0066D81D /* ARWelcomeViewController.m */; };
@@ -105,6 +107,9 @@
 		3C48B95819440DA7007AFA2C /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		3C48B95919440DA7007AFA2C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3C48B95A19440DA7007AFA2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3CA492621989F9E4005352FA /* PushTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTestViewController.h; sourceTree = "<group>"; };
+		3CA492631989F9E4005352FA /* PushTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTestViewController.m; sourceTree = "<group>"; };
+		3CA492641989F9E4005352FA /* PushTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushTestViewController.xib; sourceTree = "<group>"; };
 		3CCDA6BA19710CFF0066D81D /* ARLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLoginViewController.h; sourceTree = "<group>"; };
 		3CCDA6BB19710CFF0066D81D /* ARLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLoginViewController.m; sourceTree = "<group>"; };
 		3CCDA6BC19710CFF0066D81D /* ARSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSignupViewController.h; sourceTree = "<group>"; };
@@ -305,6 +310,9 @@
 				3C263EFE1976057400B45FA9 /* ARTwo-Bridging-Header.h */,
 				EC311EBE1989FA1B008BC43E /* ARSuggestFriendsViewController.h */,
 				EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */,
+				3CA492621989F9E4005352FA /* PushTestViewController.h */,
+				3CA492631989F9E4005352FA /* PushTestViewController.m */,
+				3CA492641989F9E4005352FA /* PushTestViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -486,6 +494,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Chenchen Zheng";
 				TargetAttributes = {
+					3C48B90419440A14007AFA2C = {
+						DevelopmentTeam = 2F55F56748;
+					};
 					3C48B91F19440A15007AFA2C = {
 						TestTargetID = 3C48B90419440A14007AFA2C;
 					};
@@ -518,6 +529,7 @@
 				3C48B91319440A15007AFA2C /* InfoPlist.strings in Resources */,
 				3CD001151985C77A00670CF0 /* ARFriendListController.xib in Resources */,
 				3C48B95F19440DA7007AFA2C /* README.md in Resources */,
+				3CA492661989F9E4005352FA /* PushTestViewController.xib in Resources */,
 				3C48B91B19440A15007AFA2C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +596,7 @@
 				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
+				3CA492651989F9E4005352FA /* PushTestViewController.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
 				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
 				EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */,
@@ -647,7 +660,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.ar-devices.ARTwo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.ar-devices.ARTwo";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -685,7 +699,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.ar-devices.ARTwo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.ar-devices.ARTwo";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -708,12 +723,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTwo/ARTwo-Prefix.pch";
 				INFOPLIST_FILE = "ARTwo/ARTwo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ARTwo/Controllers/ARTwo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -727,12 +746,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTwo/ARTwo-Prefix.pch";
 				INFOPLIST_FILE = "ARTwo/ARTwo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ARTwo/Controllers/ARTwo-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

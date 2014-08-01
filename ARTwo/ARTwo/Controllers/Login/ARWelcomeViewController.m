@@ -12,6 +12,9 @@
 #import "ARSummaryTableViewController.h"
 #import "ARFriendListController.h"
 #import "ARSuggestFriendsViewController.h"
+
+#import "PushTestViewController.h"
+
 #import <MSDynamicsDrawerViewController.h>
 
 
@@ -90,7 +93,9 @@
     [second setTitle:@"Friends"];
     CCBaseNavigationController *third =[[CCBaseNavigationController alloc] initWithRootViewController:[ARSuggestFriendsViewController new]];
     [third setTitle:@"SuggestFriends"];
-    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, nil]];
+    CCBaseNavigationController *push = [[CCBaseNavigationController alloc] initWithRootViewController:[PushTestViewController new]];
+    [push setTitle:@"Push"]; 
+    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, push, nil]];
     
 
 //    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
