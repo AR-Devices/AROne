@@ -92,10 +92,13 @@
   NSArray* activityArray = [activityQuery findObjects];
   if([activityArray count] ==0){
     [follow setTitle:@"Follow" forState:UIControlStateNormal];
+    [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
+    [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
   }else{
     [follow setTitle:@"Friends" forState:UIControlStateNormal];
+    [follow setTitleColor:[UIColor greenColor] forState: UIControlStateNormal];
+    [follow addTarget:self action:@selector(unfollowButtonAction:) forControlEvents:UIControlEventTouchUpInside];
   }
-  [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
   cell.textLabel.font = font;
   cell.textLabel.text = person;
@@ -114,7 +117,6 @@
       NSLog(@"You have successfully add follwing user %@",  [self.userArray objectAtIndex:[sender tag]]);
     }
   }];
-  [self.tableView reloadData];
 }
 
 - (void)followUserEventually:(PFUser *)user block:(void (^)(BOOL succeeded, NSError *error))completionBlock {
@@ -135,6 +137,33 @@
   
   // Save the activity and set the block passed as the completion block
   [followActivity saveEventually:completionBlock];
+  [self.tableView reloadData];
+
+}
+
+
+- (void)unfollowButtonAction:(id)sender{
+  
+  [self unfollowUserEventually:[self.userArray objectAtIndex:[sender tag]]];
+  [self.tableView reloadData];
+}
+
+- (void)unfollowUserEventually:(PFUser *)user {
+  PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+  [query whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+  [query whereKey:@"toUser" equalTo:user];
+  [query whereKey:@"type" equalTo:@"follow"];
+  [query findObjectsInBackgroundWithBlock:^(NSArray *followActivities, NSError *error) {
+    // While normally there should only be one follow activity returned, we can't guarantee that.
+    
+    if (!error) {
+      for (PFObject *followActivity in followActivities) {
+        [followActivity deleteEventually];
+        [self.tableView reloadData];
+
+      }
+    }
+  }];
 }
 
 @end
