@@ -45,19 +45,11 @@
         [self.myfbfriendsID addObject:[friendObject objectForKey:@"id"]];
       }
 
-//
-      // Construct a PFUser query that will find friends whose facebook ids
-      // are contained in the current user's friend list.
       PFQuery *friendQuery = [PFUser query];
       [friendQuery whereKey:@"fbid" containedIn:self.myfbfriendsID];
-
-      // findObjects will return a list of PFUsers that are friends
-      // with the current user
-//      self.userArray = [friendQuery findObjects];
       [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
         self.userArray = users;
         [self.tableView reloadData];
-        NSLog(@"userArray is %@", self.userArray);
       }];
     }
   }];
@@ -92,9 +84,19 @@
   NSString *person = [user objectForKey:@"name"];
   UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
   UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
-  [follow setTitle:@"Follow" forState:UIControlStateNormal];
   [follow setBackgroundColor:[UIColor blackColor]];
   [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
+  [follow setTag: indexPath.row];
+  PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
+  [activityQuery whereKey:@"toUser" equalTo:(PFUser*)[self.userArray objectAtIndex:indexPath.row]];
+  NSArray* activityArray = [activityQuery findObjects];
+  if([activityArray count] ==0){
+    [follow setTitle:@"Follow" forState:UIControlStateNormal];
+  }else{
+    [follow setTitle:@"Friends" forState:UIControlStateNormal];
+  }
+  [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+
   cell.textLabel.font = font;
   cell.textLabel.text = person;
   cell.accessoryView = follow;
@@ -102,5 +104,37 @@
   return cell;
 }
 
+- (void)followButtonAction:(id)sender{
+  
+  [self followUserEventually:[self.userArray objectAtIndex:[sender tag]] block:^(BOOL succeeded, NSError *error) {
+    if (error) {
+      NSLog(@"error %@", error);
+      NSLog(@"cannto follow %@", [self.userArray objectAtIndex:[sender tag]]);
+    }else{
+      NSLog(@"You have successfully add follwing user %@",  [self.userArray objectAtIndex:[sender tag]]);
+    }
+  }];
+  [self.tableView reloadData];
+}
+
+- (void)followUserEventually:(PFUser *)user block:(void (^)(BOOL succeeded, NSError *error))completionBlock {
+  if ([[user objectId] isEqualToString:[[PFUser currentUser] objectId]]) {
+    return;
+  }
+  
+  // Create follow activity
+  PFObject *followActivity = [PFObject objectWithClassName:@"Activity"];
+  [followActivity setObject:[PFUser currentUser] forKey:@"fromUser"];
+  [followActivity setObject:user forKey:@"toUser"];
+  [followActivity setObject:@"follow" forKey:@"type"];
+  
+  // Set the proper ACL
+  PFACL *followACL = [PFACL ACLWithUser:[PFUser currentUser]];
+  [followACL setPublicReadAccess:YES];
+  followActivity.ACL = followACL;
+  
+  // Save the activity and set the block passed as the completion block
+  [followActivity saveEventually:completionBlock];
+}
 
 @end
