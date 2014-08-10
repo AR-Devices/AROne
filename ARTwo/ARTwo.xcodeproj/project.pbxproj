@@ -10,6 +10,8 @@
 		3C06EC74198EE50F00512B3F /* ARSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C06EC73198EE50F00512B3F /* ARSettingsViewController.m */; };
 		3C39F0D4199706AE00460E51 /* ARProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C39F0D3199706AE00460E51 /* ARProfileViewController.m */; };
 		3C39F0D7199709F700460E51 /* ARProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C39F0D6199709F700460E51 /* ARProfileHeaderView.m */; };
+		3C39F0DD19973ADF00460E51 /* ARUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C39F0DB19973ADF00460E51 /* ARUserTableViewCell.m */; };
+		3C39F0DE19973ADF00460E51 /* ARUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C39F0DC19973ADF00460E51 /* ARUserTableViewCell.xib */; };
 		3C48B90919440A15007AFA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C48B90819440A15007AFA2C /* Foundation.framework */; };
 		3C48B90B19440A15007AFA2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C48B90A19440A15007AFA2C /* CoreGraphics.framework */; };
 		3C48B90D19440A15007AFA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C48B90C19440A15007AFA2C /* UIKit.framework */; };
@@ -77,6 +79,9 @@
 		3C39F0D3199706AE00460E51 /* ARProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARProfileViewController.m; sourceTree = "<group>"; };
 		3C39F0D5199709F700460E51 /* ARProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARProfileHeaderView.h; sourceTree = "<group>"; };
 		3C39F0D6199709F700460E51 /* ARProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARProfileHeaderView.m; sourceTree = "<group>"; };
+		3C39F0DA19973ADF00460E51 /* ARUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserTableViewCell.h; sourceTree = "<group>"; };
+		3C39F0DB19973ADF00460E51 /* ARUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserTableViewCell.m; sourceTree = "<group>"; };
+		3C39F0DC19973ADF00460E51 /* ARUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUserTableViewCell.xib; sourceTree = "<group>"; };
 		3C48B90519440A15007AFA2C /* ARTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C48B90819440A15007AFA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C48B90A19440A15007AFA2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -370,6 +375,9 @@
 			children = (
 				3C39F0D5199709F700460E51 /* ARProfileHeaderView.h */,
 				3C39F0D6199709F700460E51 /* ARProfileHeaderView.m */,
+				3C39F0DA19973ADF00460E51 /* ARUserTableViewCell.h */,
+				3C39F0DB19973ADF00460E51 /* ARUserTableViewCell.m */,
+				3C39F0DC19973ADF00460E51 /* ARUserTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 				3C48B95E19440DA7007AFA2C /* LICENSE in Resources */,
 				3C48B91319440A15007AFA2C /* InfoPlist.strings in Resources */,
 				3CD001151985C77A00670CF0 /* ARFriendListController.xib in Resources */,
+				3C39F0DE19973ADF00460E51 /* ARUserTableViewCell.xib in Resources */,
 				3C48B95F19440DA7007AFA2C /* README.md in Resources */,
 				3C48B91B19440A15007AFA2C /* Images.xcassets in Resources */,
 			);
@@ -599,6 +608,7 @@
 				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
+				3C39F0DD19973ADF00460E51 /* ARUserTableViewCell.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
 				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
 				EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */,

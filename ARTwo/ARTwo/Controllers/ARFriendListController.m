@@ -8,9 +8,10 @@
 
 #import "ARFriendListController.h"
 #import "BMInitialsPlaceholderView.h"
+#import "ARUserTableViewCell.h"
 
 
-NSString * const kViewControllerCellIdentifier = @"cell";
+NSString * const kViewControllerCellIdentifier = @"ARUserTableViewCell";
 const CGFloat kViewControllerCellHeight = 50.0;
 
 @interface ARFriendListController ()
@@ -39,7 +40,7 @@ const CGFloat kViewControllerCellHeight = 50.0;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kViewControllerCellIdentifier];
+//    [self.tableView registerClass:[ARUserTableViewCell class] forCellReuseIdentifier:kViewControllerCellIdentifier];
 //    self.tableView.contentInset = self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
 
     PFQuery *userQuery = [PFUser query];
@@ -74,21 +75,30 @@ const CGFloat kViewControllerCellHeight = 50.0;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kViewControllerCellIdentifier forIndexPath:indexPath];
-    NSLog(@"row is %ld", (long)indexPath.row);
-    PFUser *user = [self.userArray objectAtIndex:indexPath.row];
-    NSString *person = [user objectForKey:@"name"];
-    NSLog(@"person is %@", person);
-    UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
-    CGFloat placeholderHW = kViewControllerCellHeight - 15;
-    BMInitialsPlaceholderView *placeholder = [[BMInitialsPlaceholderView alloc] initWithDiameter:placeholderHW];
-    placeholder.font = font;
-    placeholder.initials = [self initialStringForPersonString:person];
-    placeholder.circleColor = [self circleColorForIndexPath:indexPath];
-    
-    cell.textLabel.font = font;
-    cell.textLabel.text = person;
-    cell.accessoryView = placeholder;
+    ARUserTableViewCell *cell = (ARUserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kViewControllerCellIdentifier];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:kViewControllerCellIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+//        ARUserTableViewCell *cell = [[ARUserTableViewCell alloc] init];
+        NSLog(@"row is %ld", (long)indexPath.row);
+        PFUser *user = [self.userArray objectAtIndex:indexPath.row];
+        NSString *person = [user objectForKey:@"name"];
+        NSLog(@"person is %@", person);
+        UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
+        CGFloat placeholderHW = kViewControllerCellHeight - 15;
+        BMInitialsPlaceholderView *placeholder = [[BMInitialsPlaceholderView alloc] initWithDiameter:placeholderHW];
+        placeholder.font = font;
+        placeholder.initials = [self initialStringForPersonString:person];
+        placeholder.circleColor = [self circleColorForIndexPath:indexPath];
+        
+        cell.userName.font = font;
+        cell.userName.text = person;
+        cell.userIcon.font = font;
+        cell.userIcon.initials = [self initialStringForPersonString:person];
+        cell.userIcon.circleColor = [self circleColorForIndexPath:indexPath];
+//        cell.accessoryView = placeholder;
+    }
+
     
     return cell;
 }
