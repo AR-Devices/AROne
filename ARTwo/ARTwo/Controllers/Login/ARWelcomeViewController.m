@@ -13,6 +13,7 @@
 #import "ARFriendListController.h"
 #import "ARSuggestFriendsViewController.h"
 #import "ARSettingsViewController.h"
+#import "ARRelationshipViewController.h"
 
 #import "ARProfileViewController.h"
 
@@ -96,7 +97,9 @@
     [profile setTitle:@"Profile"];
     CCBaseNavigationController *settings = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSettingsViewController new]];
     [settings setTitle:@"Settings"];
-    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings, nil]];
+    CCBaseNavigationController *relationship = [[CCBaseNavigationController alloc] initWithRootViewController:[ARRelationshipViewController new]];
+    [settings setTitle:@"Relationship"];
+    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings, relationship, nil]];
     
 
 //    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
