@@ -32,11 +32,12 @@
   
 }
 
-- (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
   // Store the deviceToken in the current installation and save it to Parse.
-  PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-  [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation setObject:[PFUser currentUser].username forKey:@"user"];
+
   //  [currentInstallation addUniqueObject:@"Cliq" forKey:@"channels"];
   NSString *fbid = [[NSUserDefaults standardUserDefaults] objectForKey:@"myFBID"];
   NSLog(@"fbid is %@",fbid);

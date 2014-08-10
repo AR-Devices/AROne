@@ -27,3 +27,6 @@
 #define kJBStringLabelMm localize(@"label.mm", @"mm")
 #define kJBStringLabelMetropolitanAverage localize(@"label.metropolitan.average", @"Metropolitan Average")
 #define kJBStringLabelNationalAverage localize(@"label.national.average", @"National Average")
+
+
+#define kARInstallationUserKey @"user"

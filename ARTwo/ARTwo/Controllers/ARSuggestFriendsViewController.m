@@ -45,6 +45,9 @@
         [self.myfbfriendsID addObject:[friendObject objectForKey:@"id"]];
       }
 
+//c
+      // Construct a PFUser query that will find friends whose facebook ids
+      // are contained in the current user's friend list.
       PFQuery *friendQuery = [PFUser query];
       [friendQuery whereKey:@"fbid" containedIn:self.myfbfriendsID];
       [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
@@ -164,6 +167,35 @@
       }
     }
   }];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"clicked");
+    [self pushTo:[self.userArray objectAtIndex:indexPath.row]];
+    //and do animation on followed
+}
+
+- (void) pushTo:(PFUser *)user {
+    // Build a query to match users with a birthday today
+    PFQuery *innerQuery = [PFUser query];
+    
+    // Use hasPrefix: to only match against the month/date
+    [innerQuery whereKey:@"user" equalTo:user.username];
+    
+    // Build the actual push notification target query
+    PFQuery *query = [PFInstallation query];
+    
+    // only return Installations that belong to a User that
+    // matches the innerQuery
+    [query whereKey:@"user" equalTo:user.username];
+    
+    // Send the notification.
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:innerQuery];
+    PFUser *me = [PFUser currentUser];
+    NSString *message = [NSString stringWithFormat:@"%@ added you as friend!", [me objectForKey:@"name"]];
+    [push setMessage:message];
+    [push sendPushInBackground];
 }
 
 @end

@@ -25,3 +25,6 @@
 #pragma mark - Tooltip
 
 #define kJBFontTooltipText [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]
+
+
+
