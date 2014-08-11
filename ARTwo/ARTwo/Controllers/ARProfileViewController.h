@@ -8,6 +8,6 @@
 
 #import "CCBaseTableViewController.h"
 
-@interface ARProfileViewController : CCBaseTableViewController
+@interface ARProfileViewController : UITableViewController
 
 @end

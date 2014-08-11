@@ -45,7 +45,7 @@
     [self.userName setTextAlignment:NSTextAlignmentCenter];
     [self addSubview:self.userName];
     
-    self.control = [[DZNSegmentedControl alloc] initWithItems:@[@"Following", @"Follower"]];
+    self.control = [[DZNSegmentedControl alloc] initWithItems:@[@"Following", @"Follower", @"Friends"]];
     [self.control setFrame:CGRectMake(0, 0, self.bounds.size.width, 50)];
     [self.control setCenter:CGPointMake(self.bounds.size.width/2, 220)];
     [self addSubview:self.control];

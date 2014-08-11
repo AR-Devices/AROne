@@ -52,9 +52,29 @@
     self.headerView = [[ARProfileHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 250)];
     self.headerView.userName.text = [[PFUser currentUser] objectForKey:@"name"];
     [self.headerView.userIcon setImageWithString:self.headerView.userName.text];
-    
+//    self.headerView.control.delegate = self;
+    self.headerView.control.selectedSegmentIndex = 0;
+    [self.headerView.control addTarget:self action:@selector(selectedSegment:) forControlEvents:UIControlEventValueChanged];
 
     
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    [refresh addTarget:self action:@selector(reloadView) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
+    
+}
+
+- (void)selectedSegment:(DZNSegmentedControl *)sender {
+    NSLog(@"clicked on %ld", (long)sender.selectedSegmentIndex);
+}
+
+- (void)reloadView {
+    NSLog(@"reload view here");
+    //    [control setCount:@(12) forSegmentAtIndex:0];
+    //    [control setTitle:@"Hello" forSegmentAtIndex:1];
+    //    [control setEnabled:NO forSegmentAtIndex:2];
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -102,7 +122,6 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"self.headerView.control.bounds.size.height is %f", self.headerView.control.bounds.size.height);
     CGFloat sectionHeaderHeight = self.headerView.bounds.size.height - self.headerView.control.bounds.size.height;
     if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
         scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
