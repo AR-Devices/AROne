@@ -44,19 +44,23 @@
   PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Activity"];
 
   if(self.type == Following){
-  //following:
+  //following: user who are following me,
     [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
     [followingQuery includeKey:@"fromUser"];
     [followingQuery includeKey:@"toUser"];
-    self.following = [followingQuery findObjects];
-    NSLog(@"following %@", self.following);
+    [followingQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.following = objects;
+        NSLog(@"following %@", self.following);
+    }];
   }else if(self.type == Followed){
   //followed;
     [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
     [followedQuery includeKey:@"fromUser"];
     [followedQuery includeKey:@"toUser"];
-    self.followed = [followedQuery findObjects];
-    NSLog(@"followed %@", self.followed);
+    [followedQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.followed = objects;
+        NSLog(@"followed %@", self.followed);
+    }];
   }else if(self.type == Friends){
   //friends:
     [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
@@ -64,8 +68,11 @@
     [friendsQuery includeKey:@"fromUser"];
     [friendsQuery includeKey:@"toUser"];
 
-    self.friends = [friendsQuery findObjects];
-    NSLog(@"friends %@", self.friends);
+    [friendsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.friends = objects;
+        NSLog(@"friends %@", self.friends);
+
+    }];
   }
 }
 

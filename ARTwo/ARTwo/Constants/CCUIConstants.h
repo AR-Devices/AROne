@@ -12,3 +12,9 @@
 #define kJBImageIconArrow @"icon-arrow.png"
 #define kJBImageIconLineChart @"icon-line-chart.png"
 #define kJBImageIconBarChart @"icon-bar-chart.png"
+
+#define kFollower   0
+#define kFollowing  1
+#define kFriend     2
+
+#define kViewControllerCellIdentifier @"ARUserTableViewCell"
