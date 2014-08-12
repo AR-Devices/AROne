@@ -38,35 +38,35 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
   PFQuery *followingQuery = [PFQuery queryWithClassName:@"Activity"];
   PFQuery *followedQuery = [PFQuery queryWithClassName:@"Activity"];
   PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Activity"];
 
+  if(self.type == Following){
   //following:
-  [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
-  self.following = [followingQuery findObjects];
-  NSLog(@"following %@", self.following);
+    [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [followingQuery includeKey:@"fromUser"];
+    [followingQuery includeKey:@"toUser"];
+    self.following = [followingQuery findObjects];
+    NSLog(@"following %@", self.following);
+  }else if(self.type == Followed){
   //followed;
-  [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
-  self.followed = [followedQuery findObjects];
-  NSLog(@"followed %@", self.followed);
-
+    [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+    [followedQuery includeKey:@"fromUser"];
+    [followedQuery includeKey:@"toUser"];
+    self.followed = [followedQuery findObjects];
+    NSLog(@"followed %@", self.followed);
+  }else if(self.type == Friends){
   //friends:
-  [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
-  [friendsQuery whereKey:@"toUser" matchesKey:@"fromUser" inQuery:followedQuery];
-  self.friends = [friendsQuery findObjects];
-  NSLog(@"friends %@", self.friends);
+    [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+    [friendsQuery whereKey:@"toUser" matchesKey:@"fromUser" inQuery:followedQuery];
+    [friendsQuery includeKey:@"fromUser"];
+    [friendsQuery includeKey:@"toUser"];
 
-
-  
-  
-//  PFQuery *relatiQuery = [PFUser query];
-//  [friendQuery whereKey:@"fbid" containedIn:self.myfbfriendsID];
-//  [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
-//    self.userArray = users;
-//    [self.tableView reloadData];
-//  }];
-//}
+    self.friends = [friendsQuery findObjects];
+    NSLog(@"friends %@", self.friends);
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,7 +83,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   // Return the number of rows in the section.
-  return [self.userArray count];
+  NSInteger rows = 0;
+  if(self.type == Following){
+    rows = [self.following count];
+  }else if(self.type == Followed){
+    rows = [self.followed count];
+  }else if(self.type == Friends){
+    rows = [self.friends count];
+  }
+  return rows;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -93,29 +101,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-  PFUser *user = [self.userArray objectAtIndex:indexPath.row];
+  PFUser *user;
+  if(self.type == Following){
+    user = (PFUser*)[[self.following objectAtIndex:indexPath.row] objectForKey:@"toUser"];
+  }else if(self.type == Followed){
+    user = (PFUser*)[[self.followed objectAtIndex:indexPath.row] objectForKey:@"fromUser"];
+  }else if(self.type == Friends){
+    user = (PFUser*)[[self.friends objectAtIndex:indexPath.row] objectForKey:@"toUser"];
+  }
   NSString *person = [user objectForKey:@"name"];
   UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
-  UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
-  [follow setBackgroundColor:[UIColor blackColor]];
-  [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
-  [follow setTag: indexPath.row];
-  PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
-  [activityQuery whereKey:@"toUser" equalTo:(PFUser*)[self.userArray objectAtIndex:indexPath.row]];
-  NSArray* activityArray = [activityQuery findObjects];
-  if([activityArray count] ==0){
-    [follow setTitle:@"Follow" forState:UIControlStateNormal];
-    [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
-    [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-  }else{
-    [follow setTitle:@"Friends" forState:UIControlStateNormal];
-    [follow setTitleColor:[UIColor greenColor] forState: UIControlStateNormal];
-    [follow addTarget:self action:@selector(unfollowButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-  }
+
   
   cell.textLabel.font = font;
   cell.textLabel.text = person;
-  cell.accessoryView = follow;
   
   return cell;
 }

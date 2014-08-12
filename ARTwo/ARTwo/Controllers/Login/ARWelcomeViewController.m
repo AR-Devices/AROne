@@ -97,8 +97,9 @@
     [profile setTitle:@"Profile"];
     CCBaseNavigationController *settings = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSettingsViewController new]];
     [settings setTitle:@"Settings"];
-    CCBaseNavigationController *relationship = [[CCBaseNavigationController alloc] initWithRootViewController:[ARRelationshipViewController new]];
-    [settings setTitle:@"Relationship"];
+    ARRelationshipViewController * relationshipcontroller = [[ARRelationshipViewController alloc] initWithStyle:Following];
+    CCBaseNavigationController *relationship = [[CCBaseNavigationController alloc] initWithRootViewController:relationshipcontroller];
+    [relationship setTitle:@"Relationship"];
     [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings, relationship, nil]];
     
 
