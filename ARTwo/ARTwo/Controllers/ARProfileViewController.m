@@ -120,13 +120,10 @@
                 [self.headerView.control setCount:@([self.following count])  forSegmentAtIndex:0];
                 [self.headerView.control setCount:@([self.follower count]) forSegmentAtIndex:1];
                 [self.headerView.control setCount:@([self.friends count]) forSegmentAtIndex:2];
-                //    [control setTitle:@"Hello" forSegmentAtIndex:1];
-                //    [control setEnabled:NO forSegmentAtIndex:2];
-//                self.selectedSegment = self.following;
+                [self selectedSegment:self.headerView.control];
                 if (self.refreshControl) {
                     [self.refreshControl endRefreshing];
                 }
-                [self.tableView reloadData];
             }];
         }];
     }];
