@@ -13,7 +13,6 @@
 #import "ARFriendListController.h"
 #import "ARSuggestFriendsViewController.h"
 #import "ARSettingsViewController.h"
-#import "ARRelationshipViewController.h"
 
 #import "ARProfileViewController.h"
 
@@ -97,16 +96,7 @@
     [profile setTitle:@"Profile"];
     CCBaseNavigationController *settings = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSettingsViewController new]];
     [settings setTitle:@"Settings"];
-    ARRelationshipViewController * following = [[ARRelationshipViewController alloc] initWithStyle:Following];
-    CCBaseNavigationController *followingcontroller = [[CCBaseNavigationController alloc] initWithRootViewController:following];
-    [followingcontroller setTitle:@"Following"];
-  ARRelationshipViewController * followed = [[ARRelationshipViewController alloc] initWithStyle:Followed];
-  CCBaseNavigationController *followedcontroller = [[CCBaseNavigationController alloc] initWithRootViewController:followed];
-  [followedcontroller setTitle:@"Followed"];
-  ARRelationshipViewController * friends = [[ARRelationshipViewController alloc] initWithStyle:Friends];
-  CCBaseNavigationController *friendscontroller = [[CCBaseNavigationController alloc] initWithRootViewController:friends];
-  [friendscontroller setTitle:@"Friends"];
-    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings, followingcontroller, followedcontroller,friendscontroller, nil]];
+    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings,nil]];
     
 
 //    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];

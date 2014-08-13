@@ -14,6 +14,7 @@
 @property (nonatomic) NSMutableArray* myfbfriends;
 @property (nonatomic) NSMutableArray* myfbfriendsID;
 @property (nonatomic) NSArray*userArray;
+@property (nonatomic, strong) NSArray* activityArray;
 
 @end
 
@@ -32,7 +33,7 @@
 {
     [super viewDidLoad];
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-
+  [self reload];
   self.myfbfriends  = [[NSMutableArray alloc]init];
   self.myfbfriendsID  = [[NSMutableArray alloc]init];
   
@@ -90,10 +91,14 @@
   [follow setBackgroundColor:[UIColor blackColor]];
   [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
   [follow setTag: indexPath.row];
-  PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
-  [activityQuery whereKey:@"toUser" equalTo:(PFUser*)[self.userArray objectAtIndex:indexPath.row]];
-  NSArray* activityArray = [activityQuery findObjects];
-  if([activityArray count] ==0){
+  BOOL found_person = false;
+
+  for (int i=0; i < [self.activityArray count];i++){
+    if([[[[self.activityArray objectAtIndex:i] objectForKey:@"toUser"] objectForKey:@"name"] isEqualToString:person]){
+      found_person = true;
+    }
+  }
+  if(!found_person){
     [follow setTitle:@"Follow" forState:UIControlStateNormal];
     [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
     [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -111,15 +116,27 @@
 }
 
 - (void)followButtonAction:(id)sender{
-  
-  [self followUserEventually:[self.userArray objectAtIndex:[sender tag]] block:^(BOOL succeeded, NSError *error) {
-    if (error) {
-      NSLog(@"error %@", error);
-      NSLog(@"cannto follow %@", [self.userArray objectAtIndex:[sender tag]]);
+  PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
+  [activityQuery whereKey:@"fromUser" equalTo: [PFUser currentUser]];
+  [activityQuery whereKey:@"toUser" equalTo: [self.userArray objectAtIndex:[sender tag]]];
+  [activityQuery findObjectsInBackgroundWithBlock:^(NSArray *activities, NSError *error) {
+    if([activities count] == 0){
+      [self followUserEventually:[self.userArray objectAtIndex:[sender tag]] block:^(BOOL succeeded, NSError *error) {
+        if (error) {
+          NSLog(@"error %@", error);
+          NSLog(@"cannot follow %@", [self.userArray objectAtIndex:[sender tag]]);
+        }else{
+          NSLog(@"You have successfully add following user %@",  [self.userArray objectAtIndex:[sender tag]]);
+        }
+      }];
     }else{
-      NSLog(@"You have successfully add follwing user %@",  [self.userArray objectAtIndex:[sender tag]]);
+      //FIXME: need push notification
+      NSLog(@"you have already add %@", [self.userArray objectAtIndex:[sender tag]]);
     }
+    
   }];
+  
+
 }
 
 - (void)followUserEventually:(PFUser *)user block:(void (^)(BOOL succeeded, NSError *error))completionBlock {
@@ -140,7 +157,7 @@
   
   // Save the activity and set the block passed as the completion block
   [followActivity saveEventually:completionBlock];
-  [self.tableView reloadData];
+  [self reload];
 
 }
 
@@ -148,6 +165,7 @@
 - (void)unfollowButtonAction:(id)sender{
   
   [self unfollowUserEventually:[self.userArray objectAtIndex:[sender tag]]];
+  NSLog(@"You have successfully UNFOLLOW user %@", [self.userArray objectAtIndex:[sender tag]]);
   [self.tableView reloadData];
 }
 
@@ -162,7 +180,7 @@
     if (!error) {
       for (PFObject *followActivity in followActivities) {
         [followActivity deleteEventually];
-        [self.tableView reloadData];
+        [self reload];
 
       }
     }
@@ -196,6 +214,17 @@
     NSString *message = [NSString stringWithFormat:@"%@ added you as friend!", [me objectForKey:@"name"]];
     [push setMessage:message];
     [push sendPushInBackground];
+}
+
+-(void) reload{
+  PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
+  [activityQuery whereKey:@"fromUser" equalTo: [PFUser currentUser]];
+  [activityQuery includeKey:@"toUser"];
+  [activityQuery findObjectsInBackgroundWithBlock:^(NSArray *activities, NSError *error) {
+    self.activityArray = activities;
+    [self.tableView reloadData];
+
+  }];
 }
 
 @end
