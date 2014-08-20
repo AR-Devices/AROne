@@ -32,6 +32,7 @@
 		3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48B95819440DA7007AFA2C /* JBLineChartView.m */; };
 		3C48B95E19440DA7007AFA2C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95919440DA7007AFA2C /* LICENSE */; };
 		3C48B95F19440DA7007AFA2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C48B95A19440DA7007AFA2C /* README.md */; };
+		3C9CEA0C19A48FAF002C3BC7 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9CEA0B19A48FAF002C3BC7 /* ARUserListCell.m */; };
 		3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BB19710CFF0066D81D /* ARLoginViewController.m */; };
 		3CCDA6C119710CFF0066D81D /* ARSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BD19710CFF0066D81D /* ARSignupViewController.m */; };
 		3CCDA6C219710CFF0066D81D /* ARWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCDA6BF19710CFF0066D81D /* ARWelcomeViewController.m */; };
@@ -56,7 +57,6 @@
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
 		EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */; };
-		EC39AC101971D50400D8B372 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC39AC0F1971D50400D8B372 /* ARUserListCell.m */; };
 		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
@@ -117,6 +117,8 @@
 		3C48B95819440DA7007AFA2C /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		3C48B95919440DA7007AFA2C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3C48B95A19440DA7007AFA2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3C9CEA0A19A48FAF002C3BC7 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
+		3C9CEA0B19A48FAF002C3BC7 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
 		3CCDA6BA19710CFF0066D81D /* ARLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLoginViewController.h; sourceTree = "<group>"; };
 		3CCDA6BB19710CFF0066D81D /* ARLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLoginViewController.m; sourceTree = "<group>"; };
 		3CCDA6BC19710CFF0066D81D /* ARSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSignupViewController.h; sourceTree = "<group>"; };
@@ -149,8 +151,6 @@
 		883C37948A3F43DBA14529B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EC311EBE1989FA1B008BC43E /* ARSuggestFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSuggestFriendsViewController.h; sourceTree = "<group>"; };
 		EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSuggestFriendsViewController.m; sourceTree = "<group>"; };
-		EC39AC0E1971D50400D8B372 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
-		EC39AC0F1971D50400D8B372 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
 		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
 		ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
 		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
@@ -325,8 +325,6 @@
 		3C48B93E19440A66007AFA2C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EC39AC0E1971D50400D8B372 /* ARUserListCell.h */,
-				EC39AC0F1971D50400D8B372 /* ARUserListCell.m */,
 				3C48B93F19440A66007AFA2C /* CCBaseNavigationController.h */,
 				3C48B94019440A66007AFA2C /* CCBaseNavigationController.m */,
 				3C48B94119440A66007AFA2C /* CCBaseTableViewController.h */,
@@ -373,6 +371,8 @@
 		3C48B94B19440A66007AFA2C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C9CEA0A19A48FAF002C3BC7 /* ARUserListCell.h */,
+				3C9CEA0B19A48FAF002C3BC7 /* ARUserListCell.m */,
 				3C39F0D5199709F700460E51 /* ARProfileHeaderView.h */,
 				3C39F0D6199709F700460E51 /* ARProfileHeaderView.m */,
 				3C39F0DA19973ADF00460E51 /* ARUserTableViewCell.h */,
@@ -593,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */,
+				3C9CEA0C19A48FAF002C3BC7 /* ARUserListCell.m in Sources */,
 				3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */,
 				3C48B94C19440A66007AFA2C /* CCBaseNavigationController.m in Sources */,
 				3CD001141985C77A00670CF0 /* ARFriendListController.m in Sources */,
@@ -604,7 +605,6 @@
 				3C48B94E19440A66007AFA2C /* CCBaseViewController.m in Sources */,
 				3C48B95C19440DA7007AFA2C /* JBChartView.m in Sources */,
 				3C06EC74198EE50F00512B3F /* ARSettingsViewController.m in Sources */,
-				EC39AC101971D50400D8B372 /* ARUserListCell.m in Sources */,
 				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
