@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CCBaseViewController.h"
+#import <MSDynamicsDrawerViewController.h>
 
 @interface ARWelcomeViewController : CCBaseViewController
+@property (strong, nonatomic) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

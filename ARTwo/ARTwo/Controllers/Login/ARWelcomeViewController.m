@@ -17,7 +17,7 @@
 #import "ARProfileViewController.h"
 
 #import <MSDynamicsDrawerViewController.h>
-
+#import "ARMenuViewController.h"
 
 @interface ARWelcomeViewController ()
 
@@ -52,10 +52,16 @@
     ARLoginViewController *logInViewController = [[ARLoginViewController alloc] init];    
     // Present Log In View Controller
     logInViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    
+    
+    
+    
+    
+    
 
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:logInViewController] animated:YES completion:NULL];
   } else {
-//    [self setTabBarController];
     [self startHomeController];
   }
 }
@@ -84,27 +90,85 @@
 }
 
 -(void) startHomeController {
-    
-    UITabBarController *tab = [UITabBarController new];
-    CCBaseNavigationController *first = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
-    [first setTitle:@"Summary"];
-    CCBaseNavigationController *second =[[CCBaseNavigationController alloc] initWithRootViewController:[ARFriendListController new]];
-    [second setTitle:@"Friends"];
-    CCBaseNavigationController *third =[[CCBaseNavigationController alloc] initWithRootViewController:[ARSuggestFriendsViewController new]];
-    [third setTitle:@"SuggestFriends"];
-    CCBaseNavigationController *profile = [[CCBaseNavigationController alloc] initWithRootViewController:[ARProfileViewController new]];
-    [profile setTitle:@"Profile"];
-    CCBaseNavigationController *settings = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSettingsViewController new]];
-    [settings setTitle:@"Settings"];
-    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings,nil]];
-    
+  self.dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
+  self.dynamicsDrawerViewController.delegate = self;
+  [self.dynamicsDrawerViewController addStylersFromArray:@[[MSDynamicsDrawerScaleStyler styler], [MSDynamicsDrawerFadeStyler styler]] forDirection:MSDynamicsDrawerDirectionLeft];
+//  [self.dynamicsDrawerViewController addStylersFromArray:@[[MSDynamicsDrawerParallaxStyler styler]] forDirection:MSDynamicsDrawerDirectionRight];
+  
+  ARMenuViewController *menuViewController = [ARMenuViewController new];
+  menuViewController.dynamicsDrawerViewController = self.dynamicsDrawerViewController;
+  [self.dynamicsDrawerViewController setDrawerViewController:menuViewController forDirection:MSDynamicsDrawerDirectionLeft];
+  //the first page in menus to be shown.
+  [menuViewController transitionToViewController:MSPaneViewControllerTypeSummary];
 
-//    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
-//    dynamicsDrawerViewController.paneViewController = [ARSummaryTableViewController new];
-//  CCBaseNavigationController *navi = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
-    [self presentViewController:tab animated:YES completion:^{
-      //null
-    }];
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  self.window.rootViewController = self.dynamicsDrawerViewController;
+  [self.window makeKeyAndVisible];
+//  [self.window addSubview:self.windowBackground];
+//  [self.window sendSubviewToBack:self.windowBackground];
+  
+  
+  
+  
+  
+  
+//    UITabBarController *tab = [UITabBarController new];
+//    CCBaseNavigationController *first = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSummaryTableViewController new]];
+//    [first setTitle:@"Summary"];
+//    CCBaseNavigationController *second =[[CCBaseNavigationController alloc] initWithRootViewController:[ARFriendListController new]];
+//    [second setTitle:@"Friends"];
+//    CCBaseNavigationController *third =[[CCBaseNavigationController alloc] initWithRootViewController:[ARSuggestFriendsViewController new]];
+//    [third setTitle:@"SuggestFriends"];
+//    CCBaseNavigationController *profile = [[CCBaseNavigationController alloc] initWithRootViewController:[ARProfileViewController new]];
+//    [profile setTitle:@"Profile"];
+//    CCBaseNavigationController *settings = [[CCBaseNavigationController alloc] initWithRootViewController:[ARSettingsViewController new]];
+//    [settings setTitle:@"Settings"];
+//    [tab setViewControllers:[NSArray arrayWithObjects:first,second,third, profile, settings,nil]];
+//  
+//    [self presentViewController:tab animated:YES completion:^{
+//      //null
+//    }];
+}
+- (NSString *)descriptionForPaneState:(MSDynamicsDrawerPaneState)paneState
+{
+  switch (paneState) {
+    case MSDynamicsDrawerPaneStateOpen:
+      return @"MSDynamicsDrawerPaneStateOpen";
+    case MSDynamicsDrawerPaneStateClosed:
+      return @"MSDynamicsDrawerPaneStateClosed";
+    case MSDynamicsDrawerPaneStateOpenWide:
+      return @"MSDynamicsDrawerPaneStateOpenWide";
+    default:
+      return nil;
+  }
+}
+
+- (NSString *)descriptionForDirection:(MSDynamicsDrawerDirection)direction
+{
+  switch (direction) {
+    case MSDynamicsDrawerDirectionTop:
+      return @"MSDynamicsDrawerDirectionTop";
+    case MSDynamicsDrawerDirectionLeft:
+      return @"MSDynamicsDrawerDirectionLeft";
+    case MSDynamicsDrawerDirectionBottom:
+      return @"MSDynamicsDrawerDirectionBottom";
+    case MSDynamicsDrawerDirectionRight:
+      return @"MSDynamicsDrawerDirectionRight";
+    default:
+      return nil;
+  }
+}
+
+#pragma mark - MSDynamicsDrawerViewControllerDelegate
+
+- (void)dynamicsDrawerViewController:(MSDynamicsDrawerViewController *)drawerViewController mayUpdateToPaneState:(MSDynamicsDrawerPaneState)paneState forDirection:(MSDynamicsDrawerDirection)direction
+{
+  NSLog(@"Drawer view controller may update to state `%@` for direction `%@`", [self descriptionForPaneState:paneState], [self descriptionForDirection:direction]);
+}
+
+- (void)dynamicsDrawerViewController:(MSDynamicsDrawerViewController *)drawerViewController didUpdateToPaneState:(MSDynamicsDrawerPaneState)paneState forDirection:(MSDynamicsDrawerDirection)direction
+{
+  NSLog(@"Drawer view controller did update to state `%@` for direction `%@`", [self descriptionForPaneState:paneState], [self descriptionForDirection:direction]);
 }
 
 

@@ -57,6 +57,9 @@
 		3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE34A44194413F400E2EA7A /* CCBaseTabBarController.m */; };
 		4E11315F258F42E88BFC5199 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265543CE76694E509C09D1B4 /* libPods.a */; };
 		EC311EC01989FA1B008BC43E /* ARSuggestFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */; };
+		EC4A969C19AAE7160033B9EA /* ARMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A969B19AAE7160033B9EA /* ARMenuViewController.m */; };
+		EC4A96A119AAE9DE0033B9EA /* MSMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */; };
+		EC4A96A219AAE9DE0033B9EA /* MSMenuTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */; };
 		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
@@ -151,6 +154,12 @@
 		883C37948A3F43DBA14529B8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EC311EBE1989FA1B008BC43E /* ARSuggestFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSuggestFriendsViewController.h; sourceTree = "<group>"; };
 		EC311EBF1989FA1B008BC43E /* ARSuggestFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSuggestFriendsViewController.m; sourceTree = "<group>"; };
+		EC4A969A19AAE7160033B9EA /* ARMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMenuViewController.h; sourceTree = "<group>"; };
+		EC4A969B19AAE7160033B9EA /* ARMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMenuViewController.m; sourceTree = "<group>"; };
+		EC4A969D19AAE9DE0033B9EA /* MSMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMenuCell.h; sourceTree = "<group>"; };
+		EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuCell.m; sourceTree = "<group>"; };
+		EC4A969F19AAE9DE0033B9EA /* MSMenuTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMenuTableViewHeader.h; sourceTree = "<group>"; };
+		EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuTableViewHeader.m; sourceTree = "<group>"; };
 		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
 		ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
 		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
@@ -307,6 +316,7 @@
 				3CD001121985C77A00670CF0 /* ARFriendListController.m */,
 				3CD001131985C77A00670CF0 /* ARFriendListController.xib */,
 				3CCDA6B919710CFF0066D81D /* Login */,
+				EC4A969919AAE6CD0033B9EA /* Drawers */,
 				3C48B93E19440A66007AFA2C /* Base */,
 				3CE34A4019440EE000E2EA7A /* ARSummaryTableViewController.h */,
 				3CE34A4119440EE000E2EA7A /* ARSummaryTableViewController.m */,
@@ -325,6 +335,10 @@
 		3C48B93E19440A66007AFA2C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				EC4A969D19AAE9DE0033B9EA /* MSMenuCell.h */,
+				EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */,
+				EC4A969F19AAE9DE0033B9EA /* MSMenuTableViewHeader.h */,
+				EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */,
 				3C48B93F19440A66007AFA2C /* CCBaseNavigationController.h */,
 				3C48B94019440A66007AFA2C /* CCBaseNavigationController.m */,
 				3C48B94119440A66007AFA2C /* CCBaseTableViewController.h */,
@@ -434,6 +448,15 @@
 				3CD00118198625E700670CF0 /* BMInitialsPlaceholderView.m */,
 			);
 			path = BMInitialsPlaceholderView;
+			sourceTree = "<group>";
+		};
+		EC4A969919AAE6CD0033B9EA /* Drawers */ = {
+			isa = PBXGroup;
+			children = (
+				EC4A969A19AAE7160033B9EA /* ARMenuViewController.h */,
+				EC4A969B19AAE7160033B9EA /* ARMenuViewController.m */,
+			);
+			name = Drawers;
 			sourceTree = "<group>";
 		};
 		ECB77C1319738E8C0068A522 /* OpenAPI */ = {
@@ -600,6 +623,8 @@
 				3CCDA6C219710CFF0066D81D /* ARWelcomeViewController.m in Sources */,
 				3C39F0D7199709F700460E51 /* ARProfileHeaderView.m in Sources */,
 				3C39F0D4199706AE00460E51 /* ARProfileViewController.m in Sources */,
+				EC4A969C19AAE7160033B9EA /* ARMenuViewController.m in Sources */,
+				EC4A96A219AAE9DE0033B9EA /* MSMenuTableViewHeader.m in Sources */,
 				3CE34A45194413F400E2EA7A /* CCBaseTabBarController.m in Sources */,
 				3CCDA6C119710CFF0066D81D /* ARSignupViewController.m in Sources */,
 				3C48B94E19440A66007AFA2C /* CCBaseViewController.m in Sources */,
@@ -608,6 +633,7 @@
 				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,
 				3CCDA6C019710CFF0066D81D /* ARLoginViewController.m in Sources */,
+				EC4A96A119AAE9DE0033B9EA /* MSMenuCell.m in Sources */,
 				3C39F0DD19973ADF00460E51 /* ARUserTableViewCell.m in Sources */,
 				3C48B91519440A15007AFA2C /* main.m in Sources */,
 				ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */,
