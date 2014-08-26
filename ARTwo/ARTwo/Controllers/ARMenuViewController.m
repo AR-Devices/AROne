@@ -14,6 +14,7 @@
 #import "ARSuggestFriendsViewController.h"
 #import "ARSettingsViewController.h"
 #import "ARProfileViewController.h"
+#import "CCBaseNavigationController.h"
 
 NSString * const MSMenuCellReuseIdentifier = @"Drawer Cell";
 NSString * const MSDrawerHeaderReuseIdentifier = @"Drawer Header";
@@ -94,6 +95,7 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
 
 - (void)initialize
 {
+    [self.view setBackgroundColor:[UIColor grayColor]];
   self.paneViewControllerType = NSUIntegerMax;
   self.paneViewControllerTitles = @{
                                     @(MSPaneViewControllerTypeSummary) : @"Summary",
@@ -168,10 +170,10 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
   self.paneRevealLeftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Left Reveal Icon"] style:UIBarButtonItemStyleBordered target:self action:@selector(dynamicsDrawerRevealLeftBarButtonItemTapped:)];
   paneViewController.navigationItem.leftBarButtonItem = self.paneRevealLeftBarButtonItem;
   
-  self.paneRevealRightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Right Reveal Icon"] style:UIBarButtonItemStyleBordered target:self action:@selector(dynamicsDrawerRevealRightBarButtonItemTapped:)];
-  paneViewController.navigationItem.rightBarButtonItem = self.paneRevealRightBarButtonItem;
+//  self.paneRevealRightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Right Reveal Icon"] style:UIBarButtonItemStyleBordered target:self action:@selector(dynamicsDrawerRevealRightBarButtonItemTapped:)];
+//  paneViewController.navigationItem.rightBarButtonItem = self.paneRevealRightBarButtonItem;
   
-  UINavigationController *paneNavigationViewController = [[UINavigationController alloc] initWithRootViewController:paneViewController];
+  CCBaseNavigationController *paneNavigationViewController = [[CCBaseNavigationController alloc] initWithRootViewController:paneViewController];
   [self.dynamicsDrawerViewController setPaneViewController:paneNavigationViewController animated:animateTransition completion:nil];
   
   self.paneViewControllerType = paneViewControllerType;

@@ -11,6 +11,7 @@
 #import "ARUserTableViewCell.h"
 
 
+
 const CGFloat kViewControllerCellHeight = 50.0;
 
 @interface ARFriendListController ()

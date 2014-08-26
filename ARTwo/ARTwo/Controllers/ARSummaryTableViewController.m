@@ -113,7 +113,7 @@
 
 - (void) NameSearchView
 {
-  self.search_name = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,30)];
+  self.search_name = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,40)];
 //  self.search_name.delegate = self;
   [self.search_name setPlaceholder:@"Name"];
 }
