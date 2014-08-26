@@ -370,16 +370,8 @@
 		3C48B94919440A66007AFA2C /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				3C48B94A19440A66007AFA2C /* Images */,
 			);
 			path = Resouces;
-			sourceTree = "<group>";
-		};
-		3C48B94A19440A66007AFA2C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		3C48B94B19440A66007AFA2C /* Views */ = {

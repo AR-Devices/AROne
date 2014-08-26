@@ -10,4 +10,6 @@
 
 @interface ARProfileViewController : UITableViewController
 
+@property (nonatomic, strong) PFUser *user;
+
 @end

@@ -33,6 +33,10 @@
     self.title = @"User Profile";
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSegment:)];
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshSegments:)];
+    if (self.user == NULL) {
+        NSLog(@"user is null!?");
+        self.user = [PFUser currentUser];
+    }
     [self setupView];
 
 }
@@ -55,7 +59,8 @@
 //    UINib *nib = [UINib nibWithNibName:@"ARProfileHeaderView" bundle:nil];
 //    self.headerView = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
     self.headerView = [[ARProfileHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 250)];
-    self.headerView.userName.text = [[PFUser currentUser] objectForKey:@"name"];
+//    self.headerView.userName.text = [[PFUser currentUser] objectForKey:@"name"];
+    self.headerView.userName.text = [self.user objectForKey:@"name"];
     [self.headerView.userIcon setImageWithString:self.headerView.userName.text];
 //    self.headerView.control.delegate = self;
     self.headerView.control.selectedSegmentIndex = 0;
@@ -96,21 +101,24 @@
     PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Activity"];
     
     //following: user who are following me,
-    [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+//    [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [followedQuery whereKey:@"fromUser" equalTo:self.user];
     [followingQuery includeKey:@"fromUser"];
     [followingQuery includeKey:@"toUser"];
     [followingQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.following = objects;
         NSLog(@"following %@", self.following);
         //followed;
-        [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+//        [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+        [followedQuery whereKey:@"toUser" equalTo:self.user];
         [followedQuery includeKey:@"fromUser"];
         [followedQuery includeKey:@"toUser"];
         [followedQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             self.follower = objects;
             NSLog(@"followed %@", self.follower);
             //friends:
-            [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+//            [followedQuery whereKey:@"toUser" equalTo:[PFUser currentUser]];
+            [followedQuery whereKey:@"toUser" equalTo:self.user];
             [friendsQuery whereKey:@"toUser" matchesKey:@"fromUser" inQuery:followedQuery];
             [friendsQuery includeKey:@"fromUser"];
             [friendsQuery includeKey:@"toUser"];
@@ -178,6 +186,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ARProfileViewController *profile = [ARProfileViewController new];
+    if(self.headerView.control.selectedSegmentIndex == 0){
+        profile.user = (PFUser*)[[self.following objectAtIndex:indexPath.row] objectForKey:@"toUser"];
+    }else if(self.headerView.control.selectedSegmentIndex == 1){
+        profile.user = (PFUser*)[[self.follower objectAtIndex:indexPath.row] objectForKey:@"fromUser"];
+    }else if(self.headerView.control.selectedSegmentIndex == 2){
+        profile.user = (PFUser*)[[self.friends objectAtIndex:indexPath.row] objectForKey:@"toUser"];
+    }
+    [self.navigationController pushViewController:profile animated:YES];
 
 }
 
