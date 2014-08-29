@@ -18,3 +18,6 @@
 #define kFriend     2
 
 #define kViewControllerCellIdentifier @"ARUserTableViewCell"
+
+#define kViewControllerCellHeight 50.0f
+

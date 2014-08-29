@@ -7,6 +7,8 @@
 //
 
 #import "ARSuggestFriendsViewController.h"
+#import "BMInitialsPlaceholderView.h"
+#import "ARUserTableViewCell.h"
 
 
 
@@ -83,36 +85,54 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-  PFUser *user = [self.userArray objectAtIndex:indexPath.row];
-  NSString *person = [user objectForKey:@"name"];
-  UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
-  UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 55, 25)];
-  [follow setBackgroundColor:[UIColor blackColor]];
-  [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
-  [follow setTag: indexPath.row];
-    [follow.layer setCornerRadius:4.0f];
-  BOOL found_person = false;
+    ARUserTableViewCell *cell = (ARUserTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kViewControllerCellIdentifier];
 
-  for (int i=0; i < [self.activityArray count];i++){
-    if([[[[self.activityArray objectAtIndex:i] objectForKey:@"toUser"] objectForKey:@"name"] isEqualToString:person]){
-      found_person = true;
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:kViewControllerCellIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        //        ARUserTableViewCell *cell = [[ARUserTableViewCell alloc] init];
+        NSLog(@"row is %ld", (long)indexPath.row);
+        PFUser *user = [self.userArray objectAtIndex:indexPath.row];
+        NSString *person = [user objectForKey:@"name"];
+        NSLog(@"person is %@", person);
+        UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
+        CGFloat placeholderHW = kViewControllerCellHeight - 15;
+        BMInitialsPlaceholderView *placeholder = [[BMInitialsPlaceholderView alloc] initWithDiameter:placeholderHW];
+        placeholder.font = font;
+        placeholder.initials = [self initialStringForPersonString:person];
+        placeholder.circleColor = [self circleColorForIndexPath:indexPath];
+        
+        cell.userName.font = font;
+        cell.userName.text = person;
+        cell.userIcon.font = font;
+        cell.userIcon.initials = [self initialStringForPersonString:person];
+        cell.userIcon.circleColor = [self circleColorForIndexPath:indexPath];
+        //        cell.accessoryView = placeholder;
+        
+        BOOL found_person = false;
+        
+        for (int i=0; i < [self.activityArray count];i++){
+            if([[[[self.activityArray objectAtIndex:i] objectForKey:@"toUser"] objectForKey:@"name"] isEqualToString:person]){
+                found_person = true;
+            }
+        }
+        UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 55, 25)];
+        [follow setBackgroundColor:[UIColor blackColor]];
+        [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
+        [follow setTag: indexPath.row];
+        [follow.layer setCornerRadius:4.0f];
+        
+        if(!found_person){
+            NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Follow" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor orangeColor]}];
+            [follow setAttributedTitle:string forState:UIControlStateNormal];
+            [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        }else{
+            NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Friends" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor greenColor]}];
+            [follow setAttributedTitle:string forState:UIControlStateNormal];
+            [follow addTarget:self action:@selector(unfollowButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        cell.accessoryView = follow;
     }
-  }
-  if(!found_person){
-      NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Follow" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor orangeColor]}];
-      [follow setAttributedTitle:string forState:UIControlStateNormal];
-    [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-  }else{
-      NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Friends" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor greenColor]}];
-      [follow setAttributedTitle:string forState:UIControlStateNormal];
-    [follow addTarget:self action:@selector(unfollowButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-  }
-
-  cell.textLabel.font = font;
-  cell.textLabel.text = person;
-  cell.accessoryView = follow;
-  
   return cell;
 }
 
@@ -226,6 +246,23 @@
     [self.tableView reloadData];
 
   }];
+}
+
+- (UIColor *)circleColorForIndexPath:(NSIndexPath *)indexPath {
+    return [UIColor colorWithHue:arc4random() % 256 / 256.0 saturation:0.7 brightness:0.8 alpha:1.0];
+}
+
+- (NSString *)initialStringForPersonString:(NSString *)personString {
+    NSArray *comps = [personString componentsSeparatedByString:@" "];
+    if ([comps count] >= 2) {
+        NSString *firstName = comps[0];
+        NSString *lastName = comps[1];
+        return [NSString stringWithFormat:@"%@%@", [firstName substringToIndex:1], [lastName substringToIndex:1]];
+    } else if ([comps count]) {
+        NSString *name = comps[0];
+        return [name substringToIndex:1];
+    }
+    return @"Unknown";
 }
 
 @end
