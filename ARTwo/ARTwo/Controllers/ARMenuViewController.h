@@ -11,7 +11,6 @@
 
 typedef NS_ENUM(NSUInteger, MSPaneViewControllerType) {
   MSPaneViewControllerTypeSummary,
-  MSPaneViewControllerTypeFriendAddAccept,
   MSPaneViewControllerTypeSuggestFriends,
   MSPaneViewControllerTypeProfile,
   MSPaneViewControllerTypeSetting,

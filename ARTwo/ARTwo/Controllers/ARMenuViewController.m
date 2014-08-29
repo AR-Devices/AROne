@@ -99,7 +99,6 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
   self.paneViewControllerType = NSUIntegerMax;
   self.paneViewControllerTitles = @{
                                     @(MSPaneViewControllerTypeSummary) : @"Summary",
-                                    @(MSPaneViewControllerTypeFriendAddAccept) : @"FriendAddAccept",
                                     @(MSPaneViewControllerTypeSuggestFriends) : @"SuggestFriends",
                                     @(MSPaneViewControllerTypeSetting) : @"Setting",
                                     @(MSPaneViewControllerTypeProfile) : @"Profile"
@@ -107,7 +106,6 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
 #if !defined(STORYBOARD)
   self.paneViewControllerClasses = @{
                                      @(MSPaneViewControllerTypeSummary) : [ARSummaryTableViewController class],
-                                     @(MSPaneViewControllerTypeFriendAddAccept) : [ARFriendAddAcceptViewController class],
                                      @(MSPaneViewControllerTypeSuggestFriends) : [ARSuggestFriendsViewController class],
                                      @(MSPaneViewControllerTypeSetting) : [ARSettingsViewController class],
                                      @(MSPaneViewControllerTypeProfile) : [ARProfileViewController class]
@@ -115,7 +113,6 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
 #else
   self.paneViewControllerIdentifiers = @{
                                          @(MSPaneViewControllerTypeSummary) : @"Summary",
-                                         @(MSPaneViewControllerTypeFriendAddAccept) : @"FriendAddAccept",
                                          @(MSPaneViewControllerTypeSuggestFriends) : @"SuggestFriends",
                                          @(MSPaneViewControllerTypeSetting) : @"Setting",
                                          @(MSPaneViewControllerTypeProfile) : @"Profile"
@@ -129,7 +126,7 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
                          };
   
   self.tableViewSectionBreaks = @[
-                                  @(MSPaneViewControllerTypeFriendAddAccept),
+                                  @(MSPaneViewControllerTypeSuggestFriends),
                                   @(MSPaneViewControllerTypeProfile),
                                   @(MSPaneViewControllerTypeSetting),
                                   @(MSPaneViewControllerTypeCount)
