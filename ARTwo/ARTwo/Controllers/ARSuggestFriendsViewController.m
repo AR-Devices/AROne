@@ -87,10 +87,11 @@
   PFUser *user = [self.userArray objectAtIndex:indexPath.row];
   NSString *person = [user objectForKey:@"name"];
   UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
-  UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
+  UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 55, 25)];
   [follow setBackgroundColor:[UIColor blackColor]];
   [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
   [follow setTag: indexPath.row];
+    [follow.layer setCornerRadius:4.0f];
   BOOL found_person = false;
 
   for (int i=0; i < [self.activityArray count];i++){
@@ -99,12 +100,12 @@
     }
   }
   if(!found_person){
-    [follow setTitle:@"Follow" forState:UIControlStateNormal];
-    [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
+      NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Follow" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor orangeColor]}];
+      [follow setAttributedTitle:string forState:UIControlStateNormal];
     [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
   }else{
-    [follow setTitle:@"Friends" forState:UIControlStateNormal];
-    [follow setTitleColor:[UIColor greenColor] forState: UIControlStateNormal];
+      NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Friends" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor greenColor]}];
+      [follow setAttributedTitle:string forState:UIControlStateNormal];
     [follow addTarget:self action:@selector(unfollowButtonAction:) forControlEvents:UIControlEventTouchUpInside];
   }
 

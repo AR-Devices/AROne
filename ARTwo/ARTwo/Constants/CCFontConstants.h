@@ -26,5 +26,8 @@
 
 #define kJBFontTooltipText [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]
 
+#define kARFontFollowButton [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0]
+
+
 
 
