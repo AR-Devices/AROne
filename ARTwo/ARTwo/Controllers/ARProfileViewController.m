@@ -33,6 +33,7 @@
     self.title = @"User Profile";
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSegment:)];
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshSegments:)];
+
     if (self.user == NULL) {
         NSLog(@"user is null!?");
         self.user = [PFUser currentUser];
@@ -96,13 +97,15 @@
 
 - (void)reloadView {
     NSLog(@"reload view here");
+    NSLog(@"jerry: user is %@", self.user);
+
     PFQuery *followingQuery = [PFQuery queryWithClassName:@"Activity"];
     PFQuery *followedQuery = [PFQuery queryWithClassName:@"Activity"];
     PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Activity"];
     
     //following: user who are following me,
 //    [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
-    [followedQuery whereKey:@"fromUser" equalTo:self.user];
+    [followingQuery whereKey:@"fromUser" equalTo:self.user];
     [followingQuery includeKey:@"fromUser"];
     [followingQuery includeKey:@"toUser"];
     [followingQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
