@@ -27,6 +27,7 @@
 @end
 
 @implementation ARWelcomeViewController
+@synthesize locationManager = _locationManager;
 
 
 //Login stuff
@@ -45,7 +46,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-  
+  [self.locationManager startUpdatingLocation];
+
   // Check if user is logged in
   if (![PFUser currentUser]) {
     // Customize the Log In View Controller
@@ -175,5 +177,60 @@
   NSLog(@"Drawer view controller did update to state `%@` for direction `%@`", [self descriptionForPaneState:paneState], [self descriptionForDirection:direction]);
 }
 
+//-----------------------------------GEO Location
 
+/**
+ Conditionally enable the Search/Add buttons:
+ If the location manager is generating updates, then enable the buttons;
+ If the location manager is failing, then disable the buttons.
+ */
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+  NSLog(@"JERRY: didUPdateTOLocation");
+  [self insertCurrentLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+}
+
+/**
+ Return a location manager -- create one if necessary.
+ */
+- (CLLocationManager *)locationManager {
+	
+  if (_locationManager != nil) {
+		return _locationManager;
+	}
+	
+	_locationManager = [[CLLocationManager alloc] init];
+  _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+  _locationManager.delegate = self;
+  _locationManager.purpose = @"Your current location is used to demonstrate PFGeoPoint and Geo Queries.";
+	
+	return _locationManager;
+}
+
+- (void)insertCurrentLocation{
+	// If it's not possible to get a location, then return.
+	CLLocation *location = self.locationManager.location;
+	if (!location) {
+		return;
+	}
+  
+	// Configure the new event with information from the location.
+	CLLocationCoordinate2D coordinate = [location coordinate];
+  PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+//  PFObject *object = [PFObject objectWithClassName:@"User"];
+  PFUser * object = [PFUser currentUser];
+  [object setObject:geoPoint forKey:@"geolocation"];
+  
+  [object saveEventually:^(BOOL succeeded, NSError *error) {
+    if (succeeded) {
+      NSLog(@"geolocation uploaded correctly");
+      [self.locationManager stopUpdatingLocation];
+    }
+  }];
+}
 @end

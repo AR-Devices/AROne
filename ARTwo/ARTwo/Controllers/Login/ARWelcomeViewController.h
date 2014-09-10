@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "CCBaseViewController.h"
 #import <MSDynamicsDrawerViewController.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ARWelcomeViewController : CCBaseViewController
+@interface ARWelcomeViewController : CCBaseViewController <CLLocationManagerDelegate>
 @property (strong, nonatomic) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end
