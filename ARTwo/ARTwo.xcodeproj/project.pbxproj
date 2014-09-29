@@ -62,6 +62,7 @@
 		EC4A96A219AAE9DE0033B9EA /* MSMenuTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */; };
 		EC5B47D219D9289200419165 /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B47D119D9289200419165 /* ARMapViewController.m */; };
 		EC5B47D519D9291B00419165 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B47D419D9291B00419165 /* GeoPointAnnotation.m */; };
+		EC5B47D719D9373C00419165 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5B47D619D9373C00419165 /* MapKit.framework */; };
 		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
@@ -166,6 +167,7 @@
 		EC5B47D119D9289200419165 /* ARMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
 		EC5B47D319D9291B00419165 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
 		EC5B47D419D9291B00419165 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
+		EC5B47D619D9373C00419165 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
 		ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
 		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5B47D719D9373C00419165 /* MapKit.framework in Frameworks */,
 				3CCDA6DC1971111C0066D81D /* SystemConfiguration.framework in Frameworks */,
 				3CCDA6DA197111140066D81D /* StoreKit.framework in Frameworks */,
 				3CCDA6D81971110D0066D81D /* Security.framework in Frameworks */,
@@ -234,6 +237,7 @@
 		3C48B90719440A15007AFA2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC5B47D619D9373C00419165 /* MapKit.framework */,
 				3CDAA36119711A9B001FECEE /* FacebookSDK.framework */,
 				3CCDA6DB1971111C0066D81D /* SystemConfiguration.framework */,
 				3CCDA6D9197111140066D81D /* StoreKit.framework */,
