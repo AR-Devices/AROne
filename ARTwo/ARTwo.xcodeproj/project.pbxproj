@@ -60,6 +60,8 @@
 		EC4A969C19AAE7160033B9EA /* ARMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A969B19AAE7160033B9EA /* ARMenuViewController.m */; };
 		EC4A96A119AAE9DE0033B9EA /* MSMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */; };
 		EC4A96A219AAE9DE0033B9EA /* MSMenuTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */; };
+		EC5B47D219D9289200419165 /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B47D119D9289200419165 /* ARMapViewController.m */; };
+		EC5B47D519D9291B00419165 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B47D419D9291B00419165 /* GeoPointAnnotation.m */; };
 		ECB30E0A1980D95700A2D76D /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */; };
 		ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB77C1619738E9D0068A522 /* MPGTextField.m */; };
 /* End PBXBuildFile section */
@@ -160,6 +162,10 @@
 		EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuCell.m; sourceTree = "<group>"; };
 		EC4A969F19AAE9DE0033B9EA /* MSMenuTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMenuTableViewHeader.h; sourceTree = "<group>"; };
 		EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuTableViewHeader.m; sourceTree = "<group>"; };
+		EC5B47D019D9289200419165 /* ARMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
+		EC5B47D119D9289200419165 /* ARMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
+		EC5B47D319D9291B00419165 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
+		EC5B47D419D9291B00419165 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
 		ECB30E081980D95700A2D76D /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
 		ECB30E091980D95700A2D76D /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
 		ECB77C1519738E9D0068A522 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
@@ -328,6 +334,10 @@
 				3C06EC73198EE50F00512B3F /* ARSettingsViewController.m */,
 				3C39F0D2199706AE00460E51 /* ARProfileViewController.h */,
 				3C39F0D3199706AE00460E51 /* ARProfileViewController.m */,
+				EC5B47D019D9289200419165 /* ARMapViewController.h */,
+				EC5B47D119D9289200419165 /* ARMapViewController.m */,
+				EC5B47D319D9291B00419165 /* GeoPointAnnotation.h */,
+				EC5B47D419D9291B00419165 /* GeoPointAnnotation.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -607,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5B47D219D9289200419165 /* ARMapViewController.m in Sources */,
 				ECB77C1719738E9D0068A522 /* MPGTextField.m in Sources */,
 				3C9CEA0C19A48FAF002C3BC7 /* ARUserListCell.m in Sources */,
 				3C48B94F19440A66007AFA2C /* ARAppDelegate.m in Sources */,
@@ -621,6 +632,7 @@
 				3CCDA6C119710CFF0066D81D /* ARSignupViewController.m in Sources */,
 				3C48B94E19440A66007AFA2C /* CCBaseViewController.m in Sources */,
 				3C48B95C19440DA7007AFA2C /* JBChartView.m in Sources */,
+				EC5B47D519D9291B00419165 /* GeoPointAnnotation.m in Sources */,
 				3C06EC74198EE50F00512B3F /* ARSettingsViewController.m in Sources */,
 				3C48B95B19440DA7007AFA2C /* JBBarChartView.m in Sources */,
 				3C48B95D19440DA7007AFA2C /* JBLineChartView.m in Sources */,

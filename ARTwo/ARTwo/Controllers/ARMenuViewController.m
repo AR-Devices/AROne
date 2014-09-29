@@ -13,6 +13,7 @@
 #import "ARFriendAddAcceptViewController.h"
 #import "ARSuggestFriendsViewController.h"
 #import "ARSettingsViewController.h"
+#import "ARMapViewController.h"
 #import "ARProfileViewController.h"
 #import "CCBaseNavigationController.h"
 
@@ -101,6 +102,7 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
                                     @(MSPaneViewControllerTypeSummary) : @"Summary",
                                     @(MSPaneViewControllerTypeSuggestFriends) : @"SuggestFriends",
                                     @(MSPaneViewControllerTypeSetting) : @"Setting",
+                                    @(MSPaneViewControllerTypeMap) : @"My Location",
                                     @(MSPaneViewControllerTypeProfile) : @"Profile"
                                     };
 #if !defined(STORYBOARD)
@@ -108,6 +110,7 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
                                      @(MSPaneViewControllerTypeSummary) : [ARSummaryTableViewController class],
                                      @(MSPaneViewControllerTypeSuggestFriends) : [ARSuggestFriendsViewController class],
                                      @(MSPaneViewControllerTypeSetting) : [ARSettingsViewController class],
+                                     @(MSPaneViewControllerTypeMap): [ARMapViewController class],
                                      @(MSPaneViewControllerTypeProfile) : [ARProfileViewController class]
                                      };
 #else
@@ -115,7 +118,8 @@ typedef NS_ENUM(NSUInteger, MSMenuViewControllerTableViewSectionType) {
                                          @(MSPaneViewControllerTypeSummary) : @"Summary",
                                          @(MSPaneViewControllerTypeSuggestFriends) : @"SuggestFriends",
                                          @(MSPaneViewControllerTypeSetting) : @"Setting",
-                                         @(MSPaneViewControllerTypeProfile) : @"Profile"
+                                         @(MSPaneViewControllerTypeMap) : @"My Location",
+                                         @(MSPaneViewControllerTypeProfile) : @"Profile",
                                          };
 #endif
   self.sectionTitles = @{
