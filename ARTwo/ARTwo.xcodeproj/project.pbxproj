@@ -349,10 +349,6 @@
 		3C48B93E19440A66007AFA2C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EC4A969D19AAE9DE0033B9EA /* MSMenuCell.h */,
-				EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */,
-				EC4A969F19AAE9DE0033B9EA /* MSMenuTableViewHeader.h */,
-				EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */,
 				3C48B93F19440A66007AFA2C /* CCBaseNavigationController.h */,
 				3C48B94019440A66007AFA2C /* CCBaseNavigationController.m */,
 				3C48B94119440A66007AFA2C /* CCBaseTableViewController.h */,
@@ -459,6 +455,10 @@
 		EC4A969919AAE6CD0033B9EA /* Drawers */ = {
 			isa = PBXGroup;
 			children = (
+				EC4A969D19AAE9DE0033B9EA /* MSMenuCell.h */,
+				EC4A969E19AAE9DE0033B9EA /* MSMenuCell.m */,
+				EC4A969F19AAE9DE0033B9EA /* MSMenuTableViewHeader.h */,
+				EC4A96A019AAE9DE0033B9EA /* MSMenuTableViewHeader.m */,
 				EC4A969A19AAE7160033B9EA /* ARMenuViewController.h */,
 				EC4A969B19AAE7160033B9EA /* ARMenuViewController.m */,
 			);
