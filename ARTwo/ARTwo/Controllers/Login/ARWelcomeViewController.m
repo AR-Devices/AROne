@@ -53,15 +53,7 @@
     // Customize the Log In View Controller
     ARLoginViewController *logInViewController = [[ARLoginViewController alloc] init];    
     // Present Log In View Controller
-    logInViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-    
-    
-    
-    
-    
-    
-
+      logInViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:logInViewController] animated:YES completion:NULL];
   } else {
     [self startHomeController];
@@ -92,23 +84,17 @@
 }
 
 -(void) startHomeController {
-  self.dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
+    MSDynamicsDrawerViewController *dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
 //  self.dynamicsDrawerViewController.delegate = self;
-  [self.dynamicsDrawerViewController addStylersFromArray:@[[MSDynamicsDrawerScaleStyler styler], [MSDynamicsDrawerFadeStyler styler]] forDirection:MSDynamicsDrawerDirectionLeft];
+  [dynamicsDrawerViewController addStylersFromArray:@[[MSDynamicsDrawerScaleStyler styler], [MSDynamicsDrawerFadeStyler styler]] forDirection:MSDynamicsDrawerDirectionLeft];
 //  [self.dynamicsDrawerViewController addStylersFromArray:@[[MSDynamicsDrawerParallaxStyler styler]] forDirection:MSDynamicsDrawerDirectionRight];
   
   ARMenuViewController *menuViewController = [ARMenuViewController new];
-  menuViewController.dynamicsDrawerViewController = self.dynamicsDrawerViewController;
-  [self.dynamicsDrawerViewController setDrawerViewController:menuViewController forDirection:MSDynamicsDrawerDirectionLeft];
+  menuViewController.dynamicsDrawerViewController = dynamicsDrawerViewController;
+  [dynamicsDrawerViewController setDrawerViewController:menuViewController forDirection:MSDynamicsDrawerDirectionLeft];
   //the first page in menus to be shown.
   [menuViewController transitionToViewController:MSPaneViewControllerTypeSummary];
-
-//  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//  self.window.rootViewController = self.dynamicsDrawerViewController;
-//  [self.window makeKeyAndVisible];
-//  [self.window addSubview:self.windowBackground];
-//  [self.window sendSubviewToBack:self.windowBackground];
-    [self presentViewController:self.dynamicsDrawerViewController animated:YES completion:^{
+    [self presentViewController:dynamicsDrawerViewController animated:YES completion:^{
         //null
     }];
 

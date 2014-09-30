@@ -60,9 +60,10 @@
         //logout
         [self logOut];
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
+#pragma mark - Private Method
 - (void)logOut {
     // clear cache
     //    [[PAPCache sharedCache] clear];
