@@ -83,7 +83,7 @@
   
   UIButton *add_friend = [[UIButton alloc] initWithFrame:CGRectMake(10,100, 100, 30)];
   [add_friend setTitle:@"Add Friend" forState:UIControlStateNormal];
-  [add_friend setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+  [add_friend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   add_friend.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:13.0];
   add_friend.backgroundColor = [UIColor blackColor];
 //  [add_friend addTarget:self action:@selector(:) forControlEvents:UIControlEventTouchUpInside];
@@ -92,7 +92,7 @@
   
   UIButton *accept_friend = [[UIButton alloc] initWithFrame:CGRectMake(210,100, 100, 30)];
   [accept_friend setTitle:@"Accept Friend" forState:UIControlStateNormal];
-  [accept_friend setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+  [accept_friend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   accept_friend.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:13.0];
   accept_friend.backgroundColor = [UIColor blackColor];
   //  [add_friend addTarget:self action:@selector(:) forControlEvents:UIControlEventTouchUpInside];

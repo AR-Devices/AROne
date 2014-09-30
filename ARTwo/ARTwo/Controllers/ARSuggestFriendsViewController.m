@@ -118,12 +118,12 @@
         }
         UIButton * follow = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 55, 25)];
         [follow setBackgroundColor:[UIColor blackColor]];
-        [follow setTitleColor:[UIColor orangeColor] forState: UIControlStateNormal];
+        [follow setTitleColor:[UIColor whiteColor] forState: UIControlStateNormal];
         [follow setTag: indexPath.row];
         [follow.layer setCornerRadius:4.0f];
         
         if(!found_person){
-            NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Follow" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor orangeColor]}];
+            NSAttributedString *string = [[NSAttributedString alloc]initWithString:@"Follow" attributes:@{NSFontAttributeName: kARFontFollowButton, NSForegroundColorAttributeName: [UIColor whiteColor]}];
             [follow setAttributedTitle:string forState:UIControlStateNormal];
             [follow addTarget:self action:@selector(followButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         }else{
