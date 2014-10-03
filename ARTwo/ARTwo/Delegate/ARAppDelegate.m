@@ -69,10 +69,10 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //  [Crashlytics startWithAPIKey:@"0f2cfca3fad86d0f8c57572059f84da3f7c77075"];
   // Register for push notifications
   
-  [application registerForRemoteNotificationTypes:
-   UIRemoteNotificationTypeBadge |
-   UIRemoteNotificationTypeAlert |
-   UIRemoteNotificationTypeSound];
+//  [application registerForRemoteNotificationTypes:
+//   UIRemoteNotificationTypeBadge |
+//   UIRemoteNotificationTypeAlert |
+//   UIRemoteNotificationTypeSound];
   
   [PFFacebookUtils initializeFacebook];
   //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
@@ -83,7 +83,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   //  [self setTabBarController];
   
   //  [self createSummaryClass];
-  
+    
   [self.window makeKeyAndVisible];
   return YES;
 }

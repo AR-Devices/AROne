@@ -96,6 +96,6 @@ CLLocationManager *locationManager;
   point.title = @"Where am I?";
   point.subtitle = @"I'm here!!!";
   
-//  [self.mapView addAnnotation:point];
+  [self.mapView addAnnotation:point];
 }
 @end

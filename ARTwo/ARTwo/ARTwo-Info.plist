@@ -6,6 +6,11 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>${PRODUCT_NAME}</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ARTwo would like to use your location.
+</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>ARTwo would like to use your location.</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>

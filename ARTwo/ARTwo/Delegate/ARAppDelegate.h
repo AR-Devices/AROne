@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ARAppDelegate : UIResponder <UIApplicationDelegate>
+@interface ARAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

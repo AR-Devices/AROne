@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ARMapViewController : UIViewController <MKMapViewDelegate>
-@property (nonatomic, strong) PFObject *detailItem;
-@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@interface ARMapViewController : UIViewController
+@property (nonatomic, strong) MKMapView *mapView;
 @end
