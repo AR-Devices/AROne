@@ -8,7 +8,6 @@
 
 #import "ARLoginViewController.h"
 #import "ARSignupViewController.h"
-#import "MBProgressHUD.h"
 
 @interface ARLoginViewController ()<UITextFieldDelegate>
 
@@ -208,7 +207,7 @@
 
 - (void) fbButtonTouchHandler: (id) sender
 {
-  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
   // The permissions requested from the user
   NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
 
@@ -239,7 +238,7 @@
   NSLog(@"showHomeView!");
   [self dismissViewControllerAnimated:YES completion:^{
     //null
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+      [SVProgressHUD dismiss];
   }];
 }
 

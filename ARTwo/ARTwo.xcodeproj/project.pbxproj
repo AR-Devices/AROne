@@ -199,6 +199,39 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>3C42295619DE1CAF00AF72B5</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ARUtility.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C42295719DE1CAF00AF72B5</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ARUtility.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C42295819DE1CAF00AF72B5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3C42295719DE1CAF00AF72B5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>3C48B8FC19440A14007AFA2C</key>
 		<dict>
 			<key>children</key>
@@ -311,6 +344,7 @@
 				<string>EC4A96A119AAE9DE0033B9EA</string>
 				<string>3C39F0DD19973ADF00460E51</string>
 				<string>3C48B91519440A15007AFA2C</string>
+				<string>3C42295819DE1CAF00AF72B5</string>
 				<string>ECB30E0A1980D95700A2D76D</string>
 				<string>EC311EC01989FA1B008BC43E</string>
 				<string>3C48B94D19440A66007AFA2C</string>
@@ -1198,6 +1232,8 @@
 				<string>3C48B93A19440A66007AFA2C</string>
 				<string>3C48B93B19440A66007AFA2C</string>
 				<string>3C48B93C19440A66007AFA2C</string>
+				<string>3C42295619DE1CAF00AF72B5</string>
+				<string>3C42295719DE1CAF00AF72B5</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>

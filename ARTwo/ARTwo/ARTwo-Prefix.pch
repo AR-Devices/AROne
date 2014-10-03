@@ -18,3 +18,4 @@
 #import "CCConstants.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <SVProgressHUD/SVProgressHUD.h>
