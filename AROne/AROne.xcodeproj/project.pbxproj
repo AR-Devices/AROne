@@ -94,6 +94,22 @@
 		3C6EA85B180E612C0043216D /* graph_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA858180E612C0043216D /* graph_bg2@2x.png */; };
 		3C6EA85C180E612C0043216D /* graph_bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EA858180E612C0043216D /* graph_bg2@2x.png */; };
 		3C7088C5194ABB1E0079EF09 /* ARTrailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7088C4194ABB1E0079EF09 /* ARTrailPoint.m */; };
+		3C7D63B919E90D55006644F5 /* Brook Alo 03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AA19E90D55006644F5 /* Brook Alo 03.png */; };
+		3C7D63BA19E90D55006644F5 /* Carlito Baker 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AB19E90D55006644F5 /* Carlito Baker 01.png */; };
+		3C7D63BB19E90D55006644F5 /* Carlos Mugisha 07.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AC19E90D55006644F5 /* Carlos Mugisha 07.png */; };
+		3C7D63BC19E90D55006644F5 /* Daniel Coleman 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AD19E90D55006644F5 /* Daniel Coleman 10.png */; };
+		3C7D63BD19E90D55006644F5 /* Json Hirshberg 09.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AE19E90D55006644F5 /* Json Hirshberg 09.png */; };
+		3C7D63BE19E90D55006644F5 /* Judith Campbell 04.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63AF19E90D55006644F5 /* Judith Campbell 04.png */; };
+		3C7D63BF19E90D55006644F5 /* Katherine Castelao 08.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B019E90D55006644F5 /* Katherine Castelao 08.png */; };
+		3C7D63C019E90D55006644F5 /* profile1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B119E90D55006644F5 /* profile1.png */; };
+		3C7D63C119E90D55006644F5 /* profile13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B219E90D55006644F5 /* profile13.png */; };
+		3C7D63C219E90D55006644F5 /* profile15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B319E90D55006644F5 /* profile15.png */; };
+		3C7D63C319E90D55006644F5 /* profile3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B419E90D55006644F5 /* profile3.png */; };
+		3C7D63C419E90D55006644F5 /* profile6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B519E90D55006644F5 /* profile6.png */; };
+		3C7D63C519E90D55006644F5 /* profile7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B619E90D55006644F5 /* profile7.png */; };
+		3C7D63C619E90D55006644F5 /* profile9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B719E90D55006644F5 /* profile9.png */; };
+		3C7D63C719E90D55006644F5 /* Troy Banham 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B819E90D55006644F5 /* Troy Banham 02.png */; };
+		3C7D63CC19E91633006644F5 /* ARUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D63CB19E91633006644F5 /* ARUtility.m */; };
 		3C92D3EF18AB51D10051BE54 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3ED18AB51D10051BE54 /* crown.png */; };
 		3C92D3F018AB51D10051BE54 /* crown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C92D3EE18AB51D10051BE54 /* crown@2x.png */; };
 		3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40C18ACA84E0051BE54 /* ARDevice.m */; };
@@ -422,6 +438,23 @@
 		3C6EA858180E612C0043216D /* graph_bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_bg2@2x.png"; sourceTree = "<group>"; };
 		3C7088C3194ABB1E0079EF09 /* ARTrailPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTrailPoint.h; sourceTree = "<group>"; };
 		3C7088C4194ABB1E0079EF09 /* ARTrailPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTrailPoint.m; sourceTree = "<group>"; };
+		3C7D63AA19E90D55006644F5 /* Brook Alo 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brook Alo 03.png"; sourceTree = "<group>"; };
+		3C7D63AB19E90D55006644F5 /* Carlito Baker 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Carlito Baker 01.png"; sourceTree = "<group>"; };
+		3C7D63AC19E90D55006644F5 /* Carlos Mugisha 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Carlos Mugisha 07.png"; sourceTree = "<group>"; };
+		3C7D63AD19E90D55006644F5 /* Daniel Coleman 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Daniel Coleman 10.png"; sourceTree = "<group>"; };
+		3C7D63AE19E90D55006644F5 /* Json Hirshberg 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Json Hirshberg 09.png"; sourceTree = "<group>"; };
+		3C7D63AF19E90D55006644F5 /* Judith Campbell 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Judith Campbell 04.png"; sourceTree = "<group>"; };
+		3C7D63B019E90D55006644F5 /* Katherine Castelao 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Katherine Castelao 08.png"; sourceTree = "<group>"; };
+		3C7D63B119E90D55006644F5 /* profile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile1.png; sourceTree = "<group>"; };
+		3C7D63B219E90D55006644F5 /* profile13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile13.png; sourceTree = "<group>"; };
+		3C7D63B319E90D55006644F5 /* profile15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile15.png; sourceTree = "<group>"; };
+		3C7D63B419E90D55006644F5 /* profile3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile3.png; sourceTree = "<group>"; };
+		3C7D63B519E90D55006644F5 /* profile6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile6.png; sourceTree = "<group>"; };
+		3C7D63B619E90D55006644F5 /* profile7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile7.png; sourceTree = "<group>"; };
+		3C7D63B719E90D55006644F5 /* profile9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile9.png; sourceTree = "<group>"; };
+		3C7D63B819E90D55006644F5 /* Troy Banham 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Troy Banham 02.png"; sourceTree = "<group>"; };
+		3C7D63CA19E91633006644F5 /* ARUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUtility.h; sourceTree = "<group>"; };
+		3C7D63CB19E91633006644F5 /* ARUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUtility.m; sourceTree = "<group>"; };
 		3C92D3ED18AB51D10051BE54 /* crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown.png; sourceTree = "<group>"; };
 		3C92D3EE18AB51D10051BE54 /* crown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crown@2x.png"; sourceTree = "<group>"; };
 		3C92D40B18ACA84E0051BE54 /* ARDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDevice.h; sourceTree = "<group>"; };
@@ -843,6 +876,7 @@
 		3C417F4417D847510094B56F /* AROne */ = {
 			isa = PBXGroup;
 			children = (
+				3C7D63C919E91622006644F5 /* Constants */,
 				3CFE885618064422006CF472 /* Controllers */,
 				3CFE886118064422006CF472 /* General Views */,
 				3CFE886618064422006CF472 /* Models */,
@@ -941,6 +975,37 @@
 				3C5F189E17D91681003AC638 /* AKSegmentedControl.m */,
 			);
 			path = AKSegmentedControl;
+			sourceTree = "<group>";
+		};
+		3C7D63A919E90D55006644F5 /* profile_picture */ = {
+			isa = PBXGroup;
+			children = (
+				3C7D63AA19E90D55006644F5 /* Brook Alo 03.png */,
+				3C7D63AB19E90D55006644F5 /* Carlito Baker 01.png */,
+				3C7D63AC19E90D55006644F5 /* Carlos Mugisha 07.png */,
+				3C7D63AD19E90D55006644F5 /* Daniel Coleman 10.png */,
+				3C7D63AE19E90D55006644F5 /* Json Hirshberg 09.png */,
+				3C7D63AF19E90D55006644F5 /* Judith Campbell 04.png */,
+				3C7D63B019E90D55006644F5 /* Katherine Castelao 08.png */,
+				3C7D63B119E90D55006644F5 /* profile1.png */,
+				3C7D63B219E90D55006644F5 /* profile13.png */,
+				3C7D63B319E90D55006644F5 /* profile15.png */,
+				3C7D63B419E90D55006644F5 /* profile3.png */,
+				3C7D63B519E90D55006644F5 /* profile6.png */,
+				3C7D63B619E90D55006644F5 /* profile7.png */,
+				3C7D63B719E90D55006644F5 /* profile9.png */,
+				3C7D63B819E90D55006644F5 /* Troy Banham 02.png */,
+			);
+			path = profile_picture;
+			sourceTree = "<group>";
+		};
+		3C7D63C919E91622006644F5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3C7D63CA19E91633006644F5 /* ARUtility.h */,
+				3C7D63CB19E91633006644F5 /* ARUtility.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		3CA696DA18B17791003DE25F /* login page */ = {
@@ -1111,6 +1176,7 @@
 		3CDCDAA617DE90BC00FCA0CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3C7D63A919E90D55006644F5 /* profile_picture */,
 				3C1A3446190077EF003AA29F /* trailsummary */,
 				EC7DC77118CFF7C000E80D0B /* signup */,
 				3CACAF5C18C938BA00F8B1F6 /* splashs */,
@@ -1489,8 +1555,10 @@
 				3C6EA84F180E5AF90043216D /* element2.png in Resources */,
 				3C1A3461190077F0003AA29F /* highestSpeed_icon.png in Resources */,
 				3CDCDB5217DE90BC00FCA0CA /* segmented-separator.png in Resources */,
+				3C7D63BD19E90D55006644F5 /* Json Hirshberg 09.png in Resources */,
 				3CDCDB4517DE90BC00FCA0CA /* calendar_middle.png in Resources */,
 				3CF23FB01908F5B50025DAD4 /* Acce_card.png in Resources */,
+				3C7D63C119E90D55006644F5 /* profile13.png in Resources */,
 				3CDCDB3017DE90BC00FCA0CA /* Vdrop_selected_icon.png in Resources */,
 				3CDCDB4217DE90BC00FCA0CA /* VDpopupData_bg@2x.png in Resources */,
 				3C417F4917D847510094B56F /* InfoPlist.strings in Resources */,
@@ -1504,6 +1572,7 @@
 				EC8D412718CBEB4900FC0B2A /* iphoneRetina114x114.png in Resources */,
 				EC7DC77818CFF82700E80D0B /* addPhoto.png in Resources */,
 				3C240D2218F47AF700B19AE0 /* profile@2x.png in Resources */,
+				3C7D63B919E90D55006644F5 /* Brook Alo 03.png in Resources */,
 				3C1A3467190077F0003AA29F /* trailLocation_icon.png in Resources */,
 				3CDCDB4B17DE90BC00FCA0CA /* left_arrow@2x.png in Resources */,
 				3C41801017D85C470094B56F /* big_caslon.ttf in Resources */,
@@ -1516,6 +1585,7 @@
 				3C1A346A190077F0003AA29F /* trailsum_black1@2x.png in Resources */,
 				3CA696FA18B17791003DE25F /* login_button.png in Resources */,
 				3CDCDB1A17DE90BC00FCA0CA /* Acceleration_icon@2x.png in Resources */,
+				3C7D63C219E90D55006644F5 /* profile15.png in Resources */,
 				3CDCDB3A17DE90BC00FCA0CA /* MasSpeedCard_bg@2x.png in Resources */,
 				EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */,
 				3CA696FB18B17791003DE25F /* login_button@2x.png in Resources */,
@@ -1544,6 +1614,7 @@
 				3CA696F918B17791003DE25F /* input@2x.png in Resources */,
 				3CDCDB1617DE90BC00FCA0CA /* circle@2x.png in Resources */,
 				EC7DC77A18CFF82700E80D0B /* back_button.png in Resources */,
+				3C7D63C419E90D55006644F5 /* profile6.png in Resources */,
 				3CDCDB3B17DE90BC00FCA0CA /* MSpopupData_bg.png in Resources */,
 				3CDCDB2B17DE90BC00FCA0CA /* speed_icon2@2x.png in Resources */,
 				3CDCDB3517DE90BC00FCA0CA /* card2_bg.png in Resources */,
@@ -1553,6 +1624,7 @@
 				3C92D3EF18AB51D10051BE54 /* crown.png in Resources */,
 				3C1A346B190077F0003AA29F /* trailsum_black2.png in Resources */,
 				3CDCDB1B17DE90BC00FCA0CA /* feet.png in Resources */,
+				3C7D63C719E90D55006644F5 /* Troy Banham 02.png in Resources */,
 				3CDCDB1E17DE90BC00FCA0CA /* mph@2x.png in Resources */,
 				3CDCDB4417DE90BC00FCA0CA /* calendar_bg@2x.png in Resources */,
 				3CDCDB1517DE90BC00FCA0CA /* circle.png in Resources */,
@@ -1563,13 +1635,18 @@
 				3CA696F218B17791003DE25F /* divid.png in Resources */,
 				EC7DC77D18CFF82700E80D0B /* signup_bg@2x.png in Resources */,
 				EC5ECAEA1900DC5A00B4FB6E /* Kirkwood-Trail-Map-Lake-Tahoe.jpg in Resources */,
+				3C7D63BE19E90D55006644F5 /* Judith Campbell 04.png in Resources */,
 				3CDCDB2717DE90BC00FCA0CA /* Altitude@2x.png in Resources */,
+				3C7D63BF19E90D55006644F5 /* Katherine Castelao 08.png in Resources */,
+				3C7D63BB19E90D55006644F5 /* Carlos Mugisha 07.png in Resources */,
 				3CA696F118B17791003DE25F /* arlogo@2x.png in Resources */,
+				3C7D63C619E90D55006644F5 /* profile9.png in Resources */,
 				3CDCDB3617DE90BC00FCA0CA /* card2_bg@2x.png in Resources */,
 				3C1A3472190077F0003AA29F /* viewHighlight_button@2x.png in Resources */,
 				3CDCDB0D17DE90BC00FCA0CA /* setting_icon.png in Resources */,
 				3CDCDB0517DE90BC00FCA0CA /* home_icon.png in Resources */,
 				3CDCDB3417DE90BC00FCA0CA /* card1_bg@2x.png in Resources */,
+				3C7D63BA19E90D55006644F5 /* Carlito Baker 01.png in Resources */,
 				3CDCDB1717DE90BC00FCA0CA /* mph_MaxSpeed.png in Resources */,
 				3CDCDB2A17DE90BC00FCA0CA /* speed_icon2.png in Resources */,
 				3C1A3469190077F0003AA29F /* trailsum_black1.png in Resources */,
@@ -1619,6 +1696,7 @@
 				3C1A345F190077F0003AA29F /* fullscreen_button.png in Resources */,
 				3C6EA859180E612C0043216D /* graph_bg2.png in Resources */,
 				EC7DC77C18CFF82700E80D0B /* signup_bg.png in Resources */,
+				3C7D63C519E90D55006644F5 /* profile7.png in Resources */,
 				3CDCDB3717DE90BC00FCA0CA /* card3_bg.png in Resources */,
 				3CACAF6418C9391700F8B1F6 /* app_splashpage@2x.png in Resources */,
 				EC8D411C18CBEB4900FC0B2A /* icon29X29.png in Resources */,
@@ -1626,6 +1704,7 @@
 				3CDCDB4017DE90BC00FCA0CA /* VDCard_bg@2x.png in Resources */,
 				3C240D2118F47AF700B19AE0 /* profile.png in Resources */,
 				3CDCDB2917DE90BC00FCA0CA /* Altitude_selected@2x.png in Resources */,
+				3C7D63BC19E90D55006644F5 /* Daniel Coleman 10.png in Resources */,
 				3CACAF5F18C938BA00F8B1F6 /* welcome.png in Resources */,
 				3CDCDB5417DE90BC00FCA0CA /* topBack.png in Resources */,
 				3CDCDB4717DE90BC00FCA0CA /* calendar_selected.png in Resources */,
@@ -1633,6 +1712,7 @@
 				3CDCDB2817DE90BC00FCA0CA /* Altitude_selected.png in Resources */,
 				3CDCDB4C17DE90BC00FCA0CA /* left_arrow_selected.png in Resources */,
 				3CDCDB3F17DE90BC00FCA0CA /* VDCard_bg.png in Resources */,
+				3C7D63C319E90D55006644F5 /* profile3.png in Resources */,
 				3C417FE517D84B560094B56F /* AKTabBarController.bundle in Resources */,
 				3C1A3464190077F0003AA29F /* landscape@2x.png in Resources */,
 				3CDCDB3917DE90BC00FCA0CA /* MasSpeedCard_bg.png in Resources */,
@@ -1644,6 +1724,7 @@
 				3CDCDB2617DE90BC00FCA0CA /* Altitude.png in Resources */,
 				EC8D412518CBEB4900FC0B2A /* ipadRetina144x144.png in Resources */,
 				3C1A3465190077F0003AA29F /* mapbutton_bg.png in Resources */,
+				3C7D63C019E90D55006644F5 /* profile1.png in Resources */,
 				3CDCDB2C17DE90BC00FCA0CA /* speed_selected_icon.png in Resources */,
 				3C1A3463190077F0003AA29F /* landscape.png in Resources */,
 			);
@@ -1732,6 +1813,7 @@
 			files = (
 				3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */,
 				3CF0824D18F7B48E00470DFA /* PAImageView.m in Sources */,
+				3C7D63CC19E91633006644F5 /* ARUtility.m in Sources */,
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
 				ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */,
 				3CAE348919359FDE007FCE63 /* JBBaseNavigationController.m in Sources */,
@@ -1869,7 +1951,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1886,6 +1969,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1906,7 +1990,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1916,6 +2001,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1927,8 +2013,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1938,7 +2024,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D25E24DD-5916-4616-A204-341CEBA60366";
+				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1950,8 +2036,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Zheng (46H9D9RKSL)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1961,7 +2047,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D25E24DD-5916-4616-A204-341CEBA60366";
+				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

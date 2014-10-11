@@ -27,10 +27,10 @@
 
     // Drawing code
 //    [self drawPathInRect:self.bounds From:CGPointMake(100, 100) To:CGPointMake(500, 500)];
+    
   NSArray *data = [self.dataSource trailPathViewData:self];
   for (NSArray *points in data) {
     [self drawPathInRect:self.bounds data:points];
-
   }
 }
 

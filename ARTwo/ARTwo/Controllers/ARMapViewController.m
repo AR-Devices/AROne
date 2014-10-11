@@ -9,6 +9,7 @@
 #import "ARMapViewController.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
+#import "NSDate+TimeAgo.h"
 
 @interface ARMapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, strong) PFObject * user_detail;
@@ -57,7 +58,7 @@
         }
 //        [toUser addObject:[[PFUser currentUser] objectForKey:@"username"]];
         PFQuery *friendQuery = [PFUser query];
-        [friendQuery whereKey:@"username" containedIn:toUser];
+//        [friendQuery whereKey:@"username" containedIn:toUser];
         [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
             NSLog(@"users are %@", users);
             for (PFUser *user in users) {
@@ -66,39 +67,12 @@
                     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
                     point.coordinate = CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude);
                     point.title = [user objectForKey:@"name"];
-                    //          point.subtitle = @"I'm here!!!";
+                    point.subtitle = [NSString stringWithFormat:@"Last Seen %@", [[user updatedAt] timeAgo]];
                     [self.mapView addAnnotation: point];
                 }
             }
         }];
     }];
-    
-    
-//  PFUser* user = [PFUser currentUser];
-//  PFQuery * locationQuery =[PFUser query];
-////  locationQuery.limit = 1;
-////  [locationQuery whereKey:@"objectId" equalTo:user.objectId];
-//  [locationQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//    NSLog(@"COLORORANGE: %@", objects);
-//    if (!error) {
-//      if (objects.count > 0) {
-//        self.user_detail = [objects objectAtIndex:0];
-//        self.geoPoint = [self.user_detail objectForKey:@"geolocation"];
-//        NSLog(@"COLORORANGE: user is %@ \n lat: %f; long: %f", self.user_detail, self.geoPoint.latitude, self.geoPoint.longitude);
-//        // center our map view around this geopoint
-//        self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(self.geoPoint.latitude, self.geoPoint.longitude), MKCoordinateSpanMake(0.01f, 0.01f));
-//        // add the annotation
-//        //FIXME: COLORORANGE: not sure how to use this part
-//          MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-//          point.coordinate = CLLocationCoordinate2DMake(self.geoPoint.latitude, self.geoPoint.longitude);
-//          point.title = @"Jerry";
-////          point.subtitle = @"I'm here!!!";
-//          [self.mapView addAnnotation: point];
-////        GeoPointAnnotation *annotation = [[GeoPointAnnotation alloc] initWithObject:self.geoPoint];
-////        [self.mapView addAnnotation:annotation];
-//      }
-//    }
-//  }];
   
 }
 
@@ -111,12 +85,12 @@
     NSLog(@"%@", [self deviceLocation]);
     
     //View Area
-    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
-    region.center.latitude = self.locationManager.location.coordinate.latitude;
-    region.center.longitude = self.locationManager.location.coordinate.longitude;
-    region.span.longitudeDelta = 0.005f;
-    region.span.longitudeDelta = 0.005f;
-    [self.mapView setRegion:region animated:YES];
+//    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+//    region.center.latitude = self.locationManager.location.coordinate.latitude;
+//    region.center.longitude = self.locationManager.location.coordinate.longitude;
+//    region.span.longitudeDelta = 0.005f;
+//    region.span.longitudeDelta = 0.005f;
+//    [self.mapView setRegion:region animated:YES];
     
 }
 
@@ -127,21 +101,45 @@
 
 #pragma mark - MKMapViewDelegate
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-  static NSString *GeoPointAnnotationIdentifier = @"RedPin";
-  
-  MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:GeoPointAnnotationIdentifier];
-  
-  if (!annotationView) {
-    annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:GeoPointAnnotationIdentifier];
-    annotationView.pinColor = MKPinAnnotationColorRed;
-    annotationView.canShowCallout = YES;
-    annotationView.draggable = YES;
-    annotationView.animatesDrop = YES;
-  }
-  
-  return annotationView;
-}
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+//  static NSString *GeoPointAnnotationIdentifier = @"RedPin";
+//  
+//  MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:GeoPointAnnotationIdentifier];
+//  
+//  if (!annotationView) {
+//    annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:GeoPointAnnotationIdentifier];
+//    annotationView.pinColor = MKPinAnnotationColorRed;
+//    annotationView.canShowCallout = YES;
+//    annotationView.draggable = YES;
+//    annotationView.animatesDrop = YES;
+//  }
+//  
+//  return annotationView;
+//}
+
+
+//how to customize location icon
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+//    
+//    static NSString* AnnotationIdentifier = @"Annotation";
+//    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+//    
+//    if (!pinView) {
+//        
+//        MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+////        if (annotation == mapView.userLocation) customPinView.image = [UIImage imageNamed:@"myCarImage.png"];
+////        else customPinView.image = [UIImage imageNamed:@"mySomeOtherImage.png"];
+//        customPinView.animatesDrop = NO;
+//        customPinView.canShowCallout = YES;
+//        return customPinView;
+//        
+//    } else {
+//        
+//        pinView.annotation = annotation;
+//    }
+//    
+//    return pinView;
+//}
 
 //-----------------------------------GEO Location
 
@@ -155,32 +153,27 @@
            fromLocation:(CLLocation *)oldLocation {
     NSLog(@"JERRY: didUPdateTOLocation");
     [self insertCurrentLocation];
-    //display myself
-    // Add an annotation
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = newLocation.coordinate;
-    point.title = [[PFUser currentUser] objectForKey:@"username"];
-    //    point.subtitle = @"I'm here!!!";
-    
-    [self.mapView addAnnotation:point];
+    [self zoomToFitMapAnnotations:self.mapView];
+
     
 }
 
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-    
+    NSLog(@"didUpdateUserLocation");
+//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+//    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+//    [self zoomToFitMapAnnotations:self.mapView];
     // Add an annotation
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = userLocation.coordinate;
-    point.title = [[PFUser currentUser] objectForKey:@"username"];
+//    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+//    point.coordinate = userLocation.coordinate;
+//    point.title = [[PFUser currentUser] objectForKey:@"name"];
 //    point.subtitle = @"I'm here!!!";
     
-    [self.mapView addAnnotation:point];
+//    [self.mapView addAnnotation:point];
     
-    [self insertCurrentLocation];
+//    [self insertCurrentLocation];
 
 }
 
@@ -216,10 +209,10 @@
     CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     //  PFObject *object = [PFObject objectWithClassName:@"User"];
-    PFUser * object = [PFUser currentUser];
-    [object setObject:geoPoint forKey:@"geolocation"];
-    
-    [object saveEventually:^(BOOL succeeded, NSError *error) {
+    PFUser * user = [PFUser currentUser];
+    [user setObject:geoPoint forKey:@"geolocation"];
+
+    [user saveEventually:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"geolocation uploaded correctly");
             [self.locationManager stopUpdatingLocation];
@@ -241,6 +234,36 @@
     return [NSString stringWithFormat:@"%f", self.locationManager.location.altitude];
 }
 
+
+- (void)zoomToFitMapAnnotations:(MKMapView *)mapView {
+    if ([mapView.annotations count] == 0) return;
+    
+    CLLocationCoordinate2D topLeftCoord;
+    topLeftCoord.latitude = -90;
+    topLeftCoord.longitude = 180;
+    
+    CLLocationCoordinate2D bottomRightCoord;
+    bottomRightCoord.latitude = 90;
+    bottomRightCoord.longitude = -180;
+    
+    for(id<MKAnnotation> annotation in mapView.annotations) {
+        topLeftCoord.longitude = fmin(topLeftCoord.longitude, annotation.coordinate.longitude);
+        topLeftCoord.latitude = fmax(topLeftCoord.latitude, annotation.coordinate.latitude);
+        bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, annotation.coordinate.longitude);
+        bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, annotation.coordinate.latitude);
+    }
+    
+    MKCoordinateRegion region;
+    region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5;
+    region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5;
+    
+    // Add a little extra space on the sides
+    region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.1;
+    region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.1;
+    
+    region = [mapView regionThatFits:region];
+    [mapView setRegion:region animated:YES];
+}
 
 
 @end

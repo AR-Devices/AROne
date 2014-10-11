@@ -5,4 +5,4 @@ pod 'MSDynamicsDrawerViewController'
 pod 'DZNSegmentedControl', :head
 pod "UIImageView-Letters"
 pod 'SVProgressHUD'
-
+pod 'NSDate+TimeAgo'

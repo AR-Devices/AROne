@@ -214,6 +214,8 @@
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
 //    [self.activityIndicator stopAnimating]; // Hide loading indicator
+      [SVProgressHUD dismiss];
+
     if (!user) {
       if (!error) {
         NSLog(@"Uh oh. The user cancelled the Facebook login.");
