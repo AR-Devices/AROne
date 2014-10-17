@@ -98,17 +98,13 @@
 //      [self.navigationController pushViewController:analysis animated:YES];
     }
   } else if (indexPath.section == 1) {
+      NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+      [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+      [PFUser logOut];
+      [self dismissViewControllerAnimated:YES completion:^{
+          [[[[UIApplication sharedApplication] delegate] window] reloadInputViews];
+      }];
     [PFUser logOut];
-//    ARLoginViewController *login = [[ARLoginViewController alloc] init];
-//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
-//    self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self dismissViewControllerAnimated:YES completion:^{
-      //null
-    }];
-//    navi.navigationBar.hidden = YES;
-//    [self.navigationController presentViewController:navi animated:YES completion:^{
-//      NSLog(@"====from, setting to Login, after logint====");
-//    }];
   }
 }
 @end

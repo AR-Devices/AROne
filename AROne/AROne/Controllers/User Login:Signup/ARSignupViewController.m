@@ -7,14 +7,19 @@
 //
 
 #import "ARSignupViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
-@interface ARSignupViewController () <UITextFieldDelegate>
+@interface ARSignupViewController () <UITextFieldDelegate,UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) UITextField *firstName;
 @property (nonatomic) UITextField *lastName;
 
 @property (nonatomic) UITextField *email;
 @property (nonatomic) UITextField *password;
+@property (nonatomic, strong) UIButton *photo;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) UIImage *uploadImage;
 
 @end
 
@@ -63,12 +68,15 @@
   [signup_templateFrame addSubview:signup_templateView];
   
   UIImage *photo_button = [UIImage imageNamed:@"addPhoto"];
-  UIImageView *photo_buttonView = [[UIImageView alloc] initWithImage:photo_button];
-  UIButton *photo_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width-photo_button.size.width-5, 5, photo_button.size.width, photo_button.size.height)];
-  [photo_buttonFrame addTarget:self action:@selector(addPicture:) forControlEvents:UIControlEventTouchUpInside];
-  [photo_buttonFrame addSubview:photo_buttonView];
-  
-  [signup_templateFrame addSubview:photo_buttonFrame];
+//  UIImageView *photo_buttonView = [[UIImageView alloc] initWithImage:photo_button];
+//    UIImage *photoImage = [UIImage imageNamed:@"addPhoto"];
+  self.photo = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width-photo_button.size.width-5, 5, photo_button.size.width, photo_button.size.height)];
+    [self.photo setImage:[UIImage imageNamed:@"addPhoto"] forState:UIControlStateNormal];
+  [self.photo addTarget:self action:@selector(addPicture:) forControlEvents:UIControlEventTouchUpInside];
+//  [self.photo addSubview:photo_buttonView];
+    [self.photo.layer setCornerRadius:3.0f];
+    self.photo.clipsToBounds = YES;
+  [signup_templateFrame addSubview:self.photo];
   [self.view addSubview:signup_templateFrame];
   
   _firstName = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 200, 30)];
@@ -103,7 +111,7 @@
   [_email setBackgroundColor:[UIColor clearColor]];
   [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
   [_email setTextColor:[UIColor orangeColor]];
-  [_email setPlaceholder:@"Email(User Name)"];
+  [_email setPlaceholder:@"Username"];
   
   [signup_templateFrame addSubview:_email];
   
@@ -175,8 +183,11 @@
 }
 - (void) addPicture: (id) sender
 {
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ADD PICTURE" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-  [alertView show];
+    
+    [self onAddPhoto];
+    
+//  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ADD PICTURE" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+//  [alertView show];
 }
 - (void) loginAction: (id) sender
 {
@@ -235,14 +246,23 @@
 }
 
 - (void)doSignupWithUsername {
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   PFUser *newUser = [[PFUser alloc] init];
-  
   [newUser setPassword:_password.text];
   [newUser setUsername:_email.text];
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
       if (succeeded) {
         // Create next view controller to show
-        [self showHomeView];
+          self.uploadImage = [ARUtility resizeImage:self.uploadImage withSize:CGSizeMake(50, 50)];
+          NSData *imageData = UIImagePNGRepresentation(self.uploadImage);
+          PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:imageData];
+          newUser[@"name"] = [NSString stringWithFormat:@"%@ %@", self.firstName.text, self.lastName.text];
+          newUser[@"userIcon"] = imageFile;
+          [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+              [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+              [self showHomeView];
+          }];
       }
       else // Login failed
       {
@@ -300,4 +320,135 @@
   NSLog(@"signup");
   [self doSignupWithUsername];
 }
+
+//new code for camera
+//UIActionSheet
+- (void)onAddPhoto {
+    BOOL cameraDeviceAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    BOOL photoLibraryAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    if (cameraDeviceAvailable && photoLibraryAvailable) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Photo", @"Choose Photo", nil];
+        [actionSheet showInView:[UIApplication sharedApplication].keyWindow];
+    } else {
+        // if we don't have at least two options, we automatically show whichever is available (camera or roll)
+        [self shouldPresentPhotoCaptureController];
+    }
+}
+
+#pragma mark - AnyPic
+
+- (BOOL)shouldStartCameraController {
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
+        return NO;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
+        && [[UIImagePickerController availableMediaTypesForSourceType:
+             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.mediaTypes = [NSArray arrayWithObject:(NSString *) kUTTypeImage];
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        
+    } else {
+        return NO;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.showsCameraControls = YES;
+    cameraUI.delegate = self;
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+    
+    return YES;
+}
+
+
+
+- (BOOL)shouldStartPhotoLibraryPickerController {
+    if (([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary] == NO
+         && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
+        return NO;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]
+        && [[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        cameraUI.mediaTypes = [NSArray arrayWithObject:(NSString *) kUTTypeImage];
+        
+    } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]
+               && [[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        cameraUI.mediaTypes = [NSArray arrayWithObject:(NSString *) kUTTypeImage];
+        
+    } else {
+        return NO;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.delegate = self;
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+    
+    return YES;
+}
+
+- (BOOL)shouldPresentPhotoCaptureController {
+    BOOL presentedPhotoCaptureController = [self shouldStartCameraController];
+    
+    if (!presentedPhotoCaptureController) {
+        presentedPhotoCaptureController = [self shouldStartPhotoLibraryPickerController];
+    }
+    
+    return presentedPhotoCaptureController;
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [self shouldStartCameraController];
+    } else if (buttonIndex == 1) {
+        [self shouldStartPhotoLibraryPickerController];
+    }
+}
+
+#pragma mark - camera delegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"info are %@", info);
+    // Code here to work with media
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage])
+    {
+        UIImage *editImage = info[UIImagePickerControllerEditedImage];
+        [self.photo setImage:editImage forState:UIControlStateNormal];
+        self.uploadImage = editImage;
+    }
+    else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie])
+    {
+        //        NSURL *url = info[UIImagePickerControllerMediaURL];
+        // Media is a video
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel: (UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
