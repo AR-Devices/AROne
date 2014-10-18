@@ -151,6 +151,7 @@
 		3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */; };
 		3CAF438C18C1660E00356116 /* ARSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438B18C1660E00356116 /* ARSummary.m */; };
 		3CC307EF18E1247C00B8E6C8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */; };
+		3CDA4DD419F2EA06003B9B9E /* NSString+ARAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */; };
 		3CDAA1EF19498F6D00F2C194 /* ARNorthStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA1EE19498F6D00F2C194 /* ARNorthStar.m */; };
 		3CDAA1F2194991D000F2C194 /* ARCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA1F1194991D000F2C194 /* ARCommon.m */; };
 		3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCDAA817DE90BC00FCA0CA /* accelerationCircle.png */; };
@@ -517,6 +518,8 @@
 		3CAF438A18C1660E00356116 /* ARSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSummary.h; path = Parse/ARSummary.h; sourceTree = "<group>"; };
 		3CAF438B18C1660E00356116 /* ARSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSummary.m; path = Parse/ARSummary.m; sourceTree = "<group>"; };
 		3CC307EE18E1247C00B8E6C8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		3CDA4DD219F2EA06003B9B9E /* NSString+ARAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ARAdditions.h"; sourceTree = "<group>"; };
+		3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ARAdditions.m"; sourceTree = "<group>"; };
 		3CDAA1EC19498D1400F2C194 /* ARBLEConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARBLEConstants.h; path = Models/ARBLEConstants.h; sourceTree = "<group>"; };
 		3CDAA1ED19498F6D00F2C194 /* ARNorthStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARNorthStar.h; sourceTree = "<group>"; };
 		3CDAA1EE19498F6D00F2C194 /* ARNorthStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARNorthStar.m; sourceTree = "<group>"; };
@@ -1409,6 +1412,8 @@
 				3C92D40C18ACA84E0051BE54 /* ARDevice.m */,
 				3CDAA1ED19498F6D00F2C194 /* ARNorthStar.h */,
 				3CDAA1EE19498F6D00F2C194 /* ARNorthStar.m */,
+				3CDA4DD219F2EA06003B9B9E /* NSString+ARAdditions.h */,
+				3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1867,6 +1872,7 @@
 				ECA790F71903AD30003145D6 /* BEMLine.m in Sources */,
 				3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */,
 				ECA790F81903AD30003145D6 /* BEMSimpleLineGraphView.m in Sources */,
+				3CDA4DD419F2EA06003B9B9E /* NSString+ARAdditions.m in Sources */,
 				3C417FE917D84B560094B56F /* UISplitViewController+AKTabBarController.m in Sources */,
 				3C417FE617D84B560094B56F /* AKTabBarController.m in Sources */,
 				3CFE887618064422006CF472 /* ARSummaryViewController.m in Sources */,

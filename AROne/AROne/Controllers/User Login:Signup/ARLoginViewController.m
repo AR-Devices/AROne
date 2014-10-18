@@ -9,6 +9,7 @@
 #import "ARLoginViewController.h"
 #import "ARSignupViewController.h"
 #import "MBProgressHUD.h"
+#import "NSString+ARAdditions.h"
 
 @interface ARLoginViewController ()<UITextFieldDelegate>
 
@@ -130,10 +131,12 @@
   rememberMeText.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
   [rememberMeText setTextColor:[UIColor whiteColor ]];
 
-  UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
-  forgetPass.center = CGPointMake(self.view.bounds.size.width/2+60, 360);
-  [forgetPass setTitle:@"Forget your Password?" forState:UIControlStateNormal];
-  forgetPass.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
+    UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
+    forgetPass.center = CGPointMake(self.view.bounds.size.width/2+60, 360);
+    [forgetPass setTitle:@"Forget your Password?" forState:UIControlStateNormal];
+    forgetPass.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
+    [forgetPass addTarget:self action:@selector(onForget:) forControlEvents:UIControlEventTouchUpInside];
+
 
   UIImage *login_button = [UIImage imageNamed:@"login_button"];
   UIImageView *login_buttonView = [[UIImageView alloc] initWithImage:login_button];
@@ -232,6 +235,31 @@
 
   }];
 //  [_activityIndicator startAnimating]; // Show loading indicator until login is finished
+}
+
+- (void) onForget:(id) sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    NSLog(@"haha %@", self.email.text);
+    if ([NSString isStringEmpty:self.email.text] ||
+        ![self isValidEmail:self.email.text]) {
+        hud.labelText = @"Type in your email address";
+        [hud show:YES];
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            // Do something...
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    } else {
+        [PFUser requestPasswordResetForEmailInBackground:self.email.text];
+        hud.labelText = @"Please check your email!";
+        [hud show:YES];
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            // Do something...
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    }
 }
 
 - (void)showHomeView
@@ -441,6 +469,16 @@
       //      [usernameField becomeFirstResponder];
     }
   }];
+}
+
+- (BOOL)isValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = YES; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
 }
 
 

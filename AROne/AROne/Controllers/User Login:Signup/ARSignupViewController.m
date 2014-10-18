@@ -111,7 +111,7 @@
   [_email setBackgroundColor:[UIColor clearColor]];
   [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
   [_email setTextColor:[UIColor orangeColor]];
-  [_email setPlaceholder:@"Username"];
+  [_email setPlaceholder:@"Email"];
   
   [signup_templateFrame addSubview:_email];
   
@@ -248,9 +248,10 @@
 - (void)doSignupWithUsername {
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-  PFUser *newUser = [[PFUser alloc] init];
-  [newUser setPassword:_password.text];
-  [newUser setUsername:_email.text];
+    PFUser *newUser = [[PFUser alloc] init];
+    [newUser setPassword:_password.text];
+    [newUser setUsername:_email.text];
+    [newUser setEmail:_email.text];
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
       if (succeeded) {
         // Create next view controller to show
