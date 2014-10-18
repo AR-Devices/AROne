@@ -97,7 +97,7 @@
   _email.delegate = self;
   [_email setBackground:[UIImage imageNamed:@"input"]];
   [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_email setTextColor:[UIColor orangeColor]];
+  [_email setTextColor:[UIColor blackColor]];
   [_email setPlaceholder:@"Email"];
 
   _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
@@ -108,7 +108,7 @@
   _password.delegate = self;
   [_password setBackground:[UIImage imageNamed:@"input"]];
   [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_password setTextColor:[UIColor orangeColor]];
+  [_password setTextColor:[UIColor blackColor]];
   [_password setPlaceholder:@"Password"];
   [_password setSecureTextEntry:YES];
 
@@ -124,12 +124,12 @@
   [rememberMe addTarget: self action: @selector(rememberMe:) forControlEvents:UIControlEventValueChanged];
 
 
-  UILabel *rememberMeText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-  rememberMeText.center = CGPointMake(self.view.bounds.size.width/2-30, 360);
-  rememberMeText.backgroundColor = [UIColor clearColor];
-  [rememberMeText setText: @"Remember me"];
-  rememberMeText.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  [rememberMeText setTextColor:[UIColor whiteColor ]];
+//  UILabel *rememberMeText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+//  rememberMeText.center = CGPointMake(self.view.bounds.size.width/2-30, 360);
+//  rememberMeText.backgroundColor = [UIColor clearColor];
+//  [rememberMeText setText: @"Remember me"];
+//  rememberMeText.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+//  [rememberMeText setTextColor:[UIColor whiteColor ]];
 
     UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
     forgetPass.center = CGPointMake(self.view.bounds.size.width/2+60, 360);
