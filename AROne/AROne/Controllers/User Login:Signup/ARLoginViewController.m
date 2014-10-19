@@ -118,10 +118,10 @@
 
   [[UISwitch appearance] setOnImage:fb];
   [[UISwitch appearance] setOffImage:gPlus];
-  UISwitch *rememberMe = [[UISwitch alloc] init];//WithFrame:CGRectMake(0, 0, switch_button.size.width, switch_button.size.height)];
-  rememberMe.transform = CGAffineTransformMakeScale(0.5, 0.5);
-  rememberMe.center = CGPointMake(self.view.bounds.size.width/2-100, 360);
-  [rememberMe addTarget: self action: @selector(rememberMe:) forControlEvents:UIControlEventValueChanged];
+//  UISwitch *rememberMe = [[UISwitch alloc] init];//WithFrame:CGRectMake(0, 0, switch_button.size.width, switch_button.size.height)];
+//  rememberMe.transform = CGAffineTransformMakeScale(0.5, 0.5);
+//  rememberMe.center = CGPointMake(self.view.bounds.size.width/2-100, 360);
+//  [rememberMe addTarget: self action: @selector(rememberMe:) forControlEvents:UIControlEventValueChanged];
 
 
 //  UILabel *rememberMeText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
@@ -167,8 +167,8 @@
   [self.view addSubview:dividFrame];
   [self.view addSubview:_email];
   [self.view addSubview:_password];
-  [self.view addSubview:rememberMe];
-  [self.view addSubview:rememberMeText];
+//  [self.view addSubview:rememberMe];
+//  [self.view addSubview:rememberMeText];
   [self.view addSubview:forgetPass];
   [self.view addSubview:signInOpt];
   [self.view addSubview:login_buttonFrame];
