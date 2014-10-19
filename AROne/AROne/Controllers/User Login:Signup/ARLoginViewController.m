@@ -198,11 +198,16 @@
 {
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   // The permissions requested from the user
-  NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
+  NSArray *permissionsArray = @[ @"public_profile", @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
 
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
 //    [self.activityIndicator stopAnimating]; // Hide loading indicator
+
+    
+    
+    
+    
     if (!user) {
       if (!error) {
         NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -267,7 +272,11 @@
 - (void) populateFBData
 {
   FBRequest *request = [FBRequest requestForMe];
-  
+
+
+
+
+
   // Send request to Facebook
   [request startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
     if (!error) {
@@ -291,15 +300,36 @@
 
     } @catch (NSException *exception) {
       NSLog(@"Puser location exception %@", exception);
-
     }
-      
-      @try {
-          [Puser setObject:user.birthday forKey:@"birthday"];
+    
+    @try {
+        [Puser setObject:user.birthday forKey:@"birthday"];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Puser birthday exception %@", exception);
+    }
+    //gender
+    NSDictionary* params = [NSDictionary dictionaryWithObject:@"gender" forKey:@"fields"];
+    [[FBRequest requestWithGraphPath:@"me/?fields=gender" parameters:params HTTPMethod:nil] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+      if (!error) {
+        NSString* gender = [result objectForKey:@"gender"];
+        if(gender){
+          NSLog(@"orange:: gender is %@", gender);
+          @try {
+            [Puser setObject:gender forKey:@"gender"];
+          } @catch (NSException *exception) {
+            NSLog(@"Puser gender exception %@", exception);
+          }
+        }
+      }else{
+        NSLog(@"orange:: didn't get gender");
       }
-      @catch (NSException *exception) {
-          NSLog(@"Puser birthday exception %@", exception);
-      }
+    }];
+    
+    
+
+    
+    
 
 //        Puser[@"email"] = [user objectForKey:@"email"];
 //        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
