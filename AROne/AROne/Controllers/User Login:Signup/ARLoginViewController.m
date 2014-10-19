@@ -89,53 +89,40 @@
   [dividFrame addSubview:dividView];
 
   //padding view is for left margin to not touch the edge
-  _email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
-  _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _email.leftViewMode = UITextFieldViewModeAlways;
-  _email.center = CGPointMake(self.view.bounds.size.width/2, 280);
-  _email.adjustsFontSizeToFitWidth = YES;
-  _email.delegate = self;
-  [_email setBackground:[UIImage imageNamed:@"input"]];
-  [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_email setTextColor:[UIColor orangeColor]];
-  [_email setPlaceholder:@"Email"];
+    _email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
+    _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+    _email.leftViewMode = UITextFieldViewModeAlways;
+    _email.center = CGPointMake(self.view.bounds.size.width/2, 280);
+    _email.adjustsFontSizeToFitWidth = YES;
+    _email.delegate = self;
+    [_email setBackground:[UIImage imageNamed:@"input"]];
+    [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
+    [_email setTextColor:[UIColor orangeColor]];
+    [_email setPlaceholder:@"Email"];
+    [_email.layer setCornerRadius:3.0f];
+    _email.clipsToBounds = YES;
+    _email.keyboardType = UIKeyboardTypeEmailAddress;
 
-  _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
-  _password.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _password.leftViewMode = UITextFieldViewModeAlways;
-  _password.center = CGPointMake(self.view.bounds.size.width/2, 320);
-  _password.adjustsFontSizeToFitWidth = YES;
-  _password.delegate = self;
-  [_password setBackground:[UIImage imageNamed:@"input"]];
-  [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_password setTextColor:[UIColor orangeColor]];
-  [_password setPlaceholder:@"Password"];
-  [_password setSecureTextEntry:YES];
+    _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
+    _password.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+    _password.leftViewMode = UITextFieldViewModeAlways;
+    _password.center = CGPointMake(self.view.bounds.size.width/2, 320);
+    _password.adjustsFontSizeToFitWidth = YES;
+    _password.delegate = self;
+    [_password setBackground:[UIImage imageNamed:@"input"]];
+    [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
+    [_password setTextColor:[UIColor orangeColor]];
+    [_password setPlaceholder:@"Password"];
+    [_password setSecureTextEntry:YES];
+    [_password.layer setCornerRadius:3.0f];
+    _password.clipsToBounds = YES;
 
-  [[UISwitch appearance] setOnTintColor:[UIColor orangeColor]];
-  //[[UISwitch appearance] setTintColor:[UIColor colorWithRed:213.0/255 green:183.0/255 blue:165.0/255 alpha:1.000]];
-  // [[UISwitch appearance] setThumbTintColor:[UIColor colorWithRed:125.0/255 green:30.0/255 blue:21.0/255 alpha:1.000]];
-
-  [[UISwitch appearance] setOnImage:fb];
-  [[UISwitch appearance] setOffImage:gPlus];
-  UISwitch *rememberMe = [[UISwitch alloc] init];//WithFrame:CGRectMake(0, 0, switch_button.size.width, switch_button.size.height)];
-  rememberMe.transform = CGAffineTransformMakeScale(0.5, 0.5);
-  rememberMe.center = CGPointMake(self.view.bounds.size.width/2-100, 360);
-  [rememberMe addTarget: self action: @selector(rememberMe:) forControlEvents:UIControlEventValueChanged];
-
-
-  UILabel *rememberMeText = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-  rememberMeText.center = CGPointMake(self.view.bounds.size.width/2-30, 360);
-  rememberMeText.backgroundColor = [UIColor clearColor];
-  [rememberMeText setText: @"Remember me"];
-  rememberMeText.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  [rememberMeText setTextColor:[UIColor whiteColor ]];
-
-    UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
-    forgetPass.center = CGPointMake(self.view.bounds.size.width/2+60, 360);
+    UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _email.bounds.size.width, 20)];
+    forgetPass.center = CGPointMake(self.view.bounds.size.width/2, 360);
     [forgetPass setTitle:@"Forget your Password?" forState:UIControlStateNormal];
     forgetPass.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
     [forgetPass addTarget:self action:@selector(onForget:) forControlEvents:UIControlEventTouchUpInside];
+    [forgetPass setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 
 
   UIImage *login_button = [UIImage imageNamed:@"login_button"];
@@ -167,8 +154,6 @@
   [self.view addSubview:dividFrame];
   [self.view addSubview:_email];
   [self.view addSubview:_password];
-  [self.view addSubview:rememberMe];
-  [self.view addSubview:rememberMeText];
   [self.view addSubview:forgetPass];
   [self.view addSubview:signInOpt];
   [self.view addSubview:login_buttonFrame];
@@ -237,7 +222,7 @@
 //  [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
 
-- (void) onForget:(id) sender {
+- (void) onForget:(id) sender {    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeText;
     NSLog(@"haha %@", self.email.text);
@@ -245,16 +230,16 @@
         ![self isValidEmail:self.email.text]) {
         hud.labelText = @"Type in your email address";
         [hud show:YES];
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             // Do something...
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     } else {
         [PFUser requestPasswordResetForEmailInBackground:self.email.text];
-        hud.labelText = @"Please check your email!";
+        hud.labelText = @"Please check your email to change your password.";
         [hud show:YES];
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             // Do something...
             [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -286,40 +271,47 @@
   // Send request to Facebook
   [request startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
     if (!error) {
-      //      upload info to parse
-      PFQuery *query = [PFUser query];
-      PFUser *PU = [PFUser currentUser];
-      [query whereKey:@"username" equalTo:PU.username];
-      
-      [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"objects are %@", objects);
-        PFObject *Puser = [objects objectAtIndex:0];
-        [Puser setObject:user.name forKey:@"name"];
+  //      upload info to parse
+  PFQuery *query = [PFUser query];
+  PFUser *PU = [PFUser currentUser];
+  [query whereKey:@"username" equalTo:PU.username];
+  
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    NSLog(@"objects are %@", objects);
+    PFObject *Puser = [objects objectAtIndex:0];
+    [Puser setObject:user.name forKey:@"name"];
 //        Puser[@"name"] = user.name;
-        @try {
-          [Puser setObject:[user objectForKey:@"email"] forKey:@"email"];
-        } @catch (NSException *exception) {
-          NSLog(@"Puser email exception %@", exception);
-        }
-        @try {
-          [Puser setObject:[[user objectForKey:@"location"] objectForKey:@"name"] forKey:@"location"];
+    @try {
+      [Puser setObject:[user objectForKey:@"email"] forKey:@"email"];
+    } @catch (NSException *exception) {
+      NSLog(@"Puser email exception %@", exception);
+    }
+    @try {
+      [Puser setObject:[[user objectForKey:@"location"] objectForKey:@"name"] forKey:@"location"];
 
-        } @catch (NSException *exception) {
-          NSLog(@"Puser location exception %@", exception);
+    } @catch (NSException *exception) {
+      NSLog(@"Puser location exception %@", exception);
 
-        }
+    }
+      
+      @try {
+          [Puser setObject:user.birthday forKey:@"birthday"];
+      }
+      @catch (NSException *exception) {
+          NSLog(@"Puser birthday exception %@", exception);
+      }
 
 //        Puser[@"email"] = [user objectForKey:@"email"];
 //        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
-        
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.id]];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:data];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?square", user.id]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:data];
 //        UIImage *profilePic = [[UIImage alloc] initWithData:data];
-        Puser[@"userIcon"] = imageFile;
-        [Puser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-          [self showHomeView];
-        }];
+    Puser[@"userIcon"] = imageFile;
+    [Puser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+      [self showHomeView];
+    }];
       }];
     } else {
       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
