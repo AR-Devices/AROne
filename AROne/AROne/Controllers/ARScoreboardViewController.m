@@ -129,7 +129,7 @@
     @try {
       
       NSDictionary *player = [dict objectForKey:@"player"];
-      NSString *name = [player objectForKey:@"name"];
+      NSString *name = [player objectForKey:@"displayname"];
       PFFile *iconFile = [player objectForKey:@"userIcon"];
       NSData *iconData = [iconFile getData];
 //      UIImage *userIcon = [UIImage imageWithData:iconData];
