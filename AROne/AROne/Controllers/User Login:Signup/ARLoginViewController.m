@@ -89,7 +89,6 @@
   [dividFrame addSubview:dividView];
 
   //padding view is for left margin to not touch the edge
-<<<<<<< HEAD
     _email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
     _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
     _email.leftViewMode = UITextFieldViewModeAlways;
@@ -120,36 +119,6 @@
 
     UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _email.bounds.size.width, 20)];
     forgetPass.center = CGPointMake(self.view.bounds.size.width/2, 360);
-=======
-  _email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
-  _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _email.leftViewMode = UITextFieldViewModeAlways;
-  _email.center = CGPointMake(self.view.bounds.size.width/2, 280);
-  _email.adjustsFontSizeToFitWidth = YES;
-  _email.delegate = self;
-  [_email setBackground:[UIImage imageNamed:@"input"]];
-  [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_email setTextColor:[UIColor blackColor]];
-  [_email setPlaceholder:@"Email"];
-
-  _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, divid.size.width,30)];
-  _password.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _password.leftViewMode = UITextFieldViewModeAlways;
-  _password.center = CGPointMake(self.view.bounds.size.width/2, 320);
-  _password.adjustsFontSizeToFitWidth = YES;
-  _password.delegate = self;
-  [_password setBackground:[UIImage imageNamed:@"input"]];
-  [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-  [_password setTextColor:[UIColor blackColor]];
-  [_password setPlaceholder:@"Password"];
-  [_password setSecureTextEntry:YES];
-
-  [[UISwitch appearance] setOnTintColor:[UIColor orangeColor]];
-
-
-
-    UIButton *forgetPass = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
-    forgetPass.center = CGPointMake(self.view.bounds.size.width/2+60, 360);
     [forgetPass setTitle:@"Forget your Password?" forState:UIControlStateNormal];
     forgetPass.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
     [forgetPass addTarget:self action:@selector(onForget:) forControlEvents:UIControlEventTouchUpInside];
