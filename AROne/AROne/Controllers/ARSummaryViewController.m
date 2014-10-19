@@ -147,8 +147,8 @@
         PFUser *user = objects[0];
         NSLog(@"user data %@", objects);
   //      [objects[0] objectForKey:@"user"];
-        NSLog(@"username is %@", user[@"name"]);
-        self.userName = user[@"name"];
+        NSLog(@"username is %@", user[@"displayname"]);
+        self.userName = user[@"displayname"];
         PFFile *image = user[@"userIcon"];
         [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
           NSData *imageData = data;

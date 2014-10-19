@@ -86,7 +86,7 @@
   _firstName.delegate = self;
   [_firstName setBackgroundColor:[UIColor clearColor]];
   [_firstName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_firstName setTextColor:[UIColor orangeColor]];
+  [_firstName setTextColor:[UIColor blackColor]];
   [_firstName setPlaceholder:@"First Name"];
   
   [signup_templateFrame addSubview:_firstName];
@@ -98,7 +98,7 @@
   _lastName.delegate = self;
   [_lastName setBackgroundColor:[UIColor clearColor]];
   [_lastName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_lastName setTextColor:[UIColor orangeColor]];
+  [_lastName setTextColor:[UIColor blackColor]];
   [_lastName setPlaceholder:@"Last Name"];
   
   [signup_templateFrame addSubview:_lastName];
@@ -110,7 +110,7 @@
   _email.delegate = self;
   [_email setBackgroundColor:[UIColor clearColor]];
   [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_email setTextColor:[UIColor orangeColor]];
+  [_email setTextColor:[UIColor blackColor]];
   [_email setPlaceholder:@"Email"];
   
   [signup_templateFrame addSubview:_email];
@@ -123,7 +123,7 @@
   _password.secureTextEntry = YES;
   [_password setBackgroundColor:[UIColor clearColor]];
   [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_password setTextColor:[UIColor orangeColor]];
+  [_password setTextColor:[UIColor blackColor]];
   [_password setPlaceholder:@"Password"];
   
   [signup_templateFrame addSubview:_password];
