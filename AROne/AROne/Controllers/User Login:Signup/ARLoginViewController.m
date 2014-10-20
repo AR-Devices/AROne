@@ -125,13 +125,16 @@
     [forgetPass setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 
 
-  UIImage *login_button = [UIImage imageNamed:@"login_button"];
-  UIImageView *login_buttonView = [[UIImageView alloc] initWithImage:login_button];
-  UIButton *login_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, login_button.size.width, login_button.size.height)];
-  [login_buttonFrame addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
-  login_buttonFrame.center = CGPointMake(self.view.bounds.size.width/2, 400);
-  [login_buttonFrame addSubview:login_buttonView];
-  [login_buttonFrame setTitle:@"Log In" forState:UIControlStateNormal];
+    UIImage *login_button = [UIImage imageNamed:@"login_button"];
+
+    UIImageView *login_buttonView = [[UIImageView alloc] initWithImage:login_button];
+    UIButton *login_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, login_button.size.width, login_button.size.height)];
+    [login_buttonFrame addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
+    login_buttonFrame.center = CGPointMake(self.view.bounds.size.width/2, 400);
+    [login_buttonFrame addSubview:login_buttonView];
+    [login_buttonFrame setTitle:@"Log In" forState:UIControlStateNormal];
+    [login_buttonFrame.layer setCornerRadius:3.0f];
+    login_buttonFrame.clipsToBounds = YES;
 
   UILabel *NotaMember = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
   NotaMember.center = CGPointMake(self.view.bounds.size.width/2-20, 440);
