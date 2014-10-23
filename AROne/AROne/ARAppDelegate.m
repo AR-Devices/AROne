@@ -71,7 +71,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  
+    [self setAppTheme];
   //calling class
   [ARSummary registerSubclass];
   [ARDataPoint registerSubclass];
@@ -93,7 +93,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   [PFFacebookUtils initializeFacebook];
   //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
 
-  [self setAppTheme];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   [self.window setRootViewController:[ARWelcomeViewController new]];
   //[self.window setRootViewController:[ARSignupViewController new]];
@@ -123,7 +122,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 - (void) setAppTheme
 {
   //set status bar to white
-  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
   //  [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
   //  [application setStatusBarStyle:UIStatusBarStyleLightContent];
 

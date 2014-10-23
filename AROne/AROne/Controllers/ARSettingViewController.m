@@ -9,6 +9,7 @@
 #import "ARSettingViewController.h"
 #import "ARLoginViewController.h"
 #import "ARPairController.h"
+#import "AREditProfileTableViewController.h"
 
 
 @interface ARSettingViewController ()
@@ -48,7 +49,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 2;
+  return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -71,17 +72,20 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
   }
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-  
-  if (indexPath.section == 0) {
-    if (indexPath.row == 0) {
-      cell.textLabel.text = @"Pair a Device";
-    } if (indexPath.row == 1) {
-      cell.textLabel.text = @"Analysis";
+
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"Pair a Device";
+        } if (indexPath.row == 1) {
+            cell.textLabel.text = @"Analysis";
+        }
+    } else if (indexPath.section == 1) {
+        cell.textLabel.text = @"Edit My Profile";
+    } else if (indexPath.section == 2) {
+        cell.textLabel.text = @"Logout";
     }
-  } else if (indexPath.section == 1)
-    cell.textLabel.text = @"Logout";
   
-  return cell;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,14 +101,16 @@
 //      analysis.hidesBottomBarWhenPushed = YES;
 //      [self.navigationController pushViewController:analysis animated:YES];
     }
-  } else if (indexPath.section == 1) {
+  } else if (indexPath.section ==1 ) {
+      AREditProfileTableViewController *editProfile = [[AREditProfileTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+      [self.navigationController pushViewController:editProfile animated:YES];
+  } else if (indexPath.section == 2) {
       NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
       [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
       [PFUser logOut];
       [self dismissViewControllerAnimated:YES completion:^{
           [[[[UIApplication sharedApplication] delegate] window] reloadInputViews];
       }];
-    [PFUser logOut];
   }
 }
 @end

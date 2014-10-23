@@ -10,6 +10,7 @@
 #import "ARSignupViewController.h"
 #import "MBProgressHUD.h"
 #import "NSString+ARAdditions.h"
+#import "UIAlertView+Addition.h"
 
 @interface ARLoginViewController ()<UITextFieldDelegate>
 
@@ -136,81 +137,76 @@
     [login_buttonFrame.layer setCornerRadius:3.0f];
     login_buttonFrame.clipsToBounds = YES;
 
-  UILabel *NotaMember = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-  NotaMember.center = CGPointMake(self.view.bounds.size.width/2-20, 440);
-  NotaMember.backgroundColor = [UIColor clearColor];
-  [NotaMember setText: @"Not a Member?"];
-  NotaMember.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-  [NotaMember setTextColor:[UIColor whiteColor]];
+    UILabel *NotaMember = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    NotaMember.center = CGPointMake(self.view.bounds.size.width/2-20, 440);
+    NotaMember.backgroundColor = [UIColor clearColor];
+    [NotaMember setText: @"Not a Member?"];
+    NotaMember.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
+    [NotaMember setTextColor:[UIColor whiteColor]];
 
-  UIButton *signup = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
-  signup.center = CGPointMake(self.view.bounds.size.width/2+50, 440);
-  [signup setTitle:@"Sign up now!" forState:UIControlStateNormal];
-  [signup addTarget:self action:@selector(signupAction:) forControlEvents:UIControlEventTouchUpInside];
-  [signup setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-  signup.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
+    UIButton *signup = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120,20)];
+    signup.center = CGPointMake(self.view.bounds.size.width/2+50, 440);
+    [signup setTitle:@"Sign up now!" forState:UIControlStateNormal];
+    [signup addTarget:self action:@selector(signupAction:) forControlEvents:UIControlEventTouchUpInside];
+    [signup setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    signup.titleLabel.font =[UIFont fontWithName:@"Avenir-Roman" size:11.0];
 
 
-  [self.view addSubview:arlogoFrame];
-  [self.view addSubview:fbFrame];
-  [self.view addSubview:gPlusFrame];
-  [self.view addSubview:dividFrame];
-  [self.view addSubview:_email];
-  [self.view addSubview:_password];
-  [self.view addSubview:forgetPass];
-  [self.view addSubview:signInOpt];
-  [self.view addSubview:login_buttonFrame];
-  [self.view addSubview:NotaMember];
-  [self.view addSubview:signup];
+    [self.view addSubview:arlogoFrame];
+    [self.view addSubview:fbFrame];
+    [self.view addSubview:gPlusFrame];
+    [self.view addSubview:dividFrame];
+    [self.view addSubview:_email];
+    [self.view addSubview:_password];
+    [self.view addSubview:forgetPass];
+    [self.view addSubview:signInOpt];
+    [self.view addSubview:login_buttonFrame];
+    [self.view addSubview:NotaMember];
+    [self.view addSubview:signup];
 }
 
 - (void) rememberMe: (UISwitch *)sender
 {
-  if (sender.on) NSLog(@"On");
-  else  NSLog(@"Off");
+    if (sender.on) NSLog(@"On");
+    else  NSLog(@"Off");
 }
 
 - (void) signupAction: (UIButton *)sender
 {
-  //Set self to listen for the message "SecondViewControllerDismissed and run a method when this message is detected
-  [[NSNotificationCenter defaultCenter] addObserver:self
+    //Set self to listen for the message "SecondViewControllerDismissed and run a method when this message is detected
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(didSignUpSuccessful:)
                                                name:@"SignUpSuccessful"
                                              object:nil];
-  //signup clicked
-//  [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
-//    //null
-//  }];
-  [self.navigationController pushViewController:[[ARSignupViewController alloc] init] animated:YES];
+    //signup clicked
+    //  [self presentViewController:[[ARSignupViewController alloc] init] animated:YES completion:^{
+    //    //null
+    //  }];
+    [self.navigationController pushViewController:[[ARSignupViewController alloc] init] animated:YES];
 }
 
 - (void)didSignUpSuccessful:(id) sender
 {
-  NSLog(@"signup successful!");
-  [self showHomeView];
+    NSLog(@"signup successful!");
+[self showHomeView];
 }
 
 - (void) loginAction: (id) sender
 {
-  [self.email resignFirstResponder];
-  [self.password resignFirstResponder];
-  [self processFieldEntries];
+    [self.email resignFirstResponder];
+    [self.password resignFirstResponder];
+    [self processFieldEntries];
 }
 
 - (void) fbButtonTouchHandler: (id) sender
 {
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   // The permissions requested from the user
-  NSArray *permissionsArray = @[ @"public_profile", @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
+  NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
 
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-//    [self.activityIndicator stopAnimating]; // Hide loading indicator
-
-    
-    
-    
-    
+//    [self.activityIndicator stopAnimating]; // Hide loading indicat
     if (!user) {
       if (!error) {
         NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -230,29 +226,34 @@
 //  [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
 
-- (void) onForget:(id) sender {    
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    NSLog(@"haha %@", self.email.text);
-    if ([NSString isStringEmpty:self.email.text] ||
-        ![self isValidEmail:self.email.text]) {
-        hud.labelText = @"Type in your email address";
-        [hud show:YES];
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            // Do something...
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-    } else {
-        [PFUser requestPasswordResetForEmailInBackground:self.email.text];
-        hud.labelText = @"Please check your email to change your password.";
-        [hud show:YES];
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            // Do something...
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-    }
+- (void) onForget:(id) sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Are you sure you want to reset your password?" delegate:nil cancelButtonTitle:@"YES" otherButtonTitles:@"NO", nil];
+    [alert showWithCompletion:^(UIAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeText;
+            NSLog(@"haha %@", self.email.text);
+            if ([NSString isStringEmpty:self.email.text] ||
+                ![self isValidEmail:self.email.text]) {
+                hud.labelText = @"Type in your email address";
+                [hud show:YES];
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    // Do something...
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                });
+            } else {
+                [PFUser requestPasswordResetForEmailInBackground:self.email.text];
+                hud.labelText = @"Please check your email to change your password.";
+                [hud show:YES];
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    // Do something...
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                });
+            }
+        }
+    }];
 }
 
 - (void)showHomeView
@@ -275,24 +276,19 @@
 - (void) populateFBData
 {
   FBRequest *request = [FBRequest requestForMe];
-
-
-
-
-
   // Send request to Facebook
   [request startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
     if (!error) {
   //      upload info to parse
-  PFQuery *query = [PFUser query];
-  PFUser *PU = [PFUser currentUser];
-  [query whereKey:@"username" equalTo:PU.username];
-  
-  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    PFQuery *query = [PFUser query];
+    PFUser *PU = [PFUser currentUser];
+    [query whereKey:@"username" equalTo:PU.username];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     NSLog(@"objects are %@", objects);
     PFObject *Puser = [objects objectAtIndex:0];
     [Puser setObject:user.name forKey:@"name"];
-//        Puser[@"name"] = user.name;
+    //        Puser[@"name"] = user.name;
     @try {
       [Puser setObject:[user objectForKey:@"email"] forKey:@"email"];
     } @catch (NSException *exception) {
@@ -304,36 +300,28 @@
     } @catch (NSException *exception) {
       NSLog(@"Puser location exception %@", exception);
     }
-    
+
     @try {
         [Puser setObject:user.birthday forKey:@"birthday"];
     }
     @catch (NSException *exception) {
         NSLog(@"Puser birthday exception %@", exception);
     }
-    //gender
-    NSDictionary* params = [NSDictionary dictionaryWithObject:@"gender" forKey:@"fields"];
-    [[FBRequest requestWithGraphPath:@"me/?fields=gender" parameters:params HTTPMethod:nil] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-      if (!error) {
-        NSString* gender = [result objectForKey:@"gender"];
-        if(gender){
-          NSLog(@"orange:: gender is %@", gender);
-          @try {
-            [Puser setObject:gender forKey:@"gender"];
-          } @catch (NSException *exception) {
-            NSLog(@"Puser gender exception %@", exception);
-          }
-        }
-      }else{
-        NSLog(@"orange:: didn't get gender");
+      
+      @try {
+          [Puser setObject:user.first_name forKey:@"displayname"];
       }
-    }];
-    
-    
-
-    
-    
-
+      @catch (NSException *exception) {
+          NSLog(@"Puser  exception displayname %@", exception);
+      }
+      
+      @try {
+          [Puser setObject:[user objectForKey:@"gender"] forKey:@"gender"];
+      }
+      @catch (NSException *exception) {
+          NSLog(@"Puser  exception displayname %@", exception);
+      }
+      
 //        Puser[@"email"] = [user objectForKey:@"email"];
 //        Puser[@"location"] = [[user objectForKey:@"location"] objectForKey:@"name"];
     
@@ -481,8 +469,8 @@
       else // Login failed for another reason
       {
         // Create an alert view to tell the user
-        alertView = [[UIAlertView alloc] initWithTitle:[[error userInfo] objectForKey:@"error"]
-                                               message:nil
+        alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                               message:error.localizedDescription
                                               delegate:self
                                      cancelButtonTitle:nil
                                      otherButtonTitles:@"Ok", nil];

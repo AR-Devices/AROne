@@ -57,6 +57,8 @@
 		3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F181017DE886D00658555 /* PMSelectionView.m */; };
 		3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F181317DE886D00658555 /* PMThemeEngine.m */; };
 		3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F181517DE886D00658555 /* PMThemeShadow.m */; };
+		3C40A8D319F8657200B71257 /* UIAlertView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C40A8D219F8657200B71257 /* UIAlertView+Addition.m */; };
+		3C40A8D619F8BABC00B71257 /* AREditProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C40A8D519F8BABC00B71257 /* AREditProfileTableViewController.m */; };
 		3C417F3F17D847510094B56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F3E17D847510094B56F /* Foundation.framework */; };
 		3C417F4117D847510094B56F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F4017D847510094B56F /* CoreGraphics.framework */; };
 		3C417F4317D847510094B56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F4217D847510094B56F /* UIKit.framework */; };
@@ -392,6 +394,10 @@
 		3C3F181317DE886D00658555 /* PMThemeEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThemeEngine.m; sourceTree = "<group>"; };
 		3C3F181417DE886D00658555 /* PMThemeShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThemeShadow.h; sourceTree = "<group>"; };
 		3C3F181517DE886D00658555 /* PMThemeShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThemeShadow.m; sourceTree = "<group>"; };
+		3C40A8D119F8657200B71257 /* UIAlertView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Addition.h"; sourceTree = "<group>"; };
+		3C40A8D219F8657200B71257 /* UIAlertView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Addition.m"; sourceTree = "<group>"; };
+		3C40A8D419F8BABC00B71257 /* AREditProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AREditProfileTableViewController.h; sourceTree = "<group>"; };
+		3C40A8D519F8BABC00B71257 /* AREditProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AREditProfileTableViewController.m; sourceTree = "<group>"; };
 		3C417F3B17D847510094B56F /* AROne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AROne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C417F3E17D847510094B56F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C417F4017D847510094B56F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -825,6 +831,45 @@
 				3C3F181517DE886D00658555 /* PMThemeShadow.m */,
 			);
 			path = PMCalendar;
+			sourceTree = "<group>";
+		};
+		3C40A8CE19F8611500B71257 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				3CFE885D18064422006CF472 /* ARSummaryViewController.h */,
+				3CFE885E18064422006CF472 /* ARSummaryViewController.m */,
+				3CFE885B18064422006CF472 /* ARSummaryGraphViewController.h */,
+				3CFE885C18064422006CF472 /* ARSummaryGraphViewController.m */,
+				EC190C071943C7B3009216E9 /* ARSummaryBarGraphViewController.h */,
+				EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */,
+				3CFE885918064422006CF472 /* ARSummaryGraphDetailViewController.h */,
+				3CFE885A18064422006CF472 /* ARSummaryGraphDetailViewController.m */,
+			);
+			name = Summary;
+			sourceTree = "<group>";
+		};
+		3C40A8CF19F8613600B71257 /* TrailSummary */ = {
+			isa = PBXGroup;
+			children = (
+				3CFE885F18064422006CF472 /* ARTrailSummaryViewController.h */,
+				3CFE886018064422006CF472 /* ARTrailSummaryViewController.m */,
+				ECE33EBC18AA0B800064F7D1 /* ARTrailSummaryMapViewController.h */,
+				ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */,
+			);
+			name = TrailSummary;
+			sourceTree = "<group>";
+		};
+		3C40A8D019F8614800B71257 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3CAE345E193595AA007FCE63 /* ARPairController.h */,
+				3CAE345F193595AA007FCE63 /* ARPairController.m */,
+				3C1A0B1618B190E800999000 /* ARSettingViewController.h */,
+				3C1A0B1718B190E800999000 /* ARSettingViewController.m */,
+				3C40A8D419F8BABC00B71257 /* AREditProfileTableViewController.h */,
+				3C40A8D519F8BABC00B71257 /* AREditProfileTableViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		3C417F3217D847510094B56F = {
@@ -1366,25 +1411,12 @@
 		3CFE885618064422006CF472 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3C40A8D019F8614800B71257 /* Settings */,
+				3C40A8CF19F8613600B71257 /* TrailSummary */,
 				3C1A0B1918B3390000999000 /* User Login/Signup */,
-				3CFE885D18064422006CF472 /* ARSummaryViewController.h */,
-				3CFE885E18064422006CF472 /* ARSummaryViewController.m */,
-				3CFE885B18064422006CF472 /* ARSummaryGraphViewController.h */,
-				3CFE885C18064422006CF472 /* ARSummaryGraphViewController.m */,
-				EC190C071943C7B3009216E9 /* ARSummaryBarGraphViewController.h */,
-				EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */,
-				3CFE885918064422006CF472 /* ARSummaryGraphDetailViewController.h */,
-				3CFE885A18064422006CF472 /* ARSummaryGraphDetailViewController.m */,
+				3C40A8CE19F8611500B71257 /* Summary */,
 				3CFE885718064422006CF472 /* ARScoreboardViewController.h */,
 				3CFE885818064422006CF472 /* ARScoreboardViewController.m */,
-				3CFE885F18064422006CF472 /* ARTrailSummaryViewController.h */,
-				3CFE886018064422006CF472 /* ARTrailSummaryViewController.m */,
-				ECE33EBC18AA0B800064F7D1 /* ARTrailSummaryMapViewController.h */,
-				ECE33EBD18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m */,
-				3C1A0B1618B190E800999000 /* ARSettingViewController.h */,
-				3C1A0B1718B190E800999000 /* ARSettingViewController.m */,
-				3CAE345E193595AA007FCE63 /* ARPairController.h */,
-				3CAE345F193595AA007FCE63 /* ARPairController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1414,6 +1446,8 @@
 				3CDAA1EE19498F6D00F2C194 /* ARNorthStar.m */,
 				3CDA4DD219F2EA06003B9B9E /* NSString+ARAdditions.h */,
 				3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */,
+				3C40A8D119F8657200B71257 /* UIAlertView+Addition.h */,
+				3C40A8D219F8657200B71257 /* UIAlertView+Addition.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1880,9 +1914,11 @@
 				3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */,
 				3CFE887C18064422006CF472 /* drawGraph.m in Sources */,
 				ECA790F61903AD30003145D6 /* BEMCircle.m in Sources */,
+				3C40A8D619F8BABC00B71257 /* AREditProfileTableViewController.m in Sources */,
 				3C7088C5194ABB1E0079EF09 /* ARTrailPoint.m in Sources */,
 				3C3F181917DE886D00658555 /* PMCalendarBackgroundView.m in Sources */,
 				3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */,
+				3C40A8D319F8657200B71257 /* UIAlertView+Addition.m in Sources */,
 				3CFE887818064422006CF472 /* ARTrailSummaryViewController.m in Sources */,
 				3CF0824518F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m in Sources */,
 				3C417F4F17D847510094B56F /* ARAppDelegate.m in Sources */,
