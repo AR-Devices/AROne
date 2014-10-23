@@ -202,7 +202,7 @@
 {
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   // The permissions requested from the user
-  NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email", @"user_work_history", @"user_likes"];
+  NSArray *permissionsArray = @[@"user_about_me", @"user_birthday", @"user_location", @"email", @"user_likes"];
 
   // Login PFUser using Facebook
   [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
