@@ -218,8 +218,8 @@
       [self populateFBData];
     } else {
       NSLog(@"User with facebook logged in!");
-      //      [self.navigationController pushViewController:[[CQProfileViewController alloc] init] animated:YES];
-      [self showHomeView];
+        [self populateFBData];
+//      [self showHomeView];
     }
 
   }];
@@ -293,6 +293,11 @@
       [Puser setObject:[user objectForKey:@"email"] forKey:@"email"];
     } @catch (NSException *exception) {
       NSLog(@"Puser email exception %@", exception);
+    }
+    @try {
+        [Puser setObject:[user objectForKey:@"email"] forKey:@"username"];
+    } @catch (NSException *exception) {
+        NSLog(@"Puser username exception %@", exception);
     }
     @try {
       [Puser setObject:[[user objectForKey:@"location"] objectForKey:@"name"] forKey:@"location"];

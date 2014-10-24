@@ -102,6 +102,7 @@
 //      [self.navigationController pushViewController:analysis animated:YES];
     }
   } else if (indexPath.section ==1 ) {
+//      ARProfileEditTableViewController *editProfile = [[ARProfileEditTableViewController alloc] init];
       AREditProfileTableViewController *editProfile = [[AREditProfileTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
       [self.navigationController pushViewController:editProfile animated:YES];
   } else if (indexPath.section == 2) {

@@ -7,17 +7,23 @@
 //
 
 #import "AREditProfileTableViewController.h"
+#import "NSString+ARAdditions.h"
+#import "AREditProfileSingleTableViewController.h"
+#import <RMDateSelectionViewController/RMDateSelectionViewController.h>
+#import <MBProgressHUD.h>
 
-@interface AREditProfileTableViewController ()
 
+@interface AREditProfileTableViewController () <RMDateSelectionViewControllerDelegate>
 @end
 
 @implementation AREditProfileTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"AppCell"];
+    self.title = @"Edit Profile";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload) name:@"reloadEditProfile" object:nil];
+
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"AppCell"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -28,6 +34,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)reload {
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -49,64 +60,113 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppCell" forIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppCell"];
-    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"AppCell"];
         if (indexPath.section == 0) {
             if (indexPath.row == 0) {
-                self.title = @"User Name";
+                cell.textLabel.text = @"User Name";
+                NSString *displayName = [PFUser currentUser][@"displayname"];
+                cell.detailTextLabel.text = displayName;
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+            } else if (indexPath.row == 1) {
+                cell.textLabel.text = @"Gender";
+                NSString *gender = [PFUser currentUser][@"gender"];
+                cell.detailTextLabel.text = gender;
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
         } else if (indexPath.section == 1) {
-            
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"Birthday";
+                cell.detailTextLabel.text = [PFUser currentUser][@"birthday"];
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+            } else if (indexPath.row == 1) {
+                cell.textLabel.text = @"Email";
+                cell.detailTextLabel.text = [PFUser currentUser][@"email"];
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            } else if (indexPath.row == 2) {
+                cell.textLabel.text = @"Facebook";
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+            }
         }
-    }
     
     
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"MY SETTINGS";
+    }
+    return @"";
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            AREditProfileSingleTableViewController *single = [[AREditProfileSingleTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            single.type = @"displayname";
+            single.placeHolder = [PFUser currentUser][@"displayname"];
+            [self.navigationController pushViewController:single animated:YES];
+        } else if (indexPath.row == 1) {
+            AREditProfileSingleTableViewController *single = [[AREditProfileSingleTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            single.type = @"gender";
+            single.placeHolder = [PFUser currentUser][@"gender"];
+            [self.navigationController pushViewController:single animated:YES];
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            NSString *data = [PFUser currentUser][@"birthday"];
+            RMDateSelectionViewController *dateSelectionVC = [RMDateSelectionViewController dateSelectionController];
+            dateSelectionVC.datePicker.datePickerMode = UIDatePickerModeDate;
+            dateSelectionVC.delegate = self;
+            if (![NSString isStringEmpty:data]) {
+                // Convert string to date object
+                NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                [dateFormat setDateFormat:@"MM/dd/yyyy"];
+                NSDate *date = [dateFormat dateFromString:data];
+                [dateSelectionVC.datePicker setDate:date];
+
+            }
+            [dateSelectionVC show];
+        } else if (indexPath.row == 1) {
+            AREditProfileSingleTableViewController *single = [[AREditProfileSingleTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            single.type = @"email";
+            single.placeHolder = [PFUser currentUser][@"email"];
+            [self.navigationController pushViewController:single animated:YES];
+        } else if (indexPath.row == 2) {
+            
+        }
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - RMDateSelectionViewController Delegates
+- (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    NSString *stringFromDate = [dateFormat stringFromDate:aDate];
+    cell.detailTextLabel.text = stringFromDate;
+    
+    PFUser *user = [PFUser currentUser];
+    [user setObject:stringFromDate forKey:@"birthday"];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        //loading and refresh
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadEditProfile" object:nil userInfo:nil];
+    }];
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
+    //Do something else
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
