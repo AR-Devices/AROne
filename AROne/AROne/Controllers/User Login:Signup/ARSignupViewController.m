@@ -40,7 +40,7 @@
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Sign Up"
                                                                   style:UIBarButtonItemStyleDone
                                                                  target:self
-                                                                 action:@selector(signUpPressed)];
+                                                                 action:@selector(loginAction)];
   self.navigationItem.rightBarButtonItem = rightButton;
     [self setSignupPage];
 }
@@ -60,15 +60,15 @@
 
 - (void) setSignupPage
 {
-  UIImage *signup_template = [UIImage imageNamed:@"signup_bg"];
+  UIImage *signup_template = [UIImage imageNamed:@"signup2_bg"];
   UIImageView *signup_templateView = [[UIImageView alloc] initWithImage:signup_template];
   UIView *signup_templateFrame = [[UIView alloc] initWithFrame:CGRectMake(5, 30, signup_template.size.width, signup_template.size.height)];
   [signup_templateFrame addSubview:signup_templateView];
   
-  UIImage *photo_button = [UIImage imageNamed:@"addPhoto"];
+  UIImage *photo_button = [UIImage imageNamed:@"addPhoto2"];
 //  UIImageView *photo_buttonView = [[UIImageView alloc] initWithImage:photo_button];
 //    UIImage *photoImage = [UIImage imageNamed:@"addPhoto"];
-  self.photo = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width-photo_button.size.width-5, 5, photo_button.size.width, photo_button.size.height)];
+  self.photo = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width/2-photo_button.size.width/2, 5, photo_button.size.width, photo_button.size.height)];
     [self.photo setImage:[UIImage imageNamed:@"addPhoto"] forState:UIControlStateNormal];
   [self.photo addTarget:self action:@selector(addPicture:) forControlEvents:UIControlEventTouchUpInside];
 //  [self.photo addSubview:photo_buttonView];
@@ -77,7 +77,7 @@
   [signup_templateFrame addSubview:self.photo];
   [self.view addSubview:signup_templateFrame];
   
-  _displayName = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 200, 30)];
+  _displayName = [[UITextField alloc] initWithFrame:CGRectMake(10, 120, 200, 30)];
   _displayName.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
   _displayName.leftViewMode = UITextFieldViewModeAlways;
   _displayName.adjustsFontSizeToFitWidth = YES;
@@ -85,12 +85,12 @@
   [_displayName setBackgroundColor:[UIColor clearColor]];
   [_displayName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
   [_displayName setTextColor:[UIColor blackColor]];
-  [_displayName setPlaceholder:@"First Name"];
+  [_displayName setPlaceholder:@"Username"];
   
   [signup_templateFrame addSubview:_displayName];
   
   
-  _email = [[UITextField alloc] initWithFrame:CGRectMake(10, 120, 200, 30)];
+  _email = [[UITextField alloc] initWithFrame:CGRectMake(10, 165, 200, 30)];
   _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
   _email.leftViewMode = UITextFieldViewModeAlways;
   _email.adjustsFontSizeToFitWidth = YES;
@@ -102,7 +102,7 @@
   
   [signup_templateFrame addSubview:_email];
   
-  _password = [[UITextField alloc] initWithFrame:CGRectMake(10, 165, 200, 30)];
+  _password = [[UITextField alloc] initWithFrame:CGRectMake(10, 210, 200, 30)];
   _password.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
   _password.leftViewMode = UITextFieldViewModeAlways;
   _password.adjustsFontSizeToFitWidth = YES;
@@ -118,14 +118,11 @@
 }
 - (void) addPicture: (id) sender
 {
-    
     [self onAddPhoto];
-    
-//  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ADD PICTURE" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-//  [alertView show];
 }
-- (void) loginAction: (id) sender
+- (void) loginAction
 {
+  [self.displayName resignFirstResponder];
   [self.email resignFirstResponder];
   [self.password resignFirstResponder];
   [self processFieldEntries];
@@ -159,20 +156,23 @@
   
   if (displayname.length == 0) {
     textError = YES;
-    errorText = @"Username ";
+    errorText = @"Username is required\n";
   }
 	if (username.length == 0) {
 		textError = YES;
-		errorText = [errorText stringByAppendingString:@"Email "];
+		errorText = [errorText stringByAppendingString:@"Email is required\n"];
 	}
   
 	if (password.length == 0) {
 		textError = YES;
-			errorText = [errorText stringByAppendingString:@"Password "];
+			errorText = [errorText stringByAppendingString:@"Password is required\n"];
 	}
+  if (password.length < 8) {
+    textError = YES;
+    errorText = [errorText stringByAppendingString:@"Password must be at least 8 characters\n"];
+  }
   
 	if (textError) {
-		errorText = [errorText stringByAppendingString:@"is missing"];
 		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
 		[alertView show];
 		return;
@@ -194,8 +194,9 @@
           self.uploadImage = [ARUtility resizeImage:self.uploadImage withSize:CGSizeMake(50, 50)];
           NSData *imageData = UIImagePNGRepresentation(self.uploadImage);
           PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:imageData];
-          newUser[@"name"] = self.displayName.text;
+//          newUser[@"name"] = self.displayName.text; this should be filled in Profile
           newUser[@"userIcon"] = imageFile;
+          newUser[@"displayname"] = self.displayName.text;
           [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
               [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
               [self showHomeView];
@@ -252,11 +253,6 @@
   return YES;
 }
 
-- (void)signUpPressed
-{
-  NSLog(@"signup");
-  [self doSignupWithUsername];
-}
 
 //new code for camera
 //UIActionSheet
