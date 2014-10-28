@@ -271,6 +271,8 @@
 		3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
 		3CFE888518064422006CF472 /* ARSummaryGraphTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE886F18064422006CF472 /* ARSummaryGraphTouchView.m */; };
 		EC190C091943C7B4009216E9 /* ARSummaryBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */; };
+		EC356C6F19FF88610034219F /* fb_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EC356C6D19FF88610034219F /* fb_button.png */; };
+		EC356C7019FF88610034219F /* fb_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC356C6E19FF88610034219F /* fb_button@2x.png */; };
 		EC458E66189499C200014337 /* trailPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC458E65189499C200014337 /* trailPathView.m */; };
 		EC458E6918949F7100014337 /* northstar-trail-map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6718949F7100014337 /* northstar-trail-map.jpg */; };
 		EC458E6A18949F7100014337 /* Northstar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC458E6818949F7100014337 /* Northstar.jpg */; };
@@ -656,6 +658,8 @@
 		D4FDF1A6069B4764BE366EA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC190C071943C7B3009216E9 /* ARSummaryBarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryBarGraphViewController.h; sourceTree = "<group>"; };
 		EC190C081943C7B4009216E9 /* ARSummaryBarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryBarGraphViewController.m; sourceTree = "<group>"; };
+		EC356C6D19FF88610034219F /* fb_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_button.png; sourceTree = "<group>"; };
+		EC356C6E19FF88610034219F /* fb_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb_button@2x.png"; sourceTree = "<group>"; };
 		EC458E64189499C200014337 /* trailPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trailPathView.h; sourceTree = "<group>"; };
 		EC458E65189499C200014337 /* trailPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trailPathView.m; sourceTree = "<group>"; };
 		EC458E6718949F7100014337 /* northstar-trail-map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "northstar-trail-map.jpg"; path = "../northstar-trail-map.jpg"; sourceTree = "<group>"; };
@@ -1087,6 +1091,8 @@
 		3CA696DA18B17791003DE25F /* login page */ = {
 			isa = PBXGroup;
 			children = (
+				EC356C6D19FF88610034219F /* fb_button.png */,
+				EC356C6E19FF88610034219F /* fb_button@2x.png */,
 				3CA696DD18B17791003DE25F /* arlogo.png */,
 				3CA696DE18B17791003DE25F /* arlogo@2x.png */,
 				3CA696DF18B17791003DE25F /* divid.png */,
@@ -1624,6 +1630,7 @@
 			files = (
 				3CDCDB2D17DE90BC00FCA0CA /* speed_selected_icon@2x.png in Resources */,
 				3CACAF6018C938BA00F8B1F6 /* welcome@2x.png in Resources */,
+				EC356C6F19FF88610034219F /* fb_button.png in Resources */,
 				3CA696F818B17791003DE25F /* input.png in Resources */,
 				EC458E6A18949F7100014337 /* Northstar.jpg in Resources */,
 				EC7DC77918CFF82700E80D0B /* addPhoto@2x.png in Resources */,
@@ -1741,6 +1748,7 @@
 				3CDCDB1117DE90BC00FCA0CA /* trail_icon.png in Resources */,
 				3CA696F618B17791003DE25F /* g+.png in Resources */,
 				3CDCDB2017DE90BC00FCA0CA /* RealTimeSpeed_icon@2x.png in Resources */,
+				EC356C7019FF88610034219F /* fb_button@2x.png in Resources */,
 				3C1A346F190077F0003AA29F /* trailsum_green.png in Resources */,
 				3C1A3466190077F0003AA29F /* mapbutton_bg@2x.png in Resources */,
 				3C1A346C190077F0003AA29F /* trailsum_black2@2x.png in Resources */,

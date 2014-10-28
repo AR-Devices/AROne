@@ -12,9 +12,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ARSignupViewController () <UITextFieldDelegate,UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (nonatomic) UITextField *firstName;
-@property (nonatomic) UITextField *lastName;
-
+@property (nonatomic) UITextField *displayName;
 @property (nonatomic) UITextField *email;
 @property (nonatomic) UITextField *password;
 @property (nonatomic, strong) UIButton *photo;
@@ -79,29 +77,18 @@
   [signup_templateFrame addSubview:self.photo];
   [self.view addSubview:signup_templateFrame];
   
-  _firstName = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 200, 30)];
-  _firstName.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _firstName.leftViewMode = UITextFieldViewModeAlways;
-  _firstName.adjustsFontSizeToFitWidth = YES;
-  _firstName.delegate = self;
-  [_firstName setBackgroundColor:[UIColor clearColor]];
-  [_firstName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_firstName setTextColor:[UIColor blackColor]];
-  [_firstName setPlaceholder:@"First Name"];
+  _displayName = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 200, 30)];
+  _displayName.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+  _displayName.leftViewMode = UITextFieldViewModeAlways;
+  _displayName.adjustsFontSizeToFitWidth = YES;
+  _displayName.delegate = self;
+  [_displayName setBackgroundColor:[UIColor clearColor]];
+  [_displayName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
+  [_displayName setTextColor:[UIColor blackColor]];
+  [_displayName setPlaceholder:@"First Name"];
   
-  [signup_templateFrame addSubview:_firstName];
+  [signup_templateFrame addSubview:_displayName];
   
-  _lastName = [[UITextField alloc] initWithFrame:CGRectMake(10, 75, 200, 30)];
-  _lastName.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-  _lastName.leftViewMode = UITextFieldViewModeAlways;
-  _lastName.adjustsFontSizeToFitWidth = YES;
-  _lastName.delegate = self;
-  [_lastName setBackgroundColor:[UIColor clearColor]];
-  [_lastName setFont:[UIFont fontWithName:@"Avenir-Roman" size:15.0]];
-  [_lastName setTextColor:[UIColor blackColor]];
-  [_lastName setPlaceholder:@"Last Name"];
-  
-  [signup_templateFrame addSubview:_lastName];
   
   _email = [[UITextField alloc] initWithFrame:CGRectMake(10, 120, 200, 30)];
   _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
@@ -127,58 +114,6 @@
   [_password setPlaceholder:@"Password"];
   
   [signup_templateFrame addSubview:_password];
-//
-//  UIImage *signup_button = [UIImage imageNamed:@"login_button"];
-//  UIImageView *signup_buttonView = [[UIImageView alloc] initWithImage:signup_button];
-//  UIButton *signup_buttonFrame = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, signup_button.size.width, signup_button.size.height)];
-//  [signup_buttonFrame addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
-//  signup_buttonFrame.center = CGPointMake(self.view.bounds.size.width/2, 350);
-//  [signup_buttonFrame addSubview:signup_buttonView];
-//  [signup_buttonFrame setTitle:@"Sign up" forState:UIControlStateNormal];
-//  
-//  _email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, signup_button.size.width, signup_button.size.height)];
-//  _email.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-//  _email.leftViewMode = UITextFieldViewModeAlways;
-//  _email.center = CGPointMake(self.view.bounds.size.width/2, 200);
-//  _email.adjustsFontSizeToFitWidth = YES;
-//  _email.delegate = self;
-//  [_email setBackground:[UIImage imageNamed:@"input"]];
-//  [_email setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-//  [_email setTextColor:[UIColor orangeColor]];
-//  [_email setPlaceholder:@"Email"];
-//
-//  _password = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, signup_button.size.width, signup_button.size.height)];
-//  _password.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-//  _password.leftViewMode = UITextFieldViewModeAlways;
-//  _password.center = CGPointMake(self.view.bounds.size.width/2, 250);
-//  _password.adjustsFontSizeToFitWidth = YES;
-//  _password.delegate = self;
-//  [_password setBackground:[UIImage imageNamed:@"input"]];
-//  [_password setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-//  [_password setTextColor:[UIColor orangeColor]];
-//  [_password setPlaceholder:@"Create Password"];
-//  [_password setSecureTextEntry:YES];
-//  
-//  _password_confirm = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, signup_button.size.width, signup_button.size.height)];
-//  _password_confirm.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-//  _password_confirm.leftViewMode = UITextFieldViewModeAlways;
-//  _password_confirm.center = CGPointMake(self.view.bounds.size.width/2, 300);
-//  _password_confirm.adjustsFontSizeToFitWidth = YES;
-//  _password_confirm.delegate = self;
-//  [_password_confirm setBackground:[UIImage imageNamed:@"input"]];
-//  [_password_confirm setFont:[UIFont fontWithName:@"Avenir-Roman" size:11.0]];
-//  [_password_confirm setTextColor:[UIColor orangeColor]];
-//  [_password_confirm setPlaceholder:@"Confirm Password"];
-//  [_password_confirm setSecureTextEntry:YES];
-//  
-//
-//  
-//  [self.view addSubview:arlogoFrame];
-//  [self.view addSubview:_email];
-//  [self.view addSubview:_password];
-//  [self.view addSubview:_password_confirm];
-//  [self.view addSubview:signup_buttonFrame];
-
 
 }
 - (void) addPicture: (id) sender
@@ -197,22 +132,23 @@
 }
 - (void)processFieldEntries {
 	// Get the username text, store it in the app delegate for now
+  NSString *displayname = self.displayName.text;
 	NSString *username = self.email.text;
 	NSString *password = self.password.text;
-  NSLog(@"user name is %@", username);
-	NSString *noUsernameText = @"username";
-	NSString *noPasswordText = @"password";
-  NSString *noPasswordConfirmText = @"confirm password";
-	NSString *errorText = @"No ";
-	NSString *errorTextJoin = @" or ";
-	NSString *errorTextEnding = @" entered";
+	NSString *errorText = @" ";
+
 	BOOL textError = NO;
   
-	// Messaging nil will return 0, so these checks implicitly check for nil text.
-	if (username.length == 0 || password.length == 0 ) {
+  /**********************************************
+   ************** validation ********************
+   **********************************************/
+  //REQUIRED FILEDS
+  if (displayname.length == 0 || username.length == 0 || password.length == 0 ) {
 		textError = YES;
     
-		// Set up the keyboard for the first field missing input:
+    if (displayname.length == 0) {
+      [self.displayName becomeFirstResponder];
+    }
 		if (password.length == 0) {
 			[self.email becomeFirstResponder];
 		}
@@ -221,28 +157,28 @@
 		}
 	}
   
+  if (displayname.length == 0) {
+    textError = YES;
+    errorText = @"Username ";
+  }
 	if (username.length == 0) {
 		textError = YES;
-		errorText = [errorText stringByAppendingString:noUsernameText];
+		errorText = [errorText stringByAppendingString:@"Email "];
 	}
   
 	if (password.length == 0) {
 		textError = YES;
-		if (username.length == 0) {
-			errorText = [errorText stringByAppendingString:errorTextJoin];
-		}
-		errorText = [errorText stringByAppendingString:noPasswordText];
+			errorText = [errorText stringByAppendingString:@"Password "];
 	}
   
 	if (textError) {
-		errorText = [errorText stringByAppendingString:errorTextEnding];
+		errorText = [errorText stringByAppendingString:@"is missing"];
 		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
 		[alertView show];
 		return;
-	}
-  
-  [self doSignupWithUsername];
-  
+  }else{
+    [self doSignupWithUsername];
+  }
 }
 
 - (void)doSignupWithUsername {
@@ -258,7 +194,7 @@
           self.uploadImage = [ARUtility resizeImage:self.uploadImage withSize:CGSizeMake(50, 50)];
           NSData *imageData = UIImagePNGRepresentation(self.uploadImage);
           PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:imageData];
-          newUser[@"name"] = [NSString stringWithFormat:@"%@ %@", self.firstName.text, self.lastName.text];
+          newUser[@"name"] = self.displayName.text;
           newUser[@"userIcon"] = imageFile;
           [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
               [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
