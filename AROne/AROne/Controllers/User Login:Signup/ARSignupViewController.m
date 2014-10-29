@@ -171,6 +171,27 @@
     textError = YES;
     errorText = [errorText stringByAppendingString:@"Password must be at least 8 characters\n"];
   }
+ 
+  
+  int count=0;
+  int dig_count=0;
+  for (int i = 0; i < [password length]; i++) {
+    BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[password characterAtIndex:i]];
+    BOOL isDecimal   = isdigit([password characterAtIndex:i]) ;//([password characterAtIndex:i]);
+
+    if (isUppercase == YES)
+      count++;
+    if (isDecimal == YES)
+      dig_count++;
+  }
+  if (count == 0){
+    textError = YES;
+    errorText = [errorText stringByAppendingString:@"Password must contain an Uppercase letter\n"];
+  }
+  if (dig_count == 0){
+    textError = YES;
+    errorText = [errorText stringByAppendingString:@"Password must contain an decimal\n"];
+  }
   
 	if (textError) {
 		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
