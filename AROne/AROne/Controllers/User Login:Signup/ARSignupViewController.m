@@ -171,13 +171,64 @@
     textError = YES;
     errorText = [errorText stringByAppendingString:@"Password must be at least 8 characters\n"];
   }
+ 
+  
+  int count=0;
+  int dig_count=0;
+  for (int i = 0; i < [password length]; i++) {
+    BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[password characterAtIndex:i]];
+    BOOL isDecimal   = isdigit([password characterAtIndex:i]) ;//([password characterAtIndex:i]);
+
+    if (isUppercase == YES)
+      count++;
+    if (isDecimal == YES)
+      dig_count++;
+  }
+  if (count == 0){
+    textError = YES;
+    errorText = [errorText stringByAppendingString:@"Password must contain an Uppercase letter\n"];
+  }
+  if (dig_count == 0){
+    textError = YES;
+    errorText = [errorText stringByAppendingString:@"Password must contain an decimal\n"];
+  }
   
 	if (textError) {
 		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorText message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
 		[alertView show];
 		return;
   }else{
-    [self doSignupWithUsername];
+    /**********************************************
+     ************** uniqueness ********************
+     **********************************************/
+     //---------------displayname query START---------------
+     PFQuery *query_displayname = [PFUser query];
+     [query_displayname whereKey:@"displayname" equalTo:self.displayName.text];
+     [query_displayname findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+       if (!error) {
+         NSLog(@"check if displayname exist: %@", objects);
+         if([objects count] > 0){
+           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"this username is already used"
+                                                               message:error.localizedDescription
+                                                              delegate:nil
+                                                     cancelButtonTitle:@"OK"
+                                                     otherButtonTitles:nil];
+           [alertView show];
+           return;
+         }else{
+           [self doSignupWithUsername];
+         }
+       } else {
+         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                             message:error.localizedDescription
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+         [alertView show];
+         return;
+       }
+     }];
+     //---------------displayname query END---------------
   }
 }
 
@@ -190,17 +241,21 @@
     [newUser setEmail:_email.text];
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
       if (succeeded) {
+
         // Create next view controller to show
           self.uploadImage = [ARUtility resizeImage:self.uploadImage withSize:CGSizeMake(50, 50)];
           NSData *imageData = UIImagePNGRepresentation(self.uploadImage);
           PFFile *imageFile = [PFFile fileWithName:@"icon_square" data:imageData];
-//          newUser[@"name"] = self.displayName.text; this should be filled in Profile
           newUser[@"userIcon"] = imageFile;
           newUser[@"displayname"] = self.displayName.text;
+          //--------------save to Parse if it's a unique user
           [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-              [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-              [self showHomeView];
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            [self showHomeView];
           }];
+          
+
+
       }
       else // Login failed
       {
