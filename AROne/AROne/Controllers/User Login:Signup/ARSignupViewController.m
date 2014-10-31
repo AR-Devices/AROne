@@ -60,19 +60,19 @@
 
 - (void) setSignupPage
 {
-  UIImage *signup_template = [UIImage imageNamed:@"signup2_bg"];
-  UIImageView *signup_templateView = [[UIImageView alloc] initWithImage:signup_template];
-  UIView *signup_templateFrame = [[UIView alloc] initWithFrame:CGRectMake(5, 30, signup_template.size.width, signup_template.size.height)];
-  [signup_templateFrame addSubview:signup_templateView];
+    UIImage *signup_template = [UIImage imageNamed:@"signup2_bg"];
+    UIImageView *signup_templateView = [[UIImageView alloc] initWithImage:signup_template];
+    UIView *signup_templateFrame = [[UIView alloc] initWithFrame:CGRectMake(5, 30, signup_template.size.width, signup_template.size.height)];
+    [signup_templateFrame addSubview:signup_templateView];
   
-  UIImage *photo_button = [UIImage imageNamed:@"addPhoto2"];
+    UIImage *photo_button = [UIImage imageNamed:@"addPhoto"];
 //  UIImageView *photo_buttonView = [[UIImageView alloc] initWithImage:photo_button];
 //    UIImage *photoImage = [UIImage imageNamed:@"addPhoto"];
-  self.photo = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width/2-photo_button.size.width/2, 5, photo_button.size.width, photo_button.size.height)];
+    self.photo = [[UIButton alloc] initWithFrame:CGRectMake(signup_template.size.width/2-photo_button.size.width/2, 5, photo_button.size.width, photo_button.size.height)];
+    [self.photo.layer setCornerRadius:self.photo.bounds.size.height/2];
     [self.photo setImage:[UIImage imageNamed:@"addPhoto"] forState:UIControlStateNormal];
   [self.photo addTarget:self action:@selector(addPicture:) forControlEvents:UIControlEventTouchUpInside];
 //  [self.photo addSubview:photo_buttonView];
-    [self.photo.layer setCornerRadius:3.0f];
     self.photo.clipsToBounds = YES;
   [signup_templateFrame addSubview:self.photo];
   [self.view addSubview:signup_templateFrame];

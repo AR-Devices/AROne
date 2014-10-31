@@ -14,7 +14,8 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
   #import <Parse/Parse.h>
-  #import <FacebookSDK/FacebookSDK.h>
+  #import <ParseFacebookUtils/PFFacebookUtils.h>
+//  #import <FacebookSDK/FacebookSDK.h>
 #endif
 
 #import "JBConstants.h"
