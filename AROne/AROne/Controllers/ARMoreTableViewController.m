@@ -9,6 +9,8 @@
 #import "ARMoreTableViewController.h"
 #import "AREditProfileTableViewController.h"
 #import "ARProfileViewController.h"
+#import "ARFriendListController.h"
+#import "ARSuggestFriendsViewController.h"
 
 
 @interface ARMoreTableViewController ()
@@ -67,12 +69,7 @@
         } else if (indexPath.row == 1) {
             cell.textLabel.text = @"My Friend List";
             cell.imageView.image = [UIImage imageNamed:@"Friendslist"];
-            UISwitch *toggle = [UISwitch new];
-            toggle.tag = 0;
-            [toggle addTarget:self action:@selector(onToggle:) forControlEvents:UIControlEventValueChanged];
-//            [toggle setOn:[SettingsManager canReminder]];
-            cell.accessoryView = toggle;
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         } else if (indexPath.row == 2) {
             cell.textLabel.text = @"Hide My Location";
             cell.imageView.image = [UIImage imageNamed:@"myLocation"];
@@ -117,6 +114,10 @@
         if (indexPath.row == 0) {
             AREditProfileTableViewController *editProfile = [[AREditProfileTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:editProfile animated:YES];
+        } else if (indexPath.row == 1) {
+//            ARFriendListController *friendList = [ARFriendListController new];
+            ARSuggestFriendsViewController *friends = [ARSuggestFriendsViewController new];
+            [self.navigationController pushViewController:friends animated:YES];
         }
     } else if (indexPath.section == 2) {
         NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];

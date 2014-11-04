@@ -18,7 +18,13 @@
 @end
 
 @implementation ARMapViewController
-
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.title = @"BuddyTracker";
+    }
+    return self;
+}
 
 #pragma mark - UIViewController
 
