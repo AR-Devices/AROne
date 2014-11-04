@@ -4,6 +4,9 @@ platform :ios, '7.0'
 pod 'MBProgressHUD', '~> 0.8'
 pod 'SGNavigationProgress'
 pod 'AFNetworking', '~> 2.0'
-pod 'JBChartView', '~> 2.5.5'
 pod "RMDateSelectionViewController", "~> 1.4.0"
-
+pod 'DZNSegmentedControl', :head
+pod "UIImageView-Letters"
+pod 'SVProgressHUD'
+pod 'NSDate+TimeAgo'
+pod 'MSDynamicsDrawerViewController'

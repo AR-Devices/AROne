@@ -45,7 +45,6 @@
 		3C417F4917D847510094B56F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C417F4717D847510094B56F /* InfoPlist.strings */; };
 		3C417F4B17D847510094B56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C417F4A17D847510094B56F /* main.m */; };
 		3C417F4F17D847510094B56F /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C417F4E17D847510094B56F /* ARAppDelegate.m */; };
-		3C417F5117D847510094B56F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C417F5017D847510094B56F /* Images.xcassets */; };
 		3C417F5817D847510094B56F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F5717D847510094B56F /* XCTest.framework */; };
 		3C417F5917D847510094B56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F3E17D847510094B56F /* Foundation.framework */; };
 		3C417F5A17D847510094B56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C417F4217D847510094B56F /* UIKit.framework */; };
@@ -92,7 +91,6 @@
 		3C7D63C519E90D55006644F5 /* profile7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B619E90D55006644F5 /* profile7.png */; };
 		3C7D63C619E90D55006644F5 /* profile9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B719E90D55006644F5 /* profile9.png */; };
 		3C7D63C719E90D55006644F5 /* Troy Banham 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B819E90D55006644F5 /* Troy Banham 02.png */; };
-		3C7D63CC19E91633006644F5 /* ARUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D63CB19E91633006644F5 /* ARUtility.m */; };
 		3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40C18ACA84E0051BE54 /* ARDevice.m */; };
 		3CACAF3C18C91DFB00F8B1F6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */; };
 		3CACAF6718CB0C8A00F8B1F6 /* ARDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACAF6618CB0C8A00F8B1F6 /* ARDataPoint.m */; };
@@ -110,6 +108,37 @@
 		3CAE349119359FDE007FCE63 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348519359FDE007FCE63 /* JBChartTooltipTipView.m */; };
 		3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */; };
 		3CAF438C18C1660E00356116 /* ARSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF438B18C1660E00356116 /* ARSummary.m */; };
+		3CB35E341A0868E100D763A1 /* ARMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E331A0868E100D763A1 /* ARMoreTableViewController.m */; };
+		3CB35E381A0882DF00D763A1 /* ARMoreUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E361A0882DF00D763A1 /* ARMoreUserTableViewCell.m */; };
+		3CB35E391A0882DF00D763A1 /* ARMoreUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB35E371A0882DF00D763A1 /* ARMoreUserTableViewCell.xib */; };
+		3CB35E561A08862600D763A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB35E551A08862600D763A1 /* Images.xcassets */; };
+		3CB35E771A0890F900D763A1 /* ARUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E711A0890F900D763A1 /* ARUtility.m */; };
+		3CB35E7B1A08912100D763A1 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E7A1A08912100D763A1 /* MPGTextField.m */; };
+		3CB35E861A08914700D763A1 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E7F1A08914700D763A1 /* JBBarChartView.m */; };
+		3CB35E871A08914700D763A1 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E811A08914700D763A1 /* JBChartView.m */; };
+		3CB35E881A08914700D763A1 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E831A08914700D763A1 /* JBLineChartView.m */; };
+		3CB35E891A08914700D763A1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3CB35E841A08914700D763A1 /* LICENSE */; };
+		3CB35E8E1A08915000D763A1 /* BMInitialsPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35E8D1A08915000D763A1 /* BMInitialsPlaceholderView.m */; };
+		3CB35EEB1A08927C00D763A1 /* ARFriendAddAcceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ECC1A08927C00D763A1 /* ARFriendAddAcceptViewController.m */; };
+		3CB35EEC1A08927C00D763A1 /* ARFriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ECE1A08927C00D763A1 /* ARFriendListController.m */; };
+		3CB35EED1A08927C00D763A1 /* ARFriendListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB35ECF1A08927C00D763A1 /* ARFriendListController.xib */; };
+		3CB35EEE1A08927C00D763A1 /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ED11A08927C00D763A1 /* ARMapViewController.m */; };
+		3CB35EEF1A08927C00D763A1 /* ARMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ED31A08927C00D763A1 /* ARMenuViewController.m */; };
+		3CB35EF01A08927C00D763A1 /* ARProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ED51A08927C00D763A1 /* ARProfileViewController.m */; };
+		3CB35EF11A08927C00D763A1 /* ARSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ED71A08927C00D763A1 /* ARSettingsViewController.m */; };
+		3CB35EF21A08927C00D763A1 /* ARSuggestFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35ED91A08927C00D763A1 /* ARSuggestFriendsViewController.m */; };
+		3CB35EF31A08927C00D763A1 /* ARSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EDB1A08927C00D763A1 /* ARSummaryTableViewController.m */; };
+		3CB35EF41A08927C00D763A1 /* CCBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EDE1A08927C00D763A1 /* CCBaseNavigationController.m */; };
+		3CB35EF51A08927C00D763A1 /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EE01A08927C00D763A1 /* CCBaseTabBarController.m */; };
+		3CB35EF61A08927C00D763A1 /* CCBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EE21A08927C00D763A1 /* CCBaseTableViewController.m */; };
+		3CB35EF71A08927C00D763A1 /* CCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EE41A08927C00D763A1 /* CCBaseViewController.m */; };
+		3CB35EF81A08927C00D763A1 /* MSMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EE61A08927C00D763A1 /* MSMenuCell.m */; };
+		3CB35EF91A08927C00D763A1 /* MSMenuTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EE81A08927C00D763A1 /* MSMenuTableViewHeader.m */; };
+		3CB35EFA1A08927C00D763A1 /* CCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EEA1A08927C00D763A1 /* CCHomeViewController.m */; };
+		3CB35F031A0898F600D763A1 /* ARProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EFD1A0898F600D763A1 /* ARProfileHeaderView.m */; };
+		3CB35F041A0898F600D763A1 /* ARUserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35EFF1A0898F600D763A1 /* ARUserListCell.m */; };
+		3CB35F051A0898F600D763A1 /* ARUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB35F011A0898F600D763A1 /* ARUserTableViewCell.m */; };
+		3CB35F061A0898F600D763A1 /* ARUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB35F021A0898F600D763A1 /* ARUserTableViewCell.xib */; };
 		3CDA4DD419F2EA06003B9B9E /* NSString+ARAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */; };
 		3CDAA1EF19498F6D00F2C194 /* ARNorthStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA1EE19498F6D00F2C194 /* ARNorthStar.m */; };
 		3CDAA1F2194991D000F2C194 /* ARCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA1F1194991D000F2C194 /* ARCommon.m */; };
@@ -257,7 +286,6 @@
 		3C417F4C17D847510094B56F /* AROne-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AROne-Prefix.pch"; sourceTree = "<group>"; };
 		3C417F4D17D847510094B56F /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		3C417F4E17D847510094B56F /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
-		3C417F5017D847510094B56F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C417F5617D847510094B56F /* AROneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AROneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C417F5717D847510094B56F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3C417F5F17D847510094B56F /* AROneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AROneTests-Info.plist"; sourceTree = "<group>"; };
@@ -310,8 +338,6 @@
 		3C7D63B619E90D55006644F5 /* profile7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile7.png; sourceTree = "<group>"; };
 		3C7D63B719E90D55006644F5 /* profile9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile9.png; sourceTree = "<group>"; };
 		3C7D63B819E90D55006644F5 /* Troy Banham 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Troy Banham 02.png"; sourceTree = "<group>"; };
-		3C7D63CA19E91633006644F5 /* ARUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUtility.h; sourceTree = "<group>"; };
-		3C7D63CB19E91633006644F5 /* ARUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUtility.m; sourceTree = "<group>"; };
 		3C92D40B18ACA84E0051BE54 /* ARDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDevice.h; sourceTree = "<group>"; };
 		3C92D40C18ACA84E0051BE54 /* ARDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDevice.m; sourceTree = "<group>"; };
 		3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -350,6 +376,68 @@
 		3CAE348719359FDE007FCE63 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
 		3CAF438A18C1660E00356116 /* ARSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARSummary.h; path = Parse/ARSummary.h; sourceTree = "<group>"; };
 		3CAF438B18C1660E00356116 /* ARSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARSummary.m; path = Parse/ARSummary.m; sourceTree = "<group>"; };
+		3CB35E321A0868E100D763A1 /* ARMoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMoreTableViewController.h; sourceTree = "<group>"; };
+		3CB35E331A0868E100D763A1 /* ARMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMoreTableViewController.m; sourceTree = "<group>"; };
+		3CB35E351A0882DF00D763A1 /* ARMoreUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARMoreUserTableViewCell.h; path = Views/ARMoreUserTableViewCell.h; sourceTree = "<group>"; };
+		3CB35E361A0882DF00D763A1 /* ARMoreUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARMoreUserTableViewCell.m; path = Views/ARMoreUserTableViewCell.m; sourceTree = "<group>"; };
+		3CB35E371A0882DF00D763A1 /* ARMoreUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ARMoreUserTableViewCell.xib; path = Views/ARMoreUserTableViewCell.xib; sourceTree = "<group>"; };
+		3CB35E551A08862600D763A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CB35E701A0890F900D763A1 /* ARUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUtility.h; sourceTree = "<group>"; };
+		3CB35E711A0890F900D763A1 /* ARUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUtility.m; sourceTree = "<group>"; };
+		3CB35E721A0890F900D763A1 /* CCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCConstants.h; sourceTree = "<group>"; };
+		3CB35E731A0890F900D763A1 /* CCUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUIConstants.h; sourceTree = "<group>"; };
+		3CB35E741A0890F900D763A1 /* CCFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFontConstants.h; sourceTree = "<group>"; };
+		3CB35E751A0890F900D763A1 /* CCStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStringConstants.h; sourceTree = "<group>"; };
+		3CB35E761A0890F900D763A1 /* CCColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCColorConstants.h; sourceTree = "<group>"; };
+		3CB35E791A08912100D763A1 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
+		3CB35E7A1A08912100D763A1 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
+		3CB35E7E1A08914700D763A1 /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
+		3CB35E7F1A08914700D763A1 /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
+		3CB35E801A08914700D763A1 /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
+		3CB35E811A08914700D763A1 /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
+		3CB35E821A08914700D763A1 /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
+		3CB35E831A08914700D763A1 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		3CB35E841A08914700D763A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3CB35E8C1A08915000D763A1 /* BMInitialsPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInitialsPlaceholderView.h; sourceTree = "<group>"; };
+		3CB35E8D1A08915000D763A1 /* BMInitialsPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInitialsPlaceholderView.m; sourceTree = "<group>"; };
+		3CB35ECB1A08927C00D763A1 /* ARFriendAddAcceptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendAddAcceptViewController.h; sourceTree = "<group>"; };
+		3CB35ECC1A08927C00D763A1 /* ARFriendAddAcceptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendAddAcceptViewController.m; sourceTree = "<group>"; };
+		3CB35ECD1A08927C00D763A1 /* ARFriendListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFriendListController.h; sourceTree = "<group>"; };
+		3CB35ECE1A08927C00D763A1 /* ARFriendListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFriendListController.m; sourceTree = "<group>"; };
+		3CB35ECF1A08927C00D763A1 /* ARFriendListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFriendListController.xib; sourceTree = "<group>"; };
+		3CB35ED01A08927C00D763A1 /* ARMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
+		3CB35ED11A08927C00D763A1 /* ARMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
+		3CB35ED21A08927C00D763A1 /* ARMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMenuViewController.h; sourceTree = "<group>"; };
+		3CB35ED31A08927C00D763A1 /* ARMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMenuViewController.m; sourceTree = "<group>"; };
+		3CB35ED41A08927C00D763A1 /* ARProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARProfileViewController.h; sourceTree = "<group>"; };
+		3CB35ED51A08927C00D763A1 /* ARProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARProfileViewController.m; sourceTree = "<group>"; };
+		3CB35ED61A08927C00D763A1 /* ARSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSettingsViewController.h; sourceTree = "<group>"; };
+		3CB35ED71A08927C00D763A1 /* ARSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSettingsViewController.m; sourceTree = "<group>"; };
+		3CB35ED81A08927C00D763A1 /* ARSuggestFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSuggestFriendsViewController.h; sourceTree = "<group>"; };
+		3CB35ED91A08927C00D763A1 /* ARSuggestFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSuggestFriendsViewController.m; sourceTree = "<group>"; };
+		3CB35EDA1A08927C00D763A1 /* ARSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSummaryTableViewController.h; sourceTree = "<group>"; };
+		3CB35EDB1A08927C00D763A1 /* ARSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSummaryTableViewController.m; sourceTree = "<group>"; };
+		3CB35EDD1A08927C00D763A1 /* CCBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseNavigationController.h; sourceTree = "<group>"; };
+		3CB35EDE1A08927C00D763A1 /* CCBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseNavigationController.m; sourceTree = "<group>"; };
+		3CB35EDF1A08927C00D763A1 /* CCBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseTabBarController.h; sourceTree = "<group>"; };
+		3CB35EE01A08927C00D763A1 /* CCBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseTabBarController.m; sourceTree = "<group>"; };
+		3CB35EE11A08927C00D763A1 /* CCBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseTableViewController.h; sourceTree = "<group>"; };
+		3CB35EE21A08927C00D763A1 /* CCBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseTableViewController.m; sourceTree = "<group>"; };
+		3CB35EE31A08927C00D763A1 /* CCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseViewController.h; sourceTree = "<group>"; };
+		3CB35EE41A08927C00D763A1 /* CCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseViewController.m; sourceTree = "<group>"; };
+		3CB35EE51A08927C00D763A1 /* MSMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMenuCell.h; sourceTree = "<group>"; };
+		3CB35EE61A08927C00D763A1 /* MSMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuCell.m; sourceTree = "<group>"; };
+		3CB35EE71A08927C00D763A1 /* MSMenuTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMenuTableViewHeader.h; sourceTree = "<group>"; };
+		3CB35EE81A08927C00D763A1 /* MSMenuTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMenuTableViewHeader.m; sourceTree = "<group>"; };
+		3CB35EE91A08927C00D763A1 /* CCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHomeViewController.h; sourceTree = "<group>"; };
+		3CB35EEA1A08927C00D763A1 /* CCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHomeViewController.m; sourceTree = "<group>"; };
+		3CB35EFC1A0898F600D763A1 /* ARProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARProfileHeaderView.h; sourceTree = "<group>"; };
+		3CB35EFD1A0898F600D763A1 /* ARProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARProfileHeaderView.m; sourceTree = "<group>"; };
+		3CB35EFE1A0898F600D763A1 /* ARUserListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserListCell.h; sourceTree = "<group>"; };
+		3CB35EFF1A0898F600D763A1 /* ARUserListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserListCell.m; sourceTree = "<group>"; };
+		3CB35F001A0898F600D763A1 /* ARUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARUserTableViewCell.h; sourceTree = "<group>"; };
+		3CB35F011A0898F600D763A1 /* ARUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARUserTableViewCell.m; sourceTree = "<group>"; };
+		3CB35F021A0898F600D763A1 /* ARUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUserTableViewCell.xib; sourceTree = "<group>"; };
 		3CDA4DD219F2EA06003B9B9E /* NSString+ARAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ARAdditions.h"; sourceTree = "<group>"; };
 		3CDA4DD319F2EA06003B9B9E /* NSString+ARAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ARAdditions.m"; sourceTree = "<group>"; };
 		3CDAA1EC19498D1400F2C194 /* ARBLEConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARBLEConstants.h; path = Models/ARBLEConstants.h; sourceTree = "<group>"; };
@@ -589,6 +677,8 @@
 				3C40A8D519F8BABC00B71257 /* AREditProfileTableViewController.m */,
 				3C40A8F719F9E7E900B71257 /* AREditProfileSingleTableViewController.h */,
 				3C40A8F819F9E7E900B71257 /* AREditProfileSingleTableViewController.m */,
+				3CB35E321A0868E100D763A1 /* ARMoreTableViewController.h */,
+				3CB35E331A0868E100D763A1 /* ARMoreTableViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -596,9 +686,13 @@
 		3C40A8F319F9E71200B71257 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CB35EFB1A0898F600D763A1 /* AR2 Views */,
 				3C40A8FA19F9EA7F00B71257 /* KPEditTextTableViewCell.xib */,
 				3C40A8FB19F9EA7F00B71257 /* KPEditTextTableViewCell.h */,
 				3C40A8FC19F9EA7F00B71257 /* KPEditTextTableViewCell.m */,
+				3CB35E351A0882DF00D763A1 /* ARMoreUserTableViewCell.h */,
+				3CB35E361A0882DF00D763A1 /* ARMoreUserTableViewCell.m */,
+				3CB35E371A0882DF00D763A1 /* ARMoreUserTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -667,7 +761,6 @@
 				3CFE886718064422006CF472 /* Views */,
 				3C417F4D17D847510094B56F /* ARAppDelegate.h */,
 				3C417F4E17D847510094B56F /* ARAppDelegate.m */,
-				3C417F5017D847510094B56F /* Images.xcassets */,
 				3C417F4517D847510094B56F /* Supporting Files */,
 				3CDAA1EC19498D1400F2C194 /* ARBLEConstants.h */,
 			);
@@ -677,6 +770,7 @@
 		3C417F4517D847510094B56F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3CB35E551A08862600D763A1 /* Images.xcassets */,
 				3CDCDAA617DE90BC00FCA0CA /* images */,
 				3C41800E17D85C470094B56F /* fonts */,
 				3C417F4617D847510094B56F /* AROne-Info.plist */,
@@ -708,6 +802,9 @@
 		3C417FCB17D84B560094B56F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				3CB35E8B1A08915000D763A1 /* BMInitialsPlaceholderView */,
+				3CB35E7C1A08914700D763A1 /* JBChartView */,
+				3CB35E781A08912100D763A1 /* MPGTextField */,
 				3C2CDDC2193C400500E28DFA /* LGBluetooth */,
 				3CAE346519359FDE007FCE63 /* JawboneGraph */,
 				3CAE346119359F63007FCE63 /* DKCircleButton */,
@@ -786,8 +883,13 @@
 		3C7D63C919E91622006644F5 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				3C7D63CA19E91633006644F5 /* ARUtility.h */,
-				3C7D63CB19E91633006644F5 /* ARUtility.m */,
+				3CB35E701A0890F900D763A1 /* ARUtility.h */,
+				3CB35E711A0890F900D763A1 /* ARUtility.m */,
+				3CB35E721A0890F900D763A1 /* CCConstants.h */,
+				3CB35E731A0890F900D763A1 /* CCUIConstants.h */,
+				3CB35E741A0890F900D763A1 /* CCFontConstants.h */,
+				3CB35E751A0890F900D763A1 /* CCStringConstants.h */,
+				3CB35E761A0890F900D763A1 /* CCColorConstants.h */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -938,9 +1040,118 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
+		3CB35E571A08868C00D763A1 /* behavior_icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = behavior_icons;
+			sourceTree = "<group>";
+		};
+		3CB35E781A08912100D763A1 /* MPGTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35E791A08912100D763A1 /* MPGTextField.h */,
+				3CB35E7A1A08912100D763A1 /* MPGTextField.m */,
+			);
+			path = MPGTextField;
+			sourceTree = "<group>";
+		};
+		3CB35E7C1A08914700D763A1 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35E7D1A08914700D763A1 /* Classes */,
+				3CB35E841A08914700D763A1 /* LICENSE */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		3CB35E7D1A08914700D763A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35E7E1A08914700D763A1 /* JBBarChartView.h */,
+				3CB35E7F1A08914700D763A1 /* JBBarChartView.m */,
+				3CB35E801A08914700D763A1 /* JBChartView.h */,
+				3CB35E811A08914700D763A1 /* JBChartView.m */,
+				3CB35E821A08914700D763A1 /* JBLineChartView.h */,
+				3CB35E831A08914700D763A1 /* JBLineChartView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3CB35E8B1A08915000D763A1 /* BMInitialsPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35E8C1A08915000D763A1 /* BMInitialsPlaceholderView.h */,
+				3CB35E8D1A08915000D763A1 /* BMInitialsPlaceholderView.m */,
+			);
+			path = BMInitialsPlaceholderView;
+			sourceTree = "<group>";
+		};
+		3CB35ECA1A08927C00D763A1 /* AR2 Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35ECB1A08927C00D763A1 /* ARFriendAddAcceptViewController.h */,
+				3CB35ECC1A08927C00D763A1 /* ARFriendAddAcceptViewController.m */,
+				3CB35ECD1A08927C00D763A1 /* ARFriendListController.h */,
+				3CB35ECE1A08927C00D763A1 /* ARFriendListController.m */,
+				3CB35ECF1A08927C00D763A1 /* ARFriendListController.xib */,
+				3CB35ED01A08927C00D763A1 /* ARMapViewController.h */,
+				3CB35ED11A08927C00D763A1 /* ARMapViewController.m */,
+				3CB35ED21A08927C00D763A1 /* ARMenuViewController.h */,
+				3CB35ED31A08927C00D763A1 /* ARMenuViewController.m */,
+				3CB35ED41A08927C00D763A1 /* ARProfileViewController.h */,
+				3CB35ED51A08927C00D763A1 /* ARProfileViewController.m */,
+				3CB35ED61A08927C00D763A1 /* ARSettingsViewController.h */,
+				3CB35ED71A08927C00D763A1 /* ARSettingsViewController.m */,
+				3CB35ED81A08927C00D763A1 /* ARSuggestFriendsViewController.h */,
+				3CB35ED91A08927C00D763A1 /* ARSuggestFriendsViewController.m */,
+				3CB35EDA1A08927C00D763A1 /* ARSummaryTableViewController.h */,
+				3CB35EDB1A08927C00D763A1 /* ARSummaryTableViewController.m */,
+				3CB35EDC1A08927C00D763A1 /* Base */,
+				3CB35EE91A08927C00D763A1 /* CCHomeViewController.h */,
+				3CB35EEA1A08927C00D763A1 /* CCHomeViewController.m */,
+			);
+			path = "AR2 Controllers";
+			sourceTree = "<group>";
+		};
+		3CB35EDC1A08927C00D763A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35EDD1A08927C00D763A1 /* CCBaseNavigationController.h */,
+				3CB35EDE1A08927C00D763A1 /* CCBaseNavigationController.m */,
+				3CB35EDF1A08927C00D763A1 /* CCBaseTabBarController.h */,
+				3CB35EE01A08927C00D763A1 /* CCBaseTabBarController.m */,
+				3CB35EE11A08927C00D763A1 /* CCBaseTableViewController.h */,
+				3CB35EE21A08927C00D763A1 /* CCBaseTableViewController.m */,
+				3CB35EE31A08927C00D763A1 /* CCBaseViewController.h */,
+				3CB35EE41A08927C00D763A1 /* CCBaseViewController.m */,
+				3CB35EE51A08927C00D763A1 /* MSMenuCell.h */,
+				3CB35EE61A08927C00D763A1 /* MSMenuCell.m */,
+				3CB35EE71A08927C00D763A1 /* MSMenuTableViewHeader.h */,
+				3CB35EE81A08927C00D763A1 /* MSMenuTableViewHeader.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3CB35EFB1A0898F600D763A1 /* AR2 Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CB35EFC1A0898F600D763A1 /* ARProfileHeaderView.h */,
+				3CB35EFD1A0898F600D763A1 /* ARProfileHeaderView.m */,
+				3CB35EFE1A0898F600D763A1 /* ARUserListCell.h */,
+				3CB35EFF1A0898F600D763A1 /* ARUserListCell.m */,
+				3CB35F001A0898F600D763A1 /* ARUserTableViewCell.h */,
+				3CB35F011A0898F600D763A1 /* ARUserTableViewCell.m */,
+				3CB35F021A0898F600D763A1 /* ARUserTableViewCell.xib */,
+			);
+			name = "AR2 Views";
+			path = "Views/AR2 Views";
+			sourceTree = "<group>";
+		};
 		3CDCDAA617DE90BC00FCA0CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3CB35E571A08868C00D763A1 /* behavior_icons */,
 				3C7D63A919E90D55006644F5 /* profile_picture */,
 				3C1A3446190077EF003AA29F /* trailsummary */,
 				EC7DC77118CFF7C000E80D0B /* signup */,
@@ -1036,6 +1247,7 @@
 		3CFE885618064422006CF472 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CB35ECA1A08927C00D763A1 /* AR2 Controllers */,
 				3C40A8D019F8614800B71257 /* Settings */,
 				3C40A8CF19F8613600B71257 /* TrailSummary */,
 				3C1A0B1918B3390000999000 /* User Login/Signup */,
@@ -1239,19 +1451,23 @@
 				3C7D63C719E90D55006644F5 /* Troy Banham 02.png in Resources */,
 				EC8D412418CBEB4900FC0B2A /* ipad72x72.png in Resources */,
 				EC8D412018CBEB4900FC0B2A /* icon76X76.png in Resources */,
+				3CB35E561A08862600D763A1 /* Images.xcassets in Resources */,
 				EC5ECAEA1900DC5A00B4FB6E /* Kirkwood-Trail-Map-Lake-Tahoe.jpg in Resources */,
 				3C7D63BE19E90D55006644F5 /* Judith Campbell 04.png in Resources */,
 				3C7D63BF19E90D55006644F5 /* Katherine Castelao 08.png in Resources */,
 				3C7D63BB19E90D55006644F5 /* Carlos Mugisha 07.png in Resources */,
 				3C7D63C619E90D55006644F5 /* profile9.png in Resources */,
 				3C7D63BA19E90D55006644F5 /* Carlito Baker 01.png in Resources */,
+				3CB35F061A0898F600D763A1 /* ARUserTableViewCell.xib in Resources */,
 				3C6EA85B180E612C0043216D /* graph_bg2@2x.png in Resources */,
 				EC8D411F18CBEB4900FC0B2A /* icon60X60.png in Resources */,
+				3CB35E391A0882DF00D763A1 /* ARMoreUserTableViewCell.xib in Resources */,
 				3C6EA84D180E5AF90043216D /* element1.png in Resources */,
 				3CDCDB0217DE90BC00FCA0CA /* accelerationCircle.png in Resources */,
+				3CB35E891A08914700D763A1 /* LICENSE in Resources */,
 				EC8D412218CBEB4900FC0B2A /* icon120X120.png in Resources */,
+				3CB35EED1A08927C00D763A1 /* ARFriendListController.xib in Resources */,
 				EC8D412318CBEB4900FC0B2A /* icon152X152.png in Resources */,
-				3C417F5117D847510094B56F /* Images.xcassets in Resources */,
 				3C6EA859180E612C0043216D /* graph_bg2.png in Resources */,
 				3C7D63C519E90D55006644F5 /* profile7.png in Resources */,
 				EC8D411C18CBEB4900FC0B2A /* icon29X29.png in Resources */,
@@ -1346,7 +1562,6 @@
 			files = (
 				3C3F182017DE886D00658555 /* PMThemeShadow.m in Sources */,
 				3CF0824D18F7B48E00470DFA /* PAImageView.m in Sources */,
-				3C7D63CC19E91633006644F5 /* ARUtility.m in Sources */,
 				3C417FE717D84B560094B56F /* AKTabBarView.m in Sources */,
 				ECE33EBE18AA0B800064F7D1 /* ARTrailSummaryMapViewController.m in Sources */,
 				3CAE348919359FDE007FCE63 /* JBBaseNavigationController.m in Sources */,
@@ -1355,16 +1570,28 @@
 				3CAE348819359FDE007FCE63 /* JBBaseChartViewController.m in Sources */,
 				3C1A0B1818B190E800999000 /* ARSettingViewController.m in Sources */,
 				3CAE349119359FDE007FCE63 /* JBChartTooltipTipView.m in Sources */,
+				3CB35E7B1A08912100D763A1 /* MPGTextField.m in Sources */,
+				3CB35EF91A08927C00D763A1 /* MSMenuTableViewHeader.m in Sources */,
+				3CB35E881A08914700D763A1 /* JBLineChartView.m in Sources */,
 				3CFE887A18064422006CF472 /* ARTopBarView.m in Sources */,
+				3CB35E381A0882DF00D763A1 /* ARMoreUserTableViewCell.m in Sources */,
+				3CB35EEC1A08927C00D763A1 /* ARFriendListController.m in Sources */,
+				3CB35EF81A08927C00D763A1 /* MSMenuCell.m in Sources */,
 				3CFE888218064422006CF472 /* ARSummaryGraphCell.m in Sources */,
 				3CAE348B19359FDE007FCE63 /* JBBaseViewController.m in Sources */,
+				3CB35EF71A08927C00D763A1 /* CCBaseViewController.m in Sources */,
 				3C2CDDD1193C400500E28DFA /* LGCentralManager.m in Sources */,
+				3CB35EF51A08927C00D763A1 /* CCBaseTabBarController.m in Sources */,
 				EC458E66189499C200014337 /* trailPathView.m in Sources */,
+				3CB35EF21A08927C00D763A1 /* ARSuggestFriendsViewController.m in Sources */,
 				3C3F181F17DE886D00658555 /* PMThemeEngine.m in Sources */,
 				3C417FE417D84B560094B56F /* AKTabBar.m in Sources */,
+				3CB35E871A08914700D763A1 /* JBChartView.m in Sources */,
 				3CAE348F19359FDE007FCE63 /* JBChartHeaderView.m in Sources */,
 				3CFE888418064422006CF472 /* ARSummaryGraphTouchView.m in Sources */,
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
+				3CB35EF01A08927C00D763A1 /* ARProfileViewController.m in Sources */,
+				3CB35EF11A08927C00D763A1 /* ARSettingsViewController.m in Sources */,
 				3C3F181D17DE886D00658555 /* PMPeriod.m in Sources */,
 				3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */,
 				EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */,
@@ -1373,15 +1600,20 @@
 				3C3F181C17DE886D00658555 /* PMDimmingView.m in Sources */,
 				3CAE348D19359FDE007FCE63 /* JBBarChartFooterView.m in Sources */,
 				3C417FEA17D84B560094B56F /* UIViewController+AKTabBarController.m in Sources */,
+				3CB35E8E1A08915000D763A1 /* BMInitialsPlaceholderView.m in Sources */,
 				3C3F181817DE886D00658555 /* NSDate+Helpers.m in Sources */,
 				3C417F4B17D847510094B56F /* main.m in Sources */,
+				3CB35F041A0898F600D763A1 /* ARUserListCell.m in Sources */,
+				3CB35E771A0890F900D763A1 /* ARUtility.m in Sources */,
 				3CDAA1F2194991D000F2C194 /* ARCommon.m in Sources */,
 				3CAE348A19359FDE007FCE63 /* JBBaseTableViewController.m in Sources */,
 				3CACAF6718CB0C8A00F8B1F6 /* ARDataPoint.m in Sources */,
 				3C417FE817D84B560094B56F /* UINavigationController+AKTabBarController.m in Sources */,
+				3CB35E341A0868E100D763A1 /* ARMoreTableViewController.m in Sources */,
 				3CFE887E18064422006CF472 /* ARScoreBoardCell.m in Sources */,
 				ECA790F51903AD30003145D6 /* BEMAnimations.m in Sources */,
 				3C3F181B17DE886D00658555 /* PMCalendarView.m in Sources */,
+				3CB35E861A08914700D763A1 /* JBBarChartView.m in Sources */,
 				3CAE346419359F63007FCE63 /* DKCircleButton.m in Sources */,
 				3C40A8F919F9E7E900B71257 /* AREditProfileSingleTableViewController.m in Sources */,
 				3C1A0B3318B4A33500999000 /* ARWelcomeViewController.m in Sources */,
@@ -1390,12 +1622,15 @@
 				3CDAA1EF19498F6D00F2C194 /* ARNorthStar.m in Sources */,
 				3CAF438C18C1660E00356116 /* ARSummary.m in Sources */,
 				3C2CDDD4193C400500E28DFA /* LGService.m in Sources */,
+				3CB35EEB1A08927C00D763A1 /* ARFriendAddAcceptViewController.m in Sources */,
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
 				3C2CDDD3193C400500E28DFA /* LGPeripheral.m in Sources */,
 				EC190C091943C7B4009216E9 /* ARSummaryBarGraphViewController.m in Sources */,
 				3C40A8FE19F9EA7F00B71257 /* KPEditTextTableViewCell.m in Sources */,
+				3CB35EF61A08927C00D763A1 /* CCBaseTableViewController.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
 				3CFE887218064422006CF472 /* ARSummaryGraphDetailViewController.m in Sources */,
+				3CB35EF31A08927C00D763A1 /* ARSummaryTableViewController.m in Sources */,
 				3C3F181A17DE886D00658555 /* PMCalendarController.m in Sources */,
 				ECA790F71903AD30003145D6 /* BEMLine.m in Sources */,
 				3C3F181E17DE886D00658555 /* PMSelectionView.m in Sources */,
@@ -1405,16 +1640,22 @@
 				3C417FE617D84B560094B56F /* AKTabBarController.m in Sources */,
 				3CFE887618064422006CF472 /* ARSummaryViewController.m in Sources */,
 				3CAE348E19359FDE007FCE63 /* JBLineChartFooterView.m in Sources */,
+				3CB35EF41A08927C00D763A1 /* CCBaseNavigationController.m in Sources */,
 				3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */,
 				3CFE887C18064422006CF472 /* drawGraph.m in Sources */,
 				ECA790F61903AD30003145D6 /* BEMCircle.m in Sources */,
+				3CB35F031A0898F600D763A1 /* ARProfileHeaderView.m in Sources */,
 				3C40A8D619F8BABC00B71257 /* AREditProfileTableViewController.m in Sources */,
+				3CB35EEE1A08927C00D763A1 /* ARMapViewController.m in Sources */,
 				3C7088C5194ABB1E0079EF09 /* ARTrailPoint.m in Sources */,
 				3C3F181917DE886D00658555 /* PMCalendarBackgroundView.m in Sources */,
 				3CFE887018064422006CF472 /* ARScoreboardViewController.m in Sources */,
+				3CB35F051A0898F600D763A1 /* ARUserTableViewCell.m in Sources */,
 				3C40A8D319F8657200B71257 /* UIAlertView+Addition.m in Sources */,
+				3CB35EEF1A08927C00D763A1 /* ARMenuViewController.m in Sources */,
 				3CFE887818064422006CF472 /* ARTrailSummaryViewController.m in Sources */,
 				3CF0824518F7A2D400470DFA /* SLTDoubleTapSegmentedControl.m in Sources */,
+				3CB35EFA1A08927C00D763A1 /* CCHomeViewController.m in Sources */,
 				3C417F4F17D847510094B56F /* ARAppDelegate.m in Sources */,
 				3CAE3460193595AA007FCE63 /* ARPairController.m in Sources */,
 				3C5F189F17D91681003AC638 /* AKSegmentedControl.m in Sources */,
