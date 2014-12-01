@@ -1394,6 +1394,9 @@
 					3C417F3A17D847510094B56F = {
 						DevelopmentTeam = 2F55F56748;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
@@ -1803,7 +1806,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1828,7 +1831,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AROne/AROne-Prefix.pch";
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8c796770-1851-4391-9882-d032a28a76b7";
 				TARGETED_DEVICE_FAMILY = 1;

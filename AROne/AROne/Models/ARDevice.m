@@ -428,7 +428,7 @@ characteristicUUID:[CBUUID UUIDWithString:SystemID_Char]
 //
 //----------------------------------------------------------------------------------------------------
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-  NSLog(@"Status of CoreBluetooth central manager changed %ld (%s)\r\n",central.state,[self centralManagerStateToString:central.state]);
+  NSLog(@"Status of CoreBluetooth central manager changed %d (%s)\r\n",central.state,[self centralManagerStateToString:central.state]);
 }
 
 /*!
@@ -611,7 +611,7 @@ characteristicUUID:[CBUUID UUIDWithString:SystemID_Char]
  *
  */
 - (int) findBLEPeripherals {
-  NSLog(@"findBLEPeripherals %ld", self.CM.state);
+  NSLog(@"findBLEPeripherals %d", self.CM.state);
   
   //  if (self.CM.state  != CBCentralManagerStatePoweredOn) {
   //    NSLog(@"CoreBluetooth not correctly initialized !\r\n");

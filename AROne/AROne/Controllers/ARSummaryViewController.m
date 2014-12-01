@@ -31,6 +31,8 @@
 
 #import "ARDevice.h"
 #import "ARNorthStar.h"
+#import "LGBluetooth.h"
+#import "LGUtils.h"
 
 
 
@@ -51,12 +53,16 @@
 @property(nonatomic, strong) NSDate *myDate;
 @property(nonatomic, strong) NSDate *currentDate;
 
+@property(nonatomic, strong) LGPeripheral *peripheral;
+
 @property(nonatomic) NSInteger dateCounter;
 @property(atomic, strong) UISegmentedControl *segment;
 
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) UIImage *userIcon;
 
+
+@property (nonatomic, strong) UIButton *sync_button;
 @end
 
 @implementation ARSummaryViewController
@@ -81,17 +87,122 @@
   [self querySummaryData];
   [self queryUserData];
   //get device
-  self.device = [ARDevice new];
-  [self.device controlSetup];
-  self.device.delegate = self;
-  if (self.device.activePeripheral.state != CBPeripheralStateConnected) {
-    if (self.device.activePeripheral) {
-      self.device.peripherials = nil;
-    }
-    [self.device findBLEPeripherals];
-  }
+//  self.device = [ARDevice new];
+//  [self.device controlSetup];
+//  self.device.delegate = self;
+//  if (self.device.activePeripheral.state != CBPeripheralStateConnected) {
+//    if (self.device.activePeripheral) {
+//      self.device.peripherials = nil;
+//    }
+//    [self.device findBLEPeripherals];
+//  }
 }
 
+
+- (void)syncWithBLE {
+    NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:@"UUID"];
+    NSLog(@"uuid %@", uuid);
+    if (![uuid isEqualToString:@""]) {
+        [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:4
+                                                             completion:^(NSArray *peripherals)
+         {
+             //     [self.status setText:@"Scanning..."];
+             //     [self.status setNeedsDisplay];
+             // If we found any peripherals sending to test
+             if (peripherals.count) {
+                 for (LGPeripheral* peripheral in peripherals) {
+                     NSLog(@"name is %@", peripheral.name);
+                     //we should add a pair page that pairs with a Northstar device
+                     if ([peripheral.name isEqual:@"GogglePal"]) {
+                         //           [self.status setText:@"Found!"];
+                         [self testPeripheral:peripheral];
+                         return;
+                     }
+                 }
+             }
+         }];
+    }
+}
+
+- (void)testPeripheral:(LGPeripheral *)peripheral
+{
+    self.peripheral = peripheral;
+    NSLog(@"peripheral %@", peripheral);
+    // First of all, opening connection
+    [peripheral connectWithCompletion:^(NSError *error) {
+        // Discovering services of peripheral
+        [peripheral discoverServicesWithCompletion:^(NSArray *services, NSError *error) {
+            // Searching in all services, our - 5ec0 service
+            for (LGService *service in services) {
+                NSLog(@"service uuid %@", service.UUIDString);
+                if ([service.UUIDString isEqualToString:@"99d9bee0-5845-4041-9669-3fb074d06060"]) {
+                    // Discovering characteristics of 5ec0 service
+                    [service discoverCharacteristicsWithCompletion:^(NSArray *characteristics, NSError *error) {
+//                        __block int i = 0;
+                        // Searching writable characteristic - cef9
+                        for (LGCharacteristic *charact in characteristics) {
+                            NSLog(@"characteristic %@ %@", charact.UUIDString, charact.debugDescription);
+                            if ([charact.UUIDString isEqualToString:@"99d9bee1-5845-4041-9669-3fb074d06060"]) {
+                                [charact setNotifyValue:YES completion:^(NSError *error) {
+                                    NSLog(@"setNotifyValue error: %@", error.localizedDescription);
+                                } onUpdate:^(NSData *data, NSError *error) {
+                                    NSLog(@"on update %@ %@", data, error.localizedDescription);
+                                    [self getData:data];
+                                }];
+                            } else if ([charact.UUIDString isEqualToString:@"99d9bee5-5845-4041-9669-3fb074d06060"]) {
+                                const unsigned char bytes[] = {0xBB,0x01,0x06,0x00,0xF8};
+                                NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
+                                [charact writeValue:data completion:^(NSError *error) {
+                                    NSLog(@"writevalue error %@", error);
+                                }];
+                            }
+                        }
+                    }];
+                }
+            }
+//            [self getData];
+        }];
+    }];
+}
+
+
+- (void)getData:(NSData *) data {
+    NSLog(@"getData is %@", data);
+    //                                    SCOREBOARD DATA (write 0xBB 0x01 0x06 0x00 0xF8)
+    //                                    first 6 bytes:
+    //                                    max_speed_int;
+    //                                    max_speed_dec;
+    //                                    vertical_drop_int1;
+    //                                    vertical_drop_int2;
+    //                                    acceleration_int;
+    //                                    acceleration_dec;
+    unsigned int max_speed_int = *((unsigned char *)[[data subdataWithRange:NSMakeRange(0, 1)] bytes]);
+    unsigned int max_speed_dec = *((unsigned char *)[[data subdataWithRange:NSMakeRange(1, 1)] bytes]);
+    unsigned char vertical_drop_int1 = *((unsigned char *)[[data subdataWithRange:NSMakeRange(2, 1)] bytes]);
+    unsigned char vertical_drop_int2 = *((unsigned char *)[[data subdataWithRange:NSMakeRange(3, 1)] bytes]);
+    unsigned int vertical_drop_int = vertical_drop_int1 << 8 | vertical_drop_int2;
+    unsigned int acceleration_int = *((unsigned char *)[[data subdataWithRange:NSMakeRange(4, 1)] bytes]);
+    unsigned int acceleration_dec = *((unsigned char *)[[data subdataWithRange:NSMakeRange(5, 1)] bytes]);
+
+    
+    
+    NSString *speed = [NSString stringWithFormat:@"%d.%d", max_speed_int,max_speed_dec];
+    NSString *vertical_drop = [NSString stringWithFormat:@"%d", vertical_drop_int];
+    NSString *acceleration = [NSString stringWithFormat:@"%d.%d", acceleration_int,acceleration_dec];
+    NSLog(@"speed is %@", speed);
+    NSLog(@"vertical_drop %@", vertical_drop);
+    NSLog(@"acceleration %@", acceleration);
+    self.max_speed_value = speed;
+    self.vertical_drop_value = vertical_drop;
+    self.acceleration_value = acceleration;
+    [self.tableView reloadData];
+
+    [self.peripheral disconnectWithCompletion:^(NSError *error) {
+        NSLog(@"disconnect peripheral %@", error);
+        self.peripheral = nil;
+        [self.sync_button.layer removeAllAnimations];
+    }];
+}
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -109,7 +220,8 @@
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
 
-  
+    [self syncWithBLE];
+
 }
 
 - (void) querySummaryData {
@@ -228,7 +340,7 @@
   //  ee962f orange
   //  ffffff white
   if (indexPath.section == 0) {
-    NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
+//    NSLog(@"self.view.bounds is %f", self.view.bounds.size.width);
     cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleMaxSpeed andValue:self.max_speed_value rect:self.view.bounds];
   } else if (indexPath.section == 1) {
     cell = [ARSummaryCell cellWithStyle:ARSummaryCellStyleVerticalDrop andValue:self.vertical_drop_value rect:self.view.bounds ];
@@ -324,7 +436,7 @@
   CGRect imageRect = CGRectMake(10, 10, 100/1.9, 100/1.9);
   UIImageView *personIcon = [[UIImageView alloc] initWithFrame:imageRect];
 //  personIcon.image = [UIImage imageNamed:@"profile_hp"];
-  NSLog(@"image width %f, height %f", self.userIcon.size.width, self.userIcon.size.height);
+//  NSLog(@"image width %f, height %f", self.userIcon.size.width, self.userIcon.size.height);
 //  personIcon.image = [ARCommon drawImage:[UIImage imageNamed:@"profile"] inImage:self.userIcon atPoint:CGPointMake(0,0)];
   UIColor *ringColor = [UIColor colorWithRed:57/255.0 green:137/255.0 blue:194/255.0 alpha:1.0];
   PAImageView *avatarView = [[PAImageView alloc] initWithFrame:imageRect backgroundProgressColor:ringColor progressColor:[UIColor blueColor]];
@@ -454,10 +566,10 @@
 
 -(void) createLeftBarButtons
 {
-  UIButton *sync = [[UIButton alloc] initWithFrame:CGRectMake(0,0,25,25)];
-  [sync setBackgroundImage:[UIImage imageNamed:@"sync_icon"] forState:UIControlStateNormal];
-  [sync addTarget:self action:@selector(syncPressed:) forControlEvents:UIControlEventTouchUpInside];
-  UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:sync];
+  self.sync_button = [[UIButton alloc] initWithFrame:CGRectMake(0,0,25,25)];
+  [self.sync_button setBackgroundImage:[UIImage imageNamed:@"sync_icon"] forState:UIControlStateNormal];
+  [self.sync_button addTarget:self action:@selector(syncPressed:) forControlEvents:UIControlEventTouchUpInside];
+  UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:self.sync_button];
   [self.navigationItem setLeftBarButtonItem:leftBarButton];
 }
 
@@ -473,27 +585,29 @@
 {
   NSLog(@"sync Clicked %ld", (long)self.sync_button_value);
   UIButton *sync_button = (UIButton *) sender;
-  if(self.sync_button_value == 1){
     [self animateSynchronization:sync_button];
-    [self.navigationController showSGProgressWithDuration:3 andTintColor:[UIColor whiteColor]]; //uses the navbar tint color
-    [ARCommon createSummaryClass:self.myDate];
-//    [ARCommon createDataPoint:100];
-    int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
+    [self syncWithBLE];
     
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-      
-      // Update your label here.
-      [sync_button.layer removeAllAnimations];
-      self.sync_button_value = self.sync_button_value*-1;
-      [self querySummaryData];
-    });
-  } else {
-    [sync_button.layer removeAllAnimations];
-    self.sync_button_value = self.sync_button_value*-1;
-
-  }
+//  if(self.sync_button_value == 1){
+//    [self animateSynchronization:sync_button];
+//    [self.navigationController showSGProgressWithDuration:3 andTintColor:[UIColor whiteColor]]; //uses the navbar tint color
+//    [ARCommon createSummaryClass:self.myDate];
+////    [ARCommon createDataPoint:100];
+//    int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
+//    
+//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//    
+//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//      
+//      // Update your label here.
+//      [sync_button.layer removeAllAnimations];
+//      self.sync_button_value = self.sync_button_value*-1;
+//      [self querySummaryData];
+//    });
+//  } else {
+//    [sync_button.layer removeAllAnimations];
+//    self.sync_button_value = self.sync_button_value*-1;
+//  }
 }
 
 -(void)settingPressed:(id)sender
@@ -574,12 +688,12 @@
 #pragma mark - BLE
 - (void) gotDevice:(CBPeripheral *)peripheral
 {
-  NSLog(@"gotDevice");
+  NSLog(@"gotDevice %@", peripheral);
   //  NSArray *identifiers = [[NSArray alloc] initWithObjects:peripheral.identifier, nil];
   //  if ([self.device.CM retrievePeripheralsWithIdentifiers:identifiers]) {
   //    NSLog(@"%@ is a paired device", peripheral.name);
   if (peripheral.name != nil) {
-    if ([peripheral.name rangeOfString:@"NORTHSTAR"].location != NSNotFound) {
+    if ([peripheral.name rangeOfString:@"GogglePal"].location != NSNotFound) {
       self.type = @"ar";
       [self.device connectPeripheral:peripheral];
       NSLog(@"list is %@", self.device.peripherials);
@@ -595,6 +709,10 @@
     ARNorthStar *arns = [[ARNorthStar alloc] initWithDevice:self.device];
     [arns readMeasurement];
   }
+}
+
+- (void) gotNorthStar:(NSData *)data {
+    NSLog(@"gotNorthStar %@", data);
 }
 
 

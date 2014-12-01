@@ -87,10 +87,20 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   // Register for push notifications
     [Fabric with:@[CrashlyticsKit]];
 
-  [application registerForRemoteNotificationTypes:
-   UIRemoteNotificationTypeBadge |
-   UIRemoteNotificationTypeAlert |
-   UIRemoteNotificationTypeSound];
+    //-- Set Notification
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+        // iOS 8 Notifications
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+        [application registerForRemoteNotifications];
+    }
+    else
+    {
+        // iOS < 8 Notifications
+        [application registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
   
   [PFFacebookUtils initializeFacebook];
   //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];

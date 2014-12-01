@@ -29,16 +29,14 @@
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  
-  self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
-  self.mapView.delegate = self;
-  self.mapView.showsUserLocation = true;
+    [super viewDidLoad];
+    self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = true;
     [self.mapView setMapType:MKMapTypeStandard];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
-  [self.view addSubview:self.mapView];
-    
+    [self.view addSubview:self.mapView];
     //location:
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
@@ -49,8 +47,6 @@
         [self.locationManager requestAlwaysAuthorization];
     }
     [_locationManager startUpdatingLocation];
-  
-    
     
     PFQuery *activityQuery = [PFQuery queryWithClassName:@"Activity"];
     [activityQuery whereKey:@"fromUser" equalTo: [PFUser currentUser]];

@@ -104,7 +104,7 @@
        for (LGPeripheral* peripheral in peripherals) {
          NSLog(@"name is %@", peripheral.name);
          //we should add a pair page that pairs with a Northstar device
-         if ([peripheral.name isEqual:@"NORTHSTAR"]) {
+         if ([peripheral.name isEqual:@"GogglePal"]) {
            [self updateStatus:@"Found!"];
 //           [self.status setText:@"Found!"];
 
@@ -126,7 +126,7 @@
 
 -(void) updateStatus: ( NSString *)str
 {
-  [self.status performSelectorOnMainThread : @selector(setText: ) withObject:str waitUntilDone:NO];
+  [self.status performSelectorOnMainThread : @selector(setText:) withObject:str waitUntilDone:NO];
 }
 
 @end

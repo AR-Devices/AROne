@@ -127,7 +127,6 @@
                 [dateFormat setDateFormat:@"MM/dd/yyyy"];
                 NSDate *date = [dateFormat dateFromString:data];
                 [dateSelectionVC.datePicker setDate:date];
-
             }
             [dateSelectionVC show];
         } else if (indexPath.row == 1) {
