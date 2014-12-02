@@ -34,7 +34,7 @@
 #import "LGBluetooth.h"
 #import "LGUtils.h"
 
-
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 @interface ARSummaryViewController () <ARDeviceDelegate>
@@ -91,7 +91,7 @@
 //  [self.device controlSetup];
 //  self.device.delegate = self;
 //  if (self.device.activePeripheral.state != CBPeripheralStateConnected) {
-//    if (self.device.activePeripheral) {
+//    if (self.device.activePeripheral) {\
 //      self.device.peripherials = nil;
 //    }
 //    [self.device findBLEPeripherals];
@@ -106,15 +106,12 @@
         [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:4
                                                              completion:^(NSArray *peripherals)
          {
-             //     [self.status setText:@"Scanning..."];
-             //     [self.status setNeedsDisplay];
              // If we found any peripherals sending to test
              if (peripherals.count) {
                  for (LGPeripheral* peripheral in peripherals) {
                      NSLog(@"name is %@", peripheral.name);
                      //we should add a pair page that pairs with a Northstar device
                      if ([peripheral.name isEqual:@"GogglePal"]) {
-                         //           [self.status setText:@"Found!"];
                          [self testPeripheral:peripheral];
                          return;
                      }
@@ -184,11 +181,18 @@
     unsigned int acceleration_int = *((unsigned char *)[[data subdataWithRange:NSMakeRange(4, 1)] bytes]);
     unsigned int acceleration_dec = *((unsigned char *)[[data subdataWithRange:NSMakeRange(5, 1)] bytes]);
 
-    
-    
-    NSString *speed = [NSString stringWithFormat:@"%d.%d", max_speed_int,max_speed_dec];
+    NSString *speed_int = [NSString stringWithFormat:@"%d", max_speed_int];
+    NSString *speed_dec = [NSString stringWithFormat:@"%.1d", max_speed_dec];
+    double max_speed = [speed_int doubleValue] + [speed_dec doubleValue]/10;
+    NSString *speed = [NSString stringWithFormat:@"%.1f", max_speed];
     NSString *vertical_drop = [NSString stringWithFormat:@"%d", vertical_drop_int];
-    NSString *acceleration = [NSString stringWithFormat:@"%d.%d", acceleration_int,acceleration_dec];
+    
+    NSString *accel_int = [NSString stringWithFormat:@"%d", acceleration_int];
+    NSString *accel_dec = [NSString stringWithFormat:@"%.1d", acceleration_dec];
+    double accel = [accel_int doubleValue] + [accel_dec doubleValue]/10;
+    
+    
+    NSString *acceleration = [NSString stringWithFormat:@"%.1f", accel];
     NSLog(@"speed is %@", speed);
     NSLog(@"vertical_drop %@", vertical_drop);
     NSLog(@"acceleration %@", acceleration);
@@ -196,9 +200,25 @@
     self.vertical_drop_value = vertical_drop;
     self.acceleration_value = acceleration;
     [self.tableView reloadData];
+    
+    
+    NSMutableDictionary *output = [NSMutableDictionary new];
+    [output setValue:[NSNumber numberWithDouble:max_speed] forKey:@"max_speed"];
+    [output setValue:[NSNumber numberWithInt:vertical_drop_int] forKey:@"vertical_drop"];
+    [output setValue:[NSNumber numberWithDouble:accel] forKey:@"acceleration"];
+    
+    [ARCommon createSummaryClass:self.myDate andData:output];
 
     [self.peripheral disconnectWithCompletion:^(NSError *error) {
         NSLog(@"disconnect peripheral %@", error);
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        HUD.mode = MBProgressHUDModeCustomView;
+        HUD.labelText = @"Sync Done";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:3];
+        //add log
         self.peripheral = nil;
         [self.sync_button.layer removeAllAnimations];
     }];
@@ -219,8 +239,6 @@
 //  self.vertical_drop_value = @"35,000";
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
-
-    [self syncWithBLE];
 
 }
 

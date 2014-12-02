@@ -123,6 +123,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   }
   _chartData = [NSArray arrayWithArray:mutableChartData];
   _daysOfWeek = self.timePoints;
+
 }
 
 
@@ -289,33 +290,6 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
   return self.barChartView;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (void) queryDataPoints
 {
   PFQuery *query = [ARDataPoint query];
@@ -380,7 +354,9 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
         self.createdAt = [object createdAt];
     }
       [self.barChartView reloadData];
-    
+      [self barChartView:_barChartView didSelectBarAtIndex:0 touchPoint:CGPointMake(0, 0)];
+      [self didUnselectBarChartView:_barChartView];
+
     NSLog(@"data count is %lu", (unsigned long)self.dataPoints.count);
   }];
 }

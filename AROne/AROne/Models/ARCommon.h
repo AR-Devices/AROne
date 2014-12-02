@@ -31,5 +31,5 @@ typedef NS_ENUM(NSUInteger, GraphType) {
 + (UIImage*) drawImage:(UIImage*) fgImage
               inImage:(UIImage*) bgImage
               atPoint:(CGPoint)  point;
-+ (void)createSummaryClass:(NSDate *) date;
++ (void)createSummaryClass:(NSDate *) date andData:(NSDictionary *)data;
 @end

@@ -88,7 +88,7 @@
   return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber;
 }
 
-+ (void)createSummaryClass:(NSDate *) date {
++ (void)createSummaryClass:(NSDate *) date andData:(NSDictionary *)data {
   
   ARSummary *measurement = [ARSummary object];
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -96,9 +96,12 @@
   NSLog(@"name is %@", measurement.displayName);
 
   measurement.date = [ARCommon selectedDate:date];
-  measurement.maxAcceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
-  measurement.maxSpeed = [ARCommon randomFloatBetween:0.0 and:50.0];
-  measurement.verticalDrop = [ARCommon randomVDrop];
+//  measurement.maxAcceleration = [ARCommon randomFloatBetween:0.0 and:10.0];
+//  measurement.maxSpeed = [ARCommon randomFloatBetween:0.0 and:50.0];
+//  measurement.verticalDrop = [ARCommon randomVDrop];
+    measurement.maxAcceleration = [[data objectForKey:@"acceleration"] doubleValue];
+    measurement.maxSpeed = [[data objectForKey:@"max_speed"] doubleValue];
+    measurement.verticalDrop = [[data objectForKey:@"vertical_drop"] intValue];
   //  [measurement setPlayer:[PFUser currentUser]];
   measurement.player = [PFUser currentUser];
   PFACL *defaultACL = [PFACL ACL];
