@@ -103,7 +103,7 @@
     NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:@"UUID"];
     NSLog(@"uuid %@", uuid);
     if (![uuid isEqualToString:@""]) {
-        [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:4
+        [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:10
                                                              completion:^(NSArray *peripherals)
          {
              // If we found any peripherals sending to test
@@ -118,6 +118,9 @@
                  }
              }
          }];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.sync_button.layer removeAllAnimations];
+        });
     }
 }
 
@@ -230,8 +233,7 @@
   [self createLeftBarButtons];
 //  add right refresh setting button
   [self createRightBarButtons];
-
-  
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleBLEError:) name:kLGPeripheralConnectionErrorDomain object:nil];
 
   
   //FIXME: temporary hardcored the value here
@@ -240,6 +242,19 @@
 //  self.acceleration_value = @"9.8";
   self.sync_button_value = -1;
 
+}
+
+- (void)handleBLEError:(id) sender {
+    NSLog(@"handleBLEError: %@", sender);
+    MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:HUD];
+    HUD.mode = MBProgressHUDModeText;
+    HUD.labelText = @"No GogglePal Nearby!";
+    [HUD show:YES];
+    [HUD hide:YES afterDelay:3];
+    //add log
+    [self.sync_button.layer removeAllAnimations];
+    
 }
 
 - (void) querySummaryData {
@@ -469,32 +484,6 @@
   name.text = self.userName;
   name.backgroundColor = [UIColor clearColor];
   [header addSubview:name];
-
-  //the colored box, whose text/score is extracted from the scores in the secitions below
-//  UILabel *maxspeed_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*0, 40, 40, 15)];
-//  maxspeed_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  maxspeed_text.textColor = [UIColor whiteColor];
-//  maxspeed_text.text = self.max_speed_value; //FIXME value should be extracted from section text
-//  maxspeed_text.textAlignment = NSTextAlignmentCenter;
-//  maxspeed_text.backgroundColor = [UIColor colorWithRed:161/255.0f green:138/255.0f blue:193/255.0f alpha:1];
-//  [header addSubview:maxspeed_text];
-  
-//  UILabel *verticaldrop_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*1, 40, 40, 15)];
-//  verticaldrop_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  verticaldrop_text.textColor = [UIColor whiteColor];
-//  verticaldrop_text.text = self.vertical_drop_value; //FIXME value should be extracted from section text
-//  verticaldrop_text.textAlignment = NSTextAlignmentCenter;
-//  verticaldrop_text.backgroundColor = [UIColor colorWithRed:47/255.0f green:179/255.0f blue:182/255.0f alpha:1];
-//  [header addSubview:verticaldrop_text];
-  
-//  UILabel *acceleration_text = [[UILabel alloc] initWithFrame:CGRectMake(60+(40+5)*2, 40, 40, 15)];
-//  acceleration_text.font = [UIFont fontWithName:@"Avenir-Roman" size:11.0];
-//  acceleration_text.textColor = [UIColor whiteColor];
-//  acceleration_text.text = self.acceleration_value; //FIXME value should be extracted from section text
-//  acceleration_text.textAlignment = NSTextAlignmentCenter;
-//  acceleration_text.backgroundColor = [UIColor colorWithRed:238/255.0f green:150/255.0f blue:47/255.0f alpha:1];
-//  [header addSubview:acceleration_text];
-
   return header;
 }
 
@@ -606,26 +595,6 @@
     [self animateSynchronization:sync_button];
     [self syncWithBLE];
     
-//  if(self.sync_button_value == 1){
-//    [self animateSynchronization:sync_button];
-//    [self.navigationController showSGProgressWithDuration:3 andTintColor:[UIColor whiteColor]]; //uses the navbar tint color
-//    [ARCommon createSummaryClass:self.myDate];
-////    [ARCommon createDataPoint:100];
-//    int64_t delayInSeconds = 3; // Your Game Interval as mentioned above by you
-//    
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-//    
-//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//      
-//      // Update your label here.
-//      [sync_button.layer removeAllAnimations];
-//      self.sync_button_value = self.sync_button_value*-1;
-//      [self querySummaryData];
-//    });
-//  } else {
-//    [sync_button.layer removeAllAnimations];
-//    self.sync_button_value = self.sync_button_value*-1;
-//  }
 }
 
 -(void)settingPressed:(id)sender
@@ -701,36 +670,6 @@
     [self.pmCC dismissCalendarAnimated:YES];
 
   }
-}
-
-#pragma mark - BLE
-- (void) gotDevice:(CBPeripheral *)peripheral
-{
-  NSLog(@"gotDevice %@", peripheral);
-  //  NSArray *identifiers = [[NSArray alloc] initWithObjects:peripheral.identifier, nil];
-  //  if ([self.device.CM retrievePeripheralsWithIdentifiers:identifiers]) {
-  //    NSLog(@"%@ is a paired device", peripheral.name);
-  if (peripheral.name != nil) {
-    if ([peripheral.name rangeOfString:@"GogglePal"].location != NSNotFound) {
-      self.type = @"ar";
-      [self.device connectPeripheral:peripheral];
-      NSLog(@"list is %@", self.device.peripherials);
-    }
-    //    weight is 352,  bp is 651
-  }
-}
-
-- (void) deviceReady
-{
-  NSLog(@"deviceReady called ");
-  if ([self.type isEqual:@"ar"]) {
-    ARNorthStar *arns = [[ARNorthStar alloc] initWithDevice:self.device];
-    [arns readMeasurement];
-  }
-}
-
-- (void) gotNorthStar:(NSData *)data {
-    NSLog(@"gotNorthStar %@", data);
 }
 
 
