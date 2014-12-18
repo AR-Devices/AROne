@@ -9,15 +9,13 @@
 #import "ARMapViewController.h"
 
 @interface ARMapViewController () <CLLocationManagerDelegate,MKMapViewDelegate>
-//@property CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKMapView *mapView;
 
 
 @end
 
 @implementation ARMapViewController
-
-CLLocationManager *locationManager;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,16 +31,31 @@ CLLocationManager *locationManager;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//  self.locationManager = [[CLLocationManager alloc] init];
-//  self.locationManager.delegate = self;
-//  self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//  [self.locationManager startUpdatingLocation];
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.delegate = self;
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+  [self.locationManager startUpdatingLocation];
+    
+    // ** Don't forget to add NSLocationWhenInUseUsageDescription in MyApp-Info.plist and give it a string
+
+
+    [self.locationManager startUpdatingLocation];
   self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
   self.mapView.delegate = self;
   self.mapView.showsUserLocation = true;
   [self.view addSubview:self.mapView];
 
 
+}
+
+// Location Manager Delegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"%@", [locations lastObject]);
 }
 
 - (void)didReceiveMemoryWarning
