@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *start;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *upload;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clear;
 
 @end

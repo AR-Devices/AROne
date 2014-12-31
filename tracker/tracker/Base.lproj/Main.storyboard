@@ -58,7 +58,20 @@
                             <outlet property="delegate" destination="spf-Cs-NzQ" id="FNc-Vu-cHu"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8iq-Lw-6CJ"/>
+                        <barButtonItem title="Clear" id="7KZ-28-Pb3">
+                            <connections>
+                                <action selector="onClear:" destination="spf-Cs-NzQ" id="dE2-aJ-8wx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Tracker" id="25d-jp-aFz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Ezw-gl-97k">
+                            <connections>
+                                <action selector="onUpload:" destination="spf-Cs-NzQ" id="39h-Xq-7ig"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="h5K-MJ-Wec">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C3V-bQ-Lgw">
                                 <rect key="frame" x="-23" y="-15" width="133" height="30"/>
@@ -75,8 +88,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="clear" destination="7KZ-28-Pb3" id="AgF-oR-Ora"/>
                         <outlet property="start" destination="C3V-bQ-Lgw" id="flY-Ih-F4Y"/>
+                        <outlet property="upload" destination="Ezw-gl-97k" id="kaK-Kf-xBd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QU-YM-9Ox" userLabel="First Responder" sceneMemberID="firstResponder"/>
