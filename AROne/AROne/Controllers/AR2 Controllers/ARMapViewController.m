@@ -94,6 +94,31 @@
 //    region.span.longitudeDelta = 0.005f;
 //    [self.mapView setRegion:region animated:YES];
     
+    
+    CLGeocoder *ceo = [[CLGeocoder alloc]init];
+    CLLocation *loc = [[CLLocation alloc]initWithLatitude:39.274178 longitude:-120.119568]; //insert your coordinates
+    
+    [ceo reverseGeocodeLocation:loc
+              completionHandler:^(NSArray *placemarks, NSError *error) {
+                  CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                  NSLog(@"placemark %@",placemark);
+                  //String to hold address
+                  NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+                  NSLog(@"addressDictionary %@", placemark.addressDictionary);
+                  
+                  NSLog(@"placemark %@",placemark.region);
+                  NSLog(@"placemark %@",placemark.country);  // Give Country Name
+                  NSLog(@"placemark %@",placemark.locality); // Extract the city name
+                  NSLog(@"location %@",placemark.name);
+                  NSLog(@"location %@",placemark.ocean);
+                  NSLog(@"location %@",placemark.postalCode);
+                  NSLog(@"location %@",placemark.subLocality);
+                  
+                  NSLog(@"location %@",placemark.location);
+                  //Print the location to console
+                  NSLog(@"I am currently at %@",locatedAt);
+              }];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
