@@ -85,6 +85,7 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
     NSLog(@"%@", [self deviceLocation]);
+    NSLog(@"test commit");
     
     //View Area
 //    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
