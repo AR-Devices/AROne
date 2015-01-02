@@ -91,6 +91,9 @@
 		3C7D63C519E90D55006644F5 /* profile7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B619E90D55006644F5 /* profile7.png */; };
 		3C7D63C619E90D55006644F5 /* profile9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B719E90D55006644F5 /* profile9.png */; };
 		3C7D63C719E90D55006644F5 /* Troy Banham 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D63B819E90D55006644F5 /* Troy Banham 02.png */; };
+		3C8F7DF21A56782F00F1245E /* ARFMFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F7DF11A56782F00F1245E /* ARFMFController.m */; };
+		3C8F7DF61A5678E200F1245E /* ARFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F7DF41A5678E200F1245E /* ARFriendTableViewCell.m */; };
+		3C8F7DF71A5678E200F1245E /* ARFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8F7DF51A5678E200F1245E /* ARFriendTableViewCell.xib */; };
 		3C92D40D18ACA84E0051BE54 /* ARDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92D40C18ACA84E0051BE54 /* ARDevice.m */; };
 		3CACAF3C18C91DFB00F8B1F6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */; };
 		3CACAF6718CB0C8A00F8B1F6 /* ARDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACAF6618CB0C8A00F8B1F6 /* ARDataPoint.m */; };
@@ -338,6 +341,11 @@
 		3C7D63B619E90D55006644F5 /* profile7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile7.png; sourceTree = "<group>"; };
 		3C7D63B719E90D55006644F5 /* profile9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile9.png; sourceTree = "<group>"; };
 		3C7D63B819E90D55006644F5 /* Troy Banham 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Troy Banham 02.png"; sourceTree = "<group>"; };
+		3C8F7DF01A56782F00F1245E /* ARFMFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMFController.h; sourceTree = "<group>"; };
+		3C8F7DF11A56782F00F1245E /* ARFMFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMFController.m; sourceTree = "<group>"; };
+		3C8F7DF31A5678E200F1245E /* ARFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARFriendTableViewCell.h; path = Views/ARFriendTableViewCell.h; sourceTree = "<group>"; };
+		3C8F7DF41A5678E200F1245E /* ARFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARFriendTableViewCell.m; path = Views/ARFriendTableViewCell.m; sourceTree = "<group>"; };
+		3C8F7DF51A5678E200F1245E /* ARFriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ARFriendTableViewCell.xib; path = Views/ARFriendTableViewCell.xib; sourceTree = "<group>"; };
 		3C92D40B18ACA84E0051BE54 /* ARDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDevice.h; sourceTree = "<group>"; };
 		3C92D40C18ACA84E0051BE54 /* ARDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDevice.m; sourceTree = "<group>"; };
 		3CACAF3B18C91DFB00F8B1F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -693,6 +701,9 @@
 				3CB35E351A0882DF00D763A1 /* ARMoreUserTableViewCell.h */,
 				3CB35E361A0882DF00D763A1 /* ARMoreUserTableViewCell.m */,
 				3CB35E371A0882DF00D763A1 /* ARMoreUserTableViewCell.xib */,
+				3C8F7DF31A5678E200F1245E /* ARFriendTableViewCell.h */,
+				3C8F7DF41A5678E200F1245E /* ARFriendTableViewCell.m */,
+				3C8F7DF51A5678E200F1245E /* ARFriendTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1254,6 +1265,8 @@
 				3C40A8CE19F8611500B71257 /* Summary */,
 				3CFE885718064422006CF472 /* ARScoreboardViewController.h */,
 				3CFE885818064422006CF472 /* ARScoreboardViewController.m */,
+				3C8F7DF01A56782F00F1245E /* ARFMFController.h */,
+				3C8F7DF11A56782F00F1245E /* ARFMFController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1460,6 +1473,7 @@
 				3C7D63BF19E90D55006644F5 /* Katherine Castelao 08.png in Resources */,
 				3C7D63BB19E90D55006644F5 /* Carlos Mugisha 07.png in Resources */,
 				3C7D63C619E90D55006644F5 /* profile9.png in Resources */,
+				3C8F7DF71A5678E200F1245E /* ARFriendTableViewCell.xib in Resources */,
 				3C7D63BA19E90D55006644F5 /* Carlito Baker 01.png in Resources */,
 				3CB35F061A0898F600D763A1 /* ARUserTableViewCell.xib in Resources */,
 				3C6EA85B180E612C0043216D /* graph_bg2@2x.png in Resources */,
@@ -1595,6 +1609,7 @@
 				3CFE887418064422006CF472 /* ARSummaryGraphViewController.m in Sources */,
 				3CB35EF01A08927C00D763A1 /* ARProfileViewController.m in Sources */,
 				3CB35EF11A08927C00D763A1 /* ARSettingsViewController.m in Sources */,
+				3C8F7DF61A5678E200F1245E /* ARFriendTableViewCell.m in Sources */,
 				3C3F181D17DE886D00658555 /* PMPeriod.m in Sources */,
 				3CAE349219359FDE007FCE63 /* JBChartTooltipView.m in Sources */,
 				EC6ACC5A18B3319A00BA78BE /* ARTrailSummaryTableCell.m in Sources */,
@@ -1629,6 +1644,7 @@
 				3CFE888018064422006CF472 /* ARSummaryCell.m in Sources */,
 				3C2CDDD3193C400500E28DFA /* LGPeripheral.m in Sources */,
 				EC190C091943C7B4009216E9 /* ARSummaryBarGraphViewController.m in Sources */,
+				3C8F7DF21A56782F00F1245E /* ARFMFController.m in Sources */,
 				3C40A8FE19F9EA7F00B71257 /* KPEditTextTableViewCell.m in Sources */,
 				3CB35EF61A08927C00D763A1 /* CCBaseTableViewController.m in Sources */,
 				3C1A0B1F18B3394D00999000 /* ARLoginViewController.m in Sources */,
@@ -1808,7 +1824,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "59911efc-1b53-49bc-8235-ccd2f1655d85";
+				PROVISIONING_PROFILE = "7bce2486-d4ab-4309-a03a-abd69979c372";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1833,7 +1849,7 @@
 				INFOPLIST_FILE = "AROne/AROne-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "59911efc-1b53-49bc-8235-ccd2f1655d85";
+				PROVISIONING_PROFILE = "7bce2486-d4ab-4309-a03a-abd69979c372";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

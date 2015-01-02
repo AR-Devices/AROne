@@ -13,6 +13,7 @@
 #import "ARTrailSummaryViewController.h"
 #import "ARMoreTableViewController.h"
 #import "ARMapViewController.h"
+#import "ARFMFController.h"
 #import "ARLoginViewController.h"
 
 @interface ARWelcomeViewController ()
@@ -88,7 +89,9 @@
     UINavigationController *scoreboardNavigation = [[UINavigationController alloc] initWithRootViewController:scoreboard];
     
     UINavigationController *trailSummary = [[UINavigationController alloc] initWithRootViewController:[ARTrailSummaryViewController new]];
-    UINavigationController *buddyNavi = [[UINavigationController alloc] initWithRootViewController:[ARMapViewController new]];
+
+//    UINavigationController *buddyNavi = [[UINavigationController alloc] initWithRootViewController:[ARMapViewController new]];
+    UINavigationController *buddyNavi = [[UINavigationController alloc] initWithRootViewController:[ARFMFController new]];
     ARMoreTableViewController *more = [[ARMoreTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *moreNavi = [[UINavigationController alloc] initWithRootViewController:more];
     
