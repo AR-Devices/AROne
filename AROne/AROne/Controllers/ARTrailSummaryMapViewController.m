@@ -28,7 +28,7 @@
 
 #pragma mark - trailPathSource methods
 
--(void) trailPathViewData: (float) eva and: (float) longitude and: (float) latitude
+-(NSString* ) trailPathViewData: (float) eva and: (float) longitude and: (float) latitude
 {
   NSArray *googleMap_Lamberjack = [[NSArray alloc] initWithObjects:
                                    [[NSArray alloc] initWithObjects:@"7595", @"39.25188056", @"-120.1316417", nil],
@@ -609,7 +609,21 @@
     NSLog(@"match -->%d %d", tom, [[trail_match_result objectAtIndex:tom] integerValue]);
   }
   /*********************************JERRY TRAIL CALCULATION END ******************************/
-
+  if([[trail_match_result objectAtIndex:0] integerValue] == 0){
+    return @"LumberJack";
+  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 1){
+    return @"Lower Main Street";
+  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 2){
+    return @"MagicMoguls";
+  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 3){
+    return @"Siderwinder";
+  }else if( [[trail_match_result objectAtIndex:0] integerValue] == 4){
+    return @"SkidTrail";
+  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 5){
+    return @"TheGulch";
+  }else {
+    return @"UNKNOWN Trail";
+  }
   //SP manual draw trail start
 //  NSArray *lumberJack = [[NSArray alloc] initWithObjects:
 //                         [NSValue valueWithCGPoint:CGPointMake(266.5, 189)],   //LUMBERJACK
@@ -1753,7 +1767,8 @@
   NSLog(@"viewDidLoad");
   [super viewDidLoad];
   //get image from library
-  [self trailPathViewData: 2324.675849 and: 39.251461 and: -120.131662];
+  NSString* find_trail = [self trailPathViewData: 2324.675849 and: 39.251461 and: -120.131662];
+  NSLog(@"-------------trail is %@", find_trail);
   self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (self.map.size.width*(self.view.bounds.size.height/self.map.size.height)), self.view.bounds.size.height)];
 //  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height * image.size.height / image.size.width))];
 
