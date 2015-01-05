@@ -8,9 +8,10 @@
 
 #import "ARFMFController.h"
 #import "ARFriendTableViewCell.h"
+#import <NSDate+TimeAgo.h>
 
-@interface ARFMFController ()
-
+@interface ARFMFController () <CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSArray *friendList;
 
 @end
@@ -19,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
     self.title = @"FMF";
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ARFriendTableViewCell" bundle:nil] forCellReuseIdentifier:@"AppCell"];
@@ -43,16 +49,20 @@
         }];
     }];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
 }
 
 #pragma mark - Table view data source
@@ -77,6 +87,8 @@
     } else if (user[@"displayname"]) {
         cell.userName.text = user[@"displayname"];
     }
+    cell.lastSeen.text = [NSString stringWithFormat:@"Last Seen %@", [[user updatedAt] timeAgo]];
+
     
     return cell;
 }
@@ -85,48 +97,37 @@
     return 63;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+// Location Manager Delegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"%@", [locations lastObject]);
+    
+    if ([locations lastObject]) {
+        //save object to server
+        // Configure the new event with information from the location.
+        CLLocationCoordinate2D coordinate = [[locations lastObject] coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+        //  PFObject *object = [PFObject objectWithClassName:@"User"];
+        PFUser * user = [PFUser currentUser];
+        [user setObject:geoPoint forKey:@"geolocation"];
+        
+        [user saveEventually:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"geolocation uploaded correctly");
+            }
+        }];
+        //stop upload
+        [self.locationManager stopUpdatingLocation];
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    }
+    
+    [locations lastObject];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

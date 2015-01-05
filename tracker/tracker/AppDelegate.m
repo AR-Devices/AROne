@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
 #import "DatabaseAvailability.h"
-
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [GMSServices provideAPIKey:@"AIzaSyCUxgR2bxZc19E_KiJzq5ruQui8M9TXH8c"];
     // Override point for customization after application launch.
     if (![CLLocationManager locationServicesEnabled]) {
         // location services is disabled, alert user

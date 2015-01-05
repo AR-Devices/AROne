@@ -59,6 +59,7 @@
 	<array>
 		<string>bluetooth-central</string>
 		<string>bluetooth-peripheral</string>
+		<string>location</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
@@ -72,5 +73,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This will be used to obtain or track your location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This will be used to obtain or track your location.</string>
 </dict>
 </plist>
