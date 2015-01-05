@@ -42,6 +42,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
+//  [self jerry_test];
   
   // Check if user is logged in
   if (![PFUser currentUser]) {
@@ -96,7 +97,7 @@
     UINavigationController *moreNavi = [[UINavigationController alloc] initWithRootViewController:more];
     
 
-    [tabbar setViewControllers:@[summaryNavigation,scoreboardNavigation,buddyNavi, moreNavi]];
+    [tabbar setViewControllers:@[summaryNavigation,scoreboardNavigation,trailSummary, buddyNavi, moreNavi]];
     [self presentViewController:tabbar animated:YES completion:nil];
 }
 
@@ -198,5 +199,33 @@
 //  }];
 //  
 //}
+
+- (void) jerry_test{
+  NSString *const FTGooglePlacesAPIBaseURL = @"https://maps.googleapis.com/maps/api/place/search/json?location=39.260275,-120.127764&radius=500&sensor=true&key=AIzaSyC1fb_MtdKucHrAWb7HUoTdI-vcPWz_33k";
+  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:FTGooglePlacesAPIBaseURL]
+                                                         cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                     timeoutInterval:10];
+  
+  [request setHTTPMethod: @"GET"];
+  
+  NSError *requestError;
+  NSURLResponse *urlResponse = nil;
+  
+  
+  NSData *response1 = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+  NSError* error;
+  NSDictionary* json = [NSJSONSerialization
+                        JSONObjectWithData:response1
+                        
+                        options:kNilOptions
+                        error:&error];
+  
+  //The results from Google will be an array obtained from the NSDictionary object with the key "results".
+  NSArray* places = [json objectForKey:@"results"];
+  
+  //Write out the data to the console.
+  NSLog(@"JERRY Google Data: %@", places);
+//  NSLog(@"JERRY google place API: %@", response1);
+}
 
 @end
