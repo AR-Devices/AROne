@@ -27,8 +27,7 @@
 @implementation ARTrailSummaryMapViewController
 
 #pragma mark - trailPathSource methods
-
--(NSString* ) trailPathViewData: (float) eva and: (float) longitude and: (float) latitude
+-(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude
 {
   NSArray *googleMap_Lamberjack = [[NSArray alloc] initWithObjects:
                                    [[NSArray alloc] initWithObjects:@"7595", @"39.25188056", @"-120.1316417", nil],
@@ -463,7 +462,7 @@
                                  [[NSArray alloc] initWithObjects:@"6882", @"39.25998889", @"-120.1279056", nil],
                                  [[NSArray alloc] initWithObjects:@"6877", @"39.25998889", @"-120.1279056", nil],
                                  nil];
-  NSMutableArray *my_trail_data = [self jerry_init_data: eva and: longitude and:latitude];
+  NSMutableArray *my_trail_data = [self jerry_init_data: eva and: longitude and: latitude];
   NSLog(@"Init data finished ...");
   NSInteger Lamberjack_elv_first        = [[[googleMap_Lamberjack objectAtIndex:([googleMap_Lamberjack count]-1)]objectAtIndex:0] intValue];
   NSInteger Lamberjack_elv_last         = [[[googleMap_Lamberjack objectAtIndex:0]objectAtIndex:0] intValue];
@@ -477,6 +476,9 @@
   NSInteger SkidTrail_elv_last          = [[[googleMap_SkidTrail objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger TheGulch_elv_first          = [[[googleMap_TheGulch objectAtIndex:([googleMap_TheGulch count]-1)]objectAtIndex:0] intValue];
   NSInteger TheGulch_elv_last           = [[[googleMap_TheGulch objectAtIndex:0]objectAtIndex:0] intValue];
+  
+
+  
   int roundStep = 5;
   int up_counter = 0;
   int down_counter = 0;
@@ -485,173 +487,185 @@
   NSInteger previous_user_elv = 0;
   
   NSMutableArray  * trail_match_result = [NSMutableArray new];
-  /*********************************JERRY TRAIL CALCULATION START ******************************/
-//  int user_array_last_index = [my_trail_data count]-1 ;
+  //  int user_array_last_index = [my_trail_data count]-1 ;
   int user_array_last_index = [my_trail_data count];
-
+  
   for (int i = 0; i < user_array_last_index; i++) {
-      float user_elv = [self get_elv:my_trail_data atIndex:i]*3.28;
-
-//    NSLog(@"----------------Point : %d", i);
-//    
-//    
-//    if(user_elv > previous_user_elv){
-//      up_counter++;
-//      if(down_counter){
-//        down_counter--;
-//      }
-//    }else if(user_elv < previous_user_elv){
-//      down_counter++;
-//      if(up_counter){
-//        up_counter--;
-//      }
-//    }
-//    if(going_up){
-//      if(down_counter>= detect_limit){
-//        going_up=0;
-//        up_counter=0;
-//      }
-//    }else{ //going down
-//      if(up_counter >= detect_limit){
-//        going_up = 1;
-//        down_counter = 0;
-//      }
-//    }
-//    previous_user_elv = user_elv;
-//    NSLog(@"up_counter is %d", up_counter);
-//    NSLog(@"down_counter is %d", down_counter);
-//    NSLog(@"current going up is %d", going_up);
-//    if(going_up){
-//      NSLog(@"wasting data %f",user_elv);
-//      [trail_match_result addObject: @"-1"];
-//    }else{
-        float Lamberjack_elv_diff = 0;
-        NSLog(@"user elv is %f", user_elv);
-        NSLog(@"Lamberjack elv is %d - %d", Lamberjack_elv_first, Lamberjack_elv_last);
-        if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
-          NSLog(@"looking Lamberjack");
-          int at_Lamberjack_index = [googleMap_Lamberjack count]-1- (user_elv-Lamberjack_elv_first)/roundStep;
-          Lamberjack_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
-          //NSLog(@"Lamberjack diff %d", Lamberjack_elv_diff);
-        }else{
-          Lamberjack_elv_diff = -1;
-        }
-        NSLog(@"LowerMainStreet elv is %d - %d", LowerMainStreet_elv_first, LowerMainStreet_elv_last);
-        float LowerMainStreet_elv_diff = 0;
-        if(user_elv >= LowerMainStreet_elv_first && user_elv <= LowerMainStreet_elv_last){
-          NSLog(@"looking LowerMain");
-          NSLog(@"LowerMainStreet total count is %d, steps is %d", [googleMap_LowerMainStreet count],(user_elv-LowerMainStreet_elv_first)/roundStep);
-          int at_LowerMainStreet_index = [googleMap_LowerMainStreet count]-1- (user_elv-LowerMainStreet_elv_first)/roundStep;
-          LowerMainStreet_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
-        }else{
-          LowerMainStreet_elv_diff = -1;
-        }
-        NSLog(@"MagicMoguls elv is %d - %d", MagicMoguls_elv_first, MagicMoguls_elv_last);
-        float MagicMoguls_elv_diff = 0;
-        if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
-          NSLog(@"looking Magic");
-          int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
-          MagicMoguls_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
-        }else{
-          MagicMoguls_elv_diff = -1;
-        }
-        NSLog(@"Siderwinder elv is %d - %d", Siderwinder_elv_first, Siderwinder_elv_last);
-        float Siderwinder_elv_diff = 0;
-        if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
-          NSLog(@"looking Siderwinder");
-          int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
-          Siderwinder_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
-        }else{
-          Siderwinder_elv_diff = -1;
-        }
-        NSLog(@"SkidTrail elv is %d - %d", SkidTrail_elv_first, SkidTrail_elv_last);
-        float SkidTrail_elv_diff = 0;
-        if(user_elv >= SkidTrail_elv_first && user_elv <= SkidTrail_elv_last){
-          NSLog(@"looking SkidTrail");
-          int at_SkidTrail_index = [googleMap_SkidTrail count]-1- (user_elv-SkidTrail_elv_first)/roundStep;
-          SkidTrail_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
-        }else{
-          SkidTrail_elv_diff = -1;
-        }
-        NSLog(@"TheGulch elv is %d - %d", TheGulch_elv_first, TheGulch_elv_last);
-        float TheGulch_elv_diff = 0;
-        if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
-          NSLog(@"looking Gulch");
-          int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
-          TheGulch_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
-        }else{
-          TheGulch_elv_diff = -1;
-        }
-        /*****
-         * 0 - Lumberjack
-         * 1 - Lower Main Street
-         * 2 - MagicMoguls
-         * 3 - Siderwinder
-         * 4 - SkidTrail
-         * 5 - TheGulch
-         * */
-        NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:MagicMoguls_elv_diff], [NSNumber numberWithInt:Siderwinder_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:TheGulch_elv_diff], nil];
-        float min = 999999999.0;
-        NSInteger match_trail = -1;
-        for (int j = 0; j < [trail_diff count]; j++) {
-            NSLog(@"diff is %f",[[trail_diff objectAtIndex:j] floatValue] );
-          if([[trail_diff objectAtIndex:j] integerValue] != -1 && [[trail_diff objectAtIndex:j] floatValue]<min){
-            NSLog(@"==filtering @index %d", j);
-            min = [[trail_diff objectAtIndex:j] floatValue];
-            NSLog(@"min updated as %f", min);
-            match_trail  = j;
-          }
-        }
-        [trail_match_result addObject:[NSNumber numberWithInt:match_trail]];
+    float user_elv = [self get_elv:my_trail_data atIndex:i]*3.28;
+    
+    //    NSLog(@"----------------Point : %d", i);
+    //
+    //
+    //    if(user_elv > previous_user_elv){
+    //      up_counter++;
+    //      if(down_counter){
+    //        down_counter--;
+    //      }
+    //    }else if(user_elv < previous_user_elv){
+    //      down_counter++;
+    //      if(up_counter){
+    //        up_counter--;
+    //      }
+    //    }
+    //    if(going_up){
+    //      if(down_counter>= detect_limit){
+    //        going_up=0;
+    //        up_counter=0;
+    //      }
+    //    }else{ //going down
+    //      if(up_counter >= detect_limit){
+    //        going_up = 1;
+    //        down_counter = 0;
+    //      }
+    //    }
+    //    previous_user_elv = user_elv;
+    //    NSLog(@"up_counter is %d", up_counter);
+    //    NSLog(@"down_counter is %d", down_counter);
+    //    NSLog(@"current going up is %d", going_up);
+    //    if(going_up){
+    //      NSLog(@"wasting data %f",user_elv);
+    //      [trail_match_result addObject: @"-1"];
+    //    }else{
+    float Lamberjack_elv_diff = 0;
+    NSLog(@"user elv is %f", user_elv);
+    NSLog(@"Lamberjack elv is %d - %d", Lamberjack_elv_first, Lamberjack_elv_last);
+    if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
+      NSLog(@"looking Lamberjack");
+      int at_Lamberjack_index = [googleMap_Lamberjack count]-1- (user_elv-Lamberjack_elv_first)/roundStep;
+      Lamberjack_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
+      //NSLog(@"Lamberjack diff %d", Lamberjack_elv_diff);
+    }else{
+      Lamberjack_elv_diff = -1;
+    }
+    NSLog(@"LowerMainStreet elv is %d - %d", LowerMainStreet_elv_first, LowerMainStreet_elv_last);
+    float LowerMainStreet_elv_diff = 0;
+    if(user_elv >= LowerMainStreet_elv_first && user_elv <= LowerMainStreet_elv_last){
+      NSLog(@"looking LowerMain");
+      NSLog(@"LowerMainStreet total count is %d, steps is %d", [googleMap_LowerMainStreet count],(user_elv-LowerMainStreet_elv_first)/roundStep);
+      int at_LowerMainStreet_index = [googleMap_LowerMainStreet count]-1- (user_elv-LowerMainStreet_elv_first)/roundStep;
+      LowerMainStreet_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
+    }else{
+      LowerMainStreet_elv_diff = -1;
+    }
+    NSLog(@"MagicMoguls elv is %d - %d", MagicMoguls_elv_first, MagicMoguls_elv_last);
+    float MagicMoguls_elv_diff = 0;
+    if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
+      NSLog(@"looking Magic");
+      int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
+      MagicMoguls_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
+    }else{
+      MagicMoguls_elv_diff = -1;
+    }
+    NSLog(@"Siderwinder elv is %d - %d", Siderwinder_elv_first, Siderwinder_elv_last);
+    float Siderwinder_elv_diff = 0;
+    if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
+      NSLog(@"looking Siderwinder");
+      int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
+      Siderwinder_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
+    }else{
+      Siderwinder_elv_diff = -1;
+    }
+    NSLog(@"SkidTrail elv is %d - %d", SkidTrail_elv_first, SkidTrail_elv_last);
+    float SkidTrail_elv_diff = 0;
+    if(user_elv >= SkidTrail_elv_first && user_elv <= SkidTrail_elv_last){
+      NSLog(@"looking SkidTrail");
+      int at_SkidTrail_index = [googleMap_SkidTrail count]-1- (user_elv-SkidTrail_elv_first)/roundStep;
+      SkidTrail_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
+    }else{
+      SkidTrail_elv_diff = -1;
+    }
+    NSLog(@"TheGulch elv is %d - %d", TheGulch_elv_first, TheGulch_elv_last);
+    float TheGulch_elv_diff = 0;
+    if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
+      NSLog(@"looking Gulch");
+      int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
+      TheGulch_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
+    }else{
+      TheGulch_elv_diff = -1;
+    }
+    /*****
+     * 0 - Lumberjack
+     * 1 - Lower Main Street
+     * 2 - MagicMoguls
+     * 3 - Siderwinder
+     * 4 - SkidTrail
+     * 5 - TheGulch
+     * */
+    NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:MagicMoguls_elv_diff], [NSNumber numberWithInt:Siderwinder_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:TheGulch_elv_diff], nil];
+    float min = 999999999.0;
+    NSInteger match_trail = -1;
+    for (int j = 0; j < [trail_diff count]; j++) {
+      NSLog(@"diff is %f",[[trail_diff objectAtIndex:j] floatValue] );
+      if([[trail_diff objectAtIndex:j] integerValue] != -1 && [[trail_diff objectAtIndex:j] floatValue]<min){
+        NSLog(@"==filtering @index %d", j);
+        min = [[trail_diff objectAtIndex:j] floatValue];
+        NSLog(@"min updated as %f", min);
+        match_trail  = j;
+      }
+    }
+    [trail_match_result addObject:[NSNumber numberWithInt:match_trail]];
     //}
   }
   for (int tom = 0; tom < [trail_match_result count]; tom++){
     NSLog(@"match -->%d %d", tom, [[trail_match_result objectAtIndex:tom] integerValue]);
   }
   /*********************************JERRY TRAIL CALCULATION END ******************************/
-  if([[trail_match_result objectAtIndex:0] integerValue] == 0){
-    return @"LumberJack";
-  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 1){
-    return @"Lower Main Street";
-  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 2){
-    return @"MagicMoguls";
-  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 3){
-    return @"Siderwinder";
-  }else if( [[trail_match_result objectAtIndex:0] integerValue] == 4){
-    return @"SkidTrail";
-  }else if ([[trail_match_result objectAtIndex:0] integerValue] == 5){
-    return @"TheGulch";
-  }else {
-    return @"UNKNOWN Trail";
-  }
+    if([[trail_match_result objectAtIndex:0] integerValue] == 0){
+      NSMutableArray * trail_result = [NSMutableArray new];
+      float trail_location_percentage = (Lamberjack_elv_last - eva)/(Lamberjack_elv_last - Lamberjack_elv_first);
+      [trail_result addObject:@"LumberJack"];
+      [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
+      return trail_result;
+    }else if ([[trail_match_result objectAtIndex:0] integerValue] == 1){
+      //(last(top) - location)/(last - first)
+      float trail_location_percentage = (LowerMainStreet_elv_last - eva)/(LowerMainStreet_elv_last - LowerMainStreet_elv_first);
+      NSMutableArray * trail_result = [NSMutableArray new];
+      [trail_result addObject:@"LowerMainStreet"];
+      [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
+      return trail_result;
+    }else if ([[trail_match_result objectAtIndex:0] integerValue] == 2){
+      return @"MagicMoguls";
+    }else if ([[trail_match_result objectAtIndex:0] integerValue] == 3){
+      return @"Siderwinder";
+    }else if( [[trail_match_result objectAtIndex:0] integerValue] == 4){
+      return @"SkidTrail";
+    }else if ([[trail_match_result objectAtIndex:0] integerValue] == 5){
+      return @"TheGulch";
+    }else {
+      return @"UNKNOWN Trail";
+    }
+}
+
+-(NSArray *)trailPathViewData:(trailPathView *)graphView
+{
   //SP manual draw trail start
-//  NSArray *lumberJack = [[NSArray alloc] initWithObjects:
-//                         [NSValue valueWithCGPoint:CGPointMake(266.5, 189)],   //LUMBERJACK
-//                         [NSValue valueWithCGPoint:CGPointMake(262.5, 197)],
-//                         [NSValue valueWithCGPoint:CGPointMake(259.5, 204)],
-//                         [NSValue valueWithCGPoint:CGPointMake(255.5, 214)],    //rows should be 5+3x lanes
-//                         [NSValue valueWithCGPoint:CGPointMake(252.5, 222)],
-//                         [NSValue valueWithCGPoint:CGPointMake(250.5, 229)],
-//                         [NSValue valueWithCGPoint:CGPointMake(247.5, 239)],
-//                         [NSValue valueWithCGPoint:CGPointMake(242.5, 247)],
-//                         [NSValue valueWithCGPoint:CGPointMake(232.5, 254)],
-//                         [NSValue valueWithCGPoint:CGPointMake(225.5, 259)],
-//                         [NSValue valueWithCGPoint:CGPointMake(221.5, 265)],
-//                         [NSValue valueWithCGPoint:CGPointMake(217.5, 273)],
-//                         [NSValue valueWithCGPoint:CGPointMake(213.5, 280)],
-//                         [NSValue valueWithCGPoint:CGPointMake(211.5, 288)],
-//                         [NSValue valueWithCGPoint:CGPointMake(207.5, 299)], nil];
-////  
-////  
-//  NSArray *lowerMainStreet = [[NSArray alloc] initWithObjects:
-//                              [NSValue valueWithCGPoint:CGPointMake(207.5, 300)],  //LOWER MAIN STREET
-//                              [NSValue valueWithCGPoint:CGPointMake(203.5, 305)],
-//                              [NSValue valueWithCGPoint:CGPointMake(198.5, 310)],
-//                              [NSValue valueWithCGPoint:CGPointMake(193.5, 317)],
-//                              [NSValue valueWithCGPoint:CGPointMake(189.5, 323)],
-//                              [NSValue valueWithCGPoint:CGPointMake(183.5, 331)],
-//                              [NSValue valueWithCGPoint:CGPointMake(178.5, 337)],
-//                              [NSValue valueWithCGPoint:CGPointMake(172.5, 343)], nil];
+  NSArray *lumberJack = [[NSArray alloc] initWithObjects:
+                         [NSValue valueWithCGPoint:CGPointMake(266.5, 189)],   //LUMBERJACK
+                         [NSValue valueWithCGPoint:CGPointMake(262.5, 197)],
+                         [NSValue valueWithCGPoint:CGPointMake(259.5, 204)],
+                         [NSValue valueWithCGPoint:CGPointMake(255.5, 214)],    //rows should be 5+3x lanes
+                         [NSValue valueWithCGPoint:CGPointMake(252.5, 222)],
+                         [NSValue valueWithCGPoint:CGPointMake(250.5, 229)],
+                         [NSValue valueWithCGPoint:CGPointMake(247.5, 239)],
+                         [NSValue valueWithCGPoint:CGPointMake(242.5, 247)],
+                         [NSValue valueWithCGPoint:CGPointMake(232.5, 254)],
+                         [NSValue valueWithCGPoint:CGPointMake(225.5, 259)],
+                         [NSValue valueWithCGPoint:CGPointMake(221.5, 265)],
+                         [NSValue valueWithCGPoint:CGPointMake(217.5, 273)],
+                         [NSValue valueWithCGPoint:CGPointMake(213.5, 280)],
+                         [NSValue valueWithCGPoint:CGPointMake(211.5, 288)],
+                         [NSValue valueWithCGPoint:CGPointMake(207.5, 299)], nil];
+//  
+//  
+  NSArray *lowerMainStreet = [[NSArray alloc] initWithObjects:
+                              [NSValue valueWithCGPoint:CGPointMake(207.5, 300)],  //LOWER MAIN STREET
+                              [NSValue valueWithCGPoint:CGPointMake(203.5, 305)],
+                              [NSValue valueWithCGPoint:CGPointMake(198.5, 310)],
+                              [NSValue valueWithCGPoint:CGPointMake(193.5, 317)],
+                              [NSValue valueWithCGPoint:CGPointMake(189.5, 323)],
+                              [NSValue valueWithCGPoint:CGPointMake(183.5, 331)],
+                              [NSValue valueWithCGPoint:CGPointMake(178.5, 337)],
+                              [NSValue valueWithCGPoint:CGPointMake(172.5, 343)], nil];
 //  NSArray *theGulch = [[NSArray alloc] initWithObjects:
 //                      [NSValue valueWithCGPoint:CGPointMake(214.5, 317)],   //THE GULCH
 //                       [NSValue valueWithCGPoint:CGPointMake(212.5, 321)],
@@ -1663,10 +1677,10 @@
 //                      [NSValue valueWithCGPoint:CGPointMake(577.500000, 251.500000)],
 //                      [NSValue valueWithCGPoint:CGPointMake(587.500000, 257.500000)],
 //                      [NSValue valueWithCGPoint:CGPointMake(595.500000, 258.500000)],nil];
-//  
-//
-//
-//  NSMutableArray *pointsArray = [NSMutableArray new];
+  
+
+
+  NSMutableArray *pointsArray = [NSMutableArray new];
 //  [pointsArray addObject:Hornetsnest];
 //  [pointsArray addObject:Polaris];
 //  [pointsArray addObject:Therapids];
@@ -1741,11 +1755,11 @@
 //  [pointsArray addObject:Sidewinder];
 //  [pointsArray addObject:Magicmoglus];
 //  [pointsArray addObject:Skidtrail];
-//  [pointsArray addObject:lumberJack];
-//  [pointsArray addObject:lowerMainStreet];
+  [pointsArray addObject:lumberJack];
+  [pointsArray addObject:lowerMainStreet];
 //  [pointsArray addObject:theGulch];
   //SP manual draw trail end
-
+  return pointsArray;
 }
 
 
@@ -1766,9 +1780,12 @@
 {
   NSLog(@"viewDidLoad");
   [super viewDidLoad];
-  //get image from library
-  NSString* find_trail = [self trailPathViewData: 2324.675849 and: 39.251461 and: -120.131662];
-  NSLog(@"-------------trail is %@", find_trail);
+  //get image from library 2125.96034	39.260743	120.127513
+  NSArray* trail = [self calculate_trail:2125.96034 and:39.260743 and: -120.127513];
+  NSString* trail_name = [trail objectAtIndex: 0];
+  NSString* trail_percent = [trail objectAtIndex: 1];
+
+  NSLog(@"JERRY trail is %@ %f", trail_name, [trail_percent floatValue]);
   self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (self.map.size.width*(self.view.bounds.size.height/self.map.size.height)), self.view.bounds.size.height)];
 //  self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height * image.size.height / image.size.width))];
 
