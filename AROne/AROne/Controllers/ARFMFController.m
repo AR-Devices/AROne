@@ -9,6 +9,7 @@
 #import "ARFMFController.h"
 #import "ARFriendTableViewCell.h"
 #import <NSDate+TimeAgo.h>
+#import "ARTrailSummaryMapViewController.h"
 
 @interface ARFMFController () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -87,6 +88,13 @@
     } else if (user[@"displayname"]) {
         cell.userName.text = user[@"displayname"];
     }
+    @try {
+        PFGeoPoint *point = user[@"geolocation"];
+        cell.trailName.text = [ARTrailSummaryMapViewController trailPathViewData: [[user objectForKey:@"altitude"] doubleValue] and:point.latitude and:point.longitude];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"exception is %@", exception);
+    }
     cell.lastSeen.text = [NSString stringWithFormat:@"Last Seen %@", [[user updatedAt] timeAgo]];
 
     
@@ -111,7 +119,8 @@
         //  PFObject *object = [PFObject objectWithClassName:@"User"];
         PFUser * user = [PFUser currentUser];
         [user setObject:geoPoint forKey:@"geolocation"];
-        
+        double altitude = [[locations lastObject] altitude];
+        [user setObject:[NSNumber numberWithDouble:altitude] forKey:@"altitude"];
         [user saveEventually:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 NSLog(@"geolocation uploaded correctly");
@@ -119,14 +128,13 @@
         }];
         //stop upload
         [self.locationManager stopUpdatingLocation];
-
     }
     
     [locations lastObject];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 

@@ -27,7 +27,7 @@
 @implementation ARTrailSummaryMapViewController
 
 #pragma mark - trailPathSource methods
--(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude
+-(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latituei
 {
   NSArray *googleMap_Lamberjack = [[NSArray alloc] initWithObjects:
                                    [[NSArray alloc] initWithObjects:@"7595", @"39.25188056", @"-120.1316417", nil],
@@ -2005,34 +2005,34 @@
   return self.imageView;
 }
 
-- (float) get_elv: (NSMutableArray*) data atIndex: (int) i
++ (float) get_elv: (NSMutableArray*) data atIndex: (int) i
 {
   CLLocation *this_location = [data objectAtIndex:i];
   return this_location.altitude;
 }
-- (float) get_cll_n: (NSArray *) data atIndex: (int) i
++ (float) get_cll_n: (NSArray *) data atIndex: (int) i
 {
 //    NSLog(@"get_n is %f",  [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ]);
   CLLocation *this_location = [data objectAtIndex:i];
   return this_location.coordinate.latitude;
 }
-- (float) get_cll_w: (NSArray *) data atIndex: (int) i
++ (float) get_cll_w: (NSArray *) data atIndex: (int) i
 {
 //  NSLog(@"get_w is %f",  [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ]);
   CLLocation *this_location = [data objectAtIndex:i];
   return this_location.coordinate.longitude;
 }
-- (float) get_n: (NSArray *) data atIndex: (int) i
++ (float) get_n: (NSArray *) data atIndex: (int) i
 {
   //    NSLog(@"get_n is %f",  [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ]);
   return [[[data objectAtIndex:i] objectAtIndex:1] floatValue    ];
 }
-- (float) get_w: (NSArray *) data atIndex: (int) i
++ (float) get_w: (NSArray *) data atIndex: (int) i
 {
   //  NSLog(@"get_w is %f",  [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ]);
   return [[[data objectAtIndex:i] objectAtIndex:2] floatValue    ];
 }
-- (NSInteger) get_distance: (NSArray*) user user_index: (int) u_index : (NSArray*) trail : (int) trail_index
++ (NSInteger) get_distance: (NSArray*) user user_index: (int) u_index : (NSArray*) trail : (int) trail_index
 {
 
   NSLog(@"user index is %d <=> trail index is %d", u_index, trail_index);
@@ -2053,7 +2053,7 @@
 }
 
 
-- (NSMutableArray*) jerry_init_data: (float) eva and: (float ) longitude and: (float) latitude
++ (NSMutableArray*) jerry_init_data: (float) eva and: (float ) longitude and: (float) latitude
 {
   NSDateFormatter *df = [[NSDateFormatter alloc] init];
   [df setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
