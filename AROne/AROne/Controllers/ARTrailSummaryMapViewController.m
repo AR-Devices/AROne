@@ -27,7 +27,7 @@
 @implementation ARTrailSummaryMapViewController
 
 #pragma mark - trailPathSource methods
--(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latituei
+-(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude
 {
   NSArray *googleMap_Lamberjack = [[NSArray alloc] initWithObjects:
                                    [[NSArray alloc] initWithObjects:@"7595", @"39.25188056", @"-120.1316417", nil],
@@ -462,7 +462,7 @@
                                  [[NSArray alloc] initWithObjects:@"6882", @"39.25998889", @"-120.1279056", nil],
                                  [[NSArray alloc] initWithObjects:@"6877", @"39.25998889", @"-120.1279056", nil],
                                  nil];
-  NSMutableArray *my_trail_data = [self jerry_init_data: eva and: longitude and: latitude];
+  NSMutableArray *my_trail_data = [ARTrailSummaryMapViewController jerry_init_data: eva and: longitude and: latitude];
   NSLog(@"Init data finished ...");
   NSInteger Lamberjack_elv_first        = [[[googleMap_Lamberjack objectAtIndex:([googleMap_Lamberjack count]-1)]objectAtIndex:0] intValue];
   NSInteger Lamberjack_elv_last         = [[[googleMap_Lamberjack objectAtIndex:0]objectAtIndex:0] intValue];
@@ -491,7 +491,7 @@
   int user_array_last_index = [my_trail_data count];
   
   for (int i = 0; i < user_array_last_index; i++) {
-    float user_elv = [self get_elv:my_trail_data atIndex:i]*3.28;
+    float user_elv = [ARTrailSummaryMapViewController get_elv:my_trail_data atIndex:i]*3.28;
     
     //    NSLog(@"----------------Point : %d", i);
     //
@@ -532,7 +532,7 @@
     if(user_elv >= Lamberjack_elv_first && user_elv <= Lamberjack_elv_last){
       NSLog(@"looking Lamberjack");
       int at_Lamberjack_index = [googleMap_Lamberjack count]-1- (user_elv-Lamberjack_elv_first)/roundStep;
-      Lamberjack_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
+      Lamberjack_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Lamberjack :at_Lamberjack_index];
       //NSLog(@"Lamberjack diff %d", Lamberjack_elv_diff);
     }else{
       Lamberjack_elv_diff = -1;
@@ -543,7 +543,7 @@
       NSLog(@"looking LowerMain");
       NSLog(@"LowerMainStreet total count is %d, steps is %d", [googleMap_LowerMainStreet count],(user_elv-LowerMainStreet_elv_first)/roundStep);
       int at_LowerMainStreet_index = [googleMap_LowerMainStreet count]-1- (user_elv-LowerMainStreet_elv_first)/roundStep;
-      LowerMainStreet_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
+      LowerMainStreet_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_LowerMainStreet :at_LowerMainStreet_index];
     }else{
       LowerMainStreet_elv_diff = -1;
     }
@@ -552,7 +552,7 @@
     if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
       NSLog(@"looking Magic");
       int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
-      MagicMoguls_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
+      MagicMoguls_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
     }else{
       MagicMoguls_elv_diff = -1;
     }
@@ -561,7 +561,7 @@
     if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
       NSLog(@"looking Siderwinder");
       int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
-      Siderwinder_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
+      Siderwinder_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
     }else{
       Siderwinder_elv_diff = -1;
     }
@@ -570,7 +570,7 @@
     if(user_elv >= SkidTrail_elv_first && user_elv <= SkidTrail_elv_last){
       NSLog(@"looking SkidTrail");
       int at_SkidTrail_index = [googleMap_SkidTrail count]-1- (user_elv-SkidTrail_elv_first)/roundStep;
-      SkidTrail_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
+      SkidTrail_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_SkidTrail :at_SkidTrail_index];
     }else{
       SkidTrail_elv_diff = -1;
     }
@@ -579,7 +579,7 @@
     if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
       NSLog(@"looking Gulch");
       int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
-      TheGulch_elv_diff = [self get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
+      TheGulch_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
     }else{
       TheGulch_elv_diff = -1;
     }
