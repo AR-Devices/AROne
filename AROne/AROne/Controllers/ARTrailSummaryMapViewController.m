@@ -904,6 +904,11 @@ NSArray *googleMap_WestRidge = [[NSArray alloc] initWithObjects:
 [[NSArray alloc] initWithObjects:@"7993.032",@"39.25025432",@"-120.1383112",nil],
 [[NSArray alloc] initWithObjects:@"7992.048",@"39.2502805",@"-120.1382995",nil],
 nil];
+  
+  NSMutableArray *googleMap_Ax_handle_reverse = [[NSMutableArray alloc ] init];
+  for (int i= (int)[googleMap_Ax_handle count] - 1; i>=0; i--){
+    [googleMap_Ax_handle_reverse addObject:[googleMap_Ax_handle objectAtIndex:i]];
+  }
 
   NSMutableArray *my_trail_data = [ARTrailSummaryMapViewController jerry_init_data: eva and: longitude and: latitude];
   NSLog(@"Init data finished ...");
@@ -917,8 +922,8 @@ nil];
   NSInteger UpperMainStreet_elv_last        = [[[googleMap_UpperMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_first         = [[[googleMap_SkidTrail objectAtIndex:([googleMap_SkidTrail count]-1)]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_last          = [[[googleMap_SkidTrail objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger AxHandle_elv_first          = [[[googleMap_Ax_handle objectAtIndex:([googleMap_Ax_handle count]-1)]objectAtIndex:0] intValue];
-  NSInteger AxHandle_elv_last           = [[[googleMap_Ax_handle objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger AxHandle_elv_first          = [[[googleMap_Ax_handle_reverse objectAtIndex:([googleMap_Ax_handle_reverse count]-1)]objectAtIndex:0] intValue];
+  NSInteger AxHandle_elv_last           = [[[googleMap_Ax_handle_reverse objectAtIndex:0]objectAtIndex:0] intValue];
   
 
   
@@ -1021,8 +1026,8 @@ nil];
     float AxHandle_elv_diff = 0;
     if(user_elv >= AxHandle_elv_first && user_elv <= AxHandle_elv_last){
       NSLog(@"looking Gulch");
-      int at_AxHandle_index = [googleMap_Ax_handle count]-1- (user_elv-AxHandle_elv_first)/roundStep;
-      AxHandle_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Ax_handle :at_AxHandle_index];
+      int at_AxHandle_index = [googleMap_Ax_handle_reverse count]-1- (user_elv-AxHandle_elv_first)/roundStep;
+      AxHandle_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Ax_handle_reverse :at_AxHandle_index];
     }else{
       AxHandle_elv_diff = -1;
     }
