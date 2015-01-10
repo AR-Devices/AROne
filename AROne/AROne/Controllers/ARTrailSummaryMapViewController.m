@@ -792,7 +792,7 @@ NSArray *googleMap_WestRidge = [[NSArray alloc] initWithObjects:
 [[NSArray alloc] initWithObjects:@"8381.384",@"39.24487544",@"-120.1404083",nil],
 [[NSArray alloc] initWithObjects:@"8378.76",@"39.24491612",@"-120.14042",nil],
 [[NSArray alloc] initWithObjects:@"8375.48",@"39.24495901",@"-120.1404163",nil],
-[[NSArray alloc] initWithObjects:@"8372.2",@"39.24500252",@"-120.1404237",nil],
+[[NSArray alloc] initWithObjects:@"8372.2",@"39.24500252",@"-120.1404237",nil], //this one
 [[NSArray alloc] initWithObjects:@"8368.92",@"39.24504787",@"-120.1404041",nil],
 [[NSArray alloc] initWithObjects:@"8365.968",@"39.24509234",@"-120.140398",nil],
 [[NSArray alloc] initWithObjects:@"8363.344",@"39.24513548",@"-120.1404062",nil],
@@ -916,10 +916,10 @@ nil];
   NSInteger Lamberjack_elv_last         = [[[googleMap_Lamberjack objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger LowerMainStreet_elv_first   = [[[googleMap_LowerMainStreet objectAtIndex:([googleMap_LowerMainStreet count]-1)]objectAtIndex:0] intValue];
   NSInteger LowerMainStreet_elv_last    = [[[googleMap_LowerMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger WestRidge_elv_first       = [[[googleMap_WestRidge objectAtIndex:([googleMap_WestRidge count]-1)]objectAtIndex:0] intValue];
-  NSInteger WestRidge_elv_last        = [[[googleMap_WestRidge objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger UpperMainStreet_elv_first       = [[[googleMap_UpperMainStreet objectAtIndex:([googleMap_UpperMainStreet count]-1)]objectAtIndex:0] intValue];
-  NSInteger UpperMainStreet_elv_last        = [[[googleMap_UpperMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger WestRidge_elv_first         = [[[googleMap_WestRidge objectAtIndex:([googleMap_WestRidge count]-1)]objectAtIndex:0] intValue];
+  NSInteger WestRidge_elv_last          = [[[googleMap_WestRidge objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger UpperMainStreet_elv_first   = [[[googleMap_UpperMainStreet objectAtIndex:([googleMap_UpperMainStreet count]-1)]objectAtIndex:0] intValue];
+  NSInteger UpperMainStreet_elv_last    = [[[googleMap_UpperMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_first         = [[[googleMap_SkidTrail objectAtIndex:([googleMap_SkidTrail count]-1)]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_last          = [[[googleMap_SkidTrail objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger AxHandle_elv_first          = [[[googleMap_Ax_handle_reverse objectAtIndex:([googleMap_Ax_handle_reverse count]-1)]objectAtIndex:0] intValue];
@@ -2252,7 +2252,7 @@ nil];
   NSLog(@"viewDidLoad");
   [super viewDidLoad];
   //get image from library 2125.96034	39.260743	120.127513
-  NSArray* trail = [ARTrailSummaryMapViewController calculate_trail:2125.96034 and:39.260743 and: -120.127513];
+  NSArray* trail = [ARTrailSummaryMapViewController calculate_trail:2552 and:39.24500252 and: -120.1404237];
   NSString* trail_name = [trail objectAtIndex: 0];
   NSString* trail_percent = [trail objectAtIndex: 1];
 
@@ -2513,13 +2513,14 @@ nil];
   abs_distance = (pow(([self get_cll_n:user atIndex:u_index]*100000-[self get_n:trail atIndex:trail_index]*100000), 2) + pow(([self get_cll_w:user atIndex:u_index]*100000-[self get_w:trail atIndex:trail_index]*100000),2));
   NSLog(@"abs_distance is %f", abs_distance);
 
-  if(abs_distance <= 8300){
-      NSLog(@"return %f", abs_distance);
-    return abs_distance;
-  } else {
-      NSLog(@"return -1");
-    return -1;
-  }
+  return abs_distance;
+//  if(abs_distance <= 8300){
+//      NSLog(@"return %f", abs_distance);
+//    return abs_distance;
+//  } else {
+//      NSLog(@"return -1");
+//    return -1;
+//  }
 
 }
 
