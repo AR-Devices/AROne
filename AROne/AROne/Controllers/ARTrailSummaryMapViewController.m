@@ -462,20 +462,463 @@
                                  [[NSArray alloc] initWithObjects:@"6882", @"39.25998889", @"-120.1279056", nil],
                                  [[NSArray alloc] initWithObjects:@"6877", @"39.25998889", @"-120.1279056", nil],
                                  nil];
+NSArray *googleMap_Ax_handle = [[NSArray alloc] initWithObjects:
+[[NSArray alloc] initWithObjects:@"7704.72",@"39.25038041",@"-120.1332316",nil],
+[[NSArray alloc] initWithObjects:@"7705.376",@"39.25036277",@"-120.1332263",nil],
+[[NSArray alloc] initWithObjects:@"7707.016",@"39.25032643",@"-120.1332284",nil],
+[[NSArray alloc] initWithObjects:@"7708.328",@"39.25028205",@"-120.1332152",nil],
+[[NSArray alloc] initWithObjects:@"7709.968",@"39.25024543",@"-120.1332173",nil],
+[[NSArray alloc] initWithObjects:@"7711.936",@"39.2502007",@"-120.1332039",nil],
+[[NSArray alloc] initWithObjects:@"7713.904",@"39.25016261",@"-120.1332182",nil],
+[[NSArray alloc] initWithObjects:@"7715.872",@"39.25012535",@"-120.1332197",nil],
+[[NSArray alloc] initWithObjects:@"7717.512",@"39.25008847",@"-120.1332224",nil],
+[[NSArray alloc] initWithObjects:@"7719.808",@"39.25005045",@"-120.1332379",nil],
+[[NSArray alloc] initWithObjects:@"7722.104",@"39.25000478",@"-120.1332393",nil],
+[[NSArray alloc] initWithObjects:@"7724.728",@"39.24996733",@"-120.1332565",nil],
+[[NSArray alloc] initWithObjects:@"7727.024",@"39.24993084",@"-120.1332611",nil],
+[[NSArray alloc] initWithObjects:@"7729.32",@"39.24989429",@"-120.1332656",nil],
+[[NSArray alloc] initWithObjects:@"7732.272",@"39.24984874",@"-120.1332681",nil],
+[[NSArray alloc] initWithObjects:@"7734.24",@"39.24981988",@"-120.1332873",nil],
+[[NSArray alloc] initWithObjects:@"7736.536",@"39.24978302",@"-120.1332917",nil],
+[[NSArray alloc] initWithObjects:@"7739.16",@"39.24974489",@"-120.1333085",nil],
+[[NSArray alloc] initWithObjects:@"7741.456",@"39.24970879",@"-120.1332999",nil],
+[[NSArray alloc] initWithObjects:@"7744.08",@"39.24967153",@"-120.133304",nil],
+[[NSArray alloc] initWithObjects:@"7747.032",@"39.2496331",@"-120.1333207",nil],
+[[NSArray alloc] initWithObjects:@"7749.656",@"39.24959568",@"-120.1333248",nil],
+[[NSArray alloc] initWithObjects:@"7752.608",@"39.24955002",@"-120.1333139",nil],
+[[NSArray alloc] initWithObjects:@"7755.888",@"39.24951071",@"-120.1333296",nil],
+[[NSArray alloc] initWithObjects:@"7758.184",@"39.24947388",@"-120.1333207",nil],
+[[NSArray alloc] initWithObjects:@"7761.464",@"39.24943564",@"-120.1333385",nil],
+[[NSArray alloc] initWithObjects:@"7765.4",@"39.24939644",@"-120.1333693",nil],
+[[NSArray alloc] initWithObjects:@"7769.008",@"39.24935809",@"-120.1333871",nil],
+[[NSArray alloc] initWithObjects:@"7772.944",@"39.24931792",@"-120.1334167",nil],
+[[NSArray alloc] initWithObjects:@"7776.224",@"39.2492785",@"-120.1334333",nil],
+[[NSArray alloc] initWithObjects:@"7779.504",@"39.24925686",@"-120.1334816",nil],
+[[NSArray alloc] initWithObjects:@"7782.784",@"39.24922638",@"-120.1335143",nil],
+[[NSArray alloc] initWithObjects:@"7786.392",@"39.24918637",@"-120.1335445",nil],
+[[NSArray alloc] initWithObjects:@"7789.016",@"39.24916536",@"-120.1335796",nil],
+[[NSArray alloc] initWithObjects:@"7791.968",@"39.24912526",@"-120.13361",nil],
+[[NSArray alloc] initWithObjects:@"7794.92",@"39.24909365",@"-120.1336416",nil],
+[[NSArray alloc] initWithObjects:@"7797.544",@"39.24906173",@"-120.1336729",nil],
+[[NSArray alloc] initWithObjects:@"7800.496",@"39.24901991",@"-120.1337017",nil],
+[[NSArray alloc] initWithObjects:@"7802.792",@"39.24898898",@"-120.1337205",nil],
+[[NSArray alloc] initWithObjects:@"7805.416",@"39.24895747",@"-120.1337527",nil],
+[[NSArray alloc] initWithObjects:@"7807.712",@"39.24892591",@"-120.1337849",nil],
+[[NSArray alloc] initWithObjects:@"7810.664",@"39.24888413",@"-120.1338144",nil],
+[[NSArray alloc] initWithObjects:@"7813.616",@"39.24884156",@"-120.1338434",nil],
+[[NSArray alloc] initWithObjects:@"7815.584",@"39.24880978",@"-120.1338619",nil],
+[[NSArray alloc] initWithObjects:@"7818.536",@"39.24877653",@"-120.133893",nil],
+[[NSArray alloc] initWithObjects:@"7821.816",@"39.24874338",@"-120.1339244",nil],
+[[NSArray alloc] initWithObjects:@"7824.768",@"39.24871009",@"-120.1339559",nil],
+[[NSArray alloc] initWithObjects:@"7827.064",@"39.24866811",@"-120.1339724",nil],
+[[NSArray alloc] initWithObjects:@"7829.36",@"39.24863669",@"-120.1340057",nil],
+[[NSArray alloc] initWithObjects:@"7831.656",@"39.24859637",@"-120.1340238",nil],
+[[NSArray alloc] initWithObjects:@"7834.608",@"39.24856536",@"-120.1340575",nil],
+[[NSArray alloc] initWithObjects:@"7837.56",@"39.24853444",@"-120.1340914",nil],
+[[NSArray alloc] initWithObjects:@"7840.84",@"39.24851308",@"-120.1341409",nil],
+[[NSArray alloc] initWithObjects:@"7844.12",@"39.24848187",@"-120.1341745",nil],
+[[NSArray alloc] initWithObjects:@"7848.056",@"39.24846018",@"-120.1342238",nil],
+[[NSArray alloc] initWithObjects:@"7852.32",@"39.24842858",@"-120.1342709",nil],
+[[NSArray alloc] initWithObjects:@"7855.6",@"39.24840742",@"-120.1343068",nil],
+[[NSArray alloc] initWithObjects:@"7858.88",@"39.24838713",@"-120.1343569",nil],
+[[NSArray alloc] initWithObjects:@"7863.144",@"39.2483667",@"-120.1344203",nil],
+[[NSArray alloc] initWithObjects:@"7866.096",@"39.24833564",@"-120.1344676",nil],
+[[NSArray alloc] initWithObjects:@"7869.376",@"39.24831418",@"-120.1345167",nil],
+[[NSArray alloc] initWithObjects:@"7872.656",@"39.24829272",@"-120.1345658",nil],
+[[NSArray alloc] initWithObjects:@"7876.592",@"39.24826056",@"-120.1346125",nil],
+[[NSArray alloc] initWithObjects:@"7879.872",@"39.24823633",@"-120.1346601",nil],
+[[NSArray alloc] initWithObjects:@"7883.48",@"39.24821206",@"-120.1347078",nil],
+[[NSArray alloc] initWithObjects:@"7887.088",@"39.24818777",@"-120.1347556",nil],
+[[NSArray alloc] initWithObjects:@"7891.024",@"39.24816345",@"-120.1348034",nil],
+[[NSArray alloc] initWithObjects:@"7894.96",@"39.24812871",@"-120.1348492",nil],
+[[NSArray alloc] initWithObjects:@"7897.912",@"39.24810521",@"-120.1348841",nil],
+[[NSArray alloc] initWithObjects:@"7901.52",@"39.24807059",@"-120.1349302",nil],
+[[NSArray alloc] initWithObjects:@"7903.816",@"39.24804778",@"-120.1349655",nil],
+[[NSArray alloc] initWithObjects:@"7906.44",@"39.24802494",@"-120.1350009",nil],
+[[NSArray alloc] initWithObjects:@"7908.736",@"39.24800234",@"-120.1350364",nil],
+[[NSArray alloc] initWithObjects:@"7912.016",@"39.24797879",@"-120.1350982",nil],
+[[NSArray alloc] initWithObjects:@"7914.312",@"39.24796608",@"-120.1351488",nil],
+[[NSArray alloc] initWithObjects:@"7917.264",@"39.24794308",@"-120.1351975",nil],
+[[NSArray alloc] initWithObjects:@"7919.56",@"39.24792822",@"-120.1352473",nil],
+[[NSArray alloc] initWithObjects:@"7922.512",@"39.24790302",@"-120.1352955",nil],
+[[NSArray alloc] initWithObjects:@"7925.136",@"39.24787665",@"-120.1353566",nil],
+[[NSArray alloc] initWithObjects:@"7927.76",@"39.24785163",@"-120.135405",nil],
+[[NSArray alloc] initWithObjects:@"7930.056",@"39.24782673",@"-120.1354534",nil],
+[[NSArray alloc] initWithObjects:@"7932.024",@"39.24780232",@"-120.1355021",nil],
+[[NSArray alloc] initWithObjects:@"7933.992",@"39.24777934",@"-120.1355378",nil],
+[[NSArray alloc] initWithObjects:@"7936.288",@"39.24775556",@"-120.1355867",nil],
+[[NSArray alloc] initWithObjects:@"7938.912",@"39.24773228",@"-120.1356356",nil],
+[[NSArray alloc] initWithObjects:@"7941.208",@"39.24770948",@"-120.1356846",nil],
+[[NSArray alloc] initWithObjects:@"7943.832",@"39.24768749",@"-120.1357338",nil],
+[[NSArray alloc] initWithObjects:@"7946.456",@"39.24766596",@"-120.1357829",nil],
+[[NSArray alloc] initWithObjects:@"7948.752",@"39.24764444",@"-120.1358321",nil],
+[[NSArray alloc] initWithObjects:@"7951.704",@"39.24761273",@"-120.1358797",nil],
+[[NSArray alloc] initWithObjects:@"7954",@"39.24759124",@"-120.1359288",nil],
+[[NSArray alloc] initWithObjects:@"7956.296",@"39.24757002",@"-120.1359648",nil],
+[[NSArray alloc] initWithObjects:@"7958.92",@"39.24753809",@"-120.1360124",nil],
+[[NSArray alloc] initWithObjects:@"7961.216",@"39.24751431",@"-120.1360484",nil],
+[[NSArray alloc] initWithObjects:@"7963.84",@"39.24747951",@"-120.1360829",nil],
+[[NSArray alloc] initWithObjects:@"7966.792",@"39.24744463",@"-120.1361175",nil],
+[[NSArray alloc] initWithObjects:@"7970.4",@"39.24742005",@"-120.1361666",nil],
+[[NSArray alloc] initWithObjects:@"7973.68",@"39.24737463",@"-120.136187",nil],
+[[NSArray alloc] initWithObjects:@"7977.944",@"39.24732869",@"-120.1362204",nil],
+[[NSArray alloc] initWithObjects:@"7981.88",@"39.24729183",@"-120.1362554",nil],
+[[NSArray alloc] initWithObjects:@"7986.472",@"39.24725295",@"-120.1363036",nil],
+[[NSArray alloc] initWithObjects:@"7990.736",@"39.24721498",@"-120.1363388",nil],
+[[NSArray alloc] initWithObjects:@"7994.344",@"39.24718099",@"-120.136374",nil],
+[[NSArray alloc] initWithObjects:@"7997.952",@"39.24715977",@"-120.1364235",nil],
+[[NSArray alloc] initWithObjects:@"8000.904",@"39.24712918",@"-120.1364586",nil],
+[[NSArray alloc] initWithObjects:@"8004.184",@"39.24710894",@"-120.136508",nil],
+[[NSArray alloc] initWithObjects:@"8007.464",@"39.24707927",@"-120.136543",nil],
+[[NSArray alloc] initWithObjects:@"8011.072",@"39.24704857",@"-120.136591",nil],
+[[NSArray alloc] initWithObjects:@"8014.68",@"39.24702525",@"-120.1366406",nil],
+[[NSArray alloc] initWithObjects:@"8018.616",@"39.24699009",@"-120.1366891",nil],
+[[NSArray alloc] initWithObjects:@"8022.224",@"39.24695638",@"-120.1367374",nil],
+[[NSArray alloc] initWithObjects:@"8026.488",@"39.24693263",@"-120.1368001",nil],
+[[NSArray alloc] initWithObjects:@"8028.456",@"39.24691075",@"-120.1368236",nil],
+[[NSArray alloc] initWithObjects:@"8032.392",@"39.24688945",@"-120.1368859",nil],
+[[NSArray alloc] initWithObjects:@"8035.344",@"39.24686011",@"-120.1369207",nil],
+[[NSArray alloc] initWithObjects:@"8038.952",@"39.24684125",@"-120.1369696",nil],
+[[NSArray alloc] initWithObjects:@"8042.56",@"39.24681237",@"-120.1370043",nil],
+[[NSArray alloc] initWithObjects:@"8046.496",@"39.24679367",@"-120.137053",nil],
+[[NSArray alloc] initWithObjects:@"8050.76",@"39.24675394",@"-120.1370866",nil],
+[[NSArray alloc] initWithObjects:@"8055.352",@"39.24673269",@"-120.1371357",nil],
+[[NSArray alloc] initWithObjects:@"8058.96",@"39.24670985",@"-120.1371723",nil],
+[[NSArray alloc] initWithObjects:@"8064.208",@"39.24668558",@"-120.137222",nil],
+[[NSArray alloc] initWithObjects:@"8069.128",@"39.24664925",@"-120.1372583",nil],
+[[NSArray alloc] initWithObjects:@"8074.376",@"39.24661289",@"-120.1373074",nil],
+[[NSArray alloc] initWithObjects:@"8078.968",@"39.24657675",@"-120.1373438",nil],
+[[NSArray alloc] initWithObjects:@"8084.216",@"39.24654024",@"-120.1373931",nil],
+[[NSArray alloc] initWithObjects:@"8088.808",@"39.24651557",@"-120.1374432",nil],
+[[NSArray alloc] initWithObjects:@"8093.4",@"39.24647991",@"-120.1374924",nil],
+[[NSArray alloc] initWithObjects:@"8098.648",@"39.24645592",@"-120.1375424",nil],
+[[NSArray alloc] initWithObjects:@"8104.224",@"39.2464231",@"-120.1375909",nil],
+[[NSArray alloc] initWithObjects:@"8109.472",@"39.24639322",@"-120.1376386",nil],
+[[NSArray alloc] initWithObjects:@"8114.064",@"39.2463745",@"-120.137687",nil],
+[[NSArray alloc] initWithObjects:@"8118.984",@"39.24634467",@"-120.1377346",nil],
+[[NSArray alloc] initWithObjects:@"8122.264",@"39.24632511",@"-120.1377704",nil],
+[[NSArray alloc] initWithObjects:@"8126.528",@"39.24630739",@"-120.1378311",nil],
+[[NSArray alloc] initWithObjects:@"8130.464",@"39.24627419",@"-120.1378796",nil],
+[[NSArray alloc] initWithObjects:@"8134.072",@"39.24626022",@"-120.1379306",nil],
+[[NSArray alloc] initWithObjects:@"8138.008",@"39.24623943",@"-120.1379794",nil],
+[[NSArray alloc] initWithObjects:@"8141.616",@"39.24623047",@"-120.1380286",nil],
+[[NSArray alloc] initWithObjects:@"8145.552",@"39.24621381",@"-120.1380758",nil],
+[[NSArray alloc] initWithObjects:@"8149.488",@"39.24620923",@"-120.1381231",nil],
+[[NSArray alloc] initWithObjects:@"8153.752",@"39.24620211",@"-120.1381713",nil],
+[[NSArray alloc] initWithObjects:@"8158.672",@"39.24618248",@"-120.1382193",nil],
+[[NSArray alloc] initWithObjects:@"8163.592",@"39.2461759",@"-120.1382795",nil],
+[[NSArray alloc] initWithObjects:@"8166.544",@"39.24617924",@"-120.1383156",nil],
+[[NSArray alloc] initWithObjects:@"8170.808",@"39.24617015",@"-120.1383642",nil],
+[[NSArray alloc] initWithObjects:@"8175.072",@"39.24615965",@"-120.1384132",nil],
+[[NSArray alloc] initWithObjects:@"8180.976",@"39.24613708",@"-120.1384746",nil],
+[[NSArray alloc] initWithObjects:@"8186.224",@"39.24611397",@"-120.1385238",nil],
+[[NSArray alloc] initWithObjects:@"8190.816",@"39.24609162",@"-120.1385727",nil],
+[[NSArray alloc] initWithObjects:@"8195.08",@"39.24608084",@"-120.1386217",nil],
+[[NSArray alloc] initWithObjects:@"8200.328",@"39.24607055",@"-120.1386828",nil],
+[[NSArray alloc] initWithObjects:@"8205.576",@"39.2460607",@"-120.1387436",nil],
+[[NSArray alloc] initWithObjects:@"8210.496",@"39.24606351",@"-120.1388038",nil],
+[[NSArray alloc] initWithObjects:@"8215.744",@"39.24605369",@"-120.1388643",nil],
+[[NSArray alloc] initWithObjects:@"8220.008",@"39.24605595",@"-120.1389122",nil],
+[[NSArray alloc] initWithObjects:@"8224.928",@"39.24604488",@"-120.1389609",nil],
+[[NSArray alloc] initWithObjects:@"8230.832",@"39.24604667",@"-120.139021",nil],
+[[NSArray alloc] initWithObjects:@"8236.736",@"39.24603931",@"-120.1390797",nil],
+[[NSArray alloc] initWithObjects:@"8240.672",@"39.24601937",@"-120.1391147",nil],
+[[NSArray alloc] initWithObjects:@"8246.248",@"39.24602387",@"-120.1391729",nil],
+[[NSArray alloc] initWithObjects:@"8251.496",@"39.2460168",@"-120.139219",nil],
+[[NSArray alloc] initWithObjects:@"8257.4",@"39.24602308",@"-120.1392758",nil],
+[[NSArray alloc] initWithObjects:@"8262.32",@"39.24601783",@"-120.1393205",nil],
+[[NSArray alloc] initWithObjects:@"8266.912",@"39.24602318",@"-120.1393654",nil],
+[[NSArray alloc] initWithObjects:@"8273.8",@"39.24603049",@"-120.1394327",nil],
+[[NSArray alloc] initWithObjects:@"8277.736",@"39.24601038",@"-120.1394794",nil],
+[[NSArray alloc] initWithObjects:@"8280.36",@"39.24600966",@"-120.1395275",nil],
+[[NSArray alloc] initWithObjects:@"8283.64",@"39.24599825",@"-120.1395755",nil],
+[[NSArray alloc] initWithObjects:@"8287.576",@"39.24597641",@"-120.1396232",nil],
+[[NSArray alloc] initWithObjects:@"8290.528",@"39.24596804",@"-120.1396691",nil],
+[[NSArray alloc] initWithObjects:@"8294.464",@"39.2459595",@"-120.1397269",nil],
+[[NSArray alloc] initWithObjects:@"8296.76",@"39.24596049",@"-120.1397736",nil],
+[[NSArray alloc] initWithObjects:@"8299.384",@"39.24595142",@"-120.1398198",nil],
+[[NSArray alloc] initWithObjects:@"8302.336",@"39.24594306",@"-120.1398654",nil],
+[[NSArray alloc] initWithObjects:@"8304.96",@"39.24592751",@"-120.1398967",nil],
+[[NSArray alloc] initWithObjects:@"8308.568",@"39.24590081",@"-120.1399285",nil],
+[[NSArray alloc] initWithObjects:@"8311.848",@"39.24587324",@"-120.139949",nil],
+nil];
+NSArray *googleMap_UpperMainStreet = [[NSArray alloc] initWithObjects:
+[[NSArray alloc] initWithObjects:@"7355.4",@"39.25498885",@"-120.1312982",nil],
+[[NSArray alloc] initWithObjects:@"7354.088",@"39.25504328",@"-120.1312585",nil],
+[[NSArray alloc] initWithObjects:@"7352.776",@"39.2550851",@"-120.1312167",nil],
+[[NSArray alloc] initWithObjects:@"7351.136",@"39.25513962",@"-120.131177",nil],
+[[NSArray alloc] initWithObjects:@"7349.824",@"39.25519288",@"-120.1311533",nil],
+[[NSArray alloc] initWithObjects:@"7347.856",@"39.25523485",@"-120.1311113",nil],
+[[NSArray alloc] initWithObjects:@"7345.56",@"39.25528953",@"-120.1310714",nil],
+[[NSArray alloc] initWithObjects:@"7344.576",@"39.25533157",@"-120.1310294",nil],
+[[NSArray alloc] initWithObjects:@"7343.92",@"39.25537231",@"-120.1310035",nil],
+[[NSArray alloc] initWithObjects:@"7342.936",@"39.25542721",@"-120.1309633",nil],
+[[NSArray alloc] initWithObjects:@"7341.296",@"39.25546943",@"-120.1309211",nil],
+[[NSArray alloc] initWithObjects:@"7340.312",@"39.25551032",@"-120.130895",nil],
+[[NSArray alloc] initWithObjects:@"7338.672",@"39.2555648",@"-120.1308557",nil],
+[[NSArray alloc] initWithObjects:@"7337.36",@"39.25561889",@"-120.1308173",nil],
+[[NSArray alloc] initWithObjects:@"7336.704",@"39.25567189",@"-120.1307947",nil],
+[[NSArray alloc] initWithObjects:@"7335.064",@"39.2557135",@"-120.130754",nil],
+[[NSArray alloc] initWithObjects:@"7334.08",@"39.25576665",@"-120.1307313",nil],
+[[NSArray alloc] initWithObjects:@"7332.112",@"39.25580864",@"-120.1306899",nil],
+[[NSArray alloc] initWithObjects:@"7330.8",@"39.25586231",@"-120.1306663",nil],
+[[NSArray alloc] initWithObjects:@"7329.488",@"39.25591603",@"-120.1306427",nil],
+[[NSArray alloc] initWithObjects:@"7327.848",@"39.2559698",@"-120.130619",nil],
+[[NSArray alloc] initWithObjects:@"7325.552",@"39.2560249",@"-120.1305794",nil],
+[[NSArray alloc] initWithObjects:@"7324.24",@"39.25607879",@"-120.1305557",nil],
+[[NSArray alloc] initWithObjects:@"7322.272",@"39.25613273",@"-120.130532",nil],
+[[NSArray alloc] initWithObjects:@"7318.992",@"39.25617517",@"-120.1304903",nil],
+[[NSArray alloc] initWithObjects:@"7316.696",@"39.25622922",@"-120.1304665",nil],
+[[NSArray alloc] initWithObjects:@"7314.072",@"39.25628333",@"-120.1304427",nil],
+[[NSArray alloc] initWithObjects:@"7310.792",@"39.25632595",@"-120.1304008",nil],
+[[NSArray alloc] initWithObjects:@"7309.48",@"39.25637881",@"-120.1303929",nil],
+[[NSArray alloc] initWithObjects:@"7305.544",@"39.25642154",@"-120.130351",nil],
+[[NSArray alloc] initWithObjects:@"7302.592",@"39.25647593",@"-120.1303268",nil],
+[[NSArray alloc] initWithObjects:@"7299.968",@"39.25651749",@"-120.1303005",nil],
+[[NSArray alloc] initWithObjects:@"7297.016",@"39.25657174",@"-120.1302771",nil],
+[[NSArray alloc] initWithObjects:@"7292.424",@"39.2566144",@"-120.1302361",nil],
+[[NSArray alloc] initWithObjects:@"7289.472",@"39.25666857",@"-120.1302137",nil],
+[[NSArray alloc] initWithObjects:@"7283.568",@"39.25672431",@"-120.130175",nil],
+[[NSArray alloc] initWithObjects:@"7277.992",@"39.25676731",@"-120.1301337",nil],
+[[NSArray alloc] initWithObjects:@"7273.728",@"39.2568219",@"-120.1301108",nil],
+[[NSArray alloc] initWithObjects:@"7269.136",@"39.25687659",@"-120.1300878",nil],
+[[NSArray alloc] initWithObjects:@"7263.56",@"39.25691984",@"-120.1300466",nil],
+[[NSArray alloc] initWithObjects:@"7257.984",@"39.25696316",@"-120.1300057",nil],
+[[NSArray alloc] initWithObjects:@"7252.736",@"39.25701813",@"-120.129983",nil],
+[[NSArray alloc] initWithObjects:@"7246.832",@"39.25706168",@"-120.129942",nil],
+[[NSArray alloc] initWithObjects:@"7242.24",@"39.25710387",@"-120.1299165",nil],
+[[NSArray alloc] initWithObjects:@"7235.68",@"39.25716076",@"-120.129877",nil],
+[[NSArray alloc] initWithObjects:@"7231.088",@"39.25720313",@"-120.1298517",nil],
+[[NSArray alloc] initWithObjects:@"7224.528",@"39.25726028",@"-120.1298124",nil],
+[[NSArray alloc] initWithObjects:@"7219.28",@"39.25731601",@"-120.1297894",nil],
+[[NSArray alloc] initWithObjects:@"7214.032",@"39.25737187",@"-120.1297663",nil],
+[[NSArray alloc] initWithObjects:@"7208.128",@"39.25741628",@"-120.1297243",nil],
+[[NSArray alloc] initWithObjects:@"7202.88",@"39.2574724",@"-120.1297011",nil],
+[[NSArray alloc] initWithObjects:@"7197.304",@"39.25751706",@"-120.1296589",nil],
+[[NSArray alloc] initWithObjects:@"7193.04",@"39.25756017",@"-120.1296331",nil],
+[[NSArray alloc] initWithObjects:@"7186.808",@"39.25761834",@"-120.1295931",nil],
+[[NSArray alloc] initWithObjects:@"7180.576",@"39.25767664",@"-120.1295528",nil],
+[[NSArray alloc] initWithObjects:@"7174.016",@"39.25773503",@"-120.129512",nil],
+[[NSArray alloc] initWithObjects:@"7169.752",@"39.25777848",@"-120.1294855",nil],
+[[NSArray alloc] initWithObjects:@"7166.144",@"39.2578371",@"-120.1294446",nil],
+[[NSArray alloc] initWithObjects:@"7164.176",@"39.25788073",@"-120.129418",nil],
+[[NSArray alloc] initWithObjects:@"7160.24",@"39.2579279",@"-120.1293577",nil],
+[[NSArray alloc] initWithObjects:@"7157.288",@"39.2579869",@"-120.1293165",nil],
+[[NSArray alloc] initWithObjects:@"7153.68",@"39.25803241",@"-120.1292725",nil],
+[[NSArray alloc] initWithObjects:@"7150.4",@"39.25807791",@"-120.1292282",nil],
+[[NSArray alloc] initWithObjects:@"7147.448",@"39.25812347",@"-120.1291839",nil],
+[[NSArray alloc] initWithObjects:@"7144.168",@"39.25816916",@"-120.1291395",nil],
+[[NSArray alloc] initWithObjects:@"7140.888",@"39.25820137",@"-120.1290928",nil],
+[[NSArray alloc] initWithObjects:@"7138.92",@"39.25824549",@"-120.1290656",nil],
+nil];
+NSArray *googleMap_WestRidge = [[NSArray alloc] initWithObjects:
+[[NSArray alloc] initWithObjects:@"8596.88",@"39.24161268",@"-120.1399361",nil],
+[[NSArray alloc] initWithObjects:@"8594.256",@"39.24165216",@"-120.1399563",nil],
+[[NSArray alloc] initWithObjects:@"8591.304",@"39.24169258",@"-120.1399633",nil],
+[[NSArray alloc] initWithObjects:@"8588.68",@"39.24173116",@"-120.139984",nil],
+[[NSArray alloc] initWithObjects:@"8585.4",@"39.24178086",@"-120.1399932",nil],
+[[NSArray alloc] initWithObjects:@"8582.12",@"39.2418149",@"-120.1400293",nil],
+[[NSArray alloc] initWithObjects:@"8579.168",@"39.2418507",@"-120.1400391",nil],
+[[NSArray alloc] initWithObjects:@"8575.888",@"39.24188578",@"-120.140062",nil],
+[[NSArray alloc] initWithObjects:@"8572.28",@"39.24193246",@"-120.1400733",nil],
+[[NSArray alloc] initWithObjects:@"8569.656",@"39.24196987",@"-120.1400824",nil],
+[[NSArray alloc] initWithObjects:@"8567.032",@"39.24200616",@"-120.1401048",nil],
+[[NSArray alloc] initWithObjects:@"8564.736",@"39.24204251",@"-120.1401273",nil],
+[[NSArray alloc] initWithObjects:@"8562.44",@"39.24207892",@"-120.1401498",nil],
+[[NSArray alloc] initWithObjects:@"8559.816",@"39.24212698",@"-120.1401606",nil],
+[[NSArray alloc] initWithObjects:@"8558.176",@"39.24216671",@"-120.1401684",nil],
+[[NSArray alloc] initWithObjects:@"8555.88",@"39.24221508",@"-120.1401791",nil],
+[[NSArray alloc] initWithObjects:@"8554.24",@"39.24224142",@"-120.1402",nil],
+[[NSArray alloc] initWithObjects:@"8551.944",@"39.24227968",@"-120.140209",nil],
+[[NSArray alloc] initWithObjects:@"8549.976",@"39.24231857",@"-120.1402175",nil],
+[[NSArray alloc] initWithObjects:@"8548.008",@"39.24235729",@"-120.1402136",nil],
+[[NSArray alloc] initWithObjects:@"8546.04",@"39.24240227",@"-120.140227",nil],
+[[NSArray alloc] initWithObjects:@"8544.728",@"39.24244626",@"-120.1402412",nil],
+[[NSArray alloc] initWithObjects:@"8543.416",@"39.24249227",@"-120.1402542",nil],
+[[NSArray alloc] initWithObjects:@"8542.104",@"39.24254224",@"-120.1402643",nil],
+[[NSArray alloc] initWithObjects:@"8541.448",@"39.24258027",@"-120.1402866",nil],
+[[NSArray alloc] initWithObjects:@"8539.48",@"39.24261827",@"-120.140309",nil],
+[[NSArray alloc] initWithObjects:@"8537.512",@"39.24265627",@"-120.1403314",nil],
+[[NSArray alloc] initWithObjects:@"8535.872",@"39.24269598",@"-120.14034",nil],
+[[NSArray alloc] initWithObjects:@"8533.904",@"39.24274666",@"-120.1403499",nil],
+[[NSArray alloc] initWithObjects:@"8532.264",@"39.24278838",@"-120.1403443",nil],
+[[NSArray alloc] initWithObjects:@"8529.312",@"39.24282936",@"-120.1403519",nil],
+[[NSArray alloc] initWithObjects:@"8525.376",@"39.24288243",@"-120.14036",nil],
+[[NSArray alloc] initWithObjects:@"8522.424",@"39.24292487",@"-120.1403665",nil],
+[[NSArray alloc] initWithObjects:@"8519.144",@"39.24297791",@"-120.1403746",nil],
+[[NSArray alloc] initWithObjects:@"8516.52",@"39.24301971",@"-120.1403816",nil],
+[[NSArray alloc] initWithObjects:@"8512.584",@"39.24307135",@"-120.1403783",nil],
+[[NSArray alloc] initWithObjects:@"8508.976",@"39.24311222",@"-120.1403862",nil],
+[[NSArray alloc] initWithObjects:@"8505.04",@"39.24315428",@"-120.1403805",nil],
+[[NSArray alloc] initWithObjects:@"8501.76",@"39.24319427",@"-120.1403892",nil],
+[[NSArray alloc] initWithObjects:@"8497.824",@"39.24323519",@"-120.1403846",nil],
+[[NSArray alloc] initWithObjects:@"8494.544",@"39.24327505",@"-120.1403935",nil],
+[[NSArray alloc] initWithObjects:@"8490.608",@"39.24332477",@"-120.1404049",nil],
+[[NSArray alloc] initWithObjects:@"8488.312",@"39.24336431",@"-120.1404142",nil],
+[[NSArray alloc] initWithObjects:@"8485.36",@"39.24340469",@"-120.1404103",nil],
+[[NSArray alloc] initWithObjects:@"8482.736",@"39.24344554",@"-120.1404061",nil],
+[[NSArray alloc] initWithObjects:@"8479.784",@"39.24348768",@"-120.1404006",nil],
+[[NSArray alloc] initWithObjects:@"8476.832",@"39.24352985",@"-120.1403952",nil],
+[[NSArray alloc] initWithObjects:@"8474.208",@"39.24357207",@"-120.1403897",nil],
+[[NSArray alloc] initWithObjects:@"8471.584",@"39.24361306",@"-120.1403981",nil],
+[[NSArray alloc] initWithObjects:@"8468.632",@"39.24365663",@"-120.1403788",nil],
+[[NSArray alloc] initWithObjects:@"8466.008",@"39.24370797",@"-120.1403892",nil],
+[[NSArray alloc] initWithObjects:@"8463.384",@"39.24374975",@"-120.1403844",nil],
+[[NSArray alloc] initWithObjects:@"8460.76",@"39.24379954",@"-120.1403965",nil],
+[[NSArray alloc] initWithObjects:@"8458.464",@"39.24384001",@"-120.1404057",nil],
+[[NSArray alloc] initWithObjects:@"8455.84",@"39.24388177",@"-120.1404011",nil],
+[[NSArray alloc] initWithObjects:@"8452.888",@"39.24393242",@"-120.1404126",nil],
+[[NSArray alloc] initWithObjects:@"8449.936",@"39.24397431",@"-120.140408",nil],
+[[NSArray alloc] initWithObjects:@"8446.984",@"39.24402513",@"-120.1404196",nil],
+[[NSArray alloc] initWithObjects:@"8444.688",@"39.24406586",@"-120.1404289",nil],
+[[NSArray alloc] initWithObjects:@"8441.736",@"39.24411685",@"-120.1404405",nil],
+[[NSArray alloc] initWithObjects:@"8439.768",@"39.24414782",@"-120.1404347",nil],
+[[NSArray alloc] initWithObjects:@"8436.816",@"39.24418914",@"-120.1404436",nil],
+[[NSArray alloc] initWithObjects:@"8432.88",@"39.2442313",@"-120.1404268",nil],
+[[NSArray alloc] initWithObjects:@"8429.272",@"39.24427295",@"-120.140423",nil],
+[[NSArray alloc] initWithObjects:@"8425.664",@"39.24431405",@"-120.1404201",nil],
+[[NSArray alloc] initWithObjects:@"8422.712",@"39.24435395",@"-120.1404311",nil],
+[[NSArray alloc] initWithObjects:@"8419.432",@"39.24439522",@"-120.1404282",nil],
+[[NSArray alloc] initWithObjects:@"8416.48",@"39.24443532",@"-120.1404392",nil],
+[[NSArray alloc] initWithObjects:@"8412.544",@"39.24447835",@"-120.1404219",nil],
+[[NSArray alloc] initWithObjects:@"8409.592",@"39.2445189",@"-120.1404326",nil],
+[[NSArray alloc] initWithObjects:@"8406.64",@"39.24456005",@"-120.1404304",nil],
+[[NSArray alloc] initWithObjects:@"8402.376",@"39.24460344",@"-120.140413",nil],
+[[NSArray alloc] initWithObjects:@"8398.768",@"39.24465692",@"-120.140423",nil],
+[[NSArray alloc] initWithObjects:@"8395.16",@"39.24470082",@"-120.1404172",nil],
+[[NSArray alloc] initWithObjects:@"8392.208",@"39.2447436",@"-120.1404253",nil],
+[[NSArray alloc] initWithObjects:@"8388.6",@"39.24478751",@"-120.1404196",nil],
+[[NSArray alloc] initWithObjects:@"8385.648",@"39.24483034",@"-120.1404278",nil],
+[[NSArray alloc] initWithObjects:@"8381.384",@"39.24487544",@"-120.1404083",nil],
+[[NSArray alloc] initWithObjects:@"8378.76",@"39.24491612",@"-120.14042",nil],
+[[NSArray alloc] initWithObjects:@"8375.48",@"39.24495901",@"-120.1404163",nil],
+[[NSArray alloc] initWithObjects:@"8372.2",@"39.24500252",@"-120.1404237",nil],
+[[NSArray alloc] initWithObjects:@"8368.92",@"39.24504787",@"-120.1404041",nil],
+[[NSArray alloc] initWithObjects:@"8365.968",@"39.24509234",@"-120.140398",nil],
+[[NSArray alloc] initWithObjects:@"8363.344",@"39.24513548",@"-120.1404062",nil],
+[[NSArray alloc] initWithObjects:@"8360.392",@"39.24517876",@"-120.1404024",nil],
+[[NSArray alloc] initWithObjects:@"8357.768",@"39.24522348",@"-120.1403843",nil],
+[[NSArray alloc] initWithObjects:@"8354.816",@"39.24526694",@"-120.1403804",nil],
+[[NSArray alloc] initWithObjects:@"8351.864",@"39.24531048",@"-120.1403766",nil],
+[[NSArray alloc] initWithObjects:@"8348.584",@"39.24535574",@"-120.1403579",nil],
+[[NSArray alloc] initWithObjects:@"8345.632",@"39.24540014",@"-120.1403526",nil],
+[[NSArray alloc] initWithObjects:@"8342.352",@"39.24544593",@"-120.1403331",nil],
+[[NSArray alloc] initWithObjects:@"8339.072",@"39.24549177",@"-120.1403135",nil],
+[[NSArray alloc] initWithObjects:@"8335.792",@"39.24553618",@"-120.1403085",nil],
+[[NSArray alloc] initWithObjects:@"8333.168",@"39.2455805",@"-120.1403039",nil],
+[[NSArray alloc] initWithObjects:@"8331.2",@"39.24562488",@"-120.1402992",nil],
+[[NSArray alloc] initWithObjects:@"8328.904",@"39.24566934",@"-120.1402946",nil],
+[[NSArray alloc] initWithObjects:@"8326.936",@"39.24571388",@"-120.1402899",nil],
+[[NSArray alloc] initWithObjects:@"8324.64",@"39.2457596",@"-120.1402715",nil],
+[[NSArray alloc] initWithObjects:@"8322.344",@"39.24580523",@"-120.1402535",nil],
+[[NSArray alloc] initWithObjects:@"8319.72",@"39.2458497",@"-120.1402496",nil],
+[[NSArray alloc] initWithObjects:@"8315.784",@"39.2458956",@"-120.1402313",nil],
+[[NSArray alloc] initWithObjects:@"8311.848",@"39.24593997",@"-120.1402282",nil],
+[[NSArray alloc] initWithObjects:@"8307.912",@"39.24598549",@"-120.1402116",nil],
+[[NSArray alloc] initWithObjects:@"8303.976",@"39.24603129",@"-120.1401945",nil],
+[[NSArray alloc] initWithObjects:@"8300.04",@"39.24607729",@"-120.1401771",nil],
+[[NSArray alloc] initWithObjects:@"8296.104",@"39.24612326",@"-120.1401703",nil],
+[[NSArray alloc] initWithObjects:@"8291.512",@"39.24617066",@"-120.1401488",nil],
+[[NSArray alloc] initWithObjects:@"8287.248",@"39.24621801",@"-120.1401275",nil],
+[[NSArray alloc] initWithObjects:@"8282.984",@"39.24626501",@"-120.1401076",nil],
+[[NSArray alloc] initWithObjects:@"8278.72",@"39.24631339",@"-120.1400733",nil],
+[[NSArray alloc] initWithObjects:@"8274.784",@"39.24635919",@"-120.1400677",nil],
+[[NSArray alloc] initWithObjects:@"8270.52",@"39.24640767",@"-120.1400335",nil],
+[[NSArray alloc] initWithObjects:@"8266.912",@"39.24645341",@"-120.1400287",nil],
+[[NSArray alloc] initWithObjects:@"8262.648",@"39.24650172",@"-120.1399959",nil],
+[[NSArray alloc] initWithObjects:@"8258.384",@"39.2465489",@"-120.1399771",nil],
+[[NSArray alloc] initWithObjects:@"8254.12",@"39.24659618",@"-120.1399582",nil],
+[[NSArray alloc] initWithObjects:@"8249.528",@"39.24664356",@"-120.1399393",nil],
+[[NSArray alloc] initWithObjects:@"8244.936",@"39.24669232",@"-120.1399063",nil],
+[[NSArray alloc] initWithObjects:@"8240.344",@"39.2467399",@"-120.1398874",nil],
+[[NSArray alloc] initWithObjects:@"8235.096",@"39.24679887",@"-120.1398707",nil],
+[[NSArray alloc] initWithObjects:@"8230.832",@"39.24684668",@"-120.1398516",nil],
+[[NSArray alloc] initWithObjects:@"8226.568",@"39.24689459",@"-120.1398326",nil],
+[[NSArray alloc] initWithObjects:@"8221.976",@"39.24694261",@"-120.1398134",nil],
+[[NSArray alloc] initWithObjects:@"8216.728",@"39.24699209",@"-120.1397801",nil],
+[[NSArray alloc] initWithObjects:@"8212.464",@"39.24704032",@"-120.1397609",nil],
+[[NSArray alloc] initWithObjects:@"8207.872",@"39.24708867",@"-120.1397416",nil],
+[[NSArray alloc] initWithObjects:@"8203.608",@"39.24713712",@"-120.1397223",nil],
+[[NSArray alloc] initWithObjects:@"8199.344",@"39.24718568",@"-120.1397032",nil],
+[[NSArray alloc] initWithObjects:@"8195.408",@"39.24723575",@"-120.1396696",nil],
+[[NSArray alloc] initWithObjects:@"8192.128",@"39.24728455",@"-120.1396504",nil],
+[[NSArray alloc] initWithObjects:@"8189.832",@"39.24732193",@"-120.1396287",nil],
+[[NSArray alloc] initWithObjects:@"8186.552",@"39.24737093",@"-120.1396093",nil],
+[[NSArray alloc] initWithObjects:@"8183.928",@"39.24740989",@"-120.1395729",nil],
+[[NSArray alloc] initWithObjects:@"8180.648",@"39.2474591",@"-120.1395535",nil],
+[[NSArray alloc] initWithObjects:@"8178.024",@"39.24749824",@"-120.1395169",nil],
+[[NSArray alloc] initWithObjects:@"8176.056",@"39.24753746",@"-120.1394803",nil],
+[[NSArray alloc] initWithObjects:@"8173.76",@"39.24756654",@"-120.1394266",nil],
+[[NSArray alloc] initWithObjects:@"8170.808",@"39.2476059",@"-120.1393898",nil],
+[[NSArray alloc] initWithObjects:@"8168.184",@"39.24764535",@"-120.1393529",nil],
+[[NSArray alloc] initWithObjects:@"8166.216",@"39.24768342",@"-120.1393307",nil],
+[[NSArray alloc] initWithObjects:@"8163.264",@"39.24773478",@"-120.1392961",nil],
+[[NSArray alloc] initWithObjects:@"8160.64",@"39.24777424",@"-120.1392581",nil],
+[[NSArray alloc] initWithObjects:@"8155.72",@"39.24782543",@"-120.1392221",nil],
+[[NSArray alloc] initWithObjects:@"8151.784",@"39.24786501",@"-120.139184",nil],
+[[NSArray alloc] initWithObjects:@"8146.208",@"39.24791633",@"-120.1391479",nil],
+[[NSArray alloc] initWithObjects:@"8142.6",@"39.24796466",@"-120.1391411",nil],
+[[NSArray alloc] initWithObjects:@"8138.008",@"39.24801457",@"-120.1391196",nil],
+[[NSArray alloc] initWithObjects:@"8133.744",@"39.24806458",@"-120.1390981",nil],
+[[NSArray alloc] initWithObjects:@"8129.152",@"39.24811481",@"-120.139077",nil],
+[[NSArray alloc] initWithObjects:@"8124.56",@"39.24816511",@"-120.1390558",nil],
+[[NSArray alloc] initWithObjects:@"8119.968",@"39.24821572",@"-120.139035",nil],
+[[NSArray alloc] initWithObjects:@"8115.704",@"39.2482665",@"-120.1390143",nil],
+[[NSArray alloc] initWithObjects:@"8112.424",@"39.2483055",@"-120.1389914",nil],
+[[NSArray alloc] initWithObjects:@"8108.816",@"39.24835514",@"-120.1389859",nil],
+[[NSArray alloc] initWithObjects:@"8104.552",@"39.24840643",@"-120.1389654",nil],
+[[NSArray alloc] initWithObjects:@"8100.288",@"39.24845785",@"-120.1389449",nil],
+[[NSArray alloc] initWithObjects:@"8096.352",@"39.24850939",@"-120.1389243",nil],
+[[NSArray alloc] initWithObjects:@"8091.432",@"39.24857323",@"-120.1389061",nil],
+[[NSArray alloc] initWithObjects:@"8087.496",@"39.24862353",@"-120.1389005",nil],
+[[NSArray alloc] initWithObjects:@"8082.576",@"39.24867548",@"-120.1388798",nil],
+[[NSArray alloc] initWithObjects:@"8077",@"39.24872755",@"-120.138859",nil],
+[[NSArray alloc] initWithObjects:@"8071.424",@"39.24877975",@"-120.1388382",nil],
+[[NSArray alloc] initWithObjects:@"8065.848",@"39.24883209",@"-120.1388173",nil],
+[[NSArray alloc] initWithObjects:@"8061.584",@"39.248883",@"-120.1388116",nil],
+[[NSArray alloc] initWithObjects:@"8056.664",@"39.24893558",@"-120.1387907",nil],
+[[NSArray alloc] initWithObjects:@"8053.384",@"39.24898675",@"-120.1387849",nil],
+[[NSArray alloc] initWithObjects:@"8050.104",@"39.24904878",@"-120.1387967",nil],
+[[NSArray alloc] initWithObjects:@"8045.84",@"39.24910153",@"-120.1387754",nil],
+[[NSArray alloc] initWithObjects:@"8042.56",@"39.24916357",@"-120.1387869",nil],
+[[NSArray alloc] initWithObjects:@"8040.264",@"39.24921428",@"-120.1387803",nil],
+[[NSArray alloc] initWithObjects:@"8037.64",@"39.24926655",@"-120.1387582",nil],
+[[NSArray alloc] initWithObjects:@"8035.016",@"39.2493189",@"-120.1387361",nil],
+[[NSArray alloc] initWithObjects:@"8031.736",@"39.24937294",@"-120.1386987",nil],
+[[NSArray alloc] initWithObjects:@"8028.784",@"39.24943777",@"-120.1386786",nil],
+[[NSArray alloc] initWithObjects:@"8026.488",@"39.24949037",@"-120.1386564",nil],
+[[NSArray alloc] initWithObjects:@"8024.848",@"39.2495307",@"-120.1386321",nil],
+[[NSArray alloc] initWithObjects:@"8022.88",@"39.24958343",@"-120.1386098",nil],
+[[NSArray alloc] initWithObjects:@"8020.912",@"39.24963625",@"-120.1385875",nil],
+[[NSArray alloc] initWithObjects:@"8018.616",@"39.24968919",@"-120.1385652",nil],
+[[NSArray alloc] initWithObjects:@"8016.32",@"39.24974231",@"-120.138543",nil],
+[[NSArray alloc] initWithObjects:@"8014.024",@"39.24978302",@"-120.1385185",nil],
+[[NSArray alloc] initWithObjects:@"8011.4",@"39.24983628",@"-120.1384962",nil],
+[[NSArray alloc] initWithObjects:@"8008.776",@"39.24988956",@"-120.1384737",nil],
+[[NSArray alloc] initWithObjects:@"8006.152",@"39.24994127",@"-120.1384504",nil],
+[[NSArray alloc] initWithObjects:@"8003.528",@"39.24999299",@"-120.138427",nil],
+[[NSArray alloc] initWithObjects:@"8001.888",@"39.25004331",@"-120.1384193",nil],
+[[NSArray alloc] initWithObjects:@"7999.92",@"39.25009604",@"-120.1383964",nil],
+[[NSArray alloc] initWithObjects:@"7997.952",@"39.25014844",@"-120.1383733",nil],
+[[NSArray alloc] initWithObjects:@"7995.328",@"39.25020211",@"-120.1383344",nil],
+[[NSArray alloc] initWithObjects:@"7993.032",@"39.25025432",@"-120.1383112",nil],
+[[NSArray alloc] initWithObjects:@"7992.048",@"39.2502805",@"-120.1382995",nil],
+nil];
+
   NSMutableArray *my_trail_data = [ARTrailSummaryMapViewController jerry_init_data: eva and: longitude and: latitude];
   NSLog(@"Init data finished ...");
   NSInteger Lamberjack_elv_first        = [[[googleMap_Lamberjack objectAtIndex:([googleMap_Lamberjack count]-1)]objectAtIndex:0] intValue];
   NSInteger Lamberjack_elv_last         = [[[googleMap_Lamberjack objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger LowerMainStreet_elv_first   = [[[googleMap_LowerMainStreet objectAtIndex:([googleMap_LowerMainStreet count]-1)]objectAtIndex:0] intValue];
   NSInteger LowerMainStreet_elv_last    = [[[googleMap_LowerMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger MagicMoguls_elv_first       = [[[googleMap_MagicMoguls objectAtIndex:([googleMap_MagicMoguls count]-1)]objectAtIndex:0] intValue];
-  NSInteger MagicMoguls_elv_last        = [[[googleMap_MagicMoguls objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger Siderwinder_elv_first       = [[[googleMap_Siderwinder objectAtIndex:([googleMap_Siderwinder count]-1)]objectAtIndex:0] intValue];
-  NSInteger Siderwinder_elv_last        = [[[googleMap_Siderwinder objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger WestRidge_elv_first       = [[[googleMap_WestRidge objectAtIndex:([googleMap_WestRidge count]-1)]objectAtIndex:0] intValue];
+  NSInteger WestRidge_elv_last        = [[[googleMap_WestRidge objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger UpperMainStreet_elv_first       = [[[googleMap_UpperMainStreet objectAtIndex:([googleMap_UpperMainStreet count]-1)]objectAtIndex:0] intValue];
+  NSInteger UpperMainStreet_elv_last        = [[[googleMap_UpperMainStreet objectAtIndex:0]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_first         = [[[googleMap_SkidTrail objectAtIndex:([googleMap_SkidTrail count]-1)]objectAtIndex:0] intValue];
   NSInteger SkidTrail_elv_last          = [[[googleMap_SkidTrail objectAtIndex:0]objectAtIndex:0] intValue];
-  NSInteger TheGulch_elv_first          = [[[googleMap_TheGulch objectAtIndex:([googleMap_TheGulch count]-1)]objectAtIndex:0] intValue];
-  NSInteger TheGulch_elv_last           = [[[googleMap_TheGulch objectAtIndex:0]objectAtIndex:0] intValue];
+  NSInteger AxHandle_elv_first          = [[[googleMap_Ax_handle objectAtIndex:([googleMap_Ax_handle count]-1)]objectAtIndex:0] intValue];
+  NSInteger AxHandle_elv_last           = [[[googleMap_Ax_handle objectAtIndex:0]objectAtIndex:0] intValue];
   
 
   
@@ -547,23 +990,23 @@
     }else{
       LowerMainStreet_elv_diff = -1;
     }
-    NSLog(@"MagicMoguls elv is %d - %d", MagicMoguls_elv_first, MagicMoguls_elv_last);
-    float MagicMoguls_elv_diff = 0;
-    if(user_elv >= MagicMoguls_elv_first && user_elv <= MagicMoguls_elv_last){
-      NSLog(@"looking Magic");
-      int at_MagicMoguls_index = [googleMap_MagicMoguls count]-1- (user_elv-MagicMoguls_elv_first)/roundStep;
-      MagicMoguls_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_MagicMoguls :at_MagicMoguls_index];
+    NSLog(@"WestRidge elv is %d - %d", WestRidge_elv_first, WestRidge_elv_last);
+    float WestRidge_elv_diff = 0;
+    if(user_elv >= WestRidge_elv_first && user_elv <= WestRidge_elv_last){
+      NSLog(@"looking westridge");
+      int at_WestRidge_index = [googleMap_WestRidge count]-1- (user_elv-WestRidge_elv_first)/roundStep;
+      WestRidge_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_WestRidge :at_WestRidge_index];
     }else{
-      MagicMoguls_elv_diff = -1;
+      WestRidge_elv_diff = -1;
     }
-    NSLog(@"Siderwinder elv is %d - %d", Siderwinder_elv_first, Siderwinder_elv_last);
-    float Siderwinder_elv_diff = 0;
-    if(user_elv >= Siderwinder_elv_first && user_elv <= Siderwinder_elv_last){
-      NSLog(@"looking Siderwinder");
-      int at_Siderwinder_index = [googleMap_Siderwinder count]-1- (user_elv-Siderwinder_elv_first)/roundStep;
-      Siderwinder_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Siderwinder :at_Siderwinder_index];
+    NSLog(@"UpperMainStreet elv is %d - %d", UpperMainStreet_elv_first, UpperMainStreet_elv_last);
+    float UpperMainStreet_elv_diff = 0;
+    if(user_elv >= UpperMainStreet_elv_first && user_elv <= UpperMainStreet_elv_last){
+      NSLog(@"looking UpperMainStreet");
+      int at_UpperMainStreet_index = [googleMap_UpperMainStreet count]-1- (user_elv-UpperMainStreet_elv_first)/roundStep;
+      UpperMainStreet_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_UpperMainStreet :at_UpperMainStreet_index];
     }else{
-      Siderwinder_elv_diff = -1;
+      UpperMainStreet_elv_diff = -1;
     }
     NSLog(@"SkidTrail elv is %d - %d", SkidTrail_elv_first, SkidTrail_elv_last);
     float SkidTrail_elv_diff = 0;
@@ -574,24 +1017,24 @@
     }else{
       SkidTrail_elv_diff = -1;
     }
-    NSLog(@"TheGulch elv is %d - %d", TheGulch_elv_first, TheGulch_elv_last);
-    float TheGulch_elv_diff = 0;
-    if(user_elv >= TheGulch_elv_first && user_elv <= TheGulch_elv_last){
+    NSLog(@"AxHandle elv is %d - %d", AxHandle_elv_first, AxHandle_elv_last);
+    float AxHandle_elv_diff = 0;
+    if(user_elv >= AxHandle_elv_first && user_elv <= AxHandle_elv_last){
       NSLog(@"looking Gulch");
-      int at_TheGulch_index = [googleMap_TheGulch count]-1- (user_elv-TheGulch_elv_first)/roundStep;
-      TheGulch_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_TheGulch :at_TheGulch_index];
+      int at_AxHandle_index = [googleMap_Ax_handle count]-1- (user_elv-AxHandle_elv_first)/roundStep;
+      AxHandle_elv_diff = [ARTrailSummaryMapViewController get_distance:my_trail_data user_index:i :googleMap_Ax_handle :at_AxHandle_index];
     }else{
-      TheGulch_elv_diff = -1;
+      AxHandle_elv_diff = -1;
     }
     /*****
      * 0 - Lumberjack
      * 1 - Lower Main Street
-     * 2 - MagicMoguls
-     * 3 - Siderwinder
+     * 2 - WestRidge
+     * 3 - UpperMainStreet
      * 4 - SkidTrail
-     * 5 - TheGulch
+     * 5 - AxHandle
      * */
-    NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:MagicMoguls_elv_diff], [NSNumber numberWithInt:Siderwinder_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:TheGulch_elv_diff], nil];
+    NSArray  *trail_diff = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:Lamberjack_elv_diff], [NSNumber numberWithInt:LowerMainStreet_elv_diff], [NSNumber numberWithInt:WestRidge_elv_diff], [NSNumber numberWithInt:UpperMainStreet_elv_diff], [NSNumber numberWithInt:SkidTrail_elv_diff], [NSNumber numberWithInt:AxHandle_elv_diff], nil];
     float min = 999999999.0;
     NSInteger match_trail = -1;
     for (int j = 0; j < [trail_diff count]; j++) {
@@ -624,15 +1067,30 @@
       [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
       return trail_result;
     }else if ([[trail_match_result objectAtIndex:0] integerValue] == 2){
-      return @"MagicMoguls";
+      float trail_location_percentage = (WestRidge_elv_last - eva)/(WestRidge_elv_last - WestRidge_elv_first);
+      NSMutableArray * trail_result = [NSMutableArray new];
+      [trail_result addObject:@"WestRidge"];
+      [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
+      return trail_result;
     }else if ([[trail_match_result objectAtIndex:0] integerValue] == 3){
-      return @"Siderwinder";
+      float trail_location_percentage = (UpperMainStreet_elv_last - eva)/(UpperMainStreet_elv_last - UpperMainStreet_elv_first);
+      NSMutableArray * trail_result = [NSMutableArray new];
+      [trail_result addObject:@"UpperMainStreet"];
+      [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
+      return trail_result;
     }else if( [[trail_match_result objectAtIndex:0] integerValue] == 4){
       return @"SkidTrail";
     }else if ([[trail_match_result objectAtIndex:0] integerValue] == 5){
-      return @"TheGulch";
+      float trail_location_percentage = (AxHandle_elv_last - eva)/(AxHandle_elv_last - AxHandle_elv_first);
+      NSMutableArray * trail_result = [NSMutableArray new];
+      [trail_result addObject:@"AxHandle"];
+      [trail_result addObject:[NSString stringWithFormat:@"%f",trail_location_percentage]];
+      return trail_result;
     }else {
-      return @"UNKNOWN Trail";
+      NSMutableArray * trail_result = [NSMutableArray new];
+      [trail_result addObject:@"Unknown Trail"];
+      [trail_result addObject:@"0%"];
+      return trail_result;
     }
 }
 
