@@ -27,7 +27,7 @@
 @implementation ARTrailSummaryMapViewController
 
 #pragma mark - trailPathSource methods
--(NSMutableArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude
++(NSArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude
 {
   NSArray *googleMap_Lamberjack = [[NSArray alloc] initWithObjects:
                                    [[NSArray alloc] initWithObjects:@"7595", @"39.25188056", @"-120.1316417", nil],
@@ -1762,7 +1762,15 @@
   return pointsArray;
 }
 
-
+- (id)initWithMap:(UIImage*) map data:(NSArray *)data {
+    self = [super init];
+    if (self) {
+        self.map = map;
+        self.zoomed = NO;
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
+    return self;
+}
 
 - (id)initWithMap:(UIImage*) map
 {
@@ -1781,7 +1789,7 @@
   NSLog(@"viewDidLoad");
   [super viewDidLoad];
   //get image from library 2125.96034	39.260743	120.127513
-  NSArray* trail = [self calculate_trail:2125.96034 and:39.260743 and: -120.127513];
+  NSArray* trail = [ARTrailSummaryMapViewController calculate_trail:2125.96034 and:39.260743 and: -120.127513];
   NSString* trail_name = [trail objectAtIndex: 0];
   NSString* trail_percent = [trail objectAtIndex: 1];
 

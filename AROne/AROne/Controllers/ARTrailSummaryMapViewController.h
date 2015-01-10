@@ -12,5 +12,5 @@
 - (id)initWithMap:(UIImage*) map;
 //+ (NSString* ) trailPathViewData: (float) eva and: (float) longitude and: (float) latitude;
 + (NSInteger) get_distance: (NSArray*) user user_index: (int) u_index : (NSArray*) trail : (int) trail_index;
-+ (NSMutableArray*) jerry_init_data: (float) eva and: (float ) longitude and: (float) latitude;
++(NSArray*) calculate_trail: (float) eva and: (float) longitude and: (float) latitude;
 @end

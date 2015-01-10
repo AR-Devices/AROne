@@ -83,6 +83,7 @@
         NSLog(@"person is %@", person);
         UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
         CGFloat placeholderHW = kViewControllerCellHeight - 15;
+        
         BMInitialsPlaceholderView *placeholder = [[BMInitialsPlaceholderView alloc] initWithDiameter:placeholderHW];
         placeholder.font = font;
         placeholder.initials = [self initialStringForPersonString:person];

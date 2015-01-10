@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *trailName;
 @property (weak, nonatomic) IBOutlet UILabel *lastSeen;
+@property (weak, nonatomic) IBOutlet UILabel *coordinates;
 
 @end
